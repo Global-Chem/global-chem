@@ -49,7 +49,7 @@ setup(
     classifiers=[
         'Development Status :: 4 - Beta',
         'Natural Language :: English',
-        'License :: OSI Approved :: MPL License',
+        'License :: OSI Approved :: MOZILLA PUBLIC LICENSE 2.0 (MPL 2.0)',
         'Intended Audience :: Developers',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
