@@ -34,9 +34,9 @@ else:
 # exec
 # ----
 setup(
-    name="global-chem",
+    name="global_chem",
     version="0.1.0",
-    packages=['global-chem'],
+    packages=['global_chem'],
     license='MPL',
     author="Suliman Sharif",
     author_email="sharifsuliman1@gmail.com",
