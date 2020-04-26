@@ -5,6 +5,7 @@ GlobalChem: A content variable store for Chemistry!
 ![Python](https://img.shields.io/badge/python-3.6-blue.svg)
 [![Documentation Status](https://readthedocs.org/projects/globalchem/badge/?version=latest)](https://globalchem.readthedocs.io/en/latest/?badge=latest)
 ![Repo Size](https://img.shields.io/github/repo-size/Sulstice/global-chem)
+[![PyPI version](https://badge.fury.io/py/global-chem.svg)](https://badge.fury.io/py/global-chem)
 
 Global Chem is a content variable store for cheminformaticians. Variables that we often use in research should be added here. 
 The main motivation behind this is to eliminate the development time for when folk build their applications or conduct 

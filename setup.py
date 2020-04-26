@@ -37,7 +37,7 @@ setup(
     name="global_chem",
     version="0.1.0",
     packages=['global_chem'],
-    license='MPL',
+    license='MPL 2.0',
     author="Suliman Sharif",
     author_email="sharifsuliman1@gmail.com",
     url="https://www.github.com/Sulstice/global-chem",
@@ -49,7 +49,7 @@ setup(
     classifiers=[
         'Development Status :: 4 - Beta',
         'Natural Language :: English',
-        'License :: OSI Approved :: MOZILLA PUBLIC LICENSE 2.0 (MPL 2.0)',
+        'License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)',
         'Intended Audience :: Developers',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
