@@ -4,10 +4,6 @@ GlobalChem: A content variable store for Chemistry!
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 ![Python](https://img.shields.io/badge/python-3.6-blue.svg)
 
-<p align="center">
-  <img width="200" height="300" src="images/shark-logo.jpg">
-</p>
-
 Global Chem is a content variable store for cheminformaticians. Variables that we often use in research should be added here. 
 The main motivation behind this is to eliminate the development time for when folk build their applications or conduct 
 research.
