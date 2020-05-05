@@ -29,6 +29,12 @@ GlobalChem is going to be distribute via PyPi and as the content store grows we 
 making it accessible to all regardless of what you use. Alternatively, you could have a glance at the source code and copy/paste
 it yourself.
 
+Variables List
+==============
+- functional groups (SMILES)
+- functional groups (SMARTS)
+- amino acids (SMILES)
+
 Structure of GlobalChem
 =======================
 
