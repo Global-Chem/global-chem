@@ -14,7 +14,7 @@ The main motivation behind this is to eliminate the development time for when fo
 research.
 
 <p align="center">
-  <img width="200" height="300" src="images/globalchemlogo.png">
+  <img width="740" height="400" src="images/globalchemlogo.png">
 </p>
 
 Announcements
