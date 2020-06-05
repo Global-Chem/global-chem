@@ -11,6 +11,10 @@ Global Chem is a content variable store for cheminformaticians. Variables that w
 The main motivation behind this is to eliminate the development time for when folk build their applications or conduct 
 research.
 
+<p align="center">
+  <img width="200" height="300" src="images/globalchemlogo.png">
+</p>
+
 Announcements
 =============
 
