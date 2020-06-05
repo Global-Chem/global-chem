@@ -7,6 +7,8 @@ GlobalChem: A content variable store for Chemistry!
 ![Repo Size](https://img.shields.io/github/repo-size/Sulstice/global-chem)
 [![PyPI version](https://badge.fury.io/py/global-chem.svg)](https://badge.fury.io/py/global-chem)
 [![DOI](https://zenodo.org/badge/259046250.svg)](https://zenodo.org/badge/latestdoi/259046250)
+[![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
+
 
 
 Global Chem is a content variable store for cheminformaticians. Variables that we often use in research should be added here. 
@@ -56,6 +58,7 @@ GlobalChem was created because I noticed I was using the same variable across mu
 for folk to have.
 
 - Lead Developer [Suliman sharif](http://sulstice.github.io/)
+- Artwork [Elena Chow](http://www.chowelena.com/)
 
 * * * * *
 
