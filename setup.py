@@ -16,11 +16,6 @@ try:
 except ImportError:
     from distutils.core import setup, find_packages
 
-# requirements
-# ------------
-with open('requirements.txt') as f:
-    REQUIREMENTS = f.read().strip().split('\n')
-
 TEST_REQUIREMENTS = [
     'pytest',
     'pytest-runner'
@@ -35,13 +30,13 @@ else:
 # ----
 setup(
     name="global_chem",
-    version="0.3.1",
+    version="0.3.3",
     packages=['global_chem'],
     license='MPL 2.0',
     author="Suliman Sharif",
     author_email="sharifsuliman1@gmail.com",
     url="https://www.github.com/Sulstice/global-chem",
-    install_requires=REQUIREMENTS,
+    install_requires=[],
     long_description=long_description,
     long_description_content_type='text/markdown',
     zip_safe=False,
