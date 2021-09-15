@@ -15,7 +15,14 @@ class GlobalChem(object):
     GlobalChem will be the master class of all variables, as the content store grows we can use this as the parent class.
 
     """
-
+    
+    def _get_common_regex_patterns(self):
+                
+        regex_patterns = {
+            'mol2': '^@<\w+?>\w+?\n[COMPOUND_ID]\n(.|\n)*?@<TRIPOS>SUBSTRUCTURE\n.*?\n'
+        }
+        
+        return regex_patterns
 
     def _get_amino_acids(self):
 
@@ -325,3 +332,4 @@ class GlobalChem(object):
     functional_groups_smarts = property(_get_functional_groups_smarts)
     common_organic_solvents_smiles = property(_get_common_organic_solvents_smiles)
     common_organic_solvents_smarts = property(_get_common_organic_solvents_smarts)
+    common_regex_patterns = property(_get_common_regex_patterns)
