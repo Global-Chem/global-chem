@@ -38,6 +38,16 @@ GlobalChem is going to be distribute via PyPi and as the content store grows we 
 making it accessible to all regardless of what you use. Alternatively, you could have a glance at the source code and copy/paste
 it yourself.
 
+Quick Start
+===========
+
+```
+from global_chem import GlobalChem
+global_chem = GlobalChem()
+global_chem.amino_acid_side_chains
+global_chem.functional_groups_smiles
+```
+
 Variables List
 ==============
 - functional groups (SMILES)
