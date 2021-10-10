@@ -53,7 +53,7 @@ class GlobalChem(object):
     
     def _get_iupac_blue_book_common_subsituents(self):
         
-        radical_organic_substituents = {
+        radical_functional_groups = {
             'acetamido': 'O=C(N)C',
             'acetoacetyl': 'O=C(C)CC(=O)O',
             'acetyl': 'C(C)=O',
@@ -278,7 +278,7 @@ class GlobalChem(object):
             'xylylene': '',
         }
         
-        ring_systems = {
+        ring_functional_groups = {
             'cyclopropane': '',
             'spiropentane': '',
             'cyclobutane': '',
