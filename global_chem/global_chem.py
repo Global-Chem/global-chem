@@ -24,7 +24,7 @@ class GlobalChem(object):
         
         return regex_patterns
 
-    def _get_amino_acids(self):
+    def _get_amino_acids_smiles(self):
 
         amino_acid_side_chains = {
             "alanine": "C",  
@@ -690,7 +690,7 @@ class GlobalChem(object):
 
     #------------------------- Property Declaration for GlobalChem ---------------------------#
 
-    amino_acid_side_chains = property(_get_amino_acids)
+    amino_acid_side_chains = property(_get_amino_acids_smiles)
     open_smiles_functional_groups_smiles = property(_get_open_smiles_functional_groups_smiles)
     open_smiles_functional_groups_smarts = property(_get_open_smiles_functional_groups_smarts)
     common_organic_solvents_smiles = property(_get_common_organic_solvents_smiles)
