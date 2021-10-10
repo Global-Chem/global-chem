@@ -12,18 +12,18 @@ GlobalChem: A content variable store for Chemistry!
 
 
 
-Global Chem is a content variable store for cheminformaticians. Variables that we often use in research should be added here. 
-The main motivation behind this is to eliminate the development time for when folk build their applications or conduct 
-research.
+Global Chem is a variable store for common and rare chemical lists using IUPAC as input and SMILES/SMARTS as output. As 
+mostly needed by myself as I search through chemical infinity. 
+
+I have found these lists written history to be useful, they come from a variety of different fields but are aggregated 
+into the most common format of organic chemists (IUPAC) and the common language of the cheminformatician (SMILES) and for 
+pattern matching (SMARTS).
 
 <p align="center">
   <img width="800" height="400" src="images/globalchemlogo.png">
 </p>
 
-Announcements
-=============
 
--   Work has began! April 2020 (added the amino acids)
 
 Using GlobalChem
 =====================
@@ -38,31 +38,36 @@ GlobalChem is going to be distribute via PyPi and as the content store grows we 
 making it accessible to all regardless of what you use. Alternatively, you could have a glance at the source code and copy/paste
 it yourself.
 
+```
+
+pip install global-chem
+
+```
 Quick Start
 ===========
 
+Just with no dependencies, intialize the class and there you go! All the common and rare groups of the world
+at your disposal 
+
 ```
+
 from global_chem import GlobalChem
+
 global_chem = GlobalChem()
-global_chem.amino_acid_side_chains
-global_chem.functional_groups_smiles
+
+
 ```
 
 Variables List
 ==============
-- functional groups (SMILES)
-- functional groups (SMARTS)
-- amino acids (SMILES)
-- common organic solvents (SMILES)
-- common organic solvents (SMARTS)
-- regex patterns (1 so far Mol2)
 
-Structure of GlobalChem
-=======================
-
-Currently, the main subpackages are:
-
-- **global-chem**: globalchem main class. 
+| Chemical List                       | Languages                    | Variables                                                                                                                  | References                                                                                                                                                                                                                                     |
+|-------------------------------------|------------------------------|----------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Amino Acids                         | IUPAC/SMILES/SMARTS          | amino_acid_side_smiles, amino_acid_side_smarts                                                                             | Common Knowledge                                                                                                                                                                                                                               |
+| Common Organic Solvents             | IUPAC/SMILES/SMARTS          | common_organic_solvents_smiles, common_organic_solvents_smarts                                                             | Fulmer, Gregory R., et al. “NMR Chemical Shifts of Trace Impurities: Common Laboratory Solvents, Organics, and Gases in Deuterated Solvents Relevant to the Organometallic Chemist.”Organometallics , vol. 29, no. 9, May 2010, pp. 2176–79.   |
+| Open Smiles                         | IUPAC/SMILES/SMARTS          | open_smiles_functional_groups_smiles, open_smiles_functional_groups_smarts                                                 | OpenSMILES Home Page. http://opensmiles.org/.                                                                                                                                                                                                  |
+| IUPAC Blue Book (CRC Handbook) 2003 | Preferred Name/SMILES/SMARTS | iupac_blue_book_radical_smiles, iupac_blue_book_radical_smarts, iupac_blue_book_rings_smiles, iupac_blue_book_rings_smarts | Chemical Rubber Company. CRC Handbook of Chemistry and Physics: A Ready-Reference Book of Chemical and Physical Data . Edited by David R. Lide, 85. ed, CRC Press, 2004.                                                                       |
+| Common Regex Patterns               | Mol2                         | common_regex_patterns                                                                                                      |                                                                                                                                                                                                                                                |
 
 
 Genesis
@@ -76,6 +81,16 @@ for folk to have.
 
 * * * * *
 
+Citation
+========
+
+If you find my personal dictionary is useful please feel free to cite me under:
+
+```
+
+Sul, Elena Y. Chow: "Sul's Dictionary" 
+
+```
 External links
 ==============
 
