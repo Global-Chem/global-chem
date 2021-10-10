@@ -55,7 +55,7 @@ from global_chem import GlobalChem
 
 global_chem = GlobalChem()
 
-
+compounds = global_chem.rings_in_drugs_smiles
 ```
 
 Variables List
