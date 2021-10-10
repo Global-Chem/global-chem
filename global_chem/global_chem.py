@@ -399,7 +399,7 @@ class GlobalChem(object):
         
         return organic_substituents, ring_systems
         
-    def _get_functional_groups_smiles(self):
+    def _get_open_smiles_functional_groups_smiles(self):
 
         functional_groups_smiles = {
             "1,1,1-trifluoroethane": "CC(F)(F)F",
@@ -500,7 +500,7 @@ class GlobalChem(object):
 
         return functional_groups_smiles
 
-    def _get_functional_groups_smarts(self):
+    def _get_open_smiles_functional_groups_smarts(self):
 
         functional_groups_smarts = {
             "acetic anydride": "[CX3](=[OX1])[OX2][CX3](=[OX1])",
@@ -691,8 +691,8 @@ class GlobalChem(object):
     #------------------------- Property Declaration for GlobalChem ---------------------------#
 
     amino_acid_side_chains = property(_get_amino_acids)
-    functional_groups_smiles = property(_get_functional_groups_smiles)
-    functional_groups_smarts = property(_get_functional_groups_smarts)
+    open_smiles_functional_groups_smiles = property(_get_open_smiles_functional_groups_smiles)
+    open_smiles_functional_groups_smarts = property(_get_open_smiles_functional_groups_smarts)
     common_organic_solvents_smiles = property(_get_common_organic_solvents_smiles)
     common_organic_solvents_smarts = property(_get_common_organic_solvents_smarts)
     common_regex_patterns = property(_get_common_regex_patterns)
