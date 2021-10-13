@@ -30,6 +30,10 @@ class GlobalChem(object):
             'tyree-pop-1': 'CCGAGAGAC',
             'tyree-fjd-1': '',
         }
+        
+        pseudomonas = {
+            'prrF2': 'gataatgagaatagttatt'
+        }
 
     def _get_amino_acids():
 
