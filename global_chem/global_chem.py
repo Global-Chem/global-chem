@@ -23,6 +23,17 @@ class GlobalChem(object):
         }
         
         return regex_patterns
+    
+    def _get_fur_boxes():
+        
+        fur_box = {
+            'tyree-pop-1': 'CCGAGAGAC',
+            'tyree-fjd-1': '',
+        }
+        
+        pseudomonas = {
+            'prrF2': 'gataatgagaatagttatt'
+        }
 
     def _get_amino_acids():
 
