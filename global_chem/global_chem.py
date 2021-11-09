@@ -16,7 +16,7 @@ class GlobalChem(object):
 
     """
     
-    def _get_common_regex_patterns():
+    def _get_common_regex_patterns(self):
                 
         regex_patterns = {
             'mol2': '^@<\w+?>\w+?\n[COMPOUND_ID]\n(.|\n)*?@<TRIPOS>SUBSTRUCTURE\n.*?\n'
@@ -24,7 +24,7 @@ class GlobalChem(object):
         
         return regex_patterns
 
-    def _get_amino_acids():
+    def _get_amino_acids(self):
 
         amino_acids_smiles = {
             "alanine": "C",  
@@ -74,7 +74,7 @@ class GlobalChem(object):
 
         return amino_acids_smiles, amino_acids_smarts
 
-    def _get_common_organic_solvents():
+    def _get_common_organic_solvents(self):
 
         common_organic_solvents_smiles = {
             'acetic acid': 'CC(=O)O',
@@ -166,7 +166,7 @@ class GlobalChem(object):
 
         return common_organic_solvents_smiles, common_organic_solvents_smarts
 
-    def _get_essential_vitamins():
+    def _get_essential_vitamins(self):
 
         vitamins_smiles = {
             'vitamin A': 'CC1=C(C(CCC1)(C)C)C=CC(=CC=CC(=CCO)C)C',
@@ -202,7 +202,7 @@ class GlobalChem(object):
 
         return vitamins_smiles, vitamin_smarts
 
-    def _get_open_smiles_functional_groups():
+    def _get_open_smiles_functional_groups(self):
 
         functional_groups_smiles = {
             "1,1,1-trifluoroethane": "CC(F)(F)F",
@@ -391,7 +391,7 @@ class GlobalChem(object):
 
         return functional_groups_smiles, functional_groups_smarts
 
-    def _get_commonly_used_r_group_replacements():
+    def _get_commonly_used_r_group_replacements(self):
 
         r_group_smiles = {
             'water': 'O',
@@ -1176,7 +1176,7 @@ class GlobalChem(object):
 
         return r_group_smiles, r_group_smarts
 
-    def _get_iupac_blue_book_common_functional_groups():
+    def _get_iupac_blue_book_common_functional_groups(self):
         
         radical_smiles = {
             'acetamido': 'O=C(N)C',
@@ -1859,7 +1859,7 @@ class GlobalChem(object):
         
         return radical_smiles, radical_smarts, rings_smiles, rings_smarts
 
-    def _get_rings_in_drugs():
+    def _get_rings_in_drugs(self):
 
         rings_in_drugs_smiles = {
             "benzene": "C1=CC=CC=C1",
@@ -2053,6 +2053,159 @@ class GlobalChem(object):
 
         return rings_in_drugs_smiles, rings_in_drugs_smarts
 
+    def _get_common_heterocyclic_rings_phase_2(self):
+
+        rings_smiles = {
+            'pyridine': 'C1=CC=NC=C1',
+            'indole': 'C12=CC=CC=C1C=CN2',
+            'imidazole': 'C1=CN=CN1',
+            'thiazol-2-amine': 'NC1=NC=CS1',
+            'tetrazole': 'C1=NN=NN1',
+            '1,2,4-triazole': 'C1=NC=NN1',
+            'thiophene': 'C1=CC=CS1',
+            'cytosine': 'O=C1N=C(N)C=CN1',
+            'adenine': 'NC1=NC=NC2=C1N=CN2',
+            '5-methylindole': 'CC1=CC=C2C(C=CN2)=C1',
+            'isocaffeine': 'O=C(N1C)NC2=C(N=CN2)C1=O',
+            'tetrazolethiol': 'SN1N=NN=C1',
+            '3-methylisoxazole': 'C1=CC=NO1',
+            '1-methylimidazole': 'CN1C=NC=C1',
+            '2-methylimidazole': 'CC1=NC=CN1',
+            'guanine': 'NC(N1)=NC2=C(N=CN2)C1=O',
+            'quinoline': 'C12=CC=CC=C1N=CC=C2',
+            'furan': 'C1=CC=CO1',
+            'tosufloxacin': 'NC1=C(F)C=C2C(NC=C(C(O)=O)C2=O)=N1'
+        }
+
+        rings_smarts = {
+            'pyridine': '[#6]1:[#6]:[#6]:[#7]:[#6]:[#6]:1',
+            'indole': '[#6]12:[#6]:[#6]:[#6]:[#6]:[#6]:1:[#6]:[#6]:[#7H]:2',
+            'imidazole': '[#6]1:[#6]:[#7]:[#6]:[#7H]:1',
+            'thiazol-2-amine': '[#7]-[#6]1:[#7]:[#6]:[#6]:[#16]:1',
+            'tetrazole': '[#6]1:[#7]:[#7]:[#7]:[#7H]:1',
+            '1,2,4-triazole': '[#6]1:[#7]:[#6]:[#7]:[#7H]:1',
+            'thiophene': '[#6]1:[#6]:[#6]:[#6]:[#16]:1',
+            'cytosine': '[#8]=[#6]1:[#7]:[#6](-[#7]):[#6]:[#6]:[#7H]:1',
+            'adenine': '[#7]-[#6]1:[#7]:[#6]:[#7]:[#6]2:[#6]:1:[#7]:[#6]:[#7H]:2',
+            '5-methylindole': '[#6]-[#6]1:[#6]:[#6]:[#6]2:[#6](:[#6]:[#6]:[#7H]:2):[#6]:1',
+            'isocaffeine': '[#8]=[#6]1:[#7](-[#6]):[#6](:[#6]2:[#6](:[#7H]:1):[#7H]:[#6]:[#7]:2)=[#8]',
+            'tetrazolethiol': '[#16]-[#7]1:[#7]:[#7]:[#7]:[#6]:1',
+            '3-methylisoxazole': '[#6]1:[#6]:[#6]:[#7]:[#8]:1',
+            '1-methylimidazole': '[#6]-[#7]1:[#6]:[#7]:[#6]:[#6]:1',
+            '2-methylimidazole': '[#6]-[#6]1:[#7]:[#6]:[#6]:[#7H]:1',
+            'guanine': '[#7]-[#6]1:[#7H]:[#6](:[#6]2:[#6](:[#7]:1):[#7H]:[#6]:[#7]:2)=[#8]',
+            'quinoline': '[#6]12:[#6]:[#6]:[#6]:[#6]:[#6]:1:[#7]:[#6]:[#6]:[#6]:2',
+            'furan': '[#6]1:[#6]:[#6]:[#6]:[#8]:1',
+            'tosufloxacin': '[#7]-[#6]1:[#6](-[#9]):[#6]:[#6]2:[#6](:[#7H]:[#6]:[#6](-[#6](-[#8])=[#8]):[#6]:2=[#8]):[#7]:1',
+        }
+
+        return rings_smiles, rings_smarts
+
+    def _get_common_privileged_scaffolds(self):
+
+        privileged_functional_groups_smiles = {
+            'indole': 'C12=CC=CC=C1C=CN2',
+            'quinoline': 'C12=CC=CC=C1N=CC=C2',
+            'isoquinoline': 'C12=C(C=NC=C2)C=CC=C1',
+            'purine': 'C12=NC=NC=C1NC=N2',
+            'quinoxaline': 'C12=CC=CC=C1N=CC=N2',
+            'quinazolinone': 'O=C1NC2=C(C=CC=C2)C=N1',
+            'tetrahydroisoquinoline': 'C12=C(CNCC2)C=CC=C1',
+            'tetrahydraquinoline': 'C12=C(NCCC2)C=CC=C1',
+            'benzoxazole': 'C12=CC=CC=C1OC=N2',
+            'benzofuran': 'C12=CC=CC=C1C=CO2',
+            '3,3-dimethylbenzopyran': 'CC1(C)C=CC2=CC=CC=C2O1',
+            'chromone': 'O=C1C=COC2=C1C=CC=C2',
+            'coumarin': 'O=C1OC2=C(C=CC=C2)C=C1',
+            'carbohydrate': 'OCC1OC(O)C(O)C(O)C1O',
+            'steroid': 'C12CCCCC1C3C(C(CCC4)C4CC3)CC2',
+            'prostanoic acid': 'CCCCCCCC[C@@H]1[C@H](CCC1)CCCCCCC(O)=O',
+            'benzodiazepine': 'O=C1CN=C(C2=CC=CC=C2)C3=C(C=CC=C3)N1',
+            'arylpiperidine': 'C1(C2CCNCC2)=CC=CC=C1',
+            'arylpiperizine': 'C1(N2CCNCC2)=CC=CC=C1',
+            'benzylpiperidine': 'N1(CC2=CC=CC=C2)CCCCC1',
+            'benzothiophene': 'C12=CC=CC=C1C=CS2',
+            'dihydropyridine': 'C1CC=CC=N1',
+            'benzimidazole': 'C12=CC=CC=C1NC=N2',
+            'biphenyltetrazole': 'C1(C2=C(C3=CC=CC=C3)C=CC=C2)=NN=NN1',
+            '3,3-hydroxy-2-oxindole': 'OC(C1=CC=CC=C1N2)C2=O',
+            '5,7,5-lactone': 'C=C1C2CCCC3C(CC3)C2OC1=O',
+            '6,6-spiroacetal': 'C1CCCC2(CCCCO2)O1',
+            'dihydropyrimidone': 'O=C1NCC=CN1',
+            'indolizine': 'N12C=CC=C1C=CC=C2',
+            'biphenyl': 'C1(C2=CC=CC=C2)=CC=CC=C1',
+            'triazaspirodecanone': 'O=C(NC1)C2(CCNCC2)N1C3=CC=CC=C3',
+            'N-acylhydrazone': '[H]C(/N=N/CC)=O',
+            'pyrrolinone': 'O=C1C=CNC1',
+            'hydroxyamate': 'ONC(CCC(C)=O)=O',
+            'trans-lactam': 'O=C1NC2CCCC2C1',
+            'trans-lactone': 'O=C1OC2CCCC2C1',
+            'hexahydroisoindole': 'C12CNCC1CCCC2',
+            'benzimidazolone': 'O=C1N(C2CCNCC2)C3=CC=CC=C3N1',
+            'indoline': 'C12=C(NCC2)C=CC=C1',
+            '2-arylbenzothiazole': 'C12=CC=CC=C1N=C(C3=CC=CC=C3)S2',
+            'imidazolequinoxaline': 'C1(NC2)=CC=CC=C1N3C2=CN=C3',
+            'spiroindanylpiperidine': 'C12=CC=CC=C1C3(CCNCC3)CC2',
+            'aminopyridazine': 'NC1=NN=CC=C1',
+            '1,4-pyrazolodiazepin-8-one': 'O=C1NCCNC2=CNN=C21',
+            'rhodanine': 'S=C(N1)SCC1=O',
+            'pyranopyridone': 'O=C1C2=C(OCC=C2)C=CN1',
+            'pyranoquinolone': 'O=C1C=CC2=CC=CC=C2N1'
+        }
+
+        privileged_functional_groups_smarts = {
+            'indole': '[#6]12:[#6]:[#6]:[#6]:[#6]:[#6]:1:[#6]:[#6]:[#7H]:2',
+            'quinoline': '[#6]12:[#6]:[#6]:[#6]:[#6]:[#6]:1:[#7]:[#6]:[#6]:[#6]:2',
+            'isoquinoline': '[#6]12:[#6](:[#6]:[#7]:[#6]:[#6]:1):[#6]:[#6]:[#6]:[#6]:2',
+            'purine': '[#6]12:[#7]:[#6]:[#7]:[#6]:[#6]:1:[#7H]:[#6]:[#7]:2',
+            'quinoxaline': '[#6]12:[#6]:[#6]:[#6]:[#6]:[#6]:1:[#7]:[#6]:[#6]:[#7]:2',
+            'quinazolinone': '[#8]=[#6]1:[#7H]:[#6]2:[#6](:[#6]:[#6]:[#6]:[#6]:2):[#6]:[#7]:1',
+            'tetrahydroisoquinoline': '[#6]12:[#6](-[#6]-[#7]-[#6]-[#6]-1):[#6]:[#6]:[#6]:[#6]:2',
+            'tetrahydraquinoline': '[#6]12:[#6](-[#7]-[#6]-[#6]-[#6]-1):[#6]:[#6]:[#6]:[#6]:2',
+            'benzoxazole': '[#6]12:[#6]:[#6]:[#6]:[#6]:[#6]:1:[#8]:[#6]:[#7]:2',
+            'benzofuran': '[#6]12:[#6]:[#6]:[#6]:[#6]:[#6]:1:[#6]:[#6]:[#8]:2',
+            '3,3-dimethylbenzopyran': '[#6]-[#6]1(-[#6])-[#6]=[#6]-[#6]2:[#6]:[#6]:[#6]:[#6]:[#6]:2-[#8]-1',
+            'chromone': '[#8]=[#6]1:[#6]:[#6]:[#8]:[#6]2:[#6]:1:[#6]:[#6]:[#6]:[#6]:2',
+            'coumarin': '[#8]=[#6]1:[#8]:[#6]2:[#6](:[#6]:[#6]:[#6]:[#6]:2):[#6]:[#6]:1',
+            'carbohydrate': '[#8]-[#6]-[#6]1-[#8]-[#6](-[#8])-[#6](-[#8])-[#6](-[#8])-[#6]-1-[#8]',
+            'steroid': '[#6]12-[#6]-[#6]-[#6]-[#6]-[#6]-1-[#6]1-[#6](-[#6]3-[#6]-[#6]-[#6]-[#6]-3-[#6]-[#6]-1)-[#6]-[#6]-2',
+            'prostanoic acid': '[#6]-[#6]-[#6]-[#6]-[#6]-[#6]-[#6]-[#6]-[#6@@H]1-[#6@H](-[#6]-[#6]-[#6]-1)-[#6]-[#6]-[#6]-[#6]-[#6]-[#6]-[#6](-[#8])=[#8]',
+            'benzodiazepine': '[#8]=[#6]1-[#6]-[#7]=[#6](-[#6]2:[#6]:[#6]:[#6]:[#6]:[#6]:2)-[#6]2:[#6](:[#6]:[#6]:[#6]:[#6]:2)-[#7]-1',
+            'arylpiperidine': '[#6]1(-[#6]2-[#6]-[#6]-[#7]-[#6]-[#6]-2):[#6]:[#6]:[#6]:[#6]:[#6]:1',
+            'arylpiperizine': '[#6]1(-[#7]2-[#6]-[#6]-[#7]-[#6]-[#6]-2):[#6]:[#6]:[#6]:[#6]:[#6]:1',
+            'benzylpiperidine': '[#7]1(-[#6]-[#6]2:[#6]:[#6]:[#6]:[#6]:[#6]:2)-[#6]-[#6]-[#6]-[#6]-[#6]-1',
+            'benzothiophene': '[#6]12:[#6]:[#6]:[#6]:[#6]:[#6]:1:[#6]:[#6]:[#16]:2',
+            'dihydropyridine': '[#6]1-[#6]-[#6]=[#6]-[#6]=[#7]-1',
+            'benzimidazole': '[#6]12:[#6]:[#6]:[#6]:[#6]:[#6]:1:[#7H]:[#6]:[#7]:2',
+            'biphenyltetrazole': '[#6]1(-[#6]2:[#6](-[#6]3:[#6]:[#6]:[#6]:[#6]:[#6]:3):[#6]:[#6]:[#6]:[#6]:2):[#7]:[#7]:[#7]:[#7H]:1',
+            '3,3-hydroxy-2-oxindole': '[#8]-[#6]1-[#6]2:[#6]:[#6]:[#6]:[#6]:[#6]:2-[#7]-[#6]-1=[#8]',
+            '5,7,5-lactone': '[#6]=[#6]1-[#6]2-[#6]-[#6]-[#6]-[#6]3-[#6](-[#6]-[#6]-3)-[#6]-2-[#8]-[#6]-1=[#8]',
+            '6,6-spiroacetal': '[#6]1-[#6]-[#6]-[#6]-[#6]2(-[#6]-[#6]-[#6]-[#6]-[#8]-2)-[#8]-1',
+            'dihydropyrimidone': '[#8]=[#6]1-[#7]-[#6]-[#6]=[#6]-[#7]-1',
+            'indolizine': '[#7]12:[#6]:[#6]:[#6]:[#6]:1:[#6]:[#6]:[#6]:[#6]:2',
+            'biphenyl': '[#6]1(-[#6]2:[#6]:[#6]:[#6]:[#6]:[#6]:2):[#6]:[#6]:[#6]:[#6]:[#6]:1',
+            'triazaspirodecanone': '[#8]=[#6]1-[#7]-[#6]-[#7](-[#6]-12-[#6]-[#6]-[#7]-[#6]-[#6]-2)-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1',
+            'N-acylhydrazone': '[#6H](/[#7]=[#7]/[#6]-[#6])=[#8]',
+            'pyrrolinone': '[#8]=[#6]1-[#6]=[#6]-[#7]-[#6]-1',
+            'hydroxyamate': '[#8]-[#7]-[#6](-[#6]-[#6]-[#6](-[#6])=[#8])=[#8]',
+            'trans-lactam': '[#8]=[#6]1-[#7]-[#6]2-[#6]-[#6]-[#6]-[#6]-2-[#6]-1',
+            'trans-lactone': '[#8]=[#6]1-[#8]-[#6]2-[#6]-[#6]-[#6]-[#6]-2-[#6]-1',
+            'hexahydroisoindole': '[#6]12-[#6]-[#7]-[#6]-[#6]-1-[#6]-[#6]-[#6]-[#6]-2',
+            'benzimidazolone': '[#8]=[#6]1:[#7](-[#6]2-[#6]-[#6]-[#7]-[#6]-[#6]-2):[#6]2:[#6]:[#6]:[#6]:[#6]:[#6]:2:[#7H]:1',
+            'indoline': '[#6]12:[#6](-[#7]-[#6]-[#6]-1):[#6]:[#6]:[#6]:[#6]:2',
+            '2-arylbenzothiazole': '[#6]12:[#6]:[#6]:[#6]:[#6]:[#6]:1:[#7]:[#6](-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1):[#16]:2',
+            'imidazolequinoxaline': '[#6]12-[#7]-[#6]-[#6]3:[#7](-[#6]:1:[#6]:[#6]:[#6]:[#6]:2):[#6]:[#7]:[#6]:3',
+            'spiroindanylpiperidine': '[#6]12:[#6]:[#6]:[#6]:[#6]:[#6]:1-[#6]1(-[#6]-[#6]-[#7]-[#6]-[#6]-1)-[#6]-[#6]-2',
+            'aminopyridazine': '[#7]-[#6]1:[#7]:[#7]:[#6]:[#6]:[#6]:1',
+            '1,4-pyrazolodiazepin-8-one': '[#8]=[#6]1-[#7]-[#6]-[#6]-[#7]-[#6]2:[#6]:[#7H]:[#7]:[#6]:2-1',
+            'rhodanine': '[#16]=[#6]1-[#7]-[#6](-[#6]-[#16]-1)=[#8]',
+            'pyranopyridone': '[#8]=[#6]1:[#6]2:[#6](-[#8]-[#6]-[#6]=[#6]-2):[#6]:[#6]:[#7H]:1',
+            'pyranoquinolone': '[#8]=[#6]1:[#6]:[#6]:[#6]2:[#6]:[#6]:[#6]:[#6]:[#6]:2:[#7H]:1',
+        }
+
+        return privileged_functional_groups_smiles, privileged_functional_groups_smarts
+
+    def _get_
     #------------------------- Property Declaration for GlobalChem ---------------------------#
 
     # Biological Compounds
@@ -2108,6 +2261,21 @@ class GlobalChem(object):
         iupac_blue_book_rings_smiles,
         iupac_blue_book_rings_smarts
     ) = _get_iupac_blue_book_common_functional_groups()
+
+    # Common Phase 2 Hetereocyclic Rings
+    # ----------------------------------
+    (
+        phase_2_hetereocyclic_rings_smiles,
+        phase_2_hetereocyclic_rings_smarts
+    ) = _get_common_heterocyclic_rings_phase_2()
+
+    # Privileged Scaffolds
+    # --------------------
+
+    (
+        privileged_scaffolds_smiles,
+        privileged_scaffolds_smarts
+    ) = _get_common_privileged_scaffolds()
 
     # Regex Patterns
     # --------------
