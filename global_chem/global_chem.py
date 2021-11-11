@@ -2205,7 +2205,6 @@ class GlobalChem(object):
 
         return privileged_functional_groups_smiles, privileged_functional_groups_smarts
 
-    def _get_
     #------------------------- Property Declaration for GlobalChem ---------------------------#
 
     # Biological Compounds
