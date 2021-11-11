@@ -16,7 +16,7 @@ class GlobalChem(object):
 
     """
     
-    def _get_common_regex_patterns(self):
+    def _get_common_regex_patterns():
                 
         regex_patterns = {
             'mol2': '^@<\w+?>\w+?\n[COMPOUND_ID]\n(.|\n)*?@<TRIPOS>SUBSTRUCTURE\n.*?\n'
@@ -24,7 +24,7 @@ class GlobalChem(object):
         
         return regex_patterns
 
-    def _get_amino_acids(self):
+    def _get_amino_acids():
 
         amino_acids_smiles = {
             "alanine": "C",  
@@ -74,7 +74,7 @@ class GlobalChem(object):
 
         return amino_acids_smiles, amino_acids_smarts
 
-    def _get_common_organic_solvents(self):
+    def _get_common_organic_solvents():
 
         common_organic_solvents_smiles = {
             'acetic acid': 'CC(=O)O',
@@ -166,7 +166,7 @@ class GlobalChem(object):
 
         return common_organic_solvents_smiles, common_organic_solvents_smarts
 
-    def _get_essential_vitamins(self):
+    def _get_essential_vitamins():
 
         vitamins_smiles = {
             'vitamin A': 'CC1=C(C(CCC1)(C)C)C=CC(=CC=CC(=CCO)C)C',
@@ -202,7 +202,7 @@ class GlobalChem(object):
 
         return vitamins_smiles, vitamin_smarts
 
-    def _get_open_smiles_functional_groups(self):
+    def _get_open_smiles_functional_groups():
 
         functional_groups_smiles = {
             "1,1,1-trifluoroethane": "CC(F)(F)F",
@@ -391,7 +391,7 @@ class GlobalChem(object):
 
         return functional_groups_smiles, functional_groups_smarts
 
-    def _get_commonly_used_r_group_replacements(self):
+    def _get_commonly_used_r_group_replacements():
 
         r_group_smiles = {
             'water': 'O',
@@ -1176,7 +1176,7 @@ class GlobalChem(object):
 
         return r_group_smiles, r_group_smarts
 
-    def _get_iupac_blue_book_common_functional_groups(self):
+    def _get_iupac_blue_book_common_functional_groups():
         
         radical_smiles = {
             'acetamido': 'O=C(N)C',
@@ -1859,7 +1859,7 @@ class GlobalChem(object):
         
         return radical_smiles, radical_smarts, rings_smiles, rings_smarts
 
-    def _get_rings_in_drugs(self):
+    def _get_rings_in_drugs():
 
         rings_in_drugs_smiles = {
             "benzene": "C1=CC=CC=C1",
@@ -2053,7 +2053,7 @@ class GlobalChem(object):
 
         return rings_in_drugs_smiles, rings_in_drugs_smarts
 
-    def _get_common_heterocyclic_rings_phase_2(self):
+    def _get_common_heterocyclic_rings_phase_2():
 
         rings_smiles = {
             'pyridine': 'C1=CC=NC=C1',
@@ -2101,7 +2101,7 @@ class GlobalChem(object):
 
         return rings_smiles, rings_smarts
 
-    def _get_common_privileged_scaffolds(self):
+    def _get_common_privileged_scaffolds():
 
         privileged_functional_groups_smiles = {
             'indole': 'C12=CC=CC=C1C=CN2',
