@@ -2273,6 +2273,98 @@ class GlobalChem(object):
 
         return functional_groups_smiles, functional_groups_smarts
 
+    def _get_common_polymer_repeating_units():
+
+        functional_group_smiles = {
+            '3′-bromo-2-chloro[1,1′:4′,1′′-terphenyl]-4,4′′': 'ClC1=CC=CC=C1C2=CC=C(C3=CC=CC=C3)C(Br)=C2',
+            '[3,3′-biquinoline]-6,6′': 'C1(C2=CC3=CC=CC=C3N=C2)=CC4=CC=CC=C4N=C1',
+            '[2,3′-bipyridine]-4,5′': 'C1(C2=CC=CN=C2)=NC=CC=C1',
+            '(Z)-but-1-enel': 'C=CCC',
+            'threo-(E)-3-(methoxycarbonyl)-4-methylbut-1-ene-1,4-diyl': '',
+            'ethene-1,2-diyl': 'C=C',
+            'propane-1,3-diyl': 'CCC',
+            'methylmethylene': '[CH]C',
+            '1-phenylethylene': 'C=CC1=CC=CC=C1',
+            '1,2-dioxobutane': 'CCC(C=O)=O',
+            '1,3-dioxohexane': 'CCCC(CC=O)=O',
+            'oxyoxalyl': 'O=CC(O)=O',
+            'oxysuccinyl': 'O=CCCC(O)=O',
+            'naphthalene': 'C12=CC=CC=C1C=CC=C2',
+            '2H-furo[3,2-b]pyran-2,6-diyl': '',
+            'pyridine-2,4-diyl': '',
+            'sodium 1-carboxylatoethylene': '',
+            'x-iminocyclopentane-1,2-diyl': '',
+            'pyridine-3,5-diylpiperidine-2,4-diyl': '',
+            '(4-chloro[3,3′-bipyridine]-5,5′-diyl)methylene': '',
+            'imino[1-oxo-2-(phenylsulfanyl)ethylene]': '',
+            'methylphenylsiloxane': '',
+            'diethoxyphosphazene': '',
+            'piperidine-3,5-diylideneethanediylidene': '',
+            'sulfanediylcarbonyl': '',
+            'spiro[4.5]decane-2,8-diylmethylene': '',
+            '4H-1,2,4-triazole-3,5-diylmethylene': '',
+            '(2-phenyl-1,3-phenylene)ethylene': '',
+            '(5′-chloro[1,2′-binaphthalene]-4,7′-diyl)methylene': '',
+            '(6-chlorocyclohex-1-ene-1,3-diyl)(1-bromoethylene)': '',
+            '3-(trifluoromethyl)phenyl]methylene': '',
+            '1,3-phenyleneethylene': '',
+            '(tetramethoxy-1,4-phenylene)(1,2-diphenylethene-1,2-diyl)': '',
+            '(1,1′,3,3′-tetraoxo[5,5′-biisoindoline]-2,2′-diyl)biphenyl-4,4′-diyl': '',
+            'morpholine-2,6-diylpyridine-3,5-diylthianthrene-2,8-diyl': '',
+            'naphthalene-2,7-diyl-1,4-phenylenecyclohexane-1,3-diyl': '',
+            'pyridine-3,5-diyl-1,4-phenylenecyclopentane-1,2-diyl': '',
+            'pyridine-4,2-diyl-4H-1,2,4-triazole-3,5-diylmethylene': '',
+            'oxyspiro[3.5]nona-2,5-diene-7,1-diylcyclohex-4-ene-1,3-diyl': '',
+            'piperidine-4,2-diyloxymethylene': '',
+            'piperidine-2,4-diyloxymethylene': '',
+            'pyridine-3,5-diylmethyleneoxy-1,4-phenylene': '',
+            'imino(1-chloro-2-oxoethylene)(4-nitro-1,3-phenylene)(3-bromopropane-1,3-diyl)': '',
+            'pyridine-3,5-diylacenaphthylene-3,8-diylpyrrole-3,4-diylacenaphthylene-3,7-diyl': '',
+            'pyridine-4,2-diyl(phenylmethylene)iminocyclohexane-1,4-diyl': '',
+            '(methylimino)methyleneimino-1,3-phenylene': '',
+            'pyridine-4,2-diyliminocyclohexane-1,4-diyl(phenylmethylene)': '',
+            'imino(1-oxoethylene)silanediylpropane-1,3-diyl': '',
+            'pyridine-3,5-diylcyclohexane-1,3-diyloxypropane-1,3-diyl': '',
+            'sulfanediylethylenesulfanediyl(2-amino-4-carboxypentane-1,5-diyl)': '',
+            'sulfanediylethylenesulfanediyl(4-amino-1-carboxypentane-1,5-diyl)': '',
+            'pyridine-3,5-diylmethylenepyridine-3,5-diyl(tetrahydropyran-3,5-diyl)': '',
+            'sulfanediyl(2-chloropropane-1,3-diyl)sulfanediylpropane-1,3-diyl': '',
+            'pyridine-3,5-diylcarbonyloxymethylene': '',
+            '1,3-phenylene(1-bromoethylene)cyclohexane-1,3-diyl(2-butylethylene)': '',
+            'oxy(1,1-dichloroethylene)imino(1-oxoethylene)': '',
+            'sulfanediyl(1-chloroethylene)-1,3-phenylene(1-chloroethylene)': '',
+            'sulfanediyl(1-iodoethylene)sulfanediyl(5-bromo-3-chloropentane-1,5-diyl)': '',
+            'oxymethylene-ONN-azoxy(chloromethylene)': '',
+            '(3-chlorobiphenyl-4,4′-diyl)methylene(3-chloro-1,4-phenylene)methylene': '',
+            'imino(x-methyl-1,3-phenylene)iminomalonyl': '',
+            'oxyhexane-1,6-diyloxycarbonylimino(methylphenylene)iminocarbonyl': '',
+            '2,4,8,10-tetraoxaspiro[5.5]undecane-3,9-diyloxyhexane-1,6-diyloxy': '',
+            'pyridine-3,5-diylmethylenepyrrole-3,4-diyloxymethylene': '',
+            'oxymethyleneiminocarbonylsulfanediyl-1,3-phenyleneethylene': '',
+            'oxyiminomethylenehydrazine-1,2-diylmethylene': '',
+            'piperidine-4,2-diylmethylenepiperidine-4,2-diylcyclopentane-1,2-diylethylenecyclopentane-1,2-diylmethylene': '',
+            '1,3-dioxa-8-thia-5,10-diazadodecane-1,12-diyl': '',
+            'oxymethyleneoxymethyleneoxymethyleneimino-1,3-phenylenemethyleneiminomethylene': '',
+            'pyridine-3,5-diyl-1,4-phenylenemethyleneoxymethyleneiminomethyleneoxy-1,4-phenylenemethylene': '',
+            'sulfinylmethylenesulfanediylpropane-1,3-diylsulfonyl-1,4-phenylene': '',
+            'oxyterephthaloylhydrazine-1,2-diylterephthaloyl': '',
+            'nitrilo-1,4-phenylenenitriloprop-2-en-3-yl-1-ylidene-1,4-phenyleneprop-1-en-1-yl-3-ylidene': '',
+            'oxycarbonylnitrilopropane-1,3-diylidenenitrilocarbonyl': '',
+            'oxyethyleneiminomethylenesulfanediylethyleneiminocyclohexane-1,3-diyl': '',
+            'iminomethyleneiminocarbonyl{2-[(2,4-dinitrophenyl)hydrazono]cyclopentane-1,3-diyl}carbonyl': '',
+            'oxyterephthaloyloxyhexane-1,6-diyl': '',
+            'nitrilocyclohexa-2,5-diene-1,4-diylidenenitrilo-1,4-phenyleneimino-1,4-phenyleneimino1,4-phenylene': '',
+            'cyclohexane-1,4-diylmethanylylidenecyclohexane-1,4-diylidenemethanylylidenecyclohexane-1,4-diylmethylene': ''
+
+
+        }
+
+        functional_group_smarts = {
+
+        }
+
+        return functional_group_smiles, functional_group_smarts
+
     #------------------------- Property Declaration for GlobalChem ---------------------------#
 
     # Biological Compounds
