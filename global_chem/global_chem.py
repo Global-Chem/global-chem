@@ -2442,6 +2442,8 @@ class GlobalChem(object):
 
     def _get_common_synthetic_dyes_in_medicine(self):
 
+       raise NotImplementedError
+
        non_ionic_dyes_with_acidic_colligators_smiles = {
             'chyrazine': '',
             'sudan_1': '',
