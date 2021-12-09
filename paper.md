@@ -16,25 +16,6 @@ bibliography: paper.bib
 
 # Introduction
 
-The chemical universe is expanding rapidly as open access titan databases (Enamine Database (20 Billion) [@Gorgulla:2020-4],
-Zinc Database (2 Billion) [Irwin:2020-12], PubMed Database (68 Million) [Roberts:2001-2]) and cheminformatic tools to process, manipulate, and derive new
-compound structures are established. With these new methods we now have a combinatorial explosion leaving us with ultra-large datasets
-and no proper organization. This presents a problem, with clustering and statistical methods being applied to chemical data and no actual way to organize
-compounds into their respective functional groups and their functionality leaves little to no understanding and hard to make use of. 
-
-To classify we need to revert back to the idea of communication. Humans use symbols and drawings to communicate, a collection of symbols and their combinations
-are called a language. Different languages can be employede to carry different features and mean different things to a variety of communities. 
-For organic chemistry, we draw skeletal patterns to communicate, and a written language using english characters to communicate, this was established as IUPAC [Cooke-Fox:1989-5],
-other chemical subcommunities also adopted the language and applied to their field in different dialects i.e polymer chemistry, organometallic chemistry.
-In the recent years, SMILES [Weininger:1988-5] is becoming a popular 1-D language amongst cheminformaticians for large datasets compared to 2D or 3D data (more lines). 
-With most ultra-large datasets stored primarily in SMILES, we can start at organizing the data into appropiate classifiers that
-will make it useful for all communities.
-
-To accomplish this, we make use of on the most useful papers that classify a functionality of a set of compounds. If we 
-write the IUPAC name and the SMILES name we can create a 1:1 mapping as a piece in the puzzle of the drug pipeline. The SMILES can be used
-to connect to other resources in the chemical data space to physics. Whereas the IUPAC name will talk to the chemists and 
-possibly some biologists. We then move it into a easy distributable format where it's accessible to everyone to expand.
-
 # Methodology and Implementation
 
 ### Software
@@ -78,7 +59,7 @@ At the time of writing the list now the list stands at:
 | Common Warheads                     | IUPAC/SMILES/SMARTS          | common_warhead_smiles, common_warhead_smarts                                                                               | 29           | [Gehringer:2019-6]       |
 | Common Polymer Repeating Units      | IUPAC/SMILES/SMARTS          | common_polymer_repeating_units_smiles, common_polymer_repeating_units_smarts                                               | 78           | [Hiorns:2019-6]          |
 | Common R Group Replacements         | IUPAC/SMILES/SMARTS          | r_groups_replacements_smiles, r_groups_replacements_smarts                                                                 | 499          | [Takeuchi:2021-9]        |
-| Electrophillic Warheads for Kinases | Preferred Name/SMILES/SMARTS | kinase_electrophilic_warheads_smiles, kinase_electrophilic_warheads_smarts                                                 | 29           | [Petri:2020-12]          |
+| Electrophillic Warheads for Kinases | Preferred Name/SMILES/SMARTS | kinase_electrophilic_warheads_smiles, kinase_electrophilic_warheads_smarts                                                 | 24           | [Petri:2020-12]          |
 | Privileged Scaffolds for Kinases    | IUPAC/SMILES/SMARTS          | kinase_privileged_scaffolds_smiles, kinase_privileged_scaffolds_smarts                                                     | 29           | [Hu:2021-3]              |
 | Common Regex Patterns               | Mol2                         | common_regex_patterns                                                                                                      | 1            |                          |
 
