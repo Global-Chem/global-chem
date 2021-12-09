@@ -4,7 +4,7 @@ tags:
   - Python
   - Cheminformatics
 authors:
-  - name: Suliman Sharif, Elena Yi Chow, Shaoqi Zhan, Sunhwan Jo, Alexander D. MacKerell Jr. 
+  - name: Suliman Sharif, Shaoqi Zhan, Ruibin Liu, Sunhwan Jo, Elena Yi Chow, Alexander D. MacKerell Jr. 
     orcid: 0000-0002-1342-9258
     affiliation: 1
 affiliations:
@@ -78,6 +78,8 @@ At the time of writing the list now the list stands at:
 | Common Warheads                     | IUPAC/SMILES/SMARTS          | common_warhead_smiles, common_warhead_smarts                                                                               | 29           | [Gehringer:2019-6]       |
 | Common Polymer Repeating Units      | IUPAC/SMILES/SMARTS          | common_polymer_repeating_units_smiles, common_polymer_repeating_units_smarts                                               | 78           | [Hiorns:2019-6]          |
 | Common R Group Replacements         | IUPAC/SMILES/SMARTS          | r_groups_replacements_smiles, r_groups_replacements_smarts                                                                 | 499          | [Takeuchi:2021-9]        |
+| Electrophillic Warheads for Kinases | Preferred Name/SMILES/SMARTS | kinase_electrophilic_warheads_smiles, kinase_electrophilic_warheads_smarts                                                 | 29           | [Petri:2020-12]          |
+| Privileged Scaffolds for Kinases    | IUPAC/SMILES/SMARTS          | kinase_privileged_scaffolds_smiles, kinase_privileged_scaffolds_smarts                                                     | 29           | [Hu:2021-3]              |
 | Common Regex Patterns               | Mol2                         | common_regex_patterns                                                                                                      | 1            |                          |
 
 # Conclusion
