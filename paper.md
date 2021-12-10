@@ -4,7 +4,7 @@ tags:
   - Python
   - Cheminformatics
 authors:
-  - name: Suliman Sharif, Shaoqi Zhan, Ruibin Liu, Sunhwan Jo, Elena Yi Chow, Alexander D. MacKerell Jr. 
+  - name: Suliman Sharif, Shaoqi Zhan, Ruibin Liu, Sunhwan Jo, Aarion Romney, Elena Yi Chow, Alexander D. MacKerell Jr. 
     orcid: 0000-0002-1342-9258
     affiliation: 1
 affiliations:
