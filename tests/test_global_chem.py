@@ -43,27 +43,25 @@ def test_rdkit_passing():
         ,gc.exposed_to_solvent_smiles
     ]
 
-    total_molecules = []
+    passing_molecules = []
     not_passing_rdkit_molecules = []
 
     for i in range(0, len(compounds)):
 
         molecules = compounds[i]
-
         smiles_list = list(list(molecules.values()))
 
         for i in range(0, len(smiles_list)):
 
-            total_molecules.append(smiles_list[i])
-
             try:
                 mol = Chem.MolFromSmiles(smiles_list[i])
-
-            except:
+                if mol:
+                    passing_molecules.append(smiles_list[i])
+            except Exception as e:
+                print ("Error: %s" % e)
                 not_passing_rdkit_molecules.append(smiles_list[i])
-
                 pass
 
-    print ('Total Molecules: %s ' % len(total_molecules))
+    print ('Total Passing Molecules: %s ' % len(passing_molecules))
     print ('Total Not Passing RDKit: %s ' % len(not_passing_rdkit_molecules))
 
