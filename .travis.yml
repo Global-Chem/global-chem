@@ -1,0 +1,60 @@
+language: python
+python:
+  - "3.7"
+
+# switch to new infrastructure
+sudo: false
+
+before_install:
+# download and install miniconda
+- wget http://repo.continuum.io/miniconda/Miniconda3-4.1.11-Linux-x86_64.sh -O miniconda.sh;
+- bash miniconda.sh -b -p $HOME/conda
+- export PATH="$HOME/conda/bin:$PATH"
+- hash -r
+- conda config --set always_yes yes --set changeps1 no
+- conda update -q conda
+# Useful for debugging any issues with conda
+- conda info -a
+
+# create and activate the build/test environment
+- conda create -q -n tenv python=$TRAVIS_PYTHON_VERSION pip cmake
+- source activate tenv
+
+# additional .debs we need:
+addons:
+  apt:
+    packages:
+    - build-essential
+    - openjdk-8-jdk
+    - swig
+    - libjpeg-dev
+
+install:
+
+# install the most recent rdkit package from the RDKit anaconda channel.
+- conda install -q -c rdkit rdkit
+
+- python setup.py install
+- pip install python-coveralls
+- pip install coveralls
+- pip install coverage==4.5.4      # Add me to install coverage.py
+- pip install nose           # Add me to install nose
+
+before_script:
+# RDKit
+- export RDBASE=$CONDA_PREFIX/Library/share/RDKit
+- echo $RDBASE
+
+script:
+- python -m nose --verbose --with-coverage
+
+after_success:
+- python -m coveralls
+
+notifications:
+  email:
+    recipients:
+    - sharifsuliman1@gmail.com
+    - corro.marvin@gmail.com
+    on_success: always
+    on_failure: always
