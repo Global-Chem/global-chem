@@ -35,10 +35,16 @@ def test_rdkit_passing():
         ,gc.r_groups_replacements_smiles
         ,gc.rings_in_drugs_smiles
         ,gc.vitamins_smiles
+        ,gc.ribose_subpocket_smiles
+        ,gc.adenine_subpocket_smiles
+        ,gc.hydrophobic_subpocket_smiles
+        ,gc.type_1_subpocket_smiles
+        ,gc.type_2_subpocket_smiles
+        ,gc.exposed_to_solvent_smiles
     ]
 
     total_molecules = []
-    passing_rdkit_molecules = []
+    not_passing_rdkit_molecules = []
 
     for i in range(0, len(compounds)):
 
@@ -54,10 +60,10 @@ def test_rdkit_passing():
                 mol = Chem.MolFromSmiles(smiles_list[i])
 
             except:
+                not_passing_rdkit_molecules.append(smiles_list[i])
+
                 pass
 
-            passing_rdkit_molecules.append(smiles_list[i])
-
     print ('Total Molecules: %s ' % len(total_molecules))
-    print ('Total Passing RDKit: %s ' % len(passing_rdkit_molecules))
+    print ('Total Not Passing RDKit: %s ' % len(not_passing_rdkit_molecules))
 
