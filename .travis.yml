@@ -46,7 +46,7 @@ before_script:
 - echo $RDBASE
 
 script:
-- python -m nose --verbose --with-coverage
+- python -m nose --verbose --with-coverage -s
 
 after_success:
 - python -m coveralls
@@ -55,6 +55,5 @@ notifications:
   email:
     recipients:
     - sharifsuliman1@gmail.com
-    - corro.marvin@gmail.com
     on_success: always
     on_failure: always
