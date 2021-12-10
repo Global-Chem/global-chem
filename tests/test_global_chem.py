@@ -62,6 +62,6 @@ def test_rdkit_passing():
             except Exception as e:
                 pass
 
-    print ('Total Molecules: %s ' % (len(total_molecules) - len(passing_molecules)))
+    print ('Total Molecules: %s ' % (len(total_molecules)))
     print ('Total Passing Molecules: %s ' % len(passing_molecules))
 
