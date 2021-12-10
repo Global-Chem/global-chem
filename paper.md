@@ -61,6 +61,9 @@ At the time of writing the list now the list stands at:
 | Common R Group Replacements         | IUPAC/SMILES/SMARTS          | r_groups_replacements_smiles, r_groups_replacements_smarts                                                                 | 499          | [Takeuchi:2021-9]        |
 | Electrophillic Warheads for Kinases | Preferred Name/SMILES/SMARTS | kinase_electrophilic_warheads_smiles, kinase_electrophilic_warheads_smarts                                                 | 24           | [Petri:2020-12]          |
 | Privileged Scaffolds for Kinases    | IUPAC/SMILES/SMARTS          | kinase_privileged_scaffolds_smiles, kinase_privileged_scaffolds_smarts                                                     | 29           | [Hu:2021-3]              |
+| BRaf Inhibitors                     | IUPAC/SMILES/SMARTS          | ribose_subpocket_smiles, ribose_subpocket_smarts, adenine_subpocket_smiles, adenine_subpocket_smarts                       | 20           | [Agianian:2018-6]        |
+| BRaf Inhibitors (Continued)         | IUPAC/SMILES/SMARTS          | hydrophobic_subpocket_smiles, hydrophobic_subpocket_smarts,  type_1_subpocket_smiles, type_1_subpocket_smarts              | 17           |                          |
+| BRaf Inhibitors (Continued)         | IUPAC/SMILES/SMARTS          | type_2_subpocket_smiles, type_2_subpocket_smarts, exposed_to_solvent_smiles, exposed_to_solvent_smarts                     | 17           |                          |
 | Common Regex Patterns               | Mol2                         | common_regex_patterns                                                                                                      | 1            |                          |
 
 # Conclusion
