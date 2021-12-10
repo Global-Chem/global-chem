@@ -10,7 +10,7 @@
 from rdkit import Chem
 from global_chem import GlobalChem
 
-def test_global_chem():
+def test_rdkit_passing():
 
     '''
 
@@ -57,5 +57,4 @@ def test_global_chem():
             except:
                 pass
 
-    print ('Length of Total Molecules: %s ' % len(total_molecules))
-    print ('Passing RDkit Molecules: %s ' % len(passing_rdkit_molecules))
+    assert len(total_molecules) == len(passing_rdkit_molecules)
