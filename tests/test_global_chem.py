@@ -52,10 +52,11 @@ def test_rdkit_passing():
 
             try:
                 mol = Chem.MolFromSmiles(smiles_list[i])
-                passing_rdkit_molecules.append(smiles_list[i])
 
             except:
                 pass
+
+            passing_rdkit_molecules.append(smiles_list[i])
 
     print ('Total Molecules: %s ' % len(total_molecules))
     print ('Total Passing RDKit: %s ' % len(passing_rdkit_molecules))
