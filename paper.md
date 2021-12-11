@@ -4,7 +4,7 @@ tags:
   - Python
   - Cheminformatics
 authors:
-  - name: Suliman Sharif, Shaoqi Zhan, Ruibin Liu, Sunhwan Jo, Aarion Romney, Elena Yi Chow, Alexander D. MacKerell Jr. 
+  - name: Suliman Sharif, Shaoqi Zhan, Ruibin Liu, Sunhwan Jo, Aarion Romany, Elena Yi Chow, Alexander D. MacKerell Jr. 
     orcid: 0000-0002-1342-9258
     affiliation: 1
 affiliations:
@@ -18,23 +18,18 @@ bibliography: paper.bib
 
 The chemical universe is expanding rapidly as open access titan databases (Enamine Database (20 Billion) [@Gorgulla:2020-4],
 Zinc Database (2 Billion) [Irwin:2020-12], PubMed Database (68 Million) [Roberts:2001-2]) and cheminformatic tools to process, manipulate, and derive new
-compound structures are established. With these new methods we now have a combinatorial explosion leaving us with ultra-large datasets
-and no proper organization. This presents a problem, with clustering and statistical methods being applied to chemical data and no actual way to organize
-compounds into their respective functional groups and their functionality leaves little to no understanding and hard to make use of. 
+compound structures are established. This left us with a chemical data big bang with ultra-large datasets and no proper classification system to organize
+the data. This resulted in us having to rely on classical statistical mechanisms with manipulation of the numbers to infer meaning and neglects real scientific understanding with chemical languages. 
 
 To classify we need to revert back to the idea of communication. Humans use symbols and drawings to communicate, a collection of symbols and their combinations
-are called a language. Different languages can be employede to carry different features and mean different things to a variety of communities. 
-For organic chemistry, we draw skeletal patterns to communicate, and a written language using english characters to communicate, this was established as IUPAC [Cooke-Fox:1989-5],
-other chemical subcommunities also adopted the language and applied to their field in different dialects i.e polymer chemistry, organometallic chemistry.
-In the recent years, SMILES [Weininger:1988-5] is becoming a popular 1-D language amongst cheminformaticians for large datasets compared to 2D or 3D data (more lines). 
-With most ultra-large datasets stored primarily in SMILES, we can start at organizing the data into appropiate classifiers that
+are called a language. Different languages can be employed to carry different features and mean different things to a variety of communities. 
+For organic chemistry, we draw skeletal patterns to communicate, and a written language using english characters to communicate, this was established as IUPAC [Cooke-Fox:1989-5]; other chemical subcommunities also adopted the language and applied to their field to different dialects i.e polymer chemistry, organometallic chemistry. In the recent years, SMILES [Weininger:1988-5] is becoming a popular 1-D language amongst cheminformaticians for large datasets compared to 2D or 3D data (more lines). With most ultra-large datasets stored primarily in SMILES, we can start at organizing the data into appropiate classifiers that
 will make it useful for all communities.
 
-To accomplish this, we make use of on the most useful papers that classify a functionality of a set of compounds. If we 
+To accomplish this, we elect our most useful papers that classify a functionality of a set of compounds. If we 
 write the IUPAC name and the SMILES name we can create a 1:1 mapping as a piece in the puzzle of the drug pipeline. The SMILES can be used
 to connect to other resources in the chemical data space to physics. Whereas the IUPAC name will talk to the chemists and 
 possibly some biologists. We then move it into a easy distributable format where it's accessible to everyone to expand.
-
 
 # Methodology and Implementation
 
