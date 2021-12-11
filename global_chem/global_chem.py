@@ -2716,6 +2716,757 @@ class GlobalChem(object):
 
         return  ribose_subpocket_smiles, ribose_subpocket_smarts, adenine_subpocket_smiles, adenine_subpocket_smarts, hydrophobic_subpocket_smiles, hydrophobic_subpocket_smarts, type_1_subpocket_smiles, type_1_subpocket_smarts, type_2_subpocket_smiles, type_2_subpocket_smarts, exposed_to_solvent_smiles, exposed_to_solvent_smarts
 
+    def _get_common_amino_acid_protecting_groups():
+
+        alpha_amino_removed_by_acid_smiles = {
+            'tert-Butyloxycarbonyl': '',
+            'trityl': '',
+            '3,5-dimethoxyphenylisoproxycarbonyl': '',
+            '2-(4-biphenyl)isopropoxycarbonyl': '',
+            '2-nitrophenylsulfenyl': ''
+        }
+
+        alpha_amino_removed_by_acid_smarts = {
+
+        }
+
+        alpha_amino_removed_by_acid_acronym_smiles = {
+            'boc': '',
+            'trt': '',
+            'ddz': '',
+            'bpoc': '',
+            'nps': ''
+        }
+
+        alpha_amino_removed_by_acid_acronym_smarts = {
+
+        }
+
+        alpha_amino_removed_by_base_smiles = {
+            '9-fluorenylmethoxycarbonyl': '',
+            '2-(4-nitrophenylsulfonyl)ethoxycarbonyl': '',
+            '(1,1-dioxobenzo[b]thiophene-2-yl)methyloxycarbonyl': '',
+            '(1,1-dioxonaptho[1,2-b]thiophene-2-yl)methyloxycarbonyl': '',
+            '1-(4,4-dimethyl-2,6-dioxocyclohex-1-ylidene)-3-methylbutyl': '',
+            '2,7-di-tert-butyl-fmoc': '',
+            '2-fluoro-fmoc': '',
+            '2-monoisooctyl-fmoc': '',
+            '2,7-diisooctyl-fmoc': '',
+            'tetrachlorophthaloyl': '',
+            '2-[phenyl(methyl)sulfonio])ethyloxycarbonyltetrafluoroborate': '',
+            'ethanesulfonylethoxycarbonyl': '',
+            '2-(4-sulfophenylsulfonyl)ethoxycarbonyl': '',
+        }
+
+        alpha_amino_removed_by_base_smarts = {
+
+        }
+
+        alpha_amino_removed_by_base_acronym_smiles = {
+            'fmoc': '',
+            'nsc': '',
+            'bsmoc': '',
+            'alpha-nsmoc': '',
+            'ivdde': '',
+            'fmoc*': '',
+            'fmoc(fmoc(2f))': '',
+            'mio-fmoc': '',
+            'dio-fmoc': '',
+            'tcp': '',
+            'pms': '',
+            'esc': '',
+            'sps': '',
+        }
+
+        alpha_amino_removed_by_base_acronym_smarts = {
+
+        }
+
+        other_alpha_amino_protect_groups_smiles = {
+            'benzyloxycarbonyl': '',
+            'allyloxycarbonyl': '',
+            'o-nitrobenzenesulfonyl': '',
+            '2,4-dinitrobenzenesulfonyl': '',
+            'benzothiazole-2-sulfonyl': '',
+            '2,2,2-trichloroethyloxycarbonyl': '',
+            'dithiasuccinoyl': '',
+            'p-nitrobenzyloxycarbonyl': '',
+            'alpha-azidoacids': '',
+            'proparglyoxycarbonyl': '',
+            'o-nitrobenzylcarbonyl': '',
+            '4-nitroveratryloxycarbonyl': '',
+            '2-(2-nitrophenyl)propyloxycarbonyl': '',
+            '2-(3,4-methylenedioxy-6-nitrophenyl)propyloxycarbonyl': '',
+            '9-(4-bromophenyl)-9-fluorenyl': '',
+            'azidomethoxycarbonyl': '',
+            'hexafluoroacetone': '',
+        }
+
+        other_alpha_amino_protect_groups_smarts = {
+
+        }
+
+        other_alpha_amino_protect_groups_acronym_smiles = {
+            'Z': '',
+            'alloc': '',
+            'onbs': '',
+            'dnbs': '',
+            'bts': '',
+            'troc': '',
+            'dts': '',
+            'pnz': '',
+            'poc': '',
+            'onz': '',
+            'nvoc': '',
+            'nppoc': '',
+            'mnppoc': '',
+            'brphf': '',
+            'azoc': '',
+            'hfa': '',
+        }
+
+        other_alpha_amino_protect_groups_acronym_smarts = {
+
+        }
+
+        lys_orn_dap_dab_protecting_groups_removed_by_acid_smiles = {
+            '2-chlorobenzyloxycarbonyl': '',
+            'tert-butyloxycarbonyl': '',
+            '4-methyltrityl': '',
+        }
+
+        lys_orn_dap_dab_protecting_groups_removed_by_acid_smarts = {
+
+        }
+
+        lys_orn_dap_dab_protecting_groups_removed_by_acid_acronym_smiles = {
+            'cl-z': '',
+            'boc': '',
+            'mtt': '',
+        }
+
+        lys_orn_dap_dab_protecting_groups_removed_by_acid_acronym_smarts = {
+
+        }
+
+        lys_orn_dap_dab_protecting_groups_removed_by_base_smiles = {
+            '9-fluorenylmethoxycarbonyl': '',
+            '1-(4,4-dimethyl-2,6-dioxocylohex-1-ylidene)-3-methylbutyl': '',
+            'trifluoroacetyl': '',
+            '2-(methylsulfonyl)ethoxycarbonyl': '',
+            'tetrachlorophthaloyl': '',
+        }
+
+        lys_orn_dap_dab_protecting_groups_removed_by_base_smarts = {
+
+        }
+
+        lys_orn_dap_dab_protecting_groups_removed_by_base_acronym_smiles = {
+            'fmoc': '',
+            'ivdde': '',
+            'tfa': '',
+            'msc': '',
+            'tcp': ''
+        }
+
+        lys_orn_dap_dab_protecting_groups_removed_by_base_acronym_smarts = {
+
+        }
+
+        other_lys_orn_dap_dab_protecting_groups_smiles = {
+            'allyloxycarbonyl': '',
+            'p-nitrobenzyloxycarbonyl': '',
+            'phenyldisulphanylethyloxycarbonyl': '',
+            '2-pyridyldisulphanylethyloxycarbonyl': '',
+            'o-nitrobenzenesulfonyl': '',
+        }
+
+        other_lys_orn_dap_dab_protecting_groups_smarts = {
+
+        }
+
+        other_lys_orn_dap_dab_protecting_groups_acronym_smiles = {
+            'alloc': '',
+            'pnz': '',
+            'phdec': '',
+            'pydec': '',
+            'o-nbs': ''
+        }
+
+        other_lys_orn_dap_dab_protecting_groups_acronym_smarts = {
+
+        }
+
+        alpha_carboxylic_acid_protecting_groups_removed_by_acid_smiles = {
+            'tert-butyl': '',
+            '2-chlorotrityl': '',
+            '2-4-dimethyoxybenzyl': '',
+            '2-phenylisopropyl': '',
+            '5-phenyl-3,4-ethylenedioxythenyl': '',
+        }
+
+        alpha_carboxylic_acid_protecting_groups_removed_by_acid_smarts = {
+
+        }
+
+        alpha_carboxylic_acid_protecting_groups_removed_by_acid_acronym_smiles = {
+            'bu': '',
+            '2-cl-trt': '',
+            'dmb': '',
+            '2-ph-pr': '',
+            'phenyl-edotn': '',
+        }
+
+        alpha_carboxylic_acid_protecting_groups_removed_by_acid_acronym_smarts = {
+
+        }
+
+        alpha_carboxylic_acid_protecting_groups_removed_by_base_smiles = {
+            '9-fluorenylmethyl': '',
+            '4-(N-[1-(4,4-dimethyl-2,6-dioxocylocheylidene)-3-methylbutyl]-amino)benzyl': '',
+            'methyl': '',
+            'ethyl': '',
+            'carbamoylmethyl': '',
+
+        }
+
+        alpha_carboxylic_acid_protecting_groups_removed_by_base_smarts = {
+
+        }
+
+        alpha_carboxylic_acid_protecting_groups_removed_by_base_acronym_smiles = {
+            'fm': '',
+            'dmab': '',
+            'me': '',
+            'et': '',
+            'cam': '',
+        }
+
+        alpha_carboxylic_acid_protecting_groups_removed_by_base_acronym_smarts = {
+
+        }
+
+        other_alpha_carboxylic_acid_protecting_group_smiles = {
+            'allyl': '',
+            'benzyl': '',
+            'phenacyl': '',
+            'p-nitrobenzyl': '',
+            '2-trimethylsilyethyl': '',
+            '(2-phenyl-2-trimethylsilyl)ethyl': '',
+            '2-(trimethylsilyl)isopropyl': '',
+            '2,2,2-trichloroethyl': '',
+            'p-hydroxyphenacyl': '',
+            '4,5-dimethyoxy-2-nitrobenzyl': '',
+            '1,1-dimethylallyl': '',
+            'pentaaminecobalt_III': '',
+        }
+
+        other_alpha_carboxylic_acid_protecting_group_smarts = {
+
+        }
+
+        other_alpha_carboxylic_acid_protecting_group_acronym_smiles = {
+            'al': '',
+            'bn': '',
+            'pac': '',
+            'pnb': '',
+            'tmse': '',
+            'ptmse': '',
+            'tmsi': '',
+            'tce': '',
+            'php': '',
+            'dmnb': '',
+            'dma': '',
+        }
+
+        other_alpha_carboxylic_acid_protecting_group_acronym_smarts = {
+
+        }
+
+        asp_glu_protecting_groups_removed_by_acid_smiles = {
+            'benzyl': '',
+            'cyclohexyl': '',
+            'tert-butyl': '',
+            'b-menthyl': '',
+            'b-3-methylpent-3-yl': '',
+            '2-phenylisopropyl': '',
+            '4-(3,6,9-trioxadecyl)oxybenzyl': '',
+        }
+
+        asp_glu_protecting_groups_removed_by_acid_smarts = {
+
+        }
+
+        asp_glu_protecting_groups_removed_by_acid_acronym_smiles = {
+            'bn': '',
+            'chx': '',
+            'bu': '',
+            'men': '',
+            'mpe': '',
+            '2-ph-pr': '',
+            'tegbz': '',
+
+        }
+
+        asp_glu_protecting_groups_removed_by_acid_acronym_smarts = {
+
+        }
+
+        asp_glu_protecting_groups_removed_by_base_smiles = {
+            '9-fluoroenylmethyl': '',
+            '4-(N-[1-(4,4-dimethyl-2,6-dioxocyclohexylidene)-3-methyl-butyl]-amino)benzyl': '',
+        }
+
+        asp_glu_protecting_groups_removed_by_base_smarts = {
+
+        }
+
+        asp_glu_protecting_groups_removed_by_base_acronym_smiles = {
+            'fm': '',
+            'dmab': ''
+        }
+
+        asp_glu_protecting_groups_removed_by_base_acronym_smarts = {
+
+        }
+
+        other_asp_glu_protecting_groups_smiles = {
+            'allyl': 'al',
+            'p-nitrobenzyl': '',
+            'trimethylsilylethyl': '',
+            '(2-phenyl-2-trimethylsilyl)ethyl': '',
+            '4,5-dimethoxy-2-nitrobenzyloxycarbonyl': '',
+        }
+
+        other_asp_glu_protecting_groups_smarts = {
+
+        }
+
+        other_asp_glu_protecting_groups_acronym_smiles = {
+            'al': '',
+            'pnb': '',
+            'tmse': '',
+            'ptmse': '',
+            'dmnb': '',
+        }
+
+        other_asp_glu_protecting_groups_acronym_smarts = {
+
+        }
+
+        amide_backbone_protecting_group_removed_by_acid_smiles = {
+            'pseudoprolines': '',
+            '2-hydroxy-4-methoxybenzyl': '',
+            '2,4-dimethoxybenzyl': '',
+            '2,4,6-trimethoxybenzyl': '',
+            '1-methyl-3-indolylmethyl': '',
+            '3,4-ethylene-dioxy-2-thenyl': '',
+        }
+
+        amide_backbone_protecting_group_removed_by_acid_smarts = {
+
+        }
+
+        amide_backbone_protecting_group_removed_by_acid_acronym_smiles = {
+            'hmb': '',
+            'dmb': '',
+            'tmob': '',
+            'mim': '',
+            'edot': '',
+        }
+
+        amide_backbone_protecting_group_removed_by_acid_acronym_smarts  = {
+
+        }
+
+        other_amide_backbone_protecting_group_smiles = {
+            '4-methoxy-2-nitro-benzyl': '',
+            '(6-hydroxy-3-oxido-1,3-benz[d]oxathiol-5-yl)methyl': '',
+            '2-hydroxy-4-methoxy-5-(methylsulfinyl)benzyl': '',
+            'n-boc-n-methyl[2-(methylamino)ethyl]carbamoyl-hmb': '',
+        }
+
+        other_amide_backbone_protecting_group_smarts = {
+
+        }
+
+        asn_gln_protecting_groups_removed_by_acid_smiles = {
+            '9-xanthenyl': '',
+            'trityl': '',
+            '4-methyltrityl': '',
+            'cyclopropyldimethylcarbinyl': '',
+            '4,4-dimethoxybenzhydryl': '',
+            '2,4,6-trimethoxybenzyl': '',
+        }
+
+        asn_gln_protecting_groups_removed_by_acid_smarts = {
+
+        }
+
+        asn_gln_protecting_groups_removed_by_acid_acronym_smiles = {
+            'xan': '',
+            'trt': '',
+            'mtt': '',
+            'cpd': '',
+            'mbh': '',
+            'tmob': '',
+        }
+
+        asn_gln_protecting_groups_removed_by_acid_acronym_smarts = {
+
+        }
+
+        arg_protecting_groups_removed_by_acid_smiles = {
+            'p-toluenesulfonyl': '',
+            '2,2,5,7,8-pentamethylchroman-6-sulfonyl': '',
+            '2,2,4,6,7-pentamethyl-2,3-dihydrobenzofuran-5-sulfonyl': '',
+            'mesityl-2-sulfonyl': '',
+            '4-methoxy-2,3,6-trimethylphenylsulfonyl': '',
+            '1,2-dimethylindole-3-sulfonyl': '',
+            'w,w-bis-tert-butyloxycarbonyl': '',
+            '5-dibenzosuberenyl': '',
+            '5-dibenzosuberyl': '',
+            '2-methoxy-5-dibenzosuberyl': '',
+            'nitro': ''
+        }
+
+        arg_protecting_groups_removed_by_acid_smarts = {
+
+        }
+
+        arg_protecting_groups_removed_by_acid_acronym_smiles = {
+            'tos': '',
+            'pmc': '',
+            'pbf': '',
+            'mts': '',
+            'mtr': '',
+            'mis': '',
+            'bis-boc': '',
+            'suben': '',
+            'sub': '',
+            'mesub': '',
+            'no2': ''
+        }
+
+        arg_protecting_groups_removed_by_acid_acronym_smarts = {
+
+        }
+
+        arg_protecting_groups_removed_by_base_smiles = {
+            'trifluoroacetyl': ''
+        }
+
+        arg_protecting_groups_removed_by_base_smarts = {
+
+        }
+
+        arg_protecting_groups_removed_by_base_acronym_smiles = {
+            'tfa': ''
+        }
+
+        arg_protecting_groups_removed_by_base_acronym_smarts = {
+
+        }
+
+        other_arg_protecting_groups_smiles = {
+            'w,w-bis-benzyloxycarbonyl': '',
+            'w,w-bis-allyloxycarbonyl': ''
+        }
+
+        other_arg_protecting_groups_smarts = {
+
+        }
+
+        other_arg_protecting_groups_acronym_smiles = {
+            'z': '',
+            'alloc': '',
+        }
+
+        other_arg_protecting_groups_acronym_smarts = {
+
+        }
+
+        cys_protecting_groups_removed_by_acid_smiles = {
+            'p-methylbenzyl': '',
+            'p-methoxybenzyl': '',
+            'trityl': '',
+            'monomethoxytrityl': '',
+            'trimethoxybenzyl': '',
+            '9-xanthenyl': '',
+            '2,2,4,6,7-pentamethyl-5-dihydrobenzofuranylmethyl': '',
+            'benzyl': '',
+            'tert-butyl': '',
+            '1-adamantyl': '',
+        }
+
+        cys_protecting_groups_removed_by_acid_smarts = {
+
+        }
+
+        cys_protecting_groups_removed_by_acid_acronym_smiles = {
+            'meb': '',
+            'mob': '',
+            'trt': '',
+            'mmt': '',
+            'tmob': '',
+            'xan': '',
+            'pmbf': '',
+            'bn': '',
+            'bu': '',
+            '1-ada': '',
+        }
+
+        cys_protecting_groups_removed_by_acid_acronym_smarts = {
+
+        }
+
+        cys_protecting_groups_removed_by_base_smiles = {
+            '9-fluorenylmethyl': '',
+            '2-(2,4-dinitrophenyl)ethyl': '',
+            '9-fluororenylmethoxycarbonyl': '',
+        }
+
+        cys_protecting_groups_removed_by_base_smarts = {
+
+        }
+
+        cys_protecting_groups_removed_by_base_acronym_smiles = {
+            'fm': '',
+            'dnpe': '',
+            'fmoc': '',
+        }
+
+        cys_protecting_groups_removed_by_base_acronym_smarts = {
+
+        }
+
+        other_cys_protecting_groups_smiles = {
+            'acetamidomethyl': '',
+            'phenylacetamidomethyl': '',
+            '5-tert-butylmercapto': '',
+            '3-nitro-2-pyridinesulfenyl': '',
+            '2-pyridinesulfenyl': '',
+            'allyloxycarbonyl': '',
+            'N-allyloxycarbonyl-N-[2,3,5,6-tetrafluoro-4-(phenylthio)phenyl]]aminomethyl': '',
+            'o-nitrobenzyl': '',
+            '4-picolyl': '',
+            'ninhydrin': '',
+        }
+
+        other_cys_protecting_groups_smarts = {
+
+        }
+
+        other_cys_protecting_groups_acronym_smiles = {
+            'acm': '',
+            'phacm': '',
+            'sbu': '',
+            'npys': '',
+            's-pyr': '',
+            'alloc': '',
+            'fsam': '',
+            'onb': '',
+            'nin': ''
+        }
+
+        other_cys_protecting_groups_acronym_smarts = {
+
+        }
+
+        his_protecting_groups_removed_by_acid_smiles = {
+            'n-tosyl': '',
+            'n-trityl': '',
+            'n-monomethoxytrityl': '',
+            'n-methyltrityl': '',
+            'n-tert-butyloxycarbonyl': '',
+            'n-2,4-dimethylpent-3-yloxycarbonyl': '',
+            'n-benzyloxymethyl': '',
+            'n-tert-butoxymethyl': '',
+        }
+
+        his_protecting_groups_removed_by_acid_smarts = {
+
+        }
+
+        his_protecting_groups_removed_by_acid_acronym_smiles = {
+            'tos': '',
+            'trt': '',
+            'mtt': '',
+            'mmt': '',
+            'boc': '',
+            'doc': '',
+            'bom': '',
+            'bum': '',
+        }
+
+        his_protecting_groups_removed_by_acid_acronym_smarts = {
+
+        }
+
+        his_protecting_groups_removed_by_base_smiles = {
+            '9-fluorenylmethoxycarbonyl': '',
+            '2,6-dimethoxybenzoyl': '',
+        }
+
+        his_protecting_groups_removed_by_base_smarts = {
+
+        }
+
+        his_protecting_groups_removed_by_base_acronym_smiles = {
+            'fmoc': '',
+            'dmbz': '',
+        }
+
+        his_protecting_groups_removed_by_base_acronym_smarts = {
+
+        }
+
+        other_his_protecting_groups_smiles = {
+            'N-2,4-dinitrophenyl': '',
+        }
+
+        other_his_protecting_groups_smarts = {
+
+        }
+
+        other_his_protecting_groups_acronym_smiles = {
+            'dnp': ''
+        }
+
+        other_his_protecting_groups_acronym_smarts = {
+
+        }
+
+        ser_thr_hyp_protecting_groups_removed_by_acid_smiles = {
+            'benzyl': '',
+            'cyclohexyl;': '',
+            'tert-butyl': '',
+            'trityl': '',
+            'tert-butyldimethylsilyl': '',
+            'pseudoprolines': ''
+        }
+
+        ser_thr_hyp_protecting_groups_removed_by_acid_smarts = {
+
+        }
+
+        ser_thr_hyp_protecting_groups_removed_by_acid_acronym_smiles = {
+            'bn': '',
+            'chx': '',
+            'bu': '',
+            'trt': '',
+            'tbdms': '',
+        }
+
+        ser_thr_hyp_protecting_groups_acronym_removed_by_acid_smarts = {
+
+        }
+
+        other_ser_thr_hyp_protecting_groups_smiles = {
+            'tert-butyldiphenylsilyl': '',
+            '4,5-dimethoxy-2-nitrobenzyloxycarbonyl': '',
+            'propargyloxycarbonyl': '',
+        }
+
+        other_ser_thr_hyp_protecting_groups_smarts = {
+
+        }
+
+        other_ser_thr_hyp_protecting_groups_acronym_smiles = {
+            'tbdps': '',
+            'dmnb': '',
+            'poc': ''
+        }
+
+        other_ser_thr_hyp_protecting_groups_acronym_smarts = {
+
+        }
+
+        tyr_protecting_groups_removed_by_acid_smiles = {
+            'benzyl': '',
+            'tert-butyl': '',
+            '2,6-dichlorobenzyl': '',
+            '2-bromobenzyl': '',
+            'benzyloxycarbonyl': '',
+            '2-bromobenzyloxycarbonyl': '',
+            '3-pentyl': '',
+            'tert-butyloxycarbonyl': '',
+            'trityl': '',
+            '2-chlorotrityl': '',
+            'tert-butyldimethylsilyl': '',
+            '4-(3,6,9-trioxadecyl)oxybenzyl': ''
+
+        }
+
+        tyr_protecting_groups_removed_by_acid_smarts = {
+
+        }
+
+        tyr_protecting_groups_removed_by_acid_acronym_smiles = {
+            'bn': '',
+            'bu': '',
+            'dcb': '',
+            'brbn': '',
+            'z': '',
+            'brz': '',
+            'pen': '',
+            'boc': '',
+            '2-cl-trt': '',
+            'tbdms': '',
+            'tegb': '',
+        }
+
+        tyr_protecting_groups_removed_by_acid_acronym_smarts = {
+
+        }
+
+        other_tyr_protecting_group_smiles = {
+            'allyl': '',
+            'o-nitrobenzyl': '',
+            'propargyloxycarbonyl': '',
+            'boc-n-methyl-n-[2-(methylamino)ethyl]carbamoyl': ''
+        }
+
+        other_tyr_protecting_group_smarts = {
+
+        }
+
+        other_tyr_protecting_group_acronym_smiles = {
+            'al': '',
+            'onb': '',
+            'poc': '',
+            'boc-nmec': '',
+        }
+
+        other_tyr_protecting_group_acronym_smarts = {
+
+        }
+
+        trp_protecting_groups_removed_by_acid_smiles = {
+            'formyl': '',
+            'tert-butyloxycarbonyl': '',
+            'cyclohexyloxycarbonyl': '',
+            'mesityl-2-sulfonyl': '',
+            'allyloxycarbonyl': '',
+        }
+
+        trp_protecting_groups_removed_by_acid_smarts = {
+
+        }
+
+        trp_protecting_groups_removed_by_acid_acronym_smiles = {
+            'for': '',
+            'boc': '',
+            'hoc': '',
+            'mts': '',
+            'alloc'
+        }
+
+        trp_protecting_groups_removed_by_acid_acronym_smarts = {
+
+        }
+
+
     def _get_common_synthetic_dyes_in_medicine():
 
        raise NotImplementedError
