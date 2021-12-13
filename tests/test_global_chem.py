@@ -21,6 +21,7 @@ def test_rdkit_passing():
     gc = GlobalChem()
 
     compounds = [
+        gc.get_amino_acids(),
         gc.get_rings_in_drugs(),
         gc.get_essential_vitamins(),
         gc.get_common_organic_solvents(),
