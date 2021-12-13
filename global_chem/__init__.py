@@ -4,6 +4,6 @@
 #
 # ----------------------------
 
-from global_chem.global_chem import GlobalChem
+__version__ = '0.9.9.4'
 
 name = 'GlobalChem'
