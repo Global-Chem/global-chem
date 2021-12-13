@@ -30,7 +30,7 @@ else:
 # ----
 setup(
     name="global_chem",
-    version="0.9.9.3",
+    version="0.9.9.5",
     packages=['global_chem'],
     license='MPL 2.0',
     author="Suliman Sharif",
