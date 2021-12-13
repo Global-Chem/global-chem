@@ -4,36 +4,52 @@
 #
 # -----------------------------------
 
-from .environment.emerging_perfluoroalkyls import EmergingPerFluoroAlkyls
+# Environment
 
-# from materials.clay.montmorillonite_adsorption import MontmorilloniteAdsorption
-# from materials.polymers.common_monomer_repeating_units import CommonMonomerRepeatingUnits
-#
-# from medicinal_chemistry.warheads.electrophillic_warheads_for_kinases import ElectrophilicWarheadsForKinases
-# from medicinal_chemistry.warheads.common_warheads_covalent_inhibitors import CommonWarheadsCovalentInhibitors
-#
-# from medicinal_chemistry.rings.rings_in_drugs import RingsInDrugs
-# from medicinal_chemistry.rings.iupac_blue_book_rings import IUPACBlueBookRings
-# from medicinal_chemistry.rings.phase_2_hetereocyclic_rings import Phase2HetereoCyclicRings
-#
-# from medicinal_chemistry.scaffolds.privileged_scaffolds import PrivilegedScaffolds
-# from medicinal_chemistry.scaffolds.iupac_blue_book_substituents import IUPACBlueBook
-# from medicinal_chemistry.scaffolds.common_r_group_replacements import CommonRGroupReplacements
-#
-# from proteins.kinases.braf.common_groups_by_pocket import BRAFInhibitorsByPocket
-# from proteins.kinases.scaffolds.privileged_scaffolds import PrivilegedKinaseInhibitorScaffolds
-#
-# from organic_synthesis.solvents.common_organic_solvents import CommonOrganicSolvents
-# from organic_synthesis.protecting_groups.amino_acid_protecting_groups import AminoAcidProtectingGroups
-#
-# from miscellaneous.vitamins import Vitamins
-# from miscellaneous.open_smiles import OpenSmiles
-# from miscellaneous.amino_acids import AminoAcids
-# from miscellaneous.regex_patterns import CommonRegexPatterns
+from global_chem.environment.emerging_perfluoroalkyls import EmergingPerFluoroAlkyls
+
+# Materials
+
+from global_chem.materials.clay.montmorillonite_adsorption import MontmorilloniteAdsorption
+from global_chem.materials.polymers.common_monomer_repeating_units import CommonMonomerRepeatingUnits
+
+# Medicinal Chemistry - Warheads
+
+from global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases import ElectrophilicWarheadsForKinases
+from global_chem.medicinal_chemistry.warheads.common_warheads_covalent_inhibitors import CommonWarheadsCovalentInhibitors
+
+# Medicinal Chemistry - Rings
+
+from global_chem.medicinal_chemistry.rings.rings_in_drugs import RingsInDrugs
+from global_chem.medicinal_chemistry.rings.iupac_blue_book_rings import IUPACBlueBookRings
+from global_chem.medicinal_chemistry.rings.phase_2_hetereocyclic_rings import Phase2HetereoCyclicRings
+
+# Medicinal Chemistry - Scaffolds
+
+from global_chem.medicinal_chemistry.scaffolds.privileged_scaffolds import PrivilegedScaffolds
+from global_chem.medicinal_chemistry.scaffolds.iupac_blue_book_substituents import IUPACBlueBook
+from global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements import CommonRGroupReplacements
+
+# Proteins Kinases
+
+from global_chem.proteins.kinases.braf.common_groups_by_pocket import BRAFInhibitorsByPocket
+from global_chem.proteins.kinases.scaffolds.privileged_scaffolds import PrivilegedKinaseInhibitorScaffolds
+
+# Organic Synthesis
+
+from global_chem.organic_synthesis.solvents.common_organic_solvents import CommonOrganicSolvents
+from global_chem.organic_synthesis.protecting_groups.amino_acid_protecting_groups import AminoAcidProtectingGroups
+
+# Miscellaneous
+
+from global_chem.miscellaneous.vitamins import Vitamins
+from global_chem.miscellaneous.open_smiles import OpenSmiles
+from global_chem.miscellaneous.amino_acids import AminoAcids
+from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
 
 class GlobalChem(object):
 
-    __version__ = "0.9.8"
+    __version__ = "1.0.0"
     __allow_update__ = True
 
     """
