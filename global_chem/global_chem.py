@@ -4,7 +4,7 @@
 #
 # -----------------------------------
 
-from .emerging_perfluoroalkyls import EmergingPerFluoroAlkyls
+from .environment.emerging_perfluoroalkyls import EmergingPerFluoroAlkyls
 
 # from materials.clay.montmorillonite_adsorption import MontmorilloniteAdsorption
 # from materials.polymers.common_monomer_repeating_units import CommonMonomerRepeatingUnits
