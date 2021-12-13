@@ -41,6 +41,63 @@ def test_rdkit_passing():
         ,gc.type_1_subpocket_smiles
         ,gc.type_2_subpocket_smiles
         ,gc.exposed_to_solvent_smiles
+        ,gc.alpha_amino_removed_by_acid_smiles
+        ,gc.alpha_amino_removed_by_acid_acronym_smiles
+        ,gc.alpha_amino_removed_by_base_smiles
+        ,gc.alpha_amino_removed_by_base_acronym_smiles
+        ,gc.other_alpha_amino_protect_groups_smiles
+        ,gc.other_alpha_amino_protect_groups_acronym_smiles
+        ,gc.lys_orn_dap_dab_protecting_groups_removed_by_acid_smiles
+        ,gc.lys_orn_dap_dab_protecting_groups_removed_by_acid_acronym_smiles
+        ,gc.lys_orn_dap_dab_protecting_groups_removed_by_base_smiles
+        ,gc.lys_orn_dap_dab_protecting_groups_removed_by_base_acronym_smiles
+        ,gc.other_lys_orn_dap_dab_protecting_groups_smiles
+        ,gc.other_lys_orn_dap_dab_protecting_groups_acronym_smiles
+        ,gc.alpha_carboxylic_acid_protecting_groups_removed_by_acid_smiles
+        ,gc.alpha_carboxylic_acid_protecting_groups_removed_by_acid_acronym_smiles
+        ,gc.alpha_carboxylic_acid_protecting_groups_removed_by_base_smiles
+        ,gc.alpha_carboxylic_acid_protecting_groups_removed_by_base_acronym_smiles
+        ,gc.other_alpha_carboxylic_acid_protecting_group_smiles
+        ,gc.other_alpha_carboxylic_acid_protecting_group_acronym_smiles
+        ,gc.asp_glu_protecting_groups_removed_by_acid_smiles
+        ,gc.asp_glu_protecting_groups_removed_by_acid_acronym_smiles
+        ,gc.asp_glu_protecting_groups_removed_by_base_smiles
+        ,gc.asp_glu_protecting_groups_removed_by_base_acronym_smiles
+        ,gc.other_asp_glu_protecting_groups_smiles
+        ,gc.other_asp_glu_protecting_groups_acronym_smiles
+        ,gc.amide_backbone_protecting_group_removed_by_acid_smiles
+        ,gc.amide_backbone_protecting_group_removed_by_acid_acronym_smiles
+        ,gc.other_amide_backbone_protecting_group_smiles
+        ,gc.asn_gln_protecting_groups_removed_by_acid_smiles
+        ,gc.asn_gln_protecting_groups_removed_by_acid_acronym_smiles
+        ,gc.arg_protecting_groups_removed_by_acid_smiles
+        ,gc.arg_protecting_groups_removed_by_acid_acronym_smiles
+        ,gc.arg_protecting_groups_removed_by_base_smiles
+        ,gc.arg_protecting_groups_removed_by_base_acronym_smiles
+        ,gc.other_arg_protecting_groups_smiles
+        ,gc.other_arg_protecting_groups_acronym_smiles
+        ,gc.cys_protecting_groups_removed_by_acid_smiles
+        ,gc.cys_protecting_groups_removed_by_acid_acronym_smiles
+        ,gc.cys_protecting_groups_removed_by_base_smiles
+        ,gc.cys_protecting_groups_removed_by_base_acronym_smiles
+        ,gc.other_cys_protecting_groups_smiles
+        ,gc.other_cys_protecting_groups_acronym_smiles
+        ,gc.his_protecting_groups_removed_by_acid_smiles
+        ,gc.his_protecting_groups_removed_by_acid_acronym_smiles
+        ,gc.his_protecting_groups_removed_by_base_smiles
+        ,gc.his_protecting_groups_removed_by_base_acronym_smiles
+        ,gc.other_his_protecting_groups_smiles
+        ,gc.other_his_protecting_groups_acronym_smiles
+        ,gc.ser_thr_hyp_protecting_groups_removed_by_acid_smiles
+        ,gc.ser_thr_hyp_protecting_groups_removed_by_acid_acronym_smiles
+        ,gc.other_ser_thr_hyp_protecting_groups_smiles
+        ,gc.other_ser_thr_hyp_protecting_groups_acronym_smiles
+        ,gc.tyr_protecting_groups_removed_by_acid_smiles
+        ,gc.tyr_protecting_groups_removed_by_acid_acronym_smiles
+        ,gc.other_tyr_protecting_group_smiles
+        ,gc.other_tyr_protecting_group_acronym_smiles
+        ,gc.trp_protecting_groups_removed_by_acid_smiles
+        ,gc.trp_protecting_groups_removed_by_acid_acronym_smiles
     ]
 
     total_molecules = []

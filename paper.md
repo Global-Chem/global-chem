@@ -4,7 +4,7 @@ tags:
   - Python
   - Cheminformatics
 authors:
-  - name: Suliman Sharif, Shaoqi Zhan, Ruibin Liu, Sunhwan Jo, Aarion Romany, Elena Yi Chow, Alexander D. MacKerell Jr. 
+  - name: Suliman Sharif,  Elena Yi Chow, Sunhwan Jo, Shaoqi Zhan, Ruibin Liu, Aarion Romany, Aziza Frank,  Alexander D. MacKerell Jr. 
     orcid: 0000-0002-1342-9258
     affiliation: 1
 affiliations:
@@ -61,25 +61,24 @@ over traditional.
 
 At the time of writing the list now the list stands at:
 
-| Chemical List                       | Languages                    | Variables                                                                                                                  | # of Entries | References               |
-|-------------------------------------|------------------------------|----------------------------------------------------------------------------------------------------------------------------|--------------|--------------------------|
-| Amino Acids                         | IUPAC/SMILES/SMARTS          | amino_acid_side_smiles, amino_acid_side_smarts                                                                             | 20           | Common Knowledge         |
-| Essential Vitamins                  | Preferred Name/SMILES/SMARTS | vitamins_smiles, vitamins_smarts                                                                                           | 13           | Common Knowledge         |
-| Common Organic Solvents             | IUPAC/SMILES/SMARTS          | common_organic_solvents_smiles, common_organic_solvents_smarts                                                             | 42           | [Fulmer:2010-5]          |
-| Open Smiles                         | IUPAC/SMILES/SMARTS          | open_smiles_functional_groups_smiles, open_smiles_functional_groups_smarts                                                 | 94           | [OpenSmiles]             |
-| IUPAC Blue Book (CRC Handbook) 2003 | Preferred Name/SMILES/SMARTS | iupac_blue_book_radical_smiles, iupac_blue_book_radical_smarts, iupac_blue_book_rings_smiles, iupac_blue_book_rings_smarts | 333          | [CRC:2004]               |
-| Rings in Drugs                      | IUPAC/SMILES/SMARTS          | rings_in_drugs_smiles, rings_in_drugs_smarts                                                                               | 92           | [Taylor:2014-6]          |
-| Phase 2 Hetereocyclic Rings         | IUPAC/SMILES/SMARTS          | phase_2_hetereocyclic_rings_smiles, phase_2_hetereocyclic_rings_smarts                                                     | 19           | [Broughton:2004-9]       |
-| Privileged Scaffolds                | IUPAC/SMILES/SMARTS          | privileged_scaffolds_smiles, privileged_scaffolds_smarts                                                                   | 47           | [Welsch:2010-6]          |
-| Common Warheads                     | IUPAC/SMILES/SMARTS          | common_warhead_smiles, common_warhead_smarts                                                                               | 29           | [Gehringer:2019-6]       |
-| Common Polymer Repeating Units      | IUPAC/SMILES/SMARTS          | common_polymer_repeating_units_smiles, common_polymer_repeating_units_smarts                                               | 78           | [Hiorns:2019-6]          |
-| Common R Group Replacements         | IUPAC/SMILES/SMARTS          | r_groups_replacements_smiles, r_groups_replacements_smarts                                                                 | 499          | [Takeuchi:2021-9]        |
-| Electrophillic Warheads for Kinases | Preferred Name/SMILES/SMARTS | kinase_electrophilic_warheads_smiles, kinase_electrophilic_warheads_smarts                                                 | 24           | [Petri:2020-12]          |
-| Privileged Scaffolds for Kinases    | IUPAC/SMILES/SMARTS          | kinase_privileged_scaffolds_smiles, kinase_privileged_scaffolds_smarts                                                     | 29           | [Hu:2021-3]              |
-| BRaf Inhibitors                     | IUPAC/SMILES/SMARTS          | ribose_subpocket_smiles, ribose_subpocket_smarts, adenine_subpocket_smiles, adenine_subpocket_smarts                       | 20           | [Agianian:2018-6]        |
-| BRaf Inhibitors (Continued)         | IUPAC/SMILES/SMARTS          | hydrophobic_subpocket_smiles, hydrophobic_subpocket_smarts,  type_1_subpocket_smiles, type_1_subpocket_smarts              | 17           |                          |
-| BRaf Inhibitors (Continued)         | IUPAC/SMILES/SMARTS          | type_2_subpocket_smiles, type_2_subpocket_smarts, exposed_to_solvent_smiles, exposed_to_solvent_smarts                     | 17           |                          |
-| Common Regex Patterns               | Mol2                         | common_regex_patterns                                                                                                      | 1            |                          |
+| Chemical List                       | Languages                    | # of Entries | References               |
+|-------------------------------------|------------------------------|--------------|--------------------------|
+| Amino Acids                         | IUPAC/SMILES/SMARTS          | 20           | Common Knowledge         |
+| Essential Vitamins                  | Preferred Name/SMILES/SMARTS | 13           | Common Knowledge         |
+| Common Organic Solvents             | IUPAC/SMILES/SMARTS          | 42           | [Fulmer:2010-5]          |
+| Open Smiles                         | IUPAC/SMILES/SMARTS          | 94           | [OpenSmiles]             |
+| IUPAC Blue Book (CRC Handbook) 2003 | Preferred Name/SMILES/SMARTS | 333          | [CRC:2004]               |
+| Rings in Drugs                      | IUPAC/SMILES/SMARTS          | 92           | [Taylor:2014-6]          |
+| Phase 2 Hetereocyclic Rings         | IUPAC/SMILES/SMARTS          | 19           | [Broughton:2004-9]       |
+| Privileged Scaffolds                | IUPAC/SMILES/SMARTS          | 47           | [Welsch:2010-6]          |
+| Common Warheads                     | IUPAC/SMILES/SMARTS          | 29           | [Gehringer:2019-6]       |
+| Common Polymer Repeating Units      | IUPAC/SMILES/SMARTS          | 78           | [Hiorns:2019-6]          |
+| Common R Group Replacements         | IUPAC/SMILES/SMARTS          | 499          | [Takeuchi:2021-9]        |
+| Electrophillic Warheads for Kinases | Preferred Name/SMILES/SMARTS | 24           | [Petri:2020-12]          |
+| Privileged Scaffolds for Kinases    | IUPAC/SMILES/SMARTS          | 29           | [Hu:2021-3]              |
+| BRaf Inhibitors                     | IUPAC/SMILES/SMARTS          | 54           | [Agianian:2018-6]        |
+| Common Amino Acid Protecting Groups | IUPAC/ACRONYM/SMILES/SMARTS  | 346          | [Isidro-Llobet:2009-6]   |
+| Common Regex Patterns               | Mol2                         | 1            |                          |
 
 # Conclusion
 
