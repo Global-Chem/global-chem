@@ -3,6 +3,11 @@
 # Intialization of the package
 #
 # ----------------------------
+
 from global_chem.global_chem import GlobalChem
 
-name='GlobalChem'
+# Miscellaneous
+
+from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
+
+name = 'GlobalChem'
