@@ -59,7 +59,7 @@ we begin by forming connections of most relevant data according to chemicals sub
 where each expertise opinion is recognized for different fields. A graph overview of the Module layout in `GlobalChem`.
 
 <p align="center">
-  <img width="800" height="800" src="images/figures/figure_1.png">
+  <img width="1000" height="800" src="images/figures/figure_1.png">
   <i>Figure 2: Network Graph of GlobalChem</i>
 </p>
 
