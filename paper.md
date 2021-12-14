@@ -48,8 +48,9 @@ To implement our idea we needed to pick a coding language that has the ability t
 We also chose python because of it's distribution infrastructure to easily install objects installed on the cloud. This 
 acts a free service where `GlobalChem` will behave in the same manner as the Gideon Bible. 
 
+# Methodology and Implementation
 
-# Paper Selection Philosophy
+## Paper Selection Philosophy
 
 Within academia, professors, post-doctorates, and graduate students, by nature of our work are required to read extensively about 
 selective specific scientific fields. This in turn gives us an expert opinion in what data we value most. To start a thin layer data organization 
@@ -60,16 +61,12 @@ where each expertise opinion is recognized for different fields. A graph overvie
   <img width="800" height="800" src="images/figures/figure_1.png">
 </p>
 
+## Object-Oriented Design
 
-# Methodology and Implementation
-
-### Software
-
-``` GlobalChem``` operates as a standalone python3 object and packaged distributed on PyPi. It has a no dependencies 
-as it's just a key, value store of strings. Different papers are organized as retrieval functions on the object which fetch
-classifier nomenclature (similar to the paper it was abstracted from) in IUPAC/SMILES and IUPAC/SMARTS. The SMARTS string
-is a superset of SMILES and is used as a string matcher when looking for functional groups. It can be derived using a 
-popular chem(o)informatic tool, RDKit [@Landrum:2019-5].
+`GlobalChem` follows a simple object-oriented design where directories are the parent nodes and articles/books are leaf nodes. 
+. In `Figure 2`, each leaf node is labeled appropiately as a class name to the paper it was referenced from. Each paper object
+has either the functional groups that correspond to that paper's overall functionality in IUPAC, Preferred Name, Acronyms, SMILES, SMARTS
+format. The choicefor this design was that as more users contribute then can expand into different directories, add their own, and provide their own chemical list.
 
 ### Data abstraction
 
@@ -86,6 +83,8 @@ Note that some of the names were modified based on human inspection in favor as 
 
 - For polymer papers, the site points were omitted from the name and some of the nomenclature adjusted for preferred names
 over traditional. 
+
+- SMARTS strings were adapted from the SMILES using RDKit [@Landrum:2019-5]
 
 # Results
 
