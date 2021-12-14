@@ -22,13 +22,14 @@ pattern matching (SMARTS).
   <img width="800" height="400" src="images/globalchemlogo.png">
 </p>
 
-
-
 Using GlobalChem
 =====================
 
 GlobalChem, initially, is one class object that have a fixed set of variables. Eventually and hopefully as the package 
 grows it will be abstracted out by field i.e protein chemistry, analytical, and so on. 
+
+[![asciicast](https://asciinema.org/a/L5ZYmAEGOskgeNazURbLFLR06.svg)](https://asciinema.org/a/L5ZYmAEGOskgeNazURbLFLR06)
+
 
 Installation 
 ============
