@@ -35,6 +35,7 @@ install:
 - conda install -q -c rdkit rdkit
 
 - python setup.py install
+- pip install epam.indigo
 - pip install python-coveralls
 - pip install coveralls
 - pip install coverage==4.5.4      # Add me to install coverage.py
