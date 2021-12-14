@@ -42,7 +42,7 @@ It takes a multitude of chemical diversity expertise to put together a well-thou
 To implement our idea we needed to pick a coding language that has the ability to write easy objects for everyone to understand; Python.
 
 <p align="center">
-  <img width="800" height="800" src="images/figures/figure_2.png">
+  <img width="800" height="1000" src="images/figures/figure_2.png">
 </p>
 
 We also chose python because of it's distribution infrastructure to easily install objects installed on the cloud. This 
