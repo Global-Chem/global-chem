@@ -164,4 +164,4 @@ def test_indigo_passing():
     print ('Total Molecules: %s ' % (len(total_smiles)))
     print ('Total Indigo Passing Molecules: %s ' % len(success_compounds))
     print ('Failed Compounds: %s' % len(failed_compounds))
-
+    print ('Failed Compounds: %s' % failed_compounds)
