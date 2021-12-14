@@ -17,13 +17,18 @@ bibliography: paper.bib
 # Introduction
 
 The chemical universe is expanding rapidly as open access titan databases (Enamine Database (20 Billion) [@Gorgulla:2020-4],
-Zinc Database (2 Billion) [Irwin:2020-12], PubMed Database (68 Million) [Roberts:2001-2]) and cheminformatic tools to process, manipulate, and derive new
-compound structures are established. This left us with a chemical data big bang with ultra-large datasets and no proper classification system to organize
-the data. This resulted in us having to rely on classical statistical mechanisms with manipulation of the numbers to infer meaning and neglects real scientific understanding with chemical languages. 
+Zinc Database (2 Billion) [Irwin:2020-12], PubMed Database (68 Million) [Roberts:2001-2]) and cheminformatic tools
+to process, manipulate, and derive new compound structures are established. This left us with a chemical data big bang
+with ultra-large datasets and an ambiguous classification system in an attempt to organize the data. Previously, partial
+organizational attempts were made on PubMed filling chemical data linkages for computational toxicology called Actor for a specific
+refactored and refined effort [Judson:2019-9]. For the EnamineDB, a scaffold to biological activity was designed to target 
+Toll-Like Receptors in an object-oriented fashion [Perez-Regidor:2016-9]. These organizational methods are difficult
+to reproduce as well as can be difficult to implement given the amount of data. When applying these papers they don't provide
+so much use to the common public. 
 
-To classify we need to revert back to the idea of communication. Humans use symbols and drawings to communicate, a collection of symbols and their combinations
+To organize the data we need to revert back to the idea of communication. Humans use symbols and drawings to communicate, a collection of symbols and their combinations
 are called a language. Different languages can be employed to carry different features and mean different things to a variety of communities. 
-For organic chemistry, we draw skeletal patterns to communicate, and a written language using english characters to communicate, this was established as IUPAC [Cooke-Fox:1989-5]; 
+IUPAC [Cooke-Fox:1989-5] was a written language that predates even drawing atoms as a method of communication between chemists; 
 other chemical sub-communities also adopted the language and applied to their field to different dialects i.e polymer chemistry, organo-metallic chemistry.
 In the recent years, SMILES [Weininger:1988-5] is becoming a popular 1-D language amongst cheminformaticians for large datasets compared to 2D or 3D data (more lines). 
 With most ultra-large datasets stored primarily in SMILES, we can begin by organizing the data into appropiate classifiers that will make it useful for all communities.
@@ -39,11 +44,12 @@ and classifying their data.
 Within academia, professors, post-doctorates, and graduate students, by nature of our work are required to read extensively about 
 selective specific scientific fields. This in turn gives us an expert opinion in what data we value most. To start a thin layer data organization 
 we begin by forming connections of most relevant data according to chemicals subfields. This is in accordance to the authorship
-where each expertise opinion is recognized for different fields. 
+where each expertise opinion is recognized for different fields. A graph overview of the Module layout in `GlobalChem`.
 
 <p align="center">
   <img width="1000" height="1000" src="images/figures/figure_1.png">
 </p>
+
 
 # Methodology and Implementation
 
