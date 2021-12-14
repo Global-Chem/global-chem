@@ -99,13 +99,5 @@ Citation
 
 If you find my personal dictionary is useful please feel free to cite me under:
 
-```
-
-Sul, Elena Y. Chow: "Sul's Dictionary" 
-
-```
-
-External links
-==============
 
 
