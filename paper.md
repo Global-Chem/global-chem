@@ -43,6 +43,7 @@ To implement our idea we needed to pick a coding language that has the ability t
 
 <p align="center">
   <img width="1000" height="800" src="images/figures/figure_2.png">
+  <i>Figure 1: Language Construction </i>
 </p>
 
 We also chose python because of it's distribution infrastructure to easily install objects installed on the cloud. This 
@@ -59,6 +60,7 @@ where each expertise opinion is recognized for different fields. A graph overvie
 
 <p align="center">
   <img width="800" height="800" src="images/figures/figure_1.png">
+  <i>Figure 2: Network Graph of GlobalChem, the lighter the blue the more data that node contributes to the center node </i>
 </p>
 
 ## Object-Oriented Design
