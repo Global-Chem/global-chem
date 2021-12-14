@@ -24,20 +24,30 @@ organizational attempts were made on PubMed filling chemical data linkages for c
 refactored and refined effort [Judson:2019-9]. For the EnamineDB, a scaffold to biological activity was designed to target 
 Toll-Like Receptors in an object-oriented fashion [Perez-Regidor:2016-9]. These organizational methods are difficult
 to reproduce as well as can be difficult to implement given the amount of data. When applying these papers they don't provide
-so much use to the common public. 
+so much use to the common developer. So what do we do?
 
 To organize the data we need to revert back to the idea of communication. Humans use symbols and drawings to communicate, a collection of symbols and their combinations
 are called a language. Different languages can be employed to carry different features and mean different things to a variety of communities. 
-IUPAC [Cooke-Fox:1989-5] was a written language that predates even drawing atoms as a method of communication between chemists; 
+IUPAC was a written language that predates even drawing atoms as a method of communication between chemists [Cooke-Fox:1989-5]; 
 other chemical sub-communities also adopted the language and applied to their field to different dialects i.e polymer chemistry, organo-metallic chemistry.
-In the recent years, SMILES [Weininger:1988-5] is becoming a popular 1-D language amongst cheminformaticians for large datasets compared to 2D or 3D data (more lines). 
-With most ultra-large datasets stored primarily in SMILES, we can begin by organizing the data into appropiate classifiers that will make it useful for all communities.
+In the recent years, SMILES [Weininger:1988-5] is becoming a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D or 3D geometry with ease.
+Unfortunately, IUPAC is a legacy language and is the lexical key to informational wealth about a chemical pattern or group. Algorithms
+were designed to abstract and interpolate skeletal patterns and languages and convert them into SMILES for data processing and analysis. 
+A lot of these tools are well summarized by the Blue Obelisk Society Open Source Review [OBoyle:2016-9].
 
-To accomplish this, we elect our most useful papers that classify a functionality of a set of compounds. If we 
-write the IUPAC name and the SMILES name we can create a 1:1 mapping as a piece in the puzzle of the drug pipeline. The SMILES can be used
-to connect to other analysis tools and computational resources whereas the IUPAC name will talk to informational and literature resources chemists. 
-We then move it into a easy distributable format where it's accessible to everyone to expand and use as a layer for organizing
-and classifying their data. 
+The problem is the lack of participants involved in any one project and a method to contribute back for it to grow. 
+Most software and especially old software can be difficult to install and handle on top of modern technology thus driving the
+need for something sustainable that can naturally grow. The chemical universe is large and too big for one person to fathom. 
+It takes a multitude of chemical diversity expertise to put together a well-thought chemical list of most relative compounds to their respetive community.
+To implement our idea we needed to pick a coding language that has the ability to write easy objects for everyone to understand; Python.
+
+<p align="center">
+  <img width="800" height="800" src="images/figures/figure_2.png">
+</p>
+
+We also chose python because of it's distribution infrastructure to easily install objects installed on the cloud. This 
+acts a free service where `GlobalChem` will behave in the same manner as the Gideon Bible. 
+
 
 # Paper Selection Philosophy
 
@@ -47,7 +57,7 @@ we begin by forming connections of most relevant data according to chemicals sub
 where each expertise opinion is recognized for different fields. A graph overview of the Module layout in `GlobalChem`.
 
 <p align="center">
-  <img width="1000" height="1000" src="images/figures/figure_1.png">
+  <img width="800" height="800" src="images/figures/figure_1.png">
 </p>
 
 
