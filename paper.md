@@ -55,7 +55,8 @@ We also chose python because of it's distribution infrastructure to easily insta
 Within academia, professors, post-doctorates, and graduate students, by nature of our work are required to read extensively about 
 selective specific scientific fields. This in turn gives us an expert opinion in what data we value most. To start a thin layer data organization 
 we begin by forming connections of most relevant data according to chemicals subfields. This is in accordance to the authorship
-where each expertise opinion is recognized for different fields. A graph overview of the Module layout in `GlobalChem`.
+where each expertise opinion is recognized for different fields. A graph overview of the 
+e layout in `GlobalChem`.
 
 <p align="center">
   <img width="1000" height="1000" src="images/figures/figure_1.png">
@@ -68,9 +69,9 @@ where each expertise opinion is recognized for different fields. A graph overvie
 . In `Figure 2`, each leaf node is labeled appropriately as a class name to the paper it was referenced from. Each paper object
 has either the functional groups that correspond to that paper's overall functionality in IUPAC, Preferred Name, Acronyms, SMILES, SMARTS
 format. The choice for this design was that as more users contribute then can expand into different directories, add their own, 
-and provide their respective popular chemical list. Each paper that is elected is converted into a `namespace` modulel an object
+and provide their respective popular chemical list. Each paper that is elected is converted into a `namespace` module an object
 whose name is indicative of it's functionality. An example for the drug design community is the paper "Rings In Drugs" [Taylor:2014-6] whose
-pythonic object equivalent is now "RingsInDrugs" with two functional methods that retrieve the functional groups written
+pythonic object equivalent is now "RingsInDrugs" with two functional methods that retreive the IUPAC:SMILES/SMARTS that was embedded
 into the paper. 
 
 ## Manual SMILES abstraction
@@ -79,16 +80,18 @@ Papers are selected based on interested and relevance in the scientific communit
 The SMILES is abstracted in a variety of methods:
 
 -  For simplistic molecules one representation of the SMILES can be directly translated using visual 
-inspection. This worked for compounds usually at the beginning of a reported list that were the most common denominator rings. 
+inspection. This worked for compounds usually at the beginning of a reported list that were small molecules.  
 
-- For complex molecules, the image can be redrawn into the free version of ChemDraw and then translated into SMILES. 
+- For more complex molecules, the image can be redrawn into the free version of ChemDraw and then translated into a non-canonical version of SMILES. 
 
 - For papers where the SMILES are written and the IUPAC is not known. We translate the SMILES into ChemDraw and then retrieve the name. 
 Note that some of the names were modified based on human inspection in favor as well for preferred names. 
 
 - For polymer papers, the site points were omitted from the name and some of the nomenclature adjusted for preferred names
-over traditional. 
+over traditional. For example: 'yl' to mark site points for polymer connections was removed in favour of reduced english complexity. 
 
+- Some SMILES were adjusted from their radical complement as they served as connection points. Some decisions were made to keep the radical component especially in the case if the IUPAC blue book common substituents. 
+- 
 - SMARTS strings were adapted from the SMILES using RDKit [@Landrum:2019-5]
 
 # Data
@@ -166,7 +169,7 @@ forcefield is. The distributions are reported in accordance with bonds, angles, 
 equation. 
 
 <p align="center">
-  <img width="1400" height="1000" src="images/figures/figure_3.png">
+  <img width="1400" height="400" src="images/figures/figure_3.png">
   <i>Figure 3: Charmm Potential Energy Geometry and Charge Classifications</i>
 </p>
 
@@ -176,11 +179,10 @@ elected scaffolding produced by nature, warheads designed for covalent inhibitio
 that could be used to kill us. 3 Failures were captured primarily due to the sulphonyl `SH` and the salt `O` to potassium.
 
 <p align="center">
-  <img width="900" height="500" src="images/figures/figure_6.png">
+  <img width="500" height="100" src="images/figures/figure_6.png">
+  <br>
   <i>Figure 4: Failed CGenFF Compounds</i>
 </p>
-
-Distribution of 
 
 ## Discussion 
 
@@ -194,7 +196,7 @@ fix for the ForceField Development. By passing `GlobalChem` into `CGenFF` we can
 manual parameterization [Kumar:2020] without having to rely on a brute force approach. 
 
 <p align="center">
-  <img width="1300" height="800" src="images/figures/figure_5.png">
+  <img width="1100" height="800" src="images/figures/figure_5.png">
   <i>Figure 5: Penalty Score distributions</i>
 </p>
 
