@@ -26,8 +26,8 @@ Toll-Like Receptors in an object-oriented fashion [Perez-Regidor:2016-9]. These 
 to reproduce as well as can be difficult to implement given the amount of data. When applying these papers they don't provide
 so much use to the common developer. So what do we do?
 
-To organize the data we need to revert back to the idea of communication. Humans use symbols and drawings to communicate, a collection of symbols and their combinations
-are called a language. Different languages can be employed to carry different features and mean different things to a variety of communities. 
+To organize the data we need to revert back to the idea of simplistic communication and distribution. Humans use symbols and drawings to communicate, a set of symbols and their combinations
+are called a language. Different languages can be employed to carry different features and mean different things to a variety of communities as they infer meaning. 
 IUPAC was a written language that predates even drawing atoms as a method of communication between chemists [Cooke-Fox:1989-5]; 
 other chemical sub-communities also adopted the language and applied to their field to different dialects i.e polymer chemistry, organo-metallic chemistry.
 In the recent years, SMILES [Weininger:1988-5] is becoming a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D or 3D geometry with ease.
@@ -46,8 +46,7 @@ To implement our idea we needed to pick a coding language that has the ability t
   <i>Figure 1: Language Construction </i>
 </p>
 
-We also chose python because of it's distribution infrastructure to easily install objects installed on the cloud. This 
-acts a free service where `GlobalChem` will behave in the same manner as the Gideon Bible. 
+We also chose python because of it's distribution infrastructure to easily install objects installed on the cloud on PyPi. This acts as the "Printing Service" that enabled the mass distribution of the Gideon Bible and `GlobalChem` will follow in the same manner. 
 
 # Methodology and Implementation
 
@@ -133,21 +132,21 @@ To test the tolerance of these lists to other software we test on a couple of op
 data interoperability. Although, it can be suggested that some of the software implemented should be expanded to perhaps
 include functional groups that couldn't be parsed. 
 
-| Software | Number of Failed Compounds | Example Failed SMILES                                                                                                                                                                        |
-|----------|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| RDKit    | 11                         | 'CSi(C(C)(C)C)C', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C', 'n1cncn1', 'C&1&1&1',  'c1ccccc1C&1&1', 'n1cccc1', 'C&1&1&1&1', 'n1ccnc1C'                                                           |
-| Indigo   | 8                          | 'C&1&1&1&1', 'C&1&1&1', 'c1ccccc1C&1&1', 'CSi(C(C)(C)C)C', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C', 'CSi(C(C)(C)C)C', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'                                      |
-| CGenFF   | 321                        | '[CH]C1=CC=CC=C1', 'O=CSS[C]=O', 'O=S(N1CCCC1)=O', 'CC([Si](C1=CC=CC=C1)C2=CC=CC=C2)(C)C', '[N+]#[C-]', 'O=S(N(CC)C)=O', 'FC(Cl)(C(F)(C(F)(F)C(F)(F)C(F)(F)OC(F)(F)C(F)(S(=O)(O[K])=O)F)F)F' |
-
-<p align="center">
-  <i>Table 2: GlobalChem Tolerable Results</i>
-</p>
-
 #### Cheminformatics Test
 
 Two open-source cheminformatic platforms have taken staple as foundational tools: RDKit and Indigo. To test each SMILES string, each string gets
 passed into a `Mol` RDKit object and `Indigo.loadMolecule()` object where any failures are recorded logged in Table 2. Cheminformatic interoperability
 between different platforms promotes a unification. This can be expanded into OpenBabel and many others as a tolerance checker.
+
+| Software | Number of Failed Compounds | Example Failed SMILES                                                                                                                                                                        |
+|----------|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| RDKit    | 11                         | 'CSi(C(C)(C)C)C', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C', 'n1cncn1', 'C&1&1&1',  'c1ccccc1C&1&1', 'n1cccc1', 'C&1&1&1&1', 'n1ccnc1C'                                                           |
+| Indigo   | 8                          | 'C&1&1&1&1', 'C&1&1&1', 'c1ccccc1C&1&1', 'CSi(C(C)(C)C)C', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C', 'CSi(C(C)(C)C)C', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'                                      |
+
+<p align="center">
+  <i>Table 2: GlobalChem Tolerable Results</i>
+</p>
+
 
 #### ForceFields Test
 
@@ -159,7 +158,7 @@ construct the best chemical representative compounds of a particular space and e
 using their atom-typing engine. Due to accessibility, we focused primiarily on CGenFF to check it's tolerance level. We 
 developed a private version of CGenFF that can estimate the atom types from `SDF` bond type column. This enabled us to pass the SMILES strings
 through `RDKit` (by nature anything failed in RDKit fails in CGenFF) and transform to `SDF` to a `CGenFF` stream output. 
-Any reported failures are also recorded and logged in Table 2.
+
 
 ## Discussion 
 
