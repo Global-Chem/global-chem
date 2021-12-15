@@ -41,7 +41,7 @@ The problem is with previous platforms was the lack of participants involved in 
 Most software and especially old software can be difficult to install and handle on top of modern technology thus driving the
 need for something sustainable that can naturally grow. The chemical universe is large and too big for one person to fathom. 
 It takes a multitude of chemical diversity expertise to put together a well-thought chemical list of most relative compounds to their respetive community.
-To implement our idea we needed to pick a coding language that has the ability to write easy objects for everyone to understand; Python.
+To implement our idea we needed to pick a coding language that has the ability to write easy objects similar to a common language, English, for everyone to understand; Python.
 
 <p align="center">
   <img width="1000" height="800" src="images/figures/figure_2.png">
