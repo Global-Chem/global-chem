@@ -127,15 +127,11 @@ At the time of writing the list now the list stands at:
 
 A total collection of 2153 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) and dispersed across 17 objects in
 an organized fashion by subject. The code was refactored extensively to allow for ease of object addition according to subject
-and functionality. 
-
-## Results 
-
-To test the tolerance of these lists to other software we test on a couple of open source platforms to determine 
+and functionality. To test the tolerance of these lists to other software we test on a couple of open source platforms to determine 
 data interoperability. Although, it can be suggested that some of the software implemented should be expanded to perhaps
 include functional groups that couldn't be parsed. 
 
-#### Cheminformatics Test
+## Cheminformatics Test
 
 Two open-source cheminformatic platforms have taken staple as foundational tools: RDKit and Indigo. To test each SMILES string, each string gets
 passed into a `Mol` RDKit object and `Indigo.loadMolecule()` object where any failures are recorded logged in Table 2. Cheminformatic interoperability
@@ -151,7 +147,7 @@ between different platforms promotes a unification. This can be expanded into Op
 </p>
 
 
-#### ForceFields Test
+## ForceFields Test
 
 Common chemical groups by nature should be of interest for development of force-fields for molecular dynamic simulations that
 are trying to simulate chemicals and biological systems movements, velocity, and charge, which can also serve as dual interoperable test 
@@ -184,7 +180,7 @@ that could be used to kill us. 3 Failures were captured primarily due to the sul
   <i>Figure 4: Failed CGenFF Compounds</i>
 </p>
 
-## Discussion 
+### Discussion 
 
 From results suggested from `GlobalChem` we can suggest for cheminformatic toolkits to expand more on Silicon based datasets as
 well as handle the ampersand `&` operator for materials. Diamond is a common carbon substance that is indicated on the OpenSMILES
@@ -196,14 +192,14 @@ fix for the ForceField Development. By passing `GlobalChem` into `CGenFF` we can
 manual parameterization [Kumar:2020] without having to rely on a brute force approach. 
 
 <p align="center">
-  <img width="1100" height="800" src="images/figures/figure_5.png">
+  <img width="1000" height="650" src="images/figures/figure_5.png">
   <i>Figure 5: Penalty Score distributions</i>
 </p>
 
 We can suggest things like targeting one of the Emerging Perfluoroalkyls, owed to their primarily high penalty scores as 
 a unique addition into the forcefield that is impactful to the environmental chemical hazard community. 
 
-## Conclusion
+# Conclusion
 
 `GlobalChem` serves a purpose of documenting what is common and relevant to different chemical communities in a distributable
 easy format with objects classified as primary paper functionality with methods containing the chemical list that accodomates
