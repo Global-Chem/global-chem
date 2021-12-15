@@ -31,11 +31,13 @@ are called a language. Different languages can be employed to carry different fe
 IUPAC was a written language that predates even drawing atoms as a method of communication between chemists [Cooke-Fox:1989-5]; 
 other chemical sub-communities also adopted the language and applied to their field to different dialects i.e polymer chemistry, organo-metallic chemistry.
 In the recent years, SMILES [Weininger:1988-5] is becoming a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D or 3D geometry with ease.
-Unfortunately, IUPAC is a legacy language and is the lexical key to informational wealth about a chemical pattern or group. Algorithms
-were designed to abstract and interpolate skeletal patterns and languages and convert them into SMILES for data processing and analysis. 
-A lot of these tools are well summarized by the Blue Obelisk Society Open Source Review [OBoyle:2016-9].
+Due to it's "first to market" scientific chemical language IUPAC is the legacy language that is a lexical key to unlocking informational wealth about a chemical pattern or group. But there are problems with the language due to it's length in describing bigger molecules. IUPAC names in organic chemisty papers can extend pages with no real value. To compact information, chemists just released the drawings but that can be hard to store precisely. Algorithms
+are being designed to abstract and interpolate skeletal patterns and languages and convert them into SMILES for data processing and analysis. 
+A lot of these tools are well summarized by the Blue Obelisk Society Open Source Review [OBoyle:2016-9]. And they work to some degree of accuracy. 
+These tools are then improved on and machine learning starts dominating as a model that sits on top to fix any inaccuracies of the algrothim. 
+If we took it another direction, where we selectively aggregate data based on popularity, valuability over time, and organized to a degree of functionality but that much expertise amongst one person is not enough. You need many opinions to come to a standard set. 
 
-The problem is the lack of participants involved in any one project and a method to contribute back for it to grow. 
+The problem is with previous platforms was the lack of participants involved in any one project and a method to contribute back for it to grow. 
 Most software and especially old software can be difficult to install and handle on top of modern technology thus driving the
 need for something sustainable that can naturally grow. The chemical universe is large and too big for one person to fathom. 
 It takes a multitude of chemical diversity expertise to put together a well-thought chemical list of most relative compounds to their respetive community.
