@@ -166,8 +166,8 @@ forcefield is. The distributions are reported in accordance with bonds, angles, 
 equation. 
 
 <p align="center">
-  <img width="1400" height="1000" src="images/figures/figure_4.png">
-  <i>Figure 3: Charmm  Potential Energy Equation</i>
+  <img width="1400" height="1000" src="images/figures/figure_3.png">
+  <i>Figure 3: Charmm Potential Energy Geometry and Charge Classifications</i>
 </p>
 
 We looked at BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds (47), Common Warheads (29), Emerging PerfluoroAlkyls (27).
@@ -176,7 +176,7 @@ elected scaffolding produced by nature, warheads designed for covalent inhibitio
 that could be used to kill us. 3 Failures were captured primarily due to the sulphonyl `SH` and the salt `O` to potassium.
 
 <p align="center">
-  <img width="1400" height="1000" src="images/figures/figure_6.png">
+  <img width="900" height="500" src="images/figures/figure_6.png">
   <i>Figure 4: Failed CGenFF Compounds</i>
 </p>
 
@@ -194,7 +194,7 @@ fix for the ForceField Development. By passing `GlobalChem` into `CGenFF` we can
 manual parameterization [Kumar:2020] without having to rely on a brute force approach. 
 
 <p align="center">
-  <img width="1400" height="1000" src="images/figures/figure_6.png">
+  <img width="1300" height="800" src="images/figures/figure_5.png">
   <i>Figure 5: Penalty Score distributions</i>
 </p>
 
