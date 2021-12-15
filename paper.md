@@ -4,7 +4,7 @@ tags:
   - Python
   - Cheminformatics
 authors:
-  - name: Suliman Sharif,  Elena Yi Chow, Sunhwan Jo, Shaoqi Zhan, Ruibin Liu, Aarion Romany, Aziza Frank, Asuka Orr, Alexander D. MacKerell Jr. 
+  - name: Suliman Sharif,  Elena Yi Chow, Asuka Orr, Sunhwan Jo, Shaoqi Zhan, Ruibin Liu, Aarion Romany, Aziza Frank, Alexander D. MacKerell Jr. 
     orcid: 0000-0002-1342-9258
     affiliation: 1
 affiliations:
@@ -105,7 +105,7 @@ At the time of writing the list now the list stands at:
 | Rings in Drugs                      | IUPAC/SMILES/SMARTS          | 92           | [Taylor:2014-6]          |
 | Phase 2 Hetereocyclic Rings         | IUPAC/SMILES/SMARTS          | 19           | [Broughton:2004-9]       |
 | Privileged Scaffolds                | IUPAC/SMILES/SMARTS          | 47           | [Welsch:2010-6]          |
-| Common Warheads                     | IUPAC/SMILES/SMARTS          | 29           | [Gehringer:2019-6]       |
+| Common Warheads Covalent Inhibitors | IUPAC/SMILES/SMARTS          | 29           | [Gehringer:2019-6]       |
 | Common Polymer Repeating Units      | IUPAC/SMILES/SMARTS          | 78           | [Hiorns:2019-6]          |
 | Common R Group Replacements         | IUPAC/SMILES/SMARTS          | 499          | [Takeuchi:2021-9]        |
 | Electrophillic Warheads for Kinases | Preferred Name/SMILES/SMARTS | 24           | [Petri:2020-12]          |
@@ -160,6 +160,28 @@ developed a private version of CGenFF that can estimate the atom types from `SDF
 through `RDKit` (by nature anything failed in RDKit fails in CGenFF) and transform to `SDF` to a `CGenFF` stream output. 
 
 
+CGenFF was founded on drug-like molecules and to test it's capability of handling what's reported in literature it's performance
+is tested in accordance with it's penalty score distribution. The lower the distribution is to 0 the more performant the 
+forcefield is. The distributions are reported in accordance with bonds, angles, dihedrals, charge classifications of the charmm potential energy
+equation. 
+
+<p align="center">
+  <img width="1400" height="1000" src="images/figures/figure_4.png">
+  <i>Figure 3: Charmm  Potential Energy Equation</i>
+</p>
+
+We looked at BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds (47), Common Warheads (29), Emerging PerfluoroAlkyls (27).
+Any kinase inhibitors should exhibit drug-like features similar to what was chosen to CGenFF, privileged scaffolds are any 
+elected scaffolding produced by nature, warheads designed for covalent inhibition, and a stretch into herbicides and toxicity
+that could be used to kill us. 3 Failures were captured primarily due to the sulphonyl `SH` and the salt `O` to potassium.
+
+<p align="center">
+  <img width="1400" height="1000" src="images/figures/figure_6.png">
+  <i>Figure 4: Failed CGenFF Compounds</i>
+</p>
+
+Distribution of 
+
 ## Discussion 
 
 From results suggested from `GlobalChem` we can suggest for cheminformatic toolkits to expand more on Silicon based datasets as
@@ -172,9 +194,12 @@ fix for the ForceField Development. By passing `GlobalChem` into `CGenFF` we can
 manual parameterization [Kumar:2020] without having to rely on a brute force approach. 
 
 <p align="center">
-  <img width="1400" height="1000" src="images/figures/figure_3.png">
-  <i>Figure 3: GlobalChem - CGenFF Penalty Scores</i>
+  <img width="1400" height="1000" src="images/figures/figure_6.png">
+  <i>Figure 5: Penalty Score distributions</i>
 </p>
+
+We can suggest things like targeting one of the Emerging Perfluoroalkyls, owed to their primarily high penalty scores as 
+a unique addition into the forcefield that is impactful to the environmental chemical hazard community. 
 
 ## Conclusion
 
@@ -188,6 +213,7 @@ it has a potential educational use in teaching functional groups and SMILES to a
 
 # Acknowledgements
 
-Thank you to Jacob Weiner, Tyree Wilson, Paul Shapiro for their helpful discussions into the usability and functionality of GlobalChem.
+Thank you to Jacob Weiner, Tyree Wilson, and Paul Shapiro for their helpful discussions into the usability and functionality of GlobalChem.
+Thank you to Blake Printy, and Robert Zeigler for their influence for python objected-oriented design and distribution.
 Thank you to the University of Maryland School of Pharmacy department for promoting a collaborative and useful space for 
 academics. 
