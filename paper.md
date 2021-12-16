@@ -93,7 +93,7 @@ Note that some of the names were modified based on human inspection in favor as 
 over traditional. For example: 'yl' to mark site points for polymer connections was removed in favour of reduced english complexity. 
 
 - Some SMILES were adjusted from their radical complement as they served as connection points. Some decisions were made to keep the radical component especially in the case if the IUPAC blue book common substituents. 
-- 
+
 - SMARTS strings were adapted from the SMILES using RDKit [@Landrum:2019-5]
 
 # Data
