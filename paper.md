@@ -194,7 +194,7 @@ fix for the ForceField Development. By passing `GlobalChem` into `CGenFF` we can
 manual parameterization [Kumar:2020] without having to rely on a brute force approach. 
 
 <p align="center">
-  <img width="1000" height="650" src="images/figures/figure_5.png">
+  <img width="1000" height="750" src="images/figures/figure_5.png">
   <i>Figure 5: Penalty Score distributions</i>
 </p>
 
