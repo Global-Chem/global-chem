@@ -26,8 +26,8 @@ Toll-Like Receptors in an object-oriented fashion [Perez-Regidor:2016-9]. These 
 to reproduce as well as can be difficult to implement given the amount of data. When applying these papers they don't provide
 so much use to the common developer. So what do we do?
 
-To organize the data we need to revert back to the idea of simplistic communication and distribution. Humans use symbols and drawings to communicate, a set of symbols and their combinations
-are called a language. Different languages can be employed to carry different features and mean different things to a variety of communities as they infer meaning. 
+To organize the data we need to revert back to the idea of simplistic communication and distribution. Humans use symbols and drawings to communicate, a set of symbols and the rules to combining them are called a language.
+Different languages can be employed to carry different features and mean different things to a variety of communities as they infer meaning. 
 IUPAC was a written language that predates even drawing atoms as a method of communication between chemists [Cooke-Fox:1989-5]; 
 other chemical sub-communities also adopted the language and applied to their field to different dialects i.e polymer chemistry, organo-metallic chemistry.
 In the recent years, SMILES [Weininger:1988-5] is becoming a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D or 3D geometry with ease.
@@ -115,7 +115,7 @@ At the time of writing the list now the list stands at:
 | Common R Group Replacements         | IUPAC/SMILES/SMARTS          | 499          | [Takeuchi:2021-9]        |
 | Electrophillic Warheads for Kinases | Preferred Name/SMILES/SMARTS | 24           | [Petri:2020-12]          |
 | Privileged Scaffolds for Kinases    | IUPAC/SMILES/SMARTS          | 29           | [Hu:2021-3]              |
-| BRaf Inhibitors                     | IUPAC/SMILES/SMARTS          | 54           | [Agianian:2018-6]        |
+| BRAF Inhibitors                     | IUPAC/SMILES/SMARTS          | 54           | [Agianian:2018-6]        |
 | Common Amino Acid Protecting Groups | IUPAC/ACRONYM/SMILES/SMARTS  | 346          | [Isidro-Llobet:2009-6]   |
 | Emerging Perfluoroalkyls            | IUPAC/SMILES/SMARTS          | 27           | [Pelch:2019-9]           |
 | Chemicals For Clay Adsorption       | IUPAC/SMILES/SMARTS          | 33           | [Orr:2019-9]             |
@@ -139,10 +139,10 @@ Two open-source cheminformatic platforms have taken staple as foundational tools
 passed into a `Mol` RDKit object and `Indigo.loadMolecule()` object where any failures are recorded logged in Table 2. Cheminformatic interoperability
 between different platforms promotes a unification. This can be expanded into OpenBabel and many others as a tolerance checker.
 
-| Software | Number of Failed Compounds | Example Failed SMILES                                                                                                                                                                        |
-|----------|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| RDKit    | 11                         | 'CSi(C(C)(C)C)C', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C', 'n1cncn1', 'C&1&1&1',  'c1ccccc1C&1&1', 'n1cccc1', 'C&1&1&1&1', 'n1ccnc1C'                                                           |
-| Indigo   | 8                          | 'C&1&1&1&1', 'C&1&1&1', 'c1ccccc1C&1&1', 'CSi(C(C)(C)C)C', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C', 'CSi(C(C)(C)C)C', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'                                      |
+| Software | Number of Failed Compounds | Example of Failed SMILES                                |
+|----------|----------------------------|---------------------------------------------------------|
+| RDKit    | 11                         | 'CSi(C(C)(C)C)C', 'C&1&1&1&1',                          |
+| Indigo   | 8                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
 
 <p align="center">
   <i>Table 2: GlobalChem Tolerable Results</i>
@@ -174,7 +174,7 @@ equation.
 We looked at BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds (47), Common Warheads (29), Emerging PerfluoroAlkyls (27).
 Any kinase inhibitors should exhibit drug-like features similar to what was chosen to CGenFF, privileged scaffolds are any 
 elected scaffolding produced by nature, warheads designed for covalent inhibition, and a stretch into herbicides and toxicity
-that could be used to kill us. 3 Failures were captured primarily due to the sulphonyl `SH` and the salt `O` to potassium.
+that could be used to kill us. 3 Failures were captured primarily due to the sulphonyl `SH` and the activated oxygen to it's potassium salt counter anion in the perfluoroalkyl. 
 
 <p align="center">
   <img width="500" height="100" src="images/figures/figure_6.png">
