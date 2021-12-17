@@ -43,7 +43,7 @@ To implement `Global-Chem` we needed to pick a coding language that has the abil
   <i>Figure 1: Language Construction </i>
 </p>
 
-Python was also chosen because of it's distribution infrastructure to easily install objects available on the cloud. This 
+Python was also chosen because of it's distribution infrastructure that allows for easy installation of objects available on the cloud. This 
 allows `Global-Chem` to function as a free service behaving in the same manner as the Gideon Bible. 
 
 # Methodology and Implementation
@@ -51,47 +51,47 @@ allows `Global-Chem` to function as a free service behaving in the same manner a
 ## Paper Selection Philosophy
 
 Scientists, by nature of thier work, are required to read extensively about 
-selected specific scientific fields as well as access the associated data. This allows for scientists to develop expert opinions in the fields and data they value most. This requires a thin layer data organization that allows for the relevant information and data to be readily accessed.
-To achieve this we begin by forming connections of most relevant data according to chemicals subfields that have been authored
-by recognized experts in the different fields. A graph overview of the Module layout in `Global-Chem`.
+selected scientific fields as well as access the associated data. This allows for scientists to develop expert knowledge in the fields and data they value most. This requires a thin layer data organization that allows for the relevant information and data to be readily accessed.
+To achieve this we begin by forming connections of the most relevant data according to chemicals subfields that have been authored
+by experts in the different fields. A graph overview of the Module layout in `Global-Chem`.
 
 <p align="center">
   <img width="1000" height="1000" src="images/figures/figure_1.png">
-  <i>Figure 2: Network Graph of GlobalChem</i>
+  <i>Figure 2: Network Graph of Global-Chem</i>
 </p>
 
 ## Object-Oriented Design
 
-`GlobalChem` follows a simple object-oriented design where directories are the parent nodes and articles/books are leaf nodes. 
-. In `Figure 2`, each leaf node is labeled appropriately as a class name to the paper it was referenced from. Each paper object
+[Would it be possible to cross reference between datasets?  If you select one set of molecules, it would be nice to identify if any of those compounds are in other datasets; this could ultimately extended to cross references sub-strings]
+
+`Global-Chem` follows a simple object-oriented design where directories are the parent nodes and articles or books are leaf nodes. In `Figure 2`, each leaf node is labeled appropriately as a class name to the reference-source paper or book. Each reference object
 has either the functional groups that correspond to that paper's overall functionality in IUPAC, Preferred Name, Acronyms, SMILES, SMARTS
-format. The choice for this design was that as more users contribute then can expand into different directories, add their own, 
-and provide their respective popular chemical list. Each paper that is elected is converted into a `namespace` modulel an object
+format. The motivation for this design was that as more users contribute they can expand into different directories, add their own directory, 
+and provide their chemical list of interest. Each paper that is selected is converted into a `namespace` module, an object
 whose name is indicative of it's functionality. An example for the drug design community is the paper "Rings In Drugs" [Taylor:2014-6] whose
-pythonic object equivalent is now "RingsInDrugs" with two functional methods that retrieve the functional groups written
-into the paper. 
+python object equivalent is now "RingsInDrugs" with two functional methods that retrieve the functional groups included in the paper. 
 
 ## Manual SMILES abstraction
 
-Papers are selected based on interested and relevance in the scientific community dictated by us, the authors, in respect to our field. 
-The SMILES is abstracted in a variety of methods:
+References and associatied compound lists are selected based on the interests of the contributing authors.  This should include consideration of relevance to the scientific community. 
+The SMILES strings are abstracted in a variety of methods:
 
--  For simplistic molecules one representation of the SMILES can be directly translated using visual 
-inspection. This worked for compounds usually at the beginning of a reported list that were the most common denominator rings. 
+-  For simple molecules one representation of the SMILES can be directly translated using visual 
+inspection. This is typically appropriate for compounds at the beginning of a reported list that were the most common denominator rings. 
 
-- For complex molecules, the image can be redrawn into the free version of ChemDraw and then translated into SMILES. 
+- For complex molecules the image can be redrawn in the free version of ChemDraw and then translated into SMILES. 
 
-- For papers where the SMILES are written and the IUPAC is not known. We translate the SMILES into ChemDraw and then retrieve the name. 
-Note that some of the names were modified based on human inspection in favor as well for preferred names. 
+- For sources where the SMILES are written and the IUPAC is not known the SMILES are translated into ChemDraw and the name retrieved. 
+Note that some of the names may be modified based on human inspection in favor as well for preferred names. 
 
 - For polymer papers, the site points were omitted from the name and some of the nomenclature adjusted for preferred names
-over traditional. 
+over traditional names. 
 
 - SMARTS strings were adapted from the SMILES using RDKit [@Landrum:2019-5]
 
 # Data
 
-At the time of writing the list now the list stands at:
+At the time of writing the list of objects includes:
 
 | Chemical List                       | Languages                    | # of Entries | References               |
 |-------------------------------------|------------------------------|--------------|--------------------------|
@@ -120,14 +120,14 @@ At the time of writing the list now the list stands at:
 
 # Tests & Applications
 
-A total collection of 2153 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) and dispersed across 17 objects in
+A total collection of 2153 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 17 objects in
 an organized fashion by subject. The code was refactored extensively to allow for ease of object addition according to subject
 and functionality. 
 
 ## Results 
 
-To test the tolerance of these lists to other software we test on a couple of open source platforms to determine 
-data interoperability. Although, it can be suggested that some of the software implemented should be expanded to perhaps
+To test the utility of these lists with other software tests were performed on three open source platforms to determine 
+data interoperability. [OK, I need to see the new data] Although, it can be suggested that some of the software implemented should be expanded to perhaps
 include functional groups that couldn't be parsed. 
 
 | Software | Number of Failed Compounds | Example Failed SMILES                                                                                                                                                                        |
@@ -142,32 +142,32 @@ include functional groups that couldn't be parsed.
 
 #### Cheminformatics Test
 
-Two open-source cheminformatic platforms have taken staple as foundational tools: RDKit and Indigo. To test each SMILES string, each string gets
-passed into a `Mol` RDKit object and `Indigo.loadMolecule()` object where any failures are recorded logged in Table 2. Cheminformatic interoperability
-between different platforms promotes a unification. This can be expanded into OpenBabel and many others as a tolerance checker.
+Two open-source cheminformatic platforms our now widely considered as foundational tools: RDKit and Indigo. To test each SMILES string, each string gets
+passed into a `Mol` RDKit object and `Indigo.loadMolecule()` object where any failures are recorded. Results on the number of failed compounds out of the 2153 compounds along with example of failed molecules is presented in Table 2. Cheminformatic interoperability
+between different platforms promotes wider utilization. For example, OpenBabel is another utility that may used as a tolerance checker.
 
 #### ForceFields Test
 
-Common chemical groups by nature should be of interest for development of force-fields for molecular dynamic simulations that
-are trying to simulate chemicals and biological systems movements, velocity, and charge, which can also serve as dual interoperable test 
-for SMILES strings. Popular force-fields such as General Amber ForceField (GAFF) [Wang:2004-7], Optimized Potentials for Liquid Simulations (OPLS)
-[Jorgensen:1988-7], and Charmm General ForceField (CGenFF) [Vanommeslaeghe:2010-3] collect common chemical lists of use to 
-construct the best chemical representative compounds of a particular space and estimate the geometry and charge of atoms
-using their atom-typing engine. Due to accessibility, we focused primiarily on CGenFF to check it's tolerance level. We 
-developed a private version of CGenFF that can estimate the atom types from `SDF` bond type column. This enabled us to pass the SMILES strings
-through `RDKit` (by nature anything failed in RDKit fails in CGenFF) and transform to `SDF` to a `CGenFF` stream output. 
-Any reported failures are also recorded and logged in Table 2.
+Access to broad collections of chemical groups will be of interest for development of force fields for molecular modeling and molecular dynamic simulations, allowing for studies on a wider range of chemicals and biological systems. The ability of a force field to treat molecules in the database can also serve as dual interoperable test 
+for SMILES strings. Popular force fields such as General Amber ForceField (GAFF) [Wang:2004-7], Optimized Potentials for Liquid Simulations (OPLS)
+[Jorgensen:1988-7], and Charmm General Force Field (CGenFF) [Vanommeslaeghe:2010-3] are based on collections of chemicals that are representative of the particular region of chemical space that the force field was designed to cover. In practice, this involves the atom-typing engine of each force field being applied to each molecule followed by assignment of the appropriate parameters. This is to a large exten associated with the coverage of a force field.  Thus, the compound lists in Global-Chem can be used to identify specific regions of chemical space that have limited coverage and, therefore, represents future regions of chemical space for force field development. In the present study we used CGenFF to check it's tolerance level for the range of molecules currently in Global-Chem. To facilitate this an in-house extension of CGenFF was used that can assign atom types from `SDF` bond type column. This enabled us to pass the SMILES strings
+through `RDKit` and transform `SDF` to a `CGenFF` stream output. 
+The resulting failures are also presented in Table 2. It should be noted by nature the anything that fails in RDKit fails in CGenFF. [need to add details for the individual lists, which could be pretty interesting; perhaps include this in the discussion]
 
 ## Discussion 
 
-From results suggested from `GlobalChem` we can suggest for cheminformatic toolkits to expand more on Silicon based datasets as
-well as handle the ampersand `&` operator for materials. Diamond is a common carbon substance that is indicated on the OpenSMILES
-documentation as a `C&1&1&1&1`, as the parsers suggest this seems to be a problem in both `RDKit` and `Indigo`. 
+[You need to discuss the utility of Global-Chem and how that utility will increase as users add more chemical data.  And then present some example use cases, such as CGenFF]
 
-CGenFF is paired with a penalty scoring method for how wrong the software is predicting the geometry of a small molecule
-[Vanommeslaeghe:2012-12], using the penalty score of different classifications we can suggest precision avenues for what to 
-fix for the ForceField Development. By passing `GlobalChem` into `CGenFF` we can recommend compounds of usefulness for 
-manual parameterization [Kumar:2020] without having to rely on a brute force approach. 
+From results suggested from `GlobalChem` we can suggest for cheminformatic toolkits to expand more on Silicon based datasets as
+well as 
+
+An interesting observation from the present analysis is the ability of tools to handle the ampersand `&` operator in SMILES for materials. For example, diamond is a common carbon substance whose SMILES strings is indicated in the OpenSMILES
+documentation as a `C&1&1&1&1`. As shown in Table 2, this fails in both `RDKit` and `Indigo` indicating that improve handling of the `&` operator is required.
+
+CGenFF includes a penalty scoring method based on the extent of analog new parameters have to those explicitly available in the force field [Dude, this is totally wrong: "how wrong the software is predicting the geometry of a small molecule"]
+[Vanommeslaeghe:2012-12]. Accordingly, the penalty scores of different chemical classes can suggest those in need of force field development. Accordingly. passing `GlobalChem` into `CGenFF` can facilitate the identification of compounds for manual parameterization [Kumar:2020]. 
+
+[If include a figure you need to discuss it!]
 
 <p align="center">
   <img width="1400" height="1000" src="images/figures/figure_3.png">
@@ -176,16 +176,18 @@ manual parameterization [Kumar:2020] without having to rely on a brute force app
 
 ## Conclusion
 
-`GlobalChem` serves a purpose of documenting what is common and relevant to different chemical communities in a distributable
+`Global-Chem` serves the purpose of facilitating collecting, documenting and accessing different chemical communities as dictated by user input. It involves a distributable
 easy format with objects classified as primary paper functionality with methods containing the chemical list that accodomates
-said functionality. 
-
-`GlobalChem` has several proposed applications into machine learning and artifical intelligence for drug pipelines as a classification layer,
-it can help construct a cheminformatic analysis of functional groups on a chemical dataset without any knowledge being known prior, and lastly
+said functionality. With respect to broader applicatibility `Global-Chem` will potentially be of utility for machine learning and artifical intelligence tools in drug development pipelines as a classification layer.  In addition, it can help construct a cheminformatic analysis of functional groups on a chemical dataset and, lastly,
 it has a potential educational use in teaching functional groups and SMILES to any potential chemistry students. 
 
 # Acknowledgements
 
-Thank you to Jacob Weiner, Tyree Wilson, Paul Shapiro for their helpful discussions into the usability and functionality of GlobalChem.
-Thank you to the University of Maryland School of Pharmacy department for promoting a collaborative and useful space for 
-academics. 
+Thank you to Jacob Weiner, Tyree Wilson, Paul Shapiro for their helpful discussions into the usability and functionality of Global-Chem.
+Appreciation to the University of Maryland School of Pharmacy Depatment of Pharmaceutical Chemistry for promoting a collaborative and useful space for 
+academics. Financial support from the NIH (GM131710) is acknowledged.
+
+
+# Conflict of Interets
+
+ADM is cofounder and CSO and SJ is Commercial Development Director of SilcsBio LLC.
