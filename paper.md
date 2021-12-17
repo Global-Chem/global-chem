@@ -1,5 +1,5 @@
 ---
-title: 'Global-Chem: A record collection of common small molecules and their SMILES/SMARTS in different chemical communities'
+title: 'Global-Chem: Collections of common small molecules and their SMILES/SMARTS to support diverse chemical communities'
 tags:
   - Python
   - Cheminformatics
@@ -8,7 +8,7 @@ authors:
     orcid: 0000-0002-1342-9258
     affiliation: 1
 affiliations:
- - name: University of Maryland, School of Pharmacy
+ - name: University of Maryland Baltimore, School of Pharmacy
    index: 1
 date: 12/08/2021
 bibliography: paper.bib
@@ -18,45 +18,42 @@ bibliography: paper.bib
 
 The chemical universe is expanding rapidly as open access titan databases (Enamine Database (20 Billion) [@Gorgulla:2020-4],
 Zinc Database (2 Billion) [Irwin:2020-12], PubMed Database (68 Million) [Roberts:2001-2]) and cheminformatic tools
-to process, manipulate, and derive new compound structures are established. This left us with a chemical data big bang
-with ultra-large datasets and an ambiguous classification system in an attempt to organize the data. Previously, partial
-organizational attempts were made on PubMed filling chemical data linkages for computational toxicology called Actor for a specific
-refactored and refined effort [Judson:2019-9]. For the EnamineDB, a scaffold to biological activity was designed to target 
+to process, manipulate, and derive new compound structures are established. While this chemical data big bang has yielded ultra-large datasets they are based on ambiguous classification systems making it difficult to systematically organize them for specific uses. Previously, partial
+organizational attempts were made on PubMed, [I don't understand what you are saying here] filling chemical data linkages for computational toxicology called Actor for a specific
+refactored and refined effort [Judson:2019-9]. For the EnamineDB, a scaffold associated with biological activity was designed to target 
 Toll-Like Receptors in an object-oriented fashion [Perez-Regidor:2016-9]. These organizational methods are difficult
-to reproduce as well as can be difficult to implement given the amount of data. When applying these papers they don't provide
-so much use to the common developer. So what do we do?
+to extend to other systems as well as can be difficult to implement given the large amount of data. In addition, the information content of these papers is of limited utility to the common developer. 
 
-To organize the data we need to revert back to the idea of communication. Humans use symbols and drawings to communicate, a collection of symbols and their combinations
+To organize data we apply the idea of communication. Humans use symbols and drawings to communicate, a collection of symbols and their combinations
 are called a language. Different languages can be employed to carry different features and mean different things to a variety of communities. 
 IUPAC was a written language that predates even drawing atoms as a method of communication between chemists [Cooke-Fox:1989-5]; 
 other chemical sub-communities also adopted the language and applied to their field to different dialects i.e polymer chemistry, organo-metallic chemistry.
 In the recent years, SMILES [Weininger:1988-5] is becoming a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D or 3D geometry with ease.
-Unfortunately, IUPAC is a legacy language and is the lexical key to informational wealth about a chemical pattern or group. Algorithms
-were designed to abstract and interpolate skeletal patterns and languages and convert them into SMILES for data processing and analysis. 
-A lot of these tools are well summarized by the Blue Obelisk Society Open Source Review [OBoyle:2016-9].
+Unfortunately, IUPAC is a legacy language and is the lexical key to informational wealth about a chemical pattern or group. Accordingly, algorithms
+have been developed to bstract and interpolate skeletal patterns and languages such as IUPAC and convert them into SMILES for data processing and analysis. 
+A number of these tools are well summarized in a Blue Obelisk Society Open Source Review [OBoyle:2016-9].
 
-The problem is the lack of participants involved in any one project and a method to contribute back for it to grow. 
-Most software and especially old software can be difficult to install and handle on top of modern technology thus driving the
-need for something sustainable that can naturally grow. The chemical universe is large and too big for one person to fathom. 
-It takes a multitude of chemical diversity expertise to put together a well-thought chemical list of most relative compounds to their respetive community.
-To implement our idea we needed to pick a coding language that has the ability to write easy objects for everyone to understand; Python.
+In the context of a well-classified chemical database the major challenge is the enormity of the chemical universe. Accordingly, it takes a range of chemical expertise to put together a well-thought chemical list of compounds relevant to their respetive community. Thus, it is necessary for a large number of participants to contribute in order for such a database to grow. However, most software and especially old software can be difficult to install and handle on top of modern technology thus driving the
+need for something sustainable that is readily accessible to potential participants, allowing the database to naturally grow. This need motivated the development of the presented `Global-Chem` database
+
+To implement `Global-Chem` we needed to pick a coding language that has the ability to write easy objects for particpants to understand; Python.
 
 <p align="center">
   <img width="1000" height="800" src="images/figures/figure_2.png">
   <i>Figure 1: Language Construction </i>
 </p>
 
-We also chose python because of it's distribution infrastructure to easily install objects installed on the cloud. This 
-acts a free service where `GlobalChem` will behave in the same manner as the Gideon Bible. 
+Python was also chosen because of it's distribution infrastructure to easily install objects available on the cloud. This 
+allows `Global-Chem` to function as a free service behaving in the same manner as the Gideon Bible. 
 
 # Methodology and Implementation
 
 ## Paper Selection Philosophy
 
-Within academia, professors, post-doctorates, and graduate students, by nature of our work are required to read extensively about 
-selective specific scientific fields. This in turn gives us an expert opinion in what data we value most. To start a thin layer data organization 
-we begin by forming connections of most relevant data according to chemicals subfields. This is in accordance to the authorship
-where each expertise opinion is recognized for different fields. A graph overview of the Module layout in `GlobalChem`.
+Scientists, by nature of thier work, are required to read extensively about 
+selected specific scientific fields as well as access the associated data. This allows for scientists to develop expert opinions in the fields and data they value most. This requires a thin layer data organization that allows for the relevant information and data to be readily accessed.
+To achieve this we begin by forming connections of most relevant data according to chemicals subfields that have been authored
+by recognized experts in the different fields. A graph overview of the Module layout in `Global-Chem`.
 
 <p align="center">
   <img width="1000" height="1000" src="images/figures/figure_1.png">
