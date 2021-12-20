@@ -21,23 +21,24 @@ Zinc Database (2 Billion) [Irwin:2020-12], PubMed Database (68 Million) [Roberts
 to process, manipulate, and derive new compound structures are established. While this chemical data big bang has yielded useful ultra-large datasets they are based on ambiguous classification systems making it difficult to systematically organize them for specific uses.
 
 <p align="center">
-  <img width="1000" height="1000" src="images/figures/figure_4.png">
-  <i>Figure 1: Screenshot of the ZincDB request URLS for tranched organization data wih their respective directory nomenclature</i>
+  <img width="400" height="300" src="images/figures/figure_4.png">
+  <br />
+  <i>Figure 1: Screenshot of the ZincDB request URLS</i>
 </p>
 
-Previously, partial organizational attempts were made on PubMed, filling chemical data linkages for computational toxicology called Actor for a specific
+In `Figure1`, you can observe the directory setup for downloading ZincDB molecules with their respective directory nomenclature which can be tricky to navigate.  Previously, partial organizational attempts were made on PubMed, filling chemical data linkages for computational toxicology called Actor for a specific
 refactored and refined effort [Judson:2019-9]. For the EnamineDB, a scaffold associated with biological activity was designed to target 
 Toll-Like Receptors in an object-oriented fashion [Perez-Regidor:2016-9]. These organizational methods are difficult
 to extend to other systems as well as can be difficult to implement given the large amount of data.
 In addition, the information content of these papers is of limited utility to the common developer. 
 
 To organize data we apply the idea of communication. Humans use symbols and drawings to communicate, a set of symbols and the rules to combining them are called a language. 
-Languages can be employed to carry relevant, distinct features and mean something to their respective community.  
-IUPAC was a written language that predates even drawing atoms as a method of communication between chemists [Cooke-Fox:1989-5]; 
+Languages can be employed to carry relevant, distinct features and mean something to their respective community.  IUPAC was a written language that predates even drawing atoms as a method of communication between chemists [Cooke-Fox:1989-5]; 
 other chemical sub-communities also adopted the language and applied to their field to different dialects i.e polymer chemistry, organo-metallic chemistry.
 In the recent years, SMILES [Weininger:1988-5] is becoming a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D or 3D geometry with ease.
 Due to it's "first to market" scientific chemical language IUPAC is the legacy language that is a lexical key to unlocking informational wealth about a chemical pattern or group. 
 But there are problems with the language due to it's length in describing bigger molecules. IUPAC names in organic chemisty papers can extend pages with no real value. 
+
 To compact information, chemists just released the drawings but that can be hard to store precisely. Algorithms
 are being designed to abstract and interpolate skeletal patterns and languages and convert them into SMILES for data processing and analysis. 
 A lot of these tools are well summarized by the Blue Obelisk Society Open Source Review [OBoyle:2016-9]. And they work to some degree of accuracy. 
@@ -54,7 +55,7 @@ This need motivated the development of the presented `Global-Chem` database
 To implement `Global-Chem` we needed to pick a coding language that has the ability to write easy objects for particpants to understand; Python.
 
 <p align="center">
-  <img width="1000" height="800" src="images/figures/figure_2.png">
+  <img width="1000" height="750" src="images/figures/figure_2.png">
   <i>Figure 2: Language Construction </i>
 </p>
 
