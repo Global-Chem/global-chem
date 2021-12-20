@@ -33,7 +33,9 @@ to extend to other systems as well as can be difficult to implement given the la
 In addition, the information content of these papers is of limited utility to the common developer. 
 
 To organize data we apply the idea of communication. Humans use symbols and drawings to communicate, a set of symbols and the rules to combining them are called a language. 
-Languages can be employed to carry relevant, distinct features and mean something to their respective community.  IUPAC was a written language that predates even drawing atoms as a method of communication between chemists [Cooke-Fox:1989-5]; 
+Languages can be employed to carry relevant, distinct features and mean something to their respective community. 
+International Union of Pure and Applied Chemistry (IUPAC) was a coalition that formed in the 1800s and their method of communication is named after the organization, IUPAC. 
+IUPAC is a written language that predates even drawing atoms as a method of communication between chemists [Cooke-Fox:1989-5]; 
 other chemical sub-communities also adopted the language and applied to their field to different dialects i.e polymer chemistry, organo-metallic chemistry.
 In the recent years, SMILES [Weininger:1988-5] is becoming a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D or 3D geometry with ease.
 Due to it's "first to market" scientific chemical language IUPAC is the legacy language that is a lexical key to unlocking informational wealth about a chemical pattern or group. 
@@ -43,7 +45,7 @@ To compact information, chemists just released the drawings but that can be hard
 are being designed to abstract and interpolate skeletal patterns and languages and convert them into SMILES for data processing and analysis. 
 A lot of these tools are well summarized by the Blue Obelisk Society Open Source Review [OBoyle:2016-9]. And they work to some degree of accuracy. 
 These tools are then improved on and machine learning starts dominating as a model that sits on top to fix any inaccuracies of the algorithm. 
-If we took it another direction, where we selectively aggregate data based on popularity, valuability over time, and organized to a degree of functionality but that much expertise amongst one person is not enough.
+If we took it another direction, where we selectively aggregate data based on popularity, usefulness over time, and organized to a degree of functionality but that much expertise amongst one person is not enough.
 You need many opinions to come to a standard set. 
 
 In the context of a well-classified chemical database the major challenge is the enormity of the chemical universe. Accordingly, it takes a range of chemical expertise to put together a well-thought chemical list of compounds relevant to their respective community.
@@ -69,8 +71,8 @@ allows `Global-Chem` to function as a free service behaving in the same manner o
 Scientists, by nature of their work, are required to read extensively about 
 selected scientific fields as well as access the associated data. This allows for scientists to develop expert knowledge in the fields and data they value most.
 This requires a thin layer data organization that allows for the relevant information and data to be readily accessed.
-To achieve this we begin by forming connections of the most relevant data according to chemicals subfields that have been authored
-by experts in the different fields. A graph overview of the Module layout in `Global-Chem`.
+To achieve this we begin by forming connections of the most relevant data according to chemicals sub-fields that have been authored
+by experts in the different fields. `Figure 3` depicts the graph Module layout of `Global-Chem`.
 
 <p align="center">
   <img width="1000" height="1000" src="images/figures/figure_1.png">
@@ -181,16 +183,15 @@ through `RDKit` and transform `SDF` to a `CGenFF` stream output. The resulting f
 
 `CGenFF` was founded on drug-like molecules and to test it's capability of handling what's reported in literature it's performance
 is tested in accordance with it's penalty score distribution [Vanommeslaeghe:2012]. The penalty score is attributed to when an arbitrary molecule is 
-passed through when it hasn't seen it before, it navigates through a atom type similarity network tree through a set of rules.
-Each tree traversal is associated with a penalty score as it browses for similar substituition for alternate parameter assignment. 
-Once the lowest penalty score is found it chooses that to assign the parameters and tell's you in the output stream file where
-those parameters are from. Charge penalties are chosen on a bond-charge increment scheme where atom type geometric classifications: 
+passed through when it hasn't seen it before, it navigates an atom type similarity network tree through a set of rules.
+Each tree traversal is associated with a penalty score as it browses for similar substitution for alternate parameter assignment. 
+Once the lowest penalty score atom-type substitution is determined, `CGenFF` assigns the parameters and tell's you in the output stream file which
+functional group the parameters are from. Charge penalties are chosen on a bond-charge increment scheme where atom type geometric classifications: 
 bond, angle, dihedral are associated with a charge increment value subtracted from it's formal charge. 
 This value is associated with how these two atoms behave, electronically, in the environment space it is in. It is noted 
 that the dihedral charge increment is set to a limit to of 50.
 
-The lower the distribution is to 0 the more performant the 
-forcefield is. The distributions are reported in accordance with bonds, angles, dihedrals, charge classifications of the charmm potential energy
+The lower the distribution is to 0 the more performant the forcefield is. The distributions are reported in accordance with bonds, angles, dihedrals, charge classifications of the charmm potential energy
 equation. 
 
 <p align="center">
@@ -225,7 +226,7 @@ extend to. We can see that `CGenFF` is performing well on parameter assignment f
 In the 3rd row, we applied it to covalent inhibitor warheads, non-traditional "drug-like" molecules given their purpose
 is to bind into the receptor which is only a newly established recent ascent [Gehringer:2019-6]. The penalty score is more dispersed
 because these are recent advancements in science that could be useful to the drug-like community. It still behaves well with 
-some outlier compounds that we can focus on paramtirizing. The last row, perfluoroalkyls are used in chemical manufacturing 
+some outlier compounds that we can focus on parametirizing. The last row, perfluoroalkyls are used in chemical manufacturing 
 of everyday goods [Pelch:2019-9]. This is not what `CGenFF` was intended for but still assigns parameters that do not extend
 too far from the existing atom-types built into the forcefield. We can arguably say, that if we add one perfluoroalkyl to
 `CGenFF` it will help reduce penalties for the rest of the dataset as well be useful to the chemical hazard community. 
@@ -233,15 +234,15 @@ too far from the existing atom-types built into the forcefield. We can arguably 
 # Conclusion
 
 `Global-Chem` serves the purpose of facilitating collecting, documenting and accessing different chemical communities as dictated by user input. It involves a distributable
-easy format with objects classified as primary paper functionality with methods containing the chemical list that accodomates
-said functionality. With respect to broader applicatibility `Global-Chem` will potentially be of utility for machine learning and artifical intelligence tools in drug development pipelines as a classification layer. 
+easy format with objects classified as primary paper functionality with methods containing the chemical list that accommodates
+said functionality. With respect to broader applicatibility `Global-Chem` will potentially be of utility for machine learning and artificial intelligence tools in drug development pipelines as a classification layer. 
 In addition, it can help construct a cheminformatic analysis of functional groups on a chemical dataset and, lastly,
 it has a potential educational use in teaching functional groups and SMILES to any potential chemistry students. 
 
 # Acknowledgements
 
 Thank you to Jacob Weiner, Tyree Wilson, Paul Shapiro for their helpful discussions into the usability and functionality of Global-Chem.
-Appreciation to the University of Maryland School of Pharmacy Depatment of Pharmaceutical Chemistry for promoting a collaborative and useful space for 
+Appreciation to the University of Maryland School of Pharmacy Department of Pharmaceutical Chemistry for promoting a collaborative and useful space for 
 academics. Financial support from the NIH (GM131710) is acknowledged.
 
 # Conflict of Interets
