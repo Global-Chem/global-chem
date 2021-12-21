@@ -14,7 +14,7 @@ GlobalChem: A content variable store for Chemistry!
 Global Chem is a variable store for common and rare chemical lists using IUPAC as input and SMILES/SMARTS as output. As 
 mostly needed by myself as I search through chemical infinity. 
 
-I have found these lists written history to be useful, they come from a variety of different fields but are aggregated 
+I have found these lists written in history to be useful, they come from a variety of different fields but are aggregated 
 into the most common format of organic chemists (IUPAC) and the common language of the cheminformatician (SMILES) and for 
 pattern matching (SMARTS).
 
