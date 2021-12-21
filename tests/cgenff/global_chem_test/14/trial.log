@@ -1,0 +1,331 @@
+Compound Failed: S=[C]O , IUPAC Name: thiocarboxy
+Compound Failed: O=[C]C=CC1=CC=CC=C1 , IUPAC Name: cinnamoyl
+Compound Success: C12=C(NC=C2)C=CC=C1 , IUPAC Name: indole
+Compound Success: [O]O , IUPAC Name: hydroperoxyCompound Failed: [CH2]CCCCCCCCCCC , IUPAC Name: lauryl
+Compound Failed: C1(C2=CC=CC=C2)=CC=CC=[C]1 , IUPAC Name: biphenylyl
+Compound Success: C12=COC=CC1=CC=N2 , IUPAC Name: pyrano[3,4-b]-pyrrole
+Compound Failed: O=I=O , IUPAC Name: iodyl
+Compound Failed: C/C=C/[C]=O , IUPAC Name: crotonoyl
+Compound Success: C12=CC=CC=C1OCN=C2 , IUPAC Name: 2H-1,3-benzoxazine
+Compound Success: C12=CC=CC=C1C=CO2 , IUPAC Name: benzofuran
+Compound Success: C1=CC2=C(N=C1)N=CC=C2 , IUPAC Name: 1,8-napthyhridine
+Compound Success: [O]C1=CC=CC=C1 , IUPAC Name: phenoxy
+Compound Success: O1SC=CC=N1 , IUPAC Name: 1,2,6-Oxathiazine
+Compound Success: NN , IUPAC Name: hydrazo
+Compound Failed: O=[C]CCCC[C]=O , IUPAC Name: hexanedioyl
+Compound Failed: CC(C)(C)[C]=O , IUPAC Name: pivaloyl
+Compound Success: O=[N+][O-] , IUPAC Name: nitro
+Compound Failed: [CH2]/C=C(C)\C , IUPAC Name: prenyl
+Compound Success: C12=C(NC=C2)C=CC=C1 , IUPAC Name: 1H-indole
+Compound Success: NCCC(C)=O , IUPAC Name: beta-alanyl
+Compound Success: C12=CSC=C1C=CC=C2 , IUPAC Name: benzo[c]thiophene
+Compound Success: N1=CC=CCC=N1 , IUPAC Name: 4H-1,2-diazepine
+Compound Success: O=CCCCCCCCC=O , IUPAC Name: azelaoyl
+Compound Success: C1(NC2=C3C=CC=C2)=C3C=CC=C1 , IUPAC Name: carbazole
+Compound Failed: [CH2] , IUPAC Name: methylene
+Compound Success: O=C[NH] , IUPAC Name: formamido
+Compound Success: [S]O , IUPAC Name: sulfeno
+Compound Success: O=C1C=CC2=CC=CC=C2O1 , IUPAC Name: 2H-1-benzopyran-2-one
+Compound Failed: OC(C)[C]=O , IUPAC Name: lactoyl
+Compound Success: C(C)=O , IUPAC Name: acetyl
+Compound Success: O1N=NC=C1 , IUPAC Name: 1,2,3-oxadiazoleCompound Failed: [CH]=C(C)C , IUPAC Name: isobutenyl
+Compound Success: [S]C#N , IUPAC Name: thiocyanato
+
+Compound Failed: [CH]=S , IUPAC Name: thiocarbonylCompound Failed: [SiH3] , IUPAC Name: silyl
+
+Compound Failed: [CH2]C(C)(C)C , IUPAC Name: neopentyl
+Compound Failed: O=[C]C[C]=O , IUPAC Name: malonyl
+Compound Success: O=C1C(C=C)[C@@]2([H])SCCN12 , IUPAC Name: pentamethylene
+Compound Success: C12CCCCC1C3C(C(CCC4)C4CC3)CC2 , IUPAC Name: steroid_ring_system
+Compound Success: [NH][N+]([O-])=O , IUPAC Name: nitramino
+Compound Failed: CC1=CC=[C]C(C)=C1 , IUPAC Name: xylyl
+Compound Success: C1=NC=CC=C1 , IUPAC Name: pyridine
+Compound Success: O=C1C=CC=CO1 , IUPAC Name: 2H-pyran-2-one
+Compound Success: O=C1C2=CC=CC=C2CCO1 , IUPAC Name: 3H-2-benzopyran-1-one
+Compound Success: O1NOC=C1 , IUPAC Name: 1,3,2-dioxazole
+Compound Success: [NH]S(=O)(O)=O , IUPAC Name: sulfamino
+Compound Failed: [CH2]CCCCCCCCCCCCCCCCC , IUPAC Name: stearyl
+Compound Success: [N]=C=O , IUPAC Name: isocyanato
+Compound Failed: [CH]C , IUPAC Name: ethylidene
+Compound Failed: O=[C]CCC1=CC=CC=C1 , IUPAC Name: hydrocinnamoylCompound Failed: [CH]C(C)C , IUPAC Name: isobutylidene
+
+Compound Failed: CCCCCCCC/C=C\CCCCCCC[C]=O , IUPAC Name: oleoyl
+Compound Failed: CCCCCCC[C]=O , IUPAC Name: capryloyl
+Compound Failed: [CH2]C1=CC=CO1 , IUPAC Name: furfuryl
+Compound Failed: [CH]C1=CC=CC=C1 , IUPAC Name: benzylidene
+Compound Success: O=C(N)C , IUPAC Name: acetamido
+Compound Failed: CCCCCCCC[C]=O , IUPAC Name: nonanoyl
+Compound Success: N1=NN=CC=C1 , IUPAC Name: 1,2,3-triazine
+Compound Failed: OC1=CC=CC=C1[C]=O , IUPAC Name: salicyloyl
+Compound Failed: N[C]=O , IUPAC Name: carbamyl
+Compound Failed: OC(C1=CC=CC=C1)[C]=O , IUPAC Name: mandeloyl
+Compound Failed: [CH]C=C , IUPAC Name: allylidene
+Compound Success: O1CN=CC=C1 , IUPAC Name: 2H-1,3-Oxazine
+Compound Failed: [CH2]/C=C/C , IUPAC Name: crotyl
+Compound Success: O1NC=CC=C1 , IUPAC Name: 2H-1,2-Oxazine
+Compound Failed: [CH2]CC , IUPAC Name: propyl
+Compound Failed: O=[C]CCC[C]=O , IUPAC Name: glutarylCompound Failed: [CH2]C(C)C , IUPAC Name: isobutyl
+
+Compound Failed: [N]O , IUPAC Name: isonitrosoCompound Failed: [CH]CC(C)C , IUPAC Name: isopentylidene
+
+Compound Success: CCCCCCC([NH])=O , IUPAC Name: heptanamidoCompound Success: C1=CC=CS1 , IUPAC Name: thiophene
+
+Compound Failed: [N+]#[C-] , IUPAC Name: isocyanoCompound Failed: [CH]C1=CC=CC=C1 , IUPAC Name: benzal
+
+Compound Failed: NN[C]=O , IUPAC Name: carbazoyl
+Compound Success: O1C=NC=NC1 , IUPAC Name: 1,3,5-Oxadiazine
+Compound Success: O=[P](O)O , IUPAC Name: phospho
+Compound Success: C12=CC=CC=C1C=C3C=CC=CC3=C2 , IUPAC Name: anthracene
+Compound Failed: O=[S]S=O , IUPAC Name: disulfinyl
+Compound Success: [O]CCC , IUPAC Name: propoxyCompound Failed: O=[C]Cl , IUPAC Name: chloroformyl
+
+Compound Success: C12=CC=CC=C1C=CS2 , IUPAC Name: benzo[b]thiophene
+Compound Success: C12=CC=CC=C1OCC=C2 , IUPAC Name: 2H-1-benzopyran
+Compound Failed: C[C](C)C , IUPAC Name: tert-butyl
+Compound Success: N1C=CC=CC=C1 , IUPAC Name: azepine
+Compound Failed: O=[C]C=O , IUPAC Name: glyoxyoyl
+Compound Failed: CC1=CC(C)=CC(C)=[C]1 , IUPAC Name: mesityl
+Compound Success: C1=NN=CC=C1 , IUPAC Name: pyridazine
+Compound Failed: [O-][N+](C1=CC([N+]([O-])=O)=CC([N+]([O-])=O)=[C]1)=O , IUPAC Name: picryl
+Compound Success: O1N=CC=C1 , IUPAC Name: isoxazole
+Compound Failed: [C]1=CC=CS1 , IUPAC Name: thienyl
+Compound Success: O1OC=NC1 , IUPAC Name: 1,2,4-dioxazole
+Compound Success: [NH]C1=CC=C(C)C=C1C , IUPAC Name: xylidino
+Compound Failed: CCCCCCCCCCCCCCCC[C]=O , IUPAC Name: heptadecanoyl
+Compound Success: O1CSC=C1 , IUPAC Name: 1,3-oxathiole
+Compound Success: C1=CC=CC=C1 , IUPAC Name: benzene
+Compound Success: C12=CC=CC=C1CON=C2 , IUPAC Name: 1H-2,3-benzoxazine
+Compound Success: N1=CC=CC1 , IUPAC Name: 2H-pyrrole
+Compound Success: C12=CC=NN=C1C=CC=C2 , IUPAC Name: cinnoline
+Compound Success: C12=CC=CC=C1OC=N2 , IUPAC Name: benzoxazole
+Compound Success: C1=NC=CN=C1 , IUPAC Name: pyrazine
+Compound Success: C12=C(N=CC2)C=CC=C1 , IUPAC Name: 3H-indole
+Compound Failed: [CH]=O , IUPAC Name: formyl
+Compound Success: O1COC=CC1 , IUPAC Name: 1,3-dioxin
+Compound Failed: [CH]C(C1=CC=CC=C1)=O , IUPAC Name: phenacylidene
+Compound Success: C12=CC=CC=C1OC=NC2 , IUPAC Name: 4H-1,3-benzoxazine
+Compound Success: S1C=NC=C1 , IUPAC Name: thiazole
+Compound Failed: CC[CH]C , IUPAC Name: sec-butyl
+Compound Failed: [CH2]C(C1=CC=CC=C1)=O , IUPAC Name: phenacyl
+Compound Success: C1=NC=CC=N1 , IUPAC Name: pyrimidine
+Compound Success: N=C=S , IUPAC Name: isothiocynato
+Compound Success: O1CON=C1 , IUPAC Name: 1,3,4-dioxazole
+Compound Failed: NC[C]=O , IUPAC Name: glycyl
+Compound Failed: N=[C]N , IUPAC Name: guanyl
+Compound Success: C1C=CC=CO1 , IUPAC Name: 2H-pyran
+Compound Failed: [AsH3] , IUPAC Name: arsino
+Compound Success: O1C=CC=CC=C1 , IUPAC Name: oxepin
+Compound Failed: N[C@@H](CC[C]=O)[C]=O , IUPAC Name: glutamoylCompound Success: S=O , IUPAC Name: sulfinyl
+
+Compound Success: S1CSC=C1 , IUPAC Name: 1,3-dithiole
+Compound Failed: C12=CC=C[C]=C1C=CC=C2 , IUPAC Name: naphthyl
+Compound Success: N1=NC=NC=C1 , IUPAC Name: 1,2,4-triazine
+Compound Failed: [C](C1=CC=CC=C1)(C2=CC=CC=C2)C3=CC=CC=C3 , IUPAC Name: trityl
+Compound Success: N1=CCC=C1 , IUPAC Name: 3H-pyrrole
+Compound Failed: [CH3] , IUPAC Name: methylCompound Failed: CC1=CC=C([C]=O)C=C1 , IUPAC Name: toluoyl
+
+Compound Failed: [C]#C , IUPAC Name: ethynyl
+Compound Failed: N[C@@H](C(C)C)[C]=O , IUPAC Name: valyl
+Compound Success: [NH]N[NH] , IUPAC Name: triazano
+Compound Success: C=C , IUPAC Name: ethylene
+Compound Failed: [CH]=CC , IUPAC Name: 1-propenyl
+Compound Failed: [CH]=CC1=CC=CC=C1 , IUPAC Name: styryl
+Compound Success: O1N=NC=N1 , IUPAC Name: 1,2,3,5-oxatriazole
+Compound Success: O1C=CN=CC1 , IUPAC Name: 1,4-Oxazine
+Compound Success: [O]C , IUPAC Name: methoxyCompound Failed: CCCCCC[C]=O.CCCCCCC([NH])=O , IUPAC Name: heptanoyl
+
+Compound Success: O1C=CNC=C1 , IUPAC Name: 4H-1,4-Oxazine
+Compound Success: O=[S](O)=O , IUPAC Name: sulfo
+Compound Failed: O=[C]CCCC , IUPAC Name: valeryl
+Compound Failed: C[CH]C , IUPAC Name: isopropyl
+Compound Success: O1N=CC=N1 , IUPAC Name: 1,2,5-oxadiazole
+Compound Success: C12=C3C(CC=C2)=CC=CC3=CC=C1 , IUPAC Name: phenalene
+Compound Success: C1(C2)CCCC2C1 , IUPAC Name: norpinane
+Compound Success: O=[S](C1=CC=C(N)C=C1)=O , IUPAC Name: sulfanilyl
+Compound Success: O=[S](C1=CC=C(C)C=C1)=O , IUPAC Name: tosylCompound Failed: C12=C3C=CC=CC3=C1C=CC=C2 , IUPAC Name: biphenylene
+
+Compound Failed: [CH2]CC(C)C , IUPAC Name: isoamyl
+Compound Success: N1N=CN=C1 , IUPAC Name: 1,2,4-triazole
+Compound Success: C1CCCC1 , IUPAC Name: cyclopentane
+Compound Success: O1C=NN=C1 , IUPAC Name: 1,3,4-oxadiazole
+Compound Failed: [CH2]C , IUPAC Name: ethyl
+Compound Success: O1C=CC=C1 , IUPAC Name: furan
+Compound Success: C12=CC=CC=C1C=CC=C2 , IUPAC Name: naphthylene
+Compound Success: C12=C(CCCC2)C=CC=C1 , IUPAC Name: 1,2,3,4-tetrahydronaphthalene
+Compound Success: C1(CC2=C(C=CC=C2)O3)=C3C=CC=C1 , IUPAC Name: xanthene
+Compound Failed: [CH]=O , IUPAC Name: carbonyl
+Compound Failed: CCCCCCCCCCCCC[C]=O , IUPAC Name: myristoyl
+Compound Success: NC=N , IUPAC Name: amidino
+Compound Failed: [CH2]C=C , IUPAC Name: 2-propenyl
+Compound Success: O=CO , IUPAC Name: furmaroylCompound Failed: O=[C]C1=CC=CC=C1 , IUPAC Name: benzoyl
+
+Compound Failed: [O][SiH2]O[SiH3] , IUPAC Name: disiloxanyloxyCompound Success: [O]C(C)(C)C , IUPAC Name: tert-butoxy
+
+Compound Success: S1C=CC=CC=C1 , IUPAC Name: thiepin
+Compound Failed: CC([C]=O)=C , IUPAC Name: methacryloyl
+Compound Failed: CCCCC[C]=O , IUPAC Name: caproyl
+Compound Failed: [C]C1=CC=CC=C1 , IUPAC Name: benzylidyne
+Compound Success: C12=CON=C1C=CC=C2 , IUPAC Name: 2,1-benzisoxazole
+Compound Failed: [NH] , IUPAC Name: imino
+Compound Success: [N]1CCCCC1 , IUPAC Name: piperidino
+Compound Success: O=C1C2=CC=CC=C2C=CO1 , IUPAC Name: 1H-2-benzopyran-1-one
+Compound Success: O1ONC=C1 , IUPAC Name: 3H-1,2,3-dioxazole
+Compound Success: NC1=CC=CC=C1[C](C)=O , IUPAC Name: anthranoyl
+Compound Success: O1N=CCC=C1 , IUPAC Name: 4H-1,2-Oxazine
+Compound Success: C12=CCC=C1C=CC=C2 , IUPAC Name: 2H-indene
+Compound Failed: OC[C]=O , IUPAC Name: glycoloylCompound Success: C(=O)(N)N , IUPAC Name: carbamido
+
+Compound Failed: [CH2]CCCC , IUPAC Name: amyl
+Compound Success: C1CC12CC2 , IUPAC Name: spiropentane
+Compound Failed: CC[C](C)C , IUPAC Name: tert-pentyl
+Compound Failed: C1=C[C]=CC=[C]1 , IUPAC Name: phenylene
+Compound Success: C12=C(C=NC=C2)C=CC=C1 , IUPAC Name: isoquinoline
+Compound Success: [NH]C(CN)=O , IUPAC Name: glycylamino
+Compound Failed: [SH] , IUPAC Name: sulfhydryl
+Compound Success: [NH]C#N , IUPAC Name: cyanamido
+Compound Success: [N+]=[N-] , IUPAC Name: diazo
+Compound Success: C12=CC=CC=C1N=CC=C2 , IUPAC Name: quinoline
+Compound Failed: [CH]=C , IUPAC Name: ethenyl
+Compound Failed: [SiH2][SiH3] , IUPAC Name: disilanyl
+Compound Failed: N[C@@H](CCSC)[C]=O , IUPAC Name: methionyl
+Compound Failed: O=[C]C1=CC=C([C]=O)C=C1 , IUPAC Name: terephthaloyl
+Compound Failed: N[C@@H](CC(C)C)[C]=O , IUPAC Name: leucylCompound Success: CCCC , IUPAC Name: tetramethylene
+
+Compound Failed: CCCCCCCCCCCCCCC[C]=O.CCCCCC[C]=O.CCCCCCC([NH])=O , IUPAC Name: hexadecanoyl
+Compound Success: N[CH](C)C(C)=O , IUPAC Name: alanyl
+Compound Success: O=C1C=COC=C1 , IUPAC Name: 4H-pyran-4-one
+Compound Failed: [CH2]CCC(C)C , IUPAC Name: isohexyl
+Compound Success: O=C1C=COC2=CC=CC=C12 , IUPAC Name: 4H-1-benzopyran-4-one
+Compound Failed: [SeH] , IUPAC Name: selenyl
+Compound Failed: [O] , IUPAC Name: epoxy
+Compound Success: O1N=CC=CC1 , IUPAC Name: 6H-1,2-Oxazine
+Compound Success: C12CCCCC1=CCCC2 , IUPAC Name: octahydronaphthaleneCompound Success: O=C(C)CC(=O)O , IUPAC Name: acetoacetyl
+
+Compound Success: C1(CC2=C3C=CC=C2)=C3C=CC=C1 , IUPAC Name: fluorene
+Compound Failed: [CH2]CNC(C1=CC=CC=C1)=O , IUPAC Name: hippurylCompound Failed: O=C(C)CC[C]=O , IUPAC Name: levulinoyl
+
+Compound Success: CCC , IUPAC Name: trimethylene
+Compound Success: C/N=[N+]([O-])/C , IUPAC Name: azoxy
+Compound Success: C12=NC=NC=C1NC=N2 , IUPAC Name: 7H-purine
+Compound Success: S1N=CC=C1 , IUPAC Name: isothiazoleCompound Failed: O=[C]C1=CC=CC=C1[C]=O , IUPAC Name: phthaloyl
+
+Compound Failed: [C]1=CC=CC=C1 , IUPAC Name: phenyl
+Compound Failed: O=[C]CC(C)C , IUPAC Name: isovaleryl
+Compound Success: C1=CC2=C(C=CN=C2)N=C1 , IUPAC Name: 1,6-napthyridine
+Compound Failed: O=[C]CCC , IUPAC Name: butyryl
+Compound Success: C1N=CC=N1 , IUPAC Name: 2H-imidazole
+Compound Success: C12=C(NN=C2)C=CC=C1 , IUPAC Name: indazoleCompound Success: N1N=NC=C1 , IUPAC Name: 1,2,3-triazole
+
+Compound Failed: N[C@@H]([C@H](O)C)[C]=O , IUPAC Name: threonyl
+Compound Success: O1C=NC=CC1 , IUPAC Name: 6H-1,3-Oxazine
+Compound Failed: CCCCCCCCCCCCCCCCC[C]=O , IUPAC Name: stearoyl
+Compound Failed: [CH]CC , IUPAC Name: propylidene
+Compound Failed: CCCCCCCCCCCCCCC[C]=O , IUPAC Name: palmitoyl
+Compound Success: O=C(N)C1=CC=CC=C1 , IUPAC Name: benzamido
+Compound Success: C12=CC=CC=C1N=COC2 , IUPAC Name: 4H-3,1-benzoxazine
+Compound Failed: N[C@@H](CO)[C]=O , IUPAC Name: seryl
+Compound Success: S=O , IUPAC Name: thionylCompound Success: [S]S , IUPAC Name: dithio
+
+Compound Success: [O]CCCC , IUPAC Name: butoxy
+Compound Success: N=NN , IUPAC Name: diazoamino
+Compound Success: C12=CC=CC=C1OCC=N2 , IUPAC Name: 2H-1,4-benzoxazine
+Compound Failed: CC1=CC=[C]C=C1 , IUPAC Name: tolyl
+Compound Failed: [PH2]=O , IUPAC Name: phosphinyl
+Compound Success: N1C=CC=C1 , IUPAC Name: pyrrole
+Compound Success: O1N=CN=C1 , IUPAC Name: 1,2,4-oxadiazoleCompound Success: N , IUPAC Name: amino
+
+Compound Success: O=[P](O)O , IUPAC Name: phosphonoCompound Success: C1CCC1 , IUPAC Name: cyclobutane
+
+Compound Success: O1NC=NC=C1 , IUPAC Name: 1,2,4-Oxadiazine
+Compound Success: C12=COC=C1C=CC=C2 , IUPAC Name: isobenzofuran
+Compound Success: [O]C(C)C , IUPAC Name: isopropoxy
+Compound Failed: O=[C]C(C)C , IUPAC Name: isobutyryl
+Compound Failed: [CH]C=CC1=CC=CC=C1 , IUPAC Name: cinnamylidene
+Compound Success: CCCCCCCC , IUPAC Name: capryl
+Compound Success: O=S=O , IUPAC Name: sulfonyl
+Compound Success: [NH]O , IUPAC Name: hydroxyamino
+Compound Success: [S]CC , IUPAC Name: ethylthio
+Compound Failed: [CH2]CC1=CC=CC=C1 , IUPAC Name: phenethyl
+Compound Success: O1SC=CN=C1 , IUPAC Name: 1,2,5-Oxathiazine
+Compound Failed: [CH2]C(C)=C , IUPAC Name: methallyl
+Compound Success: C12=NOC=C1C=CC=C2 , IUPAC Name: benzisoxazole
+Compound Failed: O=[C]CCCCCC[C]=O , IUPAC Name: suberoyl
+Compound Failed: O=[C]C=O , IUPAC Name: oxalyl
+Compound Success: C12=CC=CC=C1ONC=C2 , IUPAC Name: 2H-1,2-benzoxazine
+Compound Success: NC1=CC=C(OC)C=C1 , IUPAC Name: anisidino
+Compound Success: CCCCCC , IUPAC Name: hexamethyleneCompound Failed: [PH2] , IUPAC Name: phosphino
+
+Compound Failed: [C]=C , IUPAC Name: vinylidene
+Compound Success: C1=CC2=C(C=CC=N2)N=C1 , IUPAC Name: 1,5-napththridine
+Compound Success: N1CCOCC1 , IUPAC Name: morpholine
+Compound Success: C12=CC=CC=C1C=CC3=CC=CC=C23 , IUPAC Name: phenanthrene
+Compound Failed: C=[C]C , IUPAC Name: isopropenyl
+Compound Failed: O=[C]CC[C]=O , IUPAC Name: succinyl
+Compound Success: O1OC=CC=C1 , IUPAC Name: 1,2-dioxin
+Compound Failed: O=[C]CCCCCCCC[C]=O , IUPAC Name: decanedioyl
+Compound Success: N1N=CC=C1 , IUPAC Name: pyrazole
+Compound Failed: [O] , IUPAC Name: oxo
+Compound Failed: I=O , IUPAC Name: iodoso
+Compound Failed: [SH] , IUPAC Name: mercapto
+Compound Success: C1=CC2=C(C=NC=C2)N=C1 , IUPAC Name: 1,7-napththyridine
+Compound Failed: [CH]=C , IUPAC Name: vinyl
+Compound Success: [O]CC , IUPAC Name: ethoxy
+Compound Success: [N]=[N+]=[N-] , IUPAC Name: azido
+Compound Failed: O=[C]O , IUPAC Name: carboxy
+Compound Failed: [CH2]CCCC , IUPAC Name: pentyl
+Compound Success: C12=C(CC=C2)C=CC=C1 , IUPAC Name: indene
+Compound Failed: [CH2]CCCCCCCCCCCCCCC , IUPAC Name: cetyl
+Compound Failed: [C]C1=CC=CC=C1 , IUPAC Name: alpha-tolyl
+Compound Failed: O=[C]OCC , IUPAC Name: carbethoxy
+Compound Failed: [SiH2] , IUPAC Name: silyene
+Compound Failed: N1[C]=CC=C1 , IUPAC Name: pyrryl
+Compound Failed: [CH2]C#C , IUPAC Name: propargyl
+Compound Success: C=CC(C)=O , IUPAC Name: acryloyl
+Compound Success: C12=CC=CC1=CC=CN2 , IUPAC Name: cyclopenta[b]pyridine
+Compound Success: O1SC=CN1 , IUPAC Name: 5H-1,2,5-oxathiazole
+Compound Failed: [CH2]C=CC1=CC=CC=C1 , IUPAC Name: cinnamyl
+Compound Success: [O]CC1=CC=CC=C1 , IUPAC Name: benzoxy
+Compound Success: OC(C1=CC=CC=C1)C2=CC=CC=C2 , IUPAC Name: benzhydrol
+Compound Failed: O=[C]CCCCC[C]=O , IUPAC Name: pimeloylCompound Failed: [C]#N , IUPAC Name: cyanoCompound Failed: CCCCCCCCCCC[C]=O , IUPAC Name: lauroyl
+
+
+Compound Success: C1=CCC=CO1 , IUPAC Name: 4H-pyranCompound Success: C12=NC3=CC=CC=C3C=C1C=CC=C2 , IUPAC Name: acridine
+Compound Success: [O]CC(C)C , IUPAC Name: isobutoxy
+
+Compound Failed: [CH]C1=CC=CC=C1 , IUPAC Name: tolylene
+Compound Success: O1N=NN=C1 , IUPAC Name: 1,2,3,4-oxatriazole
+Compound Success: CC=CC=CC(O)=O , IUPAC Name: sorboyl
+Compound Failed: [CH2]CCC , IUPAC Name: butyl
+Compound Success: C/N=N/C , IUPAC Name: azo
+Compound Success: C1CC1 , IUPAC Name: cyclopropane
+Compound Failed: [CH2]CCCCCCCCCCCCC , IUPAC Name: myristyl
+Compound Success: C1CCCCC1 , IUPAC Name: cyclohexane
+Compound Success: C12=CC=CC=C1C=CC=C2 , IUPAC Name: naphthaleneCompound Success: [O]C#N , IUPAC Name: cyanato
+
+Compound Failed: [CH2]CC(C)C , IUPAC Name: isopentyl
+Compound Success: [N]=O , IUPAC Name: nitroso
+Compound Success: O1C=NC=C1 , IUPAC Name: oxazole
+Compound Failed: O=[C]CC , IUPAC Name: propionylCompound Success: C12=CN=CN=C1C=CC=C2 , IUPAC Name: quinazoline
+
+Compound Success: N[NH] , IUPAC Name: hydrazino
+Compound Success: N1=CN=CN=C1 , IUPAC Name: 1,3,5-triazine
+Compound Failed: [CH2]C1=CC=CC=C1 , IUPAC Name: benzyl
+Compound Failed: N[C@@H]([C@@H](C)CC)[C]=O , IUPAC Name: isoleucyl
+Compound Success: [O]C(C)CC , IUPAC Name: sec-butoxy
+Compound Success: [NH]C(N)=N , IUPAC Name: guanidino
+Compound Success: N1CCNCC1 , IUPAC Name: piperazine
+Compound Success: [S]C , IUPAC Name: methylthio
+Compound Success: NC1=CC=CC=C1 , IUPAC Name: anilino
+Compound Failed: [CH2]C=C , IUPAC Name: allylCompound Failed: C[C]C , IUPAC Name: isopropylidene
+Compound Failed: CCCCCC[C]=O , IUPAC Name: enanthoyl
+Compound Success: O=[S](N)=O , IUPAC Name: sulfamoyl
+Compound Success: [NH]N=O , IUPAC Name: nitrosamino
+Compound Failed: [CH]C1=CC=CO1 , IUPAC Name: furfurylidene
+Compound Success: S1SC=CC1 , IUPAC Name: 1,2-dithiole
+Compound Success: NCC1=CC=CC(CN)=C1 , IUPAC Name: xylylene
+Compound Failed: CCCCCCCCC[C]=O , IUPAC Name: decanoyl
+Compound Failed: [O][SiH3] , IUPAC Name: siloxy
+Compound Success: [NH]C1=CC=C(C)C=C1 , IUPAC Name: toluidino
+Compound Success: OC1=CC=C(C)C=C1 , IUPAC Name: cresyl
+Compound Failed: N[C]=O , IUPAC Name: carbamoyl
+Compound Success: O1SCC=C1 , IUPAC Name: 3H-1,2-oxathiole
