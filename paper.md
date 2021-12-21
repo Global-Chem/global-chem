@@ -191,21 +191,18 @@ bond, angle, dihedral are associated with a charge increment value subtracted fr
 This value is associated with how these two atoms behave, electronically, in the environment space it is in. It is noted 
 that the dihedral charge increment is set to a limit to of 50.
 
-The lower the distribution is to 0 the more performant the forcefield is. The distributions are reported in accordance with bonds, angles, dihedrals, charge classifications of the charmm potential energy
-equation. 
+The lower the distribution is to 0 the more performant the forcefield is. The distributions are reported in accordance with bonds, angles, dihedrals, charge classifications of the charmm potential energy equation. 
 
 <p align="center">
   <img width="1400" height="400" src="images/figures/figure_3.png">
   <i>Figure 4: Charmm Potential Energy Equation Picture Depiction: Top row and bond row is bonded and non-bonded terms respectively. </i>
 </p>
 
-We looked at BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds (47), Common Warheads (29), Emerging PerfluoroAlkyls (27).
-Any kinase inhibitors should exhibit drug-like features similar to what was chosen to CGenFF, privileged scaffolds are any 
-elected scaffolding produced by nature, warheads designed for covalent inhibition, and a stretch into herbicides and toxicity
-that are toxic to us. 3 Failures were captured primarily due to the sulphonyl `SH` and the activated oxygen to it's potassium salt counter anion in the perfluoroalkyl. 
+We passed each object individually into `CGenFF` recorded the results. <b>Note</b> that due to our initial input being SMILES we had to offer up some of the original functionality of `CGenFF` that was used to process `mol2` for bond assignment. Whereas now we rely on `SDF` and go through our own in-house decision tree. For anything `CGenFF` determines it cannot find an adequate substitute within reason
+returns a failed response. These failed responses are captured. It is noted, that the IUPAC blue book is a list of radicals (Object 14 in the tests) which is the reason for it's repeated compound failures which you can see in the log file. Other noteworthy failures that would be of particular interest are listed in `Figure 5`. For example, cyclobutadiene is a non-traditional ring system with a lot of ring strain where the carbon atom types are common. `CGenFF` might determine that this particular ring system with it's existing atom type network is not allowed or detrimental to the network if added and needs to be handled with care. Silicon-based systems seems to be more ubuiqituious in these data sets and a lot of the failures are attributed to silicon-based compounds. An interesting functional group to handle would be the allene-based compounds and perhaps warrant a new carbon atom type. 
 
 <p align="center">
-  <img width="500" height="100" src="images/figures/figure_6.png">
+  <img width="1000" height="450" src="images/figures/figure_6.png">
   <br>
   <i>Figure 5: Failed CGenFF Compounds</i>
 </p>
@@ -221,15 +218,17 @@ documentation as a `C&1&1&1&1`. As shown in Table 2, this fails in both `RDKit` 
 </p>
 
 The penalty score distributions are shown in `Figure 6` in a rug fashion to show how much chemical feature space can `CGenFF`
-extend to. We can see that `CGenFF` is performing well on parameter assignment for BRAF Kinase Inhibitors owed to its initial training set of "drug-like" molecules.
-2nd row down you can see it's performing for mother nature's elected scaffolds for small molecules which also mimics the definition of "drug-like".
-In the 3rd row, we applied it to covalent inhibitor warheads, non-traditional "drug-like" molecules given their purpose
+extend to. If we look at one trend of the data of four leaf nodes: BRAF Kinases Inhibitors for Cancer (54) to Privileged Scaffolds (47) to Common Warheads (29) to  Emerging PerfluoroAlkyls (27). The theory is that any kinase inhibitors should exhibit drug-like features similar to what was chosen to CGenFF, privileged scaffolds are any elected scaffolding produced by nature, warheads designed for covalent inhibition, and a stretch into herbicides and toxicity
+that are toxic to us. We expected `CGenFF` to perform on anthing drug-like and not so much for chemical manufacturing. 
+
+In `Figure 6`, we can see that `CGenFF` is performing well on parameter assignment for BRAF Kinase Inhibitors owed to its initial training set of "drug-like" molecules. For mother nature's elected scaffolds for small molecules which also mimics the definition of "drug-like".
+For covalent inhibitor warheads, non-traditional "drug-like" molecules given their purpose
 is to bind into the receptor which is only a newly established recent ascent [Gehringer:2019-6]. The penalty score is more dispersed
 because these are recent advancements in science that could be useful to the drug-like community. It still behaves well with 
-some outlier compounds that we can focus on parametirizing. The last row, perfluoroalkyls are used in chemical manufacturing 
+some outlier compounds that we can focus on parametirizing. And lastly, perfluoroalkyls are used in chemical manufacturing 
 of everyday goods [Pelch:2019-9]. This is not what `CGenFF` was intended for but still assigns parameters that do not extend
 too far from the existing atom-types built into the forcefield. We can arguably say, that if we add one perfluoroalkyl to
-`CGenFF` it will help reduce penalties for the rest of the dataset as well be useful to the chemical hazard community. 
+`CGenFF` it will help reduce penalties for the rest of the dataset as well be useful to the chemical hazard community.
 
 # Conclusion
 
