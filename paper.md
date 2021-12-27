@@ -230,9 +230,9 @@ of everyday goods [Pelch:2019-9]. This is not what `CGenFF` was intended for but
 too far from the existing atom-types built into the forcefield. We can arguably say, that if we add one perfluoroalkyl to
 `CGenFF` it will help reduce penalties for the rest of the dataset as well be useful to the chemical hazard community.
 
-# Ideology
+# Statement of Purpose
 
-Chemical lists are usually private information that is buried within corporations protected under intellectual property/non-disclosure agreements or academic papers imprisoned by the paywall publication system of their own making. Neither academia nor industry is allowing real sciencee to develop. Instead of sharing information we rely on complicated hard-coded algorithms making arbitrary decisions without actual scientific backing. `Global-Chem` has a lot potential purposes (teaching, inferences, cheminformatics) but our main perogative is to create a free record collection. If we plant the seed now then, hopefully, our tree will grow. As it grows, the answers we seek will become more clear and reasoned with some level of scientific thought. Together, we can build the biggest network regardless of where you are from and who you are.  
+Chemical lists are private information that is buried within corporations protected under intellectual property/non-disclosure agreements or academic papers imprisoned by the paywall publication system of their own making. Neither academia nor industry is allowing real sciencee to develop. Instead of sharing information we rely on complicated hard-coded algorithms making arbitrary decisions without actual scientific backing. `Global-Chem` has a lot potential purposes (teaching, inferences, cheminformatics) but our main perogative is to create a free record collection. If we plant the seed now then, hopefully, our tree will grow. As it grows, the answers we seek will become more clear and reasoned with some level of scientific thought. Together, we can build the biggest network regardless of where you are from and who you are.  
 
 # Acknowledgements
 
