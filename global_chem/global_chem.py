@@ -40,6 +40,14 @@ from global_chem.proteins.kinases.scaffolds.privileged_scaffolds import Privileg
 from global_chem.organic_synthesis.solvents.common_organic_solvents import CommonOrganicSolvents
 from global_chem.organic_synthesis.protecting_groups.amino_acid_protecting_groups import AminoAcidProtectingGroups
 
+# Narcotics
+
+from global_chem.narcotics.schedule_one import ScheduleOne
+from global_chem.narcotics.schedule_two import ScheduleTwo
+from global_chem.narcotics.schedule_three import ScheduleThree
+from global_chem.narcotics.schedule_four import ScheduleFour
+from global_chem.narcotics.schedule_five import ScheduleFive
+
 # Miscellaneous
 
 from global_chem.miscellaneous.vitamins import Vitamins
@@ -498,6 +506,51 @@ class GlobalChem(object):
 
         functional_groups_smiles = adsorption_groups.get_chemical_smiles()
         functional_groups_smarts = adsorption_groups.get_chemical_smarts()
+
+        return functional_groups_smiles, functional_groups_smarts
+
+    def get_schedule_one(self):
+
+        schedule_one = ScheduleOne()
+
+        functional_groups_smiles = schedule_one.get_schedule_one_smiles()
+        functional_groups_smarts = schedule_one.get_schedule_one_smarts()
+
+        return functional_groups_smiles, functional_groups_smarts
+
+    def get_schedule_two(self):
+
+        schedule_two = ScheduleTwo()
+
+        functional_groups_smiles = schedule_two.get_schedule_two_smiles()
+        functional_groups_smarts = schedule_two.get_schedule_two_smarts()
+
+        return functional_groups_smiles, functional_groups_smarts
+
+    def get_schedule_three(self):
+
+        schedule_three = ScheduleThree()
+
+        functional_groups_smiles = schedule_three.get_schedule_three_smiles()
+        functional_groups_smarts = schedule_three.get_schedule_three_smarts()
+
+        return functional_groups_smiles, functional_groups_smarts
+
+    def get_schedule_four(self):
+
+        schedule_four = ScheduleFour()
+
+        functional_groups_smiles = schedule_four.get_schedule_four_smiles()
+        functional_groups_smarts = schedule_four.get_schedule_four_smarts()
+
+        return functional_groups_smiles, functional_groups_smarts
+
+    def get_schedule_five(self):
+
+        schedule_five = ScheduleFive()
+
+        functional_groups_smiles = schedule_five.get_schedule_five_smiles()
+        functional_groups_smarts = schedule_five.get_schedule_five_smarts()
 
         return functional_groups_smiles, functional_groups_smarts
 
