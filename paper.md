@@ -227,13 +227,14 @@ extend to. If we look at one trend of the data of four leaf nodes: BRAF Kinases 
 that are toxic to us. We expected `CGenFF` to perform on anthing drug-like and not so much for chemical manufacturing. 
 
 In `Figure 6`, we can see that `CGenFF` is performing well on parameter assignment for BRAF Kinase Inhibitors owed to its initial training set of "drug-like" molecules. For mother nature's elected scaffolds for small molecules which also mimics the definition of "drug-like".
-For covalent inhibitor warheads, non-traditional "drug-like" molecules given their purpose
-is to bind into the receptor which is only a newly established recent ascent [Gehringer:2019-6]. The penalty score is more dispersed
+If we extend our look into narcotics that are banned by the drug enforcement agency (DEA) listed as a series of schedules [21CFRPart1] but still inherit drug name, `CGenFF` still performs well on what drugs are popular in the black market. For something no traditional binding we can look chemical covalent inhibitor warheads lists, which are "drug-like" molecules given their purpose
+is to bind into the receptor with a physical bond which is only a newly established recent ascent [Gehringer:2019-6]. The penalty score is more dispersed
 because these are recent advancements in science that could be useful to the drug-like community. It still behaves well with 
 some outlier compounds that we can focus on parametirizing. And lastly, perfluoroalkyls are used in chemical manufacturing 
 of everyday goods [Pelch:2019-9]. This is not what `CGenFF` was intended for but still assigns parameters that do not extend
 too far from the existing atom-types built into the forcefield. We can arguably say, that if we add one perfluoroalkyl to
 `CGenFF` it will help reduce penalties for the rest of the dataset as well be useful to the chemical hazard community.
+
 
 # Statement of Purpose
 
