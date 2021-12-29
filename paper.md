@@ -212,6 +212,8 @@ returns a failed response. These failed responses are captured. It is noted, tha
   <i>Figure 5: Failed CGenFF Compounds</i>
 </p>
 
+Full logs of failed compounds are found in the `test` directory in the github repository. 
+
 ### Discussion 
 
 An interesting observation from the present data is the ability of tools to handle the ampersand `&` operator in SMILES for materials. For example, diamond is a common carbon substance whose SMILES strings is indicated in the OpenSMILES
