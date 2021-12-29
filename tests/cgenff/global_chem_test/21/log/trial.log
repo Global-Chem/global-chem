@@ -1,0 +1,75 @@
+Compound Success: CN(C)C(CC1=CC=CC=C1)C2=CC=CC=C2 , IUPAC Name: spa((-)-1-dimethylamino-1,2-diphenylethane)
+Compound Success: CCC1(C(=O)NC(=O)NC1=O)C2=CC=CC=C2 , IUPAC Name: phenobarbital
+Compound Success: CCC#CC(C)C1(C(=O)NC(=O)N(C1=O)C)CC=C , IUPAC Name: methohexital
+Compound Success: CC(C)C1=C(C(=CC=C1)C(C)C)OCOP(=O)(O)O , IUPAC Name: fospropofolCompound Success: CCC1=CC2=C(S1)N(C(=O)CN=C2C3=CC=CC=C3Cl)C , IUPAC Name: clotiazepam
+Compound Success: CC(=O)C1CCC2C1(CC(=O)C3C2CCC4C3(CCC(C4)O)C)C , IUPAC Name: alfaxalone
+Compound Success: CC1=CN=C2N1C3=C(C=C(C=C3)Br)C(=NC2CCC(=O)OC)C4=CC=CC=N4 , IUPAC Name: remimazolamCompound Success: CC(=O)C1CCC2C1(CCC3C2CCC4C3(CCC(C4)O)C)C , IUPAC Name: brexanolone
+Compound Success: CC(C)CC(C1(CCC1)C2=CC=C(C=C2)Cl)N(C)C , IUPAC Name: sibutramine
+Compound Success: CCC(=O)OC(CC1=CC=CC=C1)(C2=CC=CC=C2)C(C)CN(C)C , IUPAC Name: dextropropoxyphene
+Compound Success: CN1C(=O)CN=C(C2=C1C=CC(=C2)[N+](=O)[O-])C3=CC=CC=C3F , IUPAC Name: flunitrazepam
+Compound Success: C1C(=O)NC2=C(C=C(C=C2)[N+](=O)[O-])C(=N1)C3=CC=CC=C3 , IUPAC Name: nitrazepam
+Compound Success: CN1C(=O)CN=C(C2=C1C=CC(=C2)[N+](=O)[O-])C3=CC=CC=C3 , IUPAC Name: nimetazepam
+Compound Success: CC1CCN(CCN1C(=O)C2=C(C=CC(=C2)C)N3N=CC=N3)C4=NC5=C(O4)C=CC(=C5)Cl , IUPAC Name: suvorexant
+Compound Success: CN1C2=C(C=C(C=C2)Cl)C(=NC(C1=O)OC(=O)N(C)C)C3=CC=CC=C3 , IUPAC Name: camazepam
+Compound Success: CC1=CC(=O)N(N1C)C2=CC=CC=C2.C(C(Cl)(Cl)Cl)(O)O.C(C(Cl)(Cl)Cl)(O)O , IUPAC Name: dichloralphenazone
+Compound Success: CCN(CC)C(C)C(=O)C1=CC=CC=C1 , IUPAC Name: diethylpropion
+Compound Success: C(C(COC(C(Cl)(Cl)Cl)O)(COC(C(Cl)(Cl)Cl)O)COC(C(Cl)(Cl)Cl)O)OC(C(Cl)(Cl)Cl)O , IUPAC Name: petrichloral
+Compound Success: CN1C2=C(C=C(C=C2)Cl)C(=NC(C1=O)O)C3=CC=CC=C3Cl , IUPAC Name: lormetazepam
+Compound Success: C1=CC=C(C(=C1)C2=NC(C(=O)NC3=C2C=C(C=C3)Cl)O)Cl , IUPAC Name: lorazepam
+Compound Success: CC1C2CC3=C(C1(CCN2CC=C(C)C)C)C=C(C=C3)O , IUPAC Name: pentazocine
+Compound Success: C1=CC=C(C=C1)C2=NC(C(=O)NC3=C2C=C(C=C3)Cl)C(=O)O , IUPAC Name: clorazepate
+Compound Success: C1=CC=C(C=C1)C2C(=O)N=C(O2)N , IUPAC Name: pemoline
+Compound Success: COC(=O)C(C1CCCCN1C(=O)OC[N+]2=CC=CC(=C2)C(=O)NC(CO)C(=O)[O-])C3=CC=CC=C3 , IUPAC Name: serdexmethylphenidate
+Compound Success: C1CCNC(C1)C(C2=CC=CC=C2)(C3=CC=CC=C3)O , IUPAC Name: pipradrol
+Compound Success: C1C(=O)N(C2=C(C=C(C=C2)Cl)C(=N1)C3=CC=CC=C3)CC(F)(F)F , IUPAC Name: halazepam
+Compound Success: C1=CC=C(C=C1)C2=NC(C(=O)NC3=C2C=C(C=C3)Cl)O , IUPAC Name: oxazepam
+Compound Success: CCCC(C)(COC(=O)N)COC(=O)NC(C)C , IUPAC Name: carisoprodol
+Compound Success: CC(C(C1=CC=CC=C1)O)N , IUPAC Name: (+)-norpseudoephedrine
+Compound Success: C1CCC2(C3CC4=C(C2(C1)CCN3CC5CCC5)C=C(C=C4)O)O , IUPAC Name: butorphanol
+Compound Success: CCOC(=O)C1C(=O)NC2=C(C=C(C=C2)Cl)C(=N1)C3=CC=CC=C3F , IUPAC Name: ethyl
+Compound Success: CC1=NC(=NC=C1OCC2(CC2C(=O)NC3=NC=C(C=C3)F)C4=CC(=CC=C4)F)C , IUPAC Name: lemborexant
+Compound Success: CN1CCN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3 , IUPAC Name: medazepam
+Compound Success: C(C(Cl)(Cl)Cl)(O)O , IUPAC Name: chloralhydrateCompound Success: C1C(=O)NC2=C(C=C(C=C2)[N+](=O)[O-])C(=N1)C3=CC=CC=C3Cl , IUPAC Name: clonazepam
+
+Compound Success: CCN(CC)CCN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3F , IUPAC Name: flurazepamCompound Success: CCC1(C(=O)NC(=O)N(C1=O)C)C2=CC=CC=C2 , IUPAC Name: methylphenobarbital
+
+Compound Success: CC1CNCCC2=C1C=C(C=C2)Cl , IUPAC Name: lorcaserin
+Compound Success: CCC1(C(=O)NC(=O)NC1=O)CC , IUPAC Name: barbital
+Compound Success: CN1C2=C(C=C(C=C2)Cl)C(=NC(C1=O)O)C3=CC=CC=C3 , IUPAC Name: temazepam
+Compound Success: CC(CC1=CC=CC=C1)NCCCCl , IUPAC Name: mefenorex
+Compound Success: CN(C)CC1CCCCC1(C2=CC(=CC=C2)OC)O , IUPAC Name: 2-[(dimethylamino)methyl]-1-(3-methoxyphenyl)cyclohexanol
+Compound Success: CN1CCN(CC1)C(=O)OC2C3=NC=CN=C3C(=O)N2C4=NC=C(C=C4)Cl , IUPAC Name: zopiclone
+Compound Success: C1CN2C(=N1)C3=CC=CC=C3C2(C4=CC=C(C=C4)Cl)O , IUPAC Name: mazindol
+Compound Success: CCC(C)C(C)(COC(=O)N)COC(=O)N , IUPAC Name: mebutamate
+Compound Success: CN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3 , IUPAC Name: diazepam
+Compound Success: C1C2=NN=CN2C3=C(C=C(C=C3)Cl)C(=N1)C4=CC=CC=C4 , IUPAC Name: estazolam
+Compound Success: CCNC1C2CCC(C2)C1C3=CC=CC=C3 , IUPAC Name: fencamfamin
+Compound Success: CCNC(C)CC1=CC(=CC=C1)C(F)(F)F , IUPAC Name: fenfluramine
+Compound Success: C[N+](C)(C)CC(=O)[O-].C(C(Cl)(Cl)Cl)(O)O , IUPAC Name: chloralbetaine
+Compound Success: C1COC2(N1CC(=O)NC3=C2C=C(C=C3)Br)C4=CC=CC=C4F , IUPAC Name: haloxazolam
+Compound Success: C1CC1CN2C(=O)CN=C(C3=C2C=CC(=C3)Cl)C4=CC=CC=C4 , IUPAC Name: prazepam
+Compound Success: CCCC(C)(COC(=O)N)COC(=O)N , IUPAC Name: meprobamate
+Compound Success: C1=CC=C(C=C1)CC(COC(=O)N)N , IUPAC Name: solriamfetol
+Compound Success: CN1C(=O)CC(=O)N(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3 , IUPAC Name: clobazam
+Compound Success: CC(C)(CC1=CC=CC=C1)N , IUPAC Name: phentermine
+Compound Success: CCN(C1=CC=CC(=C1)C2=CC=NC3=C(C=NN23)C#N)C(=O)C , IUPAC Name: zaleplon
+Compound Success: C1COC2(N1CC(=O)NC3=C2C=C(C=C3)Cl)C4=CC=CC=C4Cl , IUPAC Name: cloxazolam
+Compound Success: CC1CN2CC(=O)NC3=C(C2(O1)C4=CC=CC=C4)C=C(C=C3)Cl , IUPAC Name: oxazolam
+Compound Success: CC1OC(OC(O1)C)C , IUPAC Name: paraldehyde
+Compound Success: O=C(OC1(C#C)CCCCC1)N , IUPAC Name: ethinamate
+Compound Success: C1C(=O)NC2=C(C=C(C=C2)Cl)C(=N1)C3=CC=CC=C3 , IUPAC Name: nordiazepam
+Compound Success: CCC(C=CCl)(C#C)O , IUPAC Name: ethchlorvynol
+Compound Success: CC1=NN=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4 , IUPAC Name: alprazolam
+Compound Success: C#CCN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3 , IUPAC Name: pinazepam
+Compound Success: C1C(=O)NC2=C(C=C(C=C2)Cl)C(=N1)C3=CC=CC=C3Cl , IUPAC Name: delorazepam
+Compound Success: CC1=NN=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4Cl , IUPAC Name: triazolam
+Compound Success: CN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CCCCC3 , IUPAC Name: tetrazepam
+Compound Success: CN1CCN(CC1)C=C2C(=O)N3C(=N2)CN=C(C4=C3C=CC(=C4)[N+](=O)[O-])C5=CC=CC=C5Cl , IUPAC Name: loprazolam
+Compound Success: CN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3F , IUPAC Name: fludiazepam
+Compound Success: CC1=CC(=O)N2CC(=O)N(C3=C(C2(O1)C4=CC=CC=C4)C=C(C=C3)Cl)C , IUPAC Name: ketazolam
+Compound Success: C1C(=O)NC2=C(C=C(C=C2)Br)C(=N1)C3=CC=CC=N3 , IUPAC Name: bromazepam
+Compound Success: CC(CC1=CC=CC=C1)NCCC#N , IUPAC Name: fenproporex
+Compound Success: CC1=CC=C(C=C1)C2=C(N3C=C(C=CC3=N2)C)CC(=O)N(C)C , IUPAC Name: zolpidem
+Compound Success: CN=C1CN(C(=C2C=C(C=CC2=N1)Cl)C3=CC=CC=C3)O , IUPAC Name: chlordiazepoxide
+Compound Success: CC1=NC=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4F , IUPAC Name: midazolam
+Compound Success: C1C(=S)N(C2=C(C=C(C=C2)Cl)C(=N1)C3=CC=CC=C3F)CC(F)(F)F , IUPAC Name: quazepam

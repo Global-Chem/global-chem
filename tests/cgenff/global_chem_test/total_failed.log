@@ -79,3 +79,5 @@ Compound Failed: O=I=O , IUPAC Name: iodyl
 Compound Failed: C/C=C/[C]=O , IUPAC Name: crotonoyl
 Compound Failed: O=[C]CCCC[C]=O , IUPAC Name: hexanedioyl
 Compound Failed: CC(C)(C)[C]=O , IUPAC Name: pivaloyl
+Compound Failed: CCCC(C)(C1CC23C=CC1(C4C25CCN(C3CC6=C5C(=C(C=C6)O)O4)C)OC)O.Cl ,IUPAC Name: etorphinehydrochloride
+Compound Failed: C[N+]1(CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(C=C4)O)C.[Br-] , IUPAC Name: morphinemethylbromide

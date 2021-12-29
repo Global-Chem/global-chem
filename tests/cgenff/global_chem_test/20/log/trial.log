@@ -1,0 +1,22 @@
+Compound Success: CCC1(C(=O)NC(=O)NC1=O)CCC(C)C , IUPAC Name: amobarbital
+Compound Success: CC(CC(C)(C)O)OC(C(Cl)(Cl)Cl)O , IUPAC Name: chlorhexadol
+Compound Success: C1=CC=C(C=C1)N2C=C(C=C(C2=O)C3=CC=CC=C3C#N)C4=CC=CC=N4 , IUPAC Name: perampanel
+Compound Success: CCCC(C)C1(C(=O)NC(=O)NC1=O)CC , IUPAC Name: pentobarbital
+Compound Success: CCC(=O)N(C1CCNCC1)C2=CC=CC=C2 , IUPAC Name: norfentanyl
+Compound Success: CN(C)CCC(C1=CC=C(C=C1)Cl)C2=CC=CC=N2 , IUPAC Name: chlorphentermine
+Compound Success: CCC(CC)(S(=O)(=O)CC)S(=O)(=O)CC , IUPAC Name: sulfondiethylmethane
+Compound Success: C=CCN1CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(C=C4)O , IUPAC Name: nalorphine_9400
+Compound Success: CCC1(C(=O)C(CNC1=O)C)CC , IUPAC Name: methyprylon
+Compound Success: CNC1(CCCCC1=O)C2=CC=CC=C2Cl , IUPAC Name: ketamine
+Compound Success: CC1C(OCCN1C)C2=CC=CC=C2 , IUPAC Name: phendimetrazine
+Compound Success: CC(C)(CC1=CC=CC=C1Cl)N , IUPAC Name: clortermine
+Compound Success: CC(CC1=CC=CC=C1)N(C)CC2=CC=CC=C2 , IUPAC Name: benzphetamineCompound Success: CCC(CC)(CNC(=O)CCCO)C1=CC(=CC=C1)OC , IUPAC Name: embutramide
+
+Compound Success: CC1=NN(C2=C1C(=NCC(=O)N2C)C3=CC=CC=C3F)C , IUPAC Name: flupyrazaponCompound Success: CN1CC(C=C2C1CC3=CNC4=CC=CC2=C34)C(=O)N , IUPAC Name: lysergicacidamide
+
+Compound Success: CCC(C)(S(=O)(=O)CC)S(=O)(=O)CC , IUPAC Name: sulfonethylmethane
+Compound Success: CCNC1(CCCCC1=O)C2=CC=CS2 , IUPAC Name: tiletamine
+Compound Success: CC(C)(C)C(C)(C1CC23CCC1(C4C25CCN(C3CC6=C5C(=C(C=C6)O)O4)CC7CC7)OC)O , IUPAC Name: buprenorphine
+Compound Success: O=S(=O)(C(C)(C)S(=O)(=O)CC)CC , IUPAC Name: sulfonmethane
+Compound Success: CCCC(C)C1(C(=O)NC(=O)NC1=O)CC=C , IUPAC Name: secobarbital
+Compound Success: CN1CC(C=C2C1CC3=CNC4=CC=CC2=C34)C(=O)O , IUPAC Name: lysergicacid
