@@ -33,7 +33,6 @@ def test_rdkit_passing():
         gc.get_common_heterocyclic_rings_phase_2(),
         gc.get_commonly_used_r_group_replacements(),
         gc.get_common_warhead_covalent_inhibitors(),
-        gc.get_common_amino_acid_protecting_groups(),
         gc.get_iupac_blue_book_common_functional_groups(),
         gc.get_common_electrophilic_warheads_for_kinases(),
         gc.get_privileged_scaffolds_for_kinase_inhibitors(),
@@ -59,6 +58,7 @@ def test_rdkit_passing():
     for i in range(0, len(compounds)):
 
         molecule_set = list(compounds[i])
+        print (molecule_set)
 
         for molecules in molecule_set:
             names = list(list(molecules.keys()))
@@ -111,7 +111,6 @@ def test_indigo_passing():
         gc.get_common_heterocyclic_rings_phase_2(),
         gc.get_commonly_used_r_group_replacements(),
         gc.get_common_warhead_covalent_inhibitors(),
-        gc.get_common_amino_acid_protecting_groups(),
         gc.get_iupac_blue_book_common_functional_groups(),
         gc.get_common_electrophilic_warheads_for_kinases(),
         gc.get_privileged_scaffolds_for_kinase_inhibitors(),
