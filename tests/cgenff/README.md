@@ -17,3 +17,8 @@ CGenFF Object Trial Results
 # 15: Common Electrophilic Warheads for Kinases
 # 16: Privileged Scaffolds for Kinase Inhibitors
 # 17: Chemical Adsorption on Montmorillonite Clays
+# 18: Schedule 1
+# 19: Schedule 2
+# 20: Schedule 3
+# 21: Schedule 4
+# 22: Schedule 5

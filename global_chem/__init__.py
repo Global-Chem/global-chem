@@ -41,6 +41,14 @@ from global_chem.proteins.kinases.scaffolds.privileged_scaffolds import Privileg
 from global_chem.organic_synthesis.solvents.common_organic_solvents import CommonOrganicSolvents
 from global_chem.organic_synthesis.protecting_groups.amino_acid_protecting_groups import AminoAcidProtectingGroups
 
+# Narcotics
+
+from global_chem.narcotics.schedule_one import ScheduleOne
+from global_chem.narcotics.schedule_two import ScheduleTwo
+from global_chem.narcotics.schedule_three import ScheduleThree
+from global_chem.narcotics.schedule_four import ScheduleFour
+from global_chem.narcotics.schedule_five import ScheduleFive
+
 # Miscellaneous
 
 from global_chem.miscellaneous.vitamins import Vitamins

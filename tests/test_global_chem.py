@@ -38,6 +38,11 @@ def test_rdkit_passing():
         gc.get_common_electrophilic_warheads_for_kinases(),
         gc.get_privileged_scaffolds_for_kinase_inhibitors(),
         gc.get_chemical_adsorption_on_montmorillonite_clays(),
+        gc.get_schedule_one(),
+        gc.get_schedule_two(),
+        gc.get_schedule_three(),
+        gc.get_schedule_four(),
+        gc.get_schedule_five(),
     ]
 
     protecting = []
@@ -111,6 +116,11 @@ def test_indigo_passing():
         gc.get_common_electrophilic_warheads_for_kinases(),
         gc.get_privileged_scaffolds_for_kinase_inhibitors(),
         gc.get_chemical_adsorption_on_montmorillonite_clays(),
+        gc.get_schedule_one(),
+        gc.get_schedule_two(),
+        gc.get_schedule_three(),
+        gc.get_schedule_four(),
+        gc.get_schedule_five(),
     ]
 
     protecting = []
