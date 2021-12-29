@@ -150,7 +150,7 @@ At the time of writing the list of objects includes:
 
 # Tests & Applications
 
-A total collection of 2153 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 17 objects in
+A total collection of 2560 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 22 objects in
 an organized fashion by subject. The code was refactored extensively to allow for ease of object addition according to subject and functionality.
 
 ## Results 
