@@ -26,35 +26,29 @@ to process, manipulate, and derive new compound structures are established. Whil
   <i>Figure 1: Screenshot of the ZincDB request URLS</i>
 </p>
 
-In `Figure1`, you can observe the directory setup for downloading ZincDB molecules with their respective directory nomenclature which can be tricky to navigate.  Previously, partial organizational attempts were made on PubMed, filling chemical data linkages for computational toxicology called Actor for a specific
-refactored and refined effort [Judson:2019-9]. For the EnamineDB, a scaffold associated with biological activity was designed to target 
-Toll-Like Receptors in an object-oriented fashion [Perez-Regidor:2016-9]. These organizational methods are difficult
-to extend to other systems as well as can be difficult to implement given the large amount of data.
+For example, in `Figure1`, the directory setup for downloading ZincDB molecules is shown. As is evident, the information content of the directory nomenclature does not contain information on the compounds they contain, making it nearly impossible to access specific molecules or classs molecules.  Towards overcoming this, partial organizational attempts were made in PubMed, filling chemical data linkages for computational toxicology called Actor for a specific
+refactored and refined effort [Judson:2019-9]. In another example, for the EnamineDB a scaffold associated with biological activity was designed to target 
+Toll-Like Receptors in an object-oriented fashion [Perez-Regidor:2016-9]. However, these organizational methods are difficult
+to extend to other systems and can be difficult to implement given the large amount of data.
 In addition, the information content of these papers is of limited utility to the common developer. 
 
-To organize data we apply the idea of communication. Humans use symbols and drawings to communicate, a set of symbols and the rules to combining them are called a language. 
-Languages can be employed to carry relevant, distinct features and mean something to their respective community. 
-International Union of Pure and Applied Chemistry (IUPAC) was a coalition that formed in the 1800s and their method of communication is named after the organization, IUPAC. 
-IUPAC is a written language that predates even drawing atoms as a method of communication between chemists [Cooke-Fox:1989-5]; 
-other chemical sub-communities also adopted the language and applied to their field to different dialects i.e polymer chemistry, organo-metallic chemistry.
-In the recent years, SMILES [Weininger:1988-5] is becoming a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D or 3D geometry with ease.
-Due to it's "first to market" scientific chemical language IUPAC is the legacy language that is a lexical key to unlocking informational wealth about a chemical pattern or group. 
-But there are problems with the language due to it's length in describing bigger molecules. IUPAC names in organic chemisty papers can extend pages with no real value. 
+To organize chemical compounds we apply the idea of communication. Humans use symbols and drawings to communicate, a set of symbols and the rules to combining them are called a language. Languages can be employed to carry relevant, distinct features and mean something to their respective community. 
+International Union of Pure and Applied Chemistry (IUPAC) was a coalition that formed in the 1800s and their method of communication was named after the organization, IUPAC. 
+IUPAC is a written language that predates even drawing atoms as a method of communication between chemists [Cooke-Fox:1989-5]. 
+Other chemical sub-communities adopted the IUPAC language and applied it to their fields that are comprised of different dialects i.e polymer chemistry, organo-metallic chemistry.
+Due to it's "first to market" status, the scientific chemical language IUPAC is the legacy language that is the lexical key to unlocking information about a chemical pattern or group. 
+But there are problems with the language due to it's length in describing bigger molecules. Simply, IUPAC names in organic chemisty papers are impractical, effecting extending the length of a manuscript will being of limited value given the challenge of interpreting such names.
 
-To compact information, chemists just released the drawings but that can be hard to store precisely. Algorithms
-are being designed to abstract and interpolate skeletal patterns and languages and convert them into SMILES for data processing and analysis. 
-A lot of these tools are well summarized by the Blue Obelisk Society Open Source Review [OBoyle:2016-9]. And they work to some degree of accuracy. 
-These tools are then improved on and machine learning starts dominating as a model that sits on top to fix any inaccuracies of the algorithm. 
-If we took it another direction, where we selectively aggregate data based on popularity, usefulness over time, and organized to a degree of functionality but that much expertise amongst one person is not enough.
-You need many opinions to come to a standard set. 
+To compact information, chemists just released the drawings but information in such a format is hard to store precisely. Alternatively, SMILES [Weininger:1988-5] has become a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D or 3D connectivity information with ease.  Algorithms
+have been designed to abstract and interpolate skeletal patterns and languages from chemical drawings and convert them into SMILES for data processing and analysis. 
+A number of these tools, which work to varying degrees of accuracy, have been well summarized by the Blue Obelisk Society Open Source Review [OBoyle:2016-9]. 
+Efforts to improve these tools recently have included machine learning (ML) methods that essential "sit" on top of the underlying algoritm to fix any inaccuracies of the method. 
+As an alternative we can take another direction, where data is selectively aggregated based on known classifications, popularity and utility, being organized to a degree of functionality that facilitates more widespread use. However, the criteria for such an aggregation of data is built upon human expertise, requiring input from a variety of people to attain the broadness and accessibility that would facilitate scientific discovery. In other words, in the context of a well-classified chemical database the major challenge is the enormity of the chemical universe, requring a range of chemical expertise to put togethe well-thought chemical lists of compounds relevant to their respective communities. Thus, it is necessary to create a tool to allow for a large number of participants to contribute in order for such a data compilation to grow. 
+However, most software and especially old software can be difficult to install and handle on top of modern technology thus hindering participation. This situation drives the
+need for a tool that is sustainable and readily accessible to potential participants, allowing the database to naturally grow.
+This need motivated the development of the presented `Global-Chem` database tool.
 
-In the context of a well-classified chemical database the major challenge is the enormity of the chemical universe. Accordingly, it takes a range of chemical expertise to put together a well-thought chemical list of compounds relevant to their respective community.
-Thus, it is necessary for a large number of participants to contribute in order for such a database to grow. 
-However, most software and especially old software can be difficult to install and handle on top of modern technology thus driving the
-need for something sustainable that is readily accessible to potential participants, allowing the database to naturally grow.
-This need motivated the development of the presented `Global-Chem` database
-
-To implement `Global-Chem` we needed to pick a coding language that has the ability to write easy objects for particpants to understand; Python.
+To implement `Global-Chem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python.
 
 <p align="center">
   <img width="1000" height="750" src="images/figures/figure_2.png">
