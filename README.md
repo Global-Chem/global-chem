@@ -1,5 +1,6 @@
-GlobalChem: A content variable store for Chemistry!
-===================================================
+Global-Chem: Collections of common small molecules and their SMILES/SMARTS to support diverse chemical communities
+==================================================================================================================
+
 
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 ![Python](https://img.shields.io/badge/python-3.6-blue.svg)
