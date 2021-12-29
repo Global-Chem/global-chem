@@ -1,5 +1,6 @@
-GlobalChem: A content variable store for Chemistry!
-===================================================
+Global-Chem: Collections of common small molecules and their SMILES/SMARTS to support diverse chemical communities
+==================================================================================================================
+
 
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 ![Python](https://img.shields.io/badge/python-3.6-blue.svg)
@@ -11,7 +12,7 @@ GlobalChem: A content variable store for Chemistry!
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
 
-Global Chem is a variable store for common and rare chemical lists using IUPAC as input and SMILES/SMARTS as output. As 
+Global Chem is an open-source record collection for common and rare chemical lists using IUPAC as input and SMILES/SMARTS as output. As 
 mostly needed by myself as I search through chemical infinity. 
 
 I have found these lists written in history to be useful, they come from a variety of different fields but are aggregated 

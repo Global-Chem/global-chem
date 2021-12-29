@@ -196,14 +196,7 @@ bond, angle, dihedral are associated with a charge increment value subtracted fr
 This value is associated with how these two atoms behave, electronically, in the environment space it is in. It is noted 
 that the dihedral charge increment is set to a limit to of 50.
 
-The lower the distribution is to 0 the more performant the forcefield is. The distributions are reported in accordance with bonds, angles, dihedrals, charge classifications of the charmm potential energy equation. 
-
-<p align="center">
-  <img width="1400" height="400" src="images/figures/figure_3.png">
-  <i>Figure 4: Charmm Potential Energy Equation Picture Depiction: Top row and bond row is bonded and non-bonded terms respectively. </i>
-</p>
-
-We passed each object individually into `CGenFF` recorded the results. <b>Note</b> that due to our initial input being SMILES we had to offer up some of the original functionality of `CGenFF` that was used to process `mol2` for bond assignment. Whereas now we rely on `SDF` and go through our own in-house decision tree. For anything `CGenFF` determines it cannot find an adequate substitute within reason
+The lower the distribution is to 0 the more performant the forcefield is. The distributions are reported in accordance with bonds, angles, dihedrals, charge classifications of the charmm potential energy equation [MacKerell:1998]. We passed each object individually into `CGenFF` recorded the results. <b>Note</b> that due to our initial input being SMILES we had to offer up some of the original functionality of `CGenFF` that was used to process `mol2` for bond assignment. Whereas now we rely on `SDF` and go through our own in-house decision tree. For anything `CGenFF` determines it cannot find an adequate substitute within reason
 returns a failed response. These failed responses are captured. It is noted, that the IUPAC blue book is a list of radicals (Object 14 in the tests) which is the reason for it's repeated compound failures which you can see in the log file. Other noteworthy failures that would be of particular interest are listed in `Figure 5`. For example, cyclobutadiene is a non-traditional ring system with a lot of ring strain where the carbon atom types are common. `CGenFF` might determine that this particular ring system with it's existing atom type network is not allowed or detrimental to the network if added and needs to be handled with care. Silicon-based systems seems to be more ubuiqituious in these data sets and a lot of the failures are attributed to silicon-based compounds. An interesting functional group to handle would be the allene-based compounds and perhaps warrant a new carbon atom type. 
 
 <p align="center">
@@ -240,7 +233,7 @@ too far from the existing atom-types built into the forcefield. We can arguably 
 
 # Statement of Purpose
 
-Chemical lists are private information that is buried within corporations protected under intellectual property/non-disclosure agreements or academic papers imprisoned by the paywall publication system of their own making. Neither academia nor industry is allowing real sciencee to develop. Instead of sharing information we rely on complicated hard-coded algorithms making arbitrary decisions without actual scientific backing. `Global-Chem` has a lot potential purposes (teaching, inferences, cheminformatics) but our main perogative is to create a free record collection. If we plant the seed now then, hopefully, our tree will grow. As it grows, the answers we seek will become more clear and reasoned with some level of scientific thought. Together, we can build the biggest network regardless of where you are from and who you are.  
+Chemical lists are private information that is buried within corporations protected under intellectual property/non-disclosure agreements or academic papers imprisoned by the paywall publication system of their own making. Neither academia nor industry is allowing real sciencee to develop. Instead of sharing information we rely on complicated hard-coded algorithms making arbitrary decisions without actual scientific backing. `Global-Chem` has a lot potential purposes (teaching, inferences, cheminformatics) but our main perogative is to create a free record collection. If we plant the seed now then, hopefully, our tree will grow. As it grows, the answers we seek will become more clear and reasoned with some level of scientific thought. Together, we can build the biggest network regardless of where you are from and who you are but your usefulness to the chemical society.
 
 # Acknowledgements
 
