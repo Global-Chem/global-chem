@@ -23,6 +23,8 @@ class ScheduleFive(object):
             'pregabalin': 'CC(C)CC(CC(=O)O)CN',
         }
 
+        return functional_groups
+
     def get_schedule_five_smarts(self):
 
         functional_groups = {
@@ -35,3 +37,5 @@ class ScheduleFive(object):
             'lasmiditan': '[#6]-[#7]1-[#6]-[#6]-[#6](-[#6]-[#6]-1)-[#6](=[#8])-[#6]1:[#7]:[#6](:[#6]:[#6]:[#6]:1)-[#7]-[#6](=[#8])-[#6]1:[#6](:[#6]:[#6](:[#6]:[#6]:1-[#9])-[#9])-[#9]',
             'pregabalin': '[#6]-[#6](-[#6])-[#6]-[#6](-[#6]-[#6](=[#8])-[#8])-[#6]-[#7]',
         }
+
+        return functional_groups
