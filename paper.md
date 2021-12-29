@@ -239,7 +239,7 @@ too far from the existing atom-types built into the forcefield. We can arguably 
 | Essential Vitamins                  | 13           | 0                        |
 | Common Organic Solvents             | 42           | 3                        |
 | Open Smiles                         | 94           | 10                       |
-| IUPAC Blue Book (CRC Handbook) 2003 | 333          | 146                      |
+| IUPAC Blue Book (CRC Handbook) 2003 | 333          | 1 (Excluding Radicals)   |
 | Rings in Drugs                      | 92           | 0                        |
 | Phase 2 Hetereocyclic Rings         | 19           | 0                        |
 | Privileged Scaffolds                | 47           | 0                        |
@@ -257,11 +257,13 @@ too far from the existing atom-types built into the forcefield. We can arguably 
 | Schedule 3 United States Narcotics  | 22           | 0                        |
 | Schedule 4 United States Narcotics  | 77           | 0                        |
 | Schedule 5 United States Narcotics  | 8            | 0                        |
-| Common Regex Patterns               | 1            |                          |
+| Common Regex Patterns               | 1            | N/A                      |
 
 <p align="center">
   <i>Table 2: (In-House) CGenFF Error Count List</i>
 </p>
+
+Note that because the IUPAC blue book valuable list reported the connection points, we also recorded the radical form for synthesis purposes. It still is in question how to effectively process radicals into an atom-type engine like `CGenFF`. 
 
 # Statement of Purpose
 
