@@ -265,7 +265,7 @@ too far from the existing atom-types built into the forcefield. We can arguably 
 
 # Statement of Purpose
 
-Chemical lists are private information that is buried within corporations protected under intellectual property/non-disclosure agreements or academic papers imprisoned by the paywall publication system of their own making. Neither academia nor industry is allowing real sciencee to develop. 
+Chemical lists are private information that is buried within corporations protected under intellectual property/non-disclosure agreements or academic papers imprisoned by the paywall publication system of their own making. Neither academia nor industry is allowing real science to develop. 
 Instead of sharing information we rely on complicated hard-coded algorithms making arbitrary decisions without actual scientific backing. 
 `Global-Chem` has a lot potential purposes (teaching, inferences, cheminformatics) but our main perogative is to create a free record collection. 
 If we plant the seed now then, hopefully, our tree will grow. As it grows, the answers we seek will become more clear and 
