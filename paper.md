@@ -222,7 +222,7 @@ documentation as a `C&1&1&1&1`. As shown in Table 2, this fails in both `RDKit` 
   <i>Figure 6: Penalty Score distributions</i>
 </p>
 
-The penalty score distributions are shown in `Figure 6` in a rug fashion to show how much chemical feature space can `CGenFF`
+The penalty score distributions are shown in `Figure 6` in a rug fashion using Plotly [Plotly] to show how much chemical feature space can `CGenFF`
 extend to. If we look at one trend of the data of four leaf nodes: BRAF Kinases Inhibitors for Cancer (54) to Privileged Scaffolds (47) to Common Warheads (29) to  Emerging PerfluoroAlkyls (27). The theory is that any kinase inhibitors should exhibit drug-like features similar to what was chosen to CGenFF, privileged scaffolds are any elected scaffolding produced by nature, warheads designed for covalent inhibition, and a stretch into herbicides and toxicity
 that are toxic to us. We expected `CGenFF` to perform on anthing drug-like and not so much for chemical manufacturing. 
 
