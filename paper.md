@@ -205,7 +205,10 @@ returns a failed response. These failed responses are captured. It is noted, tha
   <i>Figure 5: Failed CGenFF Compounds</i>
 </p>
 
-Full logs of failed compounds are found in the `test` directory in the github repository. 
+Full logs of failed compounds are found in the `tests` directory in the github repository. And an overview found here on 
+`Table 2`:
+
+
 
 ### Discussion 
 
@@ -233,11 +236,17 @@ too far from the existing atom-types built into the forcefield. We can arguably 
 
 # Statement of Purpose
 
-Chemical lists are private information that is buried within corporations protected under intellectual property/non-disclosure agreements or academic papers imprisoned by the paywall publication system of their own making. Neither academia nor industry is allowing real sciencee to develop. Instead of sharing information we rely on complicated hard-coded algorithms making arbitrary decisions without actual scientific backing. `Global-Chem` has a lot potential purposes (teaching, inferences, cheminformatics) but our main perogative is to create a free record collection. If we plant the seed now then, hopefully, our tree will grow. As it grows, the answers we seek will become more clear and reasoned with some level of scientific thought. Together, we can build the biggest network regardless of where you are from and who you are but your usefulness to the chemical society.
+Chemical lists are private information that is buried within corporations protected under intellectual property/non-disclosure agreements or academic papers imprisoned by the paywall publication system of their own making. Neither academia nor industry is allowing real sciencee to develop. 
+Instead of sharing information we rely on complicated hard-coded algorithms making arbitrary decisions without actual scientific backing. 
+`Global-Chem` has a lot potential purposes (teaching, inferences, cheminformatics) but our main perogative is to create a free record collection. 
+If we plant the seed now then, hopefully, our tree will grow. As it grows, the answers we seek will become more clear and 
+reasoned with some level of scientific thought. We establish the global standard, where we all can edit freely and contribute together regardless of what your educational background is.
+It will be voted on by the common chemical community and experts in the field. Enjoy. 
 
 # Acknowledgements
 
-Thank you to Jacob Weiner, Tyree Wilson, Paul Shapiro for their helpful discussions into the usability and functionality of Global-Chem.
+Thank you to Daniel Khavrutskii, Jacob Weiner, Tyree Wilson, Paul Shapiro for their helpful discussions into the usability and functionality of Global-Chem.
+Appreciation to past mentors James Ryan, Robert Zeigler, and Blake Printy for discussions on good manufacturing practices of python packaging and distribution.
 Appreciation to the University of Maryland School of Pharmacy Department of Pharmaceutical Chemistry for promoting a collaborative and useful space for 
 academics. Financial support from the NIH (GM131710) is acknowledged.
 
