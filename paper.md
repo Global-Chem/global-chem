@@ -235,13 +235,9 @@ of everyday goods [Pelch:2019-9]. This is not what `CGenFF` was intended for but
 too far from the existing atom-types built into the forcefield. We can arguably say, that if we add one perfluoroalkyl to
 `CGenFF` it will help reduce penalties for the rest of the dataset as well be useful to the chemical hazard community.
 
-# Conclusion
+# Statement of Purpose
 
-`Global-Chem` serves the purpose of facilitating collecting, documenting and accessing different chemical communities as dictated by user input. It involves a distributable
-easy format with objects classified as primary paper functionality with methods containing the chemical list that accommodates
-said functionality. With respect to broader applicatibility `Global-Chem` will potentially be of utility for machine learning and artificial intelligence tools in drug development pipelines as a classification layer. 
-In addition, it can help construct a cheminformatic analysis of functional groups on a chemical dataset and, lastly,
-it has a potential educational use in teaching functional groups and SMILES to any potential chemistry students. 
+Chemical lists are private information that is buried within corporations protected under intellectual property/non-disclosure agreements or academic papers imprisoned by the paywall publication system of their own making. Neither academia nor industry is allowing real sciencee to develop. Instead of sharing information we rely on complicated hard-coded algorithms making arbitrary decisions without actual scientific backing. `Global-Chem` has a lot potential purposes (teaching, inferences, cheminformatics) but our main perogative is to create a free record collection. If we plant the seed now then, hopefully, our tree will grow. As it grows, the answers we seek will become more clear and reasoned with some level of scientific thought. Together, we can build the biggest network regardless of where you are from and who you are.  
 
 # Acknowledgements
 
