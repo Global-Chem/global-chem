@@ -218,7 +218,7 @@ An interesting observation from the present data is the ability of tools to hand
 documentation as a `C&1&1&1&1`. As shown in Table 2, this fails in both `RDKit` and `Indigo` indicating that improve handling of the `&` operator is required.
 
 <p align="center">
-  <img width="1000" height="750" src="images/figures/figure_5.png">
+  <img width="1000" height="950" src="images/figures/figure_5.png">
   <i>Figure 6: Penalty Score distributions</i>
 </p>
 
