@@ -150,7 +150,7 @@ At the time of writing the list of objects includes:
 
 # Tests & Applications
 
-A total collection of 2153 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 17 objects in
+A total collection of 2560 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 22 objects in
 an organized fashion by subject. The code was refactored extensively to allow for ease of object addition according to subject and functionality.
 
 ## Results 
@@ -212,17 +212,19 @@ returns a failed response. These failed responses are captured. It is noted, tha
   <i>Figure 5: Failed CGenFF Compounds</i>
 </p>
 
+Full logs of failed compounds are found in the `test` directory in the github repository. 
+
 ### Discussion 
 
 An interesting observation from the present data is the ability of tools to handle the ampersand `&` operator in SMILES for materials. For example, diamond is a common carbon substance whose SMILES strings is indicated in the OpenSMILES
 documentation as a `C&1&1&1&1`. As shown in Table 2, this fails in both `RDKit` and `Indigo` indicating that improve handling of the `&` operator is required.
 
 <p align="center">
-  <img width="1000" height="750" src="images/figures/figure_5.png">
+  <img width="1000" height="950" src="images/figures/figure_5.png">
   <i>Figure 6: Penalty Score distributions</i>
 </p>
 
-The penalty score distributions are shown in `Figure 6` in a rug fashion to show how much chemical feature space can `CGenFF`
+The penalty score distributions are shown in `Figure 6` in a rug fashion using Plotly [Plotly] to show how much chemical feature space can `CGenFF`
 extend to. If we look at one trend of the data of four leaf nodes: BRAF Kinases Inhibitors for Cancer (54) to Privileged Scaffolds (47) to Common Warheads (29) to  Emerging PerfluoroAlkyls (27). The theory is that any kinase inhibitors should exhibit drug-like features similar to what was chosen to CGenFF, privileged scaffolds are any elected scaffolding produced by nature, warheads designed for covalent inhibition, and a stretch into herbicides and toxicity
 that are toxic to us. We expected `CGenFF` to perform on anthing drug-like and not so much for chemical manufacturing. 
 
