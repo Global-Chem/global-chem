@@ -231,8 +231,37 @@ because these are recent advancements in science that could be useful to the dru
 some outlier compounds that we can focus on parametirizing. And lastly, perfluoroalkyls are used in chemical manufacturing 
 of everyday goods [Pelch:2019-9]. This is not what `CGenFF` was intended for but still assigns parameters that do not extend
 too far from the existing atom-types built into the forcefield. We can arguably say, that if we add one perfluoroalkyl to
-`CGenFF` it will help reduce penalties for the rest of the dataset as well be useful to the chemical hazard community.
+`CGenFF` it will help reduce penalties for the rest of the dataset as well be useful to the chemical hazard community. Overview of the Errors of CGenFF Can be found in `Table 2` and raw data in the `tests` trial logs:
 
+| Chemical List                       | # of Entries | CGenFF Errors            |
+|-------------------------------------|--------------|--------------------------|
+| Amino Acids                         | 20           | 0                        |
+| Essential Vitamins                  | 13           | 0                        |
+| Common Organic Solvents             | 42           | 3                        |
+| Open Smiles                         | 94           | 10                       |
+| IUPAC Blue Book (CRC Handbook) 2003 | 333          | 146                      |
+| Rings in Drugs                      | 92           | 0                        |
+| Phase 2 Hetereocyclic Rings         | 19           | 0                        |
+| Privileged Scaffolds                | 47           | 0                        |
+| Common Warheads Covalent Inhibitors | 29           | 4                        |
+| Common Polymer Repeating Units      | 78           | 7                        |
+| Common R Group Replacements         | 499          | 15                       |
+| Electrophillic Warheads for Kinases | 24           | 0                        |
+| Privileged Scaffolds for Kinases    | 29           | 0                        |
+| BRAF Inhibitors                     | 54           | 5                        |
+| Common Amino Acid Protecting Groups | 346          | 41                       |
+| Emerging Perfluoroalkyls            | 27           | 1                        |
+| Chemicals For Clay Adsorption       | 33           | 0                        |
+| Schedule 1 United States Narcotics  | 240          | 1                        |
+| Schedule 2 United States Narcotics  | 60           | 1                        |
+| Schedule 3 United States Narcotics  | 22           | 0                        |
+| Schedule 4 United States Narcotics  | 77           | 0                        |
+| Schedule 5 United States Narcotics  | 8            | 0                        |
+| Common Regex Patterns               | 1            |                          |
+
+<p align="center">
+  <i>Table 2: (In-House) CGenFF Error Count List</i>
+</p>
 
 # Statement of Purpose
 
