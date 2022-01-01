@@ -71,7 +71,7 @@ arbitrary node hierarchy of the chemical sets included in `Global-Chem` as defin
 Each blue dot represents a relevant field and their subsequent tree networks are highlighted by a contrasting colour.
 
 <p align="center">
-  <img width="1000" height="1000" src="images/figures/figure_1.png">
+  <img width="1000" height="800" src="images/figures/figure_1.png">
   <i>Figure 3: Node Network of Global-Chem</i>
 </p>
 
