@@ -51,7 +51,8 @@ This need motivated the development of the presented `Global-Chem` database tool
 To implement `Global-Chem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python.
 
 <p align="center">
-  <img width="1000" height="750" src="images/figures/figure_2.png">
+  <img width="700" height="550" src="images/figures/figure_2.png">
+  <br />
   <i>Figure 2: Language Construction </i>
 </p>
 
@@ -76,7 +77,7 @@ Each blue dot represents a relevant field and their subsequent tree networks are
 </p>
 
 
-The tree network follows a simple object-oriented pythonic design in conjunction with literature where head nodes are the major corresponding field (ex: "Medicinal Chemistry") are their corresponding child nodes and manuals, articles or books popular in that field.
+The tree network follows a simple object-oriented pythonic design in conjunction with literature where head nodes are the major corresponding scientific field (example: "Medicinal Chemistry") are their corresponding child nodes are manuals, articles or books popular in that field.
 Each reference object has either the functional groups that correspond to that paper's overall functionality in IUPAC, Preferred Name, Acronyms, SMILES, or SMARTS
 format. The motivation for this design was that as more users contribute they can expand into different directories, add their own directory, 
 and provide their chemical list of interest. Each paper that is submitted is converted into a `namespace` module, an object
