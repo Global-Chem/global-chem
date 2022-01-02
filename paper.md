@@ -32,14 +32,14 @@ Toll-Like Receptors in an object-oriented fashion [Perez-Regidor:2016-9]. Howeve
 to extend to other systems and can be difficult to implement given the large amount of data.
 In addition, the information content of these papers is of limited utility to the common developer. 
 
-To organize chemical compounds we apply the idea of communication. Humans use symbols and drawings to communicate, a set of symbols and the rules to combining them are called a language. Languages can be employed to carry relevant, distinct features and mean something to their respective community. 
+To organize chemical compounds we apply the idea of communication. Humans use symbols and drawings to communicate, a set of symbols and the rules to combining them are called a language. Languages can be employed to carry relevant, distinct features and mean something to their respective community. diagrammatically shown in `Figure 2`. 
 International Union of Pure and Applied Chemistry (IUPAC) was a coalition that formed in the 1800s and their method of communication was named after the organization, IUPAC. 
 IUPAC is a written language that predates even drawing atoms as a method of communication between chemists [Cooke-Fox:1989-5]. 
 Other chemical sub-communities adopted the IUPAC language and applied it to their fields that are comprised of different dialects i.e polymer chemistry, organo-metallic chemistry.
 Due to it's "first to market" status, the scientific chemical language IUPAC is the legacy language that is the lexical key to unlocking information about a chemical pattern or group. 
-But there are problems with the language due to it's length in describing bigger molecules. Simply, IUPAC names in organic chemisty papers are impractical, effecting extending the length of a manuscript will being of limited value given the challenge of interpreting such names.
+But there are problems with the language due to it's length in describing bigger molecules. Simply, IUPAC names in organic chemisty papers are impractical, effecting extending the length of a manuscript,  while being of limited value given the challenge of interpreting such names.
 
-To compact information, chemists just released the drawings but information in such a format is hard to store precisely. Alternatively, SMILES [Weininger:1988-5] has become a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D or 3D connectivity information with ease.  Algorithms
+To compact information, chemists presented drawings of chemical structures but information in such a format is hard to store precisely. Alternatively, SMILES [Weininger:1988-5] has become a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D chemical connectivity information with ease.  Algorithms
 have been designed to abstract and interpolate skeletal patterns and languages from chemical drawings and convert them into SMILES for data processing and analysis. 
 A number of these tools, which work to varying degrees of accuracy, have been well summarized by the Blue Obelisk Society Open Source Review [OBoyle:2016-9]. 
 Efforts to improve these tools recently have included machine learning (ML) methods that essential "sit" on top of the underlying algoritm to fix any inaccuracies of the method. 
@@ -57,7 +57,7 @@ To implement `Global-Chem` we selected a coding language that has the ability to
 </p>
 
 Python was also chosen because of it's distribution infrastructure that allows for easy installation of objects available on the cloud. This 
-allows `Global-Chem` to function as a free service behaving in the same manner of communication and mass distribution as the Gideon Bible. 
+allows `Global-Chem` to function as a highly accessible tool that will allow users to readily access the chemical lists as well as to add content thereby continuosly expanding its utility. 
 
 # Methodology and Implementation
 
@@ -76,19 +76,19 @@ arbitrary node hierarchy of the chemical sets included in `Global-Chem` as defin
 </p>
 
 
-The tree network follows a simple object-oriented pythonic design in conjunction with literature where head nodes are the major corresponding scientific field (example: "Medicinal Chemistry") are their corresponding child nodes are manuals, articles or books popular in that field.
+The tree network follows a simple object-oriented pythonic design in conjunction with literature where head nodes are the major corresponding scientific field (example: "Medicinal Chemistry") and their corresponding child nodes are the manuals, articles or books that are the references for the lists.
 Each reference object has either the functional groups that correspond to that paper's overall functionality in IUPAC, Preferred Name, Acronyms, SMILES, or SMARTS
 format. The motivation for this design was that as more users contribute they can expand into different directories, add their own directory, 
 and provide their chemical list of interest. Each paper that is submitted is converted into a `namespace` module, an object
 whose name is indicative of it's functionality. An example for the drug design community is the paper "Rings In Drugs" [Taylor:2014-6] whose
 python object equivalent is now "RingsInDrugs" with two functional methods that retrieve the  IUPAC:SMILES/SMARTS dictionary that was embedded included in the master object `Global-Chem`. 
-Users can choose to cross reference leaf nodes between each other and do comparative chemical lists studies since the IUPAC name and SMILES name are consistent across lists.
+Users can choose to cross reference leaf nodes between each other and do comparative chemical list studies since the IUPAC name and SMILES name are consistent across lists.
 Note that not all the SMILES being portrayed are canonical given that users can create their own SMILES, which are not unique. To account for this users can parse `Global-Chem` SMILES into the `RDKit` parser
 for canonical SMILES conversion. 
 
 ## Data Collection
 
-References and associatied compound lists are selected based on the interests of the contributing authors.  This should include consideration of relevance to the scientific community. 
+References and associatied compound lists are selected based on the interests of the scientific contributors.  This should include consideration of relevance to the scientific community. 
 The SMILES strings may be abstracted in a variety of methods:
 
 -  For simple molecules one representation of the SMILES can be directly translated using visual 
@@ -102,13 +102,13 @@ Note that some of the names may be modified based on human inspection in favor o
 - For polymer papers, the site points were omitted from the name and some of the nomenclature adjusted for preferred names
 over traditional. For example: 'yl' to mark site points for polymer connections was removed in favor of reduced english complexity. 
 
-- In the case of radicals, some SMILES were adjusted to remove the radical chemical feature as they serve as connection points. However in some cases the radical component was maintained, especially in the case of IUPAC blue book common substituents.  [Do you have a flag for this?]
+- In the case of radicals, some SMILES were adjusted to remove the radical chemical feature as they serve as connection points. However in some cases the radical component was maintained, especially in the case of IUPAC blue book common substituents.
 
 - SMARTS strings were adapted from the SMILES using RDKit [@Landrum:2019-5]
 
 # Data
 
-At the time of writing the list of objects include those listed in Table 1. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. In addition, the languages used for each list are given, along with the number entires in the list and the reference.  In addition, the number of times that compounds in each list fail in the CGenFF program, as discussed below, is given.
+At the time of writing the list of objects include those shown in Table 1. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. In addition, the languages used for each list are given, along with the number entires in the list and the reference.  In addition, the number of times that compounds in each list fail in the CGenFF program, as discussed below, is given.
 
 | Chemical List                       | Languages                    | # of Entries | References               |  CGenFF Errors            |
 |-------------------------------------|------------------------------|--------------|--------------------------| --------------------------|
@@ -144,7 +144,7 @@ At the time of writing the list of objects include those listed in Table 1. The 
 
 A total collection of 2560 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 22 objects in
 an organized fashion by subject. The code was refactored extensively to allow for ease of object addition according to subject and functionality.
-`Common Regex Patterns` was omitted from the test because it's not a functional group but rather a substring pattern to extrapolate tripos `mol2` file information. 
+`Common Regex Patterns` was omitted from the test because it's not a functional group but rather a substring pattern to extrapolate Tripos `mol2` file information. 
 
 ## Results 
 
@@ -181,18 +181,18 @@ Thus, the compound lists in Global-Chem can be used to identify specific regions
 represents future regions of chemical space for force field development. In the present study, we used CGenFF to check it's tolerance level for
 the range of molecules currently in Global-Chem. To facilitate this an in-house extension of CGenFF was used that can assign atom types from `SDF` bond type column.
 This enabled us to pass the SMILES strings through `RDKit` and transform `SDF` to a `CGenFF` stream output. The resulting failures are also presented in Table 1.
-It should be noted by nature of the data processing workflow the anything that fails in `RDKit` fails in `CGenFF`.
+It should be noted by nature of the data processing workflow anything that fails in `RDKit` fails in `CGenFF`.
 
 `CGenFF` was founded on small molecules representative of biological macromolecules and subsequently extended to drug-like molecules. 
 The force field subsequently acted as the foundation for the development of the `CGenFF Program` [Vanommeslaeghe:2010-3] that inputs
 molecules and outputs the topology information and parameters required to perform various types of molecular modeling and simulations
 using programs such as CHARMM, NAMD, OpenMM and Gromacs [Jo:2008-06]. To test the ability of the CGenFF program to handle the chemical 
 lists in Global-Chem each list was individually submitted to the program. As shown in Table 1, the range of failures varies widely.
-The majority of lists associated with biological or drug-like molecules have zero failures. In contrast, lists such as Common R-group relacements 
+The majority of lists associated with biological or drug-like molecules have zero failures. In contrast, lists such as Common R-group replacements 
 or Protecting Groups show a number of failures. In addition, CGenFF does not cover radicals, which were excluded from the analysis. 
 Thus, Global-Chem allows for areas of poor coverage of CGenFF to be identified, information that can be used to facilitate future force field development.
 
-More granular information the regions of chemical space that need additional development in CGenFF can be made based on the CGenFF penalty score distribution [Vanommeslaeghe:2012].
+More granular information on the regions of chemical space that need additional development in CGenFF can be made based on the CGenFF penalty score distribution [Vanommeslaeghe:2012].
 Penalty scores are attributed to molecules by the CGenFF program whose entire chemical connectivity is not present in CGenFF. When an arbitrary molecule is 
 passed through the CGenFF program it navigates through a set of rules that represent a atom type similarity network tree.
 Once atom types along with chemical connectivity are known, bonded parameters available in CGenFF are assigned to the molecule. 
@@ -209,11 +209,10 @@ molecules for additional force field optimization.
 Motivated by the availability of the CGenFF penalty scores we passed each object individually into the `CGenFF program` and recorded the results.
 The penalty score distributions are shown in `Figure 6` in a rug fashion using Plotly [Plotly] to show the extent of `CGenFF` penalites
 for the different chemical lists. As may be seen the extent of penalties differs significantly for the various lists. 
-To understand the utility of this information we focus on five leaf nodes: Schedule One (240) to BRAF Kinases Inhibitors for Cancer (54) 
-to Privileged Scaffolds (47) to Common Warheads (29) [Gehringer:2019-6] to Emerging PerfluoroAlkyls (27). Schedule One are active drugs that popular in the black market [21CFRPart1], 
-kinase inhibitors should contain drug-like features, privileged scaffolds are selected compounds produced by nature, warheads designed for covalent inhibition, 
+To understand the utility of this information we focus on five leaf nodes: Schedule One US Narcotics (240), BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds (47), Common Warheads (29), [Gehringer:2019-6] and Emerging PerfluoroAlkyls (27). Schedule One are active drugs that are popular in the black market [21CFRPart1], 
+kinase inhibitors should contain drug-like features, privileged scaffolds are selected compounds produced by nature, warheads are designed for covalent inhibition, 
 and PerfluoroAlkyls include herbicides and other compounds that are toxic to humans. Based on the compounds used in the development of CGenFF,
-expected the penalties to be lower on drugs and drug-like species and higher for compounds from chemical manufacturing. 
+we expected the penalties to be lower on drugs and drug-like species and higher for compounds from chemical manufacturing. 
 
 <p align="center">
   <img width="1000" height="950" src="images/figures/figure_5.png">
@@ -222,16 +221,16 @@ expected the penalties to be lower on drugs and drug-like species and higher for
 
 From `Figure 6`, if we use the charge penalty score as a metric for performance, it is evident that the `CGenFF program` 
 assigns parameters with generally low penalty scores less than 200 for Schedule One and BRAF Kinase Inhibitors owed to its
-initial training set of "drug-like" molecules. Privileged Scaffolds encompass a lot of natural product qualities which 
-have functional groups that fall into the definition of "drug-like" but not all as you can observe with a faint purple line visible 
-between penalties 200 and 400. A similar trend is seen with the Common Warheads, with two prominent purple lines between 200 and 400,
-as they also contain drug-like features along with reactive functional groups that were not in the CGenFF training set. 
+initial training set of "drug-like" molecules. Privileged Scaffolds encompass a lot of natural products which 
+have functional groups that fall into the definition of "drug-like" but not all as indicated by the purple lines  
+between penalties 200 and 400 reprenting high charge penalties. A similar trend is seen with the Common Warheads, with most charge penalties being less than 200, but two prominent purple lines between 200 and 400 associated with high charge penalties,
+as these compounds contain drug-like features along with reactive functional groups that were not in the CGenFF training set. 
 With both of these lists, it would be useful to identify specific molecules with high penalties and include them in the CGenFF training set.
-And lastly, Perfluoroalkyls are used in chemical manufacturing of everyday goods [Pelch:2019-9]. While `CGenFF` training 
+And lastly, Perfluoroalkyls are used in chemical manufacturing of everyday goods [Pelch:2019-9]. While the `CGenFF` training 
 set did include halogens [Soteras:2016-10], motivated by their inclusion in many drugs, `CGenFF` was not extended to perfluoroalkyls.
-Accordingly, for this list, there are no low penalty scores with the scores clustered in the intermediate range. This is consistent with halogens being inlcuded the training of CGenFF but the specific connectivity (long halohalkyl chains) perfluoroalkyls not be included.
-Accordingly, if even a few perfluoroalkyls are added to the`CGenFF` training set it will help reduce penalties and improve that treatment of this class of molecules making CGenFF of more utility to the chemical hazard community. 
-In addition ability of CGenFF to treat the selected chemical lists discussed above other noteworthy failures are listed in `Figure 5`. 
+Accordingly, for this list, there are no low penalty scores with the scores clustered in the intermediate range. This is consistent with halogens being inlcuded the training of CGenFF but the specific connectivity of perfluoroalkyls (long haloalkyl chains) not being included.
+Accordingly, if even a few perfluoroalkyls are added to the `CGenFF` training set it will help reduce penalties and improve that treatment of this class of molecules making CGenFF of more utility to the chemical hazard community. 
+In addition to the ability of CGenFF to treat the selected chemical lists discussed above other noteworthy failures are listed in `Figure 5`. 
 For example, cyclobutadiene is a non-traditional ring system with a lot of ring strain although the carbon atom types are common.
 `CGenFF` might determine that this particular ring system with it's existing atom type network is not allowed or detrimental to the network if added and needs to be handled with care. 
 An interesting group that fails in CGenFF are allene-based compounds and perhaps warrants extension of the force.
@@ -251,9 +250,9 @@ Full logs of failed compounds are found in the `tests` directory in the github r
 `Global-Chem` was developed to facilitate accessing lists of known chemical compounds as objects to allow them to be used in the context of python-based workflows.
 However, it can also facilitate the evaluation of other tools to access chemical information in the form of SMILES. An interesting observation from the present data is the ability of tools to handle the ampersand `&` operator in SMILES for materials. 
 For example, diamond is a common carbon substance whose SMILES strings is indicated in the OpenSMILES
-documentation as a `C&1&1&1&1`. As shown in Table 2, this fails in both `RDKit` and `Indigo` indicating that improve handling of the `&` operator is required. 
+documentation as a `C&1&1&1&1`. As shown in Table 2, this fails in both `RDKit` and `Indigo` indicating that improved handling of the `&` operator is required. 
 
-Beyond accessing SMILES stings we've shown the utility of `Global-Chem` to interogate the coverage of the force field CGenFF. By partitioning chemical space into well defined chemical lists, `Global-Chem` allows for regions of chemical space where the CGenFF programs fails or assigns parameters of low analogy to be readily identified. This information will allow for decisions to be made concerning the addition of molecules in the CGenFF training set thereby allowing for systematic improvements in the force field.
+Beyond accessing SMILES stings we've shown the utility of `Global-Chem` to interogate the coverage of the force field `CGenFF`. By partitioning chemical space into well-defined chemical lists, `Global-Chem` allows for regions of chemical space where the CGenFF programs fails or assigns parameters of low analogy to be readily identified. This information will allow for decisions to be made concerning the addition of molecules in the CGenFF training set thereby allowing for systematic improvements in the force field.
 
 # Statement of Purpose
 
@@ -266,7 +265,7 @@ The actual growth of the tree will be decided on by the common chemical communit
 
 Thank you to Daniel Khavrutskii, Jacob Weiner, Tyree Wilson, and Paul Shapiro for their helpful discussions into the usability and functionality of Global-Chem.
 Appreciation to past mentors James Ryan, Robert Zeigler, and Blake Printy for discussions on good manufacturing practices of python packaging and distribution.
-Appreciation to the University of Maryland School of Pharmacy Department of Pharmaceutical Chemistry for promoting a collaborative and useful space for 
+Appreciation to the University of Maryland Baltimore, School of Pharmacy, Department of Pharmaceutical Chemistry for promoting a collaborative and useful space for 
 academics. Financial support from the NIH (GM131710) is acknowledged.
 
 # Conflict of Interets
