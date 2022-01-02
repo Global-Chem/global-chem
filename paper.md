@@ -209,9 +209,7 @@ molecules for additional force field optimization.
 Motivated by the availability of the CGenFF penalty scores we passed each object individually into the `CGenFF program` and recorded the results.
 The penalty score distributions are shown in `Figure 6` in a rug fashion using Plotly [Plotly] to show the extent of `CGenFF` penalites
 for the different chemical lists. As may be seen the extent of penalties differs significantly for the various lists. 
-To understand the utility of this information we focus on five leaf nodes: Schedule One US Narcotics (240), BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds (47), Common Warheads (29), [Gehringer:2019-6] and Emerging PerfluoroAlkyls (27). Schedule One are active drugs that are popular in the black market [21CFRPart1], 
-kinase inhibitors should contain drug-like features, privileged scaffolds are selected compounds produced by nature, warheads are designed for covalent inhibition, 
-and PerfluoroAlkyls include herbicides and other compounds that are toxic to humans. Based on the compounds used in the development of CGenFF,
+To understand the utility of this information we focus on five leaf nodes: Schedule One US Narcotics (240), BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds (47), Common Warheads (29), [Gehringer:2019-6] and Emerging PerfluoroAlkyls (27). Schedule One are active drugs that are popular in the black market [21CFRPart1], kinase inhibitors should contain drug-like features, privileged scaffolds are selected compounds produced by nature, warheads are designed for covalent inhibition, and PerfluoroAlkyls include herbicides and other compounds that are toxic to humans. Based on the compounds used in the development of CGenFF,
 we expected the penalties to be lower on drugs and drug-like species and higher for compounds from chemical manufacturing. 
 
 <p align="center">
@@ -223,7 +221,7 @@ From `Figure 6`, if we use the charge penalty score as a metric for performance,
 assigns parameters with generally low penalty scores less than 200 for Schedule One and BRAF Kinase Inhibitors owed to its
 initial training set of "drug-like" molecules. Privileged Scaffolds encompass a lot of natural products which 
 have functional groups that fall into the definition of "drug-like" but not all as indicated by the purple lines  
-between penalties 200 and 400 reprenting high charge penalties. A similar trend is seen with the Common Warheads, with most charge penalties being less than 200, but two prominent purple lines between 200 and 400 associated with high charge penalties,
+between penalties 200 and 400 representing high charge penalties. A similar trend is seen with the Common Warheads, with most charge penalties being less than 200, but two prominent purple lines between 200 and 400 associated with high charge penalties,
 as these compounds contain drug-like features along with reactive functional groups that were not in the CGenFF training set. 
 With both of these lists, it would be useful to identify specific molecules with high penalties and include them in the CGenFF training set.
 And lastly, Perfluoroalkyls are used in chemical manufacturing of everyday goods [Pelch:2019-9]. While the `CGenFF` training 
