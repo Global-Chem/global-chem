@@ -230,8 +230,7 @@ as they also contain drug-like features along with reactive functional groups th
 With both of these lists, it would be useful to identify specific molecules with high penalties and include them in the CGenFF training set.
 And lastly, Perfluoroalkyls are used in chemical manufacturing of everyday goods [Pelch:2019-9]. While `CGenFF` training 
 set did include halogens [Soteras:2016-10], motivated by their inclusion in many drugs, `CGenFF` was not extended to perfluoroalkyls.
-Accordingly, for this list, there are no low penalty scores with the scores clustered in the intermediate range.  
-This is consistent with halogens being inlcuded the training of CGenFF but the specific connectivity (long halohalkyl chains) perfluoroalkyls not be included.
+Accordingly, for this list, there are no low penalty scores with the scores clustered in the intermediate range. This is consistent with halogens being inlcuded the training of CGenFF but the specific connectivity (long halohalkyl chains) perfluoroalkyls not be included.
 Accordingly, if even a few perfluoroalkyls are added to the`CGenFF` training set it will help reduce penalties and improve that treatment of this class of molecules making CGenFF of more utility to the chemical hazard community. 
 In addition ability of CGenFF to treat the selected chemical lists discussed above other noteworthy failures are listed in `Figure 5`. 
 For example, cyclobutadiene is a non-traditional ring system with a lot of ring strain although the carbon atom types are common.
