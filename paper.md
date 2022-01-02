@@ -156,7 +156,7 @@ include functional groups that could not be parsed.
 
 Two open-source cheminformatic platforms are now widely considered as foundational tools: RDKit and Indigo. To test each SMILES string, each string gets
 passed into a `Mol` RDKit object and `Indigo.loadMolecule()` object where any failures are recorded. 
-Results on the number of failed compounds out of the 2153 compounds along with example of failed molecules is presented in Table 2.
+Results on the number of failed compounds out of the 2560 compounds along with example of failed molecules is presented in Table 2.
 Cheminformatic interoperability between different platforms promotes wider utilization. For example, OpenBabel is another
 utility that may used as a tolerance checker.
 
