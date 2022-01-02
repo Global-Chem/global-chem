@@ -48,7 +48,7 @@ However, most software and especially old software can be difficult to install a
 need for a tool that is sustainable and readily accessible to potential participants, allowing the database to naturally grow.
 This need motivated the development of the presented `Global-Chem` database tool.
 
-To implement `Global-Chem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python.
+To implement `Global-Chem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python [10.5555/159351][Cooke:1989-5].
 
 <p align="center">
   <img width="700" height="550" src="images/figures/figure_2.png">
@@ -68,8 +68,7 @@ selected scientific fields as well as access the associated data. This allows fo
 To take advantage of this knowledges requires a thin layer data organization that allows for the relevant information and data to be readily accessed.
 To achieve this we begin by forming connections of the most relevant data according to chemicals sub-fields that have been authored
 by experts in the different fields. `Figure 3` depicts the node Module layout of `Global-Chem`.  The layout shows an unweighted, 
-arbitrary node hierarchy of the chemical sets included in `Global-Chem` as defined by the experts that introduce the data.  
-Each blue dot represents a relevant field and their subsequent tree networks are highlighted by a contrasting colour.
+arbitrary node hierarchy of the chemical sets included in `Global-Chem` as defined by the experts that introduce the data. Each blue circle represents a relevant field and their subsequent tree networks are highlighted by a contrasting colour.
 
 <p align="center">
   <img width="1000" height="800" src="images/figures/figure_1.png">
