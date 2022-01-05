@@ -214,7 +214,7 @@ we expected the penalties to be lower on drugs and drug-like species and higher 
 
 <p align="center">
   <img width="1000" height="950" src="images/figures/figure_5.png">
-  <i>Figure 6: Penalty Score Probability Distributions</i>
+  <i>Figure 4: Penalty Score Probability Distributions</i>
 </p>
 
 From `Figure 6`, if we use the charge penalty score as a metric for performance, it is evident that the `CGenFF program` 
