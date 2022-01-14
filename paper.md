@@ -5,7 +5,7 @@ tags:
   - Cheminformatics
 authors:
   - name: Suliman Sharif,  Elena Yi Chow, Asuka Orr, Aarion Romany, Aziza Frank, Shaoqi Zhan, Ruibin Liu, Sunhwan Jo, Chris Burke, Alexander D. MacKerell Jr. 
-    orcid: 0000-0002-1342-9258
+    orcid: 0000-0002-1342-9258, 0000-0001-5559-1635, 0000-0003-4628-526X, 0000-0002-6383-1771, 0000-0001-8395-9353, 0000-0001-8287-6804
     affiliation: 1
 affiliations:
  - name: University of Maryland Baltimore, School of Pharmacy
