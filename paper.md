@@ -4,7 +4,7 @@ tags:
   - Python
   - Cheminformatics
 authors:
-  - name: Suliman Sharif
+  - name: Suliman Sharif [first author]
     orcid: 0000-0002-1342-9258
     affiliation: 1
   - name: Elena Yi Chow
@@ -27,7 +27,7 @@ authors:
     affiliation: 2
   - name: Chris Burke
     affiliation: 2
-  - name: Alexander D. MacKerell Jr.
+  - name: Alexander D. MacKerell Jr. [corresponding author]
     affiliation: 1
 affiliations:
  - name: University of Maryland Baltimore, School of Pharmacy
@@ -36,7 +36,7 @@ affiliations:
     index: 2
  - name: University of Oxford
     index: 3
-date: 12/08/2021
+date: 14 January 2022
 bibliography: paper.bib
 ---
 
