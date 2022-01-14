@@ -4,12 +4,38 @@ tags:
   - Python
   - Cheminformatics
 authors:
-  - name: Suliman Sharif,  Elena Yi Chow, Asuka Orr, Aarion Romany, Aziza Frank, Shaoqi Zhan, Ruibin Liu, Sunhwan Jo, Chris Burke, Alexander D. MacKerell Jr. 
-    orcid: 0000-0002-1342-9258, 0000-0001-5559-1635, 0000-0003-4628-526X, 0000-0002-6383-1771, 0000-0001-8395-9353, 0000-0001-8287-6804
+  - name: Suliman Sharif
+    orcid: 0000-0002-1342-9258
+    affiliation: 1
+  - name: Elena Yi Chow
+    orcid: 0000-0001-5559-1635
+    affiliation: 2
+  - name: Asuka Orr
+    orcid: 0000-0003-4628-526X
+    affiliation: 1
+  - name: Aarion Romany
+    affiliation: 1
+  - name: Aziza Frank
+    affiliation: 1
+  - name: Shaoqi Zhan
+    orcid: 0000-0002-6383-1771
+    affiliation: 3
+  - name: Ruibin Liu
+    orcid: 0000-0001-8395-9353
+    affiliation: 1
+  - name: Sunhwan Jo
+    affiliation: 2
+  - name: Chris Burke
+    affiliation: 2
+  - name: Alexander D. MacKerell Jr.
     affiliation: 1
 affiliations:
  - name: University of Maryland Baltimore, School of Pharmacy
-   index: 1
+    index: 1
+ - name: Independent Researcher
+    index: 2
+ - name: University of Oxford
+    index: 3
 date: 12/08/2021
 bibliography: paper.bib
 ---
@@ -73,7 +99,6 @@ arbitrary node hierarchy of the chemical sets included in `Global-Chem` as defin
   <img width="1000" height="800" src="images/figures/figure_1_new.png">
   <i>Figure 3: Node Network of Global-Chem</i>
 </p>
-
 
 The tree network follows a simple object-oriented pythonic design in conjunction with literature where head nodes are the major corresponding scientific field (example: "Medicinal Chemistry") and their corresponding child nodes are the manuals, articles or books that are the references for the lists.
 Each reference object has either the functional groups that correspond to that paper's overall functionality in IUPAC, Preferred Name, Acronyms, SMILES, or SMARTS
@@ -247,7 +272,7 @@ documentation as a `C&1&1&1&1`. As shown in Table 2, this fails in both `RDKit` 
 
 Beyond accessing SMILES stings we've shown the utility of `Global-Chem` to interogate the coverage of the force field `CGenFF`. By partitioning chemical space into well-defined chemical lists, `Global-Chem` allows for regions of chemical space where the CGenFF programs fails or assigns parameters of low analogy to be readily identified. This information will allow for decisions to be made concerning the addition of molecules in the CGenFF training set thereby allowing for systematic improvements in the force field.
 
-# Statement of Purpose
+# Statement of Need
 
 `Global-Chem` was developed to facilitate the ability of scientists in both academia and industry to make their compounds of interest readily available to the scientific community in the form of objects that may be directly accessed from python. 
 Accordingly, `Global-Chem` has a number of potential purposes, including teaching and cheminformatics, but our main perogative is to create a free record collection.
