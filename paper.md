@@ -52,7 +52,7 @@ To implement `Global-Chem` we selected a coding language that has the ability to
 
 <p align="center">
   <img width="1000" height="750" src="images/figures/figure_2.png">
-  <i>Figure 2: Language Construction </i>
+  <i>Figure 2: Language organized by category and functionality </i>
 </p>
 
 Python was also chosen because of it's distribution infrastructure that allows for easy installation of objects available on the cloud. This 
