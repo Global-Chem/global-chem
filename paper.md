@@ -30,11 +30,11 @@ authors:
   - name: Alexander D. MacKerell Jr. [corresponding author]
     affiliation: 1
 affiliations:
- - name: University of Maryland Baltimore, School of Pharmacy
+  - name: University of Maryland Baltimore, School of Pharmacy
     index: 1
- - name: Independent Researcher
+  - name: Independent Researcher
     index: 2
- - name: University of Oxford
+  - name: University of Oxford
     index: 3
 date: 14 January 2022
 bibliography: paper.bib
