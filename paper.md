@@ -72,10 +72,7 @@ This need motivated the development of the presented `Global-Chem` database tool
 
 To implement `Global-Chem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python [10.5555/159351][Cooke:1989-5].
 
-<p align="center">
-  <img width="1000" height="750" src="images/figures/figure_2.png">
-  <i>Figure 2: Language organized by category and functionality </i>
-</p>
+![Language organized by category and functionality .\label{fig:figure_2}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_2.png){ width=60% }
 
 Python was also chosen because of it's distribution infrastructure that allows for easy installation of objects available on the cloud. This 
 allows `Global-Chem` to function as a highly accessible tool that will allow users to readily access the chemical lists as well as to add content thereby continuosly expanding its utility. 
@@ -88,13 +85,10 @@ Scientists, by nature of their work, are required to read extensively about
 selected scientific fields as well as access the associated data. This allows for scientists to develop expert knowledge in the fields and data they value most.
 To take advantage of this knowledges requires a thin layer data organization that allows for the relevant information and data to be readily accessed.
 To achieve this we begin by forming connections of the most relevant data according to chemicals sub-fields that have been authored
-by experts in the different fields. `Figure 3` depicts the node Module layout of `Global-Chem`.  The layout shows an unweighted, 
+by experts in the different fields. \autoref{fig:figure_3} depicts the node Module layout of `Global-Chem`.  The layout shows an unweighted, 
 arbitrary node hierarchy of the chemical sets included in `Global-Chem` as defined by the experts that introduce the data. Each blue circle represents a relevant field and their subsequent tree networks are highlighted by a contrasting colour.
 
-<p align="center">
-  <img width="1000" height="700" src="images/figures/figure_1_new.png">
-  <i>Figure 3: Node Network of Global-Chem</i>
-</p>
+![Node Network of Global-Chem .\label{fig:figure_3}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_1_new.png){ width=80% }
 
 The tree network follows a simple object-oriented pythonic design in conjunction with literature where head nodes are the major corresponding scientific field (example: "Medicinal Chemistry") and their corresponding child nodes are the manuals, articles or books that are the references for the lists.
 Each reference object has either the functional groups that correspond to that paper's overall functionality in IUPAC, Preferred Name, Acronyms, SMILES, or SMARTS
@@ -232,12 +226,9 @@ for the different chemical lists. As may be seen the extent of penalties differs
 To understand the utility of this information we focus on five leaf nodes: Schedule One US Narcotics (240), BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds (47), Common Warheads (29), [Gehringer:2019-6] and Emerging PerfluoroAlkyls (27). Schedule One are active drugs that are popular in the black market [21CFRPart1], kinase inhibitors should contain drug-like features, privileged scaffolds are selected compounds produced by nature, warheads are designed for covalent inhibition, and PerfluoroAlkyls include herbicides and other compounds that are toxic to humans. Based on the compounds used in the development of CGenFF,
 we expected the penalties to be lower on drugs and drug-like species and higher for compounds from chemical manufacturing. 
 
-<p align="center">
-  <img width="1000" height="950" src="images/figures/figure_5.png">
-  <i>Figure 4: Penalty Score Probability Distributions</i>
-</p>
+![Penalty Score Probability Distributions .\label{fig:figure_4}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_5.png){ width=80% }
 
-From `Figure 6`, if we use the charge penalty score as a metric for performance, it is evident that the `CGenFF program` 
+From \autoref{fig:figure_4}, if we use the charge penalty score as a metric for performance, it is evident that the `CGenFF program` 
 assigns parameters with generally low penalty scores less than 200 for Schedule One and BRAF Kinase Inhibitors owed to its
 initial training set of "drug-like" molecules. Privileged Scaffolds encompass a lot of natural products which 
 have functional groups that fall into the definition of "drug-like" but not all as indicated by the purple lines  
@@ -246,16 +237,12 @@ between penalties 200 and 400 representing high charge penalties. A similar tren
 Accordingly, for this list, there are no low penalty scores with the scores clustered in the intermediate range. This is consistent with halogens being inlcuded the training of CGenFF but the specific connectivity of perfluoroalkyls (long haloalkyl chains) not being included.
 Accordingly, if even a few perfluoroalkyls are added to the `CGenFF` training set it will help reduce penalties and improve that treatment of this class of molecules making CGenFF of more utility to the chemical hazard community. 
 
-In addition to the ability of CGenFF to treat the selected chemical lists discussed above other noteworthy failures are listed in `Figure 5`. 
+In addition to the ability of CGenFF to treat the selected chemical lists discussed above other noteworthy failures are listed in \autoref{fig:figure_5}. 
 For example, cyclobutadiene is a non-traditional ring system with a lot of ring strain although the carbon atom types are common.
 `CGenFF` might determine that this particular ring system with it's existing atom type network is not allowed or detrimental to the network if added and needs to be handled with care. An interesting group that fails in CGenFF are allene-based compounds and perhaps warrants extension of the force.
 Silicon has not been included in CGenFF leading to the failures of the silicon-based compounds. Similarly, the IUPAC blue book valuable list includes radicals, which are relevant for synthesis purposes. This is another class for `CGenFF`has not yet been parametrized.
 
-<p align="center">
-  <img width="1000" height="450" src="images/figures/figure_6_new.png">
-  <br>
-  <i>Figure 5: Failed CGenFF Compounds</i>
-</p>
+![Failed CGenFF Compounds .\label{fig:figure_5}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_6_new.png){ width=50% }
 
 Full logs of failed compounds are found in the `tests` directory in the github repository. 
 
