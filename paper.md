@@ -52,6 +52,8 @@ to process, manipulate, and derive new compound structures are established. Whil
   <i>Figure 1: Screenshot of the ZincDB request URLS</i>
 </p>
 
+![Figure 1 .\label{fig:figure_example}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_4.png){ width=20% }
+
 For example, in `Figure 1`, the directory setup for downloading ZincDB molecules is shown. As is evident, the information content of the directory nomenclature does not contain information on the compounds they contain, making it nearly impossible to access specific molecules or classes molecules.  Towards overcoming this, partial organizational attempts were made in PubMed, filling chemical data linkages for computational toxicology called Actor for a specific
 refactored and refined effort [Judson:2019-9]. In another example, for the EnamineDB a scaffold associated with biological activity was designed to target 
 Toll-Like Receptors in an object-oriented fashion [Perez-Regidor:2016-9]. However, these organizational methods are difficult
