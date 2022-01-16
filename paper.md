@@ -46,7 +46,7 @@ The in silico chemical universe is expanding rapidly as open access titan databa
 Zinc Database (2 Billion) [Irwin:2020-12], PubMed Database (68 Million) [Roberts:2001-2]) and cheminformatic tools
 to process, manipulate, and derive new compound structures are established. While this chemical data big bang has yielded useful ultra-large datasets they are based on ambiguous classification systems making it difficult to systematically organize them for specific uses.
 
-![Screenshot of the ZincDB request URLS .\label{fig:figure_1}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_4.png){ width=40% }
+![Screenshot of the ZincDB request URLS .\label{fig:figure_1}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_4.png){ width=50% }
 
 For example, in \autoref{fig:figure_1}, the directory setup for downloading ZincDB molecules is shown. As is evident, the information content of the directory nomenclature does not contain information on the compounds they contain, making it nearly impossible to access specific molecules or classes molecules.  Towards overcoming this, partial organizational attempts were made in PubMed, filling chemical data linkages for computational toxicology called Actor for a specific
 refactored and refined effort [Judson:2019-9]. In another example, for the EnamineDB a scaffold associated with biological activity was designed to target 
@@ -72,7 +72,7 @@ This need motivated the development of the presented `Global-Chem` database tool
 
 To implement `Global-Chem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python [10.5555/159351][Cooke:1989-5].
 
-![Language organized by category and functionality .\label{fig:figure_2}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_2.png){ width=60% }
+![Language organized by category and functionality .\label{fig:figure_2}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_2.png){ width=100% }
 
 Python was also chosen because of it's distribution infrastructure that allows for easy installation of objects available on the cloud. This 
 allows `Global-Chem` to function as a highly accessible tool that will allow users to readily access the chemical lists as well as to add content thereby continuosly expanding its utility. 
@@ -88,7 +88,7 @@ To achieve this we begin by forming connections of the most relevant data accord
 by experts in the different fields. \autoref{fig:figure_3} depicts the node Module layout of `Global-Chem`.  The layout shows an unweighted, 
 arbitrary node hierarchy of the chemical sets included in `Global-Chem` as defined by the experts that introduce the data. Each blue circle represents a relevant field and their subsequent tree networks are highlighted by a contrasting colour.
 
-![Node Network of Global-Chem .\label{fig:figure_3}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_1_new.png){ width=80% }
+![Node Network of Global-Chem .\label{fig:figure_3}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_1_new.png){ width=100% }
 
 The tree network follows a simple object-oriented pythonic design in conjunction with literature where head nodes are the major corresponding scientific field (example: "Medicinal Chemistry") and their corresponding child nodes are the manuals, articles or books that are the references for the lists.
 Each reference object has either the functional groups that correspond to that paper's overall functionality in IUPAC, Preferred Name, Acronyms, SMILES, or SMARTS
@@ -122,37 +122,33 @@ over traditional. For example: 'yl' to mark site points for polymer connections 
 
 # Data
 
-At the time of writing the list of objects include those shown in Table 1. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. In addition, the languages used for each list are given, along with the number entires in the list and the reference.  In addition, the number of times that compounds in each list fail in the CGenFF program, as discussed below, is given.
+At the time of writing the list of objects include those shown in `Table 1`. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. In addition, the languages used for each list are given, along with the number entires in the list and the reference.  In addition, the number of times that compounds in each list fail in the CGenFF program, as discussed below, is given.
 
-| Chemical List                       | Languages                    | # of Entries | References               |  CGenFF Errors            |
-|-------------------------------------|------------------------------|--------------|--------------------------| --------------------------|
-| Amino Acids                         | IUPAC/SMILES/SMARTS          | 20           | Common Knowledge         | 0                         |
-| Essential Vitamins                  | Preferred Name/SMILES/SMARTS | 13           | Common Knowledge         | 0                         |
-| Common Organic Solvents             | IUPAC/SMILES/SMARTS          | 42           | [Fulmer:2010-5]          | 3                         |
-| Open Smiles                         | IUPAC/SMILES/SMARTS          | 94           | [OpenSmiles]             | 10                        |
-| IUPAC Blue Book (CRC Handbook) 2003 | Preferred Name/SMILES/SMARTS | 333          | [CRC:2004]               | 1 (Excluding Radicals)    |
-| Rings in Drugs                      | IUPAC/SMILES/SMARTS          | 92           | [Taylor:2014-6]          | 0                         |
-| Phase 2 Hetereocyclic Rings         | IUPAC/SMILES/SMARTS          | 19           | [Broughton:2004-9]       | 0                         |
-| Privileged Scaffolds                | IUPAC/SMILES/SMARTS          | 47           | [Welsch:2010-6]          | 0                         |
-| Common Warheads Covalent Inhibitors | IUPAC/SMILES/SMARTS          | 29           | [Gehringer:2019-6]       | 4                         |
-| Common Polymer Repeating Units      | IUPAC/SMILES/SMARTS          | 78           | [Hiorns:2019-6]          | 7                         |
-| Common R Group Replacements         | IUPAC/SMILES/SMARTS          | 499          | [Takeuchi:2021-9]        | 15                        |
-| Electrophillic Warheads for Kinases | Preferred Name/SMILES/SMARTS | 24           | [Petri:2020-12]          | 0                         |
-| Privileged Scaffolds for Kinases    | IUPAC/SMILES/SMARTS          | 29           | [Hu:2021-3]              | 0                         |
-| BRAF Inhibitors                     | IUPAC/SMILES/SMARTS          | 54           | [Agianian:2018-6]        | 5                         |
-| Common Amino Acid Protecting Groups | IUPAC/ACRONYM/SMILES/SMARTS  | 346          | [Isidro-Llobet:2009-6]   | 41                        |
-| Emerging Perfluoroalkyls            | IUPAC/SMILES/SMARTS          | 27           | [Pelch:2019-9]           | 1                         |
-| Chemicals For Clay Adsorption       | IUPAC/SMILES/SMARTS          | 33           | [Orr:2019-9]             | 0                         |
-| Schedule 1 United States Narcotics  | Preferred Name/SMILES/SMARTS | 240          | [21CFRPart1]             | 1                         |
-| Schedule 2 United States Narcotics  | Preferred Name/SMILES/SMARTS | 60           | [21CFRPart1]             | 1                         |
-| Schedule 3 United States Narcotics  | Preferred Name/SMILES/SMARTS | 22           | [21CFRPart1]             | 1                         |
-| Schedule 4 United States Narcotics  | Preferred Name/SMILES/SMARTS | 77           | [21CFRPart1]             | 0                         |
-| Schedule 5 United States Narcotics  | Preferred Name/SMILES/SMARTS | 8            | [21CFRPart1]             | 0                         |
-| Common Regex Patterns               | Mol2                         | 1            |                          | N/A                       |
-
-<p align="center">
-  <i>Table 1: GlobalChem Object List</i>
-</p>
+| Chemical List                       | # of Entries | References               |  CGenFF Errors            |
+|-------------------------------------|--------------|--------------------------| --------------------------|
+| Amino Acids                         | 20           | Common Knowledge         | 0                         |
+| Essential Vitamins                  | 13           | Common Knowledge         | 0                         |
+| Common Organic Solvents             | 42           | [Fulmer:2010-5]          | 3                         |
+| Open Smiles                         | 94           | [OpenSmiles]             | 10                        |
+| IUPAC Blue Book (CRC Handbook) 2003 | 333          | [CRC:2004]               | 1 (Excluding Radicals)    |
+| Rings in Drugs                      | 92           | [Taylor:2014-6]          | 0                         |
+| Phase 2 Hetereocyclic Rings         | 19           | [Broughton:2004-9]       | 0                         |
+| Privileged Scaffolds                | 47           | [Welsch:2010-6]          | 0                         |
+| Common Warheads Covalent Inhibitors | 29           | [Gehringer:2019-6]       | 4                         |
+| Common Polymer Repeating Units      | 78           | [Hiorns:2019-6]          | 7                         |
+| Common R Group Replacements         | 499          | [Takeuchi:2021-9]        | 15                        |
+| Electrophillic Warheads for Kinases | 24           | [Petri:2020-12]          | 0                         |
+| Privileged Scaffolds for Kinases    | 29           | [Hu:2021-3]              | 0                         |
+| BRAF Inhibitors                     | 54           | [Agianian:2018-6]        | 5                         |
+| Common Amino Acid Protecting Groups | 346          | [Isidro-Llobet:2009-6]   | 41                        |
+| Emerging Perfluoroalkyls            | 27           | [Pelch:2019-9]           | 1                         |
+| Chemicals For Clay Adsorption       | 33           | [Orr:2019-9]             | 0                         |
+| Schedule 1 United States Narcotics  | 240          | [21CFRPart1]             | 1                         |
+| Schedule 2 United States Narcotics  | 60           | [21CFRPart1]             | 1                         |
+| Schedule 3 United States Narcotics  | 22           | [21CFRPart1]             | 1                         |
+| Schedule 4 United States Narcotics  | 77           | [21CFRPart1]             | 0                         |
+| Schedule 5 United States Narcotics  | 8            | [21CFRPart1]             | 0                         |
+| Common Regex Patterns               | 1            |                          | N/A                       |
 
 # Tests & Applications
 
@@ -174,14 +170,10 @@ Results on the number of failed compounds out of the 2560 compounds along with e
 Cheminformatic interoperability between different platforms promotes wider utilization. For example, OpenBabel is another
 utility that may used as a tolerance checker.
 
-| Software | Number of Failed Compounds | Example of Failed SMILES                                |
-|----------|----------------------------|---------------------------------------------------------|
-| RDKit    | 11                         | 'CSi(C(C)(C)C)C', 'C&1&1&1&1',                          |
-| Indigo   | 8                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
-
-<p align="center">
-  <i>Table 2: Compounds in Global-Chem that fail in RDKit or Indigo</i>
-</p>
+| Software |  Failed Compounds | Example of Failed SMILES                                |
+|----------|------------------ |---------------------------------------------------------|
+| RDKit    | 11                | 'CSi(C(C)(C)C)C', 'C&1&1&1&1',                          |
+| Indigo   | 8                 | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
 
 ## Force Field Test
 
@@ -221,12 +213,12 @@ Larger penalities indicate a lower extent of analogy to known parameters, inform
 molecules for additional force field optimization.
 
 Motivated by the availability of the CGenFF penalty scores we passed each object individually into the `CGenFF program` and recorded the results.
-The penalty score distributions are shown in `Figure 6` in a rug fashion using Plotly [Plotly] to show the extent of `CGenFF` penalites
+The penalty score distributions are shown in \autoref{fig:figure_4} in a rug fashion using Plotly [Plotly] to show the extent of `CGenFF` penalites
 for the different chemical lists. As may be seen the extent of penalties differs significantly for the various lists. 
 To understand the utility of this information we focus on five leaf nodes: Schedule One US Narcotics (240), BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds (47), Common Warheads (29), [Gehringer:2019-6] and Emerging PerfluoroAlkyls (27). Schedule One are active drugs that are popular in the black market [21CFRPart1], kinase inhibitors should contain drug-like features, privileged scaffolds are selected compounds produced by nature, warheads are designed for covalent inhibition, and PerfluoroAlkyls include herbicides and other compounds that are toxic to humans. Based on the compounds used in the development of CGenFF,
 we expected the penalties to be lower on drugs and drug-like species and higher for compounds from chemical manufacturing. 
 
-![Penalty Score Probability Distributions .\label{fig:figure_4}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_5.png){ width=80% }
+![Penalty Score Probability Distributions .\label{fig:figure_4}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_5.png){ width=100% }
 
 From \autoref{fig:figure_4}, if we use the charge penalty score as a metric for performance, it is evident that the `CGenFF program` 
 assigns parameters with generally low penalty scores less than 200 for Schedule One and BRAF Kinase Inhibitors owed to its
@@ -242,7 +234,7 @@ For example, cyclobutadiene is a non-traditional ring system with a lot of ring 
 `CGenFF` might determine that this particular ring system with it's existing atom type network is not allowed or detrimental to the network if added and needs to be handled with care. An interesting group that fails in CGenFF are allene-based compounds and perhaps warrants extension of the force.
 Silicon has not been included in CGenFF leading to the failures of the silicon-based compounds. Similarly, the IUPAC blue book valuable list includes radicals, which are relevant for synthesis purposes. This is another class for `CGenFF`has not yet been parametrized.
 
-![Failed CGenFF Compounds .\label{fig:figure_5}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_6_new.png){ width=50% }
+![Failed CGenFF Compounds .\label{fig:figure_5}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_6_new.png){ width=80% }
 
 Full logs of failed compounds are found in the `tests` directory in the github repository. 
 
