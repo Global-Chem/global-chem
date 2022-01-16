@@ -129,13 +129,13 @@ At the time of writing the list of objects include those shown in `Table 1`. The
 | Amino Acids                         | 20  | Common Knowledge        | 0             |
 | Essential Vitamins                  | 13  | Common Knowledge        | 0             |
 | Common Organic Solvents             | 42  | [@Fulmer:2010-5]        | 3             |
-| Open Smiles                         | 94  | [@OpenSmiles]           | 10            |
+| Open Smiles                         | 94  | [@OpenSmiles:1980]      | 10            |
 | IUPAC Blue Book (CRC Handbook) 2003 | 333 | [@CRC:2004]             | 1 (Ex. Rad)   |
 | Rings in Drugs                      | 92  | [@Taylor:2014-6]        | 0             |
 | Phase 2 Hetereocyclic Rings         | 19  | [@Broughton:2004-9]     | 0             |
 | Privileged Scaffolds                | 47  | [@Welsch:2010-6]        | 0             |
 | Common Warheads Covalent Inhibitors | 29  | [@Gehringer:2019-6]     | 4             |
-| Common Polymer Repeating Units      | 78  | [@Hiorns:2019-6]        | 7             |
+| Common Polymer Repeating Units      | 78  | [@Hiorns:2012-6]        | 7             |
 | Common R Group Replacements         | 499 | [@Takeuchi:2021-9]      | 15            |
 | Electrophillic Warheads for Kinases | 24  | [@Petri:2020-12]        | 0             |
 | Privileged Scaffolds for Kinases    | 29  | [@Hu:2021-3]            | 0             |
@@ -264,3 +264,5 @@ academics. Financial support from the NIH (GM131710) is acknowledged.
 # Conflict of Interets
 
 ADM is cofounder and CSO and SJ is Commercial Development Director of SilcsBio LLC. Chris Burke is Senior DevOps Engineer at L7 Informatics. 
+
+# References
