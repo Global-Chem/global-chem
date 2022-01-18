@@ -93,6 +93,28 @@ Variables List
 | Schedule 5 United States Narcotics  | Preferred Name/SMILES/SMARTS | get_schedule_five()                                  | 8            | ECFR :: 21 CFR Part 1308 - Schedules.                                                                                                                                                                                                                                                                                |
 | Common Regex Patterns               | Mol2                         | common_regex_patterns                                | 1            |                                                                                                                                                                                                                                                                                                                      |
 
+Data Collection
+===============
+
+References and associatied compound lists are selected based on the interests of the scientific contributors.  This should include consideration of relevance to the scientific community. 
+The SMILES strings may be abstracted in a variety of methods:
+
+-  For simple molecules one representation of the SMILES can be directly translated using visual 
+inspection. This is typically appropriate for compounds at the beginning of a reported list that contain the most common denominator rings. 
+
+- For complex molecules the image can be redrawn in the free version of ChemDraw and then translated into SMILES. 
+
+- For sources where the SMILES are written and the IUPAC is not known the SMILES are translated into ChemDraw and the name retrieved. 
+Note that some of the names may be modified based on human inspection in favor of preferred names. 
+
+- For polymer papers, the site points were omitted from the name and some of the nomenclature adjusted for preferred names
+over traditional. For example: 'yl' to mark site points for polymer connections was removed in favor of reduced english complexity. 
+
+- In the case of radicals, some SMILES were adjusted to remove the radical chemical feature as they serve as connection points. However in some cases the radical component was maintained, especially in the case of IUPAC blue book common substituents.
+
+- SMARTS strings were adapted from the SMILES using RDKit [@Landrum:2019-5]
+
+
 Genesis
 =======
 
