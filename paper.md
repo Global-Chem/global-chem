@@ -48,7 +48,8 @@ to process, manipulate, and derive new compound structures are established. Whil
 
 ![Screenshot of the ZincDB request URLS .\label{fig:figure_1}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_4.png){ width=50% }
 
-For example, in \autoref{fig:figure_1}, the directory setup for downloading ZincDB molecules is shown. As is evident, the information content of the directory nomenclature does not contain information on the compounds they contain, making it nearly impossible to access specific molecules or classes molecules.  Towards overcoming this, partial organizational attempts were made in PubMed, filling chemical data linkages for computational toxicology called Actor for a specific
+For example, in \autoref{fig:figure_1}, the directory setup for downloading ZincDB molecules is shown. As is evident, the information content of the directory nomenclature does not contain information on the compounds they contain, making it nearly impossible to access specific molecules or classes molecules. 
+Towards overcoming this, partial organizational attempts were made in PubMed, filling chemical data linkages for computational toxicology called Actor for a specific
 refactored and refined effort [@Judson:2019-9]. In another example, for the EnamineDB a scaffold associated with biological activity was designed to target 
 Toll-Like Receptors in an object-oriented fashion [@Perez-Regidor:2016-9]. However, these organizational methods are difficult
 to extend to other systems and can be difficult to implement given the large amount of data.
@@ -73,9 +74,6 @@ This need motivated the development of the presented `Global-Chem` database tool
 To implement `Global-Chem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python [10.5555/159351][@Cooke:1989-5].
 
 ![Language organized by category and functionality .\label{fig:figure_2}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_2.png){ width=100% }
-
-Python was also chosen because of it's distribution infrastructure that allows for easy installation of objects available on the cloud. This 
-allows `Global-Chem` to function as a highly accessible tool that will allow users to readily access the chemical lists as well as to add content thereby continuosly expanding its utility. 
 
 # Methodology and Implementation
 
@@ -130,12 +128,6 @@ In addition, the languages used for each list are given, along with the number e
 | Schedule 4 United States Narcotics  | 77  | [@21CFRPart1]           |
 | Schedule 5 United States Narcotics  | 8   | [@21CFRPart1]           |
 | Common Regex Patterns               | 1   |                         |
-
-# Tests & Applications
-
-A total collection of 2560 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 22 objects in
-an organized fashion by subject. The code was refactored extensively to allow for ease of object addition according to subject and functionality.
-`Common Regex Patterns` was omitted from the test because it's not a functional group but rather a substring pattern to extrapolate Tripos `mol2` file information. 
 
 # Statement of Need
 
