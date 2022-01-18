@@ -100,152 +100,42 @@ Users can choose to cross reference leaf nodes between each other and do compara
 Note that not all the SMILES being portrayed are canonical given that users can create their own SMILES, which are not unique. To account for this users can parse `Global-Chem` SMILES into the `RDKit` parser
 for canonical SMILES conversion. 
 
-## Data Collection
-
-References and associatied compound lists are selected based on the interests of the scientific contributors.  This should include consideration of relevance to the scientific community. 
-The SMILES strings may be abstracted in a variety of methods:
-
--  For simple molecules one representation of the SMILES can be directly translated using visual 
-inspection. This is typically appropriate for compounds at the beginning of a reported list that contain the most common denominator rings. 
-
-- For complex molecules the image can be redrawn in the free version of ChemDraw and then translated into SMILES. 
-
-- For sources where the SMILES are written and the IUPAC is not known the SMILES are translated into ChemDraw and the name retrieved. 
-Note that some of the names may be modified based on human inspection in favor of preferred names. 
-
-- For polymer papers, the site points were omitted from the name and some of the nomenclature adjusted for preferred names
-over traditional. For example: 'yl' to mark site points for polymer connections was removed in favor of reduced english complexity. 
-
-- In the case of radicals, some SMILES were adjusted to remove the radical chemical feature as they serve as connection points. However in some cases the radical component was maintained, especially in the case of IUPAC blue book common substituents.
-
-- SMARTS strings were adapted from the SMILES using RDKit [@Landrum:2019-5]
-
 # Data
 
-At the time of writing the list of objects include those shown in `Table 1`. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. In addition, the languages used for each list are given, along with the number entires in the list and the reference.  In addition, the number of times that compounds in each list fail in the CGenFF program, as discussed below, is given.
+At the time of writing the list of objects include those shown in `Table 1`. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. 
+In addition, the languages used for each list are given, along with the number entires in the list and the reference. 
 
-| Chemical List                       | #   | References              | CGenFF Errors |
-|-------------------------------------|-----|-------------------------|---------------|
-| Amino Acids                         | 20  | Common Knowledge        | 0             |
-| Essential Vitamins                  | 13  | Common Knowledge        | 0             |
-| Common Organic Solvents             | 42  | [@Fulmer:2010-5]        | 3             |
-| Open Smiles                         | 94  | [@OpenSmiles:1980]      | 10            |
-| IUPAC Blue Book (CRC Handbook) 2003 | 333 | [@CRC:2004]             | 1 (Ex. Rad)   |
-| Rings in Drugs                      | 92  | [@Taylor:2014-6]        | 0             |
-| Phase 2 Hetereocyclic Rings         | 19  | [@Broughton:2004-9]     | 0             |
-| Privileged Scaffolds                | 47  | [@Welsch:2010-6]        | 0             |
-| Common Warheads Covalent Inhibitors | 29  | [@Gehringer:2019-6]     | 4             |
-| Common Polymer Repeating Units      | 78  | [@Hiorns:2012-6]        | 7             |
-| Common R Group Replacements         | 499 | [@Takeuchi:2021-9]      | 15            |
-| Electrophillic Warheads for Kinases | 24  | [@Petri:2020-12]        | 0             |
-| Privileged Scaffolds for Kinases    | 29  | [@Hu:2021-3]            | 0             |
-| BRAF Inhibitors                     | 54  | [@Agianian:2018-6]      | 5             |
-| Common Amino Acid Protecting Groups | 346 | [@Isidro-Llobet:2009-6] | 41            |
-| Emerging Perfluoroalkyls            | 27  | [@Pelch:2019-9]         | 1             |
-| Chemicals For Clay Adsorption       | 33  | [@Orr:2019-9]           | 0             |
-| Schedule 1 United States Narcotics  | 240 | [@21CFRPart1]           | 1             |
-| Schedule 2 United States Narcotics  | 60  | [@21CFRPart1]           | 1             |
-| Schedule 3 United States Narcotics  | 22  | [@21CFRPart1]           | 1             |
-| Schedule 4 United States Narcotics  | 77  | [@21CFRPart1]           | 0             |
-| Schedule 5 United States Narcotics  | 8   | [@21CFRPart1]           | 0             |
-| Common Regex Patterns               | 1   |                         | N/A           |
+| Chemical List                       | #   | References              |
+|-------------------------------------|-----|-------------------------|
+| Amino Acids                         | 20  | Common Knowledge        |
+| Essential Vitamins                  | 13  | Common Knowledge        |
+| Common Organic Solvents             | 42  | [@Fulmer:2010-5]        |
+| Open Smiles                         | 94  | [@OpenSmiles:1980]      |
+| IUPAC Blue Book (CRC Handbook) 2003 | 333 | [@CRC:2004]             |
+| Rings in Drugs                      | 92  | [@Taylor:2014-6]        |
+| Phase 2 Hetereocyclic Rings         | 19  | [@Broughton:2004-9]     |
+| Privileged Scaffolds                | 47  | [@Welsch:2010-6]        |
+| Common Warheads Covalent Inhibitors | 29  | [@Gehringer:2019-6]     |
+| Common Polymer Repeating Units      | 78  | [@Hiorns:2012-6]        |
+| Common R Group Replacements         | 499 | [@Takeuchi:2021-9]      |
+| Electrophillic Warheads for Kinases | 24  | [@Petri:2020-12]        |
+| Privileged Scaffolds for Kinases    | 29  | [@Hu:2021-3]            |
+| BRAF Inhibitors                     | 54  | [@Agianian:2018-6]      |
+| Common Amino Acid Protecting Groups | 346 | [@Isidro-Llobet:2009-6] |
+| Emerging Perfluoroalkyls            | 27  | [@Pelch:2019-9]         |
+| Chemicals For Clay Adsorption       | 33  | [@Orr:2019-9]           |
+| Schedule 1 United States Narcotics  | 240 | [@21CFRPart1]           |
+| Schedule 2 United States Narcotics  | 60  | [@21CFRPart1]           |
+| Schedule 3 United States Narcotics  | 22  | [@21CFRPart1]           |
+| Schedule 4 United States Narcotics  | 77  | [@21CFRPart1]           |
+| Schedule 5 United States Narcotics  | 8   | [@21CFRPart1]           |
+| Common Regex Patterns               | 1   |                         |
 
 # Tests & Applications
 
 A total collection of 2560 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 22 objects in
 an organized fashion by subject. The code was refactored extensively to allow for ease of object addition according to subject and functionality.
 `Common Regex Patterns` was omitted from the test because it's not a functional group but rather a substring pattern to extrapolate Tripos `mol2` file information. 
-
-## Results 
-
-To test the utility of these lists with other software tests were performed on three open source platforms to determine 
-data interoperability. In addition, such tests can indicate cases in which some of the software implemented should be expanded to
-include functional groups that could not be parsed. 
-
-## Cheminformatics Test
-
-Two open-source cheminformatic platforms are now widely considered as foundational tools: RDKit and Indigo. To test each SMILES string, each string gets
-passed into a `Mol` RDKit object and `Indigo.loadMolecule()` object where any failures are recorded. 
-Results on the number of failed compounds out of the 2560 compounds along with example of failed molecules is presented in Table 2.
-Cheminformatic interoperability between different platforms promotes wider utilization. For example, OpenBabel is another
-utility that may used as a tolerance checker.
-
-| Software |  Failed Compounds | Example of Failed SMILES             |
-|----------|------------------ |--------------------------------------|
-| RDKit    | 11                | 'CSi(C(C)(C)C)C', 'C&1&1&1&1',       |
-| Indigo   | 8                 | 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C' |
-
-## Force Field Test
-
-Access to broad collections of chemical groups will be of interest for development of force fields, also known as potential energy functions,[MacKerell:2004-10] for molecular modeling and molecular dynamic simulations, 
-allowing for studies on a wider range of chemicals and biological systems. The ability of a force field to treat molecules in the database can also serve as dual interoperable test 
-for SMILES strings. Popular force fields such as General Amber ForceField (GAFF) [@Wang:2004-7], Optimized Potentials for Liquid Simulations (OPLS)
-[@Jorgensen:1988-7], and Charmm General Force Field (CGenFF) [@Vanommeslaeghe:2010-3] are based on collections of chemicals that are representative of the particular region 
-of chemical space that the force field was designed to cover. In practice, this involves the atom-typing engine of each force field being applied 
-to each molecule followed by assignment of the appropriate parameters. This is to a large extent associated with the coverage of a force field.
-Thus, the compound lists in Global-Chem can be used to identify specific regions of chemical space that have limited coverage and, therefore, 
-represents future regions of chemical space for force field development. In the present study, we used CGenFF to check it's tolerance level for
-the range of molecules currently in Global-Chem. To facilitate this an in-house extension of CGenFF was used that can assign atom types from `SDF` bond type column.
-This enabled us to pass the SMILES strings through `RDKit` and transform `SDF` to a `CGenFF` stream output. The resulting failures are also presented in Table 1.
-It should be noted by nature of the data processing workflow anything that fails in `RDKit` fails in `CGenFF`.
-
-`CGenFF` was founded on small molecules representative of biological macromolecules and subsequently extended to drug-like molecules. 
-The force field subsequently acted as the foundation for the development of the `CGenFF Program` [@Vanommeslaeghe:2010-3] that inputs
-molecules and outputs the topology information and parameters required to perform various types of molecular modeling and simulations
-using programs such as CHARMM, NAMD, OpenMM and Gromacs [@Jo:2008-06]. To test the ability of the CGenFF program to handle the chemical 
-lists in Global-Chem each list was individually submitted to the program. As shown in Table 1, the range of failures varies widely.
-The majority of lists associated with biological or drug-like molecules have zero failures. In contrast, lists such as Common R-group replacements 
-or Protecting Groups show a number of failures. In addition, CGenFF does not cover radicals, which were excluded from the analysis. 
-Thus, Global-Chem allows for areas of poor coverage of CGenFF to be identified, information that can be used to facilitate future force field development.
-
-More granular information on the regions of chemical space that need additional development in CGenFF can be made based on the CGenFF penalty score distribution [@Vanommeslaeghe:2012].
-Penalty scores are attributed to molecules by the CGenFF program whose entire chemical connectivity is not present in CGenFF. When an arbitrary molecule is 
-passed through the CGenFF program it navigates through a set of rules that represent a atom type similarity network tree.
-Once atom types along with chemical connectivity are known, bonded parameters available in CGenFF are assigned to the molecule. 
-If exact matches of the bonded parameters are not available, a second tree traversal browses for alternate parameter by using a second rules files that assigns penalties based on the analogy to known parameters. 
-Once the lowest penalty score bonded parameter substitutions are determined, the `CGenFF Program` assigns those parameters along with the associated penalties.
-In addition, the program identifies the original parameters that is also output into the stream file that is used in the 
-various molecular modeling programs. Partial atomic charges and associated penalties are assigned through an extended bond-charge increment scheme where atom type along with chemical connectivity including  
-bond, angle and dihedral are associated with charge increment values subtracted from the atoms formal charge. 
-Thus, while the CGenFF program can successfully ingest a large number of molecules, the majority of those molecules are 
-assigned penalties that indicate the level of analogy of the assigned bonded parameters and charges.
-Larger penalities indicate a lower extent of analogy to known parameters, information that may be used to identify 
-molecules for additional force field optimization.
-
-Motivated by the availability of the CGenFF penalty scores we passed each object individually into the `CGenFF program` and recorded the results.
-The penalty score distributions are shown in \autoref{fig:figure_4} in a rug fashion using Plotly [@Plotly] to show the extent of `CGenFF` penalites
-for the different chemical lists. As may be seen the extent of penalties differs significantly for the various lists. 
-To understand the utility of this information we focus on five leaf nodes: Schedule One US Narcotics (240), BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds (47), Common Warheads (29), [@Gehringer:2019-6] and Emerging PerfluoroAlkyls (27). Schedule One are active drugs that are popular in the black market [@21CFRPart1], kinase inhibitors should contain drug-like features, privileged scaffolds are selected compounds produced by nature, warheads are designed for covalent inhibition, and PerfluoroAlkyls include herbicides and other compounds that are toxic to humans. Based on the compounds used in the development of CGenFF,
-we expected the penalties to be lower on drugs and drug-like species and higher for compounds from chemical manufacturing. 
-
-![Penalty Score Probability Distributions .\label{fig:figure_4}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_5.png){ width=100% }
-
-From \autoref{fig:figure_4}, if we use the charge penalty score as a metric for performance, it is evident that the `CGenFF program` 
-assigns parameters with generally low penalty scores less than 200 for Schedule One and BRAF Kinase Inhibitors owed to its
-initial training set of "drug-like" molecules. Privileged Scaffolds encompass a lot of natural products which 
-have functional groups that fall into the definition of "drug-like" but not all as indicated by the purple lines  
-between penalties 200 and 400 representing high charge penalties. A similar trend is seen with the Common Warheads, with most charge penalties being less than 200, but two prominent purple lines between 200 and 400 associated with high charge penalties, as these compounds contain drug-like features along with reactive functional groups that were not in the CGenFF training set. With both of these lists, it would be useful to identify specific molecules with high penalties and include them in the CGenFF training set. And lastly, Perfluoroalkyls are used in chemical manufacturing of everyday goods [@Pelch:2019-9]. While the `CGenFF` training set did include halogens [@Soteras:2016-10], motivated by their inclusion in many drugs, `CGenFF` was not extended to perfluoroalkyls.
-
-Accordingly, for this list, there are no low penalty scores with the scores clustered in the intermediate range. This is consistent with halogens being inlcuded the training of CGenFF but the specific connectivity of perfluoroalkyls (long haloalkyl chains) not being included.
-Accordingly, if even a few perfluoroalkyls are added to the `CGenFF` training set it will help reduce penalties and improve that treatment of this class of molecules making CGenFF of more utility to the chemical hazard community. 
-
-In addition to the ability of CGenFF to treat the selected chemical lists discussed above other noteworthy failures are listed in \autoref{fig:figure_5}. 
-For example, cyclobutadiene is a non-traditional ring system with a lot of ring strain although the carbon atom types are common.
-`CGenFF` might determine that this particular ring system with it's existing atom type network is not allowed or detrimental to the network if added and needs to be handled with care. An interesting group that fails in CGenFF are allene-based compounds and perhaps warrants extension of the force.
-Silicon has not been included in CGenFF leading to the failures of the silicon-based compounds. Similarly, the IUPAC blue book valuable list includes radicals, which are relevant for synthesis purposes. This is another class for `CGenFF`has not yet been parametrized.
-
-![Failed CGenFF Compounds .\label{fig:figure_5}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_6_new.png){ width=80% }
-
-Full logs of failed compounds are found in the `tests` directory in the github repository. 
-
-### Discussion 
-
-`Global-Chem` was developed to facilitate accessing lists of known chemical compounds as objects to allow them to be used in the context of python-based workflows.
-However, it can also facilitate the evaluation of other tools to access chemical information in the form of SMILES. An interesting observation from the present data is the ability of tools to handle the ampersand `&` operator in SMILES for materials. 
-For example, diamond is a common carbon substance whose SMILES strings is indicated in the OpenSMILES
-documentation as a `C&1&1&1&1`. As shown in Table 2, this fails in both `RDKit` and `Indigo` indicating that improved handling of the `&` operator is required. 
-
-Beyond accessing SMILES stings we've shown the utility of `Global-Chem` to interogate the coverage of the force field `CGenFF`. By partitioning chemical space into well-defined chemical lists, `Global-Chem` allows for regions of chemical space where the CGenFF programs fails or assigns parameters of low analogy to be readily identified. This information will allow for decisions to be made concerning the addition of molecules in the CGenFF training set thereby allowing for systematic improvements in the force field.
 
 # Statement of Need
 
