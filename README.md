@@ -33,6 +33,10 @@ grows it will be abstracted out by field i.e protein chemistry, analytical, and 
 
 [![asciicast](https://asciinema.org/a/L5ZYmAEGOskgeNazURbLFLR06.svg)](https://asciinema.org/a/L5ZYmAEGOskgeNazURbLFLR06)
 
+Alternatively, you can also just use the `Search` feature on github to look for SMILES or SMARTS of interest to search within this repository.
+
+<img width="1440" alt="Screen Shot 2022-01-19 at 9 10 14 AM" src="https://user-images.githubusercontent.com/11812946/150147664-df1149e1-c43b-48b8-946c-4543f39a8bc6.png">
+
 
 Installation 
 ============
