@@ -521,7 +521,9 @@ class GlobalChem(object):
 
         path_objects = []
 
-        for dirpath, dirnames, filenames in os.walk("."):
+        absolute_path = os.path.abspath(os.path.expanduser(os.path.expandvars('')))
+
+        for dirpath, dirnames, filenames in os.walk(absolute_path):
 
             for file in filenames:
 
