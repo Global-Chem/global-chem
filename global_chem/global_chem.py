@@ -521,9 +521,7 @@ class GlobalChem(object):
 
         path_objects = []
 
-        absolute_path = os.path.abspath(os.path.expanduser(os.path.expandvars('')))
-
-        for dirpath, dirnames, filenames in os.walk(absolute_path):
+        for dirpath, dirnames, filenames in os.walk("."):
 
             for file in filenames:
 
@@ -532,7 +530,10 @@ class GlobalChem(object):
                         'cli.py' not in file and \
                         'global_chem.py' not in file:
 
-                    object_path = os.path.join(absolute_path, dirpath, file).split('/')[1:]
+                    object_path = (
+                        ':'.join(os.path.join(os.getcwd(), dirpath, file).split('/')[1:]).split('.')[1].split(":")
+                    )
+
                     path_objects.append(object_path)
 
         # Add the objects recursively
@@ -557,6 +558,6 @@ class GlobalChem(object):
 
         # Pretty Print the Objects
 
-        pretty_printer = pprint.PrettyPrinter()
-
-        pretty_printer.pprint(self.network)
+        if print_output:
+            pretty_printer = pprint.PrettyPrinter()
+            pretty_printer.pprint(self.network)
