@@ -81,8 +81,8 @@ Fetch Data from Node:
 ```python
 
 gc = GlobalChem()
-gc.build_global_chem_network()
-node = gc.get_node('emerging_perfluoroalkyls.py')
+gc.build_global_chem_network(print_output=True, debugger=False)
+node = gc.get_node('emerging_perfluoroalkyls')
 print (node)
 
 >>>

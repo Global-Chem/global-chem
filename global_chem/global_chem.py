@@ -288,7 +288,7 @@ class GlobalChem(object):
             ),
             "children": [],
             "parents": [],
-            "name": root_node.split('.')[0]
+            "name": root_node
         }
 
     def add_node(self, parent_key, child_key):
@@ -520,8 +520,9 @@ class GlobalChem(object):
         # Fetch All the File Paths
 
         path_objects = []
+        absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
 
-        for dirpath, dirnames, filenames in os.walk("."):
+        for dirpath, dirnames, filenames in os.walk(absolute_file_path):
 
             for file in filenames:
 
@@ -530,9 +531,7 @@ class GlobalChem(object):
                         'cli.py' not in file and \
                         'global_chem.py' not in file:
 
-                    object_path = (
-                        ':'.join(os.path.join(os.getcwd(), dirpath, file).split('/')[1:]).split('.')[1].split(":")
-                    )
+                    object_path = os.path.join(''.join(dirpath.rsplit(absolute_file_path)), file).split('/')
 
                     if debugger:
                         print ("Node Object Paths: %s: " % object_path)
