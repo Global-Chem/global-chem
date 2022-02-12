@@ -24,21 +24,6 @@ pattern matching (SMARTS).
   <img width="800" height="400" src="images/globalchemlogo.png">
 </p>
 
-Using GlobalChem
-=====================
-
-GlobalChem, initially, is one class object with a series of Nodes that are act as objects for any common chemical lists. 
-The chemical lists can be accessed as nodes and the user can construct their own node trees for the lists.
-
-An example of it's usage can be found below:
-
-[![asciicast](https://asciinema.org/a/dpbEUdb5SRihzu6uDnRNmVlTv.svg)](https://asciinema.org/a/dpbEUdb5SRihzu6uDnRNmVlTv)
-
-Also since these lists of commonality are stored on github it is easily searchable and tied directly to the paper for 
-any bypasser. 
-
-<img width="1440" alt="Screen Shot 2022-01-19 at 9 10 14 AM" src="https://user-images.githubusercontent.com/11812946/150147664-df1149e1-c43b-48b8-946c-4543f39a8bc6.png">
-
 Installation 
 ============
 
@@ -157,6 +142,16 @@ Variables List
 | Schedule 4 United States Narcotics  | 77           | ECFR :: 21 CFR Part 1308 - Schedules.                                                                                                                                                                                                                                                                                |
 | Schedule 5 United States Narcotics  | 8            | ECFR :: 21 CFR Part 1308 - Schedules.                                                                                                                                                                                                                                                                                |
 | Common Regex Patterns               | 1            |                                                                                                                                                                                                                                                                                                                      |
+
+
+GlobalChem, initially, is one class object with a series of Nodes that are act as objects for any common chemical lists. 
+The chemical lists can be accessed as nodes and the user can construct their own node trees for the lists.
+
+Also since these lists of commonality are stored on github it is easily searchable and tied directly to the paper for 
+any bypasser. 
+
+<img width="1440" alt="Screen Shot 2022-01-19 at 9 10 14 AM" src="https://user-images.githubusercontent.com/11812946/150147664-df1149e1-c43b-48b8-946c-4543f39a8bc6.png">
+>>>>>>> 713c3366fce5a5a3afb0b0c478f1f50048cb07c2
 
 Genesis
 =======
