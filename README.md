@@ -32,6 +32,7 @@ The chemical lists can be accessed as nodes and the user can construct their own
 
 An example of it's usage can be found below:
 
+[![asciicast](https://asciinema.org/a/dpbEUdb5SRihzu6uDnRNmVlTv.svg)](https://asciinema.org/a/dpbEUdb5SRihzu6uDnRNmVlTv)
 
 Also since these lists of commonality are stored on github it is easily searchable and tied directly to the paper for 
 any bypasser. 
