@@ -532,7 +532,7 @@ class GlobalChem(object):
                         'cli.py' not in file and \
                         'global_chem.py' not in file:
 
-                    object_path = os.path.join(dirpath, file).split('/')[1:]
+                    object_path = os.path.join(absolute_path, dirpath, file).split('/')[1:]
                     path_objects.append(object_path)
 
         # Add the objects recursively
