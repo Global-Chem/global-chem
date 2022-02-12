@@ -11,7 +11,7 @@ class AminoAcidProtectingGroups(object):
         pass
 
     @staticmethod
-    def get_smiles(self):
+    def get_smiles():
 
         smiles = {
             'tert-butyloxycarbonyl': 'O=COC(C)(C)C',

@@ -89,6 +89,27 @@ print (node)
 {'perfluorohexanoic acid': 'C(=O)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)O' etc...}
 ```
 
+Fetch All Data from Node:
+
+```python
+
+gc = GlobalChem()
+print(gc.get_all_smiles())
+
+>>>
+['C(=O)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)O', 'C(=O)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O' etc...]
+    
+```
+
+Compute Common Score for an IUPAC Name:
+
+```python
+
+gc = GlobalChem()
+gc.build_global_chem_network(print_output=False, debugger=False)
+gc.compute_common_score('benzene', verbose=True)
+    
+```
 To Create Your Own Chemical Graph Network And Check the Values
 
 ```python

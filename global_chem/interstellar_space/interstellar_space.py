@@ -11,7 +11,7 @@ class InterstellarSpace(object):
         pass
 
     @staticmethod
-    def smiles():
+    def get_smiles():
 
         smiles = {
             'aluminum monochloride': '[Al]Cl',

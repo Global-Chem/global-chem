@@ -11,7 +11,7 @@ class BRAFInhibitors(object):
         pass
 
     @staticmethod
-    def get_smiles(self):
+    def get_smiles():
 
         smiles = {
             'imidazole': 'C1=CN=CN1',
@@ -70,7 +70,7 @@ class BRAFInhibitors(object):
         return smiles
 
     @staticmethod
-    def get_smarts(self):
+    def get_smarts():
         
         smarts = {
             'imidazole': '[#6]1:[#6]:[#7]:[#6]:[#7H]:1',

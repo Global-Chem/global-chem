@@ -11,7 +11,7 @@ class CommonOrganicSolvents(object):
         pass
 
     @staticmethod
-    def get_smiles(self):
+    def get_smiles():
 
         smiles = {
             'acetic acid': 'CC(=O)O',
@@ -60,7 +60,7 @@ class CommonOrganicSolvents(object):
         return smiles
 
     @staticmethod
-    def get_smarts(self):
+    def get_smarts():
 
         smarts = {
             'acetic acid': '[#6]-[#6](=[#8])-[#8]',

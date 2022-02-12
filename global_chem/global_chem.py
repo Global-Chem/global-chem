@@ -563,3 +563,122 @@ class GlobalChem(object):
         if print_output:
             pretty_printer = pprint.PrettyPrinter()
             pretty_printer.pprint(self.network)
+
+    def get_all_smiles(self):
+
+        '''
+
+        Fetches all the smiles in the network
+
+        Returns:
+            smiles (List): Full list of SMILES in the network.
+
+        '''
+
+        smiles = []
+
+        for node_key, node_value in self.__NODES__.items():
+
+            if node_key != 'global_chem' and node_key != 'common_regex_patterns':
+
+                smiles.append(list(node_value.get_smiles().values()))
+
+        smiles = sum(smiles, [])
+
+        return smiles
+
+    def get_all_smarts(self):
+
+        '''
+
+        Fetches all the smarts in the network
+
+        Returns:
+            smarts (List): Full list of SMARTS in the network.
+
+        '''
+
+        smarts = []
+
+        for node_key, node_value in self.__NODES__.items():
+
+            if node_key != 'global_chem' and node_key != 'common_regex_patterns':
+
+                smarts.append(list(node_value.get_smarts().values()))
+
+        smarts = sum(smarts, [])
+
+        return smarts
+
+    def compute_common_score(self, iupac_name, verbose=False):
+
+        '''
+
+        Compute the Common score for an IUPAC name
+
+        Arguments:
+            iupac_name (String): iupac name in question
+            verbose (Boolean): verbose flag for the common score
+
+        Returns:
+            common_score (Float): Common Score computed by GlobalChem Algorithm
+
+        Common Score Algorithm:
+
+            1.) Data mine the current state of GlobalChem
+            2.) Get the Object Weights of Each mention
+            3.) Determine the Mention Weight
+            4.) Sum the Weights and That's How common it is.
+
+        '''
+
+        # Step 1
+
+        iupac_names = []
+        object_names =[]
+
+        for node_key, node_value in self.__NODES__.items():
+
+            if node_key != 'global_chem' and node_key != 'common_regex_patterns':
+
+                object_names.append(node_key)
+                iupac_names.append(list(node_value.get_smiles().keys()))
+
+        # Step 2
+
+        total_names = len(sum(iupac_names, []))
+        object_weights = [ len(i) / total_names for i in iupac_names]
+
+        # Step 3
+
+        mentioned_weights = []
+        total_weights = []
+
+        for i in range(0, len(iupac_names)):
+
+            names = iupac_names[i]
+
+            mentioned = 0
+
+            for name in names:
+
+                if iupac_name in name:
+
+                    mentioned += 1
+
+            mentioned_weight = mentioned * object_weights[i]
+            mentioned_weights.append(mentioned_weight)
+
+            # print ("Object Name: %s" % object_names[i])
+            # print ("Mentioned Weight: %s" % mentioned_weight)
+
+        # Step 4
+
+        common_score = sum(mentioned_weights)
+
+        if verbose:
+            print ("GlobalChem Common Score: %s" % common_score)
+
+        return common_score
+
+

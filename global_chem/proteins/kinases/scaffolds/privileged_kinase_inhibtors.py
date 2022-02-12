@@ -11,7 +11,7 @@ class PrivilegedKinaseInhibitors(object):
         pass
 
     @staticmethod
-    def get_smiles(self):
+    def get_smiles():
 
         smiles = {
             'indole': 'C12=CC=CC=C1C=CN2',
@@ -49,7 +49,7 @@ class PrivilegedKinaseInhibitors(object):
         return smiles
 
     @staticmethod
-    def get_smarts(self):
+    def get_smarts():
 
         smarts = {
             'indole': '[#6]12:[#6]:[#6]:[#6]:[#6]:[#6]:1:[#6]:[#6]:[#7H]:2',
