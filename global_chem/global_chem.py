@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
 #
-# GlobalChem - Content Variable Store
+# GlobalChem - Master Object
 #
 # -----------------------------------
+
+# Base Imports
+
+import os
+import os.path
+import pprint
 
 # Environment
 
@@ -48,7 +54,7 @@ from global_chem.narcotics.schedule_three import ScheduleThree
 from global_chem.narcotics.schedule_four import ScheduleFour
 from global_chem.narcotics.schedule_five import ScheduleFive
 
-# InterstellarSpace
+# Interstellar Space
 
 from global_chem.interstellar_space.interstellar_space import InterstellarSpace
 
@@ -67,20 +73,61 @@ class Node:
 
     '''
 
-    def __init__(self, value, internal_object):
+    def __init__(self, name, smiles=[], smarts=[]):
 
+        self.name = name.split('.')[0]
         self.children = []
-        self.value = value
-        self.internal_object = internal_object
+        self.parents = []
+        self.smiles = smiles
+        self.smarts = smarts
+        self.state = [ self.smiles, self.smarts ]
 
-    def add_child(self, value):
-        self.children.append(Node(value, self.internal_object))
+    def add_parent(self, name, smiles=[], smarts=[]):
 
-    def __repr__(self):
-        classname = type(self).__name__
+        '''
 
-        return (
-            f'{classname}({self.value!r}, {self.children})' if self.children else  f'{classname}({self.value!r})')
+        Add the Parent Node
+
+        '''
+
+        self.parents.append(
+            Node(name, smiles, smarts)
+        )
+
+    def add_child(self, name, smiles=[], smarts=[]):
+
+        '''
+
+        Add the Child Node
+
+        '''
+
+        self.children.append(
+            Node(name, smiles, smarts)
+        )
+
+    def get_node_state(self):
+
+        '''
+
+        Get the Node State
+
+        Returns:
+            state (Node): Node state
+
+        '''
+
+        return self.state
+
+    def set_node_state(self):
+
+        '''
+
+        Set the Node State with the children and the parents.
+
+        '''
+
+        self.state = [ self.children, self.parents ]
 
     def print_stat(self):
 
@@ -90,7 +137,34 @@ class Node:
 
         """
         print("Children: %s" % self.children)
-        print("Values: %s" % self.value)
+        print("Parents: %s" % self.parents)
+
+    # This hack is for the root node to have dummy dictionaries.
+
+    @staticmethod
+    def get_smiles():
+
+        smiles = {}
+
+    @staticmethod
+    def get_smarts():
+
+        smarts = {}
+
+
+class GraphNetworkError(Exception):
+
+    __version_error_parser__ = "1.0.4"
+    __allow_update__ = False
+
+    '''
+    
+    Raise the Network Error if the Node cannot be found.
+    
+    '''
+    def __init__(self, message, errors):
+        super().__init__(message)
+        self.errors = errors
 
 class GlobalChem(object):
 
@@ -104,6 +178,7 @@ class GlobalChem(object):
     """
 
     __NODES__ = {
+        'global_chem': Node,
         'emerging_perfluoro_alkyls': EmergingPerFluoroAlkyls,
         'montmorillonite_adsorption': MontmorilloniteAdsorption,
         'common_monomer_repeating_units': CommonMonomerRepeatingUnits,
@@ -131,11 +206,10 @@ class GlobalChem(object):
         'common_regex_patterns': CommonRegexPatterns,
     }
 
-    def __init__(self):
+    def __init__(self, verbose=False):
 
         self.network = {}
-
-        pass
+        self.verbose = verbose
 
     def check_available_nodes(self):
 
@@ -190,11 +264,14 @@ class GlobalChem(object):
 
         return nodes
 
-    def initiate_network(self):
+    def initiate_network(self, root_node='global_chem'):
 
         '''
 
-        Initiates a Tree Node Network
+        Initiates a Tree Node Network with Root Node
+
+        Arguments:
+            root_node: Add the root node to the network | Type: String
 
         Objects Initialized:
             network: network object
@@ -203,37 +280,281 @@ class GlobalChem(object):
 
         self.network = {}
 
-        # Place holder for now for new features.
+        self.network[root_node] = {
+            "node_value": Node(
+                root_node,
+                self.__NODES__[root_node].get_smiles(),
+                self.__NODES__[root_node].get_smarts()
+            ),
+            "children": [],
+            "parents": [],
+            "name": root_node.split('.')[0]
+        }
 
-    def add_node(self, node_key, parent=None):
+    def add_node(self, parent_key, child_key):
 
         '''
 
         Add a node into the network
 
+        Rules:
+            1.) There must be a connection from one node to the next. Nodes in space cannot exist.
+
+        Algorithm:
+
+            1.) First Find the Node in the Network
+            2.) Add the Child to the Parent
+            3.) Add the Child to the Network
+            4.) Add the Parent to the Child
+            5.) Add the Parent to the Network
+
+        Graph Algorithm:
+
+            O(c): Child Node
+            O(p): Parent Node
+            N: Network
+
+            1.) O(p) <---- N
+            2.) O(c) <---- O(p)
+            3.) O(c) <---- N
+            4.) O(p) ----> O(c)
+            5.) O(p) ----> N
+
+        Errors:
+
+            GraphNetworkError Step 1: If the Parent Node was never found
+            GraphNetworkError Step 4: If the Newly Child node was never added.
+
         '''
 
-        if not parent:
-            self.network[node_key] = Node(node_key, self.__NODES__[node_key])
+        # Step 1
 
-        else:
-            branch = self.network.get(parent, None)
-            if not branch:
-                raise KeyError(f'No Node named {parent} exists')
+        try:
+            parent_node = self.network[ parent_key ][ 'node_value' ]
+        except:
+            raise GraphNetworkError(
+                message=f'Step 1 Node: {parent_key} Not Found',
+                errors=''
+            )
 
-            branch.add_child(node_key)
+        # Step 2
 
-    def get_parent(self, parent):
+        try:
+            _ = parent_node.add_child(
+                child_key,
+                self.__NODES__[ child_key ].get_smiles(),
+                self.__NODES__[ child_key ].get_smarts(),
+            )
+        except:
+            _ = parent_node.add_child(
+                child_key,
+            )
+
+        # Step 3
+
+        self.network[ parent_key ][ 'children' ].append(child_key)
+
+        try:
+            self.network[ child_key ] = {
+                "node_value": Node(
+                    child_key,
+                    self.__NODES__[ child_key ].get_smiles(),
+                    self.__NODES__[ child_key ].get_smarts()
+                ),
+                "children": [],
+                "parents": [],
+                "name": child_key.split('.')[0]
+            }
+
+        except:
+
+            self.network[ child_key ] = {
+                "node_value": Node(
+                    child_key,
+                    {},
+                    {}
+                ),
+                "children": [],
+                "parents": [],
+                "name": child_key.split('.')[0]
+            }
+
+        if self.verbose:
+
+            print (f'Network State Step 2:')
+            print ('----------------------')
+
+            for node_key, node_value in self.network.items():
+                print ('Node')
+                print (f'{node_key}: {node_value}')
+                print ('\n')
+
+        # Step 4
+
+        try:
+            new_child_node = self.network[ child_key ]['node_value']
+
+        except:
+            raise GraphNetworkError(
+                message=f'Node: {child_key} Not Added Correctly',
+                errors=''
+            )
+
+        try:
+            _ = new_child_node.add_parent(
+                parent_key,
+                self.__NODES__[ parent_key ].get_smiles(),
+                self.__NODES__[ parent_key ].get_smarts()
+            )
+
+        except:
+
+            _ = new_child_node.add_parent(
+                parent_key,
+            )
+        # Step 5
+
+        self.network[ child_key ][ 'parents' ].append(parent_key)
+
+        if self.verbose:
+            print (f'Network State Step 5: {self.network}')
+
+
+    def get_node(self, name):
 
         '''
 
-        Get the Root node of the parent.
+        Get the Node
+
+        Arguments:
+            name: Parent key of the node | Type: String
+
+        Returns:
+            node: Returns the node.
+
+        Errors:
+            GraphNetworkError: If the node doesn't exist.
 
         '''
 
-        node_key = self.network.get(parent, None)
+        # Hack for the python file: Need to fix later on.
 
-        if not node_key:
-            raise KeyError(f'No Node named {parent} exists')
+        python_name = name + '.py'
 
-        return node_key.children
+        try:
+            node = self.network[name]
+        except:
+            try:
+                node = self.network[python_name]
+            except:
+                raise GraphNetworkError(
+                    message=f'No Node named {name} exists',
+                    errors=''
+                )
+
+        return node
+
+    def get_node_smiles(self, node_key):
+
+        '''
+
+        Get the Node SMILES
+
+        Arguments:
+            node_key: Node key to query | Type: String
+
+        Returns:
+            smiles_dict: Dictionary of the SMILES for that object.
+
+        '''
+
+        node = self.network.get(node_key, None)
+
+        if not node:
+            raise GraphNetworkError(
+                message=f'No Node named {node_key} exists',
+                errors=''
+            )
+
+        return self.__NODES__[node_key].get_smiles()
+
+    def get_node_smarts(self, node_key):
+
+        '''
+
+        Get the Node SMARTS
+
+        Arguments:
+            node_key: Node key to query | Type: String
+
+        Returns:
+            smarts_dict: Dictionary of the SMARTS for that object.
+
+        '''
+
+        node = self.network.get(node_key, None)
+
+        if not node:
+            raise GraphNetworkError(
+                message=f'No Node named {node_key} exists',
+                errors=''
+            )
+
+        return self.__NODES__[node_key].get_smarts()
+
+    def build_global_chem_network(self, print_output=False):
+
+        '''
+
+        Get the GlobalChem Internal Network
+
+        Arguments:
+            print_output: Print the output of the globalchem network | Type: Boolean
+
+        '''
+
+        # Initiate the Head
+
+        self.initiate_network()
+
+        # Fetch All the File Paths
+
+        path_objects = []
+
+        for dirpath, dirnames, filenames in os.walk("."):
+
+            for file in filenames:
+
+                if file.endswith('.py') and \
+                        '__' not in file and \
+                        'cli.py' not in file and \
+                        'global_chem.py' not in file:
+
+                    object_path = os.path.join(dirpath, file).split('/')[1:]
+                    path_objects.append(object_path)
+
+        # Add the objects recursively
+
+        for chemical_object in path_objects:
+
+            chemical_object.reverse()
+            chemical_object = chemical_object + ['global_chem']
+
+            while len(chemical_object) > 0:
+
+                parent = chemical_object.pop()
+                previous_child = parent
+
+                if len(chemical_object) != 0:
+                    child = chemical_object[-1]
+                    self.add_node(parent, child)
+                else:
+                    self.add_node(previous_child, parent)
+
+        self.network[ 'global_chem' ][ 'children' ] = list(set(self.network[ 'global_chem' ][ 'children' ]))
+
+        # Pretty Print the Objects
+
+        pretty_printer = pprint.PrettyPrinter()
+
+        pretty_printer.pprint(self.network)
