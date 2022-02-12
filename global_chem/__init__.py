@@ -33,8 +33,8 @@ from global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements impor
 
 # Proteins Kinases
 
-from global_chem.proteins.kinases.braf.common_groups_by_pocket import BRAFInhibitorsByPocket
-from global_chem.proteins.kinases.scaffolds.privileged_scaffolds import PrivilegedKinaseInhibitorScaffolds
+from global_chem.proteins.kinases.braf.inhibitors import BRAFInhibitors
+from global_chem.proteins.kinases.scaffolds.privileged_kinase_inhibtors import PrivilegedKinaseInhibitors
 
 # Organic Synthesis
 
@@ -48,6 +48,10 @@ from global_chem.narcotics.schedule_two import ScheduleTwo
 from global_chem.narcotics.schedule_three import ScheduleThree
 from global_chem.narcotics.schedule_four import ScheduleFour
 from global_chem.narcotics.schedule_five import ScheduleFive
+
+# Interstellar Space
+
+from global_chem.interstellar_space.interstellar_space import InterstellarSpace
 
 # Miscellaneous
 

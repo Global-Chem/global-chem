@@ -10,9 +10,10 @@ class CommonWarheadsCovalentInhibitors(object):
 
         pass
 
-    def get_warhead_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        warhead_smiles = {
+        smiles = {
             'propiolamide': 'C#CC(N)=O',
             'fumarate ester': 'NC(/C=C/CC(OC)=O)=O',
             'allenamide': 'NC(C=C=C)=O',
@@ -44,11 +45,12 @@ class CommonWarheadsCovalentInhibitors(object):
             'oxaziridine': 'O1NC1',
         }
 
-        return warhead_smiles
+        return smiles
 
-    def get_warhead_smarts(self):
+    @staticmethod
+    def get_smarts():
 
-        warheard_smarts = {
+        smarts = {
             'propiolamide': '[#6]#[#6]-[#6](-[#7])=[#8]',
             'fumarate ester': '[#7]-[#6](/[#6]=[#6]/[#6]-[#6](-[#8]-[#6])=[#8])=[#8]',
             'allenamide': '[#7]-[#6](-[#6]=[#6]=[#6])=[#8]',
@@ -80,4 +82,4 @@ class CommonWarheadsCovalentInhibitors(object):
             'oxaziridine': '[#8]1-[#7]-[#6]-1',
         }
 
-        return warheard_smarts
+        return smarts

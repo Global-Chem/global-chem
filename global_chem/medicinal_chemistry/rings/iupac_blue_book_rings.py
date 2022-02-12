@@ -10,9 +10,10 @@ class IUPACBlueBookRings(object):
 
         pass
 
-    def get_rings_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        rings_smiles = {
+        smiles = {
             'cyclopropane': 'C1CC1',
             'spiropentane': 'C1CC12CC2',
             'cyclobutane': 'C1CCC1',
@@ -126,11 +127,12 @@ class IUPACBlueBookRings(object):
             'steroid_ring_system': 'C12CCCCC1C3C(C(CCC4)C4CC3)CC2',
         }
 
-        return rings_smiles
+        return smiles
 
-    def get_rings_smarts(self):
+    @staticmethod
+    def get_smarts():
 
-        rings_smarts = {
+        smarts = {
             'cyclopropane':'[#6]1-[#6]-[#6]-1',
             'spiropentane':'[#6]1-[#6]-[#6]-12-[#6]-[#6]-2',
             'cyclobutane':'[#6]1-[#6]-[#6]-[#6]-1',
@@ -244,4 +246,4 @@ class IUPACBlueBookRings(object):
             'steroid_ring_system':'[#6]12-[#6]-[#6]-[#6]-[#6]-[#6]-1-[#6]1-[#6](-[#6]3-[#6]-[#6]-[#6]-[#6]-3-[#6]-[#6]-1)-[#6]-[#6]-2',
         }
 
-        return rings_smarts
+        return smarts

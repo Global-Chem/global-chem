@@ -32,8 +32,8 @@ from global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements impor
 
 # Proteins Kinases
 
-from global_chem.proteins.kinases.braf.common_groups_by_pocket import BRAFInhibitorsByPocket
-from global_chem.proteins.kinases.scaffolds.privileged_scaffolds import PrivilegedKinaseInhibitorScaffolds
+from global_chem.proteins.kinases.braf.inhibitors import BRAFInhibitors
+from global_chem.proteins.kinases.scaffolds.privileged_kinase_inhibtors import PrivilegedKinaseInhibitors
 
 # Organic Synthesis
 
@@ -48,6 +48,10 @@ from global_chem.narcotics.schedule_three import ScheduleThree
 from global_chem.narcotics.schedule_four import ScheduleFour
 from global_chem.narcotics.schedule_five import ScheduleFive
 
+# InterstellarSpace
+
+from global_chem.interstellar_space.interstellar_space import InterstellarSpace
+
 # Miscellaneous
 
 from global_chem.miscellaneous.vitamins import Vitamins
@@ -55,10 +59,43 @@ from global_chem.miscellaneous.open_smiles import OpenSmiles
 from global_chem.miscellaneous.amino_acids import AminoAcids
 from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
 
+class Node:
+
+    '''
+
+    Node Object
+
+    '''
+
+    def __init__(self, value, internal_object):
+
+        self.children = []
+        self.value = value
+        self.internal_object = internal_object
+
+    def add_child(self, value):
+        self.children.append(Node(value, self.internal_object))
+
+    def __repr__(self):
+        classname = type(self).__name__
+
+        return (
+            f'{classname}({self.value!r}, {self.children})' if self.children else  f'{classname}({self.value!r})')
+
+    def print_stat(self):
+
+        """
+
+        Print statistics of the node
+
+        """
+        print("Children: %s" % self.children)
+        print("Values: %s" % self.value)
+
 class GlobalChem(object):
 
-    __version__ = "1.0.0"
-    __allow_update__ = True
+    __version__ = "1.0.4"
+    __allow_update__ = False
 
     """
 
@@ -66,492 +103,137 @@ class GlobalChem(object):
 
     """
 
+    __NODES__ = {
+        'emerging_perfluoro_alkyls': EmergingPerFluoroAlkyls,
+        'montmorillonite_adsorption': MontmorilloniteAdsorption,
+        'common_monomer_repeating_units': CommonMonomerRepeatingUnits,
+        'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,
+        'common_warhead_covalent_inhibitors': CommonWarheadsCovalentInhibitors,
+        'rings_in_drugs': RingsInDrugs,
+        'iupac_blue_book_rings': IUPACBlueBookRings,
+        'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,
+        'privileged_scaffolds': PrivilegedScaffolds,
+        'iupac_blue_book': IUPACBlueBook,
+        'common_rgroup_replacements': CommonRGroupReplacements,
+        'braf_inhibitors': BRAFInhibitors,
+        'privileged_kinase_inhibitor_scaffolds': PrivilegedKinaseInhibitors,
+        'common_organic_solvents': CommonOrganicSolvents,
+        'amino_acid_protecting_groups': AminoAcidProtectingGroups,
+        'schedule_one': ScheduleOne,
+        'schedule_two': ScheduleTwo,
+        'schedule_three': ScheduleThree,
+        'schedule_four': ScheduleFour,
+        'schedule_five': ScheduleFive,
+        'interstellar_space': InterstellarSpace,
+        'vitamins': Vitamins,
+        'open_smiles': OpenSmiles,
+        'amino_acids': AminoAcids,
+        'common_regex_patterns': CommonRegexPatterns,
+    }
+
     def __init__(self):
+
+        self.network = {}
 
         pass
 
-    def get_common_regex_patterns(self):
+    def check_available_nodes(self):
 
-        common_regex_patterns = CommonRegexPatterns()
-        return common_regex_patterns.get_common_regex_patterns()
+        '''
 
-    def get_amino_acids(self):
+        Checks the existing Nodes within the network.
 
-        amino_acids = AminoAcids()
+        '''
 
-        amino_acid_smiles = amino_acids.get_amino_acids_smiles()
-        amino_acid_smarts = amino_acids.get_amino_acid_smarts()
+        return list(self.__NODES__.keys())
 
-        return amino_acid_smiles, amino_acid_smarts
+    def get_all_nodes(self):
 
-    def get_common_organic_solvents(self):
+        '''
 
-        solvents = CommonOrganicSolvents()
+        Returns all the nodes in no particular order
 
-        common_organic_solvents_smiles = solvents.get_organic_solvents_smiles()
-        common_organic_solvents_smarts = solvents.get_organic_solvents_smarts()
+        '''
 
-        return common_organic_solvents_smiles, common_organic_solvents_smarts
+        return list(self.__NODES__.values())
 
-    def get_essential_vitamins(self):
+    def get_node(self, node_key):
 
+        '''
 
-        vitamins = Vitamins()
+        Return a node based on the key by the user.
 
-        vitamins_smiles = vitamins.get_vitamin_smiles()
-        vitamins_smarts = vitamins.get_vitamin_smarts()
+        Arguments:
 
-        return vitamins_smiles, vitamins_smarts
+            node_key (String): node keys within the network
+        '''
 
-    def get_open_smiles_functional_groups(self):
+        return self.__NODES__[node_key]
 
+    def get_nodes(self, node_keys):
 
-        open_smiles = OpenSmiles()
+        '''
 
-        functional_groups_smiles = open_smiles.get_open_smiles()
-        functional_groups_smarts = open_smiles.get_open_smarts()
+        Arguments:
+            node_keys (List): return the list of nodes based on the user keys.
 
-        return functional_groups_smiles, functional_groups_smarts
+        Returns
+            nodes (List): List of the node objects
 
-    def get_commonly_used_r_group_replacements(self):
+        '''
 
-        common_r_groups = CommonRGroupReplacements()
+        nodes = []
 
-        r_group_smiles = common_r_groups.get_r_group_replacement_smiles()
-        r_group_smarts = common_r_groups.get_r_group_replacement_smarts()
+        for key in node_keys:
 
-        return r_group_smiles, r_group_smarts
+            nodes.append(self.__NODES__[key])
 
-    def get_iupac_blue_book_common_functional_groups(self):
+        return nodes
 
+    def initiate_network(self):
 
-        substituents = IUPACBlueBook()
-        rings = IUPACBlueBookRings()
+        '''
 
-        radical_smiles = substituents.get_radical_smiles()
-        radical_smarts = substituents.get_radical_smarts()
+        Initiates a Tree Node Network
 
-        rings_smiles = rings.get_rings_smiles()
-        rings_smarts = rings.get_rings_smarts()
-        
-        return radical_smiles, radical_smarts, rings_smiles, rings_smarts
+        Objects Initialized:
+            network: network object
 
-    def get_rings_in_drugs(self):
+        '''
 
+        self.network = {}
 
-        rings = RingsInDrugs()
+        # Place holder for now for new features.
 
-        rings_in_drugs_smiles = rings.get_rings_in_drugs_smiles()
-        rings_in_drugs_smarts = rings.get_rings_in_drugs_smarts()
+    def add_node(self, node_key, parent=None):
 
-        return rings_in_drugs_smiles, rings_in_drugs_smarts
+        '''
 
-    def get_common_heterocyclic_rings_phase_2(self):
+        Add a node into the network
 
+        '''
 
-        rings = Phase2HetereoCyclicRings()
+        if not parent:
+            self.network[node_key] = Node(node_key, self.__NODES__[node_key])
 
-        rings_smiles = rings.get_rings_smiles()
-        rings_smarts = rings.get_rings_smarts()
+        else:
+            branch = self.network.get(parent, None)
+            if not branch:
+                raise KeyError(f'No Node named {parent} exists')
 
-        return rings_smiles, rings_smarts
+            branch.add_child(node_key)
 
-    def get_common_privileged_scaffolds(self):
+    def get_parent(self, parent):
 
+        '''
 
-        scaffolds = PrivilegedScaffolds()
+        Get the Root node of the parent.
 
-        privileged_functional_groups_smiles = scaffolds.get_scaffolds_smiles()
-        privileged_functional_groups_smarts = scaffolds.get_privileged_smarts()
+        '''
 
-        return privileged_functional_groups_smiles, privileged_functional_groups_smarts
+        node_key = self.network.get(parent, None)
 
-    def get_common_warhead_covalent_inhibitors(self):
+        if not node_key:
+            raise KeyError(f'No Node named {parent} exists')
 
-        warheads = CommonWarheadsCovalentInhibitors()
-
-        warhead_smiles = warheads.get_warhead_smiles()
-        warhead_smarts = warheads.get_warhead_smarts()
-
-        return warhead_smiles, warhead_smarts
-
-    def get_common_polymer_repeating_units(self):
-
-        monomers = CommonMonomerRepeatingUnits()
-
-        monomers_smiles = monomers.get_monomer_smiles()
-        monomers_smarts = monomers.get_monomer_smarts()
-
-        return monomers_smiles, monomers_smarts
-
-    def get_common_electrophilic_warheads_for_kinases(self):
-
-        warheads = ElectrophilicWarheadsForKinases()
-
-        electrophilic_warheads_smiles = warheads.get_warheads_smiles()
-        electrophilic_warheads_smarts = warheads.get_warhead_smarts()
-
-        return electrophilic_warheads_smiles, electrophilic_warheads_smarts
-
-    def get_privileged_scaffolds_for_kinase_inhibitors(self):
-
-
-        scaffolds = PrivilegedKinaseInhibitorScaffolds()
-
-        kinase_inhibitor_smiles = scaffolds.get_scaffolds_smiles()
-        kinase_inhibitor_smarts = scaffolds.get_privileged_smarts()
-
-        return kinase_inhibitor_smiles, kinase_inhibitor_smarts
-
-    def get_braf_kinase_inhibitors_for_cancer(self):
-
-        inhibitors = BRAFInhibitorsByPocket()
-
-        ribose_smiles, ribose_smarts = inhibitors.get_ribose_pocket()
-        adenine_smiles, adenine_smarts = inhibitors.get_adenine_pocket()
-
-        hydrophobic_smiles, hydrophobic_smarts = inhibitors.get_hydrophobic_pocket()
-
-        type_1_smiles, type_1_smarts = inhibitors.get_type_1_pocket()
-        type_2_smiles, type_2_smarts = inhibitors.get_type_2_pocket()
-
-        exposed_to_solvent_smiles, exposed_to_solvent_smarts = inhibitors.get_exposed_to_solvent()
-
-        return (
-            ribose_smiles, ribose_smarts,
-            adenine_smiles, adenine_smarts,
-            hydrophobic_smiles, hydrophobic_smarts,
-            type_1_smiles, type_1_smarts,
-            type_2_smiles, type_2_smarts,
-            exposed_to_solvent_smiles, exposed_to_solvent_smarts
-        )
-
-    def get_common_amino_acid_protecting_groups(self):
-
-        protecting_groups = AminoAcidProtectingGroups()
-
-        (
-            alpha_amino_removed_by_acid_smiles,
-            alpha_amino_removed_by_acid_smarts,
-            alpha_amino_removed_by_acid_acronym_smiles,
-            alpha_amino_removed_by_acid_acronym_smarts,
-            alpha_amino_removed_by_base_smiles,
-            alpha_amino_removed_by_base_smarts,
-            alpha_amino_removed_by_base_acronym_smiles,
-            alpha_amino_removed_by_base_acronym_smarts,
-            other_alpha_amino_smiles,
-            other_alpha_amino_smarts,
-            other_alpha_amino_acronym_smiles,
-            other_alpha_amino_acronym_smarts,
-        ) =  protecting_groups.get_alpha_amino_acids()
-
-        (
-            lys_orn_dap_dab_removed_by_acid_smiles,
-            lys_orn_dap_dab_removed_by_acid_smarts,
-            lys_orn_dap_dab_removed_by_acid_acronym_smiles,
-            lys_orn_dap_dab_removed_by_acid_acronym_smarts,
-            lys_orn_dap_dab_removed_by_base_smiles,
-            lys_orn_dap_dab_removed_by_base_smarts,
-            lys_orn_dap_dab_removed_by_base_acronym_smiles,
-            lys_orn_dap_dab_removed_by_base_acronym_smarts,
-            other_lys_orn_dap_dab_smiles,
-            other_lys_orn_dap_dab_smarts,
-            other_lys_orn_dap_dab_acronym_smiles,
-            other_lys_orn_dap_dab_acronym_smarts,
-        ) = protecting_groups.get_lys_orn_dap_dab_protecting_groups()
-
-        (
-            alpha_carboxylic_acid_removed_by_acid_smiles,
-            alpha_carboxylic_acid_removed_by_acid_smarts,
-            alpha_carboxylic_acid_removed_by_acid_acronym_smiles,
-            alpha_carboxylic_acid_removed_by_acid_acronym_smarts,
-            alpha_carboxylic_acid_removed_by_base_smiles,
-            alpha_carboxylic_acid_removed_by_base_smarts,
-            alpha_carboxylic_acid_removed_by_base_acronym_smiles,
-            alpha_carboxylic_acid_removed_by_base_acronym_smarts,
-            other_alpha_carboxylic_acid_protecting_group_smiles,
-            other_alpha_carboxylic_acid_protecting_group_smarts,
-            other_alpha_carboxylic_acid_protecting_group_acronym_smiles,
-            other_alpha_carboxylic_acid_protecting_group_acronym_smarts,
-        ) = protecting_groups.get_alpha_carboxylic_acid_protecting_groups()
-
-        (
-            asp_glu_removed_by_acid_smiles,
-            asp_glu_removed_by_acid_smarts,
-            asp_glu_removed_by_acid_acronym_smiles,
-            asp_glu_removed_by_acid_acronym_smarts,
-            asp_glu_removed_by_base_smiles,
-            asp_glu_removed_by_base_smarts,
-            asp_glu_removed_by_base_acronym_smiles,
-            asp_glu_removed_by_base_acronym_smarts,
-            other_asp_glu_smiles,
-            other_asp_glu_smarts,
-            other_asp_glu_acronym_smiles,
-            other_asp_glu_acronym_smarts,
-        ) = protecting_groups.get_asp_glu_protecting_groups()
-
-        (
-            amide_backbone_protecting_group_removed_by_acid_smiles,
-            amide_backbone_protecting_group_removed_by_acid_smarts,
-            amide_backbone_protecting_group_removed_by_acid_acronym_smiles,
-            amide_backbone_protecting_group_removed_by_acid_acronym_smarts,
-            other_amide_backbone_protecting_group_smiles,
-            other_amide_backbone_protecting_group_smarts,
-        ) = protecting_groups.get_amide_backbone_protecting_group()
-
-        (
-            asn_gln_removed_by_acid_smiles,
-            asn_gln_removed_by_acid_smarts,
-            asn_gln_removed_by_acid_acronym_smiles,
-            asn_gln_removed_by_acid_acronym_smarts,
-            arg_gln_removed_by_acid_smiles,
-            arg_gln_removed_by_acid_smarts,
-            arg_gln_removed_by_acid_acronym_smiles,
-            arg_gln_removed_by_acid_acronym_smarts,
-            arg_gln_removed_by_base_smiles,
-            arg_gln_removed_by_base_smarts,
-            arg_gln_removed_by_base_acronym_smiles,
-            arg_gln_removed_by_base_acronym_smarts,
-            other_arg_gln_smiles,
-            other_arg_gln_smarts,
-            other_arg_gln_acronym_smiles,
-            other_arg_gln_acronym_smarts,
-        ) = protecting_groups.get_asn_gln_protecting_groups()
-
-        (
-            cys_removed_by_acid_smiles,
-            cys_removed_by_acid_smarts,
-            cys_removed_by_acid_acronym_smiles,
-            cys_removed_by_acid_acronym_smarts,
-            cys_removed_by_base_smiles,
-            cys_removed_by_base_smarts,
-            cys_removed_by_base_acronym_smiles,
-            cys_removed_by_base_acronym_smarts,
-            other_cys_smiles,
-            other_cys_smarts,
-            other_cys_acronym_smiles,
-            other_cys_acronym_smarts,
-        ) = protecting_groups.get_cys_protecting_groups()
-
-        (
-            his_removed_by_acid_smiles,
-            his_removed_by_acid_smarts,
-            his_removed_by_acid_acronym_smiles,
-            his_removed_by_acid_acronym_smarts,
-            his_removed_by_base_smiles,
-            his_removed_by_base_smarts,
-            his_removed_by_base_acronym_smiles,
-            his_removed_by_base_acronym_smarts,
-            other_his_smiles,
-            other_his_smarts,
-            other_his_acronym_smiles,
-            other_his_acronym_smarts,
-        ) = protecting_groups.get_his_protecting_groups()
-
-        (
-            ser_thr_hyp_removed_by_acid_smiles,
-            ser_thr_hyp_removed_by_acid_smarts,
-            ser_thr_hyp_removed_by_acid_acronym_smiles,
-            ser_thr_hyp_acronym_removed_by_acid_smarts,
-            other_ser_thr_hyp_smiles,
-            other_ser_thr_hyp_smarts,
-            other_ser_thr_hyp_acronym_smiles,
-            other_ser_thr_hyp_acronym_smarts,
-        ) = protecting_groups.get_ser_thr_hyp_protecting_groups()
-
-        (
-            tyr_removed_by_acid_smiles,
-            tyr_removed_by_acid_smarts,
-            tyr_removed_by_acid_acronym_smiles,
-            tyr_removed_by_acid_acronym_smarts,
-            other_tyr_protecting_group_smiles,
-            other_tyr_protecting_group_smarts,
-            other_tyr_protecting_group_acronym_smiles,
-            other_tyr_protecting_group_acronym_smarts,
-            trp_removed_by_acid_smiles,
-            trp_removed_by_acid_smarts,
-            trp_removed_by_acid_acronym_smiles,
-            trp_removed_by_acid_acronym_smarts,
-        ) = protecting_groups.get_tyr_protecting_groups()
-
-        return (
-            alpha_amino_removed_by_acid_smiles,
-            alpha_amino_removed_by_acid_smarts,
-            alpha_amino_removed_by_acid_acronym_smiles,
-            alpha_amino_removed_by_acid_acronym_smarts,
-            alpha_amino_removed_by_base_smiles,
-            alpha_amino_removed_by_base_smarts,
-            alpha_amino_removed_by_base_acronym_smiles,
-            alpha_amino_removed_by_base_acronym_smarts,
-            other_alpha_amino_smiles,
-            other_alpha_amino_smarts,
-            other_alpha_amino_acronym_smiles,
-            other_alpha_amino_acronym_smarts,
-            lys_orn_dap_dab_removed_by_acid_smiles,
-            lys_orn_dap_dab_removed_by_acid_smarts,
-            lys_orn_dap_dab_removed_by_acid_acronym_smiles,
-            lys_orn_dap_dab_removed_by_acid_acronym_smarts,
-            lys_orn_dap_dab_removed_by_base_smiles,
-            lys_orn_dap_dab_removed_by_base_smarts,
-            lys_orn_dap_dab_removed_by_base_acronym_smiles,
-            lys_orn_dap_dab_removed_by_base_acronym_smarts,
-            other_lys_orn_dap_dab_smiles,
-            other_lys_orn_dap_dab_smarts,
-            other_lys_orn_dap_dab_acronym_smiles,
-            other_lys_orn_dap_dab_acronym_smarts,
-            alpha_carboxylic_acid_removed_by_acid_smiles,
-            alpha_carboxylic_acid_removed_by_acid_smarts,
-            alpha_carboxylic_acid_removed_by_acid_acronym_smiles,
-            alpha_carboxylic_acid_removed_by_acid_acronym_smarts,
-            alpha_carboxylic_acid_removed_by_base_smiles,
-            alpha_carboxylic_acid_removed_by_base_smarts,
-            alpha_carboxylic_acid_removed_by_base_acronym_smiles,
-            alpha_carboxylic_acid_removed_by_base_acronym_smarts,
-            other_alpha_carboxylic_acid_protecting_group_smiles,
-            other_alpha_carboxylic_acid_protecting_group_smarts,
-            other_alpha_carboxylic_acid_protecting_group_acronym_smiles,
-            other_alpha_carboxylic_acid_protecting_group_acronym_smarts,
-            asp_glu_removed_by_acid_smiles,
-            asp_glu_removed_by_acid_smarts,
-            asp_glu_removed_by_acid_acronym_smiles,
-            asp_glu_removed_by_acid_acronym_smarts,
-            asp_glu_removed_by_base_smiles,
-            asp_glu_removed_by_base_smarts,
-            asp_glu_removed_by_base_acronym_smiles,
-            asp_glu_removed_by_base_acronym_smarts,
-            other_asp_glu_smiles,
-            other_asp_glu_smarts,
-            other_asp_glu_acronym_smiles,
-            other_asp_glu_acronym_smarts,
-            amide_backbone_protecting_group_removed_by_acid_smiles,
-            amide_backbone_protecting_group_removed_by_acid_smarts,
-            amide_backbone_protecting_group_removed_by_acid_acronym_smiles,
-            amide_backbone_protecting_group_removed_by_acid_acronym_smarts,
-            other_amide_backbone_protecting_group_smiles,
-            other_amide_backbone_protecting_group_smarts,
-            asn_gln_removed_by_acid_smiles,
-            asn_gln_removed_by_acid_smarts,
-            asn_gln_removed_by_acid_acronym_smiles,
-            asn_gln_removed_by_acid_acronym_smarts,
-            arg_gln_removed_by_acid_smiles,
-            arg_gln_removed_by_acid_smarts,
-            arg_gln_removed_by_acid_acronym_smiles,
-            arg_gln_removed_by_acid_acronym_smarts,
-            arg_gln_removed_by_base_smiles,
-            arg_gln_removed_by_base_smarts,
-            arg_gln_removed_by_base_acronym_smiles,
-            arg_gln_removed_by_base_acronym_smarts,
-            other_arg_gln_smiles,
-            other_arg_gln_smarts,
-            other_arg_gln_acronym_smiles,
-            other_arg_gln_acronym_smarts,
-            cys_removed_by_acid_smiles,
-            cys_removed_by_acid_smarts,
-            cys_removed_by_acid_acronym_smiles,
-            cys_removed_by_acid_acronym_smarts,
-            cys_removed_by_base_smiles,
-            cys_removed_by_base_smarts,
-            cys_removed_by_base_acronym_smiles,
-            cys_removed_by_base_acronym_smarts,
-            other_cys_smiles,
-            other_cys_smarts,
-            other_cys_acronym_smiles,
-            other_cys_acronym_smarts,
-            his_removed_by_acid_smiles,
-            his_removed_by_acid_smarts,
-            his_removed_by_acid_acronym_smiles,
-            his_removed_by_acid_acronym_smarts,
-            his_removed_by_base_smiles,
-            his_removed_by_base_smarts,
-            his_removed_by_base_acronym_smiles,
-            his_removed_by_base_acronym_smarts,
-            other_his_smiles,
-            other_his_smarts,
-            other_his_acronym_smiles,
-            other_his_acronym_smarts,
-            ser_thr_hyp_removed_by_acid_smiles,
-            ser_thr_hyp_removed_by_acid_smarts,
-            ser_thr_hyp_removed_by_acid_acronym_smiles,
-            ser_thr_hyp_acronym_removed_by_acid_smarts,
-            other_ser_thr_hyp_smiles,
-            other_ser_thr_hyp_smarts,
-            other_ser_thr_hyp_acronym_smiles,
-            other_ser_thr_hyp_acronym_smarts,
-            tyr_removed_by_acid_smiles,
-            tyr_removed_by_acid_smarts,
-            tyr_removed_by_acid_acronym_smiles,
-            tyr_removed_by_acid_acronym_smarts,
-            other_tyr_protecting_group_smiles,
-            other_tyr_protecting_group_smarts,
-            other_tyr_protecting_group_acronym_smiles,
-            other_tyr_protecting_group_acronym_smarts,
-            trp_removed_by_acid_smiles,
-            trp_removed_by_acid_smarts,
-            trp_removed_by_acid_acronym_smiles,
-            trp_removed_by_acid_acronym_smarts,
-        )
-
-    def get_polyfluoroalkyl_substances(self):
-
-        polyfluoroalkyl = EmergingPerFluoroAlkyls()
-
-        polyfluoroalkyl_smiles = polyfluoroalkyl.get_per_smiles()
-        polyfluoroalkyl_smarts = polyfluoroalkyl.get_per_smarts()
-
-        return polyfluoroalkyl_smiles, polyfluoroalkyl_smarts
-
-    def get_chemical_adsorption_on_montmorillonite_clays(self):
-
-        adsorption_groups = MontmorilloniteAdsorption()
-
-        functional_groups_smiles = adsorption_groups.get_chemical_smiles()
-        functional_groups_smarts = adsorption_groups.get_chemical_smarts()
-
-        return functional_groups_smiles, functional_groups_smarts
-
-    def get_schedule_one(self):
-
-        schedule_one = ScheduleOne()
-
-        functional_groups_smiles = schedule_one.get_schedule_one_smiles()
-        functional_groups_smarts = schedule_one.get_schedule_one_smarts()
-
-        return functional_groups_smiles, functional_groups_smarts
-
-    def get_schedule_two(self):
-
-        schedule_two = ScheduleTwo()
-
-        functional_groups_smiles = schedule_two.get_schedule_two_smiles()
-        functional_groups_smarts = schedule_two.get_schedule_two_smarts()
-
-        return functional_groups_smiles, functional_groups_smarts
-
-    def get_schedule_three(self):
-
-        schedule_three = ScheduleThree()
-
-        functional_groups_smiles = schedule_three.get_schedule_three_smiles()
-        functional_groups_smarts = schedule_three.get_schedule_three_smarts()
-
-        return functional_groups_smiles, functional_groups_smarts
-
-    def get_schedule_four(self):
-
-        schedule_four = ScheduleFour()
-
-        functional_groups_smiles = schedule_four.get_schedule_four_smiles()
-        functional_groups_smarts = schedule_four.get_schedule_four_smarts()
-
-        return functional_groups_smiles, functional_groups_smarts
-
-    def get_schedule_five(self):
-
-        schedule_five = ScheduleFive()
-
-        functional_groups_smiles = schedule_five.get_schedule_five_smiles()
-        functional_groups_smarts = schedule_five.get_schedule_five_smarts()
-
-        return functional_groups_smiles, functional_groups_smarts
-
-       #------------------------- Property Declaration for GlobalChem ---------------------------#
+        return node_key.children

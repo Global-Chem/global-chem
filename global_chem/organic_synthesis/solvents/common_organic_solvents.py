@@ -10,9 +10,10 @@ class CommonOrganicSolvents(object):
 
         pass
 
-    def get_organic_solvents_smiles(self):
+    @staticmethod
+    def get_smiles(self):
 
-        common_organic_solvents_smiles = {
+        smiles = {
             'acetic acid': 'CC(=O)O',
             'acetone' : 'CC(=O)C',
             'acetonitrile': 'CC#N',
@@ -56,11 +57,12 @@ class CommonOrganicSolvents(object):
             'triethylamine': 'CCN(CC)CC',
         }
 
-        return common_organic_solvents_smiles
+        return smiles
 
-    def get_organic_solvents_smarts(self):
+    @staticmethod
+    def get_smarts(self):
 
-        common_organic_solvents_smarts = {
+        smarts = {
             'acetic acid': '[#6]-[#6](=[#8])-[#8]',
             'acetone': '[#6]-[#6](=[#8])-[#6]',
             'acetonitrile': '[#6]-[#6]#[#7]',
@@ -104,4 +106,4 @@ class CommonOrganicSolvents(object):
             'triethylamine': '[#6]-[#6]-[#7](-[#6]-[#6])-[#6]-[#6]'
         }
 
-        return common_organic_solvents_smarts
+        return smarts

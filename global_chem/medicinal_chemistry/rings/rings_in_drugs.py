@@ -10,9 +10,10 @@ class RingsInDrugs(object):
 
         pass
 
-    def get_rings_in_drugs_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        rings_in_drugs_smiles = {
+        smiles = {
             "benzene": "C1=CC=CC=C1",
             "pyridine": "C1=CC=CN=C1",
             "piperidine": "N1CCCCC1",
@@ -107,11 +108,12 @@ class RingsInDrugs(object):
             "oxetan-2-one":"O=C1OCC1"
         }
 
-        return rings_in_drugs_smiles
+        return smiles
 
-    def get_rings_in_drugs_smarts(self):
+    @staticmethod
+    def get_smarts():
 
-        rings_in_drugs_smarts = {
+        smarts = {
             'benzene':'[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1',
             'pyridine':'[#6]1:[#6]:[#6]:[#6]:[#7]:[#6]:1',
             'piperidine':'[#7]1-[#6]-[#6]-[#6]-[#6]-[#6]-1',
@@ -206,4 +208,4 @@ class RingsInDrugs(object):
             'oxetan-2-one':'[#8]=[#6]1-[#8]-[#6]-[#6]-1',
         }
 
-        return rings_in_drugs_smarts
+        return smarts

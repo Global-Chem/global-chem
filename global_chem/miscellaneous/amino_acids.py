@@ -10,9 +10,10 @@ class AminoAcids(object):
 
         pass
 
-    def get_amino_acids_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        amino_acids_smiles = {
+        smiles = {
             "alanine": "C",
             "arginine": "CCCCNC(N)=N",
             "asparagine": "CCC(N)=O",
@@ -35,11 +36,12 @@ class AminoAcids(object):
             "valine": "C(C)C"
         }
 
-        return amino_acids_smiles
+        return smiles
 
-    def get_amino_acid_smarts(self):
+    @staticmethod
+    def get_smarts():
 
-        amino_acids_smarts = {
+        smarts = {
             'alanine':'[#6]',
             'arginine':'[#6]-[#6]-[#6]-[#6]-[#7]-[#6](-[#7])=[#7]',
             'asparagine':'[#6]-[#6]-[#6](-[#7])=[#8]',
@@ -62,4 +64,4 @@ class AminoAcids(object):
             'valine':'[#6](-[#6])-[#6]',
         }
 
-        return amino_acids_smarts
+        return smarts

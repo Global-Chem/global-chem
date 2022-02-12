@@ -10,9 +10,10 @@ class EmergingPerFluoroAlkyls(object):
 
         pass
 
-    def get_per_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        polyfluoroalkyl_smiles = {
+        smiles = {
             'perfluorohexanoic acid': 'C(=O)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)O',
             'perfluoroheptanoic acid': 'C(=O)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O',
             'perfluorononanoic acid': 'C(=O)(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O',
@@ -43,11 +44,12 @@ class EmergingPerFluoroAlkyls(object):
             'hexafluoropropylene oxide trimer acid': 'C(=O)(C(C(F)(F)F)(OC(C(C(F)(F)F)(OC(C(C(F)(F)F)(F)F)(F)F)F)(F)F)F)F',
         }
 
-        return polyfluoroalkyl_smiles
+        return smiles
 
-    def get_per_smarts(self):
+    @staticmethod
+    def get_smarts():
 
-        polyfluoroalkyl_smarts = {
+        smarts = {
             'perfluorohexanoic acid': '[#6](=[#8])(-[#6](-[#6](-[#6](-[#6](-[#6](-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])-[#8]',
             'perfluoroheptanoic acid': '[#6](=[#8])(-[#6](-[#6](-[#6](-[#6](-[#6](-[#6](-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])-[#8]',
             'perfluorononanoic acid': '[#6](=[#8])(-[#6](-[#6](-[#6](-[#6](-[#6](-[#6](-[#6](-[#6](-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])-[#8]',
@@ -77,4 +79,4 @@ class EmergingPerFluoroAlkyls(object):
             'hexafluoropropylene oxide trimer acid': '[#6](=[#8])(-[#6](-[#6](-[#9])(-[#9])-[#9])(-[#8]-[#6](-[#6](-[#6](-[#9])(-[#9])-[#9])(-[#8]-[#6](-[#6](-[#6](-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])-[#9])(-[#9])-[#9])-[#9])-[#9]',
         }
 
-        return polyfluoroalkyl_smarts
+        return smarts

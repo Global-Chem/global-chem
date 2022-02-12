@@ -10,9 +10,10 @@ class ScheduleTwo(object):
 
         pass
 
-    def get_schedule_two_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        functional_groups = {
+        smiles = {
             'codeine': 'CN1CCC23C4C1CC5=C2C(=C(C=C5)OC)OC3C(C=C4)O',
             'dihydroetorphine': 'CCCC(C)(C1CC23CCC1(C4C25CCN(C3CC6=C5C(=C(C=C6)O)O4)C)OC)O',
             'ethylmorphine': 'CCOC1=C2C3=C(CC4C5C3(CCN4C)C(O2)C(C=C5)O)C=C1',
@@ -75,11 +76,12 @@ class ScheduleTwo(object):
             '4-anilino-n-phenethylpiperidine': 'C1CN(CCC1NC2=CC=CC=C2)CCC3=CC=CC=C3',
         }
 
-        return functional_groups
+        return smiles
 
-    def get_schedule_two_smarts(self):
+    @staticmethod
+    def get_smarts():
 
-        functional_groups = {
+        smarts = {
             'codeine': '[#6]-[#7]1-[#6]-[#6]-[#6]23-[#6]4-[#6]-1-[#6]-[#6]1:[#6]-2:[#6](:[#6](:[#6]:[#6]:1)-[#8]-[#6])-[#8]-[#6]-3-[#6](-[#6]=[#6]-4)-[#8]',
             'dihydroetorphine': '[#6]-[#6]-[#6]-[#6](-[#6])(-[#6]1-[#6]-[#6]23-[#6]-[#6]-[#6]-1(-[#6]1-[#6]-24-[#6]-[#6]-[#7](-[#6]-3-[#6]-[#6]2:[#6]-4:[#6](:[#6](:[#6]:[#6]:2)-[#8])-[#8]-1)-[#6])-[#8]-[#6])-[#8]',
             'ethylmorphine': '[#6]-[#6]-[#8]-[#6]1:[#6]2:[#6]3:[#6](-[#6]-[#6]4-[#6]5-[#6]-3(-[#6]-[#6]-[#7]-4-[#6])-[#6](-[#8]-2)-[#6](-[#6]=[#6]-5)-[#8]):[#6]:[#6]:1',
@@ -142,4 +144,4 @@ class ScheduleTwo(object):
             '4-anilino-n-phenethylpiperidine': '[#6]1-[#6]-[#7](-[#6]-[#6]-[#6]-1-[#7]-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1)-[#6]-[#6]-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1',
         }
 
-        return functional_groups
+        return smarts

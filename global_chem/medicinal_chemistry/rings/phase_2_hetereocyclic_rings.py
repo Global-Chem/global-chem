@@ -10,9 +10,10 @@ class Phase2HetereoCyclicRings(object):
 
         pass
 
-    def get_rings_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        rings_smiles = {
+        smiles = {
             'pyridine': 'C1=CC=NC=C1',
             'indole': 'C12=CC=CC=C1C=CN2',
             'imidazole': 'C1=CN=CN1',
@@ -34,11 +35,12 @@ class Phase2HetereoCyclicRings(object):
             'tosufloxacin': 'NC1=C(F)C=C2C(NC=C(C(O)=O)C2=O)=N1'
         }
 
-        return rings_smiles
+        return smiles
 
-    def get_rings_smarts(self):
+    @staticmethod
+    def get_smarts():
 
-        rings_smarts = {
+        smarts = {
             'pyridine': '[#6]1:[#6]:[#6]:[#7]:[#6]:[#6]:1',
             'indole': '[#6]12:[#6]:[#6]:[#6]:[#6]:[#6]:1:[#6]:[#6]:[#7H]:2',
             'imidazole': '[#6]1:[#6]:[#7]:[#6]:[#7H]:1',
@@ -60,4 +62,4 @@ class Phase2HetereoCyclicRings(object):
             'tosufloxacin': '[#7]-[#6]1:[#6](-[#9]):[#6]:[#6]2:[#6](:[#7H]:[#6]:[#6](-[#6](-[#8])=[#8]):[#6]:2=[#8]):[#7]:1',
         }
 
-        return rings_smarts
+        return smarts

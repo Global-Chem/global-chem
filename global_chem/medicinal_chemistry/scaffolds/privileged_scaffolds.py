@@ -10,9 +10,10 @@ class PrivilegedScaffolds(object):
 
         pass
 
-    def get_scaffolds_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        privileged_functional_groups_smiles = {
+        smiles = {
             'indole': 'C12=CC=CC=C1C=CN2',
             'quinoline': 'C12=CC=CC=C1N=CC=C2',
             'isoquinoline': 'C12=C(C=NC=C2)C=CC=C1',
@@ -62,11 +63,12 @@ class PrivilegedScaffolds(object):
             'pyranoquinolone': 'O=C1C=CC2=CC=CC=C2N1'
         }
 
-        return privileged_functional_groups_smiles
+        return smiles
 
-    def get_privileged_smarts(self):
+    @staticmethod
+    def get_smarts():
 
-        privileged_functional_groups_smarts = {
+        smarts = {
             'indole': '[#6]12:[#6]:[#6]:[#6]:[#6]:[#6]:1:[#6]:[#6]:[#7H]:2',
             'quinoline': '[#6]12:[#6]:[#6]:[#6]:[#6]:[#6]:1:[#7]:[#6]:[#6]:[#6]:2',
             'isoquinoline': '[#6]12:[#6](:[#6]:[#7]:[#6]:[#6]:1):[#6]:[#6]:[#6]:[#6]:2',
@@ -116,4 +118,4 @@ class PrivilegedScaffolds(object):
             'pyranoquinolone': '[#8]=[#6]1:[#6]:[#6]:[#6]2:[#6]:[#6]:[#6]:[#6]:[#6]:2:[#7H]:1',
         }
 
-        return privileged_functional_groups_smarts
+        return smarts

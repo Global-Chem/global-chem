@@ -10,9 +10,10 @@ class ScheduleFour(object):
 
         pass
 
-    def get_schedule_four_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        functional_groups = {
+        smiles = {
             'dextropropoxyphene': 'CCC(=O)OC(CC1=CC=CC=C1)(C2=CC=CC=C2)C(C)CN(C)C',
             '2-[(dimethylamino)methyl]-1-(3-methoxyphenyl)cyclohexanol': 'CN(C)CC1CCCCC1(C2=CC(=CC=C2)OC)O',
             'alfaxalone': 'CC(=O)C1CCC2C1(CC(=O)C3C2CCC4C3(CCC(C4)O)C)C',
@@ -92,11 +93,12 @@ class ScheduleFour(object):
             'butorphanol': 'C1CCC2(C3CC4=C(C2(C1)CCN3CC5CCC5)C=C(C=C4)O)O',
         }
 
-        return functional_groups
+        return smiles
 
-    def get_schedule_four_smarts(self):
+    @staticmethod
+    def get_smarts():
 
-        functional_groups = {
+        smarts = {
             'dextropropoxyphene': '[#6]-[#6]-[#6](=[#8])-[#8]-[#6](-[#6]-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1)(-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1)-[#6](-[#6])-[#6]-[#7](-[#6])-[#6]',
             '2-[(dimethylamino)methyl]-1-(3-methoxyphenyl)cyclohexanol': '[#6]-[#7](-[#6])-[#6]-[#6]1-[#6]-[#6]-[#6]-[#6]-[#6]-1(-[#6]1:[#6]:[#6](:[#6]:[#6]:[#6]:1)-[#8]-[#6])-[#8]',
             'alfaxalone': '[#6]-[#6](=[#8])-[#6]1-[#6]-[#6]-[#6]2-[#6]-1(-[#6]-[#6](=[#8])-[#6]1-[#6]-2-[#6]-[#6]-[#6]2-[#6]-1(-[#6]-[#6]-[#6](-[#6]-2)-[#8])-[#6])-[#6]',
@@ -176,4 +178,4 @@ class ScheduleFour(object):
             'butorphanol': '[#6]1-[#6]-[#6]-[#6]2(-[#6]3-[#6]-[#6]4:[#6](-[#6]-2(-[#6]-1)-[#6]-[#6]-[#7]-3-[#6]-[#6]1-[#6]-[#6]-[#6]-1):[#6]:[#6](:[#6]:[#6]:4)-[#8])-[#8]',
         }
 
-        return functional_groups
+        return smarts

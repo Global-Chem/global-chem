@@ -10,9 +10,10 @@ class OpenSmiles(object):
 
         pass
 
-    def get_open_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        functional_groups_smiles = {
+        smiles = {
             "1,1,1-trifluoroethane": "CC(F)(F)F",
             "1,1'-biphenyl": "C1(C2=CC=CC=C2)=CC=CC=C1",
             "1H-indene": "C1(CC=C2)=C2C=CC=C1",
@@ -109,11 +110,12 @@ class OpenSmiles(object):
             "triphenylene": "C1(C=CC=C2)=C2C(C=CC=C3)=C3C4=C1C=CC=C4",
         }
 
-        return functional_groups_smiles
+        return smiles
 
-    def get_open_smarts(self):
+    @staticmethod
+    def get_smarts():
 
-        functional_groups_smarts = {
+        smarts = {
             "acetic anydride": "[CX3](=[OX1])[OX2][CX3](=[OX1])",
             "acetylenic carbon": "[$([CX2]#C)]",
             "acyl bromide": "[CX3](=[OX1])[Br]",
@@ -201,4 +203,4 @@ class OpenSmiles(object):
             "vinylic carbon": "[$([CX3]=[CX3])]",
         }
 
-        return functional_groups_smarts
+        return smarts

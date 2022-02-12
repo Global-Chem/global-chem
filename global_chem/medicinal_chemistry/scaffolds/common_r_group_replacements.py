@@ -10,9 +10,10 @@ class CommonRGroupReplacements(object):
 
         pass
 
-    def get_r_group_replacement_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        r_group_smiles = {
+        smiles = {
             'water': 'O',
             'methanol': 'OC',
             'ammonia': 'N',
@@ -404,11 +405,12 @@ class CommonRGroupReplacements(object):
             '1-(pyridin-2-yl)piperazine': 'N1CCN(c2ccccn2)CC1',
         }
 
-        return r_group_smiles
+        return smiles
 
-    def get_r_group_replacement_smarts(self):
+    @staticmethod
+    def get_smarts():
 
-        r_group_smarts = {
+        smarts = {
             'water': '[#8]',
             'methanol': '[#8]-[#6]',
             'ammonia': '[#7]',
@@ -797,4 +799,4 @@ class CommonRGroupReplacements(object):
 
         }
 
-        return r_group_smarts
+        return smarts

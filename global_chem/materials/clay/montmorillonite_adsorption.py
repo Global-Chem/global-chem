@@ -10,9 +10,10 @@ class MontmorilloniteAdsorption(object):
 
         pass
 
-    def get_chemical_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        functional_groups_smiles = {
+        smiles = {
             '3,3′,4,4′,5-pentachlorobiphenyl': 'C1=CC(=C(C=C1C2=CC(=C(C(=C2)Cl)Cl)Cl)Cl)Cl',
             '3,4,3′,4′-tetrachlorobiphenyl': 'C1=CC(=C(C=C1C2=CC(=C(C=C2)Cl)Cl)Cl)Cl',
             '2,2′,4,4′,5,5′-hexachlorobiphenyl': 'C1=C(C(=CC(=C1Cl)Cl)Cl)C2=CC(=C(C=C2Cl)Cl)Cl',
@@ -47,11 +48,12 @@ class MontmorilloniteAdsorption(object):
             'xearalenone': 'CC1CCCC(=O)CCCC=CC2=C(C(=CC(=C2)O)O)C(=O)O1',
             'aldicarb': 'CC(C)(C=NOC(=O)NC)SC'
         }
-        return functional_groups_smiles
+        return smiles
 
-    def get_chemical_smarts(self):
+    @staticmethod
+    def get_smarts():
 
-        functional_groups_smarts = {
+        smarts = {
             '3,3′,4,4′,5-pentachlorobiphenyl': '[#6]1:[#6]:[#6](:[#6](:[#6]:[#6]:1-[#6]1:[#6]:[#6](:[#6](:[#6](:[#6]:1)-[#17])-[#17])-[#17])-[#17])-[#17]',
             '3,4,3′,4′-tetrachlorobiphenyl': '[#6]1:[#6]:[#6](:[#6](:[#6]:[#6]:1-[#6]1:[#6]:[#6](:[#6](:[#6]:[#6]:1)-[#17])-[#17])-[#17])-[#17]',
             '2,2′,4,4′,5,5′-hexachlorobiphenyl': '[#6]1:[#6](:[#6](:[#6]:[#6](:[#6]:1-[#17])-[#17])-[#17])-[#6]1:[#6]:[#6](:[#6](:[#6]:[#6]:1-[#17])-[#17])-[#17]',
@@ -87,4 +89,4 @@ class MontmorilloniteAdsorption(object):
             'aldicarb': '[#6]-[#6](-[#6])(-[#6]=[#7]-[#8]-[#6](=[#8])-[#7]-[#6])-[#16]-[#6]',
         }
 
-        return functional_groups_smarts
+        return smarts

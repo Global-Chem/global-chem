@@ -10,9 +10,10 @@ class IUPACBlueBook(object):
 
         pass
 
-    def get_radical_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        radical_smiles = {
+        smiles = {
             'acetamido': 'O=C(N)C',
             'acetoacetyl': 'O=C(C)CC(=O)O',
             'acetyl': 'C(C)=O',
@@ -237,11 +238,12 @@ class IUPACBlueBook(object):
             'xylylene': 'NCC1=CC=CC(CN)=C1',
         }
 
-        return radical_smiles
+        return smiles
 
-    def get_radical_smarts(self):
+    @staticmethod
+    def get_smarts():
 
-        radical_smarts = {
+        smarts = {
             'acetamido':'[#8]=[#6](-[#7])-[#6]',
             'acetoacetyl':'[#8]=[#6](-[#6])-[#6]-[#6](=[#8])-[#8]',
             'acetyl':'[#6](-[#6])=[#8]',
@@ -466,4 +468,4 @@ class IUPACBlueBook(object):
             'xylylene':'[#7]-[#6]-[#6]1:[#6]:[#6]:[#6]:[#6](-[#6]-[#7]):[#6]:1',
         }
 
-        return radical_smarts
+        return smarts

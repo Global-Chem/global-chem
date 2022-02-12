@@ -10,9 +10,10 @@ class InterstellarSpace(object):
 
         pass
 
-    def get_per_smiles(self):
+    @staticmethod
+    def smiles():
 
-        interstellar_smiles = {
+        smiles = {
             'aluminum monochloride': '[Al]Cl',
             'aluminum monofluoride': '[Al]F',
             'aluminum isocyanide': '[Al][C-]#[NH+]',
@@ -146,12 +147,13 @@ class InterstellarSpace(object):
             'disulfur': 'S=S'
         }
 
-        return interstellar_smiles
+        return smiles
 
-    def get_per_smarts(self):
+    @staticmethod
+    def get_smarts():
 
 
-        interstellar_smarts = {
+        smarts = {
             'aluminum monochloride': '[Al]-[#17]',
             'aluminum monofluoride': '[Al]-[#9]',
             'methylidyne': '[#6H]',
@@ -277,4 +279,4 @@ class InterstellarSpace(object):
             'disulfur': '[#16]=[#16]',
         }
 
-        return interstellar_smarts
+        return smarts

@@ -10,9 +10,10 @@ class ScheduleOne(object):
 
         pass
 
-    def get_schedule_one_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        functional_groups = {
+        smiles = {
             'acetyl-alpha-methylfentanyl': 'CC(CC1=CC=CC=C1)N2CCC(CC2)N(C3=CC=CC=C3)C(=O)C',
             'acetylmethadol': 'CCC(C(CC(C)N(C)C)(C1=CC=CC=C1)C2=CC=CC=C2)OC(=O)C',
             'acetylfentanyl': 'CC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3',
@@ -255,11 +256,12 @@ class ScheduleOne(object):
             'brorphine': 'CC(C1=CC=C(Br)C=C1)N2CCC(N3C(NC4=C3C=CC=C4)=O)CC2',
         }
 
-        return functional_groups
+        return smiles
 
-    def get_schedule_one_smarts(self):
+    @staticmethod
+    def get_smarts():
 
-        functional_groups = {
+        smarts = {
             'acetyl-alpha-methylfentanyl': '[#6]-[#6](-[#6]-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1)-[#7]1-[#6]-[#6]-[#6](-[#6]-[#6]-1)-[#7](-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1)-[#6](=[#8])-[#6]',
             'acetylmethadol': '[#6]-[#6]-[#6](-[#6](-[#6]-[#6](-[#6])-[#7](-[#6])-[#6])(-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1)-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1)-[#8]-[#6](=[#8])-[#6]',
             'acetylfentanyl': '[#6]-[#6](=[#8])-[#7](-[#6]1-[#6]-[#6]-[#7](-[#6]-[#6]-1)-[#6]-[#6]-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1)-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1',
@@ -502,4 +504,4 @@ class ScheduleOne(object):
             'brorphine': '[#6]-[#6](-[#6]1:[#6]:[#6]:[#6](-[#35]):[#6]:[#6]:1)-[#7]1-[#6]-[#6]-[#6](-[#7]2:[#6](:[#7H]:[#6]3:[#6]:2:[#6]:[#6]:[#6]:[#6]:3)=[#8])-[#6]-[#6]-1',
         }
 
-        return functional_groups
+        return smarts

@@ -10,10 +10,11 @@ class CommonRegexPatterns(object):
 
         pass
 
-    def get_common_regex_patterns(self):
+    @staticmethod
+    def get_patterns():
 
-        regex_patterns = {
+        patterns = {
             'mol2': '^@<\w+?>\w+?\n[COMPOUND_ID]\n(.|\n)*?@<TRIPOS>SUBSTRUCTURE\n.*?\n'
         }
 
-        return regex_patterns
+        return patterns

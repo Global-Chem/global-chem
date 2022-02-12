@@ -4,15 +4,16 @@
 #
 # --------------------------------------------------
 
-class PrivilegedKinaseInhibitorScaffolds(object):
+class PrivilegedKinaseInhibitors(object):
 
     def __init__(self):
 
         pass
 
-    def get_scaffolds_smiles(self):
+    @staticmethod
+    def get_smiles(self):
 
-        kinase_inhibitor_smiles = {
+        smiles = {
             'indole': 'C12=CC=CC=C1C=CN2',
             'quinoline': 'C12=CC=CC=C1C=CC=N2',
             'phenylpiperazine': 'C1(N2CCNCC2)=CC=CC=C1',
@@ -44,11 +45,13 @@ class PrivilegedKinaseInhibitorScaffolds(object):
             '1,4-dihydropyridine': 'C1=CNC=CC1',
             '2-(tetrazol-5-yl)biphenyl': 'C1(C2=CC=CC=C2C3=NN=NN3)=CC=CC=C1'
         }
-        return kinase_inhibitor_smiles
 
-    def get_privileged_smarts(self):
+        return smiles
 
-        kinase_inhibitor_smarts = {
+    @staticmethod
+    def get_smarts(self):
+
+        smarts = {
             'indole': '[#6]12:[#6]:[#6]:[#6]:[#6]:[#6]:1:[#6]:[#6]:[#7H]:2',
             'quinoline': '[#6]12:[#6]:[#6]:[#6]:[#6]:[#6]:1:[#6]:[#6]:[#6]:[#7]:2',
             'phenylpiperazine': '[#6]1(-[#7]2-[#6]-[#6]-[#7]-[#6]-[#6]-2):[#6]:[#6]:[#6]:[#6]:[#6]:1',
@@ -81,4 +84,4 @@ class PrivilegedKinaseInhibitorScaffolds(object):
             '2-(tetrazol-5-yl)biphenyl': '[#6]1(-[#6]2:[#6]:[#6]:[#6]:[#6]:[#6]:2-[#6]2:[#7]:[#7]:[#7]:[#7H]:2):[#6]:[#6]:[#6]:[#6]:[#6]:1',
         }
 
-        return kinase_inhibitor_smarts
+        return smarts

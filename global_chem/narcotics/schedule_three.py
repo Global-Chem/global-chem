@@ -10,9 +10,10 @@ class ScheduleThree(object):
 
         pass
 
-    def get_schedule_three_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        functional_groups = {
+        smiles = {
             'norfentanyl': 'CCC(=O)N(C1CCNCC1)C2=CC=CC=C2',
             'benzphetamine': 'CC(CC1=CC=CC=C1)N(C)CC2=CC=CC=C2',
             'chlorphentermine': 'CN(C)CCC(C1=CC=C(C=C1)Cl)C2=CC=CC=N2',
@@ -37,11 +38,12 @@ class ScheduleThree(object):
             'buprenorphine': 'CC(C)(C)C(C)(C1CC23CCC1(C4C25CCN(C3CC6=C5C(=C(C=C6)O)O4)CC7CC7)OC)O',
         }
 
-        return functional_groups
+        return smiles
 
-    def get_schedule_three_smarts(self):
+    @staticmethod
+    def get_smarts():
 
-        functional_groups = {
+        smarts = {
             'norfentanyl': '[#6]-[#6]-[#6](=[#8])-[#7](-[#6]1-[#6]-[#6]-[#7]-[#6]-[#6]-1)-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1',
             'benzphetamine': '[#6]-[#6](-[#6]-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1)-[#7](-[#6])-[#6]-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1',
             'chlorphentermine': '[#6]-[#7](-[#6])-[#6]-[#6]-[#6](-[#6]1:[#6]:[#6]:[#6](:[#6]:[#6]:1)-[#17])-[#6]1:[#6]:[#6]:[#6]:[#6]:[#7]:1',
@@ -66,4 +68,4 @@ class ScheduleThree(object):
             'buprenorphine': '[#6]-[#6](-[#6])(-[#6])-[#6](-[#6])(-[#6]1-[#6]-[#6]23-[#6]-[#6]-[#6]-1(-[#6]1-[#6]-24-[#6]-[#6]-[#7](-[#6]-3-[#6]-[#6]2:[#6]-4:[#6](:[#6](:[#6]:[#6]:2)-[#8])-[#8]-1)-[#6]-[#6]1-[#6]-[#6]-1)-[#8]-[#6])-[#8]',
         }
 
-        return functional_groups
+        return smarts

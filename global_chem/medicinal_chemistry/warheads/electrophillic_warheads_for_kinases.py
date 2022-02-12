@@ -10,9 +10,10 @@ class ElectrophilicWarheadsForKinases(object):
 
         pass
 
-    def get_warheads_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        electrophilic_warheads_smiles = {
+        smiles = {
             'methylacrylamide': 'CNC(C=C)=O',
             'methyl acrylate': 'COC(C=C)=O',
             'methyl propiolate' :'COC(C#C)=O',
@@ -39,11 +40,12 @@ class ElectrophilicWarheadsForKinases(object):
             'aldehyde': 'CC=O'
         }
 
-        return electrophilic_warheads_smiles
+        return smiles
 
-    def get_warhead_smarts(self):
+    @staticmethod
+    def get_smarts():
 
-        electrophilic_warheads_smarts = {
+        smarts = {
             'methylacrylamide': '[#6]-[#7]-[#6](-[#6]=[#6])=[#8]',
             'methyl acrylate': '[#6]-[#8]-[#6](-[#6]=[#6])=[#8]',
             'methyl propiolate': '[#6]-[#8]-[#6](-[#6]#[#6])=[#8]',
@@ -70,4 +72,4 @@ class ElectrophilicWarheadsForKinases(object):
             'aldehyde': '[#6]-[#6]=[#8]',
         }
 
-        return electrophilic_warheads_smarts
+        return smarts

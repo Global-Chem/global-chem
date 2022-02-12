@@ -10,9 +10,10 @@ class ScheduleFive(object):
 
         pass
 
-    def get_schedule_five_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        functional_groups = {
+        smiles = {
             'eluxadoline': 'CC1=CC(=CC(=C1CC(C(=O)N(CC2=CC(=C(C=C2)OC)C(=O)O)C(C)C3=NC=C(N3)C4=CC=CC=C4)N)C)C(=O)N',
             'pyrovalerone': 'CCCC(C(=O)C1=CC=C(C=C1)C)N2CCCC2',
             'brivaracetam': 'CCCC1CC(=O)N(C1)C(CC)C(=O)N',
@@ -23,11 +24,12 @@ class ScheduleFive(object):
             'pregabalin': 'CC(C)CC(CC(=O)O)CN',
         }
 
-        return functional_groups
+        return smiles
 
-    def get_schedule_five_smarts(self):
+    @staticmethod
+    def smarts():
 
-        functional_groups = {
+        smarts = {
             'eluxadoline': '[#6]-[#6]1:[#6]:[#6](:[#6]:[#6](:[#6]:1-[#6]-[#6](-[#6](=[#8])-[#7](-[#6]-[#6]1:[#6]:[#6](:[#6](:[#6]:[#6]:1)-[#8]-[#6])-[#6](=[#8])-[#8])-[#6](-[#6])-[#6]1:[#7]:[#6]:[#6](:[#7H]:1)-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1)-[#7])-[#6])-[#6](=[#8])-[#7]',
             'pyrovalerone': '[#6]-[#6]-[#6]-[#6](-[#6](=[#8])-[#6]1:[#6]:[#6]:[#6](:[#6]:[#6]:1)-[#6])-[#7]1-[#6]-[#6]-[#6]-[#6]-1',
             'brivaracetam': '[#6]-[#6]-[#6]-[#6]1-[#6]-[#6](=[#8])-[#7](-[#6]-1)-[#6](-[#6]-[#6])-[#6](=[#8])-[#7]',
@@ -38,4 +40,4 @@ class ScheduleFive(object):
             'pregabalin': '[#6]-[#6](-[#6])-[#6]-[#6](-[#6]-[#6](=[#8])-[#8])-[#6]-[#7]',
         }
 
-        return functional_groups
+        return smarts

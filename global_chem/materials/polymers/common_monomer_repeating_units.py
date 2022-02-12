@@ -10,9 +10,10 @@ class CommonMonomerRepeatingUnits(object):
 
         pass
 
-    def get_monomer_smiles(self):
+    @staticmethod
+    def get_smiles():
 
-        monomer_smiles = {
+        smiles = {
             '3′-bromo-2-chloro[1,1′:4′,1′′-terphenyl]-4,4′′': 'ClC1=CC=CC=C1C2=CC=C(C3=CC=CC=C3)C(Br)=C2',
             '[3,3′-biquinoline]-6,6′': 'C1(C2=CC3=CC=CC=C3N=C2)=CC4=CC=CC=C4N=C1',
             '[2,3′-bipyridine]-4,5′': 'C1(C2=CC=CN=C2)=NC=CC=C1',
@@ -93,11 +94,12 @@ class CommonMonomerRepeatingUnits(object):
             'cyclohexane-methanylylidenecyclohexane-idenemethanylylidenecyclohexane-methylene': 'CC(CC1)CCC1C=C(CC2)CCC2=CC3CCCCC3'
         }
 
-        return monomer_smiles
+        return smiles
 
-    def get_monomer_smarts(self):
+    @staticmethod
+    def get_smarts():
 
-        monomer_smarts = {
+        smarts = {
             '3′-bromo-2-chloro[1,1′:4′,1′′-terphenyl]-4,4′′': '[#17]-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1-[#6]1:[#6]:[#6]:[#6](-[#6]2:[#6]:[#6]:[#6]:[#6]:[#6]:2):[#6](-[#35]):[#6]:1',
             '[3,3′-biquinoline]-6,6′': '[#6]1(-[#6]2:[#6]:[#6]3:[#6]:[#6]:[#6]:[#6]:[#6]:3:[#7]:[#6]:2):[#6]:[#6]2:[#6]:[#6]:[#6]:[#6]:[#6]:2:[#7]:[#6]:1',
             '[2,3′-bipyridine]-4,5′': '[#6]1(-[#6]2:[#6]:[#6]:[#6]:[#7]:[#6]:2):[#7]:[#6]:[#6]:[#6]:[#6]:1',
@@ -178,4 +180,4 @@ class CommonMonomerRepeatingUnits(object):
             'cyclohexane-methanylylidenecyclohexane-idenemethanylylidenecyclohexane-methylene': '[#6]-[#6]1-[#6]-[#6]-[#6](-[#6]-[#6]-1)-[#6]=[#6]1-[#6]-[#6]-[#6](-[#6]-[#6]-1)=[#6]-[#6]1-[#6]-[#6]-[#6]-[#6]-[#6]-1',
         }
 
-        return monomer_smarts
+        return smarts
