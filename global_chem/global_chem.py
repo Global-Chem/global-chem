@@ -502,7 +502,7 @@ class GlobalChem(object):
 
         return self.__NODES__[node_key].get_smarts()
 
-    def build_global_chem_network(self, print_output=False):
+    def build_global_chem_network(self, print_output=False, debugger=False):
 
         '''
 
@@ -533,6 +533,9 @@ class GlobalChem(object):
                     object_path = (
                         ':'.join(os.path.join(os.getcwd(), dirpath, file).split('/')[1:]).split('.')[1].split(":")
                     )
+
+                    if debugger:
+                        print ("Node Object Paths: %s: " % object_path)
 
                     path_objects.append(object_path)
 
