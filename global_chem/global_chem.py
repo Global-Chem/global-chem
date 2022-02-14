@@ -201,11 +201,16 @@ class GlobalChem(object):
 
     """
 
+    # NODE CONTRIBUTORS
+    # -----------------
+
+    # Thank you to the contributors to the node network that made this project alive.
+
     __NODES__ = {
         'global_chem': Node,
         'emerging_perfluoroalkyls': EmergingPerFluoroAlkyls,                     # Asuka Orr & Suliman Sharif
         'montmorillonite_adsorption': MontmorilloniteAdsorption,                 # Asuka Orr & Suliman Sharif
-        'common_monomer_repeating_units': CommonMonomerRepeatingUnits,           # Sulman Sharif
+        'common_monomer_repeating_units': CommonMonomerRepeatingUnits,           # Suliman Sharif
         'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,   # Ruibin Liu & Suliman Sharif
         'common_warhead_covalent_inhibitors': CommonWarheadsCovalentInhibitors,  # Shaoqi Zhao & Suliman Sharif
         'rings_in_drugs': RingsInDrugs,                                          # Alexander Mackerell & Suliman Sharif
