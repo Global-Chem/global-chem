@@ -224,7 +224,7 @@ gc.compute_common_score('benzene', verbose=True)
 and here is the formula:
 
 <p align="center">
-  <img width="800" height="400" src="images/figures/math_formular.png">
+  <img width="850" height="250" src="images/figures/math_formular.png">
 </p>
 
 Variables List
