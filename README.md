@@ -36,6 +36,21 @@ it yourself.
 pip install global-chem
 
 ```
+
+Rules
+=====
+
+The Graph Network (GN)s comes with a couple of rules that for now make the software engineering easier on the developer. 
+
+1.) There must be a root node.
+2.) When Adding a Node every node must be connected. 
+3.) To remove a node it must not have any children. 
+
+The Deep Graph Network (DGN)s comes also with a couple of rules to make the implementation easier:
+
+1.) There must be a root node of 1 which marks as your "input" node. 
+2.) When adding a layer all nodes will be added to all the previous layers as children. (Folk can use the remove node feature to perform dropouts)
+
 Quick Start
 ===========
 
@@ -76,41 +91,73 @@ gc.build_global_chem_network(print_output=True)
 },
 ```
 
-Fetch Data from Node:
+Fetch the Node:
 
 ```python
 
 gc = GlobalChem()
-gc.build_global_chem_network(print_output=True, debugger=False)
-node = gc.get_node('emerging_perfluoroalkyls')
+gc.build_global_chem_network(print_output=False, debugger=False)
+node = gc.get_node('emerging_perfluoroalkyls').get_smiles()
 print (node)
 
 >>>
 {'perfluorohexanoic acid': 'C(=O)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)O' etc...}
 ```
 
-Fetch All Data from Node:
+Fetch the IUPAC:SMILES/SMARTS Data from the Node:
+
+```python
+
+gc = GlobalChem()
+gc.build_global_chem_network(print_output=True, debugger=False)
+smiles = gc.get_node_smiles('emerging_perfluoroalkyls')
+smarts = gc.get_node_smarts('emerging_perfluoroalkyls')
+
+print (smiles)
+```
+
+Fetch All Data from Network:
 
 ```python
 
 gc = GlobalChem()
 print(gc.get_all_smiles())
+print(gc.get_all_smarts())
+print(gc.get_all_names())
 
 >>>
 ['C(=O)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)O', 'C(=O)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O' etc...]
     
 ```
 
-Compute Common Score for an IUPAC Name:
+Remove a Node from the Network:
+
+Removes the Node and it's connections to any parents. 
 
 ```python
 
 gc = GlobalChem()
 gc.build_global_chem_network(print_output=False, debugger=False)
-gc.compute_common_score('benzene', verbose=True)
-    
+gc.remove_node('emerging_perfluoroalkyls')
+
 ```
-To Create Your Own Chemical Graph Network And Check the Values
+
+Set & Get the Node Value:
+
+If the user wants to put some metadata inside the node they can:
+
+```python
+
+gc = GlobalChem()
+gc.build_global_chem_network(print_output=True, debugger=False)
+gc.set_node_value('emerging_perfluoroalkyls', {'some_data': ['bunny']})
+print (gc.get_node_value('emerging_perfluoroalkyls'))
+
+>>>
+{'some_data': ['bunny']}
+```
+
+To Create Your Own Chemical Graph Network (GN) And Check the Values
 
 ```python
 
@@ -133,6 +180,52 @@ values = gc.get_node_smarts('electrophilic_warheads_for_kinases')
 'propane-1,3-diyl': '[#6]-[#6]-[#6]', 'methylmethylene': '[#6H]-[#6]',
 
 ```
+
+Creating Deep Layer Chemical Graph Networks (DGN):
+
+This is for more advanced users of graph theory and understanding.
+
+```python
+
+gc = GlobalChem()
+gc.initiate_deep_layer_network()
+gc.add_deep_layer(
+    [
+        'emerging_perfluoroalkyls',
+        'montmorillonite_adsorption',
+        'common_monomer_repeating_units'
+    ]
+)
+gc.add_deep_layer(
+    [
+        'common_warhead_covalent_inhibitors',
+        'privileged_scaffolds',
+        'iupac_blue_book'
+    ]
+)
+
+print (gc.deep_layer_network)
+
+```
+
+Compute Common Score for an IUPAC Name:
+
+Based on how many times a word is mentioned per object increases the common weight. The more weight the more common. 
+A score of 0 indicates it is "uncommon".
+
+```python
+
+gc = GlobalChem()
+gc.build_global_chem_network(print_output=False, debugger=False)
+gc.compute_common_score('benzene', verbose=True)
+
+```
+
+and here is the formula:
+
+<p align="center">
+  <img width="800" height="400" src="images/figures/math_formula.png">
+</p>
 
 Variables List
 ==============

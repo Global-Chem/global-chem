@@ -48,6 +48,7 @@ from global_chem.organic_synthesis.protecting_groups.amino_acid_protecting_group
 
 # Narcotics
 
+from global_chem.narcotics.pihkal import Pihkal
 from global_chem.narcotics.schedule_one import ScheduleOne
 from global_chem.narcotics.schedule_two import ScheduleTwo
 from global_chem.narcotics.schedule_three import ScheduleThree
@@ -73,7 +74,7 @@ class Node:
 
     '''
 
-    def __init__(self, name, smiles=[], smarts=[]):
+    def __init__(self, name, smiles=[], smarts=[], value=None):
 
         self.name = name.split('.')[0]
         self.children = []
@@ -81,6 +82,7 @@ class Node:
         self.smiles = smiles
         self.smarts = smarts
         self.state = [ self.smiles, self.smarts ]
+        self.value = None
 
     def add_parent(self, name, smiles=[], smarts=[]):
 
@@ -139,6 +141,28 @@ class Node:
         print("Children: %s" % self.children)
         print("Parents: %s" % self.parents)
 
+    def set_node_value(self, value):
+
+        '''
+
+        Set the Node Value
+
+        Arguments:
+            value: value of the node you would like to set it to | Type: Anything
+
+        '''
+
+        self.value = value
+
+    def get_node_value(self):
+
+        '''
+
+        Get the Node Value
+
+        '''
+
+        return self.value
     # This hack is for the root node to have dummy dictionaries.
 
     @staticmethod
@@ -179,7 +203,7 @@ class GlobalChem(object):
 
     __NODES__ = {
         'global_chem': Node,
-        'emerging_perfluoro_alkyls': EmergingPerFluoroAlkyls,
+        'emerging_perfluoroalkyls': EmergingPerFluoroAlkyls,
         'montmorillonite_adsorption': MontmorilloniteAdsorption,
         'common_monomer_repeating_units': CommonMonomerRepeatingUnits,
         'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,
@@ -206,9 +230,15 @@ class GlobalChem(object):
         'common_regex_patterns': CommonRegexPatterns,
     }
 
+    __INCOMPLETE_NODES = {
+        'pihkal': Pihkal
+    }
+
     def __init__(self, verbose=False):
 
         self.network = {}
+        self.deep_layer_network = {}
+        self.deep_layer_count = 0
         self.verbose = verbose
 
     def check_available_nodes(self):
@@ -420,6 +450,54 @@ class GlobalChem(object):
             print (f'Network State Step 5: {self.network}')
 
 
+    def remove_node(self, name):
+
+        '''
+
+        Rules:
+            1.) Cannot Remove a Node that has children.
+
+        Arguments:
+
+            name (String): Name of the node
+
+        '''
+
+        # Check Node Extant
+
+        node = self.network.get(name, None)
+
+        if not node:
+            raise GraphNetworkError(
+                message=f'Node {name} not found in network',
+                errors=''
+            )
+
+        # Check the Children
+
+        node_children = node['children']
+
+        if len(node_children) != 0:
+            raise GraphNetworkError(
+                message=f'Cannot Remove Node {name} because it has children',
+                errors=''
+            )
+
+        # Remove the Node
+
+        del self.network[name]
+
+        # Remove that navigated to the node
+
+        for key, value in self.network.items():
+
+            value_children = value['children']
+
+            if name in value_children:
+
+                removed_children_items = [ i for i in value_children if i not in [name] ]
+                self.network[key]['children'] = removed_children_items
+
     def get_node(self, name):
 
         '''
@@ -502,6 +580,97 @@ class GlobalChem(object):
 
         return self.__NODES__[node_key].get_smarts()
 
+    def initiate_deep_layer_network(self, root_node='global_chem'):
+
+        '''
+
+        Initiates the Deep Layer Network with the first layer 1 being the root node.
+
+        Arguments:
+            root_node (String): Root node to the network.
+
+        '''
+
+        self.deep_layer_network[root_node] = {
+            "node_value": Node(
+                root_node,
+                self.__NODES__[root_node].get_smiles(),
+                self.__NODES__[root_node].get_smarts()
+            ),
+            "children": [],
+            "parents": [],
+            "name": root_node,
+            'layer': '1'
+        }
+
+        # Increase the count
+
+        self.deep_layer_count += 1
+
+    def add_deep_layer(self, nodes):
+
+        '''
+
+        Arguments:
+            nodes (List): Add a Layer of Nodes to the previous parents
+
+        Rules:
+            1.) When adding a deep layer add children to all the previous parents.
+
+        Algorithm:
+            1.) Fetch all the parents of the current layer
+            2.) Add all the node children to the parents.
+            3.) Increase the deep layer count.
+            4.) All all the parents to the children.
+
+        Graph Algorithm:
+
+            O(cs): Childrens Node
+            O(ps): Parents Node
+            DN: Deep Network
+            DCL: Deep Current Layer
+            <F>: Fetch Function
+
+            1.) O(ps) <F> DCL <F> DN
+            2.) O(cs) <---- O(ps)
+            3.) DCL += 1
+            4.) O(ps) ----> O(cs)
+
+        '''
+
+        parents = []
+
+        # Step 1
+
+        for node_key, node_value in self.deep_layer_network.items():
+
+            if self.deep_layer_count == int(node_value['layer']):
+
+                # Step 2
+
+                self.deep_layer_network[node_key]['children'] = nodes
+                parents.append(node_key)
+
+        # Step 3
+
+        self.deep_layer_count += 1
+
+        # Step 4
+
+        for child_node in nodes:
+
+            self.deep_layer_network[child_node] = {
+                "node_value": Node(
+                    child_node,
+                    self.__NODES__[child_node].get_smiles(),
+                    self.__NODES__[child_node].get_smarts()
+                ),
+                "children": [],
+                "parents": parents,
+                "name": child_node,
+                'layer': self.deep_layer_count
+            }
+
     def build_global_chem_network(self, print_output=False, debugger=False):
 
         '''
@@ -547,11 +716,11 @@ class GlobalChem(object):
 
             while len(chemical_object) > 0:
 
-                parent = chemical_object.pop()
+                parent = chemical_object.pop().split('.')[0]
                 previous_child = parent
 
                 if len(chemical_object) != 0:
-                    child = chemical_object[-1]
+                    child = chemical_object[-1].split('.')[0]
                     self.add_node(parent, child)
                 else:
                     self.add_node(previous_child, parent)
@@ -563,6 +732,26 @@ class GlobalChem(object):
         if print_output:
             pretty_printer = pprint.PrettyPrinter()
             pretty_printer.pprint(self.network)
+
+    def get_all_names(self):
+
+        '''
+
+        Fetches all the names in the network
+
+        '''
+
+        names = []
+
+        for node_key, node_value in self.__NODES__.items():
+
+            if node_key != 'global_chem' and node_key != 'common_regex_patterns':
+
+                names.append(list(node_value.get_smiles().keys()))
+
+        names = sum(names, [])
+
+        return names
 
     def get_all_smiles(self):
 
@@ -609,6 +798,45 @@ class GlobalChem(object):
         smarts = sum(smarts, [])
 
         return smarts
+
+    def set_node_value(self, node_key, value):
+
+        '''
+
+        Set the Node value
+
+        '''
+
+        node = self.network.get(node_key, None)
+
+        if not node:
+            raise GraphNetworkError(
+                message=f'No Node named {node_key} exists',
+                errors=''
+            )
+
+        self.network[node_key]['node_value'].set_node_value(value)
+
+    def get_node_value(self, node_key):
+
+        '''
+
+        Get the Node Value
+
+        Arguments:
+            node_key (value): Get the Node Key.
+
+        '''
+
+        node = self.network.get(node_key, None)
+
+        if not node:
+            raise GraphNetworkError(
+                message=f'No Node named {node_key} exists',
+                errors=''
+            )
+
+        return self.network[node_key]['node_value'].get_node_value()
 
     def compute_common_score(self, iupac_name, verbose=False):
 
