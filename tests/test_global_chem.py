@@ -18,60 +18,7 @@ def test_rdkit_passing():
 
     '''
 
-    gc = GlobalChem()
-
-    compounds = [
-        gc.get_amino_acids(),
-        gc.get_rings_in_drugs(),
-        gc.get_essential_vitamins(),
-        gc.get_common_organic_solvents(),
-        gc.get_polyfluoroalkyl_substances(),
-        gc.get_common_privileged_scaffolds(),
-        gc.get_open_smiles_functional_groups(),
-        gc.get_common_polymer_repeating_units(),
-        gc.get_braf_kinase_inhibitors_for_cancer(),
-        gc.get_common_heterocyclic_rings_phase_2(),
-        gc.get_commonly_used_r_group_replacements(),
-        gc.get_common_warhead_covalent_inhibitors(),
-        gc.get_iupac_blue_book_common_functional_groups(),
-        gc.get_common_electrophilic_warheads_for_kinases(),
-        gc.get_privileged_scaffolds_for_kinase_inhibitors(),
-        gc.get_chemical_adsorption_on_montmorillonite_clays(),
-        gc.get_schedule_one(),
-        gc.get_schedule_two(),
-        gc.get_schedule_three(),
-        gc.get_schedule_four(),
-        gc.get_schedule_five(),
-    ]
-
-    protecting = []
-
-    for i in list(gc.get_common_amino_acid_protecting_groups()):
-
-        for j in i.values():
-
-            if '[#6' not in j:
-                protecting.append(j)
-
-    total_smiles = []
-
-    for i in range(0, len(compounds)):
-
-        molecule_set = list(compounds[i])
-        print (molecule_set)
-
-        for molecules in molecule_set:
-            names = list(list(molecules.keys()))
-            smiles_list = list(list(molecules.values()))
-
-            for i in range(0, len(smiles_list)):
-
-                if '[#6]' not in smiles_list[i]:
-
-                    total_smiles.append(smiles_list[i])
-
-    for i in protecting:
-        total_smiles.append(i)
+    total_smiles = GlobalChem().get_all_smiles()
 
     passing_molecules = []
 
@@ -96,66 +43,7 @@ def test_indigo_passing():
 
     '''
 
-    gc = GlobalChem()
-
-    compounds = [
-        gc.get_amino_acids(),
-        gc.get_rings_in_drugs(),
-        gc.get_essential_vitamins(),
-        gc.get_common_organic_solvents(),
-        gc.get_polyfluoroalkyl_substances(),
-        gc.get_common_privileged_scaffolds(),
-        gc.get_open_smiles_functional_groups(),
-        gc.get_common_polymer_repeating_units(),
-        gc.get_braf_kinase_inhibitors_for_cancer(),
-        gc.get_common_heterocyclic_rings_phase_2(),
-        gc.get_commonly_used_r_group_replacements(),
-        gc.get_common_warhead_covalent_inhibitors(),
-        gc.get_iupac_blue_book_common_functional_groups(),
-        gc.get_common_electrophilic_warheads_for_kinases(),
-        gc.get_privileged_scaffolds_for_kinase_inhibitors(),
-        gc.get_chemical_adsorption_on_montmorillonite_clays(),
-        gc.get_schedule_one(),
-        gc.get_schedule_two(),
-        gc.get_schedule_three(),
-        gc.get_schedule_four(),
-        gc.get_schedule_five(),
-    ]
-
-    protecting = []
-    names = []
-
-    for i in list(gc.get_common_amino_acid_protecting_groups()):
-
-        names_1 = list(i.keys())
-        smiles = list(i.values())
-
-        for j in range(0, len(smiles)):
-
-            if '[#6' not in smiles[j]:
-                protecting.append(smiles[j])
-                names.append(names_1[j])
-
-    total_smiles = []
-
-    for i in range(0, len(compounds)):
-
-        molecule_set = list(compounds[i])
-
-        for molecules in molecule_set:
-            names = list(list(molecules.keys()))
-            smiles_list = list(list(molecules.values()))
-
-            for i in range(0, len(smiles_list)):
-
-                if '[#6]' not in smiles_list[i] and 'X' not in smiles_list[i]:
-
-                    total_smiles.append(smiles_list[i])
-
-
-    for i in protecting:
-        if '[#6]' not in i and 'X' not in i:
-            total_smiles.append(i)
+    total_smiles = GlobalChem().get_all_smiles()
 
     indigo = Indigo()
 
