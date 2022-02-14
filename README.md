@@ -57,7 +57,7 @@ Quick Start
 Just with no dependencies, intialize the class and there you go! All the common and rare groups of the world
 at your disposal 
 
-To Access Nodes and Visualize the Internal Network:
+#### To Access Nodes and Visualize the Internal Network:
 
 ```python
 
@@ -91,7 +91,7 @@ gc.build_global_chem_network(print_output=True)
 },
 ```
 
-Fetch the Node:
+#### Fetch the Node:
 
 ```python
 
@@ -104,7 +104,7 @@ print (node)
 {'perfluorohexanoic acid': 'C(=O)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)O' etc...}
 ```
 
-Fetch the IUPAC:SMILES/SMARTS Data from the Node:
+#### Fetch the IUPAC:SMILES/SMARTS Data from the Node:
 
 ```python
 
@@ -116,7 +116,7 @@ smarts = gc.get_node_smarts('emerging_perfluoroalkyls')
 print (smiles)
 ```
 
-Fetch All Data from Network:
+#### Fetch All Data from Network:
 
 ```python
 
@@ -130,7 +130,7 @@ print(gc.get_all_names())
     
 ```
 
-Remove a Node from the Network:
+#### Remove a Node from the Network:
 
 Removes the Node and it's connections to any parents. 
 
@@ -142,7 +142,7 @@ gc.remove_node('emerging_perfluoroalkyls')
 
 ```
 
-Set & Get the Node Value:
+#### Set & Get the Node Value:
 
 If the user wants to put some metadata inside the node they can:
 
@@ -157,7 +157,7 @@ print (gc.get_node_value('emerging_perfluoroalkyls'))
 {'some_data': ['bunny']}
 ```
 
-To Create Your Own Chemical Graph Network (GN) And Check the Values
+#### To Create Your Own Chemical Graph Network (GN) And Check the Values
 
 ```python
 
@@ -181,7 +181,7 @@ values = gc.get_node_smarts('electrophilic_warheads_for_kinases')
 
 ```
 
-Creating Deep Layer Chemical Graph Networks (DGN):
+#### Creating Deep Layer Chemical Graph Networks (DGN):
 
 This is for more advanced users of graph theory and understanding.
 
@@ -208,7 +208,7 @@ print (gc.deep_layer_network)
 
 ```
 
-Compute Common Score for an IUPAC Name:
+#### Compute Common Score for an IUPAC Name:
 
 Based on how many times a word is mentioned per object increases the common weight. The more weight the more common. 
 A score of 0 indicates it is "uncommon".
@@ -224,7 +224,7 @@ gc.compute_common_score('benzene', verbose=True)
 and here is the formula:
 
 <p align="center">
-  <img width="800" height="400" src="images/figures/math_formula.png">
+  <img width="800" height="400" src="images/figures/math_formular.png">
 </p>
 
 Variables List
