@@ -13,7 +13,7 @@ Global-Chem: Collections of common small molecules and their SMILES/SMARTS to su
 [![Downloads](https://pepy.tech/badge/global-chem)](https://pepy.tech/project/global-chem)
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
 
-Global Chem is an open-source record collection for common and rare chemical lists using IUPAC as input and SMILES/SMARTS as output. As 
+Global Chem is an open-source graph record collection for common and rare chemical lists using IUPAC as input and SMILES/SMARTS as output. As 
 mostly needed by myself as I search through chemical infinity. 
 
 I have found these lists written in history to be useful, they come from a variety of different fields but are aggregated 
