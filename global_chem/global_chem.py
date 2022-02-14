@@ -203,31 +203,31 @@ class GlobalChem(object):
 
     __NODES__ = {
         'global_chem': Node,
-        'emerging_perfluoroalkyls': EmergingPerFluoroAlkyls,
-        'montmorillonite_adsorption': MontmorilloniteAdsorption,
-        'common_monomer_repeating_units': CommonMonomerRepeatingUnits,
-        'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,
-        'common_warhead_covalent_inhibitors': CommonWarheadsCovalentInhibitors,
-        'rings_in_drugs': RingsInDrugs,
-        'iupac_blue_book_rings': IUPACBlueBookRings,
-        'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,
-        'privileged_scaffolds': PrivilegedScaffolds,
-        'iupac_blue_book': IUPACBlueBook,
-        'common_rgroup_replacements': CommonRGroupReplacements,
-        'braf_inhibitors': BRAFInhibitors,
-        'privileged_kinase_inhibitor_scaffolds': PrivilegedKinaseInhibitors,
-        'common_organic_solvents': CommonOrganicSolvents,
-        'amino_acid_protecting_groups': AminoAcidProtectingGroups,
-        'schedule_one': ScheduleOne,
-        'schedule_two': ScheduleTwo,
-        'schedule_three': ScheduleThree,
-        'schedule_four': ScheduleFour,
-        'schedule_five': ScheduleFive,
-        'interstellar_space': InterstellarSpace,
-        'vitamins': Vitamins,
-        'open_smiles': OpenSmiles,
-        'amino_acids': AminoAcids,
-        'common_regex_patterns': CommonRegexPatterns,
+        'emerging_perfluoroalkyls': EmergingPerFluoroAlkyls,                     # Asuka Orr & Suliman Sharif
+        'montmorillonite_adsorption': MontmorilloniteAdsorption,                 # Asuka Orr & Suliman Sharif
+        'common_monomer_repeating_units': CommonMonomerRepeatingUnits,           # Sulman Sharif
+        'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,   # Ruibin Liu & Suliman Sharif
+        'common_warhead_covalent_inhibitors': CommonWarheadsCovalentInhibitors,  # Shaoqi Zhao & Suliman Sharif
+        'rings_in_drugs': RingsInDrugs,                                          # Alexander Mackerell & Suliman Sharif
+        'iupac_blue_book_rings': IUPACBlueBookRings,                             # Suliman Sharif
+        'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,                 # Suliman Sharif
+        'privileged_scaffolds': PrivilegedScaffolds,                             # Suliman Sharif
+        'iupac_blue_book': IUPACBlueBook,                                        # Suliman Sharif
+        'common_rgroup_replacements': CommonRGroupReplacements,                  # Sunhwan Jo & Suliman Sharif
+        'braf_inhibitors': BRAFInhibitors,                                       # Aarion Romany
+        'privileged_kinase_inhibitor_scaffolds': PrivilegedKinaseInhibitors,     # Suliman Sharif
+        'common_organic_solvents': CommonOrganicSolvents,                        # Suliman Sharif
+        'amino_acid_protecting_groups': AminoAcidProtectingGroups,               # Aziza Frank & Suliman Sharif
+        'schedule_one': ScheduleOne,                                             # Suliman Sharif
+        'schedule_two': ScheduleTwo,                                             # Suliman Sharif
+        'schedule_three': ScheduleThree,                                         # Suliman Sharif
+        'schedule_four': ScheduleFour,                                           # Suliman Sharif
+        'schedule_five': ScheduleFive,                                           # Suliman Sharif
+        'interstellar_space': InterstellarSpace,                                 # Suliman Sharif
+        'vitamins': Vitamins,                                                    # Suliman Sharif
+        'open_smiles': OpenSmiles,                                               # Suliman Sharif
+        'amino_acids': AminoAcids,                                               # Suliman Sharif
+        'common_regex_patterns': CommonRegexPatterns,                            # Chris Burke & Suliman Sharif
     }
 
     __INCOMPLETE_NODES = {
