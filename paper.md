@@ -170,6 +170,16 @@ At the time of writing the list of objects include those shown in Table 1. The l
   <i>Table 1: GlobalChem Object List</i>
 </p>
 
+# Sunburst Extension
+
+GlobalChem is self-reliant as there is no dependencies but to exhibit it's interoperability into other software for chemical 
+applications we created a second repository that provides a set of utility tools into how to use the network. 
+
+<p align="center">
+  <img width="1000" height="950" src="images/figures/figure_5.png">
+  <i>Figure 4: Sunburst Visualization of GlobalChem applied over an arbitrary SMILES dataset</i>
+</p>
+
 # Tests & Applications
 
 A total collection of 2560 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 22 objects in
@@ -244,7 +254,7 @@ we expected the penalties to be lower on drugs and drug-like species and higher 
 
 <p align="center">
   <img width="1000" height="950" src="images/figures/figure_5.png">
-  <i>Figure 4: Penalty Score Probability Distributions</i>
+  <i>Figure 5: Penalty Score Probability Distributions</i>
 </p>
 
 From `Figure 6`, if we use the charge penalty score as a metric for performance, it is evident that the `CGenFF program` 
@@ -264,7 +274,7 @@ Silicon has not been included in CGenFF leading to the failures of the silicon-b
 <p align="center">
   <img width="1000" height="450" src="images/figures/figure_6_new.png">
   <br>
-  <i>Figure 5: Failed CGenFF Compounds</i>
+  <i>Figure 6: Failed CGenFF Compounds</i>
 </p>
 
 Full logs of failed compounds are found in the `tests` directory in the github repository. 
@@ -295,8 +305,6 @@ passed CGenFF score a dihedral parameter penalty score of 130 or less. For GAFF,
 This could be attributed to the penalty score algorithms and how the score is derived. Since GAFF penalty score seems to increase
 by factors of 2 it could give rise to a higher penalty score then intended. Overall since the penalty score is inclusive it
 still doesn't change that relative to itself the forcefield should have penalties of 0 for the tree to balance correctly. 
-
-# Extensions
 
 
 ### Discussion 
