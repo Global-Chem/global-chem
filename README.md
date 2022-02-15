@@ -13,8 +13,8 @@ Global-Chem: Collections of common small molecules and their SMILES/SMARTS to su
 [![Downloads](https://pepy.tech/badge/global-chem)](https://pepy.tech/project/global-chem)
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
 
-Global Chem is an open-source graph record collection for common and rare chemical lists using IUPAC as input and SMILES/SMARTS as output. As 
-mostly needed by myself as I search through chemical infinity. 
+Global Chem is an open-source graph database and api for common and rare chemical lists using IUPAC as input and SMILES/SMARTS as output. As 
+mostly needed by myself as I search through chemical infinity.
 
 I have found these lists written in history to be useful, they come from a variety of different fields but are aggregated 
 into the most common format of organic chemists (IUPAC) and the common language of the cheminformatician (SMILES) and for 
@@ -128,6 +128,9 @@ gc.build_global_chem_network(print_output=True)
     'parents': []
 },
 ```
+
+The algorithm uses a series of parents/children to connect nodes instead of "edges" as in traditional graph networks. This just makes it easier to code if 
+the graph database lives as a 1-dimensional with lists of parents and childrens connected in this fashion. 
 
 #### Fetch the Node:
 
