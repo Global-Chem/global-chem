@@ -74,7 +74,7 @@ class Node:
 
     '''
 
-    def __init__(self, name, smiles=[], smarts=[], value=None):
+    def __init__(self, name, smiles=[], smarts=[], value=None, colour=None):
 
         self.name = name.split('.')[0]
         self.children = []
@@ -83,6 +83,7 @@ class Node:
         self.smarts = smarts
         self.state = [ self.smiles, self.smarts ]
         self.value = None
+        self.colour = None
 
     def add_parent(self, name, smiles=[], smarts=[]):
 
@@ -175,6 +176,116 @@ class Node:
 
         smarts = {}
 
+class PrintNode:
+
+    __version__ = '0.0.1'
+
+    '''
+    
+    Hack for now, 
+    
+    Print Node function to get the network printed out. Feature first, refactor later. 
+    
+    '''
+
+    def __init__(self, val, parent=None):
+
+        self.val = val
+        self.parent = parent
+        self.children = []
+
+        if self.parent:
+            self.parent.children.append(self)
+
+    def __str__(self):
+        return f"{self.val}"
+
+    def __repr__(self):
+        return str(self)
+
+class PrintTreeUtilities(object):
+
+    __version__ = '0.0.1'
+
+    def __init__(self):
+
+        pass
+
+    @staticmethod
+    def add_connectors(lst):
+
+        if len(lst) == 1:
+            return lst
+
+        startingFanIndex = None
+        endingFanIndex = None
+
+        for i in range(0, len(lst)):
+
+            # if we haven't seen an non empty element yet, only add space
+            if lst[i].startswith(" ") and startingFanIndex is None:
+                continue
+
+            # mark that we just found the first line that doesn't start with indentation
+            if startingFanIndex is None:
+                startingFanIndex = i
+
+            # update this index as the index of the latest label
+            if not lst[i].startswith(" "):
+                endingFanIndex = i
+
+        # prepend connectors
+        if startingFanIndex == endingFanIndex:
+            return lst
+        for i in range(len(lst)):
+            if i == startingFanIndex:
+                lst[i] = f"┌{lst[i]}"
+            elif i == endingFanIndex:
+                lst[i] = f"└{lst[i]}"
+            elif i > startingFanIndex and i < endingFanIndex:
+                if lst[i].startswith(" "):
+                    lst[i] = f"│{lst[i]}"
+                else:
+                    lst[i] = f"├{lst[i]}"
+            else:
+                lst[i] = f" {lst[i]}"
+        return lst
+
+    @staticmethod
+    def labelFan(node, lst):
+
+        name = str(node)
+        if len(lst) == 0:
+            lst = [name]
+        for i in range(len(lst)):
+            # add label to the middle of the fan
+            if i == len(lst) // 2:
+                lst[i] = f"{name}─{lst[i]}"
+            else:
+                # push the other labels out with indentation
+                indent = " " * len(name)
+                lst[i] = f"{indent} {lst[i]}"
+        return lst
+
+    @staticmethod
+    def connectFans(args):
+        union = []
+        for n in args:
+            union += n
+        PrintTreeUtilities.add_connectors(union)
+        return union
+
+    @staticmethod
+    def printTrees(node):
+        def get_repr(node):
+            if len(node.children) == 0:
+                return [str(node)]
+            fans = [get_repr(x) for x in node.children]
+            labelled = PrintTreeUtilities.labelFan(node, PrintTreeUtilities.connectFans(fans))
+            return labelled
+        print("\n".join(get_repr(node)))
+
+
 
 class GraphNetworkError(Exception):
 
@@ -243,6 +354,7 @@ class GlobalChem(object):
 
         self.network = {}
         self.deep_layer_network = {}
+        self.root_node = ''
         self.deep_layer_count = 0
         self.verbose = verbose
 
@@ -279,6 +391,44 @@ class GlobalChem(object):
 
         return self.__NODES__[node_key]
 
+    def get_depth_of_globalchem(self):
+
+        '''
+
+        Returns the Depth of the GlobalChem Tree
+
+        Returns:
+            max_depth (Int): Max depth of the object
+
+        '''
+
+        path_objects = []
+        absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
+
+        for dirpath, dirnames, filenames in os.walk(absolute_file_path):
+
+            for file in filenames:
+
+                if file.endswith('.py') and \
+                        '__' not in file and \
+                        'cli.py' not in file and \
+                        'global_chem.py' not in file:
+
+                    object_path = os.path.join(''.join(dirpath.rsplit(absolute_file_path)), file).split('/')
+
+                    path_objects.append(object_path)
+
+        max_depth = 1
+
+        for i in path_objects:
+
+            depth = len(i) - 1
+
+            if depth > max_depth:
+                max_depth = depth
+
+        return max_depth
+
     def get_nodes(self, node_keys):
 
         '''
@@ -314,6 +464,7 @@ class GlobalChem(object):
         '''
 
         self.network = {}
+        self.root_node = root_node
 
         self.network[root_node] = {
             "node_value": Node(
@@ -595,6 +746,8 @@ class GlobalChem(object):
             root_node (String): Root node to the network.
 
         '''
+
+        self.root_node = root_node
 
         self.deep_layer_network[root_node] = {
             "node_value": Node(
@@ -913,5 +1066,108 @@ class GlobalChem(object):
             print ("GlobalChem Common Score: %s" % common_score)
 
         return common_score
+
+    def print_globalchem_network(self):
+
+
+        '''
+
+        Outputs the Network into the terminal into a nice format.
+
+        '''
+
+        # Initialize Print node network
+
+        _PRINT_NODE_KEY = {}
+
+        path_objects = []
+        absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
+
+        for dirpath, dirnames, filenames in os.walk(absolute_file_path):
+
+            for file in filenames:
+
+                if file.endswith('.py') and \
+                        '__' not in file and \
+                        'cli.py' not in file and \
+                        'global_chem.py' not in file:
+
+                    object_path = os.path.join(''.join(dirpath.rsplit(absolute_file_path)), file).split('/')
+                    path_objects.append(object_path)
+
+        # Add the objects recursively
+
+        for chemical_object in path_objects:
+
+            chemical_object.reverse()
+            chemical_object = chemical_object + ['global_chem']
+
+            while len(chemical_object) > 0:
+
+                parent = chemical_object.pop().split('.')[0]
+                previous_child = parent
+
+                if len(chemical_object) != 0:
+
+                    child = chemical_object[-1].split('.')[0]
+
+                    if parent not in _PRINT_NODE_KEY:
+
+                        _PRINT_NODE_KEY[ parent ] = PrintNode(parent)
+
+                    if child not in _PRINT_NODE_KEY:
+
+                        _PRINT_NODE_KEY[ child ] = PrintNode( child, _PRINT_NODE_KEY[ parent ] )
+
+                else:
+
+                    if not previous_child:
+
+                        _PRINT_NODE_KEY[ previous_child ] = PrintNode(previous_child)
+
+                    if not parent:
+
+                        _PRINT_NODE_KEY[ parent ] = PrintNode(child, _PRINT_NODE_KEY[parent])
+
+        print(PrintTreeUtilities.printTrees(_PRINT_NODE_KEY['global_chem']))
+
+    def print_deep_network(self):
+
+
+        '''
+
+        Outputs the Deep Network into the terminal into a nice format.
+
+        '''
+
+
+        _DEEP_NETWORK_KEY = {}
+
+        _DEEP_NETWORK_KEY[ self.root_node ] = PrintNode(self.root_node)
+
+        previous_parents = []
+
+        for i in range(self.deep_layer_count):
+
+            layer_number = i + 2
+
+            for node_key, node_value in self.deep_layer_network.items():
+
+                if node_value['layer'] == layer_number:
+
+                    if layer_number == 2:
+
+                        _DEEP_NETWORK_KEY[ node_key ] = PrintNode(node_key, _DEEP_NETWORK_KEY[ self.root_node ])
+
+                        previous_parents.append(node_key)
+
+                    else:
+
+                        for previous_parent in previous_parents:
+
+                            _DEEP_NETWORK_KEY[ node_key ] = PrintNode(node_key, _DEEP_NETWORK_KEY[ previous_parent ])
+
+
+        print(PrintTreeUtilities.printTrees(_DEEP_NETWORK_KEY[ self.root_node ]))
 
 

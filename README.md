@@ -57,6 +57,44 @@ Quick Start
 Just with no dependencies, intialize the class and there you go! All the common and rare groups of the world
 at your disposal 
 
+#### Print the GlobalChem Structure
+
+```python
+
+gc = GlobalChem()
+gc.print_globalchem_network()
+
+>>>
+
+                                ┌solvents─common_organic_solvents
+             ┌organic_synthesis─└protecting_groups─amino_acid_protecting_groups
+             │          ┌polymers─common_monomer_repeating_units
+             ├materials─└clay─montmorillonite_adsorption
+             │                            ┌privileged_kinase_inhibtors
+             │                            ├privileged_scaffolds
+             ├proteins─kinases─┌scaffolds─├iupac_blue_book_substituents
+             │                 │          └common_r_group_replacements
+             │                 └braf─inhibitors
+             │              ┌vitamins
+             │              ├open_smiles
+             ├miscellaneous─├amino_acids
+             │              └regex_patterns
+global_chem──├environment─emerging_perfluoroalkyls
+             │          ┌schedule_one
+             │          ├schedule_four
+             │          ├schedule_five
+             ├narcotics─├pihkal
+             │          ├schedule_two
+             │          └schedule_three
+             ├interstellar_space
+             │                    ┌cannabinoids
+             │                    │         ┌electrophillic_warheads_for_kinases
+             │                    ├warheads─└common_warheads_covalent_inhibitors
+             └medicinal_chemistry─│      ┌phase_2_hetereocyclic_rings
+                                  └rings─├iupac_blue_book_rings
+                                         └rings_in_drugs
+                                         
+```
 #### To Access Nodes and Visualize the Internal Network:
 
 ```python
@@ -181,7 +219,7 @@ values = gc.get_node_smarts('electrophilic_warheads_for_kinases')
 
 ```
 
-#### Creating Deep Layer Chemical Graph Networks (DGN):
+#### Creating Deep Layer Chemical Graph Networks (DGN) & Print it out:
 
 This is for more advanced users of graph theory and understanding.
 
@@ -204,7 +242,19 @@ gc.add_deep_layer(
     ]
 )
 
-print (gc.deep_layer_network)
+gc.print_deep_network()
+
+
+>>>
+                                      ┌common_warhead_covalent_inhibitors
+            ┌emerging_perfluoroalkyls─├privileged_scaffolds
+            │                         └iupac_blue_book
+            │                           ┌common_warhead_covalent_inhibitors
+global_chem─├montmorillonite_adsorption─├privileged_scaffolds
+            │                           └iupac_blue_book
+            │                               ┌common_warhead_covalent_inhibitors
+            └common_monomer_repeating_units─├privileged_scaffolds
+                                            └iupac_blue_book
 
 ```
 
