@@ -331,7 +331,7 @@ GlobalChemExtensions().sunburst_chemical_list(test_set, save_file=False)
 ```
 
 <p align="center">
-  <img width="900" height="800" src="images/extensions/figure_1.png">
+  <img width="900" height="800" src="images/extensions/figure_1.gif">
 </p>
 
 Variables List
