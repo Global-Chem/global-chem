@@ -213,6 +213,17 @@ print (gc.deep_layer_network)
 Based on how many times a word is mentioned per object increases the common weight. The more weight the more common. 
 A score of 0 indicates it is "uncommon".
 
+```
+
+Common Score Algorithm:
+
+    1.) Data mine the current state of GlobalChem
+    2.) Get the Object Weights of Each mention
+    3.) Determine the Mention Weight
+    4.) Sum the Weights and That's How common it is.
+    
+```
+
 ```python
 
 gc = GlobalChem()
@@ -220,12 +231,6 @@ gc.build_global_chem_network(print_output=False, debugger=False)
 gc.compute_common_score('benzene', verbose=True)
 
 ```
-
-and here is the formula:
-
-<p align="center">
-  <img width="850" height="250" src="images/figures/math_formular.png">
-</p>
 
 Adding Your Own Chemical List
 =============================
