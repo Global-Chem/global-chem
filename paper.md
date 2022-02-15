@@ -130,6 +130,12 @@ over traditional. For example: 'yl' to mark site points for polymer connections 
 
 - SMARTS strings were adapted from the SMILES using RDKit [@Landrum:2019-5]
 
+- CGenFF data was gathered using our in-house SDF CGenFF version to enable us to make a workflow from SMILES to SDF [@Landrum:2019-5] to CGenFF and obtain parameters
+with penalties. 
+
+- GAFF data was gathered using the CIRPy resolver to fetch 1507 mol2 files out of GlobalChem and processed through antechamber mol2 correction
+then processed through paramchk2 to obtain parameteres. 
+
 # Data
 
 At the time of writing the list of objects include those shown in Table 1. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. In addition, the languages used for each list are given, along with the number entires in the list and the reference.  In addition, the number of times that compounds in each list fail in the CGenFF program, as discussed below, is given.
@@ -193,7 +199,7 @@ utility that may used as a tolerance checker.
   <i>Table 2: Compounds in Global-Chem that fail in RDKit or Indigo</i>
 </p>
 
-## Force Field Test
+## CGenFF Performance Metrics
 
 Access to broad collections of chemical groups will be of interest for development of force fields, also known as potential energy functions,[MacKerell:2004-10] for molecular modeling and molecular dynamic simulations, 
 allowing for studies on a wider range of chemicals and biological systems. The ability of a force field to treat molecules in the database can also serve as dual interoperable test 
@@ -263,6 +269,36 @@ Silicon has not been included in CGenFF leading to the failures of the silicon-b
 
 Full logs of failed compounds are found in the `tests` directory in the github repository. 
 
+## CGenFF versus GAFF Metrics
+
+Atom-typing and organization is not a defined systemic process because there is no quantitative standard way to capture a
+chemical environment. These atom-type engines serve as the backbone for molecular dynamic simulations and simulations get 
+longer we can start to infer which forcefields similar to experimental data for  for which systems. Atom type engines are built 
+on efficient organizational algorithms in how we classify atoms in their local chemical environment and their corresponding parameters.
+"General" forcefields are atom-type engines that capture small molecule chemical environment for any-like molecules. Since
+Global-Chem serves as a common list of small molecules relevant to the general forcefield, we can utilize the lists as a global test 
+for relevant molecules to capture. Both CGenFF and GaFF produce a penalty score () with different lookup algorithms on their
+respective binary search tree algorithms, both of these algorithms generate a score indicative of it's organizational method and 
+how many atom types they have catalogued in respect to the environment. If we use GlobalChem as a test set of relevant chemical 
+environments we can infer a performance bias of a forcefield.
+
+<p align="center">
+  <img width="1000" height="450" src="images/figures/figure_7.png">
+  <br>
+  <i>Figure 7: CGenFF vs GAFF Dihedral Penalty Scores</i>
+</p>
+
+In `Figure 7` we evaluate the cumulative density of the dihedral penalty scores between GAFF (Purple) and CGenFF (Blue). 
+The x-axis indicates the penalty score and the y-axis indicates the probabily density of finding a value of a set of data
+equal or under that value. For example, in the pink arrow, if we read that at roughly ~97% of molecules in GlobalChem that 
+passed CGenFF score a dihedral parameter penalty score of 130 or less. For GAFF, it seems that the penalty score is roughly around 320.
+This could be attributed to the penalty score algorithms and how the score is derived. Since GAFF penalty score seems to increase
+by factors of 2 it could give rise to a higher penalty score then intended. Overall since the penalty score is inclusive it
+still doesn't change that relative to itself the forcefield should have penalties of 0 for the tree to balance correctly. 
+
+# Extensions
+
+
 ### Discussion 
 
 `Global-Chem` was developed to facilitate accessing lists of known chemical compounds as objects to allow them to be used in the context of python-based workflows.
@@ -272,7 +308,7 @@ documentation as a `C&1&1&1&1`. As shown in Table 2, this fails in both `RDKit` 
 
 Beyond accessing SMILES stings we've shown the utility of `Global-Chem` to interogate the coverage of the force field `CGenFF`. By partitioning chemical space into well-defined chemical lists, `Global-Chem` allows for regions of chemical space where the CGenFF programs fails or assigns parameters of low analogy to be readily identified. This information will allow for decisions to be made concerning the addition of molecules in the CGenFF training set thereby allowing for systematic improvements in the force field.
 
-# Statement of Need
+# Statement of Purpose
 
 `Global-Chem` was developed to facilitate the ability of scientists in both academia and industry to make their compounds of interest readily available to the scientific community in the form of objects that may be directly accessed from python. 
 Accordingly, `Global-Chem` has a number of potential purposes, including teaching and cheminformatics, but our main perogative is to create a free record collection.

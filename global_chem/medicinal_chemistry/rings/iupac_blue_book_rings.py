@@ -8,8 +8,8 @@ class IUPACBlueBookRings(object):
 
     def __init__(self):
 
-        pass
-
+        self.name = 'iupac_blue_book_rings'
+        
     @staticmethod
     def get_smiles():
 

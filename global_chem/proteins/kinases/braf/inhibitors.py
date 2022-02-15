@@ -8,7 +8,7 @@ class BRAFInhibitors(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'braf_inhibitors'
 
     @staticmethod
     def get_smiles():

@@ -8,7 +8,7 @@ class RingsInDrugs(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'rings_in_drugs'
 
     @staticmethod
     def get_smiles():

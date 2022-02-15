@@ -8,7 +8,7 @@ class ScheduleFour(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'schedule_four'
 
     @staticmethod
     def get_smiles():

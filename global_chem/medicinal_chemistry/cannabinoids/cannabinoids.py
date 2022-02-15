@@ -8,7 +8,7 @@ class Cannabinoids(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'cannabinoids'
 
     @staticmethod
     def get_smiles():

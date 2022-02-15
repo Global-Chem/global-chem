@@ -8,7 +8,7 @@ class CommonRegexPatterns(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'common_regex_patterns'
 
     @staticmethod
     def get_patterns():

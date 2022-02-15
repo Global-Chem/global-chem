@@ -8,7 +8,7 @@ class CommonWarheadsCovalentInhibitors(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'common_warheads_covalent_inhibitors'
 
     @staticmethod
     def get_smiles():

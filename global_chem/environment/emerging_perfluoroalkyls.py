@@ -8,7 +8,7 @@ class EmergingPerFluoroAlkyls(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'emerging_perfluoro_alkyls'
 
     @staticmethod
     def get_smiles():

@@ -8,7 +8,7 @@ class ElectrophilicWarheadsForKinases(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'electrophilic_warheads_for_kinases'
 
     @staticmethod
     def get_smiles():

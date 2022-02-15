@@ -8,7 +8,7 @@ class PrivilegedScaffolds(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'privileged_scaffolds'
 
     @staticmethod
     def get_smiles():

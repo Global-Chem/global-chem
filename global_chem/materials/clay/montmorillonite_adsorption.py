@@ -8,7 +8,7 @@ class MontmorilloniteAdsorption(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'montmorillonite_adsorption'
 
     @staticmethod
     def get_smiles():

@@ -8,7 +8,7 @@ class AminoAcids(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'amino_acids'
 
     @staticmethod
     def get_smiles():

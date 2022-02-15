@@ -8,7 +8,7 @@ class PrivilegedKinaseInhibitors(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'privileged_kinase_inhibitors'
 
     @staticmethod
     def get_smiles():
