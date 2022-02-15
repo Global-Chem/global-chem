@@ -303,6 +303,36 @@ smiles = {
 
 ```
 
+GlobalChem Extensions
+=====================
+
+Applications of `GlobalChem` can be applied to a variety of cheminformatic usage. One of which is functional group analysos of
+any SMILES dataset using the SMARTS patterns strings described in the data. GlobalChemExtensions have
+
+
+#### Sunbursting
+
+Please navigate here for more documentation: https://github.com/Sulstice/global-chem-extensions
+```python
+
+from global_chem_extensions.global_chem_extensions import GlobalChemExtensions
+
+test_set = [
+    'c1[n+](cc2n(c1OCCc1cc(c(cc1)F)F)c(nn2)c1ccc(cc1)OC(F)F)[O-]',
+    'c1nc(c2n(c1OCCc1cc(c(cc1)F)F)c(nn2)c1ccc(cc1)OC(F)F)Cl',
+    'c1ncc2n(c1CCO)c(nn2)c1ccc(cc1)OC(F)F',
+    'C1NCc2n(C1CCO)c(nn2)c1ccc(cc1)OC(F)F',
+    'C1(CN(C1)c1cc(c(cc1)F)F)Oc1cncc2n1c(nn2)c1ccc(cc1)OC(F)F',
+    'c1ncc2n(c1N1CCC(C1)c1ccccc1)c(nn2)c1ccc(cc1)OC(F)F',
+]
+
+GlobalChemExtensions().sunburst_chemical_list(test_set, save_file=False)
+
+```
+
+<p align="center">
+  <img width="900" height="800" src="images/extensions/figure_1.png">
+</p>
 
 Variables List
 ==============
