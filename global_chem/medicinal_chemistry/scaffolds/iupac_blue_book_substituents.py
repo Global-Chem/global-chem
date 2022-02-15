@@ -8,7 +8,7 @@ class IUPACBlueBook(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'iupac_blue_book'
 
     @staticmethod
     def get_smiles():

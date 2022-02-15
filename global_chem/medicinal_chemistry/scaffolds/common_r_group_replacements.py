@@ -8,7 +8,7 @@ class CommonRGroupReplacements(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'common_r_group_replacements'
 
     @staticmethod
     def get_smiles():

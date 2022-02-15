@@ -8,7 +8,7 @@ class CommonOrganicSolvents(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'common_organic_solvents'
 
     @staticmethod
     def get_smiles():

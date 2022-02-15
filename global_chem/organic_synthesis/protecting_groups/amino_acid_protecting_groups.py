@@ -8,7 +8,7 @@ class AminoAcidProtectingGroups(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'amino_acid_protecting_groups'
 
     @staticmethod
     def get_smiles():

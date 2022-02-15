@@ -8,7 +8,7 @@ class OpenSmiles(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'open_smiles'
 
     @staticmethod
     def get_smiles():

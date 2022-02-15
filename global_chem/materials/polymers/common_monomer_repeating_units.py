@@ -8,7 +8,7 @@ class CommonMonomerRepeatingUnits(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'common_monomer_repeating_units'
 
     @staticmethod
     def get_smiles():

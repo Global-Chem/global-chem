@@ -8,7 +8,7 @@ class Vitamins(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'vitamins'
 
     @staticmethod
     def get_smiles():

@@ -8,7 +8,7 @@ class Phase2HetereoCyclicRings(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'phase2_hetereo_cyclic_rings'
 
     @staticmethod
     def get_smiles():

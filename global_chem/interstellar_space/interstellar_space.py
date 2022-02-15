@@ -8,7 +8,7 @@ class InterstellarSpace(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'interstellar_space'
 
     @staticmethod
     def get_smiles():

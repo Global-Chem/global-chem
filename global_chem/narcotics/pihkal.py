@@ -8,7 +8,7 @@ class Pihkal(object):
 
     def __init__(self):
 
-        pass
+        self.name = 'pihkal'
 
     @staticmethod
     def get_smiles():
