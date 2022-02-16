@@ -51,7 +51,6 @@ def test_indigo_passing():
     failed_compounds = []
 
     for smiles in total_smiles:
-
         try:
             molecule = indigo.loadMolecule(smiles)
             success_compounds.append(smiles)
@@ -172,7 +171,5 @@ def test_deep_layer_networks():
     )
 
     gc.print_deep_network()
-
-    assert 'emerging_perfluoroalkyls' in gc.network
 
 
