@@ -334,6 +334,27 @@ GlobalChemExtensions().sunburst_chemical_list(test_set, save_file=False)
   <img width="550" height="500" src="images/extensions/figure_1.gif">
 </p>
 
+#### PCA Analysis
+
+Conduct PCA Analysis with a SMILES list input.
+
+```python
+
+from global_chem.global_chem import GlobalChem
+from global_chem_extensions.global_chem_extensions import GlobalChemExtensions
+
+gc = GlobalChem()
+gc.build_global_chem_network(print_output=False, debugger=False)
+smiles_list = list(gc.get_node_smiles('schedule_one').values())
+
+GlobalChemExtensions().node_pca_analysis(smiles_list, save_file=False)
+
+```
+
+<p align="center">
+  <img width="500" height="500" src="images/extensions/pca_analysis.gif">
+</p>
+
 Variables List
 ==============
 
