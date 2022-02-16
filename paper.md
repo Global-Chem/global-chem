@@ -138,9 +138,10 @@ then processed through paramchk2 to obtain parameteres.
 
 # Data
 
-At the time of writing the list of objects include those shown in Table 1. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. In addition, the languages used for each list are given, along with the number entires in the list and the reference.  In addition, the number of times that compounds in each list fail in the CGenFF program, as discussed below, is given.
+At the time of writing the list of nodes include those shown in Table 1. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. In addition, the languages used for each list are given, along with the number entires in the list and the reference. 
+In addition, the number of times that compounds in each list fail in the CGenFF program, as discussed below, is given.
 
-| Chemical List                       | Languages                    | # of Entries | References               |  CGenFF Errors            |
+| Node List                           | Languages                    | # of Entries | References               |  CGenFF Errors            |
 |-------------------------------------|------------------------------|--------------|--------------------------| --------------------------|
 | Amino Acids                         | IUPAC/SMILES/SMARTS          | 20           | Common Knowledge         | 0                         |
 | Essential Vitamins                  | Preferred Name/SMILES/SMARTS | 13           | Common Knowledge         | 0                         |
@@ -167,17 +168,7 @@ At the time of writing the list of objects include those shown in Table 1. The l
 | Common Regex Patterns               | Mol2                         | 1            |                          | N/A                       |
 
 <p align="center">
-  <i>Table 1: GlobalChem Object List</i>
-</p>
-
-# Sunburst Extension
-
-GlobalChem is self-reliant as there is no dependencies but to exhibit it's interoperability into other software for chemical 
-applications we created a second repository that provides a set of utility tools into how to use the network. 
-
-<p align="center">
-  <img width="1000" height="950" src="images/figures/figure_5.png">
-  <i>Figure 4: Sunburst Visualization of GlobalChem applied over an arbitrary SMILES dataset</i>
+  <i>Table 1: GlobalChem Master Node Network</i>
 </p>
 
 # Tests & Applications
@@ -185,14 +176,25 @@ applications we created a second repository that provides a set of utility tools
 A total collection of 2560 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 22 objects in
 an organized fashion by subject. The code was refactored extensively to allow for ease of object addition according to subject and functionality.
 `Common Regex Patterns` was omitted from the test because it's not a functional group but rather a substring pattern to extrapolate Tripos `mol2` file information. 
+We obtained 1507  `mol2` files using GlobalChem SMILES as a key and cirpy resolver (Ref) to fetch the file. 
 
-## Results 
+## Applications
+
+
+### Sunburst Extension
+
+<p align="center">
+  <img width="1000" height="950" src="images/figures/figure_5.png">
+  <i>Figure 4: Sunburst Visualization of GlobalChem applied over an arbitrary SMILES dataset</i>
+</p>
+
+## Tests 
 
 To test the utility of these lists with other software tests were performed on three open source platforms to determine 
 data interoperability. In addition, such tests can indicate cases in which some of the software implemented should be expanded to
 include functional groups that could not be parsed. 
 
-## Cheminformatics Test
+### Cheminformatics Tests
 
 Two open-source cheminformatic platforms are now widely considered as foundational tools: RDKit and Indigo. To test each SMILES string, each string gets
 passed into a `Mol` RDKit object and `Indigo.loadMolecule()` object where any failures are recorded. 
@@ -209,7 +211,10 @@ utility that may used as a tolerance checker.
   <i>Table 2: Compounds in Global-Chem that fail in RDKit or Indigo</i>
 </p>
 
-## CGenFF Performance Metrics
+### ForceField Tests
+
+
+#### CGenFF Performance Metrics
 
 Access to broad collections of chemical groups will be of interest for development of force fields, also known as potential energy functions,[MacKerell:2004-10] for molecular modeling and molecular dynamic simulations, 
 allowing for studies on a wider range of chemicals and biological systems. The ability of a force field to treat molecules in the database can also serve as dual interoperable test 
@@ -247,7 +252,7 @@ Larger penalities indicate a lower extent of analogy to known parameters, inform
 molecules for additional force field optimization.
 
 Motivated by the availability of the CGenFF penalty scores we passed each object individually into the `CGenFF program` and recorded the results.
-The penalty score distributions are shown in `Figure 6` in a rug fashion using Plotly [Plotly] to show the extent of `CGenFF` penalites
+The penalty score distributions are shown in `Figure 5` in a rug fashion using Plotly [Plotly] to show the extent of `CGenFF` penalites
 for the different chemical lists. As may be seen the extent of penalties differs significantly for the various lists. 
 To understand the utility of this information we focus on five leaf nodes: Schedule One US Narcotics (240), BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds (47), Common Warheads (29), [Gehringer:2019-6] and Emerging PerfluoroAlkyls (27). Schedule One are active drugs that are popular in the black market [21CFRPart1], kinase inhibitors should contain drug-like features, privileged scaffolds are selected compounds produced by nature, warheads are designed for covalent inhibition, and PerfluoroAlkyls include herbicides and other compounds that are toxic to humans. Based on the compounds used in the development of CGenFF,
 we expected the penalties to be lower on drugs and drug-like species and higher for compounds from chemical manufacturing. 
@@ -257,7 +262,7 @@ we expected the penalties to be lower on drugs and drug-like species and higher 
   <i>Figure 5: Penalty Score Probability Distributions</i>
 </p>
 
-From `Figure 6`, if we use the charge penalty score as a metric for performance, it is evident that the `CGenFF program` 
+From `Figure 5`, if we use the charge penalty score as a metric for performance, it is evident that the `CGenFF program` 
 assigns parameters with generally low penalty scores less than 200 for Schedule One and BRAF Kinase Inhibitors owed to its
 initial training set of "drug-like" molecules. Privileged Scaffolds encompass a lot of natural products which 
 have functional groups that fall into the definition of "drug-like" but not all as indicated by the purple lines  
@@ -266,7 +271,7 @@ between penalties 200 and 400 representing high charge penalties. A similar tren
 Accordingly, for this list, there are no low penalty scores with the scores clustered in the intermediate range. This is consistent with halogens being inlcuded the training of CGenFF but the specific connectivity of perfluoroalkyls (long haloalkyl chains) not being included.
 Accordingly, if even a few perfluoroalkyls are added to the `CGenFF` training set it will help reduce penalties and improve that treatment of this class of molecules making CGenFF of more utility to the chemical hazard community. 
 
-In addition to the ability of CGenFF to treat the selected chemical lists discussed above other noteworthy failures are listed in `Figure 5`. 
+In addition to the ability of CGenFF to treat the selected chemical lists discussed above other noteworthy failures are listed in `Figure 6`. 
 For example, cyclobutadiene is a non-traditional ring system with a lot of ring strain although the carbon atom types are common.
 `CGenFF` might determine that this particular ring system with it's existing atom type network is not allowed or detrimental to the network if added and needs to be handled with care. An interesting group that fails in CGenFF are allene-based compounds and perhaps warrants extension of the force.
 Silicon has not been included in CGenFF leading to the failures of the silicon-based compounds. Similarly, the IUPAC blue book valuable list includes radicals, which are relevant for synthesis purposes. This is another class for `CGenFF`has not yet been parametrized.
@@ -279,7 +284,7 @@ Silicon has not been included in CGenFF leading to the failures of the silicon-b
 
 Full logs of failed compounds are found in the `tests` directory in the github repository. 
 
-## CGenFF versus GAFF Metrics
+#### CGenFF versus GAFF Penalty Score
 
 Atom-typing and organization is not a defined systemic process because there is no quantitative standard way to capture a
 chemical environment. These atom-type engines serve as the backbone for molecular dynamic simulations and simulations get 
@@ -295,16 +300,28 @@ environments we can infer a performance bias of a forcefield.
 <p align="center">
   <img width="1000" height="450" src="images/figures/figure_7.png">
   <br>
-  <i>Figure 7: CGenFF vs GAFF Dihedral Penalty Scores</i>
+  <i>Figure 7: Cumulative Density Distribution of CGenFF vs GAFF Dihedral Penalty Scores</i>
 </p>
 
 In `Figure 7` we evaluate the cumulative density of the dihedral penalty scores between GAFF (Purple) and CGenFF (Blue). 
 The x-axis indicates the penalty score and the y-axis indicates the probabily density of finding a value of a set of data
 equal or under that value. For example, in the pink arrow, if we read that at roughly ~97% of molecules in GlobalChem that 
 passed CGenFF score a dihedral parameter penalty score of 130 or less. For GAFF, it seems that the penalty score is roughly around 320.
-This could be attributed to the penalty score algorithms and how the score is derived. Since GAFF penalty score seems to increase
-by factors of 2 it could give rise to a higher penalty score then intended. Overall since the penalty score is inclusive it
-still doesn't change that relative to itself the forcefield should have penalties of 0 for the tree to balance correctly. 
+This could be attributed to the penalty score algorithms and how the score is derived. Since GAFF penalty score increases
+by factors of 2 it could give rise to a higher penalty score then intended as compared to CGenFF as the severity of the 
+sub categories is less on tree traversal. Overall since the penalty score is inclusive it still doesn't change that relative to itself the forcefield should have penalties of 0 for the tree to balance correctly. 
+That being said, we can use a general concept of the forcefield community for accepted penalty score ranges. In CGenFF, 
+penalty scores that are less than 10 are considered adequate, less than 50 are considered something you want to fix, and 100 
+and above you need to fix. For GAFF, they use the keyword "ATTN" to aware the user of a specified parameter that needs 
+revision. When passing the GAFF, 'ATTN' was only used for halogen-hydrogen complexes and an amine group as provided in the
+supporting information. For `Figure 7`, we can perceive 
+
+#### Sunbursting CGenFF and GAFF
+
+Since we have `GlobalChem` serving as a lexical bridge into IUPAC nomenclature we could perceive which atom-types in their 
+respective forcefields and link them to the functional groups. Any atom-types or parameters that are "high" penalty scoring 
+we perceive which functional groups are performant based on which general forcefield. 
+
 
 
 ### Discussion 
