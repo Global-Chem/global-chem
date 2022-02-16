@@ -352,7 +352,7 @@ GlobalChemExtensions().node_pca_analysis(smiles_list, save_file=False)
 ```
 
 <p align="center">
-  <img width="500" height="500" src="images/extensions/pca_analysis.gif">
+  <img width="500" height="450" src="images/extensions/pca_analysis.gif">
 </p>
 
 Variables List
