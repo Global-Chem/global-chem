@@ -1,5 +1,5 @@
-Global-Chem: Collections of common small molecules and their SMILES/SMARTS to support diverse chemical communities
-==================================================================================================================
+Global-Chem: A Graph Network of common small molecules and their SMILES/SMARTS to support diverse chemical communities
+======================================================================================================================
 
 
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
@@ -356,7 +356,7 @@ GlobalChemExtensions().node_pca_analysis(smiles_list, save_file=False)
   <img width="500" height="450" src="images/extensions/pca_analysis.gif">
 </p>
 
-Variables List
+Nodes List
 ==============
 
 | Chemical List                       | # of Entries | References                                                                                                                                                                                                                                                                                                           |
