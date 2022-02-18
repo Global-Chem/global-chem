@@ -12,13 +12,19 @@ class CommonMonomerRepeatingUnits(object):
 
     @staticmethod
     def get_smiles():
+        
+        '''
+        
+        Missing Entry: threo-(E)-3-(methoxycarbonyl)-4-methylbut-1-ene-1,4-diyl
+        
+        '''
+        
 
         smiles = {
             '3′-bromo-2-chloro[1,1′:4′,1′′-terphenyl]-4,4′′': 'ClC1=CC=CC=C1C2=CC=C(C3=CC=CC=C3)C(Br)=C2',
             '[3,3′-biquinoline]-6,6′': 'C1(C2=CC3=CC=CC=C3N=C2)=CC4=CC=CC=C4N=C1',
             '[2,3′-bipyridine]-4,5′': 'C1(C2=CC=CN=C2)=NC=CC=C1',
             '(Z)-but-1-enel': 'C=CCC',
-#             'threo-(E)-3-(methoxycarbonyl)-4-methylbut-1-ene-1,4-diyl': '', Come back to this later, don't know what it is. 
             'ethene-1,2-diyl': 'C=C',
             'propane-1,3-diyl': 'CCC',
             'methylmethylene': '[CH]C',
