@@ -14,6 +14,10 @@ from global_chem.environment.emerging_perfluoroalkyls import EmergingPerFluoroAl
 from global_chem.materials.clay.montmorillonite_adsorption import MontmorilloniteAdsorption
 from global_chem.materials.polymers.common_monomer_repeating_units import CommonMonomerRepeatingUnits
 
+# Medicinal Chemistry - Cannabinoids
+
+from global_chem.medicinal_chemistry.cannabinoids.cannabinoids import Cannabinoids
+
 # Medicinal Chemistry - Warheads
 
 from global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases import ElectrophilicWarheadsForKinases
