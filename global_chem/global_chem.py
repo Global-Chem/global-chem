@@ -962,6 +962,49 @@ class GlobalChem(object):
 
         return smarts
 
+    def get_smiles_by_iupac(self, iupac_key, return_network_path=False, return_all_network_paths=False):
+
+        '''
+
+        Get the SMILES by the IUPAC.
+
+        Arguments:
+            iupac_key (String): Key for the iupac.
+            return_network_path (Bool): whether the user wants the network path as well.
+            return_all_network_paths (Bool): return all the network paths
+
+        Returns:
+            definition (String): definiton of the iupac.
+            network_path (Dict): { definition: last network path in }
+            network_paths (Dict[List]): { definition: all_networks }
+        '''
+
+        network_paths = []
+        definition = ''
+
+        for node_key, node_value in self.__NODES__.items():
+
+            if node_key == 'global_chem' or node_key == 'common_regex_patterns':
+                continue
+
+            network_path = node_value.__module__
+            entity = node_value()
+            smiles = entity.get_smiles()
+
+            if iupac_key in smiles:
+
+                network_paths.append(network_path)
+                definition = smiles[iupac_key]
+
+        if return_network_path:
+            return { definition: network_paths[-1] }
+
+        elif return_all_network_paths:
+            return { definition: return_all_network_paths }
+
+        else:
+            return definition
+
     def set_node_value(self, node_key, value):
 
         '''
