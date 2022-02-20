@@ -142,8 +142,6 @@ gc.build_global_chem_network(print_output=False, debugger=False)
 node = gc.get_node('emerging_perfluoroalkyls').get_smiles()
 print (node)
 
->>>
-{'perfluorohexanoic acid': 'C(=O)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)O' etc...}
 ```
 
 #### Fetch the IUPAC:SMILES/SMARTS Data from the Node:
@@ -184,6 +182,18 @@ gc.remove_node('emerging_perfluoroalkyls')
 
 ```
 
+#### Fetch a SMILES By IUPAC
+
+```python
+
+gc = GlobalChem()
+definition = gc.get_smiles_by_iupac(
+'benzene', 
+return_network_path=False,
+return_all_network_paths=False
+)
+
+```
 #### Set & Get the Node Value:
 
 If the user wants to put some metadata inside the node they can:
