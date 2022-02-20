@@ -36,8 +36,8 @@ from global_chem.medicinal_chemistry.rings.phase_2_hetereocyclic_rings import Ph
 
 # Medicinal Chemistry - Scaffolds
 
+from global_chem.medicinal_chemistry.scaffolds.iupac_blue_book import IUPACBlueBook
 from global_chem.medicinal_chemistry.scaffolds.privileged_scaffolds import PrivilegedScaffolds
-from global_chem.medicinal_chemistry.scaffolds.iupac_blue_book_substituents import IUPACBlueBook
 from global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements import CommonRGroupReplacements
 
 # Proteins Kinases
