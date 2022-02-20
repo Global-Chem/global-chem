@@ -38,6 +38,16 @@ pip install global-chem
 
 ```
 
+If you want to install the extensions package for extra functionality but with dependencies: https://github.com/Sulstice/global-chem-extensions
+
+```
+
+pip install global-chem-extensions
+
+```
+
+
+
 Rules
 =====
 
