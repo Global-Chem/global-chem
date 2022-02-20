@@ -24,13 +24,13 @@ TEST_REQUIREMENTS = [
 if os.path.exists('README.md'):
     long_description = open('README.md').read()
 else:
-    long_description = 'GlobalChem - Your Graph Network for Chemistry'
+    long_description = 'GlobalChem - Your Own Graph Network for Chemistry'
 
 # exec
 # ----
 setup(
     name="global_chem",
-    version="1.4.8",
+    version="1.4.9",
     packages=find_packages(),
     license='MPL 2.0',
     author="Suliman Sharif",

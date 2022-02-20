@@ -37,7 +37,7 @@ from global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements impor
 
 # Proteins Kinases
 
-from global_chem.proteins.kinases.braf.inhibitors import BRAFInhibitors
+from global_chem.proteins.kinases.braf.braf_inhibitors import BRAFInhibitors
 from global_chem.proteins.kinases.scaffolds.privileged_kinase_inhibtors import PrivilegedKinaseInhibitors
 
 # Organic Synthesis

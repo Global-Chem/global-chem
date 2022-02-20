@@ -42,7 +42,7 @@ from global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements impor
 
 # Proteins Kinases
 
-from global_chem.proteins.kinases.braf.inhibitors import BRAFInhibitors
+from global_chem.proteins.kinases.braf.braf_inhibitors import BRAFInhibitors
 from global_chem.proteins.kinases.scaffolds.privileged_kinase_inhibtors import PrivilegedKinaseInhibitors
 
 # Organic Synthesis
@@ -333,7 +333,7 @@ class GlobalChem(object):
         'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,                 # Suliman Sharif
         'privileged_scaffolds': PrivilegedScaffolds,                             # Suliman Sharif
         'iupac_blue_book': IUPACBlueBook,                                        # Suliman Sharif
-        'common_rgroup_replacements': CommonRGroupReplacements,                  # Sunhwan Jo & Suliman Sharif
+        'common_r_group_replacements': CommonRGroupReplacements,                  # Sunhwan Jo & Suliman Sharif
         'braf_inhibitors': BRAFInhibitors,                                       # Aarion Romany
         'privileged_kinase_inhibitor_scaffolds': PrivilegedKinaseInhibitors,     # Suliman Sharif
         'common_organic_solvents': CommonOrganicSolvents,                        # Suliman Sharif
