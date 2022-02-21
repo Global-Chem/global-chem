@@ -339,6 +339,7 @@ ADM is cofounder and CSO and SJ is Commercial Development Director of SilcsBio L
 # References
 
 (1) Gorgulla, C.; et. al. An Open-Source Drug Discovery Platform Enables Ultra-Large Virtual Screens. Nature 2020, 580 (7805), 663–668. https://doi.org/10.1038/s41586-020-2117-z.
+
 (2) Irwin, John. J.; et. al. ZINC20—A Free Ultralarge-Scale Chemical Database for Ligand Discovery. ACS Publications 2013, 60 (12), 6065–6073. https://doi.org/10.1021/acs.jcim.0c00675.
 (3) Roberts, R. J. PubMed Central: The GenBank of the Published Literature. Proceedings of the National Academy of Sciences of the United States of America 2001, 98 (2), 381–382. https://doi.org/10.1073/pnas.98.2.381.
 (4) Landrum, G. RDKit: Open-Source Cheminformatics Software. 2006. https://doi.org/10.5281/zenodo.591637.
