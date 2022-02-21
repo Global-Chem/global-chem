@@ -128,7 +128,35 @@ Also since these lists of commonality are stored on github it is easily searchab
 any bypasser. 
 
 <img width="1440" alt="Screen Shot 2022-01-19 at 9 10 14 AM" src="https://user-images.githubusercontent.com/11812946/150147664-df1149e1-c43b-48b8-946c-4543f39a8bc6.png">
->>>>>>> 713c3366fce5a5a3afb0b0c478f1f50048cb07c2
+
+Open Source Software Compliance
+===============================
+
+To follow guidelines associated with the Food and Drug Administration for Part 11 Compliance for Electronic Records: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4559082/
+for good manufacturing practices `GlobalChem` follows the same practice as there is no official guidelines for open source software
+compliance. 
+
+Approach to Compliance:
+
+    1.) Validation: GlobalChem is maintained by the developers and data is open source and free to the public. SMILES/SMARTS/IUPAC
+        that are written incorrectly is subject to change and visible to all. The software is validated through a continous integration
+        system that performs routine functionality testing of the network and it's capabilities everytime the `master` production
+        branch is updated.
+        
+    2.) Audit Trail: GlobalChem is audited now through verified signatures and the commit history is visible to all the public.
+        Each branch or commit id is attached with a uuid that ensures uniqueness of the copy of the software or documentation. 
+        
+    3.) Legacy Systems: GlobalChem is so far a three year project that has legacy and a development history. Through it's history
+        it has also maintained a good sense of manufacturing protocols.
+        
+    4.) Copies of Records: GlobalChem has a visible graph network dispesered in python files that have a commit history. The data within the network
+        can also be exported into a common format such as CSV for filing. Each of the nodes within the network is also
+        tied to a paper object representing the data inside it. This maintains the integrity of the data.
+     
+    5.) Record Retention: Records are maintain on the platform Github but also versioned controlled through Git. All documentation
+        and copies of the software scheduled through release cycles with an internal semantic versioning marking critical or
+        minor updates.
+       
 
 Genesis
 =======
