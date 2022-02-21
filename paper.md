@@ -171,50 +171,43 @@ In addition, the number of times that compounds in each list fail in the CGenFF 
   <i>Table 1: GlobalChem Master Node Network</i>
 </p>
 
-# Tests & Applications
+## Application to General ForceFields
 
-A total collection of 2560 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 22 objects in
-an organized fashion by subject. The code was refactored extensively to allow for ease of object addition according to subject and functionality.
-`Common Regex Patterns` was omitted from the test because it's not a functional group but rather a substring pattern to extrapolate Tripos `mol2` file information. 
-We obtained 1507  `mol2` files using GlobalChem SMILES as a key and cirpy resolver (Ref) to fetch the file. 
-
-## Applications
-
-
-### Sunburst Extension
-
-<p align="center">
-  <img width="1000" height="950" src="images/figures/figure_5.png">
-  <i>Figure 4: Sunburst Visualization of GlobalChem applied over an arbitrary SMILES dataset</i>
-</p>
-
-## Tests 
-
-To test the utility of these lists with other software tests were performed on three open source platforms to determine 
-data interoperability. In addition, such tests can indicate cases in which some of the software implemented should be expanded to
-include functional groups that could not be parsed. 
-
-### Cheminformatics Tests
-
-Two open-source cheminformatic platforms are now widely considered as foundational tools: RDKit and Indigo. To test each SMILES string, each string gets
-passed into a `Mol` RDKit object and `Indigo.loadMolecule()` object where any failures are recorded. 
-Results on the number of failed compounds out of the 2560 compounds along with example of failed molecules is presented in Table 2.
-Cheminformatic interoperability between different platforms promotes wider utilization. For example, OpenBabel is another
-utility that may used as a tolerance checker.
-
-| Software | Number of Failed Compounds | Example of Failed SMILES                                |
-|----------|----------------------------|---------------------------------------------------------|
-| RDKit    | 11                         | 'CSi(C(C)(C)C)C', 'C&1&1&1&1',                          |
-| Indigo   | 8                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
+Atom-typing and organization is not a defined systemic process because there is no quantitative standard way to capture a
+chemical environment. These atom-type engines serve as the backbone for molecular dynamic simulations and simulations get 
+longer we can start to infer which forcefields similar to experimental data for  for which systems. Atom type engines are built 
+on efficient organizational algorithms in how we classify atoms in their local chemical environment and their corresponding parameters.
+"General" forcefields are atom-type engines that capture small molecule chemical environment for any-like molecules. Since
+Global-Chem serves as a common list of small molecules relevant to the general forcefield, we can utilize the lists as a global test 
+for relevant molecules to capture. Both CGenFF and GaFF produce a penalty score () with different lookup algorithms on their
+respective binary search tree algorithms, both of these algorithms generate a score indicative of it's organizational method and 
+how many atom types they have catalogued in respect to the environment. If we use GlobalChem as a test set of relevant chemical 
+environments we can infer a performance bias of a forcefield.
 
 <p align="center">
-  <i>Table 2: Compounds in Global-Chem that fail in RDKit or Indigo</i>
+  <img width="1000" height="450" src="images/figures/figure_7.png">
+  <br>
+  <i>Figure 4: Cumulative Density Distribution of CGenFF vs GAFF Dihedral Penalty Scores</i>
 </p>
 
-### ForceField Tests
+In `Figure 4` we evaluate the cumulative density of the dihedral penalty scores between GAFF (Purple) and CGenFF (Blue). 
+The x-axis indicates the penalty score and the y-axis indicates the probabily density of finding a value of a set of data
+equal or under that value. For example, in the pink arrow, if we read that at roughly ~97% of molecules in GlobalChem that 
+passed CGenFF score a dihedral parameter penalty score of 130 or less. For GAFF, it seems that the penalty score is roughly around 320.
+This could be attributed to the penalty score algorithms and how the score is derived. Since GAFF penalty score increases
+by factors of 2 it could give rise to a higher penalty score then intended as compared to CGenFF as the severity of the 
+sub categories is less on tree traversal. Overall since the penalty score is inclusive it still doesn't change that relative to itself the forcefield should have penalties of 0 for the tree to balance correctly. 
+That being said, we can use a general concept of the forcefield community for accepted penalty score ranges. In CGenFF, 
+penalty scores that are less than 10 are considered adequate, less than 50 are considered something you want to fix, and 100 
+and above you need to fix. For GAFF, they use the keyword "ATTN" to aware the user of a specified parameter that needs 
+revision. When passing the GAFF, 'ATTN' was only used for halogen-hydrogen complexes and an amine group as provided in the
+supporting information. For `Figure 4`, we can perceive 
 
+Since we have `GlobalChem` serving as a lexical bridge into IUPAC nomenclature we could perceive which atom-types in their 
+respective forcefields and link them to the functional groups. Any atom-types or parameters that are "high" penalty scoring 
+we perceive which functional groups are performant based on which general forcefield. 
 
-#### CGenFF Performance Metrics
+# Deeper Analysis of CGenFF
 
 Access to broad collections of chemical groups will be of interest for development of force fields, also known as potential energy functions,[MacKerell:2004-10] for molecular modeling and molecular dynamic simulations, 
 allowing for studies on a wider range of chemicals and biological systems. The ability of a force field to treat molecules in the database can also serve as dual interoperable test 
@@ -284,47 +277,39 @@ Silicon has not been included in CGenFF leading to the failures of the silicon-b
 
 Full logs of failed compounds are found in the `tests` directory in the github repository. 
 
-#### CGenFF versus GAFF Penalty Score
+# Cheminformatic Tests
 
-Atom-typing and organization is not a defined systemic process because there is no quantitative standard way to capture a
-chemical environment. These atom-type engines serve as the backbone for molecular dynamic simulations and simulations get 
-longer we can start to infer which forcefields similar to experimental data for  for which systems. Atom type engines are built 
-on efficient organizational algorithms in how we classify atoms in their local chemical environment and their corresponding parameters.
-"General" forcefields are atom-type engines that capture small molecule chemical environment for any-like molecules. Since
-Global-Chem serves as a common list of small molecules relevant to the general forcefield, we can utilize the lists as a global test 
-for relevant molecules to capture. Both CGenFF and GaFF produce a penalty score () with different lookup algorithms on their
-respective binary search tree algorithms, both of these algorithms generate a score indicative of it's organizational method and 
-how many atom types they have catalogued in respect to the environment. If we use GlobalChem as a test set of relevant chemical 
-environments we can infer a performance bias of a forcefield.
+A total collection of 2560 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 22 objects in
+an organized fashion by subject. The code was refactored extensively to allow for ease of object addition according to subject and functionality.
+`Common Regex Patterns` was omitted from the test because it's not a functional group but rather a substring pattern to extrapolate Tripos `mol2` file information. 
+We obtained 1507  `mol2` files using GlobalChem SMILES as a key and cirpy resolver (Ref) to fetch the file. To test the utility of these lists with other software tests were performed on three open source platforms to determine data interoperability. In addition, such tests can indicate cases in which some of the software implemented should be expanded to include functional groups that could not be parsed. 
+
+Two open-source cheminformatic platforms are now widely considered as foundational tools: RDKit and Indigo. To test each SMILES string, each string gets
+passed into a `Mol` RDKit object and `Indigo.loadMolecule()` object where any failures are recorded. 
+Results on the number of failed compounds out of the 2560 compounds along with example of failed molecules is presented in Table 2.
+Cheminformatic interoperability between different platforms promotes wider utilization. For example, OpenBabel is another
+utility that may used as a tolerance checker.
+
+| Software | Number of Failed Compounds | Example of Failed SMILES                                |
+|----------|----------------------------|---------------------------------------------------------|
+| RDKit    | 11                         | 'CSi(C(C)(C)C)C', 'C&1&1&1&1',                          |
+| Indigo   | 8                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
 
 <p align="center">
-  <img width="1000" height="450" src="images/figures/figure_7.png">
-  <br>
-  <i>Figure 7: Cumulative Density Distribution of CGenFF vs GAFF Dihedral Penalty Scores</i>
+  <i>Table 2: Compounds in Global-Chem that fail in RDKit or Indigo</i>
 </p>
 
-In `Figure 7` we evaluate the cumulative density of the dihedral penalty scores between GAFF (Purple) and CGenFF (Blue). 
-The x-axis indicates the penalty score and the y-axis indicates the probabily density of finding a value of a set of data
-equal or under that value. For example, in the pink arrow, if we read that at roughly ~97% of molecules in GlobalChem that 
-passed CGenFF score a dihedral parameter penalty score of 130 or less. For GAFF, it seems that the penalty score is roughly around 320.
-This could be attributed to the penalty score algorithms and how the score is derived. Since GAFF penalty score increases
-by factors of 2 it could give rise to a higher penalty score then intended as compared to CGenFF as the severity of the 
-sub categories is less on tree traversal. Overall since the penalty score is inclusive it still doesn't change that relative to itself the forcefield should have penalties of 0 for the tree to balance correctly. 
-That being said, we can use a general concept of the forcefield community for accepted penalty score ranges. In CGenFF, 
-penalty scores that are less than 10 are considered adequate, less than 50 are considered something you want to fix, and 100 
-and above you need to fix. For GAFF, they use the keyword "ATTN" to aware the user of a specified parameter that needs 
-revision. When passing the GAFF, 'ATTN' was only used for halogen-hydrogen complexes and an amine group as provided in the
-supporting information. For `Figure 7`, we can perceive 
+# GlobalChem Extensions
 
-#### Sunbursting CGenFF and GAFF
-
-Since we have `GlobalChem` serving as a lexical bridge into IUPAC nomenclature we could perceive which atom-types in their 
-respective forcefields and link them to the functional groups. Any atom-types or parameters that are "high" penalty scoring 
-we perceive which functional groups are performant based on which general forcefield. 
+To exhibit the wide functionality and uses cases of `GlobalChem` we created an extension tool independent of the Graph Network because it depends on other open source dependencies. The reasoning behind this was that sometimes users would just want the data and to ease the installation process we concomitantly two different components that work together. Some of this functionality is exhibited in `Figure 7` and are follows Radial Analysis, Principal Component Analysis, Database Heartbeat Monitor, and Parallel Coordinate Diagrams. 
 
 
 
-### Discussion 
+# Open Source Software Compliance
+
+
+
+# Conclusion
 
 `Global-Chem` was developed to facilitate accessing lists of known chemical compounds as objects to allow them to be used in the context of python-based workflows.
 However, it can also facilitate the evaluation of other tools to access chemical information in the form of SMILES. An interesting observation from the present data is the ability of tools to handle the ampersand `&` operator in SMILES for materials. 
@@ -333,7 +318,7 @@ documentation as a `C&1&1&1&1`. As shown in Table 2, this fails in both `RDKit` 
 
 Beyond accessing SMILES stings we've shown the utility of `Global-Chem` to interogate the coverage of the force field `CGenFF`. By partitioning chemical space into well-defined chemical lists, `Global-Chem` allows for regions of chemical space where the CGenFF programs fails or assigns parameters of low analogy to be readily identified. This information will allow for decisions to be made concerning the addition of molecules in the CGenFF training set thereby allowing for systematic improvements in the force field.
 
-# Statement of Purpose
+## Statement of Purpose
 
 `Global-Chem` was developed to facilitate the ability of scientists in both academia and industry to make their compounds of interest readily available to the scientific community in the form of objects that may be directly accessed from python. 
 Accordingly, `Global-Chem` has a number of potential purposes, including teaching and cheminformatics, but our main perogative is to create a free record collection.
