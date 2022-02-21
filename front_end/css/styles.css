@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+    font-family: Sans-serif;
+    margin: 0;
+}
+
+.graph-data {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 5px;
+}
+
+.toggle-data-btn {
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+.toggle-data-btn:hover {
+    opacity: 1;
+}
+
+#graph-data-description {
+    font-size: 12px;
+    color: slategrey;
+}

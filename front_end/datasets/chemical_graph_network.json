@@ -1,0 +1,102 @@
+{
+"nodes": [
+  {"id": "GlobalChem", "group": 1},
+
+  {"id": "Environment", "group": 2},
+  {"id": "EmergingPerfluoroAlkyls", "group": 2},
+
+  {"id": "InterstellarSpace", "group": 3},
+  {"id": "InterstellarSpaceObject", "group": 3},
+
+  {"id": "Materials", "group": 4},
+  {"id": "MontmorilloniteAdsorption", "group": 4},
+  {"id": "CommonMonomerRepeatingUnits", "group": 4},
+
+  {"id": "MedicinalChemistry", "group": 5},
+  {"id": "IUPACBlueBookRings", "group": 5},
+  {"id": "Phase2HetereoCyclicRings", "group": 5},
+  {"id": "RingsInDrugs", "group": 5},
+  {"id": "CommonRGroupReplacements", "group": 5},
+  {"id": "IUPACBlueBook", "group": 5},
+  {"id": "PrivilegedScaffolds", "group": 5},
+  {"id": "CommonWarheadsCovalentInhibitors", "group": 5},
+  {"id": "ElectrophillicWarheadsForKinases", "group": 5},
+  {"id": "Cannabinoids", "group": 5},
+
+  {"id": "Miscellaneous", "group": 6},
+  {"id": "AminoAcids", "group": 6},
+  {"id": "OpenSmiles", "group": 6},
+  {"id": "RegexPatterns", "group": 6},
+  {"id": "Vitamins", "group": 6},
+
+  {"id": "Narcotics", "group": 7},
+  {"id": "ScheduleOne", "group": 7},
+  {"id": "ScheduleTwo", "group": 7},
+  {"id": "ScheduleThree", "group": 7},
+  {"id": "ScheduleFour", "group": 7},
+  {"id": "ScheduleFive", "group": 7},
+  {"id": "Pihkal", "group": 7},
+
+  {"id": "OrganicSynthesis", "group": 8},
+  {"id": "ProtectingGroups", "group": 8},
+  {"id": "AminoAcidProtectingGroups", "group": 8},
+  {"id": "Solvents", "group": 8},
+  {"id": "CommonOrganicSolvents", "group": 8},
+
+  {"id": "Proteins", "group": 9},
+  {"id": "Kinases", "group": 1},
+  {"id": "BRAFInhibitors", "group": 9},
+  {"id": "Scaffolds", "group": 9},
+  {"id": "PrivilegedKinaseInhibitors", "group": 9}
+],
+
+"links": [
+
+  {"source": "Environment", "target": "GlobalChem", "value": 1},
+  {"source": "InterstellarSpace", "target": "GlobalChem", "value": 1},
+  {"source": "Materials", "target": "GlobalChem", "value": 1},
+  {"source": "MedicinalChemistry", "target": "GlobalChem", "value": 1},
+  {"source": "Miscellaneous", "target": "GlobalChem", "value": 1},
+  {"source": "Narcotics", "target": "GlobalChem", "value": 1},
+  {"source": "OrganicSynthesis", "target": "GlobalChem", "value": 1},
+  {"source": "Proteins", "target": "GlobalChem", "value": 1},
+
+  {"source": "EmergingPerfluoroAlkyls", "target": "Environment", "value": 1},
+  {"source": "InterstellarSpaceObject", "target": "InterstellarSpace", "value": 1},
+
+  {"source": "MontmorilloniteAdsorption", "target": "Materials", "value": 1},
+  {"source": "CommonMonomerRepeatingUnits", "target": "Materials", "value": 1},
+
+  {"source": "IUPACBlueBookRings", "target": "MedicinalChemistry", "value": 1},
+  {"source": "Phase2HetereoCyclicRings", "target": "MedicinalChemistry", "value": 1},
+  {"source": "RingsInDrugs", "target": "MedicinalChemistry", "value": 1},
+  {"source": "CommonRGroupReplacements", "target": "MedicinalChemistry", "value": 1},
+  {"source": "IUPACBlueBook", "target": "MedicinalChemistry", "value": 1},
+  {"source": "PrivilegedScaffolds", "target": "MedicinalChemistry", "value": 1},
+  {"source": "CommonWarheadsCovalentInhibitors", "target": "MedicinalChemistry", "value": 1},
+  {"source": "ElectrophillicWarheadsForKinases", "target": "MedicinalChemistry", "value": 1},
+  {"source": "Cannabinoids", "target": "MedicinalChemistry", "value": 1},
+
+  {"source": "AminoAcids", "target": "Miscellaneous", "value": 1},
+  {"source": "OpenSmiles", "target": "Miscellaneous", "value": 1},
+  {"source": "RegexPatterns", "target": "Miscellaneous", "value": 1},
+  {"source": "Vitamins", "target": "Miscellaneous", "value": 1},
+
+  {"source": "ScheduleOne", "target": "Narcotics", "value": 1},
+  {"source": "ScheduleTwo", "target": "Narcotics", "value": 1},
+  {"source": "ScheduleThree", "target": "Narcotics", "value": 1},
+  {"source": "ScheduleFour", "target": "Narcotics", "value": 1},
+  {"source": "ScheduleFive", "target": "Narcotics", "value": 1},
+  {"source": "Pihkal", "target": "Narcotics", "value": 1},
+
+  {"source": "ProtectingGroups", "target": "OrganicSynthesis", "value": 1},
+  {"source": "AminoAcidProtectingGroups", "target": "OrganicSynthesis", "value": 1},
+  {"source": "Solvents", "target": "OrganicSynthesis", "value": 1},
+  {"source": "CommonOrganicSolvents", "target": "OrganicSynthesis", "value": 1},
+
+  {"source": "Kinases", "target": "Proteins", "value": 1},
+  {"source": "BRAFInhibitors", "target": "Proteins", "value": 1},
+  {"source": "Scaffolds", "target": "Proteins", "value": 1},
+  {"source": "PrivilegedKinaseInhibitors", "target": "Proteins", "value": 1}
+]
+}
