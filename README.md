@@ -25,6 +25,11 @@ pattern matching (SMARTS).
   <img width="800" height="400" src="images/globalchemlogo.png">
 </p>
 
+Docs
+====
+
+Link to Documentation: [![Documentation](https://img.shields.io/badge/GitBook-Docu-lightblue)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/)
+
 Installation 
 ============
 
@@ -46,8 +51,6 @@ pip install global-chem-extensions
 
 ```
 
-
-
 Rules
 =====
 
@@ -68,244 +71,6 @@ Quick Start
 Just with no dependencies, intialize the class and there you go! All the common and rare groups of the world
 at your disposal 
 
-#### Print the GlobalChem Structure
-
-```python
-
-gc = GlobalChem()
-gc.print_globalchem_network()
-
->>>
-
-                                ┌solvents─common_organic_solvents
-             ┌organic_synthesis─└protecting_groups─amino_acid_protecting_groups
-             │          ┌polymers─common_monomer_repeating_units
-             ├materials─└clay─montmorillonite_adsorption
-             │                            ┌privileged_kinase_inhibtors
-             │                            ├privileged_scaffolds
-             ├proteins─kinases─┌scaffolds─├iupac_blue_book_substituents
-             │                 │          └common_r_group_replacements
-             │                 └braf─inhibitors
-             │              ┌vitamins
-             │              ├open_smiles
-             ├miscellaneous─├amino_acids
-             │              └regex_patterns
-global_chem──├environment─emerging_perfluoroalkyls
-             │          ┌schedule_one
-             │          ├schedule_four
-             │          ├schedule_five
-             ├narcotics─├pihkal
-             │          ├schedule_two
-             │          └schedule_three
-             ├interstellar_space
-             │                    ┌cannabinoids
-             │                    │         ┌electrophillic_warheads_for_kinases
-             │                    ├warheads─└common_warheads_covalent_inhibitors
-             └medicinal_chemistry─│      ┌phase_2_hetereocyclic_rings
-                                  └rings─├iupac_blue_book_rings
-                                         └rings_in_drugs
-                                         
-```
-#### To Access Nodes and Visualize the Internal Network:
-
-```python
-
-from global_chem import GlobalChem
-
-gc = GlobalChem()
-
-nodes_list = gc.check_available_nodes()
-print (nodes_list)
-
->>>
-'emerging_perfluoro_alkyls', 'montmorillonite_adsorption', 'common_monomer_repeating_units', 'electrophilic_warheads_for_kinases',
-
-gc.build_global_chem_network(print_output=True)
-
->>>
-'global_chem': {
-    'children': [
-        'environment',
-        'miscellaneous',
-        'organic_synthesis',
-        'medicinal_chemistry',
-        'narcotics',
-        'interstellar_space',
-        'proteins',
-        'materials'
-    ],
-    'name': 'global_chem',
-    'node_value': <global_chem.global_chem.Node object at 0x10f60eed0>,
-    'parents': []
-},
-```
-
-The algorithm uses a series of parents/children to connect nodes instead of "edges" as in traditional graph networks. This just makes it easier to code if 
-the graph database lives as a 1-dimensional with lists of parents and childrens connected in this fashion. 
-
-#### Fetch the Node:
-
-```python
-
-gc = GlobalChem()
-gc.build_global_chem_network(print_output=False, debugger=False)
-node = gc.get_node('emerging_perfluoroalkyls').get_smiles()
-print (node)
-
-```
-
-#### Fetch the IUPAC:SMILES/SMARTS Data from the Node:
-
-```python
-
-gc = GlobalChem()
-gc.build_global_chem_network(print_output=True, debugger=False)
-smiles = gc.get_node_smiles('emerging_perfluoroalkyls')
-smarts = gc.get_node_smarts('emerging_perfluoroalkyls')
-
-print (smiles)
-```
-
-#### Fetch All Data from Network:
-
-```python
-
-gc = GlobalChem()
-print(gc.get_all_smiles())
-print(gc.get_all_smarts())
-print(gc.get_all_names())
-
->>>
-['C(=O)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)O', 'C(=O)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O' etc...]
-    
-```
-
-#### Remove a Node from the Network:
-
-Removes the Node and it's connections to any parents. 
-
-```python
-
-gc = GlobalChem()
-gc.build_global_chem_network(print_output=False, debugger=False)
-gc.remove_node('emerging_perfluoroalkyls')
-
-```
-
-#### Fetch a SMILES By IUPAC
-
-```python
-
-gc = GlobalChem()
-definition = gc.get_smiles_by_iupac(
-'benzene', 
-return_network_path=False,
-return_all_network_paths=False
-)
-
-```
-#### Set & Get the Node Value:
-
-If the user wants to put some metadata inside the node they can:
-
-```python
-
-gc = GlobalChem()
-gc.build_global_chem_network(print_output=True, debugger=False)
-gc.set_node_value('emerging_perfluoroalkyls', {'some_data': ['bunny']})
-print (gc.get_node_value('emerging_perfluoroalkyls'))
-
->>>
-{'some_data': ['bunny']}
-```
-
-#### To Create Your Own Chemical Graph Network (GN) And Check the Values
-
-```python
-
-from global_chem import GlobalChem
-
-gc = GlobalChem(verbose=False)
-gc.initiate_network()
-gc.add_node('global_chem', 'common_monomer_repeating_units')
-gc.add_node('common_monomer_repeating_units','electrophilic_warheads_for_kinases')
-values = gc.get_node_smiles('common_monomer_repeating_units')
-
-print (values)
-
->>>
-'3′-bromo-2-chloro[1,1′:4′,1′′-terphenyl]-4,4′′': 'ClC1=CC=CC=C1C2=CC=C(C3=CC=CC=C3)C(Br)=C2'
-
-values = gc.get_node_smarts('electrophilic_warheads_for_kinases')
-
->>>
-'propane-1,3-diyl': '[#6]-[#6]-[#6]', 'methylmethylene': '[#6H]-[#6]',
-
-```
-
-#### Creating Deep Layer Chemical Graph Networks (DGN) & Print it out:
-
-This is for more advanced users of graph theory and understanding.
-
-```python
-
-gc = GlobalChem()
-gc.initiate_deep_layer_network()
-gc.add_deep_layer(
-    [
-        'emerging_perfluoroalkyls',
-        'montmorillonite_adsorption',
-        'common_monomer_repeating_units'
-    ]
-)
-gc.add_deep_layer(
-    [
-        'common_warhead_covalent_inhibitors',
-        'privileged_scaffolds',
-        'iupac_blue_book'
-    ]
-)
-
-gc.print_deep_network()
-
-
->>>
-                                      ┌common_warhead_covalent_inhibitors
-            ┌emerging_perfluoroalkyls─├privileged_scaffolds
-            │                         └iupac_blue_book
-            │                           ┌common_warhead_covalent_inhibitors
-global_chem─├montmorillonite_adsorption─├privileged_scaffolds
-            │                           └iupac_blue_book
-            │                               ┌common_warhead_covalent_inhibitors
-            └common_monomer_repeating_units─├privileged_scaffolds
-                                            └iupac_blue_book
-
-```
-
-#### Compute Common Score for an IUPAC Name:
-
-Based on how many times a word is mentioned per object increases the common weight. The more weight the more common. 
-A score of 0 indicates it is "uncommon".
-
-```
-
-Common Score Algorithm:
-
-    1.) Data mine the current state of GlobalChem
-    2.) Get the Object Weights of Each mention
-    3.) Determine the Mention Weight
-    4.) Sum the Weights and That's How common it is.
-    
-```
-
-```python
-
-gc = GlobalChem()
-gc.build_global_chem_network(print_output=False, debugger=False)
-gc.compute_common_score('benzene', verbose=True)
-
-```
-
 Adding Your Own Chemical List
 =============================
 
@@ -323,58 +88,6 @@ smiles = {
 }  
 
 ```
-
-GlobalChem Extensions
-=====================
-
-Applications of `GlobalChem` can be applied to a variety of cheminformatic usage. One of which is functional group analysos of
-any SMILES dataset using the SMARTS patterns strings described in the data. GlobalChemExtensions have
-
-
-#### Sunbursting
-
-Please navigate here for more documentation: https://github.com/Sulstice/global-chem-extensions
-```python
-
-from global_chem_extensions.global_chem_extensions import GlobalChemExtensions
-
-test_set = [
-    'c1[n+](cc2n(c1OCCc1cc(c(cc1)F)F)c(nn2)c1ccc(cc1)OC(F)F)[O-]',
-    'c1nc(c2n(c1OCCc1cc(c(cc1)F)F)c(nn2)c1ccc(cc1)OC(F)F)Cl',
-    'c1ncc2n(c1CCO)c(nn2)c1ccc(cc1)OC(F)F',
-    'C1NCc2n(C1CCO)c(nn2)c1ccc(cc1)OC(F)F',
-    'C1(CN(C1)c1cc(c(cc1)F)F)Oc1cncc2n1c(nn2)c1ccc(cc1)OC(F)F',
-    'c1ncc2n(c1N1CCC(C1)c1ccccc1)c(nn2)c1ccc(cc1)OC(F)F',
-]
-
-GlobalChemExtensions().sunburst_chemical_list(test_set, save_file=False)
-
-```
-
-<p align="center">
-  <img width="550" height="500" src="images/extensions/figure_1.gif">
-</p>
-
-#### PCA Analysis
-
-Conduct PCA Analysis with a SMILES list input.
-
-```python
-
-from global_chem.global_chem import GlobalChem
-from global_chem_extensions.global_chem_extensions import GlobalChemExtensions
-
-gc = GlobalChem()
-gc.build_global_chem_network(print_output=False, debugger=False)
-smiles_list = list(gc.get_node_smiles('schedule_one').values())
-
-GlobalChemExtensions().node_pca_analysis(smiles_list, save_file=False)
-
-```
-
-<p align="center">
-  <img width="500" height="450" src="images/extensions/pca_analysis.gif">
-</p>
 
 Nodes List
 ==============
@@ -404,6 +117,7 @@ Nodes List
 | Schedule 3 United States Narcotics  | 22           | ECFR :: 21 CFR Part 1308 - Schedules.                                                                                                                                                                                                                                                                                |
 | Schedule 4 United States Narcotics  | 77           | ECFR :: 21 CFR Part 1308 - Schedules.                                                                                                                                                                                                                                                                                |
 | Schedule 5 United States Narcotics  | 8            | ECFR :: 21 CFR Part 1308 - Schedules.                                                                                                                                                                                                                                                                                |
+| Pihkal                              | 179          | Shulgin, Alexander T., and Ann Shulgin. Pihkal: A Chemical Love Story. 1. ed., 8. print, Transform, 2010.                                                                                                                                                                                                            |
 | Common Regex Patterns               | 1            |                                                                                                                                                                                                                                                                                                                      |
 
 
@@ -431,7 +145,6 @@ Citation
 ========
 
 It's on it's way
-
 
 
 ## License

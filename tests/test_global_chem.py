@@ -164,7 +164,7 @@ def test_deep_layer_networks():
     )
     gc.add_deep_layer(
         [
-            'common_warhead_covalent_inhibitors',
+            'common_warheads_covalent_inhibitors',
             'privileged_scaffolds',
             'iupac_blue_book'
         ]
