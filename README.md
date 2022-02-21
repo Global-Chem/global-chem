@@ -25,10 +25,13 @@ pattern matching (SMARTS).
   <img width="800" height="400" src="images/globalchemlogo.png">
 </p>
 
-Docs
-====
+Overview
+========
 
-Link to Documentation: [![Documentation](https://img.shields.io/badge/GitBook-Docu-lightblue)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/)
+|      |      |
+| ---- | ---- |
+| Link to Documentation | [![Documentation](https://img.shields.io/badge/GitBook-Docu-lightblue)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/) |
+| Link to Website | [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://www.chemicalgraphtheory.com)
 
 Installation 
 ============
