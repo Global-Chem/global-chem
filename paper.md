@@ -206,7 +206,7 @@ between the two forcefields. Using the dihedral penalty score we can determine f
 technique to make the relation between dihedral and functional group visible between the forcefields. 
 
 <p align="center">
-  <img width="1000" height="450" src="images/figures/figure_8.png">
+  <img width="1000" height="450" src="images/figures/figure_81.png">
   <br>
   <i>Figure 5: Sunburst Visualization of CGenFF Versus GAFF </i>
 </p>
