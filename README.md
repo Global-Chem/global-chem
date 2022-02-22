@@ -123,15 +123,6 @@ Nodes List
 | Pihkal                              | 179          | Shulgin, Alexander T., and Ann Shulgin. Pihkal: A Chemical Love Story. 1. ed., 8. print, Transform, 2010.                                                                                                                                                                                                            |
 | Common Regex Patterns               | 1            |                                                                                                                                                                                                                                                                                                                      |
 
-
-GlobalChem, initially, is one class object with a series of Nodes that are act as objects for any common chemical lists. 
-The chemical lists can be accessed as nodes and the user can construct their own node trees for the lists.
-
-Also since these lists of commonality are stored on github it is easily searchable and tied directly to the paper for 
-any bypasser. 
-
-<img width="1440" alt="Screen Shot 2022-01-19 at 9 10 14 AM" src="https://user-images.githubusercontent.com/11812946/150147664-df1149e1-c43b-48b8-946c-4543f39a8bc6.png">
-
 Open Source Software Compliance
 ===============================
 
