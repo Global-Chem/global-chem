@@ -46,11 +46,7 @@ The in silico chemical universe is expanding rapidly as open access titan databa
 Zinc Database (2 Billion) [@Irwin:2020-12], PubMed Database (68 Million) [@Roberts:2001-2]) and cheminformatic tools
 to process, manipulate, and derive new compound structures are established. While this chemical data big bang has yielded useful ultra-large datasets they are based on ambiguous classification systems making it difficult to systematically organize them for specific uses.
 
-<p align="center">
-  <img width="400" height="300" src="images/figures/figure_4.png">
-  <br />
-  <i>Figure 1: Screenshot of the ZincDB request URLS</i>
-</p>
+![Screenshot of the ZincDB request URLS .\label{fig:figure_1}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_4.png){ width=50% }
 
 For example, in `Figure 1`, the directory setup for downloading ZincDB molecules is shown. As is evident, the information content of the directory nomenclature does not contain information on the compounds they contain, making it nearly impossible to access specific molecules or classes molecules.  
 Towards overcoming this, partial organizational attempts were made in PubMed, filling chemical data linkages for computational toxicology called Actor for a specific
@@ -68,11 +64,7 @@ But there are problems with the language due to it's length in describing bigger
 
 To implement `GlobalChem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python [10.5555/159351][@Cooke:1989-5].
 
-<p align="center">
-  <img width="700" height="450" src="images/figures/figure_2.png"><br/>
-  <i>Figure 2: Language organized by category and functionality </i>
-</p>
-<br />
+![Language organized by category and functionality .\label{fig:figure_2}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_2.png){ width=100% }
 
 ## Statement of Need
 
@@ -97,10 +89,7 @@ To take advantage of this knowledges requires a thin layer data organization tha
 To achieve this we begin by forming connections of the most relevant data according to chemicals sub-fields that have been authored
 by experts in the different fields. `Figure 3` depicts the node Module layout of `GlobalChem`. Each blue circle represents a relevant field and their subsequent tree networks are highlighted by a contrasting colour.
 
-<p align="center">
-  <img width="1000" height="700" src="images/figures/figure_1_new.png">
-  <i>Figure 3: Node Network of Global-Chem</i>
-</p> 
+![Node Network of Global-Chem .\label{fig:figure_3}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_1_new.png){ width=100% }
 
 ## Data
 
@@ -150,6 +139,8 @@ visibility into deep lexical layered graphs and help aid in organizing sets of c
   <br>
   <i>Figure 4: Plotly Conversion using `GlobalChemExtensions` </i>
 </p>
+
+![Plotly Parallel Coordinates Diagram .\label{fig:figure_4}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_9_new.png){ width=100% }
 
 # Conclusion
 
