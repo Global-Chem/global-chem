@@ -320,9 +320,9 @@ To highlight one functionality is the deep graph network extended into the plotl
 visibility into deep lexical layered graphs and help aid in organizing sets of chemical data.
 
 <p align="center">
-  <img width="1000" height="450" src="images/figures/figure_9.png">
+  <img width="1000" height="450" src="images/figures/figure_9_new.png">
   <br>
-  <i>Figure 8: Failed CGenFF Compounds</i>
+  <i>Figure 9: Terminal Output of Deep Layer Network using `GlobalChem` and the Plotly Conversion using `GlobalChemExtensions` </i>
 </p>
 
 
