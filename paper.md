@@ -316,10 +316,20 @@ To exhibit the wide functionality and uses cases of `GlobalChem` we created an e
 because it depends on other open source dependencies. The reasoning behind this was that sometimes users would just want
 the data and to ease the installation process we concomitantly two different components that work together. Full exhibition of the
 `GlobalChemExtensions` can be found in the `Gitbook` documentation available here (https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/). 
-To highlight one functionality is the deep graph network extended into the plotly parallel coordinates plot. This gives
-visibility into deep lexical layered graphs and help aid in organizing sets of chemical data. 
+To highlight one functionality is the deep graph network extended into the plotly parallel coordinates plot shown in `Figure 8`. This gives
+visibility into deep lexical layered graphs and help aid in organizing sets of chemical data.
 
-The head node is `GlobalChem` and each subsequent layer is 
+<p align="center">
+  <img width="1000" height="450" src="images/figures/figure_9.png">
+  <br>
+  <i>Figure 8: Failed CGenFF Compounds</i>
+</p>
+
+
+The head node is `GlobalChem` and each subsequent layer is a "deep layer" that serves as nodes for a network. Users can build
+their own networks and organize data as they see fit in a neural fashion. This helps expand chemical architectural neural 
+strategies for node construction. Users can access the scatter deep layer functionality with [@Plotly] and others (Radial Analysis,
+Principal Component Analysis, Language Conversion, Software Inteoperable Conversion) 
 
 # Open Source Software Compliance
 
