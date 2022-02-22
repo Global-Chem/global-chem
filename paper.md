@@ -206,7 +206,7 @@ between the two forcefields. Using the dihedral penalty score we can determine f
 technique to make the relation between dihedral and functional group visible between the forcefields. 
 
 <p align="center">
-  <img width="1000" height="450" src="images/figures/figure_8.png">
+  <img width="1000" height="450" src="images/figures/figure_81.png">
   <br>
   <i>Figure 5: Sunburst Visualization of CGenFF Versus GAFF </i>
 </p>
@@ -314,11 +314,63 @@ utility that may used as a tolerance checker.
 
 To exhibit the wide functionality and uses cases of `GlobalChem` we created an extension tool independent of the Graph Network because it depends on other open source dependencies. The reasoning behind this was that sometimes users would just want the data and to ease the installation process we concomitantly two different components that work together. Some of this functionality is exhibited in `Figure 7` and are follows Radial Analysis, Principal Component Analysis, Database Heartbeat Monitor, and Parallel Coordinate Diagrams. 
 
-
-
 # Open Source Software Compliance
 
-`GlobalChem` is designed to serve as a precedence for open source software compliant guidelines. 
+`GlobalChem` follows the same principles outlined in part 11 of Title 21 of the Code of Federal Regulations; Electronic Records,
+Electronic Signatures (21 CFR Part 11) guidance documentation. Since there are no formal guidelines for how open source software should be handled, we
+attempt at completing requirements. The FDA considers part 11 to be applicable to the following criteria of electronic records and how 
+`GlobalChem` accomplishes each component:
+
+(1) Records that are stored electronically in place of paper format. 
+
+`GlobalChem` was built on data that was abstracted from books and papers using reading and redrawing. It adds a component of
+IUPAC/SMILES/SMARTS strings to store it electronically which give it's data it's unique component. The records are open sourced
+and appropiately version controlled by maintainers of the repository and open source community feedback. 
+
+(2) Records that are maintained are relied on to perform regulated activities
+
+`GlobalChem`'s purposes are still unknown as it enters open source deployment. We have built extended functions that live in
+a seperate package `GlobalChemExtensions` that do depend on `GlobalChem`. Since each version is packaged appropiately, if 
+reliance on a version is a need then it's software is available on `Github` and `PyPi`. A Standard Operating Procedure (SOP)
+can be filed submitted from the extensions utility documentation maintained on `Gitbook`
+
+(3) Validation
+
+`GlobalChem` follows Good Automated Manufacturing Practice (GAMP) Category 3 which is "software that is used as installed"
+and potentially "configurable". `GlobalChem` testing comes from within, the documentation serves as the ultimate test
+for functionality because that is what the users will test the most since we rely on open source. A continous integration (CI)
+system is also built concomitantly to serve as basic functionality testing of the `GlobalChem` graph network. The Data stored
+is maintained by experts in the field but subject to change based on community feedback if an error is found. 
+
+(4) Audit Trail
+
+`GlobalChem` is version controlled with `Git` and hosted on Microsoft's platform `Github`. `GlobalChem` follows a semantic
+versioning control of the schema `X1.X2.X3`: `X1` marks formal stable releases with tests and docuementation and mean
+big refactoring to the software or in functionality, `X2` means a new feature is added with or without tests and documentation but 
+iterates as so. `X3` means a "hot" fix (something that is a an easy bug), small feature or additional parameter to add to a function
+, or iteration to the data. 
+
+(5) Legacy Systems
+
+`GlobalChem` has been operational for nearly 2 years since it's first release with version `0.3.0` in May 2020. `GlobalChem`
+was built with a full trail in the open source community with each version catalogued and visibility to all. This satisfies 
+the rules outlines for determining a legacy system. We use community feedback provided from social media platforms (Twitter, Github, LinkedIn)
+as documented evidence and justification that `GlobalChem` is fit for it's intended use of cheminformatics.
+
+(6) Copies of Records
+
+`GlobalChem` has records stored on `Github` for the software that can be exported to a variety of formats as provided by
+Microsoft. For documentation, it is hosted on `Gitbook` and versioning controlled in accordance to the software. Each "book"
+can be exported into Portable Data Format (PDF) appropiate for FDA submission.
+
+(7) Record Retention
+
+`GlobalChem` has a record of the documentation versioned controlled to a unique id (UUID) that serves as it's identifier
+for each iteration stored on `Gitbook`. Each version is stored as markdown files and be converted to PDF, if needed. 
+
+`GlobalChem` has a Mozilla Public License version 2.0. `GlobalChem` allows you to use the software in your larger work and 
+extend it with modifications if you wish. The contingency is that if you install `GlobalChem` and release new software 
+then you must follow the same principles installed in our license for the open source community. 
 
 # Conclusion
 
