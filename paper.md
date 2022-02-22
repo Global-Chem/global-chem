@@ -110,7 +110,7 @@ Users can choose to cross reference leaf nodes between each other and do compara
 Note that not all the SMILES being portrayed are canonical given that users can create their own SMILES, which are not unique. To account for this users can parse `Global-Chem` SMILES into the `RDKit` parser
 for canonical SMILES conversion. 
 
-## Data Collection
+# Data Collection
 
 References and associatied compound lists are selected based on the interests of the scientific contributors.  This should include consideration of relevance to the scientific community. 
 The SMILES strings may be abstracted in a variety of methods:
@@ -136,7 +136,7 @@ with penalties.
 - GAFF data was gathered using the CIRPy resolver to fetch 1507 mol2 files out of GlobalChem and processed through antechamber mol2 correction
 then processed through paramchk2 to obtain parameteres. 
 
-# Data
+## Data
 
 At the time of writing the list of nodes include those shown in Table 1. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. In addition, the languages used for each list are given, along with the number entires in the list and the reference. 
 In addition, the number of times that compounds in each list fail in the CGenFF program, as discussed below, is given.
@@ -218,7 +218,7 @@ within the forcefield. For both CGenFF and GAFF triphenylenes are not performing
 Another potential source of information is the term "xylidino" which is often referred to in modern days as (ortho, meta, para)-xylene.
 Both penalty scores are suggesting the general forcefields haven't captured enough chemical environments surrounding xylenes. 
 
-# Deeper Analysis of CGenFF
+### Deeper Analysis of CGenFF
 
 Access to broad collections of chemical groups will be of interest for development of force fields, also known as potential energy functions,[MacKerell:2004-10] for molecular modeling and molecular dynamic simulations, 
 allowing for studies on a wider range of chemicals and biological systems. The ability of a force field to treat molecules in the database can also serve as dual interoperable test 
@@ -312,7 +312,14 @@ utility that may used as a tolerance checker.
 
 ## GlobalChemExtensions
 
-To exhibit the wide functionality and uses cases of `GlobalChem` we created an extension tool independent of the Graph Network because it depends on other open source dependencies. The reasoning behind this was that sometimes users would just want the data and to ease the installation process we concomitantly two different components that work together. Some of this functionality is exhibited in `Figure 7` and are follows Radial Analysis, Principal Component Analysis, Database Heartbeat Monitor, and Parallel Coordinate Diagrams. 
+To exhibit the wide functionality and uses cases of `GlobalChem` we created an extension cheminformatics tool independent of the Graph Network 
+because it depends on other open source dependencies. The reasoning behind this was that sometimes users would just want
+the data and to ease the installation process we concomitantly two different components that work together. Full exhibition of the
+`GlobalChemExtensions` can be found in the `Gitbook` documentation available here (https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/). 
+To highlight one functionality is the deep graph network extended into the plotly parallel coordinates plot. This gives
+visibility into deep lexical layered graphs and help aid in organizing sets of chemical data. 
+
+The head node is `GlobalChem` and each subsequent layer is 
 
 # Open Source Software Compliance
 
