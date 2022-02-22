@@ -100,7 +100,7 @@ At the time of writing the list of nodes include those shown in Table 1. The lis
 | Amino Acids                          | 20           | Common Knowledge          |
 | Essential Vitamins                   | 13           | Common Knowledge          |
 | Common Organic Solvents              | 42           | [@Fulmer:2010-5]          |
-| Open Smiles                          | 94           | [@OpenSmiles]             |
+| Open Smiles                          | 94           | [@OpenSmiles:1980]        |
 | IUPAC Blue Book (CRC Handbook) 2003  | 333          | [@CRC:2004]               |
 | Rings in Drugs                       | 92           | [@Taylor:2014-6]          |
 | Phase 2 Hetereocyclic Rings          | 19           | [@Broughton:2004-9]       |
