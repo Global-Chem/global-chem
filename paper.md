@@ -42,8 +42,8 @@ bibliography: paper.bib
 
 # Introduction
 
-The in silico chemical universe is expanding rapidly as open access titan databases (Enamine Database (20 Billion) [@Gorgulla:2020-4],
-Zinc Database (2 Billion) [@Irwin:2020-12], PubMed Database (68 Million) [@Roberts:2001-2]) and cheminformatic tools
+The in silico chemical universe is expanding rapidly as open access titan databases (Enamine Database (20 Billion) (1),
+Zinc Database (2 Billion) (2), PubMed Database (68 Million) (3)) and cheminformatic tools
 to process, manipulate, and derive new compound structures are established. While this chemical data big bang has yielded useful ultra-large datasets they are based on ambiguous classification systems making it difficult to systematically organize them for specific uses.
 
 <p align="center">
@@ -53,28 +53,28 @@ to process, manipulate, and derive new compound structures are established. Whil
 </p>
 
 For example, in `Figure 1`, the directory setup for downloading ZincDB molecules is shown. As is evident, the information content of the directory nomenclature does not contain information on the compounds they contain, making it nearly impossible to access specific molecules or classes molecules.  Towards overcoming this, partial organizational attempts were made in PubMed, filling chemical data linkages for computational toxicology called Actor for a specific
-refactored and refined effort [@Judson:2019-9]. In another example, for the EnamineDB a scaffold associated with biological activity was designed to target 
-Toll-Like Receptors in an object-oriented fashion [@Perez-Regidor:2016-9]. However, these organizational methods are difficult
+refactored and refined effort (23). In another example, for the EnamineDB a scaffold associated with biological activity was designed to target 
+Toll-Like Receptors in an object-oriented fashion (24). However, these organizational methods are difficult
 to extend to other systems and can be difficult to implement given the large amount of data.
 In addition, the information content of these papers is of limited utility to the common developer. 
 
 To organize chemical compounds we apply the idea of communication. Humans use symbols and drawings to communicate, a set of symbols and the rules to combining them are called a language. Languages can be employed to carry relevant, distinct features and mean something to their respective community. diagrammatically shown in `Figure 2`. 
 International Union of Pure and Applied Chemistry (IUPAC) was a coalition that formed in the 1800s and their method of communication was named after the organization, IUPAC. 
-IUPAC is a written language that predates even drawing atoms as a method of communication between chemists [@Cooke-Fox:1989-5]. 
+IUPAC is a written language that predates even drawing atoms as a method of communication between chemists (6). 
 Other chemical sub-communities adopted the IUPAC language and applied it to their fields that are comprised of different dialects i.e polymer chemistry, organo-metallic chemistry.
 Due to it's "first to market" status, the scientific chemical language IUPAC is the legacy language that is the lexical key to unlocking information about a chemical pattern or group. 
 But there are problems with the language due to it's length in describing bigger molecules. Simply, IUPAC names in organic chemisty papers are impractical, effecting extending the length of a manuscript,  while being of limited value given the challenge of interpreting such names.
 
-To compact information, chemists presented drawings of chemical structures but information in such a format is hard to store precisely. Alternatively, SMILES [@Weininger:1988-5] has become a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D chemical connectivity information with ease.  Algorithms
+To compact information, chemists presented drawings of chemical structures but information in such a format is hard to store precisely. Alternatively, SMILES (7) has become a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D chemical connectivity information with ease.  Algorithms
 have been designed to abstract and interpolate skeletal patterns and languages from chemical drawings and convert them into SMILES for data processing and analysis. 
-A number of these tools, which work to varying degrees of accuracy, have been well summarized by the Blue Obelisk Society Open Source Review [@OBoyle:2016-9]. 
+A number of these tools, which work to varying degrees of accuracy, have been well summarized by the Blue Obelisk Society Open Source Review (25). 
 Efforts to improve these tools recently have included machine learning (ML) methods that essential "sit" on top of the underlying algoritm to fix any inaccuracies of the method. 
 As an alternative we can take another direction, where data is selectively aggregated based on known classifications, popularity and utility, being organized to a degree of functionality that facilitates more widespread use. However, the criteria for such an aggregation of data is built upon human expertise, requiring input from a variety of people to attain the broadness and accessibility that would facilitate scientific discovery. In other words, in the context of a well-classified chemical database the major challenge is the enormity of the chemical universe, requring a range of chemical expertise to put togethe well-thought chemical lists of compounds relevant to their respective communities. Thus, it is necessary to create a tool to allow for a large number of participants to contribute in order for such a data compilation to grow. 
 However, most software and especially old software can be difficult to install and handle on top of modern technology thus hindering participation. This situation drives the
 need for a tool that is sustainable and readily accessible to potential participants, allowing the database to naturally grow.
 This need motivated the development of the presented `Global-Chem` database tool.
 
-To implement `Global-Chem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python [10.5555/159351][@Cooke:1989-5].
+To implement `Global-Chem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python.
 
 <p align="center">
   <img width="700" height="450" src="images/figures/figure_2.png"><br/>
@@ -104,7 +104,7 @@ The tree network follows a simple object-oriented pythonic design in conjunction
 Each reference object has either the functional groups that correspond to that paper's overall functionality in IUPAC, Preferred Name, Acronyms, SMILES, or SMARTS
 format. The motivation for this design was that as more users contribute they can expand into different directories, add their own directory, 
 and provide their chemical list of interest. Each paper that is submitted is converted into a `namespace` module, an object
-whose name is indicative of it's functionality. An example for the drug design community is the paper "Rings In Drugs" [@Taylor:2014-6] whose
+whose name is indicative of it's functionality. An example for the drug design community is the paper "Rings In Drugs" (11) whose
 python object equivalent is now "RingsInDrugs" with two functional methods that retrieve the  IUPAC:SMILES/SMARTS dictionary that was embedded included in the master object `Global-Chem`. 
 Users can choose to cross reference leaf nodes between each other and do comparative chemical list studies since the IUPAC name and SMILES name are consistent across lists.
 Note that not all the SMILES being portrayed are canonical given that users can create their own SMILES, which are not unique. To account for this users can parse `Global-Chem` SMILES into the `RDKit` parser
@@ -128,9 +128,9 @@ over traditional. For example: 'yl' to mark site points for polymer connections 
 
 - In the case of radicals, some SMILES were adjusted to remove the radical chemical feature as they serve as connection points. However in some cases the radical component was maintained, especially in the case of IUPAC blue book common substituents.
 
-- SMARTS strings were adapted from the SMILES using RDKit [@Landrum:2019-5]
+- SMARTS strings were adapted from the SMILES using RDKit (4)
 
-- CGenFF data was gathered using our in-house SDF CGenFF version to enable us to make a workflow from SMILES to SDF [@Landrum:2019-5] to CGenFF and obtain parameters
+- CGenFF data was gathered using our in-house SDF CGenFF version to enable us to make a workflow from SMILES to SDF (4) to CGenFF and obtain parameters
 with penalties. 
 
 - GAFF data was gathered using the CIRPy resolver to fetch 1507 mol2 files out of GlobalChem and processed through antechamber mol2 correction
@@ -145,26 +145,26 @@ In addition, the number of times that compounds in each list fail in the CGenFF 
 |-------------------------------------|------------------------------|--------------|---------------------------| --------------------------|
 | Amino Acids                         | IUPAC/SMILES/SMARTS          | 20           | Common Knowledge          | 0                         |
 | Essential Vitamins                  | Preferred Name/SMILES/SMARTS | 13           | Common Knowledge          | 0                         |
-| Common Organic Solvents             | IUPAC/SMILES/SMARTS          | 42           | [@Fulmer:2010-5]          | 3                         |
-| Open Smiles                         | IUPAC/SMILES/SMARTS          | 94           | [@OpenSmiles]             | 10                        |
-| IUPAC Blue Book (CRC Handbook) 2003 | Preferred Name/SMILES/SMARTS | 333          | [@CRC:2004]               | 1 (Excluding Radicals)    |
-| Rings in Drugs                      | IUPAC/SMILES/SMARTS          | 92           | [@Taylor:2014-6]          | 0                         |
-| Phase 2 Hetereocyclic Rings         | IUPAC/SMILES/SMARTS          | 19           | [@Broughton:2004-9]       | 0                         |
-| Privileged Scaffolds                | IUPAC/SMILES/SMARTS          | 47           | [@Welsch:2010-6]          | 0                         |
-| Common Warheads Covalent Inhibitors | IUPAC/SMILES/SMARTS          | 29           | [@Gehringer:2019-6]       | 4                         |
-| Common Polymer Repeating Units      | IUPAC/SMILES/SMARTS          | 78           | [@Hiorns:2019-6]          | 7                         |
-| Common R Group Replacements         | IUPAC/SMILES/SMARTS          | 499          | [@Takeuchi:2021-9]        | 15                        |
-| Electrophillic Warheads for Kinases | Preferred Name/SMILES/SMARTS | 24           | [@Petri:2020-12]          | 0                         |
-| Privileged Scaffolds for Kinases    | IUPAC/SMILES/SMARTS          | 29           | [@Hu:2021-3]              | 0                         |
-| BRAF Inhibitors                     | IUPAC/SMILES/SMARTS          | 54           | [@Agianian:2018-6]        | 5                         |
-| Common Amino Acid Protecting Groups | IUPAC/ACRONYM/SMILES/SMARTS  | 346          | [@Isidro-Llobet:2009-6]   | 41                        |
-| Emerging Perfluoroalkyls            | IUPAC/SMILES/SMARTS          | 27           | [@Pelch:2019-9]           | 1                         |
-| Chemicals For Clay Adsorption       | IUPAC/SMILES/SMARTS          | 33           | [@Orr:2019-9]             | 0                         |
-| Schedule 1 United States Narcotics  | Preferred Name/SMILES/SMARTS | 240          | [@21CFRPart1]             | 1                         |
-| Schedule 2 United States Narcotics  | Preferred Name/SMILES/SMARTS | 60           | [@21CFRPart1]             | 1                         |
-| Schedule 3 United States Narcotics  | Preferred Name/SMILES/SMARTS | 22           | [@21CFRPart1]             | 1                         |
-| Schedule 4 United States Narcotics  | Preferred Name/SMILES/SMARTS | 77           | [@21CFRPart1]             | 0                         |
-| Schedule 5 United States Narcotics  | Preferred Name/SMILES/SMARTS | 8            | [@21CFRPart1]             | 0                         |
+| Common Organic Solvents             | IUPAC/SMILES/SMARTS          | 42           | (8)                       | 3                         |
+| Open Smiles                         | IUPAC/SMILES/SMARTS          | 94           | (9)                       | 10                        |
+| IUPAC Blue Book (CRC Handbook) 2003 | Preferred Name/SMILES/SMARTS | 333          | (10)                      | 1 (Excluding Radicals)    |
+| Rings in Drugs                      | IUPAC/SMILES/SMARTS          | 92           | (11)                      | 0                         |
+| Phase 2 Hetereocyclic Rings         | IUPAC/SMILES/SMARTS          | 19           | (12)                      | 0                         |
+| Privileged Scaffolds                | IUPAC/SMILES/SMARTS          | 47           | (13)                      | 0                         |
+| Common Warheads Covalent Inhibitors | IUPAC/SMILES/SMARTS          | 29           | (14)                      | 4                         |
+| Common Polymer Repeating Units      | IUPAC/SMILES/SMARTS          | 78           | (15)                      | 7                         |
+| Common R Group Replacements         | IUPAC/SMILES/SMARTS          | 499          | (16)                      | 15                        |
+| Electrophillic Warheads for Kinases | Preferred Name/SMILES/SMARTS | 24           | (17)                      | 0                         |
+| Privileged Scaffolds for Kinases    | IUPAC/SMILES/SMARTS          | 29           | (18)                      | 0                         |
+| BRAF Inhibitors                     | IUPAC/SMILES/SMARTS          | 54           | (19)                      | 5                         |
+| Common Amino Acid Protecting Groups | IUPAC/ACRONYM/SMILES/SMARTS  | 346          | (20)                      | 41                        |
+| Emerging Perfluoroalkyls            | IUPAC/SMILES/SMARTS          | 27           | (21)                      | 1                         |
+| Chemicals For Clay Adsorption       | IUPAC/SMILES/SMARTS          | 33           | (22)                      | 0                         |
+| Schedule 1 United States Narcotics  | Preferred Name/SMILES/SMARTS | 240          | (26)                      | 1                         |
+| Schedule 2 United States Narcotics  | Preferred Name/SMILES/SMARTS | 60           | (26)                      | 1                         |
+| Schedule 3 United States Narcotics  | Preferred Name/SMILES/SMARTS | 22           | (26)                      | 1                         |
+| Schedule 4 United States Narcotics  | Preferred Name/SMILES/SMARTS | 77           | (26)                      | 0                         |
+| Schedule 5 United States Narcotics  | Preferred Name/SMILES/SMARTS | 8            | (26)                      | 0                         |
 | Common Regex Patterns               | Mol2                         | 1            |                           | N/A                       |
 
 <p align="center">
@@ -258,7 +258,7 @@ molecules for additional force field optimization.
 Motivated by the availability of the CGenFF penalty scores we passed each object individually into the `CGenFF program` and recorded the results.
 The penalty score distributions are shown in `Figure 6` in a rug fashion using Plotly [@Plotly] to show the extent of `CGenFF` penalites
 for the different chemical lists. As may be seen the extent of penalties differs significantly for the various lists. 
-To understand the utility of this information we focus on five leaf nodes: Schedule One US Narcotics (240), BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds (47), Common Warheads (29), [Gehringer:2019-6] and Emerging PerfluoroAlkyls (27). Schedule One are active drugs that are popular in the black market [21CFRPart1], kinase inhibitors should contain drug-like features, privileged scaffolds are selected compounds produced by nature, warheads are designed for covalent inhibition, and PerfluoroAlkyls include herbicides and other compounds that are toxic to humans. Based on the compounds used in the development of CGenFF,
+To understand the utility of this information we focus on five leaf nodes: Schedule One US Narcotics (240), BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds (47), Common Warheads (29), and Emerging PerfluoroAlkyls (27). Schedule One are active drugs that are popular in the black market (26), kinase inhibitors should contain drug-like features, privileged scaffolds are selected compounds produced by nature, warheads are designed for covalent inhibition, and PerfluoroAlkyls include herbicides and other compounds that are toxic to humans. Based on the compounds used in the development of CGenFF,
 we expected the penalties to be lower on drugs and drug-like species and higher for compounds from chemical manufacturing. 
 
 <p align="center">
@@ -288,7 +288,7 @@ Silicon has not been included in CGenFF leading to the failures of the silicon-b
 
 Full logs of failed compounds are found in the `tests` directory in the github repository. 
 
-# Cheminformatic Tests
+# Applications to Cheminformatics
 
 A total collection of 2560 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 22 objects in
 an organized fashion by subject. The code was refactored extensively to allow for ease of object addition according to subject and functionality.
@@ -310,7 +310,7 @@ utility that may used as a tolerance checker.
   <i>Table 2: Compounds in Global-Chem that fail in RDKit or Indigo</i>
 </p>
 
-# GlobalChem Extensions
+## GlobalChemExtensions
 
 To exhibit the wide functionality and uses cases of `GlobalChem` we created an extension tool independent of the Graph Network because it depends on other open source dependencies. The reasoning behind this was that sometimes users would just want the data and to ease the installation process we concomitantly two different components that work together. Some of this functionality is exhibited in `Figure 7` and are follows Radial Analysis, Principal Component Analysis, Database Heartbeat Monitor, and Parallel Coordinate Diagrams. 
 
