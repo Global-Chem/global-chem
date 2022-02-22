@@ -77,10 +77,10 @@ This need motivated the development of the presented `Global-Chem` database tool
 To implement `Global-Chem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python [10.5555/159351][@Cooke:1989-5].
 
 <p align="center">
-  <img width="1000" height="750" src="images/figures/figure_2.png">
+  <img width="700" height="450" src="images/figures/figure_2.png"><br/>
   <i>Figure 2: Language organized by category and functionality </i>
 </p>
-
+<br />
 Python was also chosen because of it's distribution infrastructure that allows for easy installation of objects available on the cloud. This 
 allows `Global-Chem` to function as a highly accessible tool that will allow users to readily access the chemical lists as well as to add content thereby continuosly expanding its utility. 
 
@@ -206,7 +206,7 @@ between the two forcefields. Using the dihedral penalty score we can determine f
 technique to make the relation between dihedral and functional group visible between the forcefields. 
 
 <p align="center">
-  <img width="1000" height="450" src="images/figures/figure_81.png">
+  <img width="1000" height="1150" src="images/figures/figure_81.png">
   <br>
   <i>Figure 5: Sunburst Visualization of CGenFF Versus GAFF </i>
 </p>
