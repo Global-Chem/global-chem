@@ -91,9 +91,12 @@ by experts in the different fields. `Figure 3` depicts the node Module layout of
 
 ![Node Network of Global-Chem .\label{fig:figure_3}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_1_new.png){ width=100% }
 
+Interacting with the `GlobalChem` network is built in a graph-objected oriented with it's own internal application programming interface (API). Users
+can navigate the documentation for interacting with ours or building their own based on their organization using our nodes.
+
 ## Data
 
-At the time of writing the list of nodes include those shown in Table 1. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. In addition, the languages used for each list are given, along with the number entires in the list and the reference. 
+At the time of writing the list of nodes include those shown in Table 1.
 
 | Node List                            | # of Entries | References                |
 |--------------------------------------|--------------|---------------------------|
@@ -132,7 +135,10 @@ that has python dependencies will live in a separate repository of `GlobalChem` 
 on gitbook (https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/). An exhibition of it's functionality is displayed 
 in `Figure 4`. 
 
-![Plotly Parallel Coordinates Diagram .\label{fig:figure_4}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_10.png){ width=100% }
+![Extended Functionality of GlobalChem .\label{fig:figure_4}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_10.png){ width=100% }
+
+In `Figure 4`, from left to right we demonstrate functionality of radial analysis, principal component analysis, open
+source database monitoring and a parallel coordinates diagram. 
 
 # Conclusion
 
