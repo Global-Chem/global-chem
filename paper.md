@@ -134,12 +134,6 @@ the data and to ease the installation process we concomitantly two different com
 To highlight one functionality is the deep graph network extended into the plotly parallel coordinates plot shown in `Figure 4`. This gives
 visibility into deep lexical layered graphs and help aid in organizing sets of chemical data.
 
-<p align="center">
-  <img width="1000" height="450" src="images/figures/figure_9.png">
-  <br>
-  <i>Figure 4: Plotly Conversion using `GlobalChemExtensions` </i>
-</p>
-
 ![Plotly Parallel Coordinates Diagram .\label{fig:figure_4}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_9_new.png){ width=100% }
 
 # Conclusion
