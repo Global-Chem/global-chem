@@ -87,7 +87,7 @@ However, most software and especially old software can be difficult to install a
 need for a tool that is sustainable and readily accessible to potential participants, allowing the graph network to naturally grow.
 This need motivated the development of the presented `GlobalChem` network tool.
 
-# Methodology and Implementation
+# Software Methodology
 
 ## Chemical Set Selection & Object-Oriented Design Philosophy
 
@@ -95,7 +95,7 @@ Scientists, by nature of their work, are required to read extensively about
 selected scientific fields as well as access the associated data. This allows for scientists to develop expert knowledge in the fields and data they value most.
 To take advantage of this knowledges requires a thin layer data organization that allows for the relevant information and data to be readily accessed.
 To achieve this we begin by forming connections of the most relevant data according to chemicals sub-fields that have been authored
-by experts in the different fields. `Figure 3` depicts the node Module layout of `Global-Chem`. Each blue circle represents a relevant field and their subsequent tree networks are highlighted by a contrasting colour.
+by experts in the different fields. `Figure 3` depicts the node Module layout of `GlobalChem`. Each blue circle represents a relevant field and their subsequent tree networks are highlighted by a contrasting colour.
 
 <p align="center">
   <img width="1000" height="700" src="images/figures/figure_1_new.png">
