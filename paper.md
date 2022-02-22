@@ -200,12 +200,23 @@ sub categories is less on tree traversal. Overall since the penalty score is inc
 That being said, we can use a general concept of the forcefield community for accepted penalty score ranges. In CGenFF, 
 penalty scores that are less than 10 are considered adequate, less than 50 are considered something you want to fix, and 100 
 and above you need to fix. For GAFF, they use the keyword "ATTN" to aware the user of a specified parameter that needs 
-revision. When passing the GAFF, 'ATTN' was only used for halogen-hydrogen complexes and an amine group as provided in the
-supporting information. For `Figure 4`, we can perceive 
+revision yet it seems not as consistent when the revision flag is set in accordance with the penalty scores. To test the 
+performance of each forcefield we need to relate each parameter penalty to a functional group and then we can make direct comparisons
+between the two forcefields. Using the dihedral penalty score we can determine for dihedral visualization maps for functional group performance using a sunburst
+technique to make the relation between dihedral and functional group visible between the forcefields. 
 
-Since we have `GlobalChem` serving as a lexical bridge into IUPAC nomenclature we could perceive which atom-types in their 
-respective forcefields and link them to the functional groups. Any atom-types or parameters that are "high" penalty scoring 
-we perceive which functional groups are performant based on which general forcefield. 
+<p align="center">
+  <img width="1000" height="450" src="images/figures/figure_8.png">
+  <br>
+  <i>Figure 5: Sunburst Visualization of CGenFF Versus GAFF </i>
+</p>
+
+In `Figure 5` we show a sunburst relational map of CGenFF and GAFF dihedral penalty scores. We filtered any dihedrals that
+had a score of 0 and only went after molecules that had a combined total dihedral score of 100 or more. Form `Figure 5` we can
+start to evaluate which functional groups perform better and how much chemical environment of that particular dihedral is captured
+within the forcefield. For both CGenFF and GAFF triphenylenes are not performing well and suggested for parameterizing. 
+Another potential source of information is the term "xylidino" which is often referred to in modern days as (ortho, meta, para)-xylene.
+Both penalty scores are suggesting the general forcefields haven't captured enough chemical environments surrounding xylenes. 
 
 # Deeper Analysis of CGenFF
 
@@ -245,17 +256,17 @@ Larger penalities indicate a lower extent of analogy to known parameters, inform
 molecules for additional force field optimization.
 
 Motivated by the availability of the CGenFF penalty scores we passed each object individually into the `CGenFF program` and recorded the results.
-The penalty score distributions are shown in `Figure 5` in a rug fashion using Plotly [@Plotly] to show the extent of `CGenFF` penalites
+The penalty score distributions are shown in `Figure 6` in a rug fashion using Plotly [@Plotly] to show the extent of `CGenFF` penalites
 for the different chemical lists. As may be seen the extent of penalties differs significantly for the various lists. 
 To understand the utility of this information we focus on five leaf nodes: Schedule One US Narcotics (240), BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds (47), Common Warheads (29), [Gehringer:2019-6] and Emerging PerfluoroAlkyls (27). Schedule One are active drugs that are popular in the black market [21CFRPart1], kinase inhibitors should contain drug-like features, privileged scaffolds are selected compounds produced by nature, warheads are designed for covalent inhibition, and PerfluoroAlkyls include herbicides and other compounds that are toxic to humans. Based on the compounds used in the development of CGenFF,
 we expected the penalties to be lower on drugs and drug-like species and higher for compounds from chemical manufacturing. 
 
 <p align="center">
   <img width="1000" height="950" src="images/figures/figure_5.png">
-  <i>Figure 5: Penalty Score Probability Distributions</i>
+  <i>Figure 6: Penalty Score Probability Distributions</i>
 </p>
 
-From `Figure 5`, if we use the charge penalty score as a metric for performance, it is evident that the `CGenFF program` 
+From `Figure 6`, if we use the charge penalty score as a metric for performance, it is evident that the `CGenFF program` 
 assigns parameters with generally low penalty scores less than 200 for Schedule One and BRAF Kinase Inhibitors owed to its
 initial training set of "drug-like" molecules. Privileged Scaffolds encompass a lot of natural products which 
 have functional groups that fall into the definition of "drug-like" but not all as indicated by the purple lines  
@@ -264,7 +275,7 @@ between penalties 200 and 400 representing high charge penalties. A similar tren
 Accordingly, for this list, there are no low penalty scores with the scores clustered in the intermediate range. This is consistent with halogens being inlcuded the training of CGenFF but the specific connectivity of perfluoroalkyls (long haloalkyl chains) not being included.
 Accordingly, if even a few perfluoroalkyls are added to the `CGenFF` training set it will help reduce penalties and improve that treatment of this class of molecules making CGenFF of more utility to the chemical hazard community. 
 
-In addition to the ability of CGenFF to treat the selected chemical lists discussed above other noteworthy failures are listed in `Figure 6`. 
+In addition to the ability of CGenFF to treat the selected chemical lists discussed above other noteworthy failures are listed in `Figure 7`. 
 For example, cyclobutadiene is a non-traditional ring system with a lot of ring strain although the carbon atom types are common.
 `CGenFF` might determine that this particular ring system with it's existing atom type network is not allowed or detrimental to the network if added and needs to be handled with care. An interesting group that fails in CGenFF are allene-based compounds and perhaps warrants extension of the force.
 Silicon has not been included in CGenFF leading to the failures of the silicon-based compounds. Similarly, the IUPAC blue book valuable list includes radicals, which are relevant for synthesis purposes. This is another class for `CGenFF`has not yet been parametrized.
@@ -272,7 +283,7 @@ Silicon has not been included in CGenFF leading to the failures of the silicon-b
 <p align="center">
   <img width="1000" height="450" src="images/figures/figure_6_new.png">
   <br>
-  <i>Figure 6: Failed CGenFF Compounds</i>
+  <i>Figure 7: Failed CGenFF Compounds</i>
 </p>
 
 Full logs of failed compounds are found in the `tests` directory in the github repository. 
@@ -307,7 +318,7 @@ To exhibit the wide functionality and uses cases of `GlobalChem` we created an e
 
 # Open Source Software Compliance
 
-
+`GlobalChem` is designed to serve as a precedence for open source software compliant guidelines. 
 
 # Conclusion
 
