@@ -106,7 +106,7 @@ At the time of writing the list of nodes include those shown in Table 1. The lis
 | Phase 2 Hetereocyclic Rings          | 19           | [@Broughton:2004-9]       |
 | Privileged Scaffolds                 | 47           | [@Welsch:2010-6]          |
 | Common Warheads Covalent Inhibitors  | 29           | [@Gehringer:2019-6]       |
-| Common Polymer Repeating Units       | 78           | [@Hiorns:2019-6]          |
+| Common Polymer Repeating Units       | 78           | [@Hiorns:2012-6]          |
 | Common R Group Replacements          | 499          | [@Takeuchi:2021-9]        |
 | Electrophillic Warheads for Kinases  | 24           | [@Petri:2020-12]          |
 | Privileged Scaffolds for Kinases     | 29           | [@Hu:2021-3]              |
