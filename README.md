@@ -135,31 +135,67 @@ any bypasser.
 Open Source Software Compliance
 ===============================
 
-To follow guidelines associated with the Food and Drug Administration for Part 11 Compliance for Electronic Records: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4559082/
-for good manufacturing practices `GlobalChem` follows the same practice as there is no official guidelines for open source software
-compliance. 
+`GlobalChem` follows the same principles outlined in part 11 of Title 21 of the Code of Federal Regulations; Electronic Records,
+Electronic Signatures (21 CFR Part 11) guidance documentation. Since there are no formal guidelines for how open source software should be handled, we
+attempt at completing requirements. The FDA considers part 11 to be applicable to the following criteria of electronic records and how 
+`GlobalChem` accomplishes each component:
 
-Approach to Open Source Part 11 Electronic Record Compliance:
+- **Plausabilitiy:** `GlobalChem` was built on data that was abstracted from books and papers using reading and redrawing. It adds a component of
+IUPAC/SMILES/SMARTS strings to store it electronically which give it's data it's unique component. The records are open sourced
+and appropiately version controlled by maintainers of the repository and open source community feedback. 
+`GlobalChem`'s purposes are still unknown as it enters open source deployment. We have built extended functions that live in
+a seperate package `GlobalChemExtensions` that do depend on `GlobalChem`. Since each version is packaged appropiately, if 
+reliance on a version is a need then it's software is available on `Github` and `PyPi`. A Standard Operating Procedure (SOP)
+can be filed submitted from the extensions utility documentation maintained on `Gitbook`
 
-- **Validation:** GlobalChem is maintained by the developers and data is open source and free to the public. SMILES/SMARTS/IUPAC
-        that are written incorrectly is subject to change and visible to all. The software is validated through a continous integration
-        system that performs routine functionality testing of the network and it's capabilities everytime the `master` production
-        branch is updated.
-        
-- **Audit Trail:** GlobalChem is audited now through verified signatures and the commit history is visible to all the public.
-        Each branch or commit id is attached with a uuid that ensures uniqueness of the copy of the software or documentation. 
-        
-- **Legacy Systems:** GlobalChem is so far a three year project that has legacy and a development history. Through it's history
-        it has also maintained a good sense of manufacturing protocols.
-        
-- **Copies of Records:** GlobalChem has a visible graph network dispesered in python files that have a commit history. The data within the network
-        can also be exported into a common format such as CSV for filing. Each of the nodes within the network is also
-        tied to a paper object representing the data inside it. This maintains the integrity of the data.
-     
-- **Record Retention:** Records are maintain on the platform Github but also versioned controlled through Git. All documentation
-        and copies of the software scheduled through release cycles with an internal semantic versioning marking critical or
-        minor updates.
-       
+- **Validation:** `GlobalChem` follows Good Automated Manufacturing Practice (GAMP) Category 3 which is "software that is used as installed"
+and potentially "configurable". `GlobalChem` testing comes from within, the documentation serves as the ultimate test
+for functionality because that is what the users will test the most since we rely on open source. A continous integration (CI)
+system is also built concomitantly to serve as basic functionality testing of the `GlobalChem` graph network. The Data stored
+is maintained by experts in the field but subject to change based on community feedback if an error is found. 
+
+- **Audit Trail:** `GlobalChem` is version controlled with `Git` and hosted on Microsoft's platform `Github`. `GlobalChem` follows a semantic
+versioning control of the schema `X1.X2.X3`: `X1` marks formal stable releases with tests and docuementation and mean
+big refactoring to the software or in functionality, `X2` means a new feature is added with or without tests and documentation but 
+iterates as so. `X3` means a "hot" fix (something that is a an easy bug), small feature or additional parameter to add to a function
+, or iteration to the data. 
+
+- **Legacy Systems:** `GlobalChem` has been operational for nearly 2 years since it's first release with version `0.3.0` in May 2020. `GlobalChem`
+was built with a full trail in the open source community with each version catalogued and visibility to all. This satisfies 
+the rules outlines for determining a legacy system. We use community feedback provided from social media platforms (Twitter, Github, LinkedIn)
+as documented evidence and justification that `GlobalChem` is fit for it's intended use of cheminformatics.
+
+- **Copies of Records:** `GlobalChem` has records stored on `Github` for the software that can be exported to a variety of formats as provided by
+Microsoft. For documentation, it is hosted on `Gitbook` and versioning controlled in accordance to the software. Each "book"
+can be exported into Portable Data Format (PDF) appropiate for FDA submission.
+
+- **Record Retention:** `GlobalChem` has a record of the documentation versioned controlled to a unique id (UUID) that serves as it's identifier
+for each iteration stored on `Gitbook`. Each version is stored as markdown files and be converted to PDF, if needed. 
+
+`GlobalChem` has a Mozilla Public License version 2.0. `GlobalChem` allows you to use the software in your larger work and 
+extend it with modifications if you wish. The contingency is that if you install `GlobalChem` and release new software 
+then you must follow the same principles installed in our license for the open source community. 
+
+Data Collection
+===============
+
+References and associatied compound lists are selected based on the interests of the scientific contributors.  This should include consideration of relevance to the scientific community. 
+The SMILES strings may be abstracted in a variety of methods:
+
+-  For simple molecules one representation of the SMILES can be directly translated using visual 
+inspection. This is typically appropriate for compounds at the beginning of a reported list that contain the most common denominator rings. 
+
+- For complex molecules the image can be redrawn in the free version of ChemDraw and then translated into SMILES. 
+
+- For sources where the SMILES are written and the IUPAC is not known the SMILES are translated into ChemDraw and the name retrieved. 
+Note that some of the names may be modified based on human inspection in favor of preferred names. 
+
+- For polymer papers, the site points were omitted from the name and some of the nomenclature adjusted for preferred names
+over traditional. For example: 'yl' to mark site points for polymer connections was removed in favor of reduced english complexity. 
+
+- In the case of radicals, some SMILES were adjusted to remove the radical chemical feature as they serve as connection points. However in some cases the radical component was maintained, especially in the case of IUPAC blue book common substituents.
+
+- SMARTS strings were adapted from the SMILES using RDKit (4)
 
 Genesis
 =======
