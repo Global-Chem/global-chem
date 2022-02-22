@@ -1,5 +1,5 @@
 ---
-title: 'Global-Chem: A Chemical Graph Netowkr of common small molecules and their SMILES/SMARTS to support diverse chemical communities'
+title: 'Global-Chem: A Chemical Graph Network of common small molecules and their SMILES/SMARTS to support diverse chemical communities'
 tags:
   - Python
   - Cheminformatics
