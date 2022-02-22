@@ -76,7 +76,7 @@ However, most software and especially old software can be difficult to install a
 need for a tool that is sustainable and readily accessible to potential participants, allowing the database to naturally grow.
 This need motivated the development of the presented `GlobalChem` database tool.
 
-To implement `GlobalChem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python.
+To implement `GlobalChem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python [10.5555/159351][@Cooke:1989-5].
 
 <p align="center">
   <img width="700" height="450" src="images/figures/figure_2.png"><br/>
@@ -106,7 +106,7 @@ The tree network follows a simple object-oriented pythonic design in conjunction
 Each reference object has either the functional groups that correspond to that paper's overall functionality in IUPAC, Preferred Name, Acronyms, SMILES, or SMARTS
 format. The motivation for this design was that as more users contribute they can expand into different directories, add their own directory, 
 and provide their chemical list of interest. Each paper that is submitted is converted into a `namespace` module, an object
-whose name is indicative of it's functionality. An example for the drug design community is the paper "Rings In Drugs" (11) whose
+whose name is indicative of it's functionality. An example for the drug design community is the paper "Rings In Drugs" [@Taylor:2014-6] whose
 python object equivalent is now "RingsInDrugs" with two functional methods that retrieve the  IUPAC:SMILES/SMARTS dictionary that was embedded included in the master object `Global-Chem`. 
 Users can choose to cross reference leaf nodes between each other and do comparative chemical list studies since the IUPAC name and SMILES name are consistent across lists.
 Note that not all the SMILES being portrayed are canonical given that users can create their own SMILES, which are not unique. To account for this users can parse `Global-Chem` SMILES into the `RDKit` parser
@@ -121,26 +121,26 @@ In addition, the number of times that compounds in each list fail in the CGenFF 
 |-------------------------------------|------------------------------|--------------|---------------------------| --------------------------|
 | Amino Acids                         | IUPAC/SMILES/SMARTS          | 20           | Common Knowledge          | 0                         |
 | Essential Vitamins                  | Preferred Name/SMILES/SMARTS | 13           | Common Knowledge          | 0                         |
-| Common Organic Solvents             | IUPAC/SMILES/SMARTS          | 42           | (8)                       | 3                         |
-| Open Smiles                         | IUPAC/SMILES/SMARTS          | 94           | (9)                       | 10                        |
-| IUPAC Blue Book (CRC Handbook) 2003 | Preferred Name/SMILES/SMARTS | 333          | (10)                      | 1 (Excluding Radicals)    |
-| Rings in Drugs                      | IUPAC/SMILES/SMARTS          | 92           | (11)                      | 0                         |
-| Phase 2 Hetereocyclic Rings         | IUPAC/SMILES/SMARTS          | 19           | (12)                      | 0                         |
-| Privileged Scaffolds                | IUPAC/SMILES/SMARTS          | 47           | (13)                      | 0                         |
-| Common Warheads Covalent Inhibitors | IUPAC/SMILES/SMARTS          | 29           | (14)                      | 4                         |
-| Common Polymer Repeating Units      | IUPAC/SMILES/SMARTS          | 78           | (15)                      | 7                         |
-| Common R Group Replacements         | IUPAC/SMILES/SMARTS          | 499          | (16)                      | 15                        |
-| Electrophillic Warheads for Kinases | Preferred Name/SMILES/SMARTS | 24           | (17)                      | 0                         |
-| Privileged Scaffolds for Kinases    | IUPAC/SMILES/SMARTS          | 29           | (18)                      | 0                         |
-| BRAF Inhibitors                     | IUPAC/SMILES/SMARTS          | 54           | (19)                      | 5                         |
-| Common Amino Acid Protecting Groups | IUPAC/ACRONYM/SMILES/SMARTS  | 346          | (20)                      | 41                        |
-| Emerging Perfluoroalkyls            | IUPAC/SMILES/SMARTS          | 27           | (21)                      | 1                         |
-| Chemicals For Clay Adsorption       | IUPAC/SMILES/SMARTS          | 33           | (22)                      | 0                         |
-| Schedule 1 United States Narcotics  | Preferred Name/SMILES/SMARTS | 240          | (26)                      | 1                         |
-| Schedule 2 United States Narcotics  | Preferred Name/SMILES/SMARTS | 60           | (26)                      | 1                         |
-| Schedule 3 United States Narcotics  | Preferred Name/SMILES/SMARTS | 22           | (26)                      | 1                         |
-| Schedule 4 United States Narcotics  | Preferred Name/SMILES/SMARTS | 77           | (26)                      | 0                         |
-| Schedule 5 United States Narcotics  | Preferred Name/SMILES/SMARTS | 8            | (26)                      | 0                         |
+| Common Organic Solvents             | IUPAC/SMILES/SMARTS          | 42           | [@Fulmer:2010-5]          | 3                         |
+| Open Smiles                         | IUPAC/SMILES/SMARTS          | 94           | [@OpenSmiles]             | 10                        |
+| IUPAC Blue Book (CRC Handbook) 2003 | Preferred Name/SMILES/SMARTS | 333          | [@CRC:2004]               | 1 (Excluding Radicals)    |
+| Rings in Drugs                      | IUPAC/SMILES/SMARTS          | 92           | [@Taylor:2014-6]          | 0                         |
+| Phase 2 Hetereocyclic Rings         | IUPAC/SMILES/SMARTS          | 19           | [@Broughton:2004-9]       | 0                         |
+| Privileged Scaffolds                | IUPAC/SMILES/SMARTS          | 47           | [@Welsch:2010-6]          | 0                         |
+| Common Warheads Covalent Inhibitors | IUPAC/SMILES/SMARTS          | 29           | [@Gehringer:2019-6]       | 4                         |
+| Common Polymer Repeating Units      | IUPAC/SMILES/SMARTS          | 78           | [@Hiorns:2019-6]          | 7                         |
+| Common R Group Replacements         | IUPAC/SMILES/SMARTS          | 499          | [@Takeuchi:2021-9]        | 15                        |
+| Electrophillic Warheads for Kinases | Preferred Name/SMILES/SMARTS | 24           | [@Petri:2020-12]          | 0                         |
+| Privileged Scaffolds for Kinases    | IUPAC/SMILES/SMARTS          | 29           | [@Hu:2021-3]              | 0                         |
+| BRAF Inhibitors                     | IUPAC/SMILES/SMARTS          | 54           | [@Agianian:2018-6]        | 5                         |
+| Common Amino Acid Protecting Groups | IUPAC/ACRONYM/SMILES/SMARTS  | 346          | [@Isidro-Llobet:2009-6]   | 41                        |
+| Emerging Perfluoroalkyls            | IUPAC/SMILES/SMARTS          | 27           | [@Pelch:2019-9]           | 1                         |
+| Chemicals For Clay Adsorption       | IUPAC/SMILES/SMARTS          | 33           | [@Orr:2019-9]             | 0                         |
+| Schedule 1 United States Narcotics  | Preferred Name/SMILES/SMARTS | 240          | [@21CFRPart1]             | 1                         |
+| Schedule 2 United States Narcotics  | Preferred Name/SMILES/SMARTS | 60           | [@21CFRPart1]             | 1                         |
+| Schedule 3 United States Narcotics  | Preferred Name/SMILES/SMARTS | 22           | [@21CFRPart1]             | 1                         |
+| Schedule 4 United States Narcotics  | Preferred Name/SMILES/SMARTS | 77           | [@21CFRPart1]             | 0                         |
+| Schedule 5 United States Narcotics  | Preferred Name/SMILES/SMARTS | 8            | [@21CFRPart1]             | 0                         |
 | Common Regex Patterns               | Mol2                         | 1            |                           | N/A                       |
 
 <p align="center">
@@ -166,65 +166,7 @@ visibility into deep lexical layered graphs and help aid in organizing sets of c
 The head node is `GlobalChem` and each subsequent layer is a "deep layer" that serves as nodes for a network. Users can build
 their own networks and organize data as they see fit in a neural fashion. This helps expand chemical architectural neural 
 strategies for node construction. Users can access the scatter deep layer functionality with [@Plotly] and others (Radial Analysis,
-Principal Component Analysis, Language Conversion, Software Inteoperable Conversion) 
-
-# Open Source Software Compliance
-
-`GlobalChem` follows the same principles outlined in part 11 of Title 21 of the Code of Federal Regulations; Electronic Records,
-Electronic Signatures (21 CFR Part 11) guidance documentation. Since there are no formal guidelines for how open source software should be handled, we
-attempt at completing requirements. The FDA considers part 11 to be applicable to the following criteria of electronic records and how 
-`GlobalChem` accomplishes each component:
-
-(1) Records that are stored electronically in place of paper format. 
-
-`GlobalChem` was built on data that was abstracted from books and papers using reading and redrawing. It adds a component of
-IUPAC/SMILES/SMARTS strings to store it electronically which give it's data it's unique component. The records are open sourced
-and appropiately version controlled by maintainers of the repository and open source community feedback. 
-
-(2) Records that are maintained are relied on to perform regulated activities
-
-`GlobalChem`'s purposes are still unknown as it enters open source deployment. We have built extended functions that live in
-a seperate package `GlobalChemExtensions` that do depend on `GlobalChem`. Since each version is packaged appropiately, if 
-reliance on a version is a need then it's software is available on `Github` and `PyPi`. A Standard Operating Procedure (SOP)
-can be filed submitted from the extensions utility documentation maintained on `Gitbook`
-
-(3) Validation
-
-`GlobalChem` follows Good Automated Manufacturing Practice (GAMP) Category 3 which is "software that is used as installed"
-and potentially "configurable". `GlobalChem` testing comes from within, the documentation serves as the ultimate test
-for functionality because that is what the users will test the most since we rely on open source. A continous integration (CI)
-system is also built concomitantly to serve as basic functionality testing of the `GlobalChem` graph network. The Data stored
-is maintained by experts in the field but subject to change based on community feedback if an error is found. 
-
-(4) Audit Trail
-
-`GlobalChem` is version controlled with `Git` and hosted on Microsoft's platform `Github`. `GlobalChem` follows a semantic
-versioning control of the schema `X1.X2.X3`: `X1` marks formal stable releases with tests and docuementation and mean
-big refactoring to the software or in functionality, `X2` means a new feature is added with or without tests and documentation but 
-iterates as so. `X3` means a "hot" fix (something that is a an easy bug), small feature or additional parameter to add to a function
-, or iteration to the data. 
-
-(5) Legacy Systems
-
-`GlobalChem` has been operational for nearly 2 years since it's first release with version `0.3.0` in May 2020. `GlobalChem`
-was built with a full trail in the open source community with each version catalogued and visibility to all. This satisfies 
-the rules outlines for determining a legacy system. We use community feedback provided from social media platforms (Twitter, Github, LinkedIn)
-as documented evidence and justification that `GlobalChem` is fit for it's intended use of cheminformatics.
-
-(6) Copies of Records
-
-`GlobalChem` has records stored on `Github` for the software that can be exported to a variety of formats as provided by
-Microsoft. For documentation, it is hosted on `Gitbook` and versioning controlled in accordance to the software. Each "book"
-can be exported into Portable Data Format (PDF) appropiate for FDA submission.
-
-(7) Record Retention
-
-`GlobalChem` has a record of the documentation versioned controlled to a unique id (UUID) that serves as it's identifier
-for each iteration stored on `Gitbook`. Each version is stored as markdown files and be converted to PDF, if needed. 
-
-`GlobalChem` has a Mozilla Public License version 2.0. `GlobalChem` allows you to use the software in your larger work and 
-extend it with modifications if you wish. The contingency is that if you install `GlobalChem` and release new software 
-then you must follow the same principles installed in our license for the open source community. 
+Principal Component Analysis, Language Conversion, Software Inteoperable Conversion between python objects) 
 
 # Conclusion
 
