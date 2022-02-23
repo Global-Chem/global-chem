@@ -60,14 +60,14 @@ Rules
 
 The Graph Network (GN)s comes with a couple of rules that for now make the software engineering easier on the developer. 
 
-1.) There must be a root node.
-2.) When Adding a Node every node must be connected. 
-3.) To remove a node it must not have any children. 
+- 1.) There must be a root node.
+- 2.) When Adding a Node every node must be connected. 
+- 3.) To remove a node it must not have any children. 
 
 The Deep Graph Network (DGN)s comes also with a couple of rules to make the implementation easier:
 
-1.) There must be a root node of 1 which marks as your "input" node. 
-2.) When adding a layer all nodes will be added to all the previous layers as children. (Folk can use the remove node feature to perform dropouts)
+- 1.) There must be a root node of 1 which marks as your "input" node. 
+- 2.) When adding a layer all nodes will be added to all the previous layers as children. (Folk can use the remove node feature to perform dropouts)
 
 Network Status
 ==============
