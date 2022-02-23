@@ -131,14 +131,13 @@ At the time of writing the list of nodes include those shown in Table 1.
 ## GlobalChemExtensions
 
 Other than interacting with the network and designing your own, we made a software architectural decision that any extended functionality
-that has python dependencies will live in a separate repository of `GlobalChem` but share's the same documentation hosted
-on gitbook (https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/). An exhibition of it's functionality is displayed 
+that has python dependencies will live in a separate extended package `GlobalChem` called `GlobalChemExtensions`. An exhibition of it's functionality is displayed 
 in `Figure 4`. 
 
 ![Extended Functionality of GlobalChem .\label{fig:figure_4}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_10.png){ width=100% }
 
 In `Figure 4`, from left to right we demonstrate functionality of radial analysis, principal component analysis, open
-source database monitoring and a parallel coordinates diagram. 
+source database monitoring and a parallel coordinates diagram. With more details provided in the documentation available on GitBook.
 
 # Conclusion
 
