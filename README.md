@@ -114,6 +114,8 @@ global_chem──├environment─emerging_perfluoroalkyls
 GlobalChemExtensions
 ====================
 
+[![Downloads](https://pepy.tech/badge/global-chem-extensions)](https://pepy.tech/project/global-chem-extensions)
+
 A Variety of Tools are available for you to browse and analyze data.
 
 <p align="center">
