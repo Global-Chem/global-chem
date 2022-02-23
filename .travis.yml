@@ -34,7 +34,7 @@ install:
 # install the most recent rdkit package from the RDKit anaconda channel.
 - conda install -q -c rdkit rdkit
 
-- python setup.py install
+- python global_chem_package/setup.py install
 - pip install epam.indigo
 - pip install python-coveralls
 - pip install coveralls
@@ -47,7 +47,7 @@ before_script:
 - echo $RDBASE
 
 script:
-- python -m nose --verbose --with-coverage -s
+- python -m nose --verbose --with-coverage -s -w global_chem_package/
 
 after_success:
 - python -m coveralls

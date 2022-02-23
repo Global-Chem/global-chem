@@ -1,8 +1,0 @@
-Compound Success: C1=NC=NN1 , IUPAC Name: 1,2,4-triazole
-Compound Success: C1=CN=CN1 , IUPAC Name: imidazole
-Compound Success: C1=CC=NC=C1 , IUPAC Name: pyridine
-Compound Success: CC1=NC=CN1 , IUPAC Name: 2-methylimidazole
-Compound Success: CN1C=NC=C1 , IUPAC Name: 1-methylimidazole
-Compound Success: NC(N1)=NC2=C(N=CN2)C1=O , IUPAC Name: guanine
-Compound Success: O=C1N=C(N)C=CN1 , IUPAC Name: cytosine
-Compound Success: NC1=NC=NC2=C1N=CN2 , IUPAC Name: adenine
