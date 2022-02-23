@@ -10,6 +10,9 @@ authors:
   - name: Elena Yi Chow
     orcid: 0000-0001-5559-1635
     affiliation: 2
+  - name: Ruibin Liu
+    orcid: 0000-0001-8395-9353
+    affiliation: 1
   - name: Asuka Orr
     orcid: 0000-0003-4628-526X
     affiliation: 1
@@ -20,9 +23,7 @@ authors:
   - name: Shaoqi Zhan
     orcid: 0000-0002-6383-1771
     affiliation: 3
-  - name: Ruibin Liu
-    orcid: 0000-0001-8395-9353
-    affiliation: 1
+
   - name: Sunhwan Jo
     affiliation: 2
   - name: Chris Burke
