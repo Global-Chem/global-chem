@@ -60,9 +60,9 @@ Rules
 
 The Graph Network (GN)s comes with a couple of rules that for now make the software engineering easier on the developer. 
 
-- 1.) There must be a root node.
-- 2.) When Adding a Node every node must be connected. 
-- 3.) To remove a node it must not have any children. 
+- There must be a root node.
+- When Adding a Node every node must be connected. 
+- To remove a node it must not have any children. 
 
 The Deep Graph Network (DGN)s comes also with a couple of rules to make the implementation easier:
 
