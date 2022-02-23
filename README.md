@@ -69,8 +69,8 @@ The Deep Graph Network (DGN)s comes also with a couple of rules to make the impl
 1.) There must be a root node of 1 which marks as your "input" node. 
 2.) When adding a layer all nodes will be added to all the previous layers as children. (Folk can use the remove node feature to perform dropouts)
 
-GlobalChem
-==========
+Network Status
+==============
 
 Just with no dependencies, intialize the class and there you go! All the common and rare groups of the world
 at your disposal 
