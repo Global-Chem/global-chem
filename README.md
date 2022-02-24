@@ -13,7 +13,6 @@ Global-Chem: A Chemical Graph Network of common small molecules and their SMILES
 [![Downloads](https://pepy.tech/badge/global-chem)](https://pepy.tech/project/global-chem)
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem?ref=badge_shield)
-![visitors](https://visitor-badge.laobi.icu/badge?page_id=Sulstice.global-chem)
 
 Global Chem is an open-source graph database and api for common and rare chemical lists using IUPAC as input and SMILES/SMARTS as output. As 
 mostly needed by myself as I search through chemical infinity.
