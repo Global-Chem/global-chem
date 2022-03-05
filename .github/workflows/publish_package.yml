@@ -6,7 +6,6 @@ on:
       - created
   workflow_dispatch:
 
-
 jobs:
   publish:
 
