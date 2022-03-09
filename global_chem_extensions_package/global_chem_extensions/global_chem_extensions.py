@@ -252,7 +252,7 @@ class GlobalChemExtensions(object):
         deep_layer_scatter.scatter(height=height, width=None)
 
     @staticmethod
-    def smarts_pattern_identifier(host, port, debugger):
+    def smarts_pattern_identifier(host='0.0.0.0', port=5000, debugger=True):
 
         '''
 
