@@ -15,7 +15,7 @@ import json
 
 from flask import Flask
 from flask import request
-from flask import render_template
+from flask import render_template_string
 
 # RDkit Imports
 # -------------
@@ -285,9 +285,9 @@ class SmartsPatternIdentifier(object):
                             entry[name] = ''
                     data.append(entry)
 
-                return render_template(self.html, data=data, patts=patterns)
+                return render_template_string(self.html, data=data, patts=patterns)
 
-            return render_template(self.html)
+            return render_template_string(self.html)
 
         return app
 
