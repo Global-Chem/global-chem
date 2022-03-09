@@ -260,5 +260,5 @@ class GlobalChemExtensions(object):
 
         '''
 
-        spi = SmartsPatternIdentifier
+        spi = SmartsPatternIdentifier()
         spi.launch_app(host=host, port=port, debug=debugger)
