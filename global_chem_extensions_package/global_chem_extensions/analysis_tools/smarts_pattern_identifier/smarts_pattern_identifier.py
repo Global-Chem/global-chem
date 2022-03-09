@@ -202,8 +202,3 @@ class SmartsPatternIdentifier(object):
 
 
         self.app.run(host=host, port=port, debug=debug)
-
-if __name__ == '__main__':
-
-    spi = SmartsPatternIdentifier()
-    spi.launch_app()
