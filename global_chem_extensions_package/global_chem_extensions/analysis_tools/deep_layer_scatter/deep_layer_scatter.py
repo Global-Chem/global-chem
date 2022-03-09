@@ -59,11 +59,15 @@ class DeepLayerScatter(object):
 
         return layer, node_counts
 
-    def scatter(self):
+    def scatter(self, height = 800 , width = 1700):
 
         '''
 
         Scatter the Data
+
+        Arguments:
+            height (Int): Height of the graph
+            width (Int): width of the graph
 
         TODO: Fix the values the weight later but get the essential visualization down.
 
@@ -72,7 +76,6 @@ class DeepLayerScatter(object):
         layer_object = []
         first_layer = [] # Establish the first layer to the root
         second_layer = [] # Establish the second layer to get the deep functionality going
-        previous_children = []
         symmetric = False
 
         for i in range(1, self.max_layer + 1):
@@ -91,7 +94,6 @@ class DeepLayerScatter(object):
                     second_layer += [ value ] * self.node_counts[1]
 
                 layer_object.append(second_layer)
-                previous_children = second_layer
 
             elif i ==2:
                 pass
@@ -99,19 +101,19 @@ class DeepLayerScatter(object):
 
                 layer = []
 
-                for node in nodes:
-
-                    if not symmetric:
-                        layer += [ node['name'] ]
-
-                    else:
-                        layer += [ node['name'] ]  * self.node_counts[i - 1]
+            for node in nodes:
 
                 if not symmetric:
+                    layer += [ node['name'] ]
 
-                    layer = layer  * self.node_counts[i - 1]
+                else:
+                    layer += [ node['name'] ]  * self.node_counts[i - 1]
 
-                layer_object.append(layer)
+            if not symmetric:
+
+                layer = layer  * self.node_counts[i - 1]
+
+            layer_object.append(layer)
 
         layers_labels = [ str(i) for i in range(1, self.max_layer + 1 ) ]
 
@@ -137,7 +139,7 @@ class DeepLayerScatter(object):
 
             categories['categoryorder'] = 'category ascending'
 
-            dimensions.append(categories)
+        dimensions.append(categories)
 
         fig = go.Figure(go.Parcats(
             dimensions=dimensions,
@@ -157,8 +159,8 @@ class DeepLayerScatter(object):
             template='simple_white',
             xaxis_tickformat = 'i',
             bargap=0.4, # gap between bars of adjacent location coordinates,
-            height=800,
-            width=1700
+            height=height,
+            width=width
         )
 
         if self.save_file:

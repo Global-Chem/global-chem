@@ -1,0 +1,85 @@
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"   integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="   crossorigin="anonymous"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+</head>
+<body>
+  <div class="container">
+
+    <h1>SMARTS Validator</h1>
+    <p class="lead">Test SMARTS patterns using set of molecules.</p>
+
+    <form method="POST" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="smarts" class="form-label">SMARTS</label>
+        <textarea class="form-control" id="smarts" name="smarts" rows="10">
+{
+    "halogen": "[F,Cl,Br,I]",
+    "acetic anhydride": "[CX3](=[OX1])[OX2][CX3](=[OX1])",
+    "hydroxyl": "[OX2H]",
+    "phenol": "[OX2H][cX3]:[c]",
+    "aldehyde": "[CX3H1](=O)[#6]",
+    "amide": "[NX3][CX3](=[OX1])[#6]",
+    "ketone": "[#6][CX3](=O)[#6]",
+    "ester": "[#6]-C(=O)O-[#6]",
+    "ether": "[OD2]([#6])[#6]",
+    "amine": "[NX3;H2;!$(NC=[!#6]);!$(NC#[!#6])][#6]",
+    "enamine": "[NX3][CX3]=[CX3]",
+    "vinylic alkene": "[$([CX3]=[CX3])]",
+    "alkyne": "[$([CX2]#C)]",
+    "allenic alkene": "[$([CX2](=C)=C)]",
+    "sulfide": "[#16X2H0]",
+    "sulfonamide": "[$([#16X4]([NX3])(=[OX1])(=[OX1])[#6]),$([#16X4+2]([NX3])([OX1-])([OX1-])[#6])]",
+    "sulfoxide": "[$([#16X3](=[OX1])([#6])[#6]),$([#16X3+]([OX1-])([#6])[#6])]"
+}
+        </textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Test Molecules</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="testfile" id="testfile" value="astex_mini_frag.sdf" checked>
+          <label class="form-check-label" for="testfile">
+            Astex Mini Frag
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+{% if data %}
+    <div>
+      <table class="table" id="table">
+        <thead>
+          <tr>
+            <th scope="col">Molecule</th>
+            {% for p in patts %}
+            <th scope="col">{{ p }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+        {% for entry in data %}
+          <tr>
+            <td>{{ entry.mol|safe }}</td>
+            {% for p in patts %}
+            <td>{{ entry[p]|safe }}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+{% endif %}
+  </div>
+}
+  <script>
+    $(document).ready( function () {
+      $('#table').DataTable({
+        paging: false
+      });
+    } );
+  </script>
+</body>
+</html>

@@ -3,3 +3,4 @@ global-chem
 kaleido
 rdkit-pypi
 bokeh==1.4.0
+flask

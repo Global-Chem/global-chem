@@ -13,6 +13,7 @@ from global_chem_extensions.analysis_tools.deep_layer_scatter.deep_layer_scatter
 
 # Analytics
 
+from global_chem_extensions.analysis_tools.smarts_pattern_identifier.smarts_pattern_identifier import SmartsPatternIdentifier
 from global_chem_extensions.analysis_tools.drug_design_filters.drug_design_filters import DrugDesignFilters
 from global_chem_extensions.analysis_tools.node_pca_analysis.node_pca_analysis import PCAAnalysis
 
@@ -238,7 +239,7 @@ class GlobalChemExtensions(object):
         return converted_network
 
     @staticmethod
-    def scatter_deep_layer_network(deep_layer_network, save_file=False):
+    def scatter_deep_layer_network(deep_layer_network, height=800, width=1700, save_file=False):
 
         '''
 
@@ -248,4 +249,16 @@ class GlobalChemExtensions(object):
         '''
 
         deep_layer_scatter = DeepLayerScatter(deep_layer_network, save_file=save_file)
-        deep_layer_scatter.scatter()
+        deep_layer_scatter.scatter(height=height, width=None)
+
+    @staticmethod
+    def smarts_pattern_identifier(host, port, debugger):
+
+        '''
+
+        Launch a Flask App for the SMARTS Pattern Identifier
+
+        '''
+
+        spi = SmartsPatternIdentifier
+        spi.launch_app(host=host, port=port, debug=debugger)
