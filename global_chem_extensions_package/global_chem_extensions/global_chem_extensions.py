@@ -21,7 +21,7 @@ from global_chem_extensions.analysis_tools.node_pca_analysis.node_pca_analysis i
 
 from global_chem_extensions.software_adapters.networkx_adapter.networkx_adapter import NetworkxAdapter
 from global_chem_extensions.software_adapters.dimorphite_dl_adapter.dimorphite_dl import DimorphiteAdapter
-from global_chem_extensions.language_adapters.amino_acid_converter.amino_acid_converter import AminoAcidAdapter
+from global_chem_extensions.language_adapters.amino_acid_converter.amino_acid_converter import AminoAcidConverter
 
 # Monitors
 
@@ -128,7 +128,7 @@ class GlobalChemExtensions(object):
 
         '''
 
-        converter = AminoAcidAdapter()
+        converter = AminoAcidConverter()
 
         converted_list = []
 

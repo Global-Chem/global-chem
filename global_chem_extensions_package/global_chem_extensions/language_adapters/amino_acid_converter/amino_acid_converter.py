@@ -4,7 +4,7 @@
 
 # -------------------------------------------
 
-class AminoAcidAdapter(object):
+class AminoAcidConverter(object):
 
     __version__ = '0.0.1'
 
