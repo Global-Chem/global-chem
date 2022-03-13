@@ -265,7 +265,14 @@ class GlobalChemExtensions(object):
         spi.launch_app(host=host, port=port, debug=debugger)
 
     @staticmethod
-    def find_protonation_states(smiles_list, min_ph=6.4, max_ph=8.4, pka_precision=1.0, max_variants=128, label_states=False):
+    def find_protonation_states(
+            smiles_list,
+            min_ph=6.4,
+            max_ph=8.4,
+            pka_precision=1.0,
+            max_variants=128,
+            label_states=False
+    ):
 
         '''
 

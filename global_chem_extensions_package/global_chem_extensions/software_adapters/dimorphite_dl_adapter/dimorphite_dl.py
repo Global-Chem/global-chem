@@ -9,7 +9,6 @@
 
 from dimorphite_dl import DimorphiteDL
 
-
 class DimorphiteAdapter(object):
 
     __version__ = '0.0.1'
@@ -19,10 +18,10 @@ class DimorphiteAdapter(object):
                  smiles,
                  min_ph,
                  max_ph,
-                 pka_precision,
                  max_variants,
-                 label_states
-                 ):
+                 label_states,
+                pka_precision,
+    ):
 
         '''
 
@@ -43,9 +42,9 @@ class DimorphiteAdapter(object):
         self.dimorphite_dl = DimorphiteDL(
             min_ph=self.min_ph,
             max_ph=self.max_ph,
-            pka_precision=self.pka_precision,
             max_variants=self.max_variants,
-            label_states=self.label_states
+            label_states=self.label_states,
+            pka_precision=self.pka_precision,
         )
 
     def run(self):
