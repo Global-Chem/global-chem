@@ -17,9 +17,10 @@ from global_chem_extensions.analysis_tools.smarts_pattern_identifier.smarts_patt
 from global_chem_extensions.analysis_tools.drug_design_filters.drug_design_filters import DrugDesignFilters
 from global_chem_extensions.analysis_tools.node_pca_analysis.node_pca_analysis import PCAAnalysis
 
-# Converters
+# Adapters
 
 from global_chem_extensions.software_adapters.networkx_adapter.networkx_adapter import NetworkxAdapter
+from global_chem_extensions.software_adapters.dimorphite_dl_adapter.dimorphite_dl import DimorphiteAdapter
 from global_chem_extensions.language_adapters.amino_acid_converter.amino_acid_converter import AminoAcidAdapter
 
 # Monitors
@@ -262,3 +263,28 @@ class GlobalChemExtensions(object):
 
         spi = SmartsPatternIdentifier()
         spi.launch_app(host=host, port=port, debug=debugger)
+
+    @staticmethod
+    def find_protonation_states(smiles_list, min_ph=6.4, max_ph=8.4, pka_precision=1.0, max_variants=128, label_states=False):
+
+        '''
+
+        Find the protonation states of a SMILES string
+
+        Returns:
+            states (Dict): States of the SMILES input.
+
+        '''
+
+        dimorphite_adapter = DimorphiteAdapter(
+            smiles_list,
+            min_ph,
+            max_ph,
+            pka_precision,
+            max_variants,
+            label_states
+        )
+
+        states = dimorphite_adapter.run()
+
+        return states
