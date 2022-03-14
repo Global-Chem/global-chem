@@ -32,7 +32,8 @@ Overview
 |      |      |
 | ---- | ---- |
 | Link to Documentation | [![Documentation](https://img.shields.io/badge/GitBook-Docu-lightblue)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/) |
-| Link to Website | [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://www.chemicalgraphtheory.com)
+| Link to Website | [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://www.chemicalgraphtheory.com) |
+| Link to Demo | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gGx4mOmkXP8voGelHwCt8Eq4Xq8Lj5_k?usp=sharing) 
 
 Installation 
 ============
