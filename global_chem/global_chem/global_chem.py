@@ -49,6 +49,7 @@ from global_chem.proteins.kinases.scaffolds.privileged_kinase_inhibitors import 
 
 from global_chem.organic_synthesis.solvents.common_organic_solvents import CommonOrganicSolvents
 from global_chem.organic_synthesis.protecting_groups.amino_acid_protecting_groups import AminoAcidProtectingGroups
+from global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands import NickelBidendatePhosphineLigands
 
 # Narcotics
 
@@ -348,6 +349,7 @@ class GlobalChem(object):
         'open_smiles': OpenSmiles,                                               # Suliman Sharif
         'amino_acids': AminoAcids,                                               # Suliman Sharif
         'pihkal': Pihkal,                                                        # Suliman Sharif
+        'nickel_ligands': NickelBidendatePhosphineLigands,                       # Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                            # Chris Burke & Suliman Sharif
     }
 
