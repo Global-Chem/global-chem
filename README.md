@@ -56,6 +56,22 @@ pip install global-chem-extensions
 
 ```
 
+QuickStart
+==========
+
+```
+
+from global_chem import GlobalChem
+from global_chem_extensions import GlobalChemExtensions
+
+gc = GlobalChem()
+gc.build_global_chem_network(print_output=False, debugger=False)
+smiles_list = list(gc.get_node_smiles('pihkal').values())
+
+GlobalChemExtensions().node_pca_analysis(smiles_list, save_file=False)
+
+```
+
 Rules
 =====
 
