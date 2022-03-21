@@ -23,6 +23,10 @@ from global_chem_extensions.software_adapters.networkx_adapter.networkx_adapter 
 from global_chem_extensions.software_adapters.dimorphite_dl_adapter.dimorphite_dl import DimorphiteAdapter
 from global_chem_extensions.language_adapters.amino_acid_converter.amino_acid_converter import AminoAcidConverter
 
+# Validation
+
+from global_chem_extensions.validation.partial_smiles import PartialSmilesValidation
+
 # Monitors
 
 from global_chem_extensions.monitoring_services.database_monitor.database_monitor import DatabaseMonitor
@@ -295,3 +299,36 @@ class GlobalChemExtensions(object):
         states = dimorphite_adapter.run()
 
         return states
+
+    @staticmethod
+    def verify_smiles(
+            smiles_list,
+            rdkit=True,
+            partial_smiles=True,
+            partial=False,
+            return_failures=False
+    ):
+
+        '''
+
+        Arguments:
+            smiles_list (List): List of smiles
+            rdkit (Bool): Whether the RDKit flag is true
+            partial_smiles (Bool): Whether to pass the partial smiles validation
+            partial (Bool): whether the user would like to have partial fragments
+            return_failures (Bool): whether the user would like to have failures returned.
+
+        '''
+
+        psv = PartialSmilesValidation(partial=partial)
+
+        successes, failures = psv.validate(
+            smiles_list,
+            rdkit=rdkit,
+            partial_smiles=partial_smiles
+        )
+
+        if return_failures:
+            return successes, failures
+        else:
+            return successes
