@@ -1,20 +1,6 @@
 Global-Chem: A Chemical Graph Network Toolkit of common small molecules and their SMILES/SMARTS to support diverse chemical communities
 ========================================================================================================================================
 
-
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
-![Python](https://img.shields.io/badge/python-3.6-blue.svg)
-[![Build Status](https://app.travis-ci.com/Sulstice/global-chem.svg?branch=master)](https://app.travis-ci.com/Sulstice/global-chem)
-[![Coverage Status](https://coveralls.io/repos/github/Sulstice/global-chem/badge.svg?branch=master)](https://coveralls.io/github/Sulstice/global-chem?branch=master)
-![Repo Size](https://img.shields.io/github/repo-size/Sulstice/global-chem)
-[![PyPI version](https://badge.fury.io/py/global-chem.svg)](https://badge.fury.io/py/global-chem)
-[![DOI](https://zenodo.org/badge/259046250.svg)](https://zenodo.org/badge/latestdoi/259046250)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![Downloads](https://pepy.tech/badge/global-chem)](https://pepy.tech/project/global-chem)
-[![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem?ref=badge_shield)
-[![Maturity badge - level 2](https://img.shields.io/badge/Maturity-Level%202%20--%20First%20Release-yellowgreen.svg)](https://github.com/tophat/getting-started/blob/master/scorecard.md)
-
 Global Chem is an open-source graph database and api for common and rare chemical lists using IUPAC as input and SMILES/SMARTS as output. As 
 mostly needed by myself as I search through chemical infinity.
 
@@ -29,10 +15,12 @@ pattern matching (SMARTS).
 Overview
 ========
 
-|      |      |
-| ---- | ---- |
-| Link to Documentation | [![Documentation](https://img.shields.io/badge/GitBook-Docu-lightblue)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/) |
-| Link to Website | [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://www.chemicalgraphtheory.com)
+| Usage     | Build  | Release | Data Validation | Licensing | Stats |  
+| --------- | ------ | ------- | --------------- | --------- | ----- |
+| [![Documentation](https://img.shields.io/badge/GitBook-Docu-lightblue)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/) | [![Build Status](https://app.travis-ci.com/Sulstice/global-chem.svg?branch=master)](https://app.travis-ci.com/Sulstice/global-chem) | [![PyPI version](https://badge.fury.io/py/global-chem.svg)](https://badge.fury.io/py/global-chem) | [![saythanks](https://img.shields.io/badge/PartialSMILES-85.7%25-ff69b4.svg)]() | [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) | [![Downloads](https://pepy.tech/badge/global-chem)](https://pepy.tech/project/global-chem) | 
+| [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://www.chemicalgraphtheory.com) | [![Coverage Status](https://coveralls.io/repos/github/Sulstice/global-chem/badge.svg?branch=master)](https://coveralls.io/github/Sulstice/global-chem?branch=master) | [![DOI](https://zenodo.org/badge/259046250.svg)](https://zenodo.org/badge/latestdoi/259046250) | | [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem?ref=badge_shield) | ![Repo Size](https://img.shields.io/github/repo-size/Sulstice/global-chem) |
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gGx4mOmkXP8voGelHwCt8Eq4Xq8Lj5_k?usp=sharing) | [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/) | [![Maturity badge - level 2](https://img.shields.io/badge/Maturity-Level%202%20--%20First%20Release-yellowgreen.svg)](https://github.com/tophat/getting-started/blob/master/scorecard.md) |  |
+
 
 Installation 
 ============
@@ -52,6 +40,22 @@ If you want to install the extensions package for extra functionality.
 ```
 
 pip install global-chem-extensions
+
+```
+
+QuickStart
+==========
+
+```
+
+from global_chem import GlobalChem
+from global_chem_extensions import GlobalChemExtensions
+
+gc = GlobalChem()
+gc.build_global_chem_network(print_output=False, debugger=False)
+smiles_list = list(gc.get_node_smiles('pihkal').values())
+
+GlobalChemExtensions().node_pca_analysis(smiles_list, save_file=False)
 
 ```
 
