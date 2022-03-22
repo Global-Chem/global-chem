@@ -7,14 +7,17 @@
 # Imports
 # -------
 
-import partialsmiles as ps
-from pysmiles import read_smiles
-from molvs import validate_smiles
+import urllib.request
+from urllib.parse import quote
 
-# RDKit Imports
-# -------------
+# Validation Imports
+# ------------------
+
+import partialsmiles as ps
 
 from rdkit import Chem
+from pysmiles import read_smiles
+from molvs import validate_smiles
 
 class PartialSmilesValidation(object):
 
@@ -27,7 +30,14 @@ class PartialSmilesValidation(object):
 
         self.partial = partial
 
-    def validate(self, smiles_list, partial_smiles=True, rdkit=True, pysmiles=True, molvs=True):
+    def validate(
+            self,
+            smiles_list,
+            partial_smiles=True,
+            rdkit=True,
+            pysmiles=True,
+            molvs=True,
+    ):
 
         '''
 
@@ -60,9 +70,11 @@ class PartialSmilesValidation(object):
                     mol = read_smiles(smiles)
                 if molvs:
                     errors = validate_smiles(smiles)
-                    print (errors)
+                    for error in errors:
+                        if 'ERROR' in error:
+                            raise Exception
                 successes.append(smiles)
-            except:
+            except Exception as e:
                 failures.append(smiles)
 
         return successes, failures

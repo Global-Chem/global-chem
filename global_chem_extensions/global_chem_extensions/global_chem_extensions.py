@@ -318,19 +318,22 @@ class GlobalChemExtensions(object):
             rdkit (Bool): Whether the RDKit flag is true
             partial_smiles (Bool): Whether to pass the partial smiles validation
             pysmiles (Bool): Whether to pass the validation through pysmiles
+            molvs (Bool): Whether to pass the validation through MolVS
             partial (Bool): whether the user would like to have partial fragments
             return_failures (Bool): whether the user would like to have failures returned.
 
         '''
 
-        psv = PartialSmilesValidation(partial=partial)
+        psv = PartialSmilesValidation(
+            partial=partial
+        )
 
         successes, failures = psv.validate(
             smiles_list,
             rdkit=rdkit,
             partial_smiles=partial_smiles,
             pysmiles=pysmiles,
-            molvs=molvs
+            molvs=molvs,
         )
 
         if return_failures:
