@@ -21,6 +21,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f global_chem/requirements.txt ]; then pip install -r global_chem/requirements.txt; fi
+        python global_chem/setup.py install
     - name: Build a binary wheel and a source tarball
       run: |
         pip install build
