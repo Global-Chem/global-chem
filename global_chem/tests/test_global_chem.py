@@ -6,103 +6,101 @@
 
 # imports
 # -------
-from indigo import *
-from rdkit import Chem
+
 from global_chem import GlobalChem
 
-def test_rdkit_passing():
+def test_initializa_class():
 
     '''
 
-    Test the global chem class through rdkit parser
+    Test the intialize of the class, with parameters if it extends to that
 
     '''
 
-    total_smiles = GlobalChem().get_all_smiles()
+    gc = GlobalChem()
 
-    passing_molecules = []
-
-    for i in range(0, len(total_smiles)):
-
-        try:
-            mol = Chem.MolFromSmiles(total_smiles[i])
-            if mol:
-                passing_molecules.append(total_smiles[i])
-        except Exception as e:
-            pass
-
-    print ('Total Molecules: %s ' % (len(total_smiles)))
-    print ('Total RDKit Passing Molecules: %s ' % len(passing_molecules))
-    print ('Failed Compounds: %s' % list(set(total_smiles) - set(passing_molecules)))
-
-def test_indigo_passing():
+def test_print_network():
 
     '''
 
-    Test the GlobalChem Passing through the indigo parser.
+    Test the printing of the network
 
     '''
 
-    total_smiles = GlobalChem().get_all_smiles()
+    gc = GlobalChem()
+    gc.print_globalchem_network()
 
-    indigo = Indigo()
-
-    success_compounds = []
-    failed_compounds = []
-
-    for smiles in total_smiles:
-        try:
-            molecule = indigo.loadMolecule(smiles)
-            success_compounds.append(smiles)
-        except IndigoException as e:
-            failed_compounds.append(smiles)
-
-    print ('Total Molecules: %s ' % (len(total_smiles)))
-    print ('Total Indigo Passing Molecules: %s ' % len(success_compounds))
-    print ('Failed Compounds: %s' % len(failed_compounds))
-    print ('Failed Compounds: %s' % failed_compounds)
-
-def test_building_global_chem_network_and_data_access():
-
+def test_node_attribute():
 
     '''
 
-    Test the Global Chem Building Network.
+    Test the Node Attribute to the GlobalChem Class
 
     '''
-
-    # Check Node Function
 
     gc = GlobalChem()
     nodes_list = gc.check_available_nodes()
 
+    assert len(nodes_list) > 0
     assert 'emerging_perfluoroalkyls' in nodes_list
 
-    # See if the network builds
+def test_build_global_chem_network():
 
+    '''
+
+    Test the Building of the GlobalChem Network
+
+    '''
+
+    gc = GlobalChem()
     gc.build_global_chem_network(print_output=True)
+    molecules = gc.get_node_smiles('emerging_perfluoroalkyls')
 
-    # Check Node Function Capability of getting SMILES/SMARTS
+    assert len(molecules) > 0
 
-    smiles = gc.get_node_smiles('emerging_perfluoroalkyls')
-    smarts = gc.get_node_smarts('emerging_perfluoroalkyls')
+def test_fetch_all_globalchem_data():
 
-    # assert 'C(=O)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)O' in smiles
-    # assert '[#6](=[#8])(-[#6](-[#6](-[#6](-[#6](-[#6](-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])-[#8]' in smarts
+    '''
+
+    Test the fetching of all data
+
+    '''
+
+    gc = GlobalChem()
 
     all_smiles = gc.get_all_smiles()
     all_smarts = gc.get_all_smarts()
     all_names = gc.get_all_names()
 
-    # Test a series of SMILES/SMARTS/IUPAC
+    assert len(all_smiles) > 0
+    assert len(all_smarts) > 0
+    assert len(all_names) > 0
 
-    # assert 'C(=O)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)O' in all_smiles
-    # assert '[#6](=[#8])(-[#6](-[#6](-[#6](-[#6](-[#6](-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])(-[#9])-[#9])-[#8]' in all_smarts
-    # assert 'perfluorohexanoic acid' in all_names
-    # assert 'arginine' in all_names
-    # assert 'OCCC1=C(C)[N+](CC2=CN=C(C)N=C2N)=CS1'in smiles
+def test_fetch_node_data():
 
-    # Test Node Get and Set Value Functionality
+    '''
+
+    Fetch the Node Data and Test
+
+    '''
+
+    gc = GlobalChem()
+
+    gc.build_global_chem_network(print_output=True)
+
+    smiles = gc.get_node_smiles('emerging_perfluoroalkyls')
+    smarts = gc.get_node_smarts('emerging_perfluoroalkyls')
+
+    assert len(smiles) > 0
+    assert len(smarts) > 0
+
+def test_get_and_set_node_values():
+
+    '''
+
+    Test the get and set of the nodes
+
+    '''
 
     gc = GlobalChem()
     gc.build_global_chem_network(print_output=True, debugger=False)
@@ -110,15 +108,68 @@ def test_building_global_chem_network_and_data_access():
     gc.set_node_value('emerging_perfluoroalkyls', {'some_data': ['bunny']})
     node_value = gc.get_node_value('emerging_perfluoroalkyls')
 
-    # assert 'some_data' in node_value
+    assert len(node_value) > 0
 
-    # Test Remove Node Functionality
+def remove_node():
+
+    '''
+
+    Test the removal of a node
+
+    '''
+
+    gc = GlobalChem()
+    gc.build_global_chem_network(print_output=True, debugger=False)
 
     gc.remove_node('emerging_perfluoroalkyls')
+    keys = list(gc.network.keys())
 
-    node = gc.network.get('emerging_perfluoroalkyls', None)
+    assert 'emerging_perfluoroalkyls' not in keys
 
-    # assert node == None
+def test_get_node():
+
+    '''
+
+    Test the get of a node
+
+    '''
+
+    gc = GlobalChem()
+    gc.build_global_chem_network()
+    node = gc.get_node('emerging_perfluoroalkyls')
+
+    assert len(node) > 0
+
+def test_fetch_smiles_by_iupac():
+
+    '''
+
+    Test the fetcher function for IUPAC by SMILES
+
+    '''
+
+    gc = GlobalChem()
+    definition = gc.get_smiles_by_iupac(
+        'benzene',
+        return_network_path=False,          # Return the last found network path
+        return_all_network_paths=True,      # Return all the found network paths
+    )
+
+    keys = list(definition.keys())
+
+    assert 'C1=CC=CC=C1' in keys
+
+def test_compute_common_score():
+
+    '''
+
+    Compute the Common Score of a molecule
+
+    '''
+
+    gc = GlobalChem()
+    gc.build_global_chem_network(print_output=False, debugger=False)
+    gc.compute_common_score('benzene', verbose=True)
 
 def test_building_independent_networks():
 
@@ -136,13 +187,13 @@ def test_building_independent_networks():
     gc.add_node('common_monomer_repeating_units','electrophilic_warheads_for_kinases')
     values = gc.get_node_smiles('common_monomer_repeating_units')
 
-    # assert 'ClC1=CC=CC=C1C2=CC=C(C3=CC=CC=C3)C(Br)=C2' in values
+    assert len(values) > 0
 
     # Test Fetching SMARTS
 
     values = gc.get_node_smarts('electrophilic_warheads_for_kinases')
 
-    # assert '[#6H]-[#6]' in values
+    assert len(values) > 0
 
 def test_deep_layer_networks():
 
