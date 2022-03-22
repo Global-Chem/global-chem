@@ -8,3 +8,5 @@ pandas
 sklearn
 dimorphite_dl
 partialsmiles
+pysmiles
+molvs
