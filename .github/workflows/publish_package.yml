@@ -26,7 +26,7 @@ jobs:
       run: |
         pip install build
         cd global_chem
-        python -m build --sdist --wheel --outdir dist/ .
+        python -m build --sdist --wheel --outdir global_chem/dist/ .
     - name: Publish distribution 📦 to PyPI
       uses: pypa/gh-action-pypi-publish@master
       with:
