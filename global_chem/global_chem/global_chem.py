@@ -64,6 +64,10 @@ from global_chem.narcotics.schedule_five import ScheduleFive
 
 from global_chem.interstellar_space.interstellar_space import InterstellarSpace
 
+# Biopharmaceutics - Excipients
+
+from global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir import CimetidineAndAcyclovir
+
 # Miscellaneous
 
 from global_chem.miscellaneous.vitamins import Vitamins
@@ -350,6 +354,7 @@ class GlobalChem(object):
         'amino_acids': AminoAcids,                                               # Suliman Sharif
         'pihkal': Pihkal,                                                        # Suliman Sharif
         'nickel_ligands': NickelBidendatePhosphineLigands,                       # Suliman Sharif
+        'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                      # Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                            # Chris Burke & Suliman Sharif
     }
 
