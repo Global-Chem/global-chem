@@ -1,5 +1,5 @@
-Global-Chem: A Chemical Graph Network Toolkit of common small molecules and their IUPAC/SMILES/SMARTS to support diverse chemical communities
-=============================================================================================================================================
+Global-Chem: A Chemica Knowledge Graph Toolkit of common small molecules and their IUPAC/SMILES/SMARTS to support diverse chemical communities
+==============================================================================================================================================
 
 Global Chem is an open-source graph database and api for common and rare chemical lists using IUPAC as input and SMILES/SMARTS as output. As 
 mostly needed by myself as I search through chemical infinity.
