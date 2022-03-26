@@ -19,6 +19,7 @@ from global_chem_extensions.analysis_tools.node_pca_analysis.node_pca_analysis i
 
 # Adapters
 
+from global_chem_extensions.software_adapters.pdf_adapter.molpdf_parser import MolPDFAdapter
 from global_chem_extensions.software_adapters.networkx_adapter.networkx_adapter import NetworkxAdapter
 from global_chem_extensions.software_adapters.dimorphite_dl_adapter.dimorphite_dl import DimorphiteAdapter
 from global_chem_extensions.language_adapters.amino_acid_converter.amino_acid_converter import AminoAcidConverter
@@ -340,3 +341,56 @@ class GlobalChemExtensions(object):
             return successes, failures
         else:
             return successes
+
+    @staticmethod
+    def smiles_to_pdf(
+        smiles = [],
+        labels = [],
+        file_name = 'molecules.pdf',
+        include_failed_smiles = True,
+        title = 'CHEMICAL LIST BY MOLPDF',
+    ):
+
+        '''
+
+
+        Arguments:
+            smiles (List): List of smiles you want to parse
+            labels (List): List of labels you want to parse
+            file_name (String): File name you want the output to be
+            include_failed_smiles (Bool): Whether to include SMILES that didn't render.
+            title (String): Title of the PDF
+        '''
+
+        molpdf_adapter = MolPDFAdapter(
+            smiles = smiles,
+            labels = labels,
+            file_name = file_name,
+            include_failed_smiles = include_failed_smiles,
+            title = title
+        )
+
+        molpdf_adapter.generate_document()
+
+    @staticmethod
+    def pdf_to_smiles(
+        file_name
+    ):
+
+        '''
+
+        Arguments:
+             file_name (String): File name for the pdf to be parsed
+
+        Returns:
+            molecules (List): List of molecules
+
+        '''
+
+        molpdf_adapter = MolPDFAdapter(
+            file_name = file_name
+        )
+
+        molecules = molpdf_adapter.parse_document(file_name)
+
+        return molecules
