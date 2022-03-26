@@ -15,6 +15,8 @@ pattern matching (SMARTS).
 Overview
 ========
 
+#### GlobalChem
+
 | Usage     | Build  | Release | SMILES Validation | Licensing | Stats |  
 | --------- | ------ | ------- | ----------------- | --------- | ----- |
 | [![Documentation](https://img.shields.io/badge/GitBook-Docu-lightblue)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/) | [![Test System](https://github.com/Sulstice/global-chem/actions/workflows/continous_integration.yml/badge.svg)](https://github.com/Sulstice/global-chem/actions/workflows/continous_integration.yml) | [![PyPI version](https://badge.fury.io/py/global-chem.svg)](https://badge.fury.io/py/global-chem) | [![saythanks](https://img.shields.io/badge/RDKit-100%25-fg49b4.svg)](https://www.rdkit.org/) | [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) | [![Downloads](https://pepy.tech/badge/global-chem)](https://pepy.tech/project/global-chem) | 
@@ -22,6 +24,11 @@ Overview
 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gGx4mOmkXP8voGelHwCt8Eq4Xq8Lj5_k?usp=sharing) | [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/) | [![Maturity badge - level 2](https://img.shields.io/badge/Maturity-Level%202%20--%20First%20Release-yellowgreen.svg)](https://github.com/tophat/getting-started/blob/master/scorecard.md) | [![saythanks](https://img.shields.io/badge/PySMILES-99.8%25-fg49b4.svg)](https://github.com/pckroon/pysmiles)  |
 | ![Python](https://img.shields.io/badge/python-3.6-blue.svg) | | | [![saythanks](https://img.shields.io/badge/MolVS-98.5%25-lm89b5.svg)](https://github.com/mcs07/MolVS) | |
 
+#### GlobalChemExtensions
+
+| Release | Licensing | Stats |  
+| ------- | --------- | ----- |
+| [![PyPI version](https://badge.fury.io/py/global-chem-extensions.svg)](https://badge.fury.io/py/global-chem-extensions) | [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) | [![Downloads](https://pepy.tech/badge/global-chem-extensions)](https://pepy.tech/project/global-chem-extensions) | 
 
 Installation 
 ============
@@ -119,9 +126,7 @@ global_chem──├environment─emerging_perfluoroalkyls
 GlobalChemExtensions
 ====================
 
-[![Downloads](https://pepy.tech/badge/global-chem-extensions)](https://pepy.tech/project/global-chem-extensions)
-
-A Variety of Tools are available for you to browse and analyze data.
+A Variety of Tools are available for you to browse and analyze data and with the full list of different applications can be found in the google colab demo or the Gitbook documentation. A demonstration of the data visualization extensions designed with plotly and bokeh are displayed below:
 
 <p align="center">
   <img width="800" height="600" src="https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_10.png">
