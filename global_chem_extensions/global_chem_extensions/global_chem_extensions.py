@@ -391,6 +391,6 @@ class GlobalChemExtensions(object):
             file_name = file_name
         )
 
-        molecules = molpdf_adapter.parse_document(file_name)
+        molecules = molpdf_adapter.parse_document()
 
         return molecules
