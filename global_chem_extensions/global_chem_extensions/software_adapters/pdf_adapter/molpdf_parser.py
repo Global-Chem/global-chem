@@ -7,7 +7,7 @@
 
 from molpdf import MolPDF, MolPDFParser
 
-class MolPDFAdpater(object):
+class MolPDFAdapter(object):
 
     __version__ = '0.0.1'
 

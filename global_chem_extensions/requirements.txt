@@ -10,3 +10,4 @@ dimorphite_dl
 partialsmiles
 pysmiles
 molvs
+molpdf
