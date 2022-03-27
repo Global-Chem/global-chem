@@ -1,0 +1,30 @@
+# Each line is a file pattern followed by one or more owners.
+
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# @global-owner1 and @global-owner2 will be requested for
+# review when someone opens a pull request.
+*       @global-owner1 @global-owner2
+
+# Order is important; the last matching pattern takes the most
+# precedence. When someone opens a pull request that only
+# modifies JS files, only @js-owner and not the global
+# owner(s) will be requested for a review.
+*.js    @sulstice
+
+# Teams can be specified as code owners as well. Teams should
+# be identified in the format @org/team-name. Teams must have
+# explicit write access to the repository. In this example,
+# the octocats team in the octo-org organization owns all .txt files.
+*.txt @sulstice
+
+# In this example, @octocat owns any file in an global_chem* directory
+# anywhere in your repository.
+global_chem/ @sulstice
+
+global_chem_extensions/ @sulstice
+
+
+# In this example, any change inside the `/scripts` directory
+# will require approval from @doctocat or @octocat.
+front_end/ @sulstice
