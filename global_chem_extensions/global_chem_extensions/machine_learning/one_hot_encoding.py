@@ -24,7 +24,7 @@ class SmilesOneHotEncoder(object):
         '[', '\\', ']',
         'a', 'b', 'c', 'e', 'g', 'i', 'l', 'n', 'o', 'p', 'r', 's',
         't', 'u',
-        '&'
+        '&', ':', '*'
     ]
 
     def __init__(
