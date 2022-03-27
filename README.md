@@ -1,4 +1,4 @@
-Global-Chem: A Chemical Knowledge Graph Toolkit of common small molecules and their IUPAC/SMILES/SMARTS to help select compounds relevant to diverse chemical communities
+Global-Chem: A Chemical Knowledge Graph Toolkit of common small molecules and their IUPAC/SMILES/SMARTS to help users select compounds relevant to diverse chemical communities
 ==============================================================================================================================================================================
 
 Global Chem is an open-source graph database and api for common and rare chemical lists using IUPAC as input and SMILES/SMARTS as output. As 
