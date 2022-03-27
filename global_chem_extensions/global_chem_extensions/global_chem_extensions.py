@@ -24,6 +24,10 @@ from global_chem_extensions.software_adapters.networkx_adapter.networkx_adapter 
 from global_chem_extensions.software_adapters.dimorphite_dl_adapter.dimorphite_dl import DimorphiteAdapter
 from global_chem_extensions.language_adapters.amino_acid_converter.amino_acid_converter import AminoAcidConverter
 
+# Machine Learning
+
+from global_chem_extensions.machine_learning.one_hot_encoding import SmilesOneHotEncoder
+
 # Validation
 
 from global_chem_extensions.validation.partial_smiles import PartialSmilesValidation
@@ -394,3 +398,54 @@ class GlobalChemExtensions(object):
         molecules = molpdf_adapter.parse_document()
 
         return molecules
+
+    @staticmethod
+    def encode_smiles(
+            smiles_list,
+            max_length = 120
+    ):
+
+        '''
+
+        Arguments:
+
+            smiles_list (List): List of SMILES
+            max_length (Int): List of the encoded SMILES
+
+        Returns:
+            encoded_list (List): List of the encoded SMILES
+
+        '''
+
+        encoder = SmilesOneHotEncoder(
+            smiles_list = smiles_list,
+            max_length = max_length
+        )
+
+        encoded_list = encoder.encode()
+
+        return encoded_list
+
+    @staticmethod
+    def decode_smiles(
+            smiles_list
+    ):
+
+        '''
+
+        Arguments:
+
+            smiles_list (List): List of SMILES
+
+        Returns:
+            decoded_list (List): List of the decoded SMILES
+
+        '''
+
+        encoder = SmilesOneHotEncoder(
+            smiles_list = smiles_list,
+        )
+
+        decoded_list = encoder.decode()
+
+        return decoded_list
