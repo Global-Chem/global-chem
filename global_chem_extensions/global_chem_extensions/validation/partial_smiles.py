@@ -13,6 +13,7 @@ from urllib.parse import quote
 # Validation Imports
 # ------------------
 
+import deepsmiles
 import partialsmiles as ps
 
 from rdkit import Chem
@@ -29,14 +30,16 @@ class PartialSmilesValidation(object):
                  ):
 
         self.partial = partial
+        self.deep_smiles_converter = deepsmiles.Converter(rings=True, branches=True)
 
     def validate(
             self,
             smiles_list,
-            partial_smiles=True,
-            rdkit=True,
-            pysmiles=True,
-            molvs=True,
+            partial_smiles = True,
+            rdkit = False,
+            pysmiles = False,
+            molvs = False,
+            deepsmiles = False,
     ):
 
         '''
@@ -49,6 +52,7 @@ class PartialSmilesValidation(object):
             rdkit (Bool): whether to include rdkit
             pysmiles (Bool): whether to include pysmiles
             molvs (Bool): whether to include molvs
+            deepsmiles (Bool): deepSMILES validation for machine learning
 
         Returns:
             successes (List): List of SMILES that worked
@@ -73,7 +77,15 @@ class PartialSmilesValidation(object):
                     for error in errors:
                         if 'ERROR' in error:
                             raise Exception
+                if deepsmiles:
+
+                    encoded = self.deep_smiles_converter.encode(smiles)
+                    try:
+                        decoded = self.deep_smiles_converter.decode(encoded)
+                    except deepsmiles.DecodeError as e:
+                        continue
                 successes.append(smiles)
+
             except Exception as e:
                 failures.append(smiles)
 

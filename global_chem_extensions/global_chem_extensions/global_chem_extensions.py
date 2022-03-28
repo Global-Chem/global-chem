@@ -308,10 +308,11 @@ class GlobalChemExtensions(object):
     @staticmethod
     def verify_smiles(
             smiles_list,
-            rdkit=True,
             partial_smiles=True,
-            pysmiles=True,
-            molvs=True,
+            rdkit=False,
+            pysmiles=False,
+            molvs=False,
+            deepsmiles=False,
             partial=False,
             return_failures=False
     ):
@@ -324,6 +325,7 @@ class GlobalChemExtensions(object):
             partial_smiles (Bool): Whether to pass the partial smiles validation
             pysmiles (Bool): Whether to pass the validation through pysmiles
             molvs (Bool): Whether to pass the validation through MolVS
+            deepsmiles (Bool): deepSMILES validation for machine learning
             partial (Bool): whether the user would like to have partial fragments
             return_failures (Bool): whether the user would like to have failures returned.
 
@@ -339,6 +341,7 @@ class GlobalChemExtensions(object):
             partial_smiles=partial_smiles,
             pysmiles=pysmiles,
             molvs=molvs,
+            deepsmiles=deepsmiles
         )
 
         if return_failures:

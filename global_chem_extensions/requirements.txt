@@ -11,3 +11,4 @@ partialsmiles
 pysmiles
 molvs
 molpdf
+deepsmiles
