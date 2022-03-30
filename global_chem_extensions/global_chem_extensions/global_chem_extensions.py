@@ -32,6 +32,10 @@ from global_chem_extensions.machine_learning.one_hot_encoding import SmilesOneHo
 
 from global_chem_extensions.validation.partial_smiles import PartialSmilesValidation
 
+# ForceFields
+
+from global_chem_extensions.forcefields.cgenff.cgenff_parser import CGenFFMolecule
+
 # Monitors
 
 from global_chem_extensions.monitoring_services.database_monitor.database_monitor import DatabaseMonitor
