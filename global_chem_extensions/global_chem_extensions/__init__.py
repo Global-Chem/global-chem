@@ -4,11 +4,6 @@
 #
 # ----------------------------
 
-
-# ForceFields
-
-from global_chem_extensions.global_chem_extensions.forcefields.cgenff.cgenff_molecule import CGenFFMolecule
-
 # Base Package
 
 from global_chem_extensions.global_chem_extensions import GlobalChemExtensions
