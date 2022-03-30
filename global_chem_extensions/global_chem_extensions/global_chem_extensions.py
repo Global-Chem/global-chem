@@ -456,3 +456,21 @@ class GlobalChemExtensions(object):
         decoded_list = encoder.decode()
 
         return decoded_list
+
+    @staticmethod
+    def initialize_cgenff_molecule(stream_file):
+
+        '''
+
+        Arguments:
+
+            stream_file (String): stream file from CGenFF
+
+        '''
+
+        cgenff_molecule = CGenFFMolecule(
+            stream_file=stream_file
+        )
+
+        return cgenff_molecule
+

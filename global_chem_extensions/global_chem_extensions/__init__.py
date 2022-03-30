@@ -8,6 +8,6 @@
 
 from global_chem_extensions.global_chem_extensions import GlobalChemExtensions
 
-__all__ = ['GlobalChemExtensions', 'CGenFFMolecule']
+__all__ = ['GlobalChemExtensions']
 
 __name__ = 'GlobalChemExtensions'
