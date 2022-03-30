@@ -34,7 +34,7 @@ from global_chem_extensions.validation.partial_smiles import PartialSmilesValida
 
 # ForceFields
 
-from global_chem_extensions.forcefields.cgenff.cgenff_parser import CGenFFMolecule
+from global_chem_extensions.forcefields.cgenff.cgenff_molecule import CGenFFMolecule
 
 # Monitors
 

@@ -7,7 +7,7 @@
 
 # ForceFields
 
-from global_chem_extensions.global_chem_extensions.forcefields.cgenff.cgenff_parser import CGenFFMolecule
+from global_chem_extensions.global_chem_extensions.forcefields.cgenff.cgenff_molecule import CGenFFMolecule
 
 # Base Package
 
