@@ -17,11 +17,15 @@ from global_chem_extensions.analysis_tools.smarts_pattern_identifier.smarts_patt
 from global_chem_extensions.analysis_tools.drug_design_filters.drug_design_filters import DrugDesignFilters
 from global_chem_extensions.analysis_tools.node_pca_analysis.node_pca_analysis import PCAAnalysis
 
-# Adapters
+# Software Adapters
 
 from global_chem_extensions.software_adapters.pdf_adapter.molpdf_parser import MolPDFAdapter
 from global_chem_extensions.software_adapters.networkx_adapter.networkx_adapter import NetworkxAdapter
+from global_chem_extensions.software_adapters.smarts_visualizer.smarts_visualizer import SmartsVisualizer
 from global_chem_extensions.software_adapters.dimorphite_dl_adapter.dimorphite_dl import DimorphiteAdapter
+
+# Language Adapters
+
 from global_chem_extensions.language_adapters.amino_acid_converter.amino_acid_converter import AminoAcidConverter
 
 # Machine Learning
@@ -473,4 +477,21 @@ class GlobalChemExtensions(object):
         )
 
         return cgenff_molecule
+
+
+    @staticmethod
+    def visualize_smarts(smarts):
+
+        '''
+
+        Arguments:
+            smarts (String): Viusalize the SMARTS string
+
+        '''
+
+        visualizer = SmartsVisualizer(
+            smarts
+        )
+
+        return visualizer.get_image()
 
