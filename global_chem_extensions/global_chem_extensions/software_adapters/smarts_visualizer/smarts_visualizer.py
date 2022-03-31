@@ -23,10 +23,23 @@ class SmartsVisualizer(object):
                  smarts_pattern
         ):
 
-        self.smarts_pattern = smarts_pattern
+        self.smarts_pattern = self.prepare_smarts_for_url(smarts_pattern)
+
 
         self.base_url = "https://smarts.plus/smartsview/download_rest?"
-        self.url = self.base_url + f"smarts={self.smarts_pattern}"
+        self.url = self.base_url + f'smarts={self.smarts_pattern}'
+
+    def prepare_smarts_for_url(self, smarts_pattern):
+
+        '''
+
+        Replace some characters with URL accepted characters
+
+        '''
+
+        return smarts_pattern.replace("%", "%25").\
+            replace("&", "%26").replace("+", "%2B").\
+            replace("#", "%23").replace(";", "%3B")
 
     def get_image(self):
 
