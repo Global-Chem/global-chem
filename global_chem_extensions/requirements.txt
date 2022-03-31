@@ -12,3 +12,4 @@ pysmiles
 molvs
 molpdf
 deepsmiles
+requests
