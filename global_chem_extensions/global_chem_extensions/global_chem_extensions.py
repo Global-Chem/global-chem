@@ -39,7 +39,7 @@ from global_chem_extensions.validation.partial_smiles import PartialSmilesValida
 # ForceFields
 
 from global_chem_extensions.forcefields.cgenff.cgenff_molecule import CGenFFMolecule
-from global_chem_extensions.forcefields.cgenff_dissimilarity_score import CGenFFDissimilarityScore
+from global_chem_extensions.forcefields.cgenff.dissimilarity_score import CGenFFDissimilarityScore
 # Monitors
 
 from global_chem_extensions.monitoring_services.database_monitor.database_monitor import DatabaseMonitor
