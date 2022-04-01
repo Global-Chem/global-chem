@@ -1,5 +1,4 @@
-Global-Chem: A Chemical Knowledge Graph Toolkit of common small molecules and their IUPAC/SMILES/SMARTS to help users select compounds relevant to diverse chemical communities
-==============================================================================================================================================================================
+<h1 align="center">Global-Chem: A Chemical Knowledge Graph of common small molecules and their IUPAC/SMILES/SMARTS for selection compounds relevant to diverse chemical communities </h1>
 
 Global Chem is an open-source graph database and api for common and rare chemical lists using IUPAC as input and SMILES/SMARTS as output. As 
 mostly needed by myself as I search through chemical infinity.
@@ -270,3 +269,9 @@ Licensing
 =========
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem?ref=badge_large)
+
+Sponsor
+=======
+
+<a align="center" href="https://www.buymeacoffee.com/sulstice" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a> 
+
