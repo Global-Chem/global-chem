@@ -39,7 +39,7 @@ from global_chem_extensions.validation.partial_smiles import PartialSmilesValida
 # ForceFields
 
 from global_chem_extensions.forcefields.cgenff.cgenff_molecule import CGenFFMolecule
-
+from global_chem_extensions.forcefields.cgenff_dissimilarity_score import CGenFFDissimilarityScore
 # Monitors
 
 from global_chem_extensions.monitoring_services.database_monitor.database_monitor import DatabaseMonitor
@@ -495,3 +495,31 @@ class GlobalChemExtensions(object):
 
         return visualizer.get_image()
 
+    @staticmethod
+    def compute_cgenff_dissimilar_score(stream_file_1, stream_file_2, verbose=False):
+
+
+        '''
+
+        Arguments:
+            stream_file_1 (String): file path of the first molecule
+            stream_file_2 (String): file path of the second molecule
+            verbose (Bool): If you want the full parameter output
+
+        Returns:
+            score (Float): similarity score
+
+        '''
+
+        molecule_1 = CGenFFMolecule(stream_file_1)
+        molecule_2 = CGenFFMolecule(stream_file_2)
+
+        dissimilar = CGenFFDissimilarityScore(
+            molecule_1,
+            molecule_2,
+            verbose=verbose
+        )
+
+        score = dissimilar.compute_dissimilar_score_two_compounds()
+
+        return score

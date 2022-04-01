@@ -57,7 +57,7 @@ class CGenFFMolecule(object):
         self.total_bond_penalty_score = 0
         self.total_angle_penalty_score = 0
         self.total_dihedral_penalty_score = 0
-        self.total_improper_dihedral_penalty_score = 0
+        self.total_improper_penalty_score = 0
 
         self.stream_file = open(stream_file, 'r').read()
         self.lines = self.stream_file.split('\n')
