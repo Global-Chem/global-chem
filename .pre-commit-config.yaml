@@ -38,7 +38,7 @@ repos:
         'types-setuptools==57.0.2',
         'types-six==0.1.9',
     ]
-    excludes: [setup.py]
+    excludes: [global_chem_extensions/setup.py]
 
 - repo: https://github.com/mgedmin/check-manifest
   rev: '0.48'
