@@ -388,7 +388,11 @@ class GlobalChem(object):
 
         '''
 
-        return list(self.__NODES__.values())
+        # Skip the head node
+
+        nodes = [ i() for i in list(self.__NODES__.values())[1:] if i().name != 'common_regex_patterns' ]
+
+        return nodes
 
     def get_node(self, node_key):
 
@@ -1225,4 +1229,29 @@ class GlobalChem(object):
 
         print(PrintTreeUtilities.printTrees(_DEEP_NETWORK_KEY[ self.root_node ]))
 
+    def to_csv(self, out_file = 'global_chem.csv'):
+
+
+        '''
+
+        Convert the network into a CSV file in the format:
+
+            IUPAC, SMILES, NODE NAME, TREE PATH
+
+        '''
+
+        out_file = open(out_file, 'w')
+
+        all_nodes = self.get_all_nodes()
+
+        for node in all_nodes:
+
+            node_name = node.name
+            tree_path = node.__module__
+
+            for key, value in node.get_smiles().items():
+
+                out_file.write(f'{key}, {value}, {node_name}, {tree_path}\n')
+
+        out_file.close()
 
