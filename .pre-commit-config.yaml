@@ -30,8 +30,10 @@ repos:
   hooks:
   - id: isort
     files: global_chem/global_chem/*.py
+    exclude: setup.py
   - id: isort
     files: global_chem_extensions/global_chem_extensions/*.py  
+    exclude: setup.py
 
 - repo: https://github.com/pre-commit/mirrors-mypy
   rev: v0.942
