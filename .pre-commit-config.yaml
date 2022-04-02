@@ -38,7 +38,7 @@ repos:
         'types-setuptools==57.0.2',
         'types-six==0.1.9',
     ]
-    exclude: ^setup\.py$
+    exclude: [^setup\.py$]
 
 - repo: https://github.com/mgedmin/check-manifest
   rev: '0.48'
