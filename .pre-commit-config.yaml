@@ -7,26 +7,23 @@ repos:
   - id: check-case-conflict
   - id: check-yaml
   - id: debug-statements
-  - id: end-of-file-fixer
-  - id: forbid-new-submodules
-  - id: trailing-whitespace
     exclude: .patch
 
-- repo: https://github.com/psf/black
-  rev: 22.3.0
-  hooks:
-  - id: black
-    language_version: python3.9
+# - repo: https://github.com/psf/black
+#   rev: 22.3.0
+#   hooks:
+#   - id: black
+#     language_version: python3.9
 
-- repo: https://github.com/PyCQA/flake8
-  rev: 4.0.1
-  hooks:
-  - id: flake8
-    additional_dependencies: [
-        'flake8-bugbear==20.1.4',
-        'flake8-logging-format==0.6.0',
-        'flake8-implicit-str-concat==0.2.0',
-    ]
+# - repo: https://github.com/PyCQA/flake8
+#   rev: 4.0.1
+#   hooks:
+#   - id: flake8
+#     additional_dependencies: [
+#         'flake8-bugbear==20.1.4',
+#         'flake8-logging-format==0.6.0',
+#         'flake8-implicit-str-concat==0.2.0',
+#     ]
 
 - repo: https://github.com/PyCQA/isort
   rev: 5.10.1
