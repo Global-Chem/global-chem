@@ -11,7 +11,7 @@ hexafluoropropylene Oxide Dimer Acid, C1(C(O1)(F)F)(C(F)(F)F)F, emerging_perfluo
 perfluorotetradecanoic acid, C(=O)(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O, emerging_perfluoro_alkyls, global_chem.environment.emerging_perfluoroalkyls
 perfluorotridecanoic acid, C(=O)(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O, emerging_perfluoro_alkyls, global_chem.environment.emerging_perfluoroalkyls
 4,8-dioxa-3H-perfluorononanoic, C(C(C(=O)O)(F)F)(OC(C(C(OC(F)(F)F)(F)F)(F)F)(F)F)F, emerging_perfluoro_alkyls, global_chem.environment.emerging_perfluoroalkyls
-6:2 chlorinated polyfluorinated ether sulfonic acid, FC(Cl)(C(F)(C(F)(F)C(F)(F)C(F)(F)OC(F)(F)C(F)(S(=O)(O[K])=O)F)F)F, emerging_perfluoro_alkyls, global_chem.environment.emerging_perfluoroalkyls
+6-2 chlorinated polyfluorinated ether sulfonic acid, FC(Cl)(C(F)(C(F)(F)C(F)(F)C(F)(F)OC(F)(F)C(F)(S(=O)(O[K])=O)F)F)F, emerging_perfluoro_alkyls, global_chem.environment.emerging_perfluoroalkyls
 perfluorobutanoic acid, FC(F)(C(F)(C(O)=O)F)C(F)(F)F, emerging_perfluoro_alkyls, global_chem.environment.emerging_perfluoroalkyls
 perfluoro-n-pentanoic acid, C(=O)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)O, emerging_perfluoro_alkyls, global_chem.environment.emerging_perfluoroalkyls
 nafion byproduct 2, C(C(F)(F)F)(OC(C(C(F)(F)F)(OC(C(F)(F)S(=O)(=O)O)(F)F)F)(F)F)F, emerging_perfluoro_alkyls, global_chem.environment.emerging_perfluoroalkyls
@@ -58,7 +58,7 @@ aminomethylphosphonic acid, C(N)P(=O)(O)O, montmorillonite_adsorption, global_ch
 chlorpyriphos, CCOP(=S)(OCC)OC1=NC(=C(C=C1Cl)Cl)Cl, montmorillonite_adsorption, global_chem.materials.clay.montmorillonite_adsorption
 xearalenone, CC1CCCC(=O)CCCC=CC2=C(C(=CC(=C2)O)O)C(=O)O1, montmorillonite_adsorption, global_chem.materials.clay.montmorillonite_adsorption
 aldicarb, CC(C)(C=NOC(=O)NC)SC, montmorillonite_adsorption, global_chem.materials.clay.montmorillonite_adsorption
-3′-bromo-2-chloro[1,1′:4′,1′′-terphenyl]-4,4′′, ClC1=CC=CC=C1C2=CC=C(C3=CC=CC=C3)C(Br)=C2, common_monomer_repeating_units, global_chem.materials.polymers.common_monomer_repeating_units
+3′-bromo-2-chloro[1,1′-4′,1′′-terphenyl]-4,4′′, ClC1=CC=CC=C1C2=CC=C(C3=CC=CC=C3)C(Br)=C2, common_monomer_repeating_units, global_chem.materials.polymers.common_monomer_repeating_units
 [3,3′-biquinoline]-6,6′, C1(C2=CC3=CC=CC=C3N=C2)=CC4=CC=CC=C4N=C1, common_monomer_repeating_units, global_chem.materials.polymers.common_monomer_repeating_units
 [2,3′-bipyridine]-4,5′, C1(C2=CC=CN=C2)=NC=CC=C1, common_monomer_repeating_units, global_chem.materials.polymers.common_monomer_repeating_units
 (Z)-but-1-enel, C=CCC, common_monomer_repeating_units, global_chem.materials.polymers.common_monomer_repeating_units
@@ -274,7 +274,7 @@ napthalene-1,4-dione, O=C(C=CC1=O)C2=C1C=CC=C2, rings_in_drugs, global_chem.medi
 2H-benzo[e][1,2,4]thiadiazine 1,1-dioxide, O=S(C1=C2C=CC=C1)(NC=N2)=O, rings_in_drugs, global_chem.medicinal_chemistry.rings.rings_in_drugs
 4H-benzo[f][1,2,4]triazolo[4,3-a][1,4]diazepine, C1(N2C(CN=C3)=NN=C2)=C3C=CC=C1, rings_in_drugs, global_chem.medicinal_chemistry.rings.rings_in_drugs
 9H-thioxanthene, C12=CC=CC=C1CC3=C(C=CC=C3)S2, rings_in_drugs, global_chem.medicinal_chemistry.rings.rings_in_drugs
-(5aR,8aR)-5,8,8a,9-tetrahydrofuro[3',4':6,7]naphtho[2,3-d][1,3]dioxol-6(5aH)-one, O=C(OC1)[C@H]2[C@H]1CC3=CC4=C(C=C3C2)OCO4, rings_in_drugs, global_chem.medicinal_chemistry.rings.rings_in_drugs
+(5aR,8aR)-5,8,8a,9-tetrahydrofuro[3',4'-6,7]naphtho[2,3-d][1,3]dioxol-6(5aH)-one, O=C(OC1)[C@H]2[C@H]1CC3=CC4=C(C=C3C2)OCO4, rings_in_drugs, global_chem.medicinal_chemistry.rings.rings_in_drugs
 (3a1S,5aS,10bS)-3a,3a1,4,5,5a,6,11,12-octahydro-1H-indolizino[8,1-cd]carbazole, C12=CC=CC=C1[C@@]34[C@H](CCC5[C@@H]3N(CC=C5)CC4)N2, rings_in_drugs, global_chem.medicinal_chemistry.rings.rings_in_drugs
 (4aR,5aR)-4a,5a,6,12a-tetrahydrotetracene-1,11(4H,5H)-dione, O=C1C2=CC3[C@H](CC=CC3=O)C[C@@H]2CC4=CC=CC=C41, rings_in_drugs, global_chem.medicinal_chemistry.rings.rings_in_drugs
 1H-1,2,3-triazole, N1=NC=CN1, rings_in_drugs, global_chem.medicinal_chemistry.rings.rings_in_drugs
@@ -2318,7 +2318,7 @@ butane-2,3-diylbis(diphenylphosphine), CC(C(C)P(C1=CC=CC=C1)C2=CC=CC=C2)P(C3=CC=
 2,3-bis( tert-butyl(methyl)-phosphino)quinoxaline, CC(C)(C)P(C)C1=NC2=CC=CC=C2N=C1P(C)C(C)(C)C, nickel_ligands, global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands
 3,4-bis(dicyclohexylphosphino)-thiophene, C1CCC(CC1)P(C2CCCCC2)C3=CSC=C3P(C4CCCCC4)C5CCCCC5, nickel_ligands, global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands
 (1R,4S,5R)-5,6-bis(diphenylphosphino)bicyclo[2.2.1]hept-2-ene, C1C2C=CC1C(C2P(C3=CC=CC=C3)C4=CC=CC=C4)P(C5=CC=CC=C5)C6=CC=CC=C6, nickel_ligands, global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands
-4,4′-di-tert-butyl-4,4′,5,5′-tetrahydro-3H,3′H-3,3′-bidinaphtho-[2,1-c:1′,2′-e]phosphepine, CC(C)(C)P1Cc2ccc3ccccc3c2-c4c(ccc5ccccc45)C1C6P(Cc7ccc8ccccc8c7-c9c6ccc%10ccccc9%10)C(C)(C)C, nickel_ligands, global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands
+4,4′-di-tert-butyl-4,4′,5,5′-tetrahydro-3H,3′H-3,3′-bidinaphtho-[2,1-c-1′,2′-e]phosphepine, CC(C)(C)P1Cc2ccc3ccccc3c2-c4c(ccc5ccccc45)C1C6P(Cc7ccc8ccccc8c7-c9c6ccc%10ccccc9%10)C(C)(C)C, nickel_ligands, global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands
 1,2-Bis(diphenylphosphino)benzene, C1=CC=C(C=C1)P(C2=CC=CC=C2)C3=CC=CC=C3P(C4=CC=CC=C4)C5=CC=CC=C5, nickel_ligands, global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands
 1,2-bis(diethylphosphino)-benzene, C1=CC=C(C=C1)P(CC)CCP(CC)CC, nickel_ligands, global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands
 1,2-bis(diisopropylphosphino)-benzene, C1=CC=C(C=C1)P(C(C)C)CCP(C(C)C)CC, nickel_ligands, global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands
