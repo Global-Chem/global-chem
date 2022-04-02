@@ -41,7 +41,7 @@ class EmergingPerFluoroAlkyls(object):
             'perfluoroheptanesulfonic acid': 'C(C(C(C(F)(F)F)(F)F)(F)F)(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F',
             'perfluorononanesulfonic acid': 'C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F',
             'perfluorodecanesulfonic acid': 'C(C(C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F',
-            'hexafluoropropylene oxide trimer acid': 'C(=O)(C(C(F)(F)F)(OC(C(C(F)(F)F)(OC(C(C(F)(F)F)(F)F)(F)F)F)(F)F)F)F',
+            'hexafluoropropylene-oxide-trimer-acid': 'C(=O)(C(C(F)(F)F)(OC(C(C(F)(F)F)(OC(C(C(F)(F)F)(F)F)(F)F)F)(F)F)F)F',
         }
 
         return smiles

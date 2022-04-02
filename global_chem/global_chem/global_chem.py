@@ -1229,12 +1229,12 @@ class GlobalChem(object):
 
         print(PrintTreeUtilities.printTrees(_DEEP_NETWORK_KEY[ self.root_node ]))
 
-    def to_csv(self, out_file = 'global_chem.csv'):
+    def to_tsv(self, out_file = 'global_chem.tsv'):
 
 
         '''
 
-        Convert the network into a CSV file in the format:
+        Convert the network into a TSV file in the format:
 
             IUPAC, SMILES, NODE NAME, TREE PATH
 
@@ -1251,7 +1251,7 @@ class GlobalChem(object):
 
             for key, value in node.get_smiles().items():
 
-                out_file.write(f'{key}, {value}, {node_name}, {tree_path}\n')
+                out_file.write(f'{key}\t{value}\t{node_name}\t{tree_path}\n')
 
         out_file.close()
 
