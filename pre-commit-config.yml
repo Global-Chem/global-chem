@@ -1,0 +1,55 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.1.0
+  hooks:
+  - id: check-builtin-literals
+  - id: check-added-large-files
+  - id: check-case-conflict
+  - id: check-yaml
+  - id: debug-statements
+  - id: end-of-file-fixer
+  - id: forbid-new-submodules
+  - id: trailing-whitespace
+    exclude: .patch
+
+- repo: https://github.com/psf/black
+  rev: 22.3.0
+  hooks:
+  - id: black
+    language_version: python3.9
+
+- repo: https://github.com/PyCQA/flake8
+  rev: 4.0.1
+  hooks:
+  - id: flake8
+    additional_dependencies: [
+        'flake8-bugbear==20.1.4',
+        'flake8-logging-format==0.6.0',
+        'flake8-implicit-str-concat==0.2.0',
+    ]
+
+- repo: https://github.com/PyCQA/isort
+  rev: 5.10.1
+  hooks:
+  - id: isort
+    files: \.py$
+
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: v0.942
+  hooks:
+  - id: mypy
+    args: ["--pretty", "--show-error-codes"]
+    additional_dependencies: [
+        'keyring==23.0.1',
+        'nox==2021.6.12',
+        'pytest==6.2.5',
+        'types-docutils==0.1.8',
+        'types-setuptools==57.0.2',
+        'types-six==0.1.9',
+    ]
+
+- repo: https://github.com/mgedmin/check-manifest
+  rev: '0.48'
+  hooks:
+  - id: check-manifest
+    stages: [manual]
