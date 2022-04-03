@@ -14,7 +14,7 @@ from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit.Chem import GetPeriodicTable
 
-class GAFF2Molecule(object):
+class GaFF2Molecule(object):
 
 
     __version__ = '0.0.1'
