@@ -67,7 +67,7 @@ class GAFF2Molecule(object):
         self.frcmod_file = open(frcmod_file, 'r').read()
         self.lines = self.frcmod_file.split('\n')
 
-        # Mine CGenFF Data
+        # Mine GAFF2 Data
 
         self.bonded_dataframe = pd.DataFrame()
         self.nonbonded_dataframe = pd.DataFrame()
@@ -357,10 +357,10 @@ class GAFF2Molecule(object):
 
         '''
 
-        Write the CGenFF Stream File
+        Write the GAFF2 FRCMOD File
 
         Arguments:
-            file_name (String): File name of the cgenff stream file
+            file_name (String): File name of the gaff2 frcmod file
 
         '''
 
@@ -442,7 +442,7 @@ class GAFF2Molecule(object):
 
         '''
 
-        Return the CGenFF Header
+        Return the GAFF2 Header
 
         '''
 
@@ -456,10 +456,3 @@ class GAFF2Molecule(object):
     def __str__(self):
 
         return str(self.new_nonbonded_dataframe) + str(self.new_bonded_dataframe)
-
-if __name__ == '__main__':
-
-    gaff2_molecule = GAFF2Molecule(
-        frcmod_file='/Users/sulimansharif/projects/global-chem/example_data/forcefield_parameterization/amber_gws.frcmod'
-    )
-    gaff2_molecule.write_frcmod_file()
