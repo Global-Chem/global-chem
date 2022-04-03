@@ -40,6 +40,9 @@ from global_chem_extensions.validation.partial_smiles import PartialSmilesValida
 
 from global_chem_extensions.forcefields.cgenff.cgenff_molecule import CGenFFMolecule
 from global_chem_extensions.forcefields.cgenff.dissimilarity_score import CGenFFDissimilarityScore
+
+from global_chem_extensions.forcefields.gaff2.gaf2_molecule import GaFF2Molecule
+
 # Monitors
 
 from global_chem_extensions.monitoring_services.database_monitor.database_monitor import DatabaseMonitor
@@ -478,6 +481,22 @@ class GlobalChemExtensions(object):
 
         return cgenff_molecule
 
+    @staticmethod
+    def initialize_gaff2_molecule(frcmod_file):
+
+        '''
+
+        Arguments:
+
+            frcmod_file (String): frcmod file for GaFF2
+
+        '''
+
+        gaff2_molecule = GaFF2Molecule(
+            frcmod_file=frcmod_file
+        )
+
+        return gaff2_molecule
 
     @staticmethod
     def visualize_smarts(smarts):
