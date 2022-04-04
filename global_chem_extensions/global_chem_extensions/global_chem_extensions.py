@@ -6,6 +6,10 @@
 
 # GlobalChemExtensions Import
 
+# Molecule
+
+from global_chem_extensions.molecule.molecule import GlobalChemMolecule
+
 # Visualization
 
 from global_chem_extensions.analysis_tools.sunburster.sunburster import Sunburster
@@ -463,6 +467,22 @@ class GlobalChemExtensions(object):
         decoded_list = encoder.decode()
 
         return decoded_list
+
+    @staticmethod
+    def initialize_globalchem_molecule(smiles):
+
+        '''
+
+        Arguments:
+            smiles (String): A smiles string
+
+        '''
+
+        global_chem_molecule = GlobalChemMolecule(
+            smiles=smiles
+        )
+
+        return global_chem_molecule
 
     @staticmethod
     def initialize_cgenff_molecule(stream_file):
