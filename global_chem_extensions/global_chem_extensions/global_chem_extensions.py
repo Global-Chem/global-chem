@@ -330,6 +330,7 @@ class GlobalChemExtensions(object):
             molvs=False,
             deepsmiles=False,
             partial=False,
+            selfies=False,
             return_failures=False
     ):
 
@@ -343,6 +344,7 @@ class GlobalChemExtensions(object):
             molvs (Bool): Whether to pass the validation through MolVS
             deepsmiles (Bool): deepSMILES validation for machine learning
             partial (Bool): whether the user would like to have partial fragments
+            selfies (Bool): whether the user would like to pass in the selfies for machine learning
             return_failures (Bool): whether the user would like to have failures returned.
 
         '''
@@ -357,7 +359,8 @@ class GlobalChemExtensions(object):
             partial_smiles=partial_smiles,
             pysmiles=pysmiles,
             molvs=molvs,
-            deepsmiles=deepsmiles
+            deepsmiles=deepsmiles,
+            selfies=selfies
         )
 
         if return_failures:
