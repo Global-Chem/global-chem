@@ -14,6 +14,7 @@ from urllib.parse import quote
 # ------------------
 
 import deepsmiles
+import selfies as sf
 import partialsmiles as ps
 
 from rdkit import Chem
@@ -40,6 +41,7 @@ class PartialSmilesValidation(object):
             pysmiles = False,
             molvs = False,
             deepsmiles = False,
+            selfies = False,
     ):
 
         '''
@@ -53,6 +55,7 @@ class PartialSmilesValidation(object):
             pysmiles (Bool): whether to include pysmiles
             molvs (Bool): whether to include molvs
             deepsmiles (Bool): deepSMILES validation for machine learning
+            selfies (Bool): SELFIES validation for machine learning
 
         Returns:
             successes (List): List of SMILES that worked
@@ -81,9 +84,21 @@ class PartialSmilesValidation(object):
 
                     encoded = self.deep_smiles_converter.encode(smiles)
                     try:
+                        encoded = self.deep_smiles_converter.encode(smiles)
                         decoded = self.deep_smiles_converter.decode(encoded)
+                    except deepsmiles.EncodeError as e:
+                        continue
                     except deepsmiles.DecodeError as e:
                         continue
+
+                if selfies:
+                    try:
+                        encoded = sf.encoder(smiles)
+                        decoded = sf.decoder(encoded)
+                    except sf.EncoderError:
+                        pass
+                    except sf.DecoderError:
+                        pass
                 successes.append(smiles)
 
             except Exception as e:

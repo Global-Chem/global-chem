@@ -6,9 +6,10 @@
 
 # GlobalChemExtensions Import
 
-# Molecule
+# Entities
 
-from global_chem_extensions.molecule.molecule import GlobalChemMolecule
+from global_chem_extensions.entities.molecule.molecule import GlobalChemMolecule
+# from global_chem_extensions.entities.protein.protein import GlobalChemProtein
 
 # Visualization
 
