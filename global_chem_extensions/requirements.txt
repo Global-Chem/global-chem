@@ -2,7 +2,7 @@ plotly
 global-chem
 kaleido
 rdkit-pypi
-bokeh==1.4.0
+bokeh>=2.3.0
 flask
 pandas
 sklearn
@@ -13,3 +13,9 @@ molvs
 molpdf
 deepsmiles
 requests
+tf-estimator-nightly==2.8.0.dev2021122109
+numpy>=1.20
+pillow==4.3.0
+six==1.15.0
+folium==0.2.1
+imgaug==0.2.5
