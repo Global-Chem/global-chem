@@ -23,13 +23,9 @@ from molvs import validate_smiles
 # -------------
 
 from rdkit import Chem
-from rdkit.Chem import AllChem,Draw
-from rdkit import Chem
-from rdkit.Chem.Draw import IPythonConsole
 from rdkit.Chem import rdDepictor
 from rdkit.Chem.Draw import rdMolDraw2D
 import rdkit.Chem.Descriptors as Descriptors
-from rdkit.Chem.PropertyMol import PropertyMol
 
 # Local Imports
 # -------------
@@ -45,8 +41,6 @@ class GlobalChemMolecule(object):
             self,
             smiles,
             name = None,
-            cgenff_stream_file = None,
-            gaff_frcmod_file = None,
             cgenff_molecule = None,
             gaff2_molecule = None
     ):
@@ -62,24 +56,32 @@ class GlobalChemMolecule(object):
 
         '''
 
+        # Class Attributes
+
         self.name = name
         self.smiles = smiles
+
+        # Cheminformatic Molecules
+
         self.molecule = Chem.MolFromSmiles(self.smiles)
 
-        if cgenff_stream_file:
-            self._read_cgenff_molecule(cgenff_stream_file, cgenff_molecule)
+        # ForceField Molecules
 
-        if gaff_frcmod_file:
-            self._read_gaff2_molecule(gaff_frcmod_file, gaff2_molecule)
+        self.cgenff_molecule = cgenff_molecule
+        self.gaff2_molecule = gaff2_molecule
+
+        # Molecule Attributes
 
         self.attributes = {}
+
         self.attributes['name'] = self.name
         self.attributes['smiles'] = self.smiles
 
         self._determine_attributes()
 
-        self.converter = deepsmiles.Converter(rings=True, branches=True)
+        # Converters
 
+        self.converter = deepsmiles.Converter(rings=True, branches=True)
 
     def get_attributes(self):
 
@@ -111,20 +113,6 @@ class GlobalChemMolecule(object):
 
         return self.cgenff_molecule
 
-    def _read_cgenff_molecule(self, cgenff_stream_file, cgenff_molecule):
-
-        '''
-
-        Initialize the CGenFF Molecule
-
-        Arguments:
-            cgenff_stream_file (String): Stream file of CGenFF
-            cgenff_molecule (GlobalChem Object): CGenFFMolecule Object
-
-        '''
-
-        self.cgenff_molecule = cgenff_molecule(stream_file = cgenff_stream_file)
-
     def get_gaff2_molecule(self):
 
         '''
@@ -134,20 +122,6 @@ class GlobalChemMolecule(object):
         '''
 
         return self.gaff2_molecule
-
-    def _read_gaff2_molecule(self, gaff2_frcmod_file, gaff2_molecule):
-
-        '''
-
-        Initialize the CGenFF Molecule
-
-        Arguments:
-            gaff2_frcmod_file (String): FRCMOD file of GAFF2
-            gaff2_molecule (GlobalChem Object): GAFF2Molecule Object
-
-        '''
-
-        self.gaff2_molecule = gaff2_molecule(frcmod_file = gaff2_frcmod_file)
 
     def _determine_attributes(self):
 
@@ -169,7 +143,6 @@ class GlobalChemMolecule(object):
         formal_charge = Chem.rdmolops.GetFormalCharge(self.molecule)
         heavy_atoms = Chem.rdchem.Mol.GetNumHeavyAtoms(self.molecule)
         num_of_rings = Chem.rdMolDescriptors.CalcNumRings(self.molecule)
-
 
         self.attributes['molecular_weight'] = molecular_weight
         self.attributes['logp'] = logp

@@ -490,10 +490,8 @@ class GlobalChemExtensions(object):
 
         global_chem_molecule = GlobalChemMolecule(
             smiles=smiles,
-            stream_file=stream_file,
-            frcmod_file=frcmod_file,
-            cgenff_molecule = CGenFFMolecule,
-            gaff2_molecule = GaFF2Molecule
+            cgenff_molecule = CGenFFMolecule(stream_file=stream_file),
+            gaff2_molecule = GaFF2Molecule(frcmod_file=frcmod_file)
         )
 
         return global_chem_molecule
