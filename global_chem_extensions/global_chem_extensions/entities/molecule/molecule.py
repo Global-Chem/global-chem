@@ -267,10 +267,10 @@ class GlobalChemMolecule(object):
 
             hetereo_atom_types = [i for i in self.cgenff_molecule.atoms if i.split()[2][0] != 'H']
 
-        return SVG(self._moltosvg(self.molecule, hetereo_atom_types, self.name))
+            return SVG(GlobalChemMolecule.mol_to_svg(self.molecule, hetereo_atom_types, self.name))
 
-
-    def _mol_to_svg(self, mol, atom_types, name, molSize = (400,400), kekulize = True):
+    @staticmethod
+    def mol_to_svg(mol, atom_types, name, molSize = (400,400), kekulize = True):
 
         '''
 
