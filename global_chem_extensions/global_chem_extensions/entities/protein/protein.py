@@ -91,7 +91,7 @@ class GlobalChemProtein(object):
             self,
             mark_nitrogen_backbone = False,
             mark_carbonyl_carbon_backbone = False,
-            mark_oxygen = False,
+            # mark_oxygen = False,
     ):
 
         '''
@@ -138,15 +138,15 @@ class GlobalChemProtein(object):
 
         if mark_nitrogen_backbone:
             replacement_counter += 1
-            n_terminus_pattern = n_terminus_pattern.replace('N', '([N:1])')
+            n_terminus_pattern = n_terminus_pattern.replace('N', '[N:1]')
 
         if mark_carbonyl_carbon_backbone:
             replacement_counter += 1
             n_terminus_pattern = n_terminus_pattern.replace('C(', '[C:%s](' % replacement_counter)
 
-        if mark_oxygen:
-            replacement_counter += 1
-            c_terminus_pattern = c_terminus_pattern.replace('=O', '(=[O:%s])' % replacement_counter)
+        # if mark_oxygen:
+        #     replacement_counter += 1
+        #     c_terminus_pattern = c_terminus_pattern.replace('=O', '(=[O:%s])' % replacement_counter)
 
         peptide_n_terminus = n_terminus_pattern
         peptide_c_terminus = c_terminus_pattern
@@ -164,11 +164,10 @@ class GlobalChemProtein(object):
 
         for i in range(1, len(self.protein_sequence) + 1):
 
-            print (n_terminus_pattern)
             start_index_pattern = peptide_backbone.find(n_terminus_pattern)
 
             if mark_nitrogen_backbone:
-                peptide_backbone = peptide_backbone[0:start_index_pattern + 4] + 'C([*:' + str(i) + '])' + peptide_backbone[start_index_pattern + 2:]
+                peptide_backbone = peptide_backbone[0:start_index_pattern + 5] + 'C([*:' + str(i) + '])' + peptide_backbone[start_index_pattern + 6:]
             else:
                 peptide_backbone = peptide_backbone[0:start_index_pattern + 1] + 'C([*:' + str(i) + '])' + peptide_backbone[start_index_pattern + 2:]
 
@@ -180,14 +179,14 @@ class GlobalChemProtein(object):
             peptide_backbone = peptide_backbone.replace('[*:%s]' % (i + 1), smiles_to_add)
 
         self.smiles_sequence = peptide_backbone
-        print (self.smiles_sequence)
+
         return self.smiles_sequence
 
     def convert_to_smarts(
             self,
             mark_nitrogen_backbone = False,
             mark_carbonyl_carbon_backbone = False,
-            mark_oxygen = False,
+            # mark_oxygen = False,
     ):
 
         """
@@ -199,7 +198,6 @@ class GlobalChemProtein(object):
         smiles = self.convert_to_smiles(
             mark_nitrogen_backbone = mark_nitrogen_backbone,
             mark_carbonyl_carbon_backbone = mark_carbonyl_carbon_backbone,
-            mark_oxygen = mark_oxygen,
         )
 
         self.smarts_sequence = Chem.MolToSmarts(Chem.MolFromSmiles(smiles))
@@ -209,11 +207,12 @@ class GlobalChemProtein(object):
 if __name__ == '__main__':
 
     gc_protein = GlobalChemProtein(
-        peptide_sequence='A'
+        # pdb_file='file.pdb',
+        # fetch_pdb='5tc0',
+        peptide_sequence='AAAA',
     )
 
     print (gc_protein.convert_to_smarts(
-        mark_nitrogen_backbone=True,
+        mark_nitrogen_backbone=False,
         mark_carbonyl_carbon_backbone = False,
-        mark_oxygen = False
     ))
