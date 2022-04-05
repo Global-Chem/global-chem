@@ -88,13 +88,6 @@ global_chem_molecule.determine_name()
 name = global_chem_molecule.name
 attributes = global_chem_molecule.get_attributes()
 
-pysmiles_mol = global_chem_molecule.get_pysmiles()
-rdkit_mol = global_chem_molecule.get_rdkit_molecule()
-partial_smiles_mol = global_chem_molecule.get_partial_smiles()
-deep_smiles_mol = global_chem_molecule.encode_deep_smiles()
-selfies_mol = global_chem_molecule.encode_selfies()
-validate_smiles = global_chem_molecule.validate_molvs()
-
 gce.node_pca_analysis(smiles_list, save_file=False)
 
 ```
