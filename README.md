@@ -170,9 +170,9 @@ highlighted reasons for doing so for and understanding how to use the network fo
 Adding Your Own Chemical List
 =============================
 
-If you would like to add your paper to the chemical graph network then please "File an Issue" with your chemical list 
+If you would like to add your paper or a list you constructed to the chemical knowledge graph then please "File an Issue" with your chemical list 
 and perhaps a suggestion of where to add it or you can leave for up to us to decide. The format of the chemical list can
-be something like this:
+be something like this, and we the community will elect it into the graph and add a couple of representative compounds to the forcefield:
 
 ```
 
