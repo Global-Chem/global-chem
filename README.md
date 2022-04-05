@@ -34,7 +34,7 @@ Overview
 Installation 
 ============
 
-GlobalChem is going to be distribute via PyPi and as the content store grows we can expand it to other pieces of software
+GlobalChem is going to be distribute via PyPi and as the tree and it's extensions grows we can expand it to other pieces of software
 making it accessible to all regardless of what you use. Alternatively, you could have a glance at the source code and copy/paste
 it yourself.
 
