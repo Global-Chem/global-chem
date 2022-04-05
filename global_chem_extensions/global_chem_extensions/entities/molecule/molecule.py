@@ -263,7 +263,7 @@ class GlobalChemMolecule(object):
 
         '''
 
-        if self.cgenff_stream_file:
+        if self.cgenff_molecule:
 
             hetereo_atom_types = [i for i in self.cgenff_molecule.atoms if i.split()[2][0] != 'H']
 
