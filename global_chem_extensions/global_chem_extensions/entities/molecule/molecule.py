@@ -7,8 +7,7 @@
 # Imports
 # -------
 
-from rdkit import Chem
-import rdkit.Chem.Descriptors as Descriptors
+from IPython.display import SVG
 
 # Conversion SMILES Imports
 # -------------------------
@@ -17,10 +16,20 @@ import deepsmiles
 import selfies as sf
 import partialsmiles as ps
 
-from rdkit import Chem
 from pysmiles import read_smiles
 from molvs import validate_smiles
 
+# RDKit Imports
+# -------------
+
+from rdkit import Chem
+from rdkit.Chem import AllChem,Draw
+from rdkit import Chem
+from rdkit.Chem.Draw import IPythonConsole
+from rdkit.Chem import rdDepictor
+from rdkit.Chem.Draw import rdMolDraw2D
+import rdkit.Chem.Descriptors as Descriptors
+from rdkit.Chem.PropertyMol import PropertyMol
 
 # Local Imports
 # -------------
@@ -270,4 +279,58 @@ class GlobalChemMolecule(object):
 
         return validate_smiles(self.smiles)
 
+    def draw_cgenff_molecule(self):
+
+        '''
+
+        Draw the CGenFF Molecule
+
+        Returns:
+            SVG (IPython Object): SVG Object for the jupyter notebook
+
+        '''
+
+        if self.cgenff_stream_file:
+
+            hetereo_atom_types = [i for i in self.cgenff_molecule.atoms if i.split()[2][0] != 'H']
+
+        return SVG(self._moltosvg(self.molecule, hetereo_atom_types, self.name))
+
+
+    def _mol_to_svg(self, mol, atom_types, name, molSize = (400,400), kekulize = True):
+
+        '''
+
+        Mol to SVG Function
+
+        '''
+
+        mc = Chem.Mol(mol.ToBinary())
+
+        if kekulize:
+            try:
+                Chem.Kekulize(mc)
+            except:
+                mc = Chem.Mol(mol.ToBinary())
+        if not mc.GetNumConformers():
+            rdDepictor.Compute2DCoords(mc)
+
+        for i in range(0, len(atom_types)):
+
+            atom_type = atom_types[i]
+            mc.GetAtomWithIdx(i).SetProp("atomNote", atom_type)
+
+        drawer = rdMolDraw2D.MolDraw2DSVG( molSize[0], molSize[1] )
+        drawer.drawOptions().annotationFontScale = 0.5
+        drawer.drawOptions().centreMoleculesBeforeDrawing = False
+        drawer.drawOptions().useBWAtomPalette()
+
+        drawer.DrawMoleculeWithHighlights(mc, name , {}, {}, {}, {})
+        drawer.FinishDrawing()
+        svg = drawer.GetDrawingText()
+        file = open('%s.svg' % name, 'w')
+        file.write(svg)
+        file.close()
+
+        return svg.replace('svg:','')
 
