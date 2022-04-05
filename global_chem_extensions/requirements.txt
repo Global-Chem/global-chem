@@ -15,3 +15,4 @@ molpdf
 deepsmiles
 requests
 selfies
+biopandas

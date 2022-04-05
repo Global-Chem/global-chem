@@ -9,7 +9,7 @@
 # Entities
 
 from global_chem_extensions.entities.molecule.molecule import GlobalChemMolecule
-# from global_chem_extensions.entities.protein.protein import GlobalChemProtein
+from global_chem_extensions.entities.protein.protein import GlobalChemProtein
 
 # Visualization
 
@@ -473,20 +473,52 @@ class GlobalChemExtensions(object):
         return decoded_list
 
     @staticmethod
-    def initialize_globalchem_molecule(smiles):
+    def initialize_globalchem_molecule(
+            smiles,
+            stream_file='cgenff.str',
+            frcmod_file='gaff2.frcmod',
+    ):
 
         '''
 
         Arguments:
             smiles (String): A smiles string
+            stream_file (String): stream file for CGenFF
+            frcmod_file (String): FRCMOD file for GAFF2
 
         '''
 
         global_chem_molecule = GlobalChemMolecule(
-            smiles=smiles
+            smiles=smiles,
+            stream_file=stream_file,
+            frcmod_file=frcmod_file,
+            cgenff_molecule = CGenFFMolecule,
+            gaff2_molecule = GaFF2Molecule
         )
 
         return global_chem_molecule
+
+    @staticmethod
+    def initialize_globalchem_protein(
+            pdb_id = None,
+            pdb_path = None,
+            peptide_sequence = None
+    ):
+        '''
+
+        Arguments:
+            pdb_id (String): pdb id unique 4 letter code
+            pdb_path (String): path to the pdb file
+            peptide_sequence (String): Peptide sequence
+        '''
+
+        global_chem_protein = GlobalChemProtein(
+            pdb_file = pdb_id,
+            fetch_pdb = pdb_path,
+            peptide_sequence = peptide_sequence,
+        )
+
+        return global_chem_protein
 
     @staticmethod
     def initialize_cgenff_molecule(stream_file):
