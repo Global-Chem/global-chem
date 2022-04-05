@@ -94,6 +94,7 @@ partial_smiles_mol = global_chem_molecule.get_partial_smiles()
 deep_smiles_mol = global_chem_molecule.encode_deep_smiles()
 selfies_mol = global_chem_molecule.encode_selfies()
 validate_smiles = global_chem_molecule.validate_molvs()
+
 gce.node_pca_analysis(smiles_list, save_file=False)
 
 ```
