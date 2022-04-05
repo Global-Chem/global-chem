@@ -155,10 +155,10 @@ class GlobalChemProtein(object):
 
             peptide_n_terminus += n_terminus_pattern
 
-            if mark_oxygen:
-                peptide_c_terminus = '([O:%s])' % replacement_counter
-            else:
-                peptide_c_terminus += '=O)'
+            # if mark_oxygen:
+            #     peptide_c_terminus = '([O:%s])' % replacement_counter
+            # else:
+            peptide_c_terminus += '=O)'
 
         peptide_backbone = peptide_n_terminus + peptide_c_terminus[:-1]
 
