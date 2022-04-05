@@ -252,7 +252,7 @@ class GlobalChemMolecule(object):
 
         return validate_smiles(self.smiles)
 
-    def draw_cgenff_molecule(self):
+    def draw_cgenff_molecule(self, height=400, width=400):
 
         '''
 
@@ -260,6 +260,7 @@ class GlobalChemMolecule(object):
 
         Returns:
             SVG (IPython Object): SVG Object for the jupyter notebook
+            molSize (Tuple): Size of the molecule
 
         '''
 
@@ -267,7 +268,7 @@ class GlobalChemMolecule(object):
 
             hetereo_atom_types = [i for i in self.cgenff_molecule.atoms if i.split()[2][0] != 'H']
 
-            return SVG(GlobalChemMolecule.mol_to_svg(self.molecule, hetereo_atom_types, self.name))
+            return SVG(GlobalChemMolecule.mol_to_svg(self.molecule, hetereo_atom_types, self.name, molSize=(height, width)))
 
     @staticmethod
     def mol_to_svg(mol, atom_types, name, molSize = (400,400), kekulize = True):
