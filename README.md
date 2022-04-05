@@ -157,6 +157,16 @@ A Variety of Tools are available for you to browse and analyze data and with the
   <img width="800" height="600" src="https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_10.png">
 </p>
 
+Sul's Selected List
+===================
+
+This will be my own personal list of unique and interesting compounds chosen for forcefield parametirization and my chosen
+highlighted reasons for doing so for and understanding how to use the network for casual inference. 
+
+```
+
+```
+
 Adding Your Own Chemical List
 =============================
 
