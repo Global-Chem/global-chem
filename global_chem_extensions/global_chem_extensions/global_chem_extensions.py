@@ -475,8 +475,8 @@ class GlobalChemExtensions(object):
     @staticmethod
     def initialize_globalchem_molecule(
             smiles,
-            stream_file='cgenff.str',
-            frcmod_file='gaff2.frcmod',
+            stream_file = None,
+            frcmod_file = None,
     ):
 
         '''
@@ -488,10 +488,21 @@ class GlobalChemExtensions(object):
 
         '''
 
+        cgenff_molecule = None
+        gaff2_molecule = None
+
+        if stream_file:
+
+            cgenff_molecule = CGenFFMolecule(stream_file=stream_file)
+
+        if frcmod_file:
+
+            gaff2_molecule = GaFF2Molecule(frcmod_file=frcmod_file)
+
         global_chem_molecule = GlobalChemMolecule(
             smiles=smiles,
-            cgenff_molecule = CGenFFMolecule(stream_file=stream_file),
-            gaff2_molecule = GaFF2Molecule(frcmod_file=frcmod_file)
+            cgenff_molecule = cgenff_molecule,
+            gaff2_molecule = gaff2_molecule
         )
 
         return global_chem_molecule
