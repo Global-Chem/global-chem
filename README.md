@@ -34,7 +34,7 @@ Overview
 Installation 
 ============
 
-GlobalChem is going to be distribute via PyPi and as the content store grows we can expand it to other pieces of software
+GlobalChem is going to be distribute via PyPi and as the tree and it's extensions grows we can expand it to other pieces of software
 making it accessible to all regardless of what you use. Alternatively, you could have a glance at the source code and copy/paste
 it yourself.
 
@@ -87,13 +87,6 @@ global_chem_molecule.determine_name()
 
 name = global_chem_molecule.name
 attributes = global_chem_molecule.get_attributes()
-
-pysmiles_mol = global_chem_molecule.get_pysmiles()
-rdkit_mol = global_chem_molecule.get_rdkit_molecule()
-partial_smiles_mol = global_chem_molecule.get_partial_smiles()
-deep_smiles_mol = global_chem_molecule.encode_deep_smiles()
-selfies_mol = global_chem_molecule.encode_selfies()
-validate_smiles = global_chem_molecule.validate_molvs()
 
 gce.node_pca_analysis(smiles_list, save_file=False)
 
