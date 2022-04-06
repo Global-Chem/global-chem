@@ -266,7 +266,7 @@ class GlobalChemMolecule(object):
 
         if self.cgenff_molecule:
 
-            hetereo_atom_types = [i for i in self.cgenff_molecule.atoms if i.split()[2][0] != 'H']
+            hetereo_atom_types = [i.split()[2] for i in self.cgenff_molecule.atoms if i.split()[2][0] != 'H']
 
             return SVG(GlobalChemMolecule.mol_to_svg(self.molecule, hetereo_atom_types, self.name, molSize=(height, width)))
 
