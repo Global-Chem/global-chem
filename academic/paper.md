@@ -47,7 +47,7 @@ Zinc Database (2 Billion) [Irwin:2020-12], PubMed Database (68 Million) [Roberts
 to process, manipulate, and derive new compound structures are established. While this chemical data big bang has yielded useful ultra-large datasets they are based on ambiguous classification systems making it difficult to systematically organize them for specific uses.
 
 <p align="center">
-  <img width="400" height="300" src="images/figures/figure_4.png">
+  <img width="400" height="300" src="../images/figures/figure_4.png">
   <br />
   <i>Figure 1: Screenshot of the ZincDB request URLS</i>
 </p>
@@ -77,7 +77,7 @@ This need motivated the development of the presented `Global-Chem` database tool
 To implement `Global-Chem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python [10.5555/159351][Cooke:1989-5].
 
 <p align="center">
-  <img width="1000" height="750" src="images/figures/figure_2.png">
+  <img width="1000" height="750" src="../images/figures/figure_2.png">
   <i>Figure 2: Language organized by category and functionality </i>
 </p>
 
@@ -96,7 +96,7 @@ by experts in the different fields. `Figure 3` depicts the node Module layout of
 arbitrary node hierarchy of the chemical sets included in `Global-Chem` as defined by the experts that introduce the data. Each blue circle represents a relevant field and their subsequent tree networks are highlighted by a contrasting colour.
 
 <p align="center">
-  <img width="1000" height="700" src="images/figures/figure_1_new.png">
+  <img width="1000" height="700" src="../images/figures/figure_1_new.png">
   <i>Figure 3: Node Network of Global-Chem</i>
 </p>
 
@@ -237,7 +237,7 @@ To understand the utility of this information we focus on five leaf nodes: Sched
 we expected the penalties to be lower on drugs and drug-like species and higher for compounds from chemical manufacturing. 
 
 <p align="center">
-  <img width="1000" height="950" src="images/figures/figure_5.png">
+  <img width="1000" height="950" src="../images/figures/figure_5.png">
   <i>Figure 4: Penalty Score Probability Distributions</i>
 </p>
 
@@ -256,7 +256,7 @@ For example, cyclobutadiene is a non-traditional ring system with a lot of ring 
 Silicon has not been included in CGenFF leading to the failures of the silicon-based compounds. Similarly, the IUPAC blue book valuable list includes radicals, which are relevant for synthesis purposes. This is another class for `CGenFF`has not yet been parametrized.
 
 <p align="center">
-  <img width="1000" height="450" src="images/figures/figure_6_new.png">
+  <img width="1000" height="450" src="../images/figures/figure_6_new.png">
   <br>
   <i>Figure 5: Failed CGenFF Compounds</i>
 </p>
