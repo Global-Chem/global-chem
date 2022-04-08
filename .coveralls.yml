@@ -1,17 +1,1 @@
 repo_token: 9AS9AHkAkkJSUWh3hW7RCNr686aJmQhtD
-
-
-from global_chem.global_chem import GlobalChem
-from global_chem_extensions import GlobalChemExtensions
-
-gc = GlobalChem()
-smiles_list = gc.get_all_smiles()
-
-sucesses, failures = GlobalChemExtensions.verify_smiles(
-    smiles_list,
-    rdkit=False,
-    partial_smiles=False,
-    return_failures=True,
-    pysmiles=False,
-    molvs=True
-)
