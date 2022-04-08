@@ -47,12 +47,7 @@ pip install global-chem
 If you want to install the extensions package for extra functionality.
 
 ```
-pip install global-chem[web_server]
-pip install global-chem[validation]
-pip install global-chem[bioinformatics]
-pip install global-chem[machine_learning]
-pip install global-chem[pdf]
-pip install global-chem[plotting]
+
 pip install global-chem[all]
 
 ```
