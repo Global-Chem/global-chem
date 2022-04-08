@@ -179,13 +179,3 @@ class GlobalChemDNA(object):
         self.convert_to_smiles()
 
         return Chem.MolToSmarts(Chem.MolFromSmiles(self.smiles))
-
-if __name__ == '__main__':
-
-    dna = GlobalChemDNA(
-        dna_sequence='ATA'
-    )
-    dna.save_to_image()
-
-    dna_smiles = dna.convert_to_smiles()
-    print (dna_smiles)
