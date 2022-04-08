@@ -50,6 +50,10 @@ from global_chem_extensions.forcefields.cgenff.dissimilarity_score import CGenFF
 
 from global_chem_extensions.forcefields.gaff2.gaff2_molecule import GaFF2Molecule
 
+# Graphing Templates
+
+from global_chem_extensions.graphing_templates.plotly_template import PlotlyTemplate
+
 # Monitors
 
 from global_chem_extensions.monitoring_services.database_monitor.database_monitor import DatabaseMonitor
@@ -649,3 +653,30 @@ class GlobalChemExtensions(object):
         score = dissimilar.compute_dissimilar_score_two_compounds()
 
         return score
+
+    @staticmethod
+    def apply_plotly_template(
+            figure,
+            x_title='X-Axis',
+            y_title = 'Y-Axis',
+            height = 500,
+            width = 1000
+    ):
+        '''
+
+        Arguments:
+            figure (Plotly Figure Object): plotly object you want beautified
+            x_title (String): title of the x-axis
+            y_title (String): title of the y-axis
+            height (Int): height of the graph
+            width (Int): width of the graph
+
+        '''
+
+        PlotlyTemplate(
+            figure,
+            x_title=x_title,
+            y_title = y_title,
+            height = height,
+            width = width
+        )
