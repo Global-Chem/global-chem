@@ -10,6 +10,8 @@
 
 from global_chem_extensions.entities.molecule.molecule import GlobalChemMolecule
 from global_chem_extensions.entities.protein.protein import GlobalChemProtein
+from global_chem_extensions.entities.rna.rna import GlobalChemRNA
+from global_chem_extensions.entities.dna.dna import GlobalChemDNA
 
 # Visualization
 
@@ -528,6 +530,46 @@ class GlobalChemExtensions(object):
         )
 
         return global_chem_protein
+
+    @staticmethod
+    def intialize_globalchem_dna(
+            dna_sequence,
+            name = None,
+    ):
+
+        '''
+
+        Arguments:
+            dna_sequence (String): DNA sequence string
+            name (String): Name of the DNA instance
+        '''
+
+        global_chem_dna = GlobalChemDNA(
+            dna_sequence = dna_sequence,
+            name = name
+        )
+
+        return global_chem_dna
+
+    @staticmethod
+    def intialize_globalchem_rna(
+            rna_sequence,
+            name = None,
+    ):
+
+        '''
+
+        Arguments:
+            rna_sequence (String): DNA sequence string
+            name (String): Name of the DNA instance
+        '''
+
+        global_chem_rna = GlobalChemRNA(
+            dna_sequence = rna_sequence,
+            name = name
+        )
+
+        return global_chem_rna
 
     @staticmethod
     def initialize_cgenff_molecule(stream_file):
