@@ -532,7 +532,7 @@ class GlobalChemExtensions(object):
         return global_chem_protein
 
     @staticmethod
-    def intialize_globalchem_dna(
+    def initialize_globalchem_dna(
             dna_sequence,
             name = None,
     ):
@@ -552,7 +552,7 @@ class GlobalChemExtensions(object):
         return global_chem_dna
 
     @staticmethod
-    def intialize_globalchem_rna(
+    def initialize_globalchem_rna(
             rna_sequence,
             name = None,
     ):
