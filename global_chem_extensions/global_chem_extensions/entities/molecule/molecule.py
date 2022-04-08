@@ -180,6 +180,17 @@ class GlobalChemMolecule(object):
                 self.attributes['name'] = name
                 name_found = True
 
+    def set_name(self, name):
+
+        '''
+
+        Arguments:
+            name (String): set the name of the compound
+
+        '''
+
+        self.name = name
+
     def get_partial_smiles(self, partial=None):
 
         '''
@@ -307,4 +318,6 @@ class GlobalChemMolecule(object):
         file.close()
 
         return svg.replace('svg:','')
+
+
 

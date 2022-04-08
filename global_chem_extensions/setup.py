@@ -36,13 +36,21 @@ else:
 # ----
 setup(
     name="global_chem_extensions",
-    version="0.9.8.8",
+    version="0.9.9.2",
     packages=find_packages(),
     license='MPL 2.0',
     author="Suliman Sharif",
     author_email="sharifsuliman1@gmail.com",
     url="https://www.github.com/Sulstice/global-chem-extensions",
     install_requires=REQUIREMENTS,
+    extras_require={
+        'validation': ['partialsmiles', 'pysmiles', 'deepsmiles', 'selfies', 'molvs'],
+        'web_server': ['flask'],
+        'plotting': ['plotly', 'bokeh', 'kaleido'],
+        'bioinformatics': ['biopython', 'dna_features_viewer'],
+        'machine_learning': ['sklearn'],
+        'pdf': ['molpdf']
+    },
     long_description=long_description,
     long_description_content_type='text/markdown',
     zip_safe=False,

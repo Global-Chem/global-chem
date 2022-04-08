@@ -4,60 +4,6 @@
 #
 # -----------------------------------
 
-# GlobalChemExtensions Import
-
-# Entities
-
-from global_chem_extensions.entities.molecule.molecule import GlobalChemMolecule
-from global_chem_extensions.entities.protein.protein import GlobalChemProtein
-from global_chem_extensions.entities.rna.rna import GlobalChemRNA
-from global_chem_extensions.entities.dna.dna import GlobalChemDNA
-
-# Visualization
-
-from global_chem_extensions.analysis_tools.sunburster.sunburster import Sunburster
-from global_chem_extensions.analysis_tools.deep_layer_scatter.deep_layer_scatter import DeepLayerScatter
-
-# Analytics
-
-from global_chem_extensions.analysis_tools.smarts_pattern_identifier.smarts_pattern_identifier import SmartsPatternIdentifier
-from global_chem_extensions.analysis_tools.drug_design_filters.drug_design_filters import DrugDesignFilters
-from global_chem_extensions.analysis_tools.node_pca_analysis.node_pca_analysis import PCAAnalysis
-
-# Software Adapters
-
-from global_chem_extensions.software_adapters.pdf_adapter.molpdf_parser import MolPDFAdapter
-from global_chem_extensions.software_adapters.networkx_adapter.networkx_adapter import NetworkxAdapter
-from global_chem_extensions.software_adapters.smarts_visualizer.smarts_visualizer import SmartsVisualizer
-from global_chem_extensions.software_adapters.dimorphite_dl_adapter.dimorphite_dl import DimorphiteAdapter
-
-# Language Adapters
-
-from global_chem_extensions.language_adapters.amino_acid_converter.amino_acid_converter import AminoAcidConverter
-
-# Machine Learning
-
-from global_chem_extensions.machine_learning.one_hot_encoding import SmilesOneHotEncoder
-
-# Validation
-
-from global_chem_extensions.validation.partial_smiles import PartialSmilesValidation
-
-# ForceFields
-
-from global_chem_extensions.forcefields.cgenff.cgenff_molecule import CGenFFMolecule
-from global_chem_extensions.forcefields.cgenff.dissimilarity_score import CGenFFDissimilarityScore
-
-from global_chem_extensions.forcefields.gaff2.gaff2_molecule import GaFF2Molecule
-
-# Graphing Templates
-
-from global_chem_extensions.graphing_templates.plotly_template import PlotlyTemplate
-
-# Monitors
-
-from global_chem_extensions.monitoring_services.database_monitor.database_monitor import DatabaseMonitor
-
 class ExtensionsError(Exception):
 
     __version_error_parser__ = "0.0.1"
@@ -94,6 +40,8 @@ class GlobalChemExtensions(object):
 
         '''
 
+        from global_chem_extensions.analysis_tools.sunburster.sunburster import Sunburster
+
         Sunburster(smiles_list, save_file)
 
 
@@ -127,6 +75,8 @@ class GlobalChemExtensions(object):
 
         '''
 
+        from global_chem_extensions.analysis_tools.node_pca_analysis.node_pca_analysis import PCAAnalysis
+
         pca_analysis = PCAAnalysis(
             smiles_list,
             morgan_radius,
@@ -159,8 +109,9 @@ class GlobalChemExtensions(object):
 
         '''
 
-        converter = AminoAcidConverter()
+        from global_chem_extensions.language_adapters.amino_acid_converter.amino_acid_converter import AminoAcidConverter
 
+        converter = AminoAcidConverter()
         converted_list = []
 
         for smiles in smiles_list:
@@ -207,6 +158,8 @@ class GlobalChemExtensions(object):
 
         '''
 
+        from global_chem_extensions.monitoring_services.database_monitor.database_monitor import DatabaseMonitor
+
         database_monitor = DatabaseMonitor()
         database_monitor.heartbeat()
 
@@ -239,6 +192,8 @@ class GlobalChemExtensions(object):
             the filtered data set
         '''
 
+        from global_chem_extensions.analysis_tools.drug_design_filters.drug_design_filters import DrugDesignFilters
+
         drug_design_filters = DrugDesignFilters(
             smiles_list,
             lipinski_rule_of_5=lipinski_rule_of_5,
@@ -265,6 +220,8 @@ class GlobalChemExtensions(object):
 
         '''
 
+        from global_chem_extensions.software_adapters.networkx_adapter.networkx_adapter import NetworkxAdapter
+
         network_adapter = NetworkxAdapter()
         converted_network = network_adapter.convert(network)
 
@@ -280,6 +237,8 @@ class GlobalChemExtensions(object):
 
         '''
 
+        from global_chem_extensions.analysis_tools.deep_layer_scatter.deep_layer_scatter import DeepLayerScatter
+
         deep_layer_scatter = DeepLayerScatter(deep_layer_network, save_file=save_file)
         deep_layer_scatter.scatter(height=height, width=None)
 
@@ -291,6 +250,8 @@ class GlobalChemExtensions(object):
         Launch a Flask App for the SMARTS Pattern Identifier
 
         '''
+
+        from global_chem_extensions.analysis_tools.smarts_pattern_identifier.smarts_pattern_identifier import SmartsPatternIdentifier
 
         spi = SmartsPatternIdentifier()
         spi.launch_app(host=host, port=port, debug=debugger)
@@ -313,6 +274,8 @@ class GlobalChemExtensions(object):
             states (Dict): States of the SMILES input.
 
         '''
+
+        from global_chem_extensions.software_adapters.dimorphite_dl_adapter.dimorphite_dl import DimorphiteAdapter
 
         dimorphite_adapter = DimorphiteAdapter(
             smiles_list,
@@ -355,6 +318,8 @@ class GlobalChemExtensions(object):
 
         '''
 
+        from global_chem_extensions.validation.partial_smiles import PartialSmilesValidation
+
         psv = PartialSmilesValidation(
             partial=partial
         )
@@ -394,6 +359,8 @@ class GlobalChemExtensions(object):
             title (String): Title of the PDF
         '''
 
+        from global_chem_extensions.software_adapters.pdf_adapter.molpdf_parser import MolPDFAdapter
+
         molpdf_adapter = MolPDFAdapter(
             smiles = smiles,
             labels = labels,
@@ -418,6 +385,8 @@ class GlobalChemExtensions(object):
             molecules (List): List of molecules
 
         '''
+
+        from global_chem_extensions.software_adapters.pdf_adapter.molpdf_parser import MolPDFAdapter
 
         molpdf_adapter = MolPDFAdapter(
             file_name = file_name
@@ -445,6 +414,8 @@ class GlobalChemExtensions(object):
 
         '''
 
+        from global_chem_extensions.machine_learning.one_hot_encoding import SmilesOneHotEncoder
+
         encoder = SmilesOneHotEncoder(
             smiles_list = smiles_list,
             max_length = max_length
@@ -470,6 +441,8 @@ class GlobalChemExtensions(object):
 
         '''
 
+        from global_chem_extensions.machine_learning.one_hot_encoding import SmilesOneHotEncoder
+
         encoder = SmilesOneHotEncoder(
             smiles_list = smiles_list,
         )
@@ -493,6 +466,11 @@ class GlobalChemExtensions(object):
             frcmod_file (String): FRCMOD file for GAFF2
 
         '''
+
+        from global_chem_extensions.entities.molecule.molecule import GlobalChemMolecule
+        from global_chem_extensions.forcefields.cgenff.cgenff_molecule import CGenFFMolecule
+        from global_chem_extensions.forcefields.gaff2.gaff2_molecule import GaFF2Molecule
+
 
         cgenff_molecule = None
         gaff2_molecule = None
@@ -527,6 +505,8 @@ class GlobalChemExtensions(object):
             peptide_sequence (String): Peptide sequence
         '''
 
+        from global_chem_extensions.entities.protein.protein import GlobalChemProtein
+
         global_chem_protein = GlobalChemProtein(
             pdb_file = pdb_id,
             fetch_pdb = pdb_path,
@@ -548,6 +528,8 @@ class GlobalChemExtensions(object):
             name (String): Name of the DNA instance
         '''
 
+        from global_chem_extensions.entities.dna.dna import GlobalChemDNA
+
         global_chem_dna = GlobalChemDNA(
             dna_sequence = dna_sequence,
             name = name
@@ -568,6 +550,8 @@ class GlobalChemExtensions(object):
             name (String): Name of the DNA instance
         '''
 
+        from global_chem_extensions.entities.rna.rna import GlobalChemRNA
+
         global_chem_rna = GlobalChemRNA(
             rna_sequence = rna_sequence,
             name = name
@@ -586,6 +570,8 @@ class GlobalChemExtensions(object):
 
         '''
 
+        from global_chem_extensions.forcefields.cgenff.cgenff_molecule import CGenFFMolecule
+
         cgenff_molecule = CGenFFMolecule(
             stream_file=stream_file
         )
@@ -603,6 +589,8 @@ class GlobalChemExtensions(object):
 
         '''
 
+        from global_chem_extensions.forcefields.gaff2.gaff2_molecule import GaFF2Molecule
+
         gaff2_molecule = GaFF2Molecule(
             frcmod_file=frcmod_file
         )
@@ -618,6 +606,8 @@ class GlobalChemExtensions(object):
             smarts (String): Viusalize the SMARTS string
 
         '''
+
+        from global_chem_extensions.software_adapters.smarts_visualizer.smarts_visualizer import SmartsVisualizer
 
         visualizer = SmartsVisualizer(
             smarts
@@ -640,6 +630,9 @@ class GlobalChemExtensions(object):
             score (Float): similarity score
 
         '''
+
+        from global_chem_extensions.forcefields.cgenff.cgenff_molecule import CGenFFMolecule
+        from global_chem_extensions.forcefields.cgenff.dissimilarity_score import CGenFFDissimilarityScore
 
         molecule_1 = CGenFFMolecule(stream_file_1)
         molecule_2 = CGenFFMolecule(stream_file_2)
@@ -672,6 +665,8 @@ class GlobalChemExtensions(object):
             width (Int): width of the graph
 
         '''
+
+        from global_chem_extensions.graphing_templates.plotly_template import PlotlyTemplate
 
         PlotlyTemplate(
             figure,

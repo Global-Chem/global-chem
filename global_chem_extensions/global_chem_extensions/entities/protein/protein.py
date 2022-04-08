@@ -204,15 +204,25 @@ class GlobalChemProtein(object):
 
         return self.smarts_sequence
 
+    def match_drug_like_filter_criteria(self):
+
+        '''
+
+        Does it Match the Drug Like Filter for a PDB File
+
+        '''
+
+        print(self.protein)
+
+        # First Extract the Ligand
+
+        
+
 if __name__ == '__main__':
 
     gc_protein = GlobalChemProtein(
         # pdb_file='file.pdb',
-        # fetch_pdb='5tc0',
-        peptide_sequence='AAAA',
+        fetch_pdb='5tc0',
+        # peptide_sequence='AAAA',
     )
-
-    print (gc_protein.convert_to_smarts(
-        mark_nitrogen_backbone=False,
-        mark_carbonyl_carbon_backbone = False,
-    ))
+    gc_protein.match_drug_like_filter_criteria()
