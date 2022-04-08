@@ -264,7 +264,7 @@ A Variety of Tools are available for you to browse and analyze data and with the
 Extension List
 ==============
 
-| Extension                       | Description                                                                                                             | Import           |
+| Extension                       | Description                                                                                                             | Feature Import   |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------|------------------|
 | GlobalChem Chemical Entities    | GlobalChem has internal Molecule objects with all common attributes associated and conversion to SMILES                 | extensions       |
 | GlobalChem Biological Entities  | GlobalChem has internal DNA/RNA/Protein/Molecule objects with all common attributes associated and conversion to SMILES | bioinformatics   |
