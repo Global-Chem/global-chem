@@ -565,7 +565,7 @@ class GlobalChemExtensions(object):
         '''
 
         global_chem_rna = GlobalChemRNA(
-            dna_sequence = rna_sequence,
+            rna_sequence = rna_sequence,
             name = name
         )
 
