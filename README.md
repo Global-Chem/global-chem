@@ -92,8 +92,11 @@ gce.node_pca_analysis(smiles_list, save_file=False)
 
 ```
 
-Rules
-=====
+GlobalChem
+==========
+
+### Rules
+
 
 The Graph Network (GN)s comes with a couple of rules that for now make the software engineering easier on the developer. 
 
@@ -106,8 +109,8 @@ The Deep Graph Network (DGN)s comes also with a couple of rules to make the impl
 - There must be a root node of 1 which marks as your "input" node. 
 - When adding a layer all nodes will be added to all the previous layers as children. (Folk can use the remove node feature to perform dropouts)
 
-Network Status
-==============
+### Knowledge Graph
+
 
 Just with no dependencies, intialize the class and there you go! All the common and rare groups of the world
 at your disposal 
@@ -148,17 +151,8 @@ global_chem──├environment─emerging_perfluoroalkyls
 
 ```
 
-GlobalChemExtensions
-====================
+### Sul's Selected List
 
-A Variety of Tools are available for you to browse and analyze data and with the full list of different applications can be found in the google colab demo or the Gitbook documentation. A demonstration of the data visualization extensions designed with plotly and bokeh are displayed below:
-
-<p align="center">
-  <img width="800" height="600" src="https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_10.png">
-</p>
-
-Sul's Selected List
-===================
 
 This will be my own personal list of unique and interesting compounds chosen for forcefield parametirization and my chosen
 highlighted reasons for doing so for and understanding how to use the network for casual inference. 
@@ -167,26 +161,10 @@ highlighted reasons for doing so for and understanding how to use the network fo
 
 ```
 
-Adding Your Own Chemical List
-=============================
+### Nodes Contributors
 
-If you would like to add your paper or a list you constructed to the chemical knowledge graph then please "File an Issue" with your chemical list 
-and perhaps a suggestion of where to add it or you can leave for up to us to decide. The format of the chemical list can
-be something like this, and we the community will elect it into the graph and add a couple of representative compounds to the forcefield:
 
-```
-
-smiles = {
-   '3,5-dimethoxyphenylisoproxycarbonyl': 'COC1=CC(C(C)(OC=O)C)=CC(OC)=C1',
-   '2-(4-biphenyl)isopropoxycarbonyl': 'CC(C)(OC=O)C(C=C1)=CC=C1C2=CC=CC=C2',
-   '2-nitrophenylsulfenyl': 'SC1=CC=CC=C1[N+]([O-])=O',
-   'boc': 'O=COC(C)(C)C',
-}  
-
-```
-
-Nodes Contributors
-==================
+Please follow the node contribution guidelines if you would like to elect your own or someone elses. 
 
 ```
     __NODES__ = {
@@ -223,8 +201,8 @@ Nodes Contributors
 
 ```
 
-Nodes List
-==============
+### Nodes List
+
 
 | Chemical List                       | # of Entries | References                                                                                                                                                                                                                                                                                                           |
 |-------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -254,7 +232,57 @@ Nodes List
 | Pihkal                              | 179          | Shulgin, Alexander T., and Ann Shulgin. Pihkal: A Chemical Love Story. 1. ed., 8. print, Transform, 2010.                                                                                                                                                                                                            |
 | Excipients Cimetidine & Acyclovir   | 14           | Vaithianathan, Soundarya, et al. “Effect of Common Excipients on the Oral Drug Absorption of Biopharmaceutics Classification System Class 3 Drugs Cimetidine and Acyclovir.” Journal of Pharmaceutical Sciences, vol. 105, no. 2, Feb. 2016, pp. 996–1005. PubMed, https://doi.org/10.1002/jps.24643.                |
 | Nickel Bidendate Phosphine Ligands  | N/A          | Clevenger, Andrew L., et al. “Trends in the Usage of Bidentate Phosphines as Ligands in Nickel Catalysis.” Chemical Reviews, vol. 120, no. 13, July 2020, pp. 6124–96. DOI.org (Crossref), https://doi.org/10.1021/acs.chemrev.9b00682.                                                                              |
-| Common Regex Patterns               | 1            |                                                                                                                                                                                                                                                                                                                      |
+| Common Regex Patterns               | 1            |                                                                                                                                                                                                                                                               
+
+Adding Your Own Chemical List
+=============================
+
+If you would like to add your paper or a list you constructed to the chemical knowledge graph then please "File an Issue" with your chemical list 
+and perhaps a suggestion of where to add it or you can leave for up to us to decide. The format of the chemical list can
+be something like this, and we the community will elect it into the graph and add a couple of representative compounds to the forcefield:
+
+```
+
+smiles = {
+   '3,5-dimethoxyphenylisoproxycarbonyl': 'COC1=CC(C(C)(OC=O)C)=CC(OC)=C1',
+   '2-(4-biphenyl)isopropoxycarbonyl': 'CC(C)(OC=O)C(C=C1)=CC=C1C2=CC=CC=C2',
+   '2-nitrophenylsulfenyl': 'SC1=CC=CC=C1[N+]([O-])=O',
+   'boc': 'O=COC(C)(C)C',
+}  
+
+```                                            
+
+GlobalChemExtensions
+====================
+
+A Variety of Tools are available for you to browse and analyze data and with the full list of different applications can be found in the google colab demo or the Gitbook documentation. A demonstration of the data visualization extensions designed with plotly and bokeh are displayed below:
+
+<p align="center">
+  <img width="800" height="600" src="https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_10.png">
+</p>
+
+Extension List
+==============
+
+
+| Extension | Description | Status |
+|-----------|-------------|--------|
+| GlobalChem Entities | GlobalChem has internal DNA/RNA/Protein/Molecule objects with all common attributes associated and conversion to SMILES |  [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://img.shields.io/badge/status-maintained-green)      |
+| ForceField Molecules            | GlobalChem can parse, manipulate, and write CGenFF and GaFF2 files as objects                                           | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://img.shields.io/badge/status-maintained-green)       |
+| PDF Generation and Parsing      | GlobalChem can generate SMILES to PDF and convert the PDF to SMILES                                                     |  [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://img.shields.io/badge/status-maintained-green)      |
+| SMILES Validation               | GlobalChem has connection to PySMILES, DeepSMILES, PartialSmiles, SELFIES, MolVS for validation of SMILES sets          | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://img.shields.io/badge/status-maintained-green)       |
+| SMILES Protonation States       | GlobalChem can take a set of compounds and predict the protonation states of a SMILES string over a range of pH         | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://img.shields.io/badge/status-maintained-green)      |
+| Open Source Database Monitoring | GlobalChem uses Uptime-Cheminformatics to Keep Track of Open Source Chemical Data                                       | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://img.shields.io/badge/status-maintained-green)       |
+| Networkx Software Adapter       | GlobalChem Network can be converted into NetworkX Graph Objects                                                         | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://img.shields.io/badge/status-maintained-green)        |
+| SMARTS Pattern Validation       | GlobalChem uses the MiniFrag Database to test SMARTS strings accuracy for functional group selection                    | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://img.shields.io/badge/status-maintained-green)       |
+| Principal Component Analysis    | GlobalChem can readily interpret SMILES, fingerprint, cluster and apply PCA analysis user can tweak parameters          | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://img.shields.io/badge/status-maintained-green)       |
+| Drug Design Filters             | GlobalChem can filter compounds based on Common Drug Design Filtering Rules                                             | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://img.shields.io/badge/status-maintained-green)       |
+| Deep Layer Scatter Analysis     | To visualize relations between sets of molecules, GlobalChem offers a parallel coordinate diagram generation            | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://img.shields.io/badge/status-maintained-green)       |
+| Sunbursting Radial Analysis     | GlobalChem offers a sunbursting mechanism to allow uses to observe how sets of compounds relate to the common set       | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://img.shields.io/badge/status-maintained-green)       |
+| Graphing Templates              | GlobalChem offers graphing templates to aid in faster data analysis, currently the only offer is Plotly                 | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://img.shields.io/badge/status-maintained-green)       |
+| CGenFF Dissimilarity Score      | GlobalChem can offer the difference between two molecules based on their Atom Types                                     | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://img.shields.io/badge/status-maintained-green)       |
+| OneHot Encoding                 | GlobalChem has it's own one hot encoder and decoder based on the common lists for Machine Learning                      | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://img.shields.io/badge/status-maintained-green)       |
+| SMARTS Pattern Identifier       | GlobalChem connects to the SMARTS Plus and can offer visualization into different SMARTS components                     | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://img.shields.io/badge/status-maintained-green)       |
 
 Open Source Software Compliance
 ===============================
