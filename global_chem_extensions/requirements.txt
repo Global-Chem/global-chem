@@ -16,3 +16,4 @@ deepsmiles
 requests
 selfies
 biopandas
+dna_features_viewer
