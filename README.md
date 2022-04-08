@@ -48,7 +48,7 @@ If you want to install the extensions package for extra functionality.
 
 ```
 
-pip install global-chem-extensions
+pip install global-chem[all]
 
 ```
 
@@ -264,25 +264,25 @@ A Variety of Tools are available for you to browse and analyze data and with the
 Extension List
 ==============
 
-
-| Extension | Description | Status |
-|-----------|-------------|--------|
-| GlobalChem Entities | GlobalChem has internal DNA/RNA/Protein/Molecule objects with all common attributes associated and conversion to SMILES |  [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/entities/globalchem-molecule)      |
-| ForceField Molecules            | GlobalChem can parse, manipulate, and write CGenFF and GaFF2 files as objects                                           | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/entities/cgenffmolecule)       |
-| PDF Generation and Parsing      | GlobalChem can generate SMILES to PDF and convert the PDF to SMILES                                                     |  [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/cheminformatics/pdf-parsing)      |
-| SMILES Validation               | GlobalChem has connection to PySMILES, DeepSMILES, PartialSmiles, SELFIES, MolVS for validation of SMILES sets          | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://img.shields.io/badge/status-maintained-green)       |
-| SMILES Protonation States       | GlobalChem can take a set of compounds and predict the protonation states of a SMILES string over a range of pH         | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/cheminformatics/dimorphitedl-protonation-states-over-range-of-ph)      |
-| Open Source Database Monitoring | GlobalChem uses Uptime-Cheminformatics to Keep Track of Open Source Chemical Data                                       | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/development-operations/open-source-database-monitor)       |
-| Networkx Software Adapter       | GlobalChem Network can be converted into NetworkX Graph Objects                                                         | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/interoperability/networkx-adapter)        |
-| SMARTS Pattern Identifier       | GlobalChem uses the MiniFrag Database to test SMARTS strings accuracy for functional group selection                    | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/cheminformatics/smarts-pattern-identifier)       |
-| Principal Component Analysis    | GlobalChem can readily interpret SMILES, fingerprint, cluster and apply PCA analysis user can tweak parameters          | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/machine-learning/principal-component-analysis)       |
-| Drug Design Filters             | GlobalChem can filter compounds based on Common Drug Design Filtering Rules                                             | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/cheminformatics/drug-design-filters)       |
-| Deep Layer Scatter Analysis     | To visualize relations between sets of molecules, GlobalChem offers a parallel coordinate diagram generation            | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/machine-learning/deep-layer-scatter)       |
-| Sunbursting Radial Analysis     | GlobalChem offers a sunbursting mechanism to allow uses to observe how sets of compounds relate to the common set       | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/machine-learning/sunbursting)       |
-| Graphing Templates              | GlobalChem offers graphing templates to aid in faster data analysis, currently the only offer is Plotly                 | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/graphing-templates/plotly-template)       |
-| CGenFF Dissimilarity Score      | GlobalChem can offer the difference between two molecules based on their Atom Types                                     | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/forcefields/cgenff-dissimilarity-score)       |
-| OneHot Encoding                 | GlobalChem has it's own one hot encoder and decoder based on the common lists for Machine Learning                      | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/machine-learning/one-hot-encoding)       |
-| SMARTS Pattern Visualizer       | GlobalChem connects to the SMARTS Plus and can offer visualization into different SMARTS components                     | [![Downloads](https://img.shields.io/badge/status-maintained-green)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/cheminformatics/smarts-pattern-visualizing)       |
+| Extension                       | Description                                                                                                             | Import           |
+|---------------------------------|-------------------------------------------------------------------------------------------------------------------------|------------------|
+| GlobalChem Chemical Entities    | GlobalChem has internal Molecule objects with all common attributes associated and conversion to SMILES                 | extensions       |
+| GlobalChem Biological Entities  | GlobalChem has internal DNA/RNA/Protein/Molecule objects with all common attributes associated and conversion to SMILES | bioinformatics   |
+| ForceField Molecules            | GlobalChem can parse, manipulate, and write CGenFF and GaFF2 files as objects                                           | extensions       |
+| PDF Generation and Parsing      | GlobalChem can generate SMILES to PDF and convert the PDF to SMILES                                                     | pdf              |
+| SMILES Validation               | GlobalChem has connection to PySMILES, DeepSMILES, PartialSmiles, SELFIES, MolVS for validation of SMILES sets          | validation       |
+| SMILES Protonation States       | GlobalChem can take a set of compounds and predict the protonation states of a SMILES string over a range of pH         | extensions       |
+| Open Source Database Monitoring | GlobalChem uses Uptime-Cheminformatics to Keep Track of Open Source Chemical Data                                       | extensions       |
+| Networkx Software Adapter       | GlobalChem Network can be converted into NetworkX Graph Objects                                                         | extensions       |
+| SMARTS Pattern Validation       | GlobalChem uses the MiniFrag Database to test SMARTS strings accuracy for functional group selection                    | extensions       |
+| Principal Component Analysis    | GlobalChem can readily interpret SMILES, fingerprint, cluster and apply PCA analysis user can tweak parameters          | machine_learning |
+| Drug Design Filters             | GlobalChem can filter compounds based on Common Drug Design Filtering Rules                                             | extensions       |
+| Deep Layer Scatter Analysis     | To visualize relations between sets of molecules, GlobalChem offers a parallel coordinate diagram generation            | plotting         |
+| Sunbursting Radial Analysis     | GlobalChem offers a sunbursting mechanism to allow uses to observe how sets of compounds relate to the common set       | plotting         |
+| Graphing Templates              | GlobalChem offers graphing templates to aid in faster data analysis, currently the only offer is Plotly                 | plotting         |
+| CGenFF Dissimilarity Score      | GlobalChem can offer the difference between two molecules based on their Atom Types                                     | extensions       |
+| OneHot Encoding                 | GlobalChem has it's own one hot encoder and decoder based on the common lists for Machine Learning                      | extensions       |
+| SMARTS Pattern Identifier       | GlobalChem connects to the SMARTS Plus and can offer visualization into different SMARTS components                     | extensions       |
 
 Open Source Software Compliance
 ===============================
