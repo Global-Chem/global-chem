@@ -46,7 +46,16 @@ setup(
         'bioinformatics': ['global-chem-extensions[bioinformatics]'],
         'machine_learning': ['global-chem-extensions[machine_learning]'],
         'pdf': ['global-chem-extensions[pdf]'],
-        'plotting': ['global-chem-extensions[plotting]']
+        'plotting': ['global-chem-extensions[plotting]'],
+        'all': [
+            'global-chem-extensions',
+            'global-chem-extensions[web_server]',
+            'global-chem-extensions[validation]',
+            'global-chem-extensions[bioinformatics]',
+            'global-chem-extensions[machine_learning]',
+            'global-chem-extensions[pdf]',
+            'global-chem-extensions[plotting]'
+        ]
     },
     zip_safe=False,
     keywords='smiles molecules chemistry',
