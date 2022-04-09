@@ -44,7 +44,16 @@ pip install global-chem
 
 ```
 
-If you want to install the extensions package for extra functionality.
+If you want to install the extensions package for extra functionality:
+
+
+```
+
+pip install global-chem[extensions]
+
+```
+
+If you want the full suite of features:
 
 ```
 
