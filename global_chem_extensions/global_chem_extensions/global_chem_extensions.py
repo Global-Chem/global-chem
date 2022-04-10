@@ -508,8 +508,8 @@ class GlobalChemExtensions(object):
         from global_chem_extensions.entities.protein.protein import GlobalChemProtein
 
         global_chem_protein = GlobalChemProtein(
-            pdb_file = pdb_id,
-            fetch_pdb = pdb_path,
+            pdb_file = pdb_path,
+            fetch_pdb = pdb_id,
             peptide_sequence = peptide_sequence,
         )
 
