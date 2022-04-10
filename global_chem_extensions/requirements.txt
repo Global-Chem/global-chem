@@ -5,3 +5,4 @@ requests
 numpy
 dimorphite_dl
 pypdb
+biopandas
