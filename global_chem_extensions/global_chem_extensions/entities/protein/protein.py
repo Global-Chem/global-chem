@@ -67,10 +67,9 @@ class GlobalChemProtein(object):
             self.protein_sequence = self.peptide_sequence
             self.convert_to_smiles()
 
-        self.protein_dataframe = self.protein.df['ATOM']
-
         if self.protein:
             try:
+                self.protein_dataframe = self.protein.df['ATOM']
                 self.ligand_dataframe = self.protein.df['HETATM']
             except Exception as e:
                 print ("WARNING: Ligand Not Found in PDB")
