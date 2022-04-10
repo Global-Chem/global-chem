@@ -9,16 +9,6 @@
 
 from IPython.display import SVG
 
-# Conversion SMILES Imports
-# -------------------------
-
-import deepsmiles
-import selfies as sf
-import partialsmiles as ps
-
-from pysmiles import read_smiles
-from molvs import validate_smiles
-
 # RDKit Imports
 # -------------
 
@@ -81,7 +71,7 @@ class GlobalChemMolecule(object):
 
         # Converters
 
-        self.converter = deepsmiles.Converter(rings=True, branches=True)
+        self.converter = None
 
     def get_attributes(self):
 
@@ -201,6 +191,8 @@ class GlobalChemMolecule(object):
             partial (Bool): whether the user is passing in partial SMILES
         '''
 
+        import partialsmiles as ps
+
         return ps.ParseSmiles(self.smiles, partial=partial)
 
     def get_pysmiles(self):
@@ -210,6 +202,8 @@ class GlobalChemMolecule(object):
         Gets the PySMILES mol object
 
         '''
+
+        from pysmiles import read_smiles
 
         return read_smiles(self.smiles)
 
@@ -221,6 +215,10 @@ class GlobalChemMolecule(object):
 
         '''
 
+        import deepsmiles
+
+        self.converter = deepsmiles.Converter(rings=True, branches=True)
+
         return self.converter.encode(self.smiles)
 
     def decode_deep_smiles(self):
@@ -230,6 +228,10 @@ class GlobalChemMolecule(object):
         Decodes the DeepSMILES molObject
 
         '''
+
+        import deepsmiles
+
+        self.converter = deepsmiles.Converter(rings=True, branches=True)
 
         return self.converter.decode(self.smiles)
 
@@ -241,6 +243,8 @@ class GlobalChemMolecule(object):
 
         '''
 
+        import selfies as sf
+
         return sf.encoder(self.smiles)
 
     def decode_selfies(self):
@@ -251,6 +255,8 @@ class GlobalChemMolecule(object):
 
         '''
 
+        import selfies as sf
+
         return sf.decoder(self.smiles)
 
     def validate_molvs(self):
@@ -260,6 +266,8 @@ class GlobalChemMolecule(object):
         Validate the SMILES with MOLVS
 
         '''
+
+        from molvs import validate_smiles
 
         return validate_smiles(self.smiles)
 
