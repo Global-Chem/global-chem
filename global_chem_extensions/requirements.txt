@@ -4,3 +4,4 @@ pandas
 requests
 numpy
 dimorphite_dl
+pypdb

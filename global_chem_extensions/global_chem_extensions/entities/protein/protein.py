@@ -7,8 +7,14 @@
 # Imports
 # -------
 
-from rdkit import Chem
+import pypdb
 from biopandas.pdb import PandasPdb
+
+# RDKit Imports
+# -------------
+
+from rdkit import Chem
+import rdkit.Chem.Descriptors as Descriptors
 
 class GlobalChemProtein(object):
 
@@ -30,14 +36,26 @@ class GlobalChemProtein(object):
 
         '''
 
+        # PDB File Handling
+
         self.pdb_file = pdb_file
         self.fetch_pdb = fetch_pdb
         self.peptide_sequence = peptide_sequence
 
+        # Protein Object Handling
+
         self.protein = None
         self.protein_sequence = None
+        self.protein_dataframe = None
+
         self.smiles_sequence = None
         self.smarts_sequence = None
+
+        # Ligand Object Handling
+
+        self.ligand_name = None
+        self.ligand_smiles = None
+        self.ligand_dataframe = None
 
         if self.pdb_file:
             self.protein, self.protein_sequence = self._read_pdb_file()
@@ -48,6 +66,16 @@ class GlobalChemProtein(object):
         if self.peptide_sequence:
             self.protein_sequence = self.peptide_sequence
             self.convert_to_smiles()
+
+        self.protein_dataframe = self.protein.df['ATOM']
+
+        if self.protein:
+            try:
+                self.ligand_dataframe = self.protein.df['HETATM']
+            except Exception as e:
+                print ("WARNING: Ligand Not Found in PDB")
+                print (e)
+                pass
 
     def _read_pdb_file(self):
 
@@ -204,25 +232,237 @@ class GlobalChemProtein(object):
 
         return self.smarts_sequence
 
-    def match_drug_like_filter_criteria(self):
+    def determine_bostrom_ligand_criteria(self, verbose=False):
 
         '''
 
-        Does it Match the Drug Like Filter for a PDB File
+        Does it Match the Drug Like Filter for a PDB File:
+
+        Arguments:
+            verbose (Bool): whether the user would like the output to be verbose
+
+        Returns:
+            criteria_met (Bool): a boolean to determine if the ligand passed the criteria or not
+
+        Reference:
+            1.) Boström, Jonas, et al. “Do Structurally Similar Ligands Bind in a Similar Fashion?” Journal of Medicinal Chemistry, vol. 49, no. 23, Nov. 2006, pp. 6716–25.
+
+        Filter Criteria:
+
+            1.) 80 < molecular weight (Da) < 750
+            2.) 10 < number of nonhydrogen atoms < 70
+            3.) Must not contain atoms of types other than
+                H, C, O, N, F, P, S, Cl, Br, or I
+            4.) must contain at least one
+                non-carbon/non-hydrogen atom
+            5.) must not contain two or more phosphorus atoms
+            6.) must not have more than 10 rotatable bonds
+            7.) must not be a nucleic acid
+            8.) must not be composed only from
+                non-lead-like PDB-HET-groupsb
+            9.) must not be covalently bound
+            10.) must not have protein contacts from the crystal
+                packing environment in less than 3 Å distance
+            11.) must have contacts with protein in less than
+                7Å distance
 
         '''
 
-        print(self.protein)
+        criteria_met = False
 
-        # First Extract the Ligand
+        # Fetch the SMILES
 
-        
+        smiles = self.convert_ligand_to_smiles().strip()
+        rdkit_molecule = Chem.MolFromSmiles(smiles)
 
-if __name__ == '__main__':
+        # Check 1
 
-    gc_protein = GlobalChemProtein(
-        # pdb_file='file.pdb',
-        fetch_pdb='5tc0',
-        # peptide_sequence='AAAA',
-    )
-    gc_protein.match_drug_like_filter_criteria()
+        molecular_weight = Descriptors.ExactMolWt(rdkit_molecule)
+
+        if 750 > molecular_weight > 80:
+
+            if verbose:
+                print ("Passed Check 1 Molecular Weight: %s " % molecular_weight)
+
+        else:
+
+            if verbose:
+                print ("Failed Check 1")
+
+            return criteria_met
+
+        # Check 2
+
+        non_hydrogen_atoms = Chem.rdchem.Mol.GetNumHeavyAtoms(rdkit_molecule)
+
+        if 70 > non_hydrogen_atoms > 10:
+
+            if verbose:
+                print ("Passed Check 2 Non Hydrogen Atoms: %s " % non_hydrogen_atoms)
+
+        else:
+
+            if verbose:
+                print ("Failed Check 2")
+
+            return criteria_met
+
+        # Check 3
+
+        element_boundaries = ['H', 'C', 'O', 'N', 'F', 'P', 'S', 'Cl', 'Br', 'I']
+
+        atom_symbols = []
+        atoms = Chem.rdchem.Mol.GetAtoms(rdkit_molecule)
+
+        for atom in atoms:
+
+            symbol = atom.GetSymbol()
+            atom_symbols.append(symbol)
+
+            if symbol not in element_boundaries:
+
+                if verbose:
+                    print ("Failed Check 3")
+
+                return criteria_met
+
+        if verbose:
+            print ("Passed Check 3 All Atoms Are Within Element Boundaries")
+
+        # Check 4
+
+        if 'H' in atom_symbols:
+
+            atom_symbols = list(filter(lambda x: x != 'H', atom_symbols))
+
+        if 'C' in atom_symbols:
+
+            atom_symbols = list(filter(lambda x: x != 'C', atom_symbols))
+
+        if len(atom_symbols) > 0:
+
+            if verbose:
+                print ("Passed Check 4 Non-Hydrogen & Non-Carbon Atoms Present: %s" % len(atom_symbols))
+
+        else:
+
+            if verbose:
+                print ("Failed Check 4")
+            return criteria_met
+
+        # Check 5
+
+        phosphorous_atoms = list(filter(lambda x: x == 'P', atom_symbols))
+
+        if len(phosphorous_atoms) > 1:
+
+            if verbose:
+                print ("Failed Check 5")
+                return criteria_met
+
+        else:
+
+            if verbose:
+                print ("Passed Check 5 Less than Two Phosphorous atoms Present")
+
+        # Check 6
+
+        rotatable_bonds = Descriptors.NumRotatableBonds(rdkit_molecule)
+
+        if rotatable_bonds > 10:
+
+            if verbose:
+                print ("Failed Check 6")
+                return criteria_met
+
+        else:
+
+            if verbose:
+                print ("Passed Check 6 Less than Ten Rotatable Bonds Present")
+
+        # Check 7
+
+        nucleic_acid_smiles = 'NC1OC(COP(O)(O)=O)C(O)C1'
+        nucleic_acid_molecule = Chem.MolFromSmiles(nucleic_acid_smiles)
+
+        substructures = rdkit_molecule.GetSubstructMatches(nucleic_acid_molecule)
+
+        if substructures:
+            if verbose:
+                print ("Failed Check 7")
+            return criteria_met
+
+        else:
+            if verbose:
+                print ("Passed Check 7 No Nucleic Acid Template Found")
+
+        # Check 8
+
+        # if verbose:
+        #     print ("Passed Check 8 PDB-HET Groups Not available")
+
+        # Check 9
+
+        if 'COVALENT' in self.protein.pdb_text or 'COVALNT' in self.protein.pdb_text:
+            print ("Failed Check 9")
+            return criteria_met
+
+        else:
+            if verbose:
+                print ("Passed Check 9 Not a Covalent Inhibitor")
+
+        # Check 10
+        #
+        # if verbose:
+        #     print ("Passed Check 9 Crystal Packing Contacts Not Implemented")
+
+        # Check 11
+
+        for index, atom_row in self.ligand_dataframe.iterrows():
+
+            # Check to see if there is water
+
+            if atom_row['residue_name'] == 'HOH':
+                continue
+
+            x_coord = atom_row['x_coord']
+            y_coord = atom_row['y_coord']
+            z_coord = atom_row['z_coord']
+
+            reference_point = (x_coord, y_coord, z_coord)
+
+            distances = self.protein.distance(xyz=reference_point, records=('ATOM',))
+            atoms_within_seven_angstroms = self.protein.df['ATOM'][distances < 7.0]
+
+            if len(atoms_within_seven_angstroms) > 0:
+
+                print ("Check 11 Has Contacts within 7 Angstroms")
+                criteria_met = True
+                return criteria_met
+
+        if verbose:
+            if not criteria_met:
+                print ("Check 11 Failed")
+
+    def convert_ligand_to_smiles(self):
+
+
+        '''
+
+        Converts the PDB Ligand to SMILES
+
+        '''
+
+        chain_id = self.ligand_dataframe['residue_name'].to_list()[0]
+
+        chem_desc = pypdb.get_info(chain_id,  url_root = 'https://data.rcsb.org/rest/v1/core/chemcomp/')
+        chem_desc = pypdb.to_dict(chem_desc)
+
+        self.ligand_name = chem_desc['chem_comp']['name']
+
+        ligand_descriptors = chem_desc['pdbx_chem_comp_descriptor']
+        for software in ligand_descriptors:
+            if software['program'] == 'OpenEye OEToolkits' and software['type'] == 'SMILES':
+                self.ligand_smiles = software['descriptor']
+
+        return self.ligand_smiles
