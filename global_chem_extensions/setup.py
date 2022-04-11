@@ -46,9 +46,8 @@ setup(
     extras_require={
         'validation': ['partialsmiles', 'pysmiles', 'deepsmiles', 'selfies', 'molvs'],
         'web_server': ['flask'],
-        'plotting': ['plotly', 'bokeh', 'kaleido'],
         'bioinformatics': ['biopython', 'dna_features_viewer'],
-        'machine_learning': ['sklearn'],
+        'machine_learning': ['sklearn', 'plotly', 'bokeh', 'kaleido'],
         'pdf': ['molpdf']
     },
     long_description=long_description,
