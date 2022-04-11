@@ -27,9 +27,19 @@ Overview
 
 #### GlobalChemExtensions
 
-| Release | Licensing | Stats | Demo | 
-| ------- | --------- | ----- | ---- |
-| [![PyPI version](https://badge.fury.io/py/global-chem-extensions.svg)](https://badge.fury.io/py/global-chem-extensions) | [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) | [![Downloads](https://pepy.tech/badge/global-chem-extensions)](https://pepy.tech/project/global-chem-extensions) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gGx4mOmkXP8voGelHwCt8Eq4Xq8Lj5_k?usp=sharing) |
+| Release   | Licensing | Stats |
+| --------- | --------- | ----- |
+| [![PyPI version](https://badge.fury.io/py/global-chem-extensions.svg)](https://badge.fury.io/py/global-chem-extensions) | [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) | [![Downloads](https://pepy.tech/badge/global-chem-extensions)](https://pepy.tech/project/global-chem-extensions) |
+
+Different extensions demos can be found below, or head to the navigate the "all" to check out the full feature suite. 
+
+| Extension | Demo |
+| --------- | ---- |
+| extensions | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1OrskD75wWaxLIk-wZXC4_5_vl98UNlu8?usp=sharing)
+| bioinformatics | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1dDB922p-CZC5ADZcI6YgBFGGhq_j4HDr?usp=sharing)
+| validation | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1OrskD75wWaxLIk-wZXC4_5_vl98UNlu8?usp=sharing)
+| machine_learning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1SPAxEL5PTOZM5ob4-Zv41eVHZ0V02uYe?usp=sharing)
+| pdf | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qJPEmPhUKlbbcoBR3nkD8L-BJoRKAIzq?usp=sharing)
 
 Installation 
 ============
