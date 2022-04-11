@@ -295,10 +295,10 @@ Extension List
 | Networkx Software Adapter       | GlobalChem Network can be converted into NetworkX Graph Objects                                                         | extensions       |
 | SMARTS Pattern Validation       | GlobalChem uses the MiniFrag Database to test SMARTS strings accuracy for functional group selection                    | extensions       |
 | Principal Component Analysis    | GlobalChem can readily interpret SMILES, fingerprint, cluster and apply PCA analysis user can tweak parameters          | machine_learning |
-| Drug Design Filters             | GlobalChem can filter compounds based on Common Drug Design Filtering Rules                                             | extensions       |
-| Deep Layer Scatter Analysis     | To visualize relations between sets of molecules, GlobalChem offers a parallel coordinate diagram generation            | plotting         |
-| Sunbursting Radial Analysis     | GlobalChem offers a sunbursting mechanism to allow uses to observe how sets of compounds relate to the common set       | plotting         |
-| Graphing Templates              | GlobalChem offers graphing templates to aid in faster data analysis, currently the only offer is Plotly                 | plotting         |
+| Drug Design Filters             | GlobalChem can filter compounds based on Common Drug Design Filtering Rules                                            | extensions       |
+| Deep Layer Scatter Analysis     | To visualize relations between sets of molecules, GlobalChem offers a parallel coordinate diagram generation            | machine_learning | 
+| Sunbursting Radial Analysis     | GlobalChem offers a sunbursting mechanism to allow uses to observe how sets of compounds relate to the common set      | machine_learning |
+| Graphing Templates              | GlobalChem offers graphing templates to aid in faster data analysis, currently the only offer is Plotly               | machine_learning |
 | CGenFF Dissimilarity Score      | GlobalChem can offer the difference between two molecules based on their Atom Types                                     | extensions       |
 | OneHot Encoding                 | GlobalChem has it's own one hot encoder and decoder based on the common lists for Machine Learning                      | extensions       |
 | SMARTS Pattern Identifier       | GlobalChem connects to the SMARTS Plus and can offer visualization into different SMARTS components                     | extensions       |
