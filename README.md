@@ -31,7 +31,7 @@ Overview
 | --------- | --------- | ----- |
 | [![PyPI version](https://badge.fury.io/py/global-chem-extensions.svg)](https://badge.fury.io/py/global-chem-extensions) | [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) | [![Downloads](https://pepy.tech/badge/global-chem-extensions)](https://pepy.tech/project/global-chem-extensions) |
 
-Different extensions demos can be found below, or head to the navigate the "all" to check out the full feature suite. 
+Different extensions demos can be found below, or download them all. Note the PDF extension is the most dependency heavy. 
 
 | Extension | Demo |
 | --------- | ---- |
