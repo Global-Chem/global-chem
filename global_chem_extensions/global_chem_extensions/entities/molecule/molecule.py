@@ -327,5 +327,20 @@ class GlobalChemMolecule(object):
 
         return svg.replace('svg:','')
 
+    def get_cgenff_cxsmiles(self):
 
+        '''
 
+        Get the CGenFF CX SMILES
+
+        '''
+
+        if self.cgenff_molecule:
+
+            hetereo_atom_types = [i.split()[2] for i in self.cgenff_molecule.atoms if i.split()[2][0] != 'H']
+
+            for idx, atom in enumerate(self.molecule.GetAtoms()):
+                atom.SetDoubleProp('atom_type', hetereo_atom_types[idx])
+                atom.SetIntProp('atom_idx', idx)
+
+        return Chem.MolToCXSmiles(self.molecule)
