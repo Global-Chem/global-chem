@@ -340,7 +340,7 @@ class GlobalChemMolecule(object):
             hetereo_atom_types = [i.split()[2] for i in self.cgenff_molecule.atoms if i.split()[2][0] != 'H']
 
             for idx, atom in enumerate(self.molecule.GetAtoms()):
-                atom.SetDoubleProp('atom_type', hetereo_atom_types[idx])
+                atom.SetProp('atom_type', hetereo_atom_types[idx])
                 atom.SetIntProp('atom_idx', idx)
 
         return Chem.MolToCXSmiles(self.molecule)
