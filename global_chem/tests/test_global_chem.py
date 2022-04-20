@@ -7,7 +7,7 @@
 # imports
 # -------
 
-from global_chem import GlobalChem
+from ..global_chem import GlobalChem
 
 def test_initializa_class():
 
