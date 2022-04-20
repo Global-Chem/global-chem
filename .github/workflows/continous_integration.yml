@@ -24,7 +24,6 @@ jobs:
       - name: Install
         run: |
           python global_chem/setup.py install
-          python global_chem_extensions/setup.py install
           pip install python-coveralls
           pip install coveralls
           pip install coverage==4.5.4     
