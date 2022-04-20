@@ -30,6 +30,8 @@ jobs:
           pip install nose              
 
       - name: Run tests
+        env:
+          GITHUB_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
         run: |
-          python -m nose --verbose --with-coverage -s -w global_chem/
-          python -m coveralls
+          cd global_chem
+          python -m nose --verbose --with-coverage -s -w tests/
