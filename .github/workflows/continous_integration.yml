@@ -31,5 +31,6 @@ jobs:
 
       - name: Run tests
         run: |
+          cd global_chem
           python -m nose --verbose --with-coverage -s -w global_chem/
           python -m coveralls
