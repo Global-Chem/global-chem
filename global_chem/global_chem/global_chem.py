@@ -12,75 +12,73 @@ import pprint
 
 # Environment
 
-from global_chem.global_chem.environment.emerging_perfluoroalkyls import EmergingPerFluoroAlkyls
+from global_chem.environment.emerging_perfluoroalkyls import EmergingPerFluoroAlkyls
 
 # Materials
 
-from global_chem.global_chem.materials.clay.montmorillonite_adsorption import MontmorilloniteAdsorption
-from global_chem.global_chem.materials.polymers.common_monomer_repeating_units import CommonMonomerRepeatingUnits
+from global_chem.materials.clay.montmorillonite_adsorption import MontmorilloniteAdsorption
+from global_chem.materials.polymers.common_monomer_repeating_units import CommonMonomerRepeatingUnits
 
 # Medicinal Chemistry - Cannabinoids
 
-from global_chem.global_chem.medicinal_chemistry.cannabinoids.cannabinoids import Cannabinoids
+from global_chem.medicinal_chemistry.cannabinoids.cannabinoids import Cannabinoids
 
 # Medicinal Chemistry - Warheads
 
-from global_chem.global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases import ElectrophilicWarheadsForKinases
-from global_chem.global_chem.medicinal_chemistry.warheads.common_warheads_covalent_inhibitors import CommonWarheadsCovalentInhibitors
+from global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases import ElectrophilicWarheadsForKinases
+from global_chem.medicinal_chemistry.warheads.common_warheads_covalent_inhibitors import CommonWarheadsCovalentInhibitors
 
 # Medicinal Chemistry - Rings
 
-from global_chem.global_chem.medicinal_chemistry.rings.rings_in_drugs import RingsInDrugs
-from global_chem.global_chem.medicinal_chemistry.rings.iupac_blue_book_rings import IUPACBlueBookRings
-from global_chem.global_chem.medicinal_chemistry.rings.phase_2_hetereocyclic_rings import Phase2HetereoCyclicRings
+from global_chem.medicinal_chemistry.rings.rings_in_drugs import RingsInDrugs
+from global_chem.medicinal_chemistry.rings.iupac_blue_book_rings import IUPACBlueBookRings
+from global_chem.medicinal_chemistry.rings.phase_2_hetereocyclic_rings import Phase2HetereoCyclicRings
 
 # Medicinal Chemistry - Scaffolds
 
-from global_chem.global_chem.medicinal_chemistry.scaffolds.iupac_blue_book import IUPACBlueBook
-from global_chem.global_chem.medicinal_chemistry.scaffolds.privileged_scaffolds import PrivilegedScaffolds
-from global_chem.global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements import CommonRGroupReplacements
+from global_chem.medicinal_chemistry.scaffolds.iupac_blue_book import IUPACBlueBook
+from global_chem.medicinal_chemistry.scaffolds.privileged_scaffolds import PrivilegedScaffolds
+from global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements import CommonRGroupReplacements
 
 # Proteins Kinases
 
-from global_chem.global_chem.proteins.kinases.braf.braf_inhibitors import BRAFInhibitors
-from global_chem.global_chem.proteins.kinases.scaffolds.privileged_kinase_inhibitors import PrivilegedKinaseInhibitors
+from global_chem.proteins.kinases.braf.braf_inhibitors import BRAFInhibitors
+from global_chem.proteins.kinases.scaffolds.privileged_kinase_inhibitors import PrivilegedKinaseInhibitors
 
 # Organic Synthesis
 
-from global_chem.global_chem.organic_synthesis.solvents.common_organic_solvents import CommonOrganicSolvents
-from global_chem.global_chem.organic_synthesis.protecting_groups.amino_acid_protecting_groups import AminoAcidProtectingGroups
-from global_chem.global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands import NickelBidendatePhosphineLigands
+from global_chem.organic_synthesis.solvents.common_organic_solvents import CommonOrganicSolvents
+from global_chem.organic_synthesis.protecting_groups.amino_acid_protecting_groups import AminoAcidProtectingGroups
+from global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands import NickelBidendatePhosphineLigands
 
 # Narcotics
 
-from global_chem.global_chem.narcotics.pihkal import Pihkal
-from global_chem.global_chem.narcotics.schedule_one import ScheduleOne
-from global_chem.global_chem.narcotics.schedule_two import ScheduleTwo
-from global_chem.global_chem.narcotics.schedule_three import ScheduleThree
-from global_chem.global_chem.narcotics.schedule_four import ScheduleFour
-from global_chem.global_chem.narcotics.schedule_five import ScheduleFive
+from global_chem.narcotics.pihkal import Pihkal
+from global_chem.narcotics.schedule_one import ScheduleOne
+from global_chem.narcotics.schedule_two import ScheduleTwo
+from global_chem.narcotics.schedule_three import ScheduleThree
+from global_chem.narcotics.schedule_four import ScheduleFour
+from global_chem.narcotics.schedule_five import ScheduleFive
 
 # Interstellar Space
 
-from global_chem.global_chem.interstellar_space.interstellar_space import InterstellarSpace
+from global_chem.interstellar_space.interstellar_space import InterstellarSpace
 
 # Biopharmaceutics - Excipients
 
-from global_chem.global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir import CimetidineAndAcyclovir
+from global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir import CimetidineAndAcyclovir
 
 # Miscellaneous
 
-from global_chem.global_chem.miscellaneous.vitamins import Vitamins
-from global_chem.global_chem.miscellaneous.open_smiles import OpenSmiles
-from global_chem.global_chem.miscellaneous.amino_acids import AminoAcids
-from global_chem.global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
+from global_chem.miscellaneous.vitamins import Vitamins
+from global_chem.miscellaneous.open_smiles import OpenSmiles
+from global_chem.miscellaneous.amino_acids import AminoAcids
+from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
 
 class Node:
 
     '''
-
     Node Object
-
     '''
 
     def __init__(self, name, smiles=[], smarts=[], value=None, colour=None):
@@ -97,9 +95,7 @@ class Node:
     def add_parent(self, name, smiles=[], smarts=[]):
 
         '''
-
         Add the Parent Node
-
         '''
 
         self.parents.append(
@@ -109,9 +105,7 @@ class Node:
     def add_child(self, name, smiles=[], smarts=[]):
 
         '''
-
         Add the Child Node
-
         '''
 
         self.children.append(
@@ -121,12 +115,9 @@ class Node:
     def get_node_state(self):
 
         '''
-
         Get the Node State
-
         Returns:
             state (Node): Node state
-
         '''
 
         return self.state
@@ -134,9 +125,7 @@ class Node:
     def set_node_state(self):
 
         '''
-
         Set the Node State with the children and the parents.
-
         '''
 
         self.state = [ self.children, self.parents ]
@@ -144,9 +133,7 @@ class Node:
     def print_stat(self):
 
         """
-
         Print statistics of the node
-
         """
         print("Children: %s" % self.children)
         print("Parents: %s" % self.parents)
@@ -154,12 +141,9 @@ class Node:
     def set_node_value(self, value):
 
         '''
-
         Set the Node Value
-
         Arguments:
             value: value of the node you would like to set it to | Type: Anything
-
         '''
 
         self.value = value
@@ -167,9 +151,7 @@ class Node:
     def get_node_value(self):
 
         '''
-
         Get the Node Value
-
         '''
 
         return self.value
@@ -316,9 +298,7 @@ class GlobalChem(object):
     __allow_update__ = False
 
     """
-
     GlobalChem will be the master class of all variables, as the content store grows we can use this as the parent class.
-
     """
 
     # NODE CONTRIBUTORS
@@ -373,9 +353,7 @@ class GlobalChem(object):
     def check_available_nodes(self):
 
         '''
-
         Checks the existing Nodes within the network.
-
         '''
 
         return list(self.__NODES__.keys())
@@ -383,9 +361,7 @@ class GlobalChem(object):
     def get_all_nodes(self):
 
         '''
-
         Returns all the nodes in no particular order
-
         '''
 
         # Skip the head node
@@ -397,11 +373,8 @@ class GlobalChem(object):
     def get_node(self, node_key):
 
         '''
-
         Return a node based on the key by the user.
-
         Arguments:
-
             node_key (String): node keys within the network
         '''
 
@@ -410,12 +383,9 @@ class GlobalChem(object):
     def get_depth_of_globalchem(self):
 
         '''
-
         Returns the Depth of the GlobalChem Tree
-
         Returns:
             max_depth (Int): Max depth of the object
-
         '''
 
         path_objects = []
@@ -448,13 +418,10 @@ class GlobalChem(object):
     def get_nodes(self, node_keys):
 
         '''
-
         Arguments:
             node_keys (List): return the list of nodes based on the user keys.
-
         Returns
             nodes (List): List of the node objects
-
         '''
 
         nodes = []
@@ -468,15 +435,11 @@ class GlobalChem(object):
     def initiate_network(self, root_node='global_chem'):
 
         '''
-
         Initiates a Tree Node Network with Root Node
-
         Arguments:
             root_node: Add the root node to the network | Type: String
-
         Objects Initialized:
             network: network object
-
         '''
 
         self.network = {}
@@ -496,37 +459,27 @@ class GlobalChem(object):
     def add_node(self, parent_key, child_key):
 
         '''
-
         Add a node into the network
-
         Rules:
             1.) There must be a connection from one node to the next. Nodes in space cannot exist.
-
         Algorithm:
-
             1.) First Find the Node in the Network
             2.) Add the Child to the Parent
             3.) Add the Child to the Network
             4.) Add the Parent to the Child
             5.) Add the Parent to the Network
-
         Graph Algorithm:
-
             O(c): Child Node
             O(p): Parent Node
             N: Network
-
             1.) O(p) <---- N
             2.) O(c) <---- O(p)
             3.) O(c) <---- N
             4.) O(p) ----> O(c)
             5.) O(p) ----> N
-
         Errors:
-
             GraphNetworkError Step 1: If the Parent Node was never found
             GraphNetworkError Step 4: If the Newly Child node was never added.
-
         '''
 
         # Step 1
@@ -625,14 +578,10 @@ class GlobalChem(object):
     def remove_node(self, name):
 
         '''
-
         Rules:
             1.) Cannot Remove a Node that has children.
-
         Arguments:
-
             name (String): Name of the node
-
         '''
 
         # Check Node Extant
@@ -673,18 +622,13 @@ class GlobalChem(object):
     def get_node(self, name):
 
         '''
-
         Get the Node
-
         Arguments:
             name: Parent key of the node | Type: String
-
         Returns:
             node: Returns the node.
-
         Errors:
             GraphNetworkError: If the node doesn't exist.
-
         '''
 
         # Hack for the python file: Need to fix later on.
@@ -707,15 +651,11 @@ class GlobalChem(object):
     def get_node_smiles(self, node_key):
 
         '''
-
         Get the Node SMILES
-
         Arguments:
             node_key: Node key to query | Type: String
-
         Returns:
             smiles_dict: Dictionary of the SMILES for that object.
-
         '''
 
         node = self.network.get(node_key, None)
@@ -731,15 +671,11 @@ class GlobalChem(object):
     def get_node_smarts(self, node_key):
 
         '''
-
         Get the Node SMARTS
-
         Arguments:
             node_key: Node key to query | Type: String
-
         Returns:
             smarts_dict: Dictionary of the SMARTS for that object.
-
         '''
 
         node = self.network.get(node_key, None)
@@ -755,12 +691,9 @@ class GlobalChem(object):
     def initiate_deep_layer_network(self, root_node='global_chem'):
 
         '''
-
         Initiates the Deep Layer Network with the first layer 1 being the root node.
-
         Arguments:
             root_node (String): Root node to the network.
-
         '''
 
         self.root_node = root_node
@@ -784,32 +717,25 @@ class GlobalChem(object):
     def add_deep_layer(self, nodes):
 
         '''
-
         Arguments:
             nodes (List): Add a Layer of Nodes to the previous parents
-
         Rules:
             1.) When adding a deep layer add children to all the previous parents.
-
         Algorithm:
             1.) Fetch all the parents of the current layer
             2.) Add all the node children to the parents.
             3.) Increase the deep layer count.
             4.) All all the parents to the children.
-
         Graph Algorithm:
-
             O(cs): Childrens Node
             O(ps): Parents Node
             DN: Deep Network
             DCL: Deep Current Layer
             <F>: Fetch Function
-
             1.) O(ps) <F> DCL <F> DN
             2.) O(cs) <---- O(ps)
             3.) DCL += 1
             4.) O(ps) ----> O(cs)
-
         '''
 
         parents = []
@@ -848,12 +774,9 @@ class GlobalChem(object):
     def build_global_chem_network(self, print_output=False, debugger=False):
 
         '''
-
         Get the GlobalChem Internal Network
-
         Arguments:
             print_output: Print the output of the globalchem network | Type: Boolean
-
         '''
 
         # Initiate the Head
@@ -910,9 +833,7 @@ class GlobalChem(object):
     def get_all_names(self):
 
         '''
-
         Fetches all the names in the network
-
         '''
 
         names = []
@@ -930,12 +851,9 @@ class GlobalChem(object):
     def get_all_smiles(self):
 
         '''
-
         Fetches all the smiles in the network
-
         Returns:
             smiles (List): Full list of SMILES in the network.
-
         '''
 
         smiles = []
@@ -953,12 +871,9 @@ class GlobalChem(object):
     def get_all_smarts(self):
 
         '''
-
         Fetches all the smarts in the network
-
         Returns:
             smarts (List): Full list of SMARTS in the network.
-
         '''
 
         smarts = []
@@ -976,14 +891,11 @@ class GlobalChem(object):
     def get_smiles_by_iupac(self, iupac_key, return_network_path=False, return_all_network_paths=False):
 
         '''
-
         Get the SMILES by the IUPAC.
-
         Arguments:
             iupac_key (String): Key for the iupac.
             return_network_path (Bool): whether the user wants the network path as well.
             return_all_network_paths (Bool): return all the network paths
-
         Returns:
             definition (String): definiton of the iupac.
             network_path (Dict): { definition: last network path in }
@@ -1019,9 +931,7 @@ class GlobalChem(object):
     def set_node_value(self, node_key, value):
 
         '''
-
         Set the Node value
-
         '''
 
         node = self.network.get(node_key, None)
@@ -1037,12 +947,9 @@ class GlobalChem(object):
     def get_node_value(self, node_key):
 
         '''
-
         Get the Node Value
-
         Arguments:
             node_key (value): Get the Node Key.
-
         '''
 
         node = self.network.get(node_key, None)
@@ -1058,23 +965,17 @@ class GlobalChem(object):
     def compute_common_score(self, iupac_name, verbose=False):
 
         '''
-
         Compute the Common score for an IUPAC name
-
         Arguments:
             iupac_name (String): iupac name in question
             verbose (Boolean): verbose flag for the common score
-
         Returns:
             common_score (Float): Common Score computed by GlobalChem Algorithm
-
         Common Score Algorithm:
-
             1.) Data mine the current state of GlobalChem
             2.) Get the Object Weights of Each mention
             3.) Determine the Mention Weight
             4.) Sum the Weights and That's How common it is.
-
         '''
 
         # Step 1
@@ -1130,9 +1031,7 @@ class GlobalChem(object):
 
 
         '''
-
         Outputs the Network into the terminal into a nice format.
-
         '''
 
         # Initialize Print node network
@@ -1194,9 +1093,7 @@ class GlobalChem(object):
 
 
         '''
-
         Outputs the Deep Network into the terminal into a nice format.
-
         '''
 
 
@@ -1233,11 +1130,8 @@ class GlobalChem(object):
 
 
         '''
-
         Convert the network into a TSV file in the format:
-
             IUPAC, SMILES, NODE NAME, TREE PATH
-
         '''
 
         out_file = open(out_file, 'w')
@@ -1254,4 +1148,3 @@ class GlobalChem(object):
                 out_file.write(f'{key}\t{value}\t{node_name}\t{tree_path}\n')
 
         out_file.close()
-
