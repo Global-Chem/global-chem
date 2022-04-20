@@ -24,13 +24,13 @@ TEST_REQUIREMENTS = [
 if os.path.exists('README.md'):
     long_description = open('README.md').read()
 else:
-    long_description = 'GlobalChem - Your Own Graph Network for Chemistry'
+    long_description = 'GlobalChem - Your Chemical Knowledge Graph for Chemistry'
 
 # exec
 # ----
 setup(
     name="global_chem",
-    version="1.6.0.2",
+    version="1.6.0.3",
     packages=find_packages(),
     license='MPL 2.0',
     author="Suliman Sharif",
@@ -57,7 +57,7 @@ setup(
         ]
     },
     zip_safe=False,
-    keywords='smiles molecules chemistry',
+    keywords='smiles molecules chemistry organic iupac',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Natural Language :: English',
