@@ -31,7 +31,7 @@ else:
 setup(
     name="global_chem",
     version="1.5.9.8",
-    packages=find_packages(),
+    packages=['global_chem'],
     license='MPL 2.0',
     author="Suliman Sharif",
     author_email="sharifsuliman1@gmail.com",
