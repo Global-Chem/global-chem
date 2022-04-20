@@ -30,7 +30,7 @@ else:
 # ----
 setup(
     name="global_chem",
-    version="1.6.0.5",
+    version="1.6.0.6",
     packages=find_packages(),
     license='MPL 2.0',
     author="Suliman Sharif",
@@ -39,23 +39,23 @@ setup(
     install_requires=[],
     long_description=long_description,
     long_description_content_type='text/markdown',
-    # extras_require={
-    #     'graphing': ['global-chem-extensions[graphing]'],
-    #     'forcefields': ['global-chem-extensions[forcefields]'],
-    #     'bioinformatics': ['global-chem-extensions[bioinformatics]'],
-    #     'cheminformatics': ['global-chem-extensions[cheminformatics]'],
-    #     'quantum_chemistry': ['global-chem-extensions[quantum_chemistry]'],
-    #     'development_operations': ['global-chem-extensions[development_operations]'],
-    #     'all': [
-    #         'global-chem-extensions',
-    #         'global-chem-extensions[graphing]',
-    #         'global-chem-extensions[forcefields]',
-    #         'global-chem-extensions[bioinformatics]',
-    #         'global-chem-extensions[cheminformatics]',
-    #         'global-chem-extensions[quantum_chemistry]',
-    #         'global-chem-extensions[development_operations]',
-    #     ]
-    # },
+    extras_require={
+        'graphing': ['global-chem-extensions[graphing]'],
+        'forcefields': ['global-chem-extensions[forcefields]'],
+        'bioinformatics': ['global-chem-extensions[bioinformatics]'],
+        'cheminformatics': ['global-chem-extensions[cheminformatics]'],
+        'quantum_chemistry': ['global-chem-extensions[quantum_chemistry]'],
+        'development_operations': ['global-chem-extensions[development_operations]'],
+        'all': [
+            'global-chem-extensions',
+            'global-chem-extensions[graphing]',
+            'global-chem-extensions[forcefields]',
+            'global-chem-extensions[bioinformatics]',
+            'global-chem-extensions[cheminformatics]',
+            'global-chem-extensions[quantum_chemistry]',
+            'global-chem-extensions[development_operations]',
+        ]
+    },
     zip_safe=False,
     keywords='smiles molecules chemistry organic iupac',
     classifiers=[
