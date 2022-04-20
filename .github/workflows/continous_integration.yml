@@ -35,4 +35,4 @@ jobs:
         run: |
           cd global_chem
           python -m nose --verbose --with-coverage -s -w tests/
-          python -m coveralls
+          python -m coveralls --service=github
