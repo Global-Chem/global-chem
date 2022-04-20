@@ -35,11 +35,11 @@ Different extensions demos can be found below, or download them all. Note the PD
 
 | Extension | Demo |
 | --------- | ---- |
-| extensions | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/193UH36RrKLyKZGPzN4AjslgoRZp0Qdzh?usp=sharing)
-| bioinformatics | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1dDB922p-CZC5ADZcI6YgBFGGhq_j4HDr?usp=sharing)
-| validation | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1OrskD75wWaxLIk-wZXC4_5_vl98UNlu8?usp=sharing)
-| machine_learning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1SPAxEL5PTOZM5ob4-Zv41eVHZ0V02uYe?usp=sharing)
-| pdf | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qJPEmPhUKlbbcoBR3nkD8L-BJoRKAIzq?usp=sharing)
+| extensions | |
+| bioinformatics | |
+| cheminformatics | |
+| quantum_chemistry | |
+| develoment_operations | |
 
 Installation 
 ============
