@@ -38,7 +38,7 @@ class ChemInformatics(object):
 
         '''
 
-        from applications.sunburster import Sunburster
+        from global_chem_extensions.cheminformatics.applications.sunburster import Sunburster
 
         Sunburster(smiles_list, save_file)
 
@@ -73,7 +73,7 @@ class ChemInformatics(object):
 
         '''
 
-        from applications.node_pca_analysis import PCAAnalysis
+        from global_chem_extensions.cheminformatics.applications.node_pca_analysis import PCAAnalysis
 
         pca_analysis = PCAAnalysis(
             smiles_list,
@@ -107,7 +107,7 @@ class ChemInformatics(object):
 
         '''
 
-        from applications.amino_acid_converter import AminoAcidConverter
+        from global_chem_extensions.cheminformatics.applications.amino_acid_converter import AminoAcidConverter
 
         converter = AminoAcidConverter()
         converted_list = []
@@ -135,7 +135,7 @@ class ChemInformatics(object):
 
         '''
 
-        from applications.amino_acid_converter import AminoAcidConverter
+        from global_chem_extensions.cheminformatics.applications.amino_acid_converter import AminoAcidConverter
 
         converter = AminoAcidConverter()
 
@@ -171,7 +171,7 @@ class ChemInformatics(object):
             the filtered data set
         '''
 
-        from applications.drug_design_filters import DrugDesignFilters
+        from global_chem_extensions.cheminformatics.applications.drug_design_filters import DrugDesignFilters
 
         drug_design_filters = DrugDesignFilters(
             smiles_list,
@@ -199,7 +199,7 @@ class ChemInformatics(object):
 
         '''
 
-        from applications.networkx_adapter import NetworkxAdapter
+        from global_chem_extensions.cheminformatics.applications.networkx_adapter import NetworkxAdapter
 
         network_adapter = NetworkxAdapter()
         converted_network = network_adapter.convert(network)
@@ -216,7 +216,7 @@ class ChemInformatics(object):
 
         '''
 
-        from applications.deep_layer_scatter import DeepLayerScatter
+        from global_chem_extensions.cheminformatics.applications.deep_layer_scatter import DeepLayerScatter
 
         deep_layer_scatter = DeepLayerScatter(deep_layer_network, save_file=save_file)
         deep_layer_scatter.scatter(height=height, width=width)
@@ -230,7 +230,7 @@ class ChemInformatics(object):
 
         '''
 
-        from applications.smarts_pattern_identifier import SmartsPatternIdentifier
+        from global_chem_extensions.cheminformatics.applications.smarts_pattern_identifier import SmartsPatternIdentifier
 
         spi = SmartsPatternIdentifier()
         spi.launch_app(host=host, port=port, debug=debugger)
@@ -254,7 +254,7 @@ class ChemInformatics(object):
 
         '''
 
-        from applications.dimorphite_dl import DimorphiteAdapter
+        from global_chem_extensions.cheminformatics.applications.dimorphite_dl import DimorphiteAdapter
 
         dimorphite_adapter = DimorphiteAdapter(
             smiles_list,
@@ -297,7 +297,7 @@ class ChemInformatics(object):
 
         '''
 
-        from applications.partial_smiles import PartialSmilesValidation
+        from global_chem_extensions.cheminformatics.applications.partial_smiles import PartialSmilesValidation
 
         psv = PartialSmilesValidation(
             partial=partial
@@ -338,7 +338,7 @@ class ChemInformatics(object):
             title (String): Title of the PDF
         '''
 
-        from applications.molpdf_parser import MolPDFAdapter
+        from global_chem_extensions.cheminformatics.applications.molpdf_parser import MolPDFAdapter
 
         molpdf_adapter = MolPDFAdapter(
             smiles = smiles,
@@ -365,7 +365,7 @@ class ChemInformatics(object):
 
         '''
 
-        from applications.molpdf_parser import MolPDFAdapter
+        from global_chem_extensions.cheminformatics.applications.molpdf_parser import MolPDFAdapter
 
         molpdf_adapter = MolPDFAdapter(
             file_name = file_name
@@ -393,7 +393,7 @@ class ChemInformatics(object):
 
         '''
 
-        from applications.one_hot_encoding import SmilesOneHotEncoder
+        from global_chem_extensions.cheminformatics.applications.one_hot_encoding import SmilesOneHotEncoder
 
         encoder = SmilesOneHotEncoder(
             smiles_list = smiles_list,
@@ -420,7 +420,7 @@ class ChemInformatics(object):
 
         '''
 
-        from applications.one_hot_encoding import SmilesOneHotEncoder
+        from global_chem_extensions.cheminformatics.applications.one_hot_encoding import SmilesOneHotEncoder
 
         encoder = SmilesOneHotEncoder(
             smiles_list = smiles_list,
@@ -440,7 +440,7 @@ class ChemInformatics(object):
 
         '''
 
-        from applications.smarts_visualizer import SmartsVisualizer
+        from global_chem_extensions.cheminformatics.applications.smarts_visualizer import SmartsVisualizer
 
         visualizer = SmartsVisualizer(
             smarts

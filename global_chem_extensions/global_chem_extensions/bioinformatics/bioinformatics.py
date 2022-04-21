@@ -38,7 +38,7 @@ class Bioinformatics(object):
             peptide_sequence (String): Peptide sequence
         '''
 
-        from applications.protein import GlobalChemProtein
+        from global_chem_extensions.bioinformatics.applications.protein import GlobalChemProtein
 
         global_chem_protein = GlobalChemProtein(
             pdb_file = pdb_path,
@@ -61,7 +61,7 @@ class Bioinformatics(object):
             name (String): Name of the DNA instance
         '''
 
-        from applications.protein import GlobalChemDNA
+        from global_chem_extensions.bioinformatics.applications.protein import GlobalChemDNA
 
         global_chem_dna = GlobalChemDNA(
             dna_sequence = dna_sequence,
@@ -83,7 +83,7 @@ class Bioinformatics(object):
             name (String): Name of the DNA instance
         '''
 
-        from applications.protein import GlobalChemRNA
+        from global_chem_extensions.bioinformatics.applications.protein import GlobalChemRNA
 
         global_chem_rna = GlobalChemRNA(
             rna_sequence = rna_sequence,

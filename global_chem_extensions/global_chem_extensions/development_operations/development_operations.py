@@ -33,7 +33,7 @@ class DevelopmentOperations(object):
 
         '''
 
-        from applications.database_monitor import DatabaseMonitor
+        from global_chem_extensions.development_operations.applications.database_monitor import DatabaseMonitor
 
         database_monitor = DatabaseMonitor()
         database_monitor.heartbeat()

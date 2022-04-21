@@ -43,7 +43,7 @@ class GraphingTemplates(object):
 
         '''
 
-        from applications.plotly_template import PlotlyTemplate
+        from  global_chem_extensions.graphing_templates.applications.plotly_template import PlotlyTemplate
 
         PlotlyTemplate(
             figure,

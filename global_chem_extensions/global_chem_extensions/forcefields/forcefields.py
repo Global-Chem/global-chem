@@ -40,9 +40,9 @@ class ForceFields(object):
 
         '''
 
-        from .applications.molecule import GlobalChemMolecule
-        from .applications.cgenff_molecule import CGenFFMolecule
-        from  .applications.gaff2_molecule import GaFF2Molecule
+        from global_chem_extensions.forcefields.applications.molecule import GlobalChemMolecule
+        from global_chem_extensions.forcefields.applications.cgenff_molecule import CGenFFMolecule
+        from global_chem_extensions.forcefields.applications.gaff2_molecule import GaFF2Molecule
 
 
         cgenff_molecule = None
@@ -75,7 +75,7 @@ class ForceFields(object):
 
         '''
 
-        from .applications.cgenff_molecule import CGenFFMolecule
+        from global_chem_extensions.forcefields.applications.cgenff_molecule import CGenFFMolecule
 
         cgenff_molecule = CGenFFMolecule(
             stream_file=stream_file
@@ -94,7 +94,7 @@ class ForceFields(object):
 
         '''
 
-        from .applications.gaff2_molecule import GaFF2Molecule
+        from global_chem_extensions.forcefields.applications.gaff2_molecule import GaFF2Molecule
 
         gaff2_molecule = GaFF2Molecule(
             frcmod_file=frcmod_file
@@ -118,8 +118,8 @@ class ForceFields(object):
 
         '''
 
-        from .applications.cgenff_molecule import CGenFFMolecule
-        from .applications.dissimilarity_score import CGenFFDissimilarityScore
+        from global_chem_extensions.forcefields.applications.cgenff_molecule import CGenFFMolecule
+        from global_chem_extensions.forcefields.applications.dissimilarity_score import CGenFFDissimilarityScore
 
         molecule_1 = CGenFFMolecule(stream_file_1)
         molecule_2 = CGenFFMolecule(stream_file_2)
