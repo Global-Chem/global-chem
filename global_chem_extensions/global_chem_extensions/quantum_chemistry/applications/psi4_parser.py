@@ -30,7 +30,7 @@ class Psi4Parser(object):
 
         # Attributes
 
-        if self.input_file is not None:
+        if input_file is not None:
             self.input_file = open(input_file, 'r').read()
             self.lines = self.input_file.split('\n')
 
