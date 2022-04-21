@@ -144,41 +144,9 @@ The Deep Graph Network (DGN)s comes also with a couple of rules to make the impl
 Just with no dependencies, intialize the class and there you go! All the common and rare groups of the world
 at your disposal 
 
-```
-
-gc = GlobalChem()
-gc.print_globalchem_network()
-
-                                ┌solvents─common_organic_solvents
-             ┌organic_synthesis─└protecting_groups─amino_acid_protecting_groups
-             │          ┌polymers─common_monomer_repeating_units
-             ├materials─└clay─montmorillonite_adsorption
-             │                            ┌privileged_kinase_inhibtors
-             │                            ├privileged_scaffolds
-             ├proteins─kinases─┌scaffolds─├iupac_blue_book_substituents
-             │                 │          └common_r_group_replacements
-             │                 └braf─inhibitors
-             │              ┌vitamins
-             │              ├open_smiles
-             ├miscellaneous─├amino_acids
-             │              └regex_patterns
-global_chem──├environment─emerging_perfluoroalkyls
-             │          ┌schedule_one
-             │          ├schedule_four
-             │          ├schedule_five
-             ├narcotics─├pihkal
-             │          ├schedule_two
-             │          └schedule_three
-             ├interstellar_space
-             │                    ┌cannabinoids
-             │                    │         ┌electrophillic_warheads_for_kinases
-             │                    ├warheads─└common_warheads_covalent_inhibitors
-             └medicinal_chemistry─│      ┌phase_2_hetereocyclic_rings
-                                  └rings─├iupac_blue_book_rings
-                                         └rings_in_drugs
-                                         
-
-```
+<p align="center">
+  <img width="1000" height="700" src="images/figures/figure_1_new.png">
+</p>
 
 ### Nodes Contributors
 
