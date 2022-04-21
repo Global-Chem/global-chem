@@ -187,7 +187,7 @@ class Psi4Parser(object):
 
         return modes
 
-    def moly_plot_molecular_orbital(self, cube_file, name=None, show=False):
+    def moly_plot_molecular_orbital(self, cube_file, name='orbital', show=False):
 
         '''
 
@@ -199,7 +199,7 @@ class Psi4Parser(object):
         fig.add_cube(cube_file, iso=0.03, colorscale="rdbu", opacity=0.2)
 
         fig.fig.write_image(os.path.join(
-            name, '%s.png')
+            '%s.png' % name)
         )
 
         if show:
