@@ -33,13 +33,13 @@ Overview
 
 Different extensions demos can be found below, or download them all. Note the PDF extension is the most dependency heavy. 
 
-| Extension | Demo |
-| --------- | ---- |
-| extensions | |
-| bioinformatics | |
-| cheminformatics | |
-| quantum_chemistry | |
-| develoment_operations | |
+| Extension              | Demo |
+| ---------------------- | ---- |
+| forcefields            |      |
+| bioinformatics         |      |
+| cheminformatics        |      |
+| quantum_chemistry      |      |
+| development_operations |      |
 
 Installation 
 ============
@@ -59,15 +59,12 @@ If you want to install the extensions package for extra functionality:
 
 ```
 
-pip install global-chem[extensions]
-
-```
-
-If you want the full suite of features:
-
-```
-
-pip install global-chem[all]
+pip install global-chem[graphing]
+pip install global-chem[forcefields]
+pip install global-chem[bioinformatics]
+pip install global-chem[cheminformaitcs]
+pip install global-chem[quantum_chemistry]
+pip install global-chem[development_operations]
 
 ```
 
