@@ -64,7 +64,7 @@ GlobalChem is going to be distribute via PyPi and as the tree and it's extension
 making it accessible to all regardless of what you use. Alternatively, you could have a glance at the source code and copy/paste
 it yourself.
 
-```
+```bash
 
 pip install global-chem
 
@@ -73,7 +73,7 @@ pip install global-chem
 If you want to install the extensions package for extra functionality:
 
 
-```
+```bash
 
 pip install 'global-chem[graphing]'
 pip install 'global-chem[forcefields]'
@@ -89,7 +89,7 @@ QuickStart
 
 #### GlobalChem
 
-```
+```python
 
 from global_chem import GlobalChem
 
@@ -103,7 +103,7 @@ print (smiles_list)
 
 #### GlobalChemExtensions
 
-```
+```python
 
 from global_chem_extensions import GlobalChemExtensions
 
@@ -139,13 +139,13 @@ The Graph Network (GN)s comes with a couple of rules that for now make the softw
 The Deep Graph Network (DGN)s comes also with a couple of rules to make the implementation easier:
 
 - There must be a root node of 1 which marks as your "input" node. 
-- When adding a layer all nodes will be added to all the previous layers as children. (Folk can use the remove node feature to perform dropouts)
+- When adding a layer all nodes will be added to all the previous layers as children. (Folk can use the remove node feature to perform dropouts).
 
 ### Knowledge Graph
 
 
 Just with no dependencies, intialize the class and there you go! All the common and rare groups of the world
-at your disposal 
+at your disposal. 
 
 <p align="center">
   <img width="850" height="650" src="images/figures/figure_1_new.png">
@@ -269,7 +269,7 @@ and appropiately version controlled by maintainers of the repository and open so
 `GlobalChem`'s purposes are still unknown as it enters open source deployment. We have built extended functions that live in
 a seperate package `GlobalChemExtensions` that do depend on `GlobalChem`. Since each version is packaged appropiately, if 
 reliance on a version is a need then it's software is available on `Github` and `PyPi`. A Standard Operating Procedure (SOP)
-can be filed submitted from the extensions utility documentation maintained on `Gitbook`
+can be filed submitted from the extensions utility documentation maintained on `Gitbook`.
 
 - **Validation:** `GlobalChem` follows Good Automated Manufacturing Practice (GAMP) Category 3 which is "software that is used as installed"
 and potentially "configurable". `GlobalChem` testing comes from within, the documentation serves as the ultimate test
@@ -318,7 +318,7 @@ over traditional. For example: 'yl' to mark site points for polymer connections 
 
 - In the case of radicals, some SMILES were adjusted to remove the radical chemical feature as they serve as connection points. However in some cases the radical component was maintained, especially in the case of IUPAC blue book common substituents.
 
-- SMARTS strings were adapted from the SMILES using RDKit (4)
+- SMARTS strings were adapted from the SMILES using RDKit (4).
 
 * * * * *
 
