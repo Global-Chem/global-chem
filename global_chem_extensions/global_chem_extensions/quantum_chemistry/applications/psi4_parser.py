@@ -24,16 +24,17 @@ class Psi4Parser(object):
     '''
 
     def __init__(self,
-                 input_file = '',
+                 input_file = None,
                  cube_files = None,
                  ):
 
         # Attributes
 
-        self.input_file = open(input_file, 'r').read()
-        self.cube_files = cube_files
+        if self.input_file is not None:
+            self.input_file = open(input_file, 'r').read()
+            self.lines = self.input_file.split('\n')
 
-        self.lines = self.input_file.split('\n')
+        self.cube_files = cube_files
 
         # Energy Terms
 
