@@ -46,16 +46,16 @@ Overview
 | [![PyPI version](https://badge.fury.io/py/global-chem-extensions.svg)](https://badge.fury.io/py/global-chem-extensions) | [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) | [![Downloads](https://pepy.tech/badge/global-chem-extensions)](https://pepy.tech/project/global-chem-extensions) |
 |-|-|-|
 
+### Demo Reel
+
 | Extension              | Demo |
 | ---------------------- | ---- |
 | forcefields            |      |
 | bioinformatics         |      |
 | cheminformatics        |      |
-| quantum_chemistry      | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](
-https://colab.research.google.com/drive/1BGLQphP1IMLndeyavHM_6_qXQJI_7gFU?usp=sharing)     |
+| quantum_chemistry      | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1BGLQphP1IMLndeyavHM_6_qXQJI_7gFU?usp=sharing) |
 | development_operations |      |
 
-https://colab.research.google.com/drive/1BGLQphP1IMLndeyavHM_6_qXQJI_7gFU?usp=sharing
 
 Installation 
 ============
