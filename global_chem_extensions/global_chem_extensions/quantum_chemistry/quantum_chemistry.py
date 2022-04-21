@@ -49,7 +49,7 @@ class QuantumChemistry(object):
 
         '''
 
-        from applications.zmatrix_store import ZMatrixStore
+        from global_chem_extensions.quantum_chemistry.applications.zmatrix_store import ZMatrixStore
 
         zmatrix_store = ZMatrixStore()
 
@@ -58,6 +58,6 @@ class QuantumChemistry(object):
     @staticmethod
     def get_psi4_parser():
 
-        from applications.psi4_parser import Psi4Parser
+        from global_chem_extensions.quantum_chemistry.applications.psi4_parser import Psi4Parser
 
         return Psi4Parser()
