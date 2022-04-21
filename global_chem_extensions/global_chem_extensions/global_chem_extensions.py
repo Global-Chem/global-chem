@@ -33,7 +33,7 @@ class GlobalChemExtensions(object):
 
         '''
 
-        from global_chem_extensions.global_chem_extensions.bioinformatics.bioinformatics import Bioinformatics
+        from global_chem_extensions.bioinformatics.bioinformatics import Bioinformatics
 
         return Bioinformatics()
 
@@ -46,7 +46,7 @@ class GlobalChemExtensions(object):
 
         '''
 
-        from global_chem_extensions.global_chem_extensions.cheminformatics.cheminformatics import ChemInformatics
+        from global_chem_extensions.cheminformatics.cheminformatics import ChemInformatics
 
         return ChemInformatics()
 
@@ -59,7 +59,7 @@ class GlobalChemExtensions(object):
 
         '''
 
-        from global_chem_extensions.global_chem_extensions.development_operations.development_operations import DevelopmentOperations
+        from global_chem_extensions.development_operations.development_operations import DevelopmentOperations
 
         return DevelopmentOperations()
 
@@ -72,7 +72,7 @@ class GlobalChemExtensions(object):
 
         '''
 
-        from global_chem_extensions.global_chem_extensions.forcefields.forcefields import ForceFields
+        from global_chem_extensions.forcefields.forcefields import ForceFields
 
         return ForceFields()
 
@@ -85,7 +85,7 @@ class GlobalChemExtensions(object):
 
         '''
 
-        from global_chem_extensions.global_chem_extensions.graphing_templates.graphing_templates import GraphingTemplates
+        from global_chem_extensions.graphing_templates.graphing_templates import GraphingTemplates
 
         return GraphingTemplates()
 
@@ -98,6 +98,6 @@ class GlobalChemExtensions(object):
 
         '''
 
-        from global_chem_extensions.global_chem_extensions.quantum_chemistry.quantum_chemistry import QuantumChemistry
+        from global_chem_extensions.quantum_chemistry.quantum_chemistry import QuantumChemistry
 
         return QuantumChemistry()
