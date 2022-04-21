@@ -41,7 +41,6 @@ def test_node_attribute():
     gc = GlobalChem()
     nodes_list = gc.check_available_nodes()
 
-    print (nodes_list)
     assert len(nodes_list) > 0
     assert 'emerging_perfluoroalkyls' in nodes_list
 
