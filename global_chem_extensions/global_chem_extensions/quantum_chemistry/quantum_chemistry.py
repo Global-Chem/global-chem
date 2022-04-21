@@ -60,4 +60,4 @@ class QuantumChemistry(object):
 
         from global_chem_extensions.quantum_chemistry.applications.psi4_parser import Psi4Parser
 
-        return Psi4Parser()
+        return Psi4Parser
