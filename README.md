@@ -81,6 +81,7 @@ pip install 'global-chem[bioinformatics]'
 pip install 'global-chem[cheminformaitcs]'
 pip install 'global-chem[quantum_chemistry]'
 pip install 'global-chem[development_operations]'
+pip install 'global-chem[all]'
 
 ```
 
