@@ -336,15 +336,6 @@ over traditional. For example: 'yl' to mark site points for polymer connections 
 
 - SMARTS strings were adapted from the SMILES using RDKit (4)
 
-Genesis
-=======
-
-GlobalChem was created because I noticed I was using the same variable across multiple scripts and figure it would be useful
-for folk to have.
-
-- Lead Developer [Suliman sharif](http://sulstice.github.io/)
-- Artwork [Elena Chow](http://www.chowelena.com/)
-
 * * * * *
 
 Citation
