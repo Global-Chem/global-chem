@@ -77,13 +77,13 @@ class Psi4Parser(object):
 
         for line in self.lines:
 
-            if 'Nuclear Repulsion Energy' in line:
+            if 'Nuclear Repulsion Energy =' in line:
                 self.nuclear_repulsion_energy = float(line.strip().split()[-1])
 
-            if 'One-Electron Energy' in line:
+            if 'One-Electron Energy =' in line:
                 self.one_electron_energy = float(line.strip().split()[-1])
 
-            if 'Two-Electron Energy' in line:
+            if 'Two-Electron Energy =' in line:
                 self.two_electron_energy = float(line.strip().split()[-1])
 
             if 'Total Energy =' in line:

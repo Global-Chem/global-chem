@@ -18,3 +18,4 @@ def test_initializa_class():
     '''
 
     gce = GlobalChemExtensions()
+
