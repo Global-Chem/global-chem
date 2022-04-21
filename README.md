@@ -16,7 +16,6 @@ Overview
 
 #### GlobalChem
 
-
 | Usage     | Build  | Release | SMILES Validation | Licensing | Stats |  
 | --------- | ------ | ------- | ----------------- | --------- | ----- |
 | [![Documentation](https://img.shields.io/badge/GitBook-Docu-lightblue)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/) | [![Test System](https://github.com/Sulstice/global-chem/actions/workflows/continous_integration.yml/badge.svg)](https://github.com/Sulstice/global-chem/actions/workflows/continous_integration.yml) | [![PyPI version](https://badge.fury.io/py/global-chem.svg)](https://badge.fury.io/py/global-chem) | [![saythanks](https://img.shields.io/badge/RDKit-100%25-fg49b4.svg)](https://www.rdkit.org/) | [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) | [![Downloads](https://pepy.tech/badge/global-chem)](https://pepy.tech/project/global-chem) | 
@@ -168,58 +167,44 @@ global_chem──├environment─emerging_perfluoroalkyls
 
 ```
 
-### Sul's Selected List
-
-
-This will be my own personal list of unique and interesting compounds chosen for forcefield parametirization and my chosen
-highlighted reasons for doing so for and understanding how to use the network for casual inference. 
-
-```
-
-```
-
 ### Nodes Contributors
 
 
 Please follow the node contribution guidelines if you would like to elect your own or someone elses. 
 
 ```
-    __NODES__ = {
-        'global_chem': Node,
-        'emerging_perfluoroalkyls': EmergingPerFluoroAlkyls,                      # Asuka Orr & Suliman Sharif
-        'montmorillonite_adsorption': MontmorilloniteAdsorption,                  # Asuka Orr & Suliman Sharif
-        'common_monomer_repeating_units': CommonMonomerRepeatingUnits,            # Suliman Sharif
-        'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,    # Ruibin Liu & Suliman Sharif
-        'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors,  # Shaoqi Zhao & Suliman Sharif
-        'rings_in_drugs': RingsInDrugs,                                           # Alexander Mackerell & Suliman Sharif
-        'iupac_blue_book_rings': IUPACBlueBookRings,                              # Suliman Sharif
-        'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,                  # Suliman Sharif
-        'privileged_scaffolds': PrivilegedScaffolds,                              # Suliman Sharif
-        'iupac_blue_book': IUPACBlueBook,                                         # Suliman Sharif
-        'common_r_group_replacements': CommonRGroupReplacements,                  # Sunhwan Jo & Suliman Sharif
-        'braf_inhibitors': BRAFInhibitors,                                        # Aarion Romany
-        'privileged_kinase_inhibitors': PrivilegedKinaseInhibitors,               # Suliman Sharif
-        'common_organic_solvents': CommonOrganicSolvents,                         # Suliman Sharif
-        'amino_acid_protecting_groups': AminoAcidProtectingGroups,                # Aziza Frank & Suliman Sharif
-        'schedule_one': ScheduleOne,                                              # Suliman Sharif
-        'schedule_two': ScheduleTwo,                                              # Suliman Sharif
-        'schedule_three': ScheduleThree,                                          # Suliman Sharif
-        'schedule_four': ScheduleFour,                                            # Suliman Sharif
-        'schedule_five': ScheduleFive,                                            # Suliman Sharif
-        'interstellar_space': InterstellarSpace,                                  # Suliman Sharif
-        'vitamins': Vitamins,                                                     # Suliman Sharif
-        'open_smiles': OpenSmiles,                                                # Suliman Sharif
-        'amino_acids': AminoAcids,                                                # Suliman Sharif
-        'pihkal': Pihkal,                                                         # Suliman Sharif
-        'nickel_ligands': NickelBidendatePhosphineLigands,                        # Suliman Sharif
-        'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                       # Suliman Sharif
-        'common_regex_patterns': CommonRegexPatterns,                             # Chris Burke & Suliman Sharif
-    }
-
+'global_chem': Node,
+'emerging_perfluoroalkyls': EmergingPerFluoroAlkyls,                      # Asuka Orr & Suliman Sharif
+'montmorillonite_adsorption': MontmorilloniteAdsorption,                  # Asuka Orr & Suliman Sharif
+'common_monomer_repeating_units': CommonMonomerRepeatingUnits,            # Suliman Sharif
+'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,    # Ruibin Liu & Suliman Sharif
+'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors,  # Shaoqi Zhao & Suliman Sharif
+'rings_in_drugs': RingsInDrugs,                                           # Alexander Mackerell & Suliman Sharif
+'iupac_blue_book_rings': IUPACBlueBookRings,                              # Suliman Sharif
+'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,                  # Suliman Sharif
+'privileged_scaffolds': PrivilegedScaffolds,                              # Suliman Sharif
+'iupac_blue_book': IUPACBlueBook,                                         # Suliman Sharif
+'common_r_group_replacements': CommonRGroupReplacements,                  # Sunhwan Jo & Suliman Sharif
+'braf_inhibitors': BRAFInhibitors,                                        # Aarion Romany
+'privileged_kinase_inhibitors': PrivilegedKinaseInhibitors,               # Suliman Sharif
+'common_organic_solvents': CommonOrganicSolvents,                         # Suliman Sharif
+'amino_acid_protecting_groups': AminoAcidProtectingGroups,                # Aziza Frank & Suliman Sharif
+'schedule_one': ScheduleOne,                                              # Suliman Sharif
+'schedule_two': ScheduleTwo,                                              # Suliman Sharif
+'schedule_three': ScheduleThree,                                          # Suliman Sharif
+'schedule_four': ScheduleFour,                                            # Suliman Sharif
+'schedule_five': ScheduleFive,                                            # Suliman Sharif
+'interstellar_space': InterstellarSpace,                                  # Suliman Sharif
+'vitamins': Vitamins,                                                     # Suliman Sharif
+'open_smiles': OpenSmiles,                                                # Suliman Sharif
+'amino_acids': AminoAcids,                                                # Suliman Sharif
+'pihkal': Pihkal,                                                         # Suliman Sharif
+'nickel_ligands': NickelBidendatePhosphineLigands,                        # Suliman Sharif
+'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                       # Suliman Sharif
+'common_regex_patterns': CommonRegexPatterns,                             # Chris Burke & Suliman Sharif
 ```
 
-### Nodes List
-
+<details><summary><h3>Node List</h1><br/></summary>
 
 | Chemical List                       | # of Entries | References                                                                                                                                                                                                                                                                                                           |
 |-------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -249,25 +234,9 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Pihkal                              | 179          | Shulgin, Alexander T., and Ann Shulgin. Pihkal: A Chemical Love Story. 1. ed., 8. print, Transform, 2010.                                                                                                                                                                                                            |
 | Excipients Cimetidine & Acyclovir   | 14           | Vaithianathan, Soundarya, et al. “Effect of Common Excipients on the Oral Drug Absorption of Biopharmaceutics Classification System Class 3 Drugs Cimetidine and Acyclovir.” Journal of Pharmaceutical Sciences, vol. 105, no. 2, Feb. 2016, pp. 996–1005. PubMed, https://doi.org/10.1002/jps.24643.                |
 | Nickel Bidendate Phosphine Ligands  | N/A          | Clevenger, Andrew L., et al. “Trends in the Usage of Bidentate Phosphines as Ligands in Nickel Catalysis.” Chemical Reviews, vol. 120, no. 13, July 2020, pp. 6124–96. DOI.org (Crossref), https://doi.org/10.1021/acs.chemrev.9b00682.                                                                              |
-| Common Regex Patterns               | 1            |                                                                                                                                                                                                                                                               
+| Common Regex Patterns               | 1            |                                                                                                     
 
-Adding Your Own Chemical List
-=============================
-
-If you would like to add your paper or a list you constructed to the chemical knowledge graph then please "File an Issue" with your chemical list 
-and perhaps a suggestion of where to add it or you can leave for up to us to decide. The format of the chemical list can
-be something like this, and we the community will elect it into the graph and add a couple of representative compounds to the forcefield:
-
-```
-
-smiles = {
-   '3,5-dimethoxyphenylisoproxycarbonyl': 'COC1=CC(C(C)(OC=O)C)=CC(OC)=C1',
-   '2-(4-biphenyl)isopropoxycarbonyl': 'CC(C)(OC=O)C(C=C1)=CC=C1C2=CC=CC=C2',
-   '2-nitrophenylsulfenyl': 'SC1=CC=CC=C1[N+]([O-])=O',
-   'boc': 'O=COC(C)(C)C',
-}  
-
-```                                            
+</details>                            
 
 GlobalChemExtensions
 ====================
