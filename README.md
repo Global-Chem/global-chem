@@ -145,7 +145,7 @@ Just with no dependencies, intialize the class and there you go! All the common 
 at your disposal 
 
 <p align="center">
-  <img width="1000" height="700" src="images/figures/figure_1_new.png">
+  <img width="850" height="650" src="images/figures/figure_1_new.png">
 </p>
 
 ### Nodes Contributors
