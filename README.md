@@ -247,8 +247,7 @@ A Variety of Tools are available for you to browse and analyze data and with the
   <img width="800" height="600" src="https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_10.png">
 </p>
 
-Extension List
-==============
+<details><summary><h3>Extension List</h1><br/></summary>
 
 | Extension                       | Description                                                                                                             | Feature Import   |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------|------------------|
@@ -269,6 +268,8 @@ Extension List
 | CGenFF Dissimilarity Score      | GlobalChem can offer the difference between two molecules based on their Atom Types                                     | extensions       |
 | OneHot Encoding                 | GlobalChem has it's own one hot encoder and decoder based on the common lists for Machine Learning                      | extensions       |
 | SMARTS Pattern Identifier       | GlobalChem connects to the SMARTS Plus and can offer visualization into different SMARTS components                     | extensions       |
+
+</details>
 
 Open Source Software Compliance
 ===============================
