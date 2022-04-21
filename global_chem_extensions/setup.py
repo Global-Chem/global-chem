@@ -36,7 +36,7 @@ else:
 # ----
 setup(
     name="global_chem_extensions",
-    version="0.9.9.8.5",
+    version="0.9.9.8.9",
     packages=find_packages(),
     license='MPL 2.0',
     author="Suliman Sharif",
