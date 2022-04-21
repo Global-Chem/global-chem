@@ -24,7 +24,7 @@ class Psi4Parser(object):
     '''
 
     def __init__(self,
-                 input_file,
+                 input_file = '',
                  cube_files = None,
                  ):
 
@@ -186,7 +186,7 @@ class Psi4Parser(object):
 
         return modes
 
-    def moly_plot_molecular_orbital(self, out_directory=None, show=False):
+    def moly_plot_molecular_orbital(self, cube_file, out_directory=None, show=False):
 
         '''
 
@@ -194,13 +194,12 @@ class Psi4Parser(object):
 
         '''
 
-        for orbital in self.cube_files:
-            fig = moly.Figure()
-            fig.add_cube(orbital, iso=0.03, colorscale="rdbu", opacity=0.2)
+        fig = moly.Figure()
+        fig.add_cube(cube_file, iso=0.03, colorscale="rdbu", opacity=0.2)
 
-            fig.fig.write_image(os.path.join(
-                out_directory, '%s.png' % orbital)
-            )
-            
-            if show:
-                fig.show()
+        fig.fig.write_image(os.path.join(
+            out_directory, '%s.png' % cube_file)
+        )
+
+        if show:
+            fig.show()
