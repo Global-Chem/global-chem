@@ -24,13 +24,13 @@ TEST_REQUIREMENTS = [
 if os.path.exists('README.md'):
     long_description = open('README.md').read()
 else:
-    long_description = 'GlobalChem - Your Own Graph Network for Chemistry'
+    long_description = 'GlobalChem - Your Chemical Knowledge Graph for Chemistry'
 
 # exec
 # ----
 setup(
     name="global_chem",
-    version="1.5.9.6",
+    version="1.6.0.8",
     packages=find_packages(),
     license='MPL 2.0',
     author="Suliman Sharif",
@@ -40,23 +40,24 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     extras_require={
-        'extensions': ['global-chem-extensions'],
-        'web_server': ['global-chem-extensions[web_server]'],
-        'validation': ['global-chem-extensions[validation]'],
+        'graphing': ['global-chem-extensions[graphing]'],
+        'forcefields': ['global-chem-extensions[forcefields]'],
         'bioinformatics': ['global-chem-extensions[bioinformatics]'],
-        'machine_learning': ['global-chem-extensions[machine_learning]'],
-        'pdf': ['global-chem-extensions[pdf]'],
+        'cheminformatics': ['global-chem-extensions[cheminformatics]'],
+        'quantum_chemistry': ['global-chem-extensions[quantum_chemistry]'],
+        'development_operations': ['global-chem-extensions[development_operations]'],
         'all': [
             'global-chem-extensions',
-            'global-chem-extensions[web_server]',
-            'global-chem-extensions[validation]',
+            'global-chem-extensions[graphing]',
+            'global-chem-extensions[forcefields]',
             'global-chem-extensions[bioinformatics]',
-            'global-chem-extensions[machine_learning]',
-            'global-chem-extensions[pdf]',
+            'global-chem-extensions[cheminformatics]',
+            'global-chem-extensions[quantum_chemistry]',
+            'global-chem-extensions[development_operations]',
         ]
     },
     zip_safe=False,
-    keywords='smiles molecules chemistry',
+    keywords='smiles molecules chemistry organic iupac',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Natural Language :: English',

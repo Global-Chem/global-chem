@@ -36,7 +36,7 @@ else:
 # ----
 setup(
     name="global_chem_extensions",
-    version="0.9.9.8.2",
+    version="0.9.9.9.7",
     packages=find_packages(),
     license='MPL 2.0',
     author="Suliman Sharif",
@@ -44,16 +44,25 @@ setup(
     url="https://www.github.com/Sulstice/global-chem-extensions",
     install_requires=REQUIREMENTS,
     extras_require={
-        'validation': ['partialsmiles', 'pysmiles', 'deepsmiles', 'selfies', 'molvs'],
-        'web_server': ['flask'],
-        'bioinformatics': ['biopython', 'dna_features_viewer'],
-        'machine_learning': ['sklearn', 'plotly', 'bokeh', 'kaleido'],
-        'pdf': ['molpdf']
+        'cheminformatics': [
+            'partialsmiles', 'pysmiles', 'deepsmiles',
+            'selfies', 'molvs', 'flask', 'plotly', 'kaleido',
+            'bokeh', 'molpdf', 'dimorphite_dl'
+        ],
+        'bioinformatics': [
+            'biopython', 'dna_features_viewer', 'biopandas',
+            'pypdb'
+        ],
+        'development_operations': [''],
+        'quantum_chemistry': ['moly', 'kaleido', 'pyyaml==3.13'],
+        'forcefields': ['rdkit-pypi'],
+        'graphing': ['plotly']
+
     },
     long_description=long_description,
     long_description_content_type='text/markdown',
     zip_safe=False,
-    keywords='smiles molecules chemistry rdkit plotly',
+    keywords='smiles molecules chemistry rdkit plotly cheminformatics chemoinformatics organic python',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Natural Language :: English',

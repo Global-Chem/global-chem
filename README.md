@@ -14,32 +14,48 @@ pattern matching (SMARTS).
 Overview
 ========
 
-#### GlobalChem
+## GlobalChem
 
-| Usage     | Build  | Release | SMILES Validation | Licensing | Stats |  
-| --------- | ------ | ------- | ----------------- | --------- | ----- |
-| [![Documentation](https://img.shields.io/badge/GitBook-Docu-lightblue)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/) | [![Test System](https://github.com/Sulstice/global-chem/actions/workflows/continous_integration.yml/badge.svg)](https://github.com/Sulstice/global-chem/actions/workflows/continous_integration.yml) | [![PyPI version](https://badge.fury.io/py/global-chem.svg)](https://badge.fury.io/py/global-chem) | [![saythanks](https://img.shields.io/badge/RDKit-100%25-fg49b4.svg)](https://www.rdkit.org/) | [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) | [![Downloads](https://pepy.tech/badge/global-chem)](https://pepy.tech/project/global-chem) | 
-| [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://www.chemicalgraphtheory.com) | [![Coverage Status](https://coveralls.io/repos/github/Sulstice/global-chem/badge.svg?branch=master)](https://coveralls.io/github/Sulstice/global-chem?branch=master) | [![DOI](https://zenodo.org/badge/259046250.svg)](https://zenodo.org/badge/latestdoi/259046250) | [![saythanks](https://img.shields.io/badge/PartialSMILES-85.7%25-fg49b4.svg)](https://github.com/baoilleach/partialsmiles) | [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem?ref=badge_shield) | ![Repo Size](https://img.shields.io/github/repo-size/Sulstice/global-chem) |
-| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HaDvAYpaX0_2Eqx1NSl5uJTRkE_0na-L?usp=sharing) | [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/) | [![Maturity badge - level 2](https://img.shields.io/badge/Maturity-Level%202%20--%20First%20Release-yellowgreen.svg)](https://github.com/tophat/getting-started/blob/master/scorecard.md) | [![saythanks](https://img.shields.io/badge/PySMILES-99.8%25-fg49b4.svg)](https://github.com/pckroon/pysmiles)  | | [![Man Hours](https://img.shields.io/endpoint?url=https%3A%2F%2Fmh.jessemillar.com%2Fhours%3Frepo%3Dhttps%3A%2F%2Fgithub.com%2FSulstice%2Fglobal-chem)](https://jessemillar.com/r/man-hours) |
-| ![Python](https://img.shields.io/badge/python-3.6-blue.svg) | [![publish](https://github.com/Sulstice/global-chem/actions/workflows/publish_package.yml/badge.svg)](https://github.com/Sulstice/global-chem/actions/workflows/publish_package.yml) | | [![saythanks](https://img.shields.io/badge/MolVS-98.5%25-lm89b5.svg)](https://github.com/mcs07/MolVS) | |
-| | [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/Sulstice/global-chem/master.svg)](https://results.pre-commit.ci/latest/github/Sulstice/global-chem/master) | | [![saythanks](https://img.shields.io/badge/DeepSMILES-99.25%25-lm89b5.svg)](https://github.com/baoilleach/deepsmiles) | |
-| | | | [![saythanks](https://img.shields.io/badge/SELFIES-100%25-lm89b5.svg)](https://github.com/aspuru-guzik-group/selfies) | |
+#### - Getting Started
 
-#### GlobalChemExtensions
+|[![Documentation](https://img.shields.io/badge/GitBook-Docu-lightblue)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/) | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HaDvAYpaX0_2Eqx1NSl5uJTRkE_0na-L?usp=sharing) | [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://www.chemicalgraphtheory.com)| [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) |
+|-|-|-|-|
 
-| Release   | Licensing | Stats |
-| --------- | --------- | ----- |
+#### - Validation 
+
+|[![saythanks](https://img.shields.io/badge/RDKit-100%25-fg49b4.svg)](https://www.rdkit.org/)| [![saythanks](https://img.shields.io/badge/PartialSMILES-85.7%25-fg49b4.svg)](https://github.com/baoilleach/partialsmiles) | [![saythanks](https://img.shields.io/badge/DeepSMILES-99.25%25-lm89b5.svg)](https://github.com/baoilleach/deepsmiles) | [![saythanks](https://img.shields.io/badge/SELFIES-100%25-lm89b5.svg)](https://github.com/aspuru-guzik-group/selfies) | [![saythanks](https://img.shields.io/badge/MolVS-98.5%25-lm89b5.svg)](https://github.com/mcs07/MolVS) | [![saythanks](https://img.shields.io/badge/PySMILES-99.8%25-fg49b4.svg)](https://github.com/pckroon/pysmiles) |
+|-|-|-|-|-|-|
+
+#### - Statistics
+
+| [![Downloads](https://pepy.tech/badge/global-chem)](https://pepy.tech/project/global-chem) |![visitor badge](https://visitor-badge.glitch.me/badge?page_id=sulstice.global-chem) | [![Man Hours](https://img.shields.io/endpoint?url=https%3A%2F%2Fmh.jessemillar.com%2Fhours%3Frepo%3Dhttps%3A%2F%2Fgithub.com%2FSulstice%2Fglobal-chem)](https://jessemillar.com/r/man-hours) | ![Repo Size](https://img.shields.io/github/repo-size/Sulstice/global-chem)|
+|-|-|-|-|
+
+#### - Github Actions
+
+|[![Test System](https://github.com/Sulstice/global-chem/actions/workflows/continous_integration.yml/badge.svg)](https://github.com/Sulstice/global-chem/actions/workflows/continous_integration.yml)|[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/Sulstice/global-chem/master.svg)](https://results.pre-commit.ci/latest/github/Sulstice/global-chem/master)| [![publish](https://github.com/Sulstice/global-chem/actions/workflows/publish_package.yml/badge.svg)](https://github.com/Sulstice/global-chem/actions/workflows/publish_package.yml) |
+|-|-|-|
+
+#### - Build Information
+
+| [![PyPI version](https://badge.fury.io/py/global-chem.svg)](https://badge.fury.io/py/global-chem) | [![Coverage Status](https://coveralls.io/repos/github/Sulstice/global-chem/badge.svg?branch=master)](https://coveralls.io/github/Sulstice/global-chem?branch=master) | ![Repo Size](https://img.shields.io/github/repo-size/Sulstice/global-chem)| [![DOI](https://zenodo.org/badge/259046250.svg)](https://zenodo.org/badge/latestdoi/259046250) | [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem?ref=badge_shield) | [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/) | [![Maturity badge - level 2](https://img.shields.io/badge/Maturity-Level%202%20--%20First%20Release-yellowgreen.svg)](https://github.com/tophat/getting-started/blob/master/scorecard.md) |
+|-|-|-|-|-|-|-|
+
+#### - GlobalChemExtensions
+
 | [![PyPI version](https://badge.fury.io/py/global-chem-extensions.svg)](https://badge.fury.io/py/global-chem-extensions) | [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) | [![Downloads](https://pepy.tech/badge/global-chem-extensions)](https://pepy.tech/project/global-chem-extensions) |
+|-|-|-|
 
-Different extensions demos can be found below, or download them all. Note the PDF extension is the most dependency heavy. 
+### Demo Reel
 
-| Extension | Demo |
-| --------- | ---- |
-| extensions | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/193UH36RrKLyKZGPzN4AjslgoRZp0Qdzh?usp=sharing)
-| bioinformatics | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1dDB922p-CZC5ADZcI6YgBFGGhq_j4HDr?usp=sharing)
-| validation | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1OrskD75wWaxLIk-wZXC4_5_vl98UNlu8?usp=sharing)
-| machine_learning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1SPAxEL5PTOZM5ob4-Zv41eVHZ0V02uYe?usp=sharing)
-| pdf | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qJPEmPhUKlbbcoBR3nkD8L-BJoRKAIzq?usp=sharing)
+| Extension              | Demo |
+| ---------------------- | ---- |
+| forcefields            |      |
+| bioinformatics         |      |
+| cheminformatics        |      |
+| quantum_chemistry      | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1BGLQphP1IMLndeyavHM_6_qXQJI_7gFU?usp=sharing) |
+| development_operations |      |
+
 
 Installation 
 ============
@@ -48,7 +64,7 @@ GlobalChem is going to be distribute via PyPi and as the tree and it's extension
 making it accessible to all regardless of what you use. Alternatively, you could have a glance at the source code and copy/paste
 it yourself.
 
-```
+```bash
 
 pip install global-chem
 
@@ -57,17 +73,15 @@ pip install global-chem
 If you want to install the extensions package for extra functionality:
 
 
-```
+```bash
 
-pip install global-chem[extensions]
-
-```
-
-If you want the full suite of features:
-
-```
-
-pip install global-chem[all]
+pip install 'global-chem[graphing]'
+pip install 'global-chem[forcefields]'
+pip install 'global-chem[bioinformatics]'
+pip install 'global-chem[cheminformaitcs]'
+pip install 'global-chem[quantum_chemistry]'
+pip install 'global-chem[development_operations]'
+pip install 'global-chem[all]'
 
 ```
 
@@ -76,7 +90,7 @@ QuickStart
 
 #### GlobalChem
 
-```
+```python
 
 from global_chem import GlobalChem
 
@@ -90,7 +104,7 @@ print (smiles_list)
 
 #### GlobalChemExtensions
 
-```
+```python
 
 from global_chem_extensions import GlobalChemExtensions
 
@@ -126,59 +140,17 @@ The Graph Network (GN)s comes with a couple of rules that for now make the softw
 The Deep Graph Network (DGN)s comes also with a couple of rules to make the implementation easier:
 
 - There must be a root node of 1 which marks as your "input" node. 
-- When adding a layer all nodes will be added to all the previous layers as children. (Folk can use the remove node feature to perform dropouts)
+- When adding a layer all nodes will be added to all the previous layers as children. (Folk can use the remove node feature to perform dropouts).
 
 ### Knowledge Graph
 
 
 Just with no dependencies, intialize the class and there you go! All the common and rare groups of the world
-at your disposal 
+at your disposal. 
 
-```
-
-gc = GlobalChem()
-gc.print_globalchem_network()
-
-                                ┌solvents─common_organic_solvents
-             ┌organic_synthesis─└protecting_groups─amino_acid_protecting_groups
-             │          ┌polymers─common_monomer_repeating_units
-             ├materials─└clay─montmorillonite_adsorption
-             │                            ┌privileged_kinase_inhibtors
-             │                            ├privileged_scaffolds
-             ├proteins─kinases─┌scaffolds─├iupac_blue_book_substituents
-             │                 │          └common_r_group_replacements
-             │                 └braf─inhibitors
-             │              ┌vitamins
-             │              ├open_smiles
-             ├miscellaneous─├amino_acids
-             │              └regex_patterns
-global_chem──├environment─emerging_perfluoroalkyls
-             │          ┌schedule_one
-             │          ├schedule_four
-             │          ├schedule_five
-             ├narcotics─├pihkal
-             │          ├schedule_two
-             │          └schedule_three
-             ├interstellar_space
-             │                    ┌cannabinoids
-             │                    │         ┌electrophillic_warheads_for_kinases
-             │                    ├warheads─└common_warheads_covalent_inhibitors
-             └medicinal_chemistry─│      ┌phase_2_hetereocyclic_rings
-                                  └rings─├iupac_blue_book_rings
-                                         └rings_in_drugs
-                                         
-
-```
-
-### Sul's Selected List
-
-
-This will be my own personal list of unique and interesting compounds chosen for forcefield parametirization and my chosen
-highlighted reasons for doing so for and understanding how to use the network for casual inference. 
-
-```
-
-```
+<p align="center">
+  <img width="850" height="650" src="images/figures/figure_1_new.png">
+</p>
 
 ### Nodes Contributors
 
@@ -186,42 +158,38 @@ highlighted reasons for doing so for and understanding how to use the network fo
 Please follow the node contribution guidelines if you would like to elect your own or someone elses. 
 
 ```
-    __NODES__ = {
-        'global_chem': Node,
-        'emerging_perfluoroalkyls': EmergingPerFluoroAlkyls,                      # Asuka Orr & Suliman Sharif
-        'montmorillonite_adsorption': MontmorilloniteAdsorption,                  # Asuka Orr & Suliman Sharif
-        'common_monomer_repeating_units': CommonMonomerRepeatingUnits,            # Suliman Sharif
-        'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,    # Ruibin Liu & Suliman Sharif
-        'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors,  # Shaoqi Zhao & Suliman Sharif
-        'rings_in_drugs': RingsInDrugs,                                           # Alexander Mackerell & Suliman Sharif
-        'iupac_blue_book_rings': IUPACBlueBookRings,                              # Suliman Sharif
-        'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,                  # Suliman Sharif
-        'privileged_scaffolds': PrivilegedScaffolds,                              # Suliman Sharif
-        'iupac_blue_book': IUPACBlueBook,                                         # Suliman Sharif
-        'common_r_group_replacements': CommonRGroupReplacements,                  # Sunhwan Jo & Suliman Sharif
-        'braf_inhibitors': BRAFInhibitors,                                        # Aarion Romany
-        'privileged_kinase_inhibitors': PrivilegedKinaseInhibitors,               # Suliman Sharif
-        'common_organic_solvents': CommonOrganicSolvents,                         # Suliman Sharif
-        'amino_acid_protecting_groups': AminoAcidProtectingGroups,                # Aziza Frank & Suliman Sharif
-        'schedule_one': ScheduleOne,                                              # Suliman Sharif
-        'schedule_two': ScheduleTwo,                                              # Suliman Sharif
-        'schedule_three': ScheduleThree,                                          # Suliman Sharif
-        'schedule_four': ScheduleFour,                                            # Suliman Sharif
-        'schedule_five': ScheduleFive,                                            # Suliman Sharif
-        'interstellar_space': InterstellarSpace,                                  # Suliman Sharif
-        'vitamins': Vitamins,                                                     # Suliman Sharif
-        'open_smiles': OpenSmiles,                                                # Suliman Sharif
-        'amino_acids': AminoAcids,                                                # Suliman Sharif
-        'pihkal': Pihkal,                                                         # Suliman Sharif
-        'nickel_ligands': NickelBidendatePhosphineLigands,                        # Suliman Sharif
-        'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                       # Suliman Sharif
-        'common_regex_patterns': CommonRegexPatterns,                             # Chris Burke & Suliman Sharif
-    }
-
+'global_chem': Node,
+'emerging_perfluoroalkyls': EmergingPerFluoroAlkyls,                      # Asuka Orr & Suliman Sharif
+'montmorillonite_adsorption': MontmorilloniteAdsorption,                  # Asuka Orr & Suliman Sharif
+'common_monomer_repeating_units': CommonMonomerRepeatingUnits,            # Suliman Sharif
+'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,    # Ruibin Liu & Suliman Sharif
+'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors,  # Shaoqi Zhao & Suliman Sharif
+'rings_in_drugs': RingsInDrugs,                                           # Alexander Mackerell & Suliman Sharif
+'iupac_blue_book_rings': IUPACBlueBookRings,                              # Suliman Sharif
+'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,                  # Suliman Sharif
+'privileged_scaffolds': PrivilegedScaffolds,                              # Suliman Sharif
+'iupac_blue_book': IUPACBlueBook,                                         # Suliman Sharif
+'common_r_group_replacements': CommonRGroupReplacements,                  # Sunhwan Jo & Suliman Sharif
+'braf_inhibitors': BRAFInhibitors,                                        # Aarion Romany
+'privileged_kinase_inhibitors': PrivilegedKinaseInhibitors,               # Suliman Sharif
+'common_organic_solvents': CommonOrganicSolvents,                         # Suliman Sharif
+'amino_acid_protecting_groups': AminoAcidProtectingGroups,                # Aziza Frank & Suliman Sharif
+'schedule_one': ScheduleOne,                                              # Suliman Sharif
+'schedule_two': ScheduleTwo,                                              # Suliman Sharif
+'schedule_three': ScheduleThree,                                          # Suliman Sharif
+'schedule_four': ScheduleFour,                                            # Suliman Sharif
+'schedule_five': ScheduleFive,                                            # Suliman Sharif
+'interstellar_space': InterstellarSpace,                                  # Suliman Sharif
+'vitamins': Vitamins,                                                     # Suliman Sharif
+'open_smiles': OpenSmiles,                                                # Suliman Sharif
+'amino_acids': AminoAcids,                                                # Suliman Sharif
+'pihkal': Pihkal,                                                         # Suliman Sharif
+'nickel_ligands': NickelBidendatePhosphineLigands,                        # Suliman Sharif
+'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                       # Suliman Sharif
+'common_regex_patterns': CommonRegexPatterns,                             # Chris Burke & Suliman Sharif
 ```
 
-### Nodes List
-
+<details><summary><h3>Node List</h1><br/></summary>
 
 | Chemical List                       | # of Entries | References                                                                                                                                                                                                                                                                                                           |
 |-------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -251,25 +219,9 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Pihkal                              | 179          | Shulgin, Alexander T., and Ann Shulgin. Pihkal: A Chemical Love Story. 1. ed., 8. print, Transform, 2010.                                                                                                                                                                                                            |
 | Excipients Cimetidine & Acyclovir   | 14           | Vaithianathan, Soundarya, et al. “Effect of Common Excipients on the Oral Drug Absorption of Biopharmaceutics Classification System Class 3 Drugs Cimetidine and Acyclovir.” Journal of Pharmaceutical Sciences, vol. 105, no. 2, Feb. 2016, pp. 996–1005. PubMed, https://doi.org/10.1002/jps.24643.                |
 | Nickel Bidendate Phosphine Ligands  | N/A          | Clevenger, Andrew L., et al. “Trends in the Usage of Bidentate Phosphines as Ligands in Nickel Catalysis.” Chemical Reviews, vol. 120, no. 13, July 2020, pp. 6124–96. DOI.org (Crossref), https://doi.org/10.1021/acs.chemrev.9b00682.                                                                              |
-| Common Regex Patterns               | 1            |                                                                                                                                                                                                                                                               
+| Common Regex Patterns               | 1            |                                                                                                     
 
-Adding Your Own Chemical List
-=============================
-
-If you would like to add your paper or a list you constructed to the chemical knowledge graph then please "File an Issue" with your chemical list 
-and perhaps a suggestion of where to add it or you can leave for up to us to decide. The format of the chemical list can
-be something like this, and we the community will elect it into the graph and add a couple of representative compounds to the forcefield:
-
-```
-
-smiles = {
-   '3,5-dimethoxyphenylisoproxycarbonyl': 'COC1=CC(C(C)(OC=O)C)=CC(OC)=C1',
-   '2-(4-biphenyl)isopropoxycarbonyl': 'CC(C)(OC=O)C(C=C1)=CC=C1C2=CC=CC=C2',
-   '2-nitrophenylsulfenyl': 'SC1=CC=CC=C1[N+]([O-])=O',
-   'boc': 'O=COC(C)(C)C',
-}  
-
-```                                            
+</details>                            
 
 GlobalChemExtensions
 ====================
@@ -280,8 +232,7 @@ A Variety of Tools are available for you to browse and analyze data and with the
   <img width="800" height="600" src="https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_10.png">
 </p>
 
-Extension List
-==============
+<details><summary><h3>Extension List</h1><br/></summary>
 
 | Extension                       | Description                                                                                                             | Feature Import   |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------|------------------|
@@ -303,6 +254,8 @@ Extension List
 | OneHot Encoding                 | GlobalChem has it's own one hot encoder and decoder based on the common lists for Machine Learning                      | extensions       |
 | SMARTS Pattern Identifier       | GlobalChem connects to the SMARTS Plus and can offer visualization into different SMARTS components                     | extensions       |
 
+</details>
+
 Open Source Software Compliance
 ===============================
 
@@ -317,7 +270,7 @@ and appropiately version controlled by maintainers of the repository and open so
 `GlobalChem`'s purposes are still unknown as it enters open source deployment. We have built extended functions that live in
 a seperate package `GlobalChemExtensions` that do depend on `GlobalChem`. Since each version is packaged appropiately, if 
 reliance on a version is a need then it's software is available on `Github` and `PyPi`. A Standard Operating Procedure (SOP)
-can be filed submitted from the extensions utility documentation maintained on `Gitbook`
+can be filed submitted from the extensions utility documentation maintained on `Gitbook`.
 
 - **Validation:** `GlobalChem` follows Good Automated Manufacturing Practice (GAMP) Category 3 which is "software that is used as installed"
 and potentially "configurable". `GlobalChem` testing comes from within, the documentation serves as the ultimate test
@@ -366,16 +319,7 @@ over traditional. For example: 'yl' to mark site points for polymer connections 
 
 - In the case of radicals, some SMILES were adjusted to remove the radical chemical feature as they serve as connection points. However in some cases the radical component was maintained, especially in the case of IUPAC blue book common substituents.
 
-- SMARTS strings were adapted from the SMILES using RDKit (4)
-
-Genesis
-=======
-
-GlobalChem was created because I noticed I was using the same variable across multiple scripts and figure it would be useful
-for folk to have.
-
-- Lead Developer [Suliman sharif](http://sulstice.github.io/)
-- Artwork [Elena Chow](http://www.chowelena.com/)
+- SMARTS strings were adapted from the SMILES using RDKit (4).
 
 * * * * *
 
