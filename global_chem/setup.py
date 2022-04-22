@@ -22,7 +22,7 @@ TEST_REQUIREMENTS = [
 ]
 
 if os.path.exists('README.md'):
-    long_description = open('README.md').read()
+    long_description = open('README.md', 'r', encoding='utf-8').read()
 else:
     long_description = 'GlobalChem - Your Chemical Knowledge Graph for Chemistry'
 
