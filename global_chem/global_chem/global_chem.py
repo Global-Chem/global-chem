@@ -1040,6 +1040,7 @@ class GlobalChem(object):
 
         path_objects = []
         absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
+        print(absolute_file_path)
 
         for dirpath, dirnames, filenames in os.walk(absolute_file_path):
 
@@ -1052,6 +1053,7 @@ class GlobalChem(object):
 
                     object_path = os.path.join(''.join(dirpath.rsplit(absolute_file_path)), file).split('/')
                     path_objects.append(object_path)
+                    print(object_path)
 
         # Add the objects recursively
 
@@ -1086,6 +1088,8 @@ class GlobalChem(object):
                     if not parent:
 
                         _PRINT_NODE_KEY[ parent ] = PrintNode(child, _PRINT_NODE_KEY[parent])
+
+        print(_PRINT_NODE_KEY)
 
         print(PrintTreeUtilities.printTrees(_PRINT_NODE_KEY['global_chem']))
 
