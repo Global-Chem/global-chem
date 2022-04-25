@@ -87,7 +87,7 @@ pip install 'global-chem[all]'
 QuickStart
 ==========
 
-Here we load the cheminformatics package and the `GlobalChem` tree. We extract SMILES from the popular book, Pihkal, and perform cheminformatic principal component analysis on the chemical list.
+Here we load the `global-chem[cheminformatics]` extensions package and the `GlobalChem` tree. We extract SMILES from the popular book, Pihkal, and perform cheminformatic principal component analysis on the chemical list.
 
 ```python
 
