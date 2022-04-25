@@ -50,7 +50,7 @@ from global_chem.proteins.kinases.scaffolds.privileged_kinase_inhibitors import 
 from global_chem.organic_synthesis.solvents.common_organic_solvents import CommonOrganicSolvents
 from global_chem.organic_synthesis.protecting_groups.amino_acid_protecting_groups import AminoAcidProtectingGroups
 from global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands import NickelBidendatePhosphineLigands
-from global_chem.global_chem.organic_synthesis.named_reactions_in_organic_synthesis.named_reactions_in_organic_synthesis import NamedReactionsInOrganicSynthesis
+from global_chem.organic_synthesis.named_reactions_in_organic_synthesis.named_reactions_in_organic_synthesis import NamedReactionsInOrganicSynthesis
 
 # Narcotics
 
@@ -1140,6 +1140,13 @@ class GlobalChem(object):
             IUPAC, SMILES, NODE NAME, TREE PATH
         '''
 
+        master_category_keys = {
+            'organic_chemistry': ['narcotics', 'organic_synthesis', 'medicinal_chemistry', 'proteins', 'miscellaneous'],
+            'environmental_chemistry': ['environment', 'interstellar_space'],
+            'materials_chemistry': ['materials'],
+            'pharmaceutical_sciences': ['formulation']
+        }
+
         out_file = open(out_file, 'w')
 
         all_nodes = self.get_all_nodes()
@@ -1149,8 +1156,15 @@ class GlobalChem(object):
             node_name = node.name
             tree_path = node.__module__
 
+            category = ''
+            sub_category = tree_path.split('.')[1]
+
+            for key, value in master_category_keys.items():
+                if sub_category in value:
+                    category = key
+
             for key, value in node.get_smiles().items():
 
-                out_file.write(f'{key}\t{value}\t{node_name}\t{tree_path}\n')
+                out_file.write(f'{key}\t{value}\t{node_name}\t{category}\t{tree_path}\n')
 
         out_file.close()
