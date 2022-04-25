@@ -31,9 +31,15 @@ class DevelopmentOperations(object):
 
         Check the Status on Databases
 
+        Returns:
+            statuses (Dict): Dictionary key of each of the statuses of the databases - error codes
+            faliures (Dict): Dictionary key of the each of the faliures of the databases -  error codes
+
         '''
 
         from global_chem_extensions.development_operations.applications.database_monitor import DatabaseMonitor
 
         database_monitor = DatabaseMonitor()
-        database_monitor.heartbeat()
+        statuses, failures = database_monitor.heartbeat()
+
+        return statuses, failures
