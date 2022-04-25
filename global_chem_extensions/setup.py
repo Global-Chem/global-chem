@@ -36,7 +36,7 @@ else:
 # ----
 setup(
     name="global_chem_extensions",
-    version="0.9.9.9.9",
+    version="0.9.9.9.9.1",
     packages=find_packages(),
     license='MPL 2.0',
     author="Suliman Sharif",
@@ -55,7 +55,10 @@ setup(
         ],
         'development_operations': [''],
         'quantum_chemistry': ['moly', 'kaleido', 'pyyaml==3.13'],
-        'forcefields': ['rdkit-pypi'],
+        'forcefields': [
+            'rdkit-pypi', 'partialsmiles', 'pysmiles', 'deepsmiles',
+            'selfies', 'molvs'
+        ],
         'graphing': ['plotly']
 
     },
