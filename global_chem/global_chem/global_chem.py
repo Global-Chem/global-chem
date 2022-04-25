@@ -232,18 +232,17 @@ class PrintTreeUtilities(object):
             return lst
         for i in range(len(lst)):
             if i == startingFanIndex:
-                lst[i] = f"┌{lst[i]}"
+                lst[i] = "┌%s" % lst[i]
             elif i == endingFanIndex:
-                lst[i] = f"└{lst[i]}"
+                lst[i] = "└%s" % lst[i]
             elif i > startingFanIndex and i < endingFanIndex:
                 if lst[i].startswith(" "):
-                    lst[i] = f"│{lst[i]}"
+                    lst[i] = "│%s" % lst[i]
                 else:
-                    lst[i] = f"├{lst[i]}"
+                    lst[i] = "├%s" % lst[i]
             else:
-                lst[i] = f" {lst[i]}"
+                lst[i] = "%s" % lst[i]
 
-            lst[i].encode(sys.stdout.encoding, errors='replace')
         return lst
 
     @staticmethod
@@ -255,11 +254,11 @@ class PrintTreeUtilities(object):
         for i in range(len(lst)):
             # add label to the middle of the fan
             if i == len(lst) // 2:
-                lst[i] = f"{name}─{lst[i]}"
+                lst[i] = ("%s─%s" % (name, lst[i]))
             else:
                 # push the other labels out with indentation
                 indent = " " * len(name)
-                lst[i] = f"{indent} {lst[i]}"
+                lst[i] = ("%s─%s" % (indent, lst[i]))
         return lst
 
     @staticmethod
