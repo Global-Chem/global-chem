@@ -22,7 +22,7 @@ class NamedReactionsInOrganicSynthesis(object):
         'hofmann_elimination': 'CCC(C)N.CCC=C',
         'wiallmson_ether_synthesis': 'CO.COC',
         'cannizzaro_reaction': 'CC=O.CCO',
-        'wurtz_coulping': 'CCl.CC',
+        'wurtz_coulping': 'CBr.CC',
         'kolbe-schmitt_reaction': 'OC2=CC=CC=C2.OC1=C(C(O)=O)C=CC=C1',
         'pinacol_and_semipinacol_rearrangement': '',
         'acyloin_condensation': '',
