@@ -48,8 +48,8 @@ Overview
 
 ### Demo Reel
 
-| Extension              | Demo | Tutorials  | |
-| ---------------------- | ---- | ---------- |-|
+| Extension              | Demo | Application Tutorials  | |
+| ---------------------- | ---- | ---------------------- |-|
 | forcefields            | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hW0K6V5zPDFdZvFkYarbOr9wRoof2n4s?usp=sharing)  | Use CGenFF For Atom Type Similarity | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1BTMuE4M6olG2KCrmZJdmtDEKvPGQ0_np?usp=sharing) |
 | bioinformatics         |      |            | |
 | cheminformatics        |      |            | |
