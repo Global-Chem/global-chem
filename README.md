@@ -48,12 +48,12 @@ Overview
 
 ### Demo Reel
 
-| Extension              | Demo |
-| ---------------------- | ---- |
-| forcefields            |      |
-| bioinformatics         |      |
-| cheminformatics        |      |
-| quantum_chemistry      | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1BGLQphP1IMLndeyavHM_6_qXQJI_7gFU?usp=sharing) |
+| Extension              | Demo | Tutorial | |
+| ---------------------- | ---- | -------- |-|
+| forcefields            |      |          | |
+| bioinformatics         |      |          | |
+| cheminformatics        |      |          | |
+| quantum_chemistry      | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1BGLQphP1IMLndeyavHM_6_qXQJI_7gFU?usp=sharing) | Theory and basis sets with respect to hamiltonian | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11JGsen912TmyR5Dds-Opon5cRkrtVoT7?usp=sharing) |
 | development_operations |      |
 
 
