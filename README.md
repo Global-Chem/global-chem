@@ -87,40 +87,26 @@ pip install 'global-chem[all]'
 QuickStart
 ==========
 
-#### GlobalChem
+#### Importing
 
 ```python
 
 from global_chem import GlobalChem
-
-gc = GlobalChem()
-
-gc.build_global_chem_network(print_output=False, debugger=False)
-smiles_list = list(gc.get_node_smiles('pihkal').values())
-
-print (smiles_list)
-```
-
-#### GlobalChemExtensions
-
-```python
-
 from global_chem_extensions import GlobalChemExtensions
 
-gce = GlobalChemExtensions()
+gc = GlobalChem()
+gc_cheminfo = GlobalChemExtensions().cheminformatics()
 
-global_chem_molecule = gce.initialize_globalchem_molecule(
-    smiles_list[0],
-    # stream_file='cgenff.str',
-    # frcmod_file='gaff2.frcmod',
-)
+gc.build_global_chem_network()
+smiles_list = list(gc.get_node_smiles('pihkal').values())
 
-global_chem_molecule.determine_name()
+gcm = gc_cheminfo.initialize_globalchem_molecule('C1=CC=CC=C1')
+gcm.determine_name()
 
-name = global_chem_molecule.name
-attributes = global_chem_molecule.get_attributes()
+print (f"SMILES: {smiles_list[0]}")
+print (f"NAME: {gcm.name}")
 
-gce.node_pca_analysis(smiles_list, save_file=False)
+gc_cheminfo.node_pca_analysis(smiles_list)
 
 ```
 
