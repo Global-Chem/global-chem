@@ -50,6 +50,7 @@ from global_chem.proteins.kinases.scaffolds.privileged_kinase_inhibitors import 
 from global_chem.organic_synthesis.solvents.common_organic_solvents import CommonOrganicSolvents
 from global_chem.organic_synthesis.protecting_groups.amino_acid_protecting_groups import AminoAcidProtectingGroups
 from global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands import NickelBidendatePhosphineLigands
+from global_chem.global_chem.organic_synthesis.named_reactions_in_organic_synthesis.named_reactions_in_organic_synthesis import NamedReactionsInOrganicSynthesis
 
 # Narcotics
 
@@ -312,13 +313,13 @@ class GlobalChem(object):
         'montmorillonite_adsorption': MontmorilloniteAdsorption,                 # Asuka Orr & Suliman Sharif
         'common_monomer_repeating_units': CommonMonomerRepeatingUnits,           # Suliman Sharif
         'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,   # Ruibin Liu & Suliman Sharif
-        'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors,  # Shaoqi Zhao & Suliman Sharif
+        'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors, # Shaoqi Zhao & Suliman Sharif
         'rings_in_drugs': RingsInDrugs,                                          # Alexander Mackerell & Suliman Sharif
         'iupac_blue_book_rings': IUPACBlueBookRings,                             # Suliman Sharif
         'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,                 # Suliman Sharif
         'privileged_scaffolds': PrivilegedScaffolds,                             # Suliman Sharif
         'iupac_blue_book': IUPACBlueBook,                                        # Suliman Sharif
-        'common_r_group_replacements': CommonRGroupReplacements,                  # Sunhwan Jo & Suliman Sharif
+        'common_r_group_replacements': CommonRGroupReplacements,                 # Sunhwan Jo & Suliman Sharif
         'braf_inhibitors': BRAFInhibitors,                                       # Aarion Romany
         'privileged_kinase_inhibitors': PrivilegedKinaseInhibitors,              # Suliman Sharif
         'common_organic_solvents': CommonOrganicSolvents,                        # Suliman Sharif
@@ -336,6 +337,7 @@ class GlobalChem(object):
         'nickel_ligands': NickelBidendatePhosphineLigands,                       # Suliman Sharif
         'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                      # Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                            # Chris Burke & Suliman Sharif
+        'named_reactions_in_organic_synthesis': NamedReactionsInOrganicSynthesis # Aziza Frank & Suliman Sharif
     }
 
     __INCOMPLETE_NODES = {
