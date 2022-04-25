@@ -7,6 +7,7 @@
 # Base Imports
 
 import os
+import sys
 import os.path
 import pprint
 
@@ -241,6 +242,8 @@ class PrintTreeUtilities(object):
                     lst[i] = f"├{lst[i]}"
             else:
                 lst[i] = f" {lst[i]}"
+
+            lst[i].encode(sys.stdout.encoding, errors='replace')
         return lst
 
     @staticmethod
