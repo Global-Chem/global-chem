@@ -48,7 +48,7 @@ Overview
 
 ### Demo Reel
 
-| Extension              | Demo | Application Tutorials  | |
+| Extension              | Introduction | Advanced Usage  | |
 | ---------------------- | ---- | ---------------------- |-|
 | forcefields            | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hW0K6V5zPDFdZvFkYarbOr9wRoof2n4s?usp=sharing)  | CGenFF Molecule Loader and Atom Type Similarity | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1OEm1dACd_wkw_JQITemy18pgfKdE4XlX?usp=sharing) |
 | bioinformatics         | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1sCNw9FIcFfTEgmrdokADXgJGnsPEOGbX?usp=sharing)  | Use the Bostrom Algorithm to Filter Ligands By PDB  | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1a3Ys1rpqFzxBz95DQwJVHfunBxpywP7f?usp=sharing) |
