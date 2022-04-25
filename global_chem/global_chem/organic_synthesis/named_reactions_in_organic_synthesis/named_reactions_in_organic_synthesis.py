@@ -26,7 +26,7 @@ class NamedReactionsInOrganicSynthesis(object):
         'kolbe-schmitt_reaction': 'OC2=CC=CC=C2.OC1=C(C(O)=O)C=CC=C1',
         'pinacol_rearrangement': 'OC(C)(C)C(O)(C)C.O=C(C)C(C)(C)C',
         'semipinacol_rearrangement': 'OC(C)(C)C([F,Cl,Br,I])(C)C.O=C(C)C(C)(C)C',
-        'acyloin_condensation': '',
+        'acyloin_condensation': 'COC(C)=O.CC(O)C(C)=O',
         'hunsdiecker_reaction_borodin_reaction': '',
         'perkin_reaction': '',
         'glaser_coupling_reaction': '',
