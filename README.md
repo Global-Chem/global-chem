@@ -87,7 +87,7 @@ pip install 'global-chem[all]'
 QuickStart
 ==========
 
-#### Importing
+Here we load the cheminformatics package and the `GlobalChem` tree. We extract SMILES from the popular book, Pihkal, and perform cheminformatic principal component analysis on the chemical list.
 
 ```python
 
@@ -100,11 +100,7 @@ gc_cheminfo = GlobalChemExtensions().cheminformatics()
 gc.build_global_chem_network()
 smiles_list = list(gc.get_node_smiles('pihkal').values())
 
-gcm = gc_cheminfo.initialize_globalchem_molecule('C1=CC=CC=C1')
-gcm.determine_name()
-
 print (f"SMILES: {smiles_list[0]}")
-print (f"NAME: {gcm.name}")
 
 gc_cheminfo.node_pca_analysis(smiles_list)
 
