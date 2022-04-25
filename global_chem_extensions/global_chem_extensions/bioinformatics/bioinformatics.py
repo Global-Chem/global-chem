@@ -61,7 +61,7 @@ class Bioinformatics(object):
             name (String): Name of the DNA instance
         '''
 
-        from global_chem_extensions.bioinformatics.applications.protein import GlobalChemDNA
+        from global_chem_extensions.bioinformatics.applications.dna import GlobalChemDNA
 
         global_chem_dna = GlobalChemDNA(
             dna_sequence = dna_sequence,
@@ -83,7 +83,7 @@ class Bioinformatics(object):
             name (String): Name of the DNA instance
         '''
 
-        from global_chem_extensions.bioinformatics.applications.protein import GlobalChemRNA
+        from global_chem_extensions.bioinformatics.applications.rna import GlobalChemRNA
 
         global_chem_rna = GlobalChemRNA(
             rna_sequence = rna_sequence,

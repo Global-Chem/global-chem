@@ -7,6 +7,7 @@
 # Base Imports
 
 import os
+import sys
 import os.path
 import pprint
 
@@ -50,6 +51,7 @@ from global_chem.proteins.kinases.scaffolds.privileged_kinase_inhibitors import 
 from global_chem.organic_synthesis.solvents.common_organic_solvents import CommonOrganicSolvents
 from global_chem.organic_synthesis.protecting_groups.amino_acid_protecting_groups import AminoAcidProtectingGroups
 from global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands import NickelBidendatePhosphineLigands
+from global_chem.organic_synthesis.named_reactions_in_organic_synthesis.named_reactions_in_organic_synthesis import NamedReactionsInOrganicSynthesis
 
 # Narcotics
 
@@ -230,16 +232,17 @@ class PrintTreeUtilities(object):
             return lst
         for i in range(len(lst)):
             if i == startingFanIndex:
-                lst[i] = f"┌{lst[i]}"
+                lst[i] = "┌%s" % lst[i]
             elif i == endingFanIndex:
-                lst[i] = f"└{lst[i]}"
+                lst[i] = "└%s" % lst[i]
             elif i > startingFanIndex and i < endingFanIndex:
                 if lst[i].startswith(" "):
-                    lst[i] = f"│{lst[i]}"
+                    lst[i] = "│%s" % lst[i]
                 else:
-                    lst[i] = f"├{lst[i]}"
+                    lst[i] = "├%s" % lst[i]
             else:
-                lst[i] = f" {lst[i]}"
+                lst[i] = "%s" % lst[i]
+
         return lst
 
     @staticmethod
@@ -251,11 +254,11 @@ class PrintTreeUtilities(object):
         for i in range(len(lst)):
             # add label to the middle of the fan
             if i == len(lst) // 2:
-                lst[i] = f"{name}─{lst[i]}"
+                lst[i] = ("%s─%s" % (name, lst[i]))
             else:
                 # push the other labels out with indentation
                 indent = " " * len(name)
-                lst[i] = f"{indent} {lst[i]}"
+                lst[i] = ("%s─%s" % (indent, lst[i]))
         return lst
 
     @staticmethod
@@ -312,13 +315,13 @@ class GlobalChem(object):
         'montmorillonite_adsorption': MontmorilloniteAdsorption,                 # Asuka Orr & Suliman Sharif
         'common_monomer_repeating_units': CommonMonomerRepeatingUnits,           # Suliman Sharif
         'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,   # Ruibin Liu & Suliman Sharif
-        'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors,  # Shaoqi Zhao & Suliman Sharif
+        'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors, # Shaoqi Zhao & Suliman Sharif
         'rings_in_drugs': RingsInDrugs,                                          # Alexander Mackerell & Suliman Sharif
         'iupac_blue_book_rings': IUPACBlueBookRings,                             # Suliman Sharif
         'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,                 # Suliman Sharif
         'privileged_scaffolds': PrivilegedScaffolds,                             # Suliman Sharif
         'iupac_blue_book': IUPACBlueBook,                                        # Suliman Sharif
-        'common_r_group_replacements': CommonRGroupReplacements,                  # Sunhwan Jo & Suliman Sharif
+        'common_r_group_replacements': CommonRGroupReplacements,                 # Sunhwan Jo & Suliman Sharif
         'braf_inhibitors': BRAFInhibitors,                                       # Aarion Romany
         'privileged_kinase_inhibitors': PrivilegedKinaseInhibitors,              # Suliman Sharif
         'common_organic_solvents': CommonOrganicSolvents,                        # Suliman Sharif
@@ -336,6 +339,7 @@ class GlobalChem(object):
         'nickel_ligands': NickelBidendatePhosphineLigands,                       # Suliman Sharif
         'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                      # Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                            # Chris Burke & Suliman Sharif
+        'named_reactions_in_organic_synthesis': NamedReactionsInOrganicSynthesis # Aziza Frank & Suliman Sharif
     }
 
     __INCOMPLETE_NODES = {
@@ -1040,6 +1044,7 @@ class GlobalChem(object):
 
         path_objects = []
         absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
+        print(absolute_file_path)
 
         for dirpath, dirnames, filenames in os.walk(absolute_file_path):
 
@@ -1052,6 +1057,7 @@ class GlobalChem(object):
 
                     object_path = os.path.join(''.join(dirpath.rsplit(absolute_file_path)), file).split('/')
                     path_objects.append(object_path)
+                    print(object_path)
 
         # Add the objects recursively
 
@@ -1086,6 +1092,8 @@ class GlobalChem(object):
                     if not parent:
 
                         _PRINT_NODE_KEY[ parent ] = PrintNode(child, _PRINT_NODE_KEY[parent])
+
+        print(_PRINT_NODE_KEY)
 
         print(PrintTreeUtilities.printTrees(_PRINT_NODE_KEY['global_chem']))
 
@@ -1134,6 +1142,13 @@ class GlobalChem(object):
             IUPAC, SMILES, NODE NAME, TREE PATH
         '''
 
+        master_category_keys = {
+            'organic_chemistry': ['narcotics', 'organic_synthesis', 'medicinal_chemistry', 'proteins', 'miscellaneous'],
+            'environmental_chemistry': ['environment', 'interstellar_space'],
+            'materials_chemistry': ['materials'],
+            'pharmaceutical_sciences': ['formulation']
+        }
+
         out_file = open(out_file, 'w')
 
         all_nodes = self.get_all_nodes()
@@ -1143,8 +1158,15 @@ class GlobalChem(object):
             node_name = node.name
             tree_path = node.__module__
 
+            category = ''
+            sub_category = tree_path.split('.')[1]
+
+            for key, value in master_category_keys.items():
+                if sub_category in value:
+                    category = key
+
             for key, value in node.get_smiles().items():
 
-                out_file.write(f'{key}\t{value}\t{node_name}\t{tree_path}\n')
+                out_file.write(f'{key}\t{value}\t{node_name}\t{category}\t{tree_path}\n')
 
         out_file.close()
