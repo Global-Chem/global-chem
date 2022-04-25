@@ -46,11 +46,14 @@ class DatabaseMonitor(object):
 
         return urls, names
 
-    def heartbeat(self):
+    def heartbeat(self, verbose=False):
 
         '''
 
         Perform the heartbeat check
+
+        Arguments:
+            verbose (Boolean): if the user wants the verbose flag.
 
         '''
 
@@ -61,16 +64,17 @@ class DatabaseMonitor(object):
 
             url = self.urls[i]
             name = self.names[i]
-            print (name)
+            status_code = ''
 
             try:
                 response = urllib.request.urlopen(url)
                 status_code = response.getcode()
-
-                if '200' == status_code:
-                    successes[name] = 'Up'
+                successes[name] = 'Up'
             except:
                 failures[name] = 'Down'
+
+            if verbose:
+                print ("Server Name: %s, Status Code: %s" % (name, status_code))
 
         return successes, failures
 
