@@ -40,7 +40,7 @@ class NamedReactionsInOrganicSynthesis(object):
         'skraup_and_doebner-miller_reaction': 'NC1=CC=CC=C1.CC2=NC3=CC=CC=C3C=C2',
         'ciamician-dennstedt_rearrangement': 'C1=CNC=C1.[Cl,Br,I]C2=CC=CN=C2',
         'fries-_photo-fries_rearrangement': 'O=C(C)OC1=CC=CC=C1.OC2=CC=C(C(C)=O)C=C2',
-	      'anionic_ortho-fries_rearrangement': 'O=C(C)OC1=CC=CC=C1.O=C(C)C2=C(O)C=CC=C2',
+	'anionic_ortho-fries_rearrangement': 'O=C(C)OC1=CC=CC=C1.O=C(C)C2=C(O)C=CC=C2',
         'hell-volhard-zelinsky_reaction': 'CCC(O)=O.CC([Cl,Br])C(O)=O',
         'hofmann_rearrangement': 'CC(N)=O.CN',
         'hantzsch_dihydropyridine_synthesis': 'CC(CC(C)=O)=O.CC1=C(C(C)=O)C(C)C(C(C)=O)=C(C)N1',
