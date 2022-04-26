@@ -1,6 +1,6 @@
 <h1 align="center">Global-Chem: A Chemical Knowledge Graph of common small molecules and their IUPAC/SMILES/SMARTS for selection of compounds relevant to diverse chemical communities </h1>
 
-Global Chem 是一个开源图形数据库和 api，用于使用 IUPAC 作为输入和 SMILES/SMARTS 作为输出的常见和稀有化学品列表。作为
+Global Chem 是一个开源图形数据库和 API，用于使用 IUPAC 作为输入和 SMILES/SMARTS 作为输出的常见和稀有化学品列表。作为
 当我搜索化学无穷大时，我最需要的是我自己。
 
 我发现这些写在历史上的列表很有用，它们来自各种不同的领域，但都是汇总的
@@ -67,7 +67,7 @@ pip install global-chem
 
 ```
 
-如果您想安装扩展包以获得额外的功能，每个应用程序可以相互独立安装，或者您可以使用`all`:
+如果您想安装扩展包以获得额外的功能，每个应用程序可以独立安装，或者您可以使用`all`:
 
 ```bash
 
@@ -112,7 +112,7 @@ Graph Network (GN) 附带了一些规则，这些规则目前使开发人员的�
 -   添加节点时，必须连接每个节点。
 -   要删除一个节点，它不能有任何子节点。
 
-深度图网络 (DGN) 还附带了一些规则以使实施更容易：
+深度图网络 (DGN) 还附带了一些规则来简化实现：
 
 -   必须有一个 1 的根节点标记为您的“输入”节点。
 -   添加层时，所有节点都将作为子层添加到所有先前的层中。 （Folk 可以使用移除节点功能来执行 dropouts）。
@@ -216,7 +216,7 @@ Graph Network (GN) 附带了一些规则，这些规则目前使开发人员的�
 | 开源数据库监控         | GlobalChem 使用 Uptime-Cheminformatics 跟踪开源化学数据                                 | development_operations |
 | Networkx 软件适配器  | GlobalChem Network 可以转换为 NetworkX Graph Objects                               | 化学信息学                  |
 | SMARTS 模式验证     | GlobalChem 使用 MiniFrag 数据库测试 SMARTS 字符串在功能组选择中的准确性                            | 化学信息学                  |
-| 主成分分析           | GlobalChem 可以轻松解释 SMILES、指纹、聚类和应用 PCA 分析，用户可以调整参数                             | 化学信息学                  |
+| 主成分分析           | GlobalChem 可以轻松解释 SMILES、指纹、聚类和应用 PCA 分析用户可以调整参数                              | 化学信息学                  |
 | 药物设计过滤器         | GlobalChem 可以根据通用药物设计过滤规则过滤化合物                                                | 化学信息学                  |
 | 深层散射分析          | 为了可视化分子组之间的关系，GlobalChem 提供了平行坐标图生成                                           | 化学信息学                  |
 | 旭日形径向分析         | GlobalChem 提供了一种旭日机制，允许用户观察化合物组与公共组的关系                                        | 化学信息学                  |
@@ -237,8 +237,8 @@ Graph Network (GN) 附带了一些规则，这些规则目前使开发人员的�
 尝试完成要求。 FDA 认为第 11 部分适用于以下电子记录标准以及如何`GlobalChem`完成每个组件：
 
 -   **合理性：**`GlobalChem`建立在使用阅读和重绘从书籍和论文中提取的数据之上。它添加了一个组件
-    IUPAC/SMILES/SMARTS 字符串以电子方式存储它，从而为它的数据提供独特的组件。记录是开源的
-    并由存储库的维护者和开源社区反馈进行适当的版本控制。`GlobalChem`的目的仍然未知，因为它进入了开源部署。我们已经构建了扩展功能
+    IUPAC/SMILES/SMARTS 字符串以电子方式存储，从而为其提供独特的数据。记录是开源的
+    并由存储库的维护者和开源社区反馈进行适当的版本控制。`GlobalChem`当它进入开源部署时，它的用途仍然未知。我们已经构建了扩展功能
     一个单独的包`GlobalChemExtensions`这确实取决于`GlobalChem`.由于每个版本都被适当地打包，
     需要依赖一个版本，然后它的软件才可用`Github`和`PyPi`.标准操作程序 (SOP)
     可以从维护的扩展实用程序文档中提交`Gitbook`.
@@ -255,7 +255,7 @@ Graph Network (GN) 附带了一些规则，这些规则目前使开发人员的�
     如此迭代。`X3`表示要添加到函数中的“热”修复（一个简单的错误）、小功能或附加参数
     ，或迭代数据。
 
--   **旧系统：**`GlobalChem`自第一个版本发布以来已经运行了近 2 年`0.3.0`2020 年 5 月。`GlobalChem`在开源社区中建立了完整的路径，每个版本都被编目并且对所有人可见。这满足
+-   **旧系统：**`GlobalChem`自首次发布版本以来已运行近 2 年`0.3.0`2020 年 5 月。`GlobalChem`在开源社区中建立了完整的路径，每个版本都被编目并且对所有人可见。这满足
     规则概述了确定遗留系统。我们使用社交媒体平台（Twitter、Github、LinkedIn）提供的社区反馈
     作为书面证据和理由`GlobalChem`适合化学信息学的预期用途。
 
@@ -280,7 +280,7 @@ SMILES 字符串可以用多种方法进行抽象：
 
 -   对于复杂的分子，图像可以在免费版本的 ChemDraw 中重新绘制，然后翻译成 SMILES。
 
--   对于写入 SMILES 且不知道 IUPAC 的来源，SMILES 将被翻译成 ChemDraw 并检索名称。
+-   对于写入 SMILES 而 IUPAC 未知的来源，SMILES 被翻译成 ChemDraw 并检索名称。
     请注意，某些名称可能会根据人工检查进行修改，以支持首选名称。
 
 -   对于聚合物纸，名称中省略了站点点，并且根据首选名称调整了一些命名法
