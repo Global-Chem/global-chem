@@ -23,15 +23,15 @@ jobs:
 
       - name: Install
         run: |
-          python global_chem/setup.py install
+          python global_chem_extensions/setup.py install
           pip install python-coveralls
           pip install coveralls
-          pip install coverage==4.5.4     
-          pip install nose              
+          pip install coverage==4.5.4
+          pip install nose
 
-      - name: Run GlobalChem tests
+      - name: Run GlobalChemExtensions Tests
         env:
           GITHUB_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
         run: |
-          cd global_chem
+          cd global_chem_extensions
           python -m nose --verbose --with-coverage -s -w tests/
