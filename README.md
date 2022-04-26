@@ -1,17 +1,13 @@
-Adding Your Own Chemical List
-=============================
+# Welcome to the GlobalChem Documentation!
 
-If you would like to add your paper or a list you constructed to the chemical knowledge graph then please "File an Issue" with your chemical list 
-and perhaps a suggestion of where to add it or you can leave for up to us to decide. The format of the chemical list can
-be something like this, and we the community will elect it into the graph and add a couple of representative compounds to the forcefield:
+## GlobalChem&#x20;
 
-```
+Welcome to the user documentation for GlobalChem, in here you will find how to build the graph networks, build your own, or perform analysis on chemical data within you're own or the GlobalChem network.
 
-smiles = {
-   '3,5-dimethoxyphenylisoproxycarbonyl': 'COC1=CC(C(C)(OC=O)C)=CC(OC)=C1',
-   '2-(4-biphenyl)isopropoxycarbonyl': 'CC(C)(OC=O)C(C=C1)=CC=C1C2=CC=CC=C2',
-   '2-nitrophenylsulfenyl': 'SC1=CC=CC=C1[N+]([O-])=O',
-   'boc': 'O=COC(C)(C)C',
-}  
+![](<.gitbook/assets/Screen Shot 2022-02-20 at 8.55.43 AM.png>)
 
-```                
+## Want to jump right in?
+
+Want to start researching and playing around? Head here
+
+## Want to deep dive into the api, algorithms or the extension package?
