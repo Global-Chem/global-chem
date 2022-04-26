@@ -22,6 +22,12 @@ jobs:
           architecture: x64
 
       - name: Install
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
         run: |
           cd global_chem_extensions
           python setup.py install
