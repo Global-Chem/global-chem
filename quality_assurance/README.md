@@ -23,6 +23,14 @@ It is always appropiate before designing a feature is knowing how to test it.
 
 ### GlobalChemExtensions
 
+| Application          | Test                                                 | Description                                            | Software Tool | Manual/Automated | Linux Pass/Fail | If Fail, Why? | Windows Pass/Fail | If Fail, Why? | MacOS Pass/Fail | If Fail, Why? |
+|----------------------|------------------------------------------------------|--------------------------------------------------------|---------------|------------------|-----------------|---------------|-------------------|---------------|-----------------|---------------|
+| GlobalChemExtensions | Test Initialize of the Class                         | Test the Loading of the Package                        | PyTest        | Automated        | Fail            |               | Fail              |               | Fail            |               |
+| GlobalChemExtensions | Test the Loading of the Bioinformatics Class         | Test the Loading of the Bioinformatics Package         | PyTest        | Automated        | Fail            |               | Fail              |               | Fail            |               |
+| GlobalChemExtensions | Test the Loading of the Quantum Chemisty Class       | Test the Loading of the Quantum Chemistry Package      | PyTest        | Automated        | Fail            |               | Fail              |               | Fail            |               |
+| GlobalChemExtensions | Test the Loading of the Cheminformatics Class        | Test the Loading of the Cheminformatics Package        | PyTest        | Automated        | Fail            |               | Fail              |               | Fail            |               |
+| GlobalChemExtensions | Test the Loading of the Development Operations Class | Test the Loading of the Development Operations Package | PyTest        | Automated        | Fail            |               | Fail              |               | Fail            |               |
+| GlobalChemExtensions | Test the Loading of the ForceFields Class            | Test the Loading of the ForceFields Package            | PyTest        | Automated        | Fail            |               | Fail              |               | Fail            |               |
 
 ### GlobalChem Bioinformatics Application
 
