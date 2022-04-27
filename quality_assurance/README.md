@@ -1,0 +1,22 @@
+Quality Assurance Documentation
+===============================
+
+`GlobalChem` and `GlobalChemExtensions` Test Documentation will be handled here in this README. Test infrastructure and possible future feature implementation should be logged here. When developing a feature. 
+It is always appropiate before designing a feature is knowing how to test it. 
+
+### GlobalChem 
+
+| Test                                             | Description                                                                          | Software Tool | Manual/Automated | Linux Pass/Fail | If Fail, Why? | Windows Pass/Fail | If Fail, Why?  | MacOS Pass/Fail | If Fail, Why? |
+|--------------------------------------------------|--------------------------------------------------------------------------------------|---------------|------------------|-----------------|---------------|-------------------|----------------|-----------------|---------------|
+| Initialize Class                                 | Test whether the package can be imported                                             | PyTest        | Automated        | Pass            |               | Pass              |                | Pass            |               |
+| Print Network                                    | Test the terminal visualization of the network                                       | PyTest        | Automated        | Pass            |               | Fail              | Encoding Error | Pass            |               |
+| Node Attribute                                   | Test whether a node can store an attribute                                           | PyTest        | Automated        | Pass            |               | Pass              |                | Pass            |               |
+| Build GlobalChem Network                         | Test whether the network can build depending on the file structure of the repository | PyTest        | Automated        | Pass            |               | Fail              | Encoding Error | Pass            |               |
+| Fetch All GlobalChem Data                        | Test whether the user can access all the data in the network                         | PyTest        | Automated        | Pass            |               | Pass              |                | Pass            |               |
+| Fetch Node Data                                  | Test whether the user can access a specific node's data                              | PyTest        | Automated        | Pass            |               | Fail              | Encoding Error | Pass            |               |
+| Get and Set Node Values                          | Test whether the user can set a node's value and retrieve the value                  | PyTest        | Automated        | Pass            |               | Fail              | Encoding Error | Pass            |               |
+| Remove Node                                      | Test whether the user can remove a node in the network                               | PyTest        | Automated        | Pass            |               | Fail              | Encoding Error | Pass            |               |
+| Fetch SMILES by IUPAC                            | Test the feature for fetching a SMILES based on the IUPAC                            | PyTest        | Automated        | Pass            |               | Pass              |                | Pass            |               |
+| Compute Common Score                             | Test the feature for computing the common score of a molecule based on the name      | PyTest        | Automated        | Pass            |               | Pass              |                | Pass            |               |
+| Building a User Defined Graph Network            | Test the feature for a user to build their own graph network                         | PyTest        | Automated        | Pass            |               | Fail              | Encoding Error | Pass            |               |
+| Building a User Defined Deep-Layer Graph Network | Test the feature for a user to build their own deep layer network                    | PyTest        | Automated        | Pass            |               | Fail              | Encoding Error | Pass            |               |
