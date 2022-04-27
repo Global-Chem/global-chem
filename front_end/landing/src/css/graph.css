@@ -4,11 +4,13 @@ body {
     margin: 0;
 }
 
-.graph-data {
+
+.background{
+    color: #999999;
     position: absolute;
-    top: 0px;
-    right: 0px;
-    padding: 5px;
+    top: 0;
+    left: 0;
+    z-index: -100;
 }
 
 .toggle-data-btn {

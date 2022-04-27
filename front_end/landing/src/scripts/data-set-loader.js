@@ -6,14 +6,14 @@ function getGraphDataSets() {
             .nodeLabel('id')
             .nodeAutoColorBy('group')
             .forceEngine('ngraph')
-            .jsonUrl('front_end/datasets/chemical_graph_network.json');
+            .jsonUrl('front_end/landing/src/datasets/chemical_graph_network.json');
     };
     loadMiserables.description = "<em>GlobalChem Graph Network</em>";
 
     //
 
     const loadBlocks = function(Graph) {
-        fetch('front_end/datasets/blocks.json').then(r => r.json()).then(data => {
+        fetch('front_end/landing/src/datasets/blocks.json').then(r => r.json()).then(data => {
             data.nodes.forEach(node => { node.name = `${node.user?node.user+': ':''}${node.description || node.id}` });
 
         Graph
