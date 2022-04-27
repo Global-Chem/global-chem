@@ -1,11 +1,9 @@
 <h1 align="center">Global-Chem: A Chemical Knowledge Graph of common small molecules and their IUPAC/SMILES/SMARTS for selection of compounds relevant to diverse chemical communities </h1>
 
-Global Chem 是一个开源图形数据库和 api，用于使用 IUPAC 作为输入和 SMILES/SMARTS 作为输出的常见和稀有化学品列表。作为
-当我搜索化学无穷大时，我最需要的是我自己。
+Global Chem 是一个为常用以及稀有化学品列表，而设计的开源的图形数据库和应用程序接口。它用IUPAC作为输入文件，输出SMILES和SMARTS文件。当我搜索无限化学时，我会经常试用它。
 
-我发现这些写在历史上的列表很有用，它们来自各种不同的领域，但都是汇总的
-进入有机化学家最常见的格式 (IUPAC) 和化学信息学家的通用语言 (SMILES)
-模式匹配（SMARTS）。
+我发现这些曾经使用过的列表很有用，它们虽然涉及各种不同的领域，但都可以整合到有机化学家最常用的格式 (IUPAC) 和化学信息学家的通用语言 (SMILES)
+模式匹配（SMARTS）里。
 
 <p align="center">
   <img width="800" height="400" src="images/globalchemlogo.png">
@@ -135,7 +133,7 @@ Graph Network (GN) 附带了一些规则，这些规则目前使开发人员的�
     'montmorillonite_adsorption': MontmorilloniteAdsorption,                  # Asuka Orr & Suliman Sharif
     'common_monomer_repeating_units': CommonMonomerRepeatingUnits,            # Suliman Sharif
     'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,    # Ruibin Liu & Suliman Sharif
-    'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors,  # Shaoqi Zhao & Suliman Sharif
+    'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors,  # Shaoqi Zhan & Suliman Sharif
     'rings_in_drugs': RingsInDrugs,                                           # Alexander Mackerell & Suliman Sharif
     'iupac_blue_book_rings': IUPACBlueBookRings,                              # Suliman Sharif
     'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,                  # Suliman Sharif
