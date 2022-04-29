@@ -25,20 +25,16 @@ jobs:
         run: |
           cd global_chem_extensions
           python setup.py install
-          pip install python-coveralls
-          pip install coveralls
-          pip install coverage==4.5.4
-          pip install nose
 
-      - name: Cache Requirements.txt
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-      - name: Run GlobalChemExtensions Tests
-        env:
-          GITHUB_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-        run: |
-          python -m nose --verbose --with-coverage -s -w tests/
+#       - name: Cache Requirements.txt
+#         uses: actions/cache@v3
+#         with:
+#           path: ~/.cache/pip
+#           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+#           restore-keys: |
+#             ${{ runner.os }}-pip-
+#       - name: Run GlobalChemExtensions Tests
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+#         run: |
+#           python -m nose --verbose --with-coverage -s -w tests/
