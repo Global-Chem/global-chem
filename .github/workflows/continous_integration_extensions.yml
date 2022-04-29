@@ -24,7 +24,7 @@ jobs:
       - name: Install
         run: |
           cd global_chem_extensions
-          python setup.py install
+#          python setup.py install
 
 #       - name: Cache Requirements.txt
 #         uses: actions/cache@v3
