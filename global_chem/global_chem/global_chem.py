@@ -7,7 +7,6 @@
 # Base Imports
 
 import os
-import sys
 import os.path
 import pprint
 
@@ -51,7 +50,7 @@ from global_chem.proteins.kinases.scaffolds.privileged_kinase_inhibitors import 
 from global_chem.organic_synthesis.solvents.common_organic_solvents import CommonOrganicSolvents
 from global_chem.organic_synthesis.protecting_groups.amino_acid_protecting_groups import AminoAcidProtectingGroups
 from global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands import NickelBidendatePhosphineLigands
-from global_chem.organic_synthesis.named_reactions_in_organic_synthesis.named_reactions_in_organic_synthesis import NamedReactionsInOrganicSynthesis
+# from global_chem.organic_synthesis.named_reactions_in_organic_synthesis.named_reactions_in_organic_synthesis import NamedReactionsInOrganicSynthesis
 
 # Narcotics
 
@@ -232,17 +231,16 @@ class PrintTreeUtilities(object):
             return lst
         for i in range(len(lst)):
             if i == startingFanIndex:
-                lst[i] = "┌%s" % lst[i]
+                lst[i] = f"┌{lst[i]}"
             elif i == endingFanIndex:
-                lst[i] = "└%s" % lst[i]
+                lst[i] = f"└{lst[i]}"
             elif i > startingFanIndex and i < endingFanIndex:
                 if lst[i].startswith(" "):
-                    lst[i] = "│%s" % lst[i]
+                    lst[i] = f"│{lst[i]}"
                 else:
-                    lst[i] = "├%s" % lst[i]
+                    lst[i] = f"├{lst[i]}"
             else:
-                lst[i] = "%s" % lst[i]
-
+                lst[i] = f" {lst[i]}"
         return lst
 
     @staticmethod
@@ -254,11 +252,11 @@ class PrintTreeUtilities(object):
         for i in range(len(lst)):
             # add label to the middle of the fan
             if i == len(lst) // 2:
-                lst[i] = ("%s─%s" % (name, lst[i]))
+                lst[i] = f"{name}─{lst[i]}"
             else:
                 # push the other labels out with indentation
                 indent = " " * len(name)
-                lst[i] = ("%s─%s" % (indent, lst[i]))
+                lst[i] = f"{indent} {lst[i]}"
         return lst
 
     @staticmethod
@@ -278,8 +276,6 @@ class PrintTreeUtilities(object):
             labelled = PrintTreeUtilities.labelFan(node, PrintTreeUtilities.connectFans(fans))
             return labelled
         print("\n".join(get_repr(node)))
-
-
 
 class GraphNetworkError(Exception):
 
@@ -339,11 +335,11 @@ class GlobalChem(object):
         'nickel_ligands': NickelBidendatePhosphineLigands,                       # Suliman Sharif
         'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                      # Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                            # Chris Burke & Suliman Sharif
-        'named_reactions_in_organic_synthesis': NamedReactionsInOrganicSynthesis # Aziza Frank & Suliman Sharif
     }
 
     __INCOMPLETE_NODES = {
         'cannabinoids': Cannabinoids
+        # 'named_reactions_in_organic_synthesis': NamedReactionsInOrganicSynthesis # Aziza Frank & Betty & Suliman Sharif
     }
 
     def __init__(self, verbose=False):

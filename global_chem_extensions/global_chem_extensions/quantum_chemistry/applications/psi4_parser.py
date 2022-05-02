@@ -26,6 +26,7 @@ class Psi4Parser(object):
     def __init__(self,
                  input_file = None,
                  cube_files = None,
+                 wave_function = None,
                  ):
 
         # Attributes
@@ -53,6 +54,10 @@ class Psi4Parser(object):
         # Frequency Terms
 
         self.frequency_all_modes = None
+
+        # Wave Function
+
+        self.wave_function = wave_function
 
     def get_energy_contributions(self):
 
@@ -187,20 +192,86 @@ class Psi4Parser(object):
 
         return modes
 
-    def moly_plot_molecular_orbital(self, cube_file, name='orbital', show=False):
+    def moly_plot_molecular_orbital(self, cube_file, name='orbital', opacity=0.1, show=False):
 
         '''
 
         Plot the Molecular Orbital
 
+        Arguments:
+            cube_file (String): File Path to the Cube File
+            name (String): Name of the output file
+            show (Bool): whether to show it in the jupyter notebook or save the file
+            opacity (Float): opacity of the orbitals
+
         '''
 
         fig = moly.Figure()
-        fig.add_cube(cube_file, iso=0.03, colorscale="rdbu", opacity=0.2)
-
-        fig.fig.write_image(os.path.join(
-            '%s.png' % name)
-        )
+        fig.add_cube(cube_file,
+                     iso=0.03,
+                     colorscale="rdbu",
+                     opacity=opacity)
 
         if show:
             fig.show()
+        else:
+            fig.fig.write_image(os.path.join(
+                '%s.png' % name)
+            )
+
+    def psi4_cubeprop(
+            self,
+            path,
+            orbitals = [],
+            number_occupied = 0,
+            number_virtual = 0,
+            density=False,
+    ):
+
+        """
+        Run a psi4 cubeprop computation to generate cube files from a given Wavefunction object
+        By default this function plots from the HOMO -2 to the LUMO + 2
+
+        Arguments:
+
+            path (String): file path to the output directory of the cube files
+            orbitals (List): Any specific orbitals you want included,
+            number_occupied (Int): Number of Molecule Orbitals Occupied by the Electron
+            number_virtual (Int): Number of Virtual Orbitals Occupied by the Electron
+            density (Bool): Density of the cubeprop
+        """
+
+        import os.path
+
+        cubeprop_tasks = []
+
+        if isinstance(orbitals, str):
+            if orbitals == 'frontier_orbitals':
+                cubeprop_tasks.append('FRONTIER_ORBITALS')
+        else:
+            cubeprop_tasks.append('ORBITALS')
+
+            if number_occupied + number_virtual > 0:
+                alpha_electrons = self.wave_function.nalpha()
+                molecule = self.wave_function.nmo()
+                min_orb = max(1, alpha_electrons + 1 - number_occupied)
+                max_orb = min(molecule, alpha_electrons + number_virtual)
+                orbitals = [k for k in range(min_orb, max_orb + 1)]
+
+            print(f'Preparing cube files for orbitals: {", ".join([str(orbital) for orbital in orbitals])}')
+
+        if density:
+            cubeprop_tasks.append('DENSITY')
+
+        if not os.path.exists(path):
+            os.makedirs(path)
+
+        psi4.set_options(
+            {
+                'CUBEPROP_TASKS': cubeprop_tasks,
+                'CUBEPROP_ORBITALS': orbitals,
+                'CUBEPROP_FILEPATH': path
+            }
+        )
+
+        psi4.cubeprop(self.wave_function)

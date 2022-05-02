@@ -1,8 +1,8 @@
 global-chem
+numpy
 rdkit-pypi
 pandas
 requests
-numpy==1.21.6
 
 
 
