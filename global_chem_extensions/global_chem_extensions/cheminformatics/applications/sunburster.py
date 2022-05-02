@@ -34,13 +34,17 @@ class Sunburster(object):
         self.save_file = save_file
 
         self.patterns = []
-        self.record_labels = []
 
         self.compounds = []
         self.verbose = verbose
 
         self.category_first_layer = []
         self.category_counts = {}
+        self.first_layer_total_values = {}
+
+        self.category_second_layer = []
+        self.second_category_counts = {}
+        self.second_layer_total_values = {}
 
         self.total_values = {}
 
@@ -61,7 +65,6 @@ class Sunburster(object):
         self.determine_first_layer()
         self.determine_second_layer()
         self.set_the_layers()
-        self.sunburst()
 
     def _mine_global_chem(self):
 
@@ -83,7 +86,6 @@ class Sunburster(object):
 
             node_smarts = node.get_smarts()
 
-            self.record_labels.append(node_name)
             self.patterns.append(node_smarts)
 
     def _prepare_object(self):
@@ -104,7 +106,7 @@ class Sunburster(object):
 
         '''
 
-        Determine the Record Category for the First Layer of the Sunburst
+        Determine the Longest Name for the First Layer
 
         '''
 
@@ -119,68 +121,63 @@ class Sunburster(object):
 
                 for name, pattern in chemical_list.items():
 
-                    smarts_mol = Chem.MolFromSmarts(pattern)
-
                     try:
+
+                        smarts_mol = Chem.MolFromSmarts(pattern)
                         substructs = molecule.HasSubstructMatch(smarts_mol)
+
                         if substructs:
                             matches.append(name)
-                    except:
+
+                    except Exception as e:
                         pass
 
-                longest_name = max(matches, key=str)
-                shortest_name = min(matches, key=str)
+                if len(matches) > 0:
 
-                if longest_name not in self.category_first_layer:
-                    self.category_first_layer.append(longest_name)
+                    longest_name = max(matches, key=str)
+                    shortest_name = min(matches, key=str)
 
-                if shortest_name not in self.category_first_layer:
-                    self.category_first_layer.append(shortest_name)
+                    if longest_name not in self.category_first_layer:
+                        self.category_first_layer.append(longest_name)
 
-                if longest_name not in self.category_counts:
-                    self.category_counts[longest_name] = 1
-                else:
-                    self.category_counts[longest_name] += 1
+                    if shortest_name not in self.category_second_layer:
+                        self.category_second_layer.append(shortest_name)
 
-                if shortest_name not in self.category_counts:
-                    self.category_counts[shortest_name] = 1
-                else:
-                    self.category_counts[shortest_name] += 1
+                    if longest_name not in self.category_counts:
+                        self.category_counts[longest_name] = 1
+                    else:
+                        self.category_counts[longest_name] += 1
 
-                row['%s:matches' % self.record_labels[index]] = matches
+                    if (longest_name + ' - ' + shortest_name) not in self.second_category_counts:
+                        self.second_category_counts[longest_name + ' - ' + shortest_name] = 1
+                    else:
+                        self.second_category_counts[longest_name + ' - ' + shortest_name] += 1
 
-                row['matches'] = [ longest_name , shortest_name ]
-                row['relation'] = longest_name + ' - ' + shortest_name
+                    row['matches'] = [ longest_name , shortest_name ]
+                    row['relation'] = longest_name + ' - ' + shortest_name
 
     def determine_second_layer(self):
 
         '''
 
-        Determine the Substructure Matches using SMARTS with RDKit for the Category Second Layer
+        Determine the Second Layer shortest Name
 
         '''
 
         for compound in self.compounds:
 
-            if 'matches' in compound:
+            if 'matches' in compound and 'relation' in compound:
 
-                parent = compound['matches'][0]
-                label = compound['relation']
+                parent = compound['matches'][0] # Longest Name
+                label = compound['relation']    # Longest Name to Shortest Name
 
                 self.second_parents.append(parent)
+                self.second_labels.append(label)
 
-                if label not in self.second_labels:
-                    self.second_labels.append(label)
-                self.second_values.append(1)
-
-        for i in range(0, len(self.second_labels)):
-
-            parent = self.second_labels[i].split(' - ')[0].strip()
-
-            if parent not in self.total_values:
-                self.total_values[parent] = 0
-
-            self.total_values[parent] += self.second_values[i]
+                if label not in self.second_category_counts:
+                    self.second_category_counts[label] = 1
+                else:
+                    self.second_category_counts[label] += 1
 
     def set_the_layers(self):
 
@@ -190,19 +187,26 @@ class Sunburster(object):
 
         '''
 
-        category_first_layer_labels = ['GlobalChem'] + self.category_first_layer
-        category_first_layer_parents = [""] + ["Globalchem"] * len(self.category_first_layer)
-        category_first_layer_values = [sum(self.total_values.values())] + list(self.total_values.values())
+        category_first_layer_labels = ['GlobalChem'] + list(self.category_counts.keys())
+        category_first_layer_parents = [""] + ["GlobalChem"] * len(self.category_first_layer)
+        category_first_layer_values = [sum(self.first_layer_total_values.values())] + list(self.category_counts.values())
 
-        category_second_layer_labels = self.second_labels
-        category_second_layer_parents = self.second_parents
-        category_second_layer_values = self.second_values
+        category_second_layer_labels = list(self.second_category_counts.keys())
+        category_second_layer_parents = [ i.split(' - ')[0] for i in list(self.second_category_counts.keys()) ]
+        category_second_layer_values = list(self.second_category_counts.values())
 
         # Construct the Layers
 
         self.labels = category_first_layer_labels + category_second_layer_labels
         self.parents = category_first_layer_parents + category_second_layer_parents
         self.values = category_first_layer_values + category_second_layer_values
+
+        debugger = True
+
+        if debugger:
+            print (self.labels)
+            print (self.parents)
+            print (self.values)
 
     def sunburst(self):
 
