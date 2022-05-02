@@ -40,7 +40,7 @@ class Sunburster(object):
         self.verbose = verbose
 
         self.category_first_layer = []
-        self.category_counts = []
+        self.category_counts = {}
 
         self.total_values = {}
 
