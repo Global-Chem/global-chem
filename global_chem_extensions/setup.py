@@ -36,7 +36,7 @@ else:
 # ----
 setup(
     name="global_chem_extensions",
-    version="0.9.9.9.9.5",
+    version="0.9.9.9.9.6",
     packages=find_packages(),
     license='MPL 2.0',
     author="Suliman Sharif",
@@ -59,8 +59,7 @@ setup(
             'rdkit-pypi', 'partialsmiles', 'pysmiles', 'deepsmiles',
             'selfies', 'molvs'
         ],
-        'graphing': ['plotly']
-
+        'graphing': ['plotly'],
     },
     long_description=long_description,
     long_description_content_type='text/markdown',
