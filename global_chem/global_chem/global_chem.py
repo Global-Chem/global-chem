@@ -7,7 +7,6 @@
 # Base Imports
 
 import os
-import sys
 import os.path
 import pprint
 
@@ -339,11 +338,11 @@ class GlobalChem(object):
         'nickel_ligands': NickelBidendatePhosphineLigands,                       # Suliman Sharif
         'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                      # Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                            # Chris Burke & Suliman Sharif
-        'named_reactions_in_organic_synthesis': NamedReactionsInOrganicSynthesis # Aziza Frank & Suliman Sharif
     }
 
     __INCOMPLETE_NODES = {
         'cannabinoids': Cannabinoids
+        'named_reactions_in_organic_synthesis': NamedReactionsInOrganicSynthesis # Aziza Frank & Betty & Suliman Sharif
     }
 
     def __init__(self, verbose=False):
