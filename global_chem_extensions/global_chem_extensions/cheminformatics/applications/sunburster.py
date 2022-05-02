@@ -76,14 +76,12 @@ class Sunburster(object):
 
         for node in nodes[1:]:
 
-            node_initialized = node()
-
-            node_name = node_initialized.name
+            node_name = node.name
 
             if node_name == 'common_regex_patterns': # Skip this
                 continue
 
-            node_smarts = node_initialized.get_smarts()
+            node_smarts = node.get_smarts()
 
             self.record_labels.append(node_name)
             self.patterns.append(node_smarts)
