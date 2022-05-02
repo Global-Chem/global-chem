@@ -42,6 +42,8 @@ class ChemInformatics(object):
 
         Sunburster(smiles_list, save_file)
 
+        return Sunburster
+
 
     @staticmethod
     def node_pca_analysis(

@@ -201,7 +201,7 @@ class Sunburster(object):
         self.parents = category_first_layer_parents + category_second_layer_parents
         self.values = category_first_layer_values + category_second_layer_values
 
-        debugger = True
+        debugger = False
 
         if debugger:
             print (self.labels)
