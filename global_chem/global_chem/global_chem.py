@@ -50,7 +50,7 @@ from global_chem.proteins.kinases.scaffolds.privileged_kinase_inhibitors import 
 from global_chem.organic_synthesis.solvents.common_organic_solvents import CommonOrganicSolvents
 from global_chem.organic_synthesis.protecting_groups.amino_acid_protecting_groups import AminoAcidProtectingGroups
 from global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands import NickelBidendatePhosphineLigands
-from global_chem.organic_synthesis.named_reactions_in_organic_synthesis.named_reactions_in_organic_synthesis import NamedReactionsInOrganicSynthesis
+# from global_chem.organic_synthesis.named_reactions_in_organic_synthesis.named_reactions_in_organic_synthesis import NamedReactionsInOrganicSynthesis
 
 # Narcotics
 
@@ -342,7 +342,7 @@ class GlobalChem(object):
 
     __INCOMPLETE_NODES = {
         'cannabinoids': Cannabinoids
-        'named_reactions_in_organic_synthesis': NamedReactionsInOrganicSynthesis # Aziza Frank & Betty & Suliman Sharif
+        # 'named_reactions_in_organic_synthesis': NamedReactionsInOrganicSynthesis # Aziza Frank & Betty & Suliman Sharif
     }
 
     def __init__(self, verbose=False):
