@@ -231,17 +231,16 @@ class PrintTreeUtilities(object):
             return lst
         for i in range(len(lst)):
             if i == startingFanIndex:
-                lst[i] = "┌%s" % lst[i]
+                lst[i] = f"┌{lst[i]}"
             elif i == endingFanIndex:
-                lst[i] = "└%s" % lst[i]
+                lst[i] = f"└{lst[i]}"
             elif i > startingFanIndex and i < endingFanIndex:
                 if lst[i].startswith(" "):
-                    lst[i] = "│%s" % lst[i]
+                    lst[i] = f"│{lst[i]}"
                 else:
-                    lst[i] = "├%s" % lst[i]
+                    lst[i] = f"├{lst[i]}"
             else:
-                lst[i] = "%s" % lst[i]
-
+                lst[i] = f" {lst[i]}"
         return lst
 
     @staticmethod
@@ -253,11 +252,11 @@ class PrintTreeUtilities(object):
         for i in range(len(lst)):
             # add label to the middle of the fan
             if i == len(lst) // 2:
-                lst[i] = ("%s─%s" % (name, lst[i]))
+                lst[i] = f"{name}─{lst[i]}"
             else:
                 # push the other labels out with indentation
                 indent = " " * len(name)
-                lst[i] = ("%s─%s" % (indent, lst[i]))
+                lst[i] = f"{indent} {lst[i]}"
         return lst
 
     @staticmethod
@@ -277,8 +276,6 @@ class PrintTreeUtilities(object):
             labelled = PrintTreeUtilities.labelFan(node, PrintTreeUtilities.connectFans(fans))
             return labelled
         print("\n".join(get_repr(node)))
-
-
 
 class GraphNetworkError(Exception):
 
