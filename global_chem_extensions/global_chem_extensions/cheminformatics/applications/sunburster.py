@@ -216,7 +216,7 @@ class Sunburster(object):
 
         '''
 
-        fig =go.Figure()
+        fig = go.Figure()
 
         fig.add_trace(go.Sunburst(
             labels=self.labels,

@@ -36,13 +36,16 @@ class ChemInformatics(object):
             smiles_list (String): list of smiles strings to analyze
             save_file (Boolean): whether the user would like it as a file
 
+        Returns:
+            sunburster_object (Sunburster Object): Sunburster Object
+
         '''
 
         from global_chem_extensions.cheminformatics.applications.sunburster import Sunburster
 
-        Sunburster(smiles_list, save_file)
+        sunburster_object = Sunburster(smiles_list, save_file)
 
-        return Sunburster
+        return sunburster_object
 
 
     @staticmethod
