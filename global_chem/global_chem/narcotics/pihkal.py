@@ -100,7 +100,7 @@ class Pihkal(object):
             '3,6-dimethoxy-4-(2-aminopropyl)benzonorbornane': 'COC1=C2C3CCC(C3)C2=C(OC)C(=C1)CC(C)N',
             '2,5-dimethoxy-3,4-dimethylamphetamine': 'COC1=CC(=C(OC)C(=C1C)C)CC(C)N',
             '1,4-dimethoxynaphthyl-2-isopropylamine': 'COC1=CC(=C(OC)C2=C1C=CC=C2)CC(C)N',
-            '2,5-dimethoxy-4-ethylthio-n-hydroxyphenethylamine': '',
+            '2,5-dimethoxy-4-ethylthio-n-hydroxyphenethylamine': 'CCSC1=CC(=C(CCNO)C=C1OC)OC',
             '2,5-dimethoxy-n-hydroxy-4-(n)-propylthiophenethylamine': 'CCCSC1=CC(=C(CCNO)C=C1OC)OC',
             '2,5-dimethoxy-4-(s)-butylthio-n-hydroxyphenethylamine': 'CCC(C)SC1=CC(=C(CCNO)C=C1OC)OC',
             '2,5-dimethoxy-n,n-dimethyl-4-iodoamphetamine': 'COC1=CC(=C(OC)C=C1I)CC(C)N(C)C',
