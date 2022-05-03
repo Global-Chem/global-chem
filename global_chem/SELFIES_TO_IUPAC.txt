@@ -1,0 +1,20 @@
+[C]	alanine
+[C][C][C][C][N][C][Branch1][C][N][=N]	arginine
+[C][C][C][Branch1][C][N][=O]	asparagine
+[C][C][Branch1][C][O][=O]	aspartic acid
+[C][S]	cysteine
+[C][C][C][Branch1][C][O][=O]	glutamic acid
+[C][C][C][Branch1][C][N][=O]	glutamine
+[H]	glycine
+[C][C][=C][N][C][=N][Ring1][Branch1]	histidine
+[C][Branch1][Ring1][C][C][Branch1][C][H][C]	isoleucine
+[C][C][Branch1][C][C][C]	leucine
+[C][C][C][C][N]	lysine
+[C][C][S][C]	methionine
+[C][C][=C][C][=C][C][=C][Ring1][=Branch1]	phenylalanine
+[C][C][C][C][N][Ring1][Branch1]	proline
+[C][O]	serine
+[C][Branch1][C][C][Branch1][C][H][O]	threonine
+[C][C][C][=C][N][C][=C][Ring1][Branch1][C][=C][C][=C][Ring1][=Branch1]	tryptophan
+[C][C][=C][C][=C][Branch1][C][O][C][=C][Ring1][#Branch1]	tyrosine
+[C][Branch1][C][C][C]	valine
