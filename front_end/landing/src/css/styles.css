@@ -32,7 +32,7 @@
 
 .section{
     position: absolute;
-    width: 40em;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     left: 0;
