@@ -4,9 +4,7 @@
 
 # -----------------------------------------
 
-class Bacteria(Object):
-
-    __version__ = '0.0.1'
+class GlobalChemBacteria(object):
 
     __ALLOWED_CELL_WALL_COMPOSITIONS__ = [
         'thick_peptidoglycan',
@@ -191,18 +189,25 @@ class Bacteria(Object):
 
         self.taxonomic_hierarchy = taxonomic_hierarchy
 
+    def get_classifiers(self):
 
-if __name__ == '__main__':
+        '''
 
-    bacteria = Bacteria(
-        name='staphylococcus',
-        cell_wall_composition='thick_peptidoglycan',
-        gram_positive=True,
-    )
+        Get all the classifiers for the bacteria object
 
-    bacteria = Bacteria(
-        name='pseudomonas',
-        cell_wall_composition='lipopolysaccharide',
-        gram_positive=False,
-        gram_negative=True
-    )
+        Returns:
+            classifiers (Dict): Dictionary of the bacteria classifiers
+
+        '''
+
+        classifiers = {
+            'allowed_cell_wall_compositions': self.__ALLOWED_CELL_WALL_COMPOSITIONS__,
+            'bacteria_shapes': self.__BACTERIA_SHAPES__,
+            'nutritional_sources': self.__NUTRITIONAL_SOURCES__,
+            'respiratory_methods': self.__RESPIRATION_METHODS__,
+            'environment_reservoirs': self.__ENVIRONMENT_RESERVOIRS__,
+            'serologic_systems': self.__SEROLOGIC_SYSTEMS__,
+            'taxonomic_classifiers': self.__TAXONOMIC_CLASSIFIERS__
+        }
+
+        return classifiers
