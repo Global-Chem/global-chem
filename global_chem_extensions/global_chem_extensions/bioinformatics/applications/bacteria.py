@@ -182,10 +182,11 @@ class GlobalChemBacteria(object):
 
         # Based on Taxonomic Classifiers
 
-        for classifier in self.__TAXONOMIC_CLASSIFIERS__:
-            if classifier not in taxonomic_hierarchy:
-                print ("Missing Classifier: %s" % classifier)
-                raise ValueError
+        if taxonomic_hierarchy:
+            for classifier in self.__TAXONOMIC_CLASSIFIERS__:
+                if classifier not in taxonomic_hierarchy:
+                    print ("Missing Classifier: %s" % classifier)
+                    raise ValueError
 
         self.taxonomic_hierarchy = taxonomic_hierarchy
 
