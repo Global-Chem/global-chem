@@ -81,16 +81,17 @@ class NamedReactionsInOrganicSynthesis(object):
         'baeyer-villiger_oxidation': 'CC(C)=O.CC(OO)=O.CC(OC)=O',
         'barbier_coupling_reaction': 'C[Cl,Br,I].CC(C)=O.CC(O)(C)C',
         'prins_reaction': 'CC=C.CC(C)=O.OC(C)CCO',	# to 1,3 diol, C/C=C/CO allylic alcohol in absence of water, CC1OCOCC1 dioxane with excess of CC(C)=O
-        'wagner-meerwein_rearrangement': '',
-        'grignard_reaction': '',
-        'demjanov_rearrangement_and_tiffeneau-demjanov_rearrangement': '',
-        'ullmann_reaction_coupling_biaryl_synthesis': '',
-        'feist–bénary_furan_synthesis': '',
-        'wolff_rearrangement': '',
-        'benzoin_and_retro-benzoin_condensation': '',
-        'mannich_reaction': '',
-        'nazarov_cyclization': '',
-        'ullmann_biaryl_ether_and_biaryl_amine_synthesis_condensation': '',
+        'wagner-meerwein_rearrangement': 'CCC[F,Cl,Br,I].C/C=C/C',	# or to CC([F,Cl,Br,I])C (hydrid shift)
+        'grignard_reaction': 'C=O.C[Mg]Br.CCO',	# to primary alcohol, other aldehyds to secondary alcohols CC=O.CC(O)C, ketones to tertiary alcohols CC(C)=O.CC(C)(O)C,…  
+        'demjanov_rearrangement': 'NCC1CCC1.OC2CCCC2',	# ring expansion, or ring reduction NC1CCCC1.OCC2CCC2
+	'tiffeneau-demjanov_rearrangement': 'OC1(CN)CCCC1.O=C2CCCCC2',
+        'ullmann_reaction_coupling_biaryl_synthesis': '[F,Cl,Br,I]C1=CC=CC=C1.C2(C3=CC=CC=C3)=CC=CC=C2',
+        'feist–bénary_furan_synthesis': 'CC(CC(C)=O)=O.O=C(C)C([Cl,Br,I])C.CC1=C(C(C)=O)C(C)=C(C)O1',
+        'wolff_rearrangement': 'O=C(C)C(C)=[N+]=[N-].OC(C(C)C)=O',
+        'benzoin_and_retro-benzoin_condensation': 'O=CC1=CC=CC=C1.O=C(C(O)C2=CC=CC=C2)C3=CC=CC=C3',
+        'mannich_reaction': 'CNC.C=O.CC(C(C)=O)C.CN(CC(C)(C(C)=O)C)C',
+        'nazarov_cyclization': 'C/C=C/C(/C=C/C)=O.O=C1C=C(C)C(C)C1',
+        'ullmann_biaryl_ether_and_biaryl_amine_synthesis_condensation': '[F,Cl,Br,I]C1=CC=CC=C1.C2(C3=CC=CC=C3)=CC=CC=C2',
         'eschweiler-clarke_methylation': '',
         'staudinger_ketene_cycloaddition': '',
         'acetoacetic_ester_synthesis': '',
