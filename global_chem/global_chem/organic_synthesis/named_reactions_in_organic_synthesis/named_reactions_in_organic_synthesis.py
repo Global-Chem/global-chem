@@ -72,15 +72,15 @@ class NamedReactionsInOrganicSynthesis(object):
         'favorskii_rearrangement_and_homo-favorskii_rearrangement': '[F,Cl,Br,I]C1CCCCC1=O.O=C(O)C2CCCC2',
         'knoevenagel_condensation': 'O=CC1=CC=CC=C1.COC(CC(OC)=O)=O.O=C(OC)/C(C(OC)=O)=C/C2=CC=CC=C2',
         'nef_reaction': 'O=[N]([O])C(C)C.O=C(C)C',
-        'smiles_rearrangement': '',
-        'wacker_oxidation': '',
-        'henry_reaction': '',
-        'michaelis-arbuzov_reaction': '',
-        'gattermann_and_gattermann-koch_formylation': '',
-        'chugaev_elimination_xanthate_ester_pyrolysis)': '',
-        'baeyer-villiger_oxidation': '',
-        'barbier_coupling_reaction': '',
-        'prins_reaction': '',
+        'smiles_rearrangement': '[F,Cl,Br,I]C1=C(OCCN)C=CC([N+]([O-])=O)=C1.[F,Cl,Br,I]C2=C(NCCO)C=CC([N+]([O-])=O)=C2',	# X-Y rearrangment where X(here O) and Y(here NH2) can be many different groups, also ortho- and para- substituents(here halogens and NO2) can be different groups
+        'wacker_oxidation': 'C=C.CC=O',
+        'henry_reaction': 'CC[N+]([O-])=O.CC(C)=O.C/C([N+]([O-])=O)=C(C)\C',	# from dehydration, CC(C(C)=C)[N+]([O-])=O from oxidation, CC(C(O)(C)C)N from reduction
+        'michaelis-arbuzov_reaction': 'CP(C)OC.CP(C)(C)=O',	# phosphinite to phosphine, CP(OC)OC.CP(C)(OC)=O phosphonite to phosphinate, COP(OC)OC.CP(OC)(OC)=O phosphite ester to phosphonate oxide
+        'gattermann_and_gattermann-koch_formylation': 'C#N.O=CC1=CC=CC=C1',
+        'chugaev_elimination_xanthate_ester_pyrolysis': 'CC(C)C(C)(C)O.C/C(C)=C(C)/C',
+        'baeyer-villiger_oxidation': 'CC(C)=O.CC(OO)=O.CC(OC)=O',
+        'barbier_coupling_reaction': 'C[Cl,Br,I].CC(C)=O.CC(O)(C)C',
+        'prins_reaction': 'CC=C.CC(C)=O.OC(C)CCO',	# to 1,3 diol, C/C=C/CO allylic alcohol in absence of water, CC1OCOCC1 dioxane with excess of CC(C)=O
         'wagner-meerwein_rearrangement': '',
         'grignard_reaction': '',
         'demjanov_rearrangement_and_tiffeneau-demjanov_rearrangement': '',
