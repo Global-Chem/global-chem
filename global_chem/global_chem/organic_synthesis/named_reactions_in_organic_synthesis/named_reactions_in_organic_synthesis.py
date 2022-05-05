@@ -99,7 +99,7 @@ class NamedReactionsInOrganicSynthesis(object):
         'paterno-büchi_reaction': 'CC(C)=O.C/C(C)=C(C)\C.CC1(C)C(C)(C)C(C)(C)O1',	# stereochemistry when R groups are different on the 2nd reactant
         'prilezhaev_reaction': 'C/C(C)=C(C)\C.CC(OO)=O.CC1(C)OC1(C)C',
         'pummerer_rearrangement': 'CS(CC)=O.CC(OC(C)=O)=O.CSC(OC(C)=O)C',
-        'finkelstein_reaction': 'C[F,Br,I].[Cl-].CCl‘,	# halogen replacement with any combination 
+        'finkelstein_reaction': 'C[F,Br,I].[Cl-].CCl',	# halogen replacement with any combination 
         'regitz_diazo-transfer_reaction': 'CC(CC)=O.[N]=[N+]=[N-].CC(C(C)=[N+]=[N-])=O',
         'pictet-spengler_tetrahydroisoquinoline_synthesis': 'NCCC1=CC=CC=C1.CC=O.CC2C3=CC=CC=C3CCN2',	# from Phenylethylamine, NCCC1=CNC2=CC=CC=C21.CC=O.CC(NCC3)C4=C3C5=CC=CC=C5N4 from Tryptamine
         'wolff-kishner_reduction': 'CC(C)=O.CCC',
