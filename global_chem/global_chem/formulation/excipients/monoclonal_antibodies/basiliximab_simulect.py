@@ -19,7 +19,6 @@
              'sodium phosphate, dibasic, anhydrous': 'OP(=O)([O-])[O-].[Na+].[Na+]',
              'potassium phosphate monobasic': 'OP(=O)(O)[O-].[K+]',
              'sucrose': 'C([C@@H]1[C@H]([C@@H]([C@H]([C@H](O1)O[C@]2([C@H]([C@@H]([C@H](O2)CO)O)O)CO)O)O)O)O'
-             '
          }
 
          return smiles
