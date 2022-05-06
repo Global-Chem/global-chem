@@ -4,7 +4,7 @@
 #
 # -----------------------------------
 
-class Rituximab Truxima(object):
+class Rituximab_Truxima(object):
 
     def __init__(self):
 
