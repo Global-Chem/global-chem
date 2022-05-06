@@ -108,18 +108,18 @@ class NamedReactionsInOrganicSynthesis(object):
         'clemmensen_reduction': 'CC(C)=O.CCC',	# reduction with Zn		
         'wharton_olefin_synthesis': 'O=C(C)C1OC1C.C/C=C\C(C)O',
         'chichibabin_amination_reaction': 'CC1=CC=CC=N1.CC2=CC=CC(N)=N2',
-        'ferrier_reaction': '',
-	'ferrier_rearrangement': '',
-        'houben-hoesch_reaction': '',
-        'aza-wittig_reaction': '',
-        'meisenheimer_rearrangement': '',
-        'staudinger_reaction': '',
-        'wittig_reaction': r'CC(C)=O.C/C(C)=C(C)/C',
-        'wohl-ziegler_bromination': '',
-        'passerini_multicomponent_reaction': '',
-        'meyer-schuster_and_rupe_rearrangement': '',
-        'schmidt_reaction': '',
-        'amadori_reaction_rearrangement': '',
+        'ferrier_rearrangement_reaction': 'O=C(C)OC1C(COC(C)=O)OC=CC1OC(C)=O.O=C(C)OC2C(COC(C)=O)OC(OC)C=C2',	
+	'ferrier_II_carbocyclization_reaction': 'C=C1C(OC)C(OC)C(OC)C(OC)O1.O=C2C(OC)C(OC)C(OC)C(O)C2', 
+        'houben-hoesch_reaction': 'CC#N.OC1=CC(O)=CC=C1.OC2=CC(O)=CC=C2C(C)=O',
+        'aza-wittig_reaction': 'CP(C)(C)=NC.CC(C)=O.C/C(C)=N/C',	# with ketone to imine, with CO2 to isocyanate, with CS2 to isothiocyanate, with H2O to primary amine (=staudinger),…
+        'meisenheimer_rearrangement': '[O-][N+](C)(C)C.CN(OC)C',	# [1,2] rearrangement, [O-][N+](C)(C(C)C=C)C.CN(OC/C=C/C)[2,3] rearrangement
+        'staudinger_reaction': 'CP(C)(C)=NC.CN',	# = aza-wittig with H2O
+        'wittig_reaction': 'C[P+](C)([C-](C)C)C.CC(C)=O.C/C(C)=C(C)\C',
+        'wohl-ziegler_bromination': 'C1CCC=CC1.BrC2C=CCCC2',
+        'passerini_multicomponent_reaction': 'OC(C)=O.CC(C)=O.[C-]#[N+]C.CC(OC(C)(C)C(N(C)C)=O)=O',
+        'meyer-schuster_and_rupe_rearrangement': 'CC(CC)(C#C)O.C/C(CC)=C\C=O',	# mayer-schuster (1,3 shift of hydroxyl group), rupe (1,2 shift of hydroxyl group) to C/C(C(C)=O)=C/C 
+        'schmidt_reaction': 'CC(C)=O.[H][N-][N+]#N.CC(N(C))=O',	# with ketones to amides, with carboxylic acids to amines (CC(O)=O.[H][N-][N+]#N.CN)
+        'amadori_reaction_rearrangement': 'OC(/C=N/C)C.CC(CNC)=O',
         'meerwein-ponndorf-verley_reduction': '',
         'stephen_aldehyde_synthesis': '',
         'diels-alder_cycloaddition': '',
