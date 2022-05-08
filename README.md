@@ -169,6 +169,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                       # Suliman Sharif
 'common_regex_patterns': CommonRegexPatterns,                             # Chris Burke & Suliman Sharif
 'how_to_live_longer': HowToLiveLonger                                     # Suliman Sharif
+'monoclonal_antibodies': MonoclonalAntibodies                             # Asuka Orr & Suliman Sharif
 ```
 
 <details><summary><h3>Node List</h1><br/></summary>
@@ -202,6 +203,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Excipients Cimetidine & Acyclovir   | 14           | Vaithianathan, Soundarya, et al. “Effect of Common Excipients on the Oral Drug Absorption of Biopharmaceutics Classification System Class 3 Drugs Cimetidine and Acyclovir.” Journal of Pharmaceutical Sciences, vol. 105, no. 2, Feb. 2016, pp. 996–1005. PubMed, https://doi.org/10.1002/jps.24643.                |
 | Nickel Bidendate Phosphine Ligands  | N/A          | Clevenger, Andrew L., et al. “Trends in the Usage of Bidentate Phosphines as Ligands in Nickel Catalysis.” Chemical Reviews, vol. 120, no. 13, July 2020, pp. 6124–96. DOI.org (Crossref), https://doi.org/10.1021/acs.chemrev.9b00682.                                                                              |
 | HowToLiveLonger                     | 4            | https://github.com/geekan/HowToLiveLonger |
+| Monoclonal Antibodies               | 19           | https://labels.fda.gov/ |
 | Common Regex Patterns               | 1            |                                                                                                     
 
 </details>                            
