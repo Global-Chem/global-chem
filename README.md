@@ -72,7 +72,7 @@ pip install global-chem
 If you want to install the extensions package for extra functionality, each application can be installed independent of each other or you can install them all with the `all`:
 
 
-```bash
+```python
 
 pip install 'global-chem[graphing]'
 pip install 'global-chem[forcefields]'
