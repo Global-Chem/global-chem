@@ -1,6 +1,6 @@
  #!/usr/bin/env python3
  #
- # GlobalChem - Adalimumab Humira
+ # GlobalChem - Monoclonal Antibodies
  #
  # -----------------------------------
 
