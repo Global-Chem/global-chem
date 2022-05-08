@@ -144,7 +144,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 'montmorillonite_adsorption': MontmorilloniteAdsorption,                  # Asuka Orr & Suliman Sharif
 'common_monomer_repeating_units': CommonMonomerRepeatingUnits,            # Suliman Sharif
 'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,    # Ruibin Liu & Suliman Sharif
-'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors,  # Shaoqi Zhao & Suliman Sharif
+'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors,  # Shaoqi Zhan & Suliman Sharif
 'rings_in_drugs': RingsInDrugs,                                           # Alexander Mackerell & Suliman Sharif
 'iupac_blue_book_rings': IUPACBlueBookRings,                              # Suliman Sharif
 'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,                  # Suliman Sharif
