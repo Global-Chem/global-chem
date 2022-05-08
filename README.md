@@ -77,7 +77,7 @@ If you want to install the extensions package for extra functionality, each appl
 pip install 'global-chem[graphing]'
 pip install 'global-chem[forcefields]'
 pip install 'global-chem[bioinformatics]'
-pip install 'global-chem[cheminformaitcs]'
+pip install 'global-chem[cheminformatics]'
 pip install 'global-chem[quantum_chemistry]'
 pip install 'global-chem[development_operations]'
 pip install 'global-chem[all]'
