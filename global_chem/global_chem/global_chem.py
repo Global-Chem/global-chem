@@ -19,6 +19,10 @@ from global_chem.environment.emerging_perfluoroalkyls import EmergingPerFluoroAl
 from global_chem.materials.clay.montmorillonite_adsorption import MontmorilloniteAdsorption
 from global_chem.materials.polymers.common_monomer_repeating_units import CommonMonomerRepeatingUnits
 
+# Medicinal Chemistry - International
+
+from global_chem.medicinal_chemistry.chinese.how_to_live_longer import HowToLiveLonger
+
 # Medicinal Chemistry - Cannabinoids
 
 from global_chem.medicinal_chemistry.cannabinoids.cannabinoids import Cannabinoids
@@ -67,6 +71,7 @@ from global_chem.interstellar_space.interstellar_space import InterstellarSpace
 
 # Biopharmaceutics - Excipients
 
+from global_chem.formulation.excipients.monoclonal_antibodies.monoclonal_antibodies import MonoclonalAntibodies
 from global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir import CimetidineAndAcyclovir
 
 # Miscellaneous
@@ -311,8 +316,8 @@ class GlobalChem(object):
         'montmorillonite_adsorption': MontmorilloniteAdsorption,                 # Asuka Orr & Suliman Sharif
         'common_monomer_repeating_units': CommonMonomerRepeatingUnits,           # Suliman Sharif
         'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,   # Ruibin Liu & Suliman Sharif
-        'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors, # Shaoqi Zhao & Suliman Sharif
-        'rings_in_drugs': RingsInDrugs,                                          # Alexander Mackerell & Suliman Sharif
+        'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors, # Shaoqi Zhan & Suliman Sharif
+        'rings_in_drugs': RingsInDrugs,                                          # Alexander Mackerell Jr. & Suliman Sharif
         'iupac_blue_book_rings': IUPACBlueBookRings,                             # Suliman Sharif
         'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,                 # Suliman Sharif
         'privileged_scaffolds': PrivilegedScaffolds,                             # Suliman Sharif
@@ -334,6 +339,8 @@ class GlobalChem(object):
         'pihkal': Pihkal,                                                        # Suliman Sharif
         'nickel_ligands': NickelBidendatePhosphineLigands,                       # Suliman Sharif
         'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                      # Suliman Sharif
+        'how_to_live_longer': HowToLiveLonger,                                   # Suliman Sharif
+        'monoclonal_antibodies': MonoclonalAntibodies,                           # Asuka Orr & Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                            # Chris Burke & Suliman Sharif
     }
 

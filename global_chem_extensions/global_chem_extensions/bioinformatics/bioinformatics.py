@@ -134,3 +134,16 @@ class Bioinformatics(object):
         )
 
         return global_chem_bacteria
+
+    @staticmethod
+    def initialize_monoclonal_antibody(
+            name = None
+    ):
+
+        from global_chem_extensions.bioinformatics.applications.monoclonal_antibodies import GlobalChemMonoclonalAntibody
+
+        global_chem_monoclonal_antibody = GlobalChemMonoclonalAntibody(
+            name = name
+        )
+
+        return global_chem_monoclonal_antibody

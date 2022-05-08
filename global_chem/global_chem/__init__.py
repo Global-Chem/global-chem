@@ -14,6 +14,10 @@ from global_chem.environment.emerging_perfluoroalkyls import EmergingPerFluoroAl
 from global_chem.materials.clay.montmorillonite_adsorption import MontmorilloniteAdsorption
 from global_chem.materials.polymers.common_monomer_repeating_units import CommonMonomerRepeatingUnits
 
+# Medicinal Chemistry - International
+
+from global_chem.medicinal_chemistry.chinese.how_to_live_longer import HowToLiveLonger
+
 # Medicinal Chemistry - Cannabinoids
 
 from global_chem.medicinal_chemistry.cannabinoids.cannabinoids import Cannabinoids
@@ -60,6 +64,7 @@ from global_chem.interstellar_space.interstellar_space import InterstellarSpace
 
 # Biopharmaceutics - Excipients
 
+from global_chem.formulation.excipients.monoclonal_antibodies.monoclonal_antibodies import MonoclonalAntibodies
 from global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir import CimetidineAndAcyclovir
 
 # Miscellaneous
