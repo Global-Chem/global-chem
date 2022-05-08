@@ -7,4 +7,4 @@ for a long time to learn.
 I only want to learn more and anything that prevents that or doesn't help. Learning is done through love and friendship and this project serves just that purpose
 as we try to find the thin layer of data that connects us all. 
 
-Be safe, code, discuss post accordingly. Please send me an e-mail if something offended you and I will take action.
+Be safe, code, discuss post accordingly. Please send me an e-mail if something happens and I will take action.
