@@ -127,7 +127,7 @@ class NamedReactionsInOrganicSynthesis(object):
         'balz-schiemann_reaction': 'NC1=CC=CC=C1.FC2=CC=CC=C2',
         'dakin-west_reaction': 'OC(C(C)N)=O.CC(C(C)NC(C)=O)=O',
         'stevens_rearrangement': 'CC[N+](C)(C)C.CC(N(C)C)C',	# quaternary ammonium salts to amines or CC[S+](C)C.CC(SC)C sulfonium salts to sulfides 
-        'nenitzescu_indole_synthesis': r'O=C1C=CC(C=C1)=O.O=C(OC)/C=C(C)/NC.OC2=CC=C(N(C)C(C)=C3C(OC)=O)C3=C2‘,
+        'nenitzescu_indole_synthesis': r'O=C1C=CC(C=C1)=O.O=C(OC)/C=C(C)/NC.OC2=CC=C(N(C)C(C)=C3C(OC)=O)C3=C2',
         'criegee_oxidation': 'OCCO.C=O',
         'riley_selenium_dioxide_oxidation': 'CCC(CC)=O.CCC(C(C)=O)=O',	# R2: CC(C(CC)=O)=O oxidation of methylene groups adjacent to carbonyls
         'baker-venkataraman_rearrangement': 'CC(OC1=CC=CC=C1C(CC)=O)=O.OC2=CC=CC=C2C(C(C)C(C)=O)=O',
@@ -144,13 +144,13 @@ class NamedReactionsInOrganicSynthesis(object):
         'carroll_rerrangement': 'CC(CC(OCC=C)=O)=O.CC(CCC=C)=O',
         'cope_rearrangement': r'C=CCC(C)C=C.C=CCC/C=C/C',
         'ramberg–bäcklund_rearrangement': r'CCS(C(Br)C)(=O)=O.C/C=C\C',
-        'wittig-[1,2]-_and_[2,3]-rearrangement': '',
-        'alder_reaction': '',
+        'wittig-[1,2]-_and_[2,3]-rearrangement': r'CCOC(CC)/C=C/C.CC(C(/C=C/C)CC)O', # [2,3] product CC(C(/C=C/CC)C)O
+        'alder_reaction': '', # alder without diels? haha
         'hetero_diels-alder_reaction': 'C=CC=C.C1=CCCCC1',
         'birch_reduction': 'C1=CC=CC=C1.C2=CCC=CC2',
         'jones_oxidation_primary_alcohol': 'CCO.CC(O)=O',
 	'jones_oxidation_secondary_alcohol': 'CC(O)C.CC(C)=O',
-        'peterson_olefination': '',
+        'peterson_olefination': r'CC(CC)=O.C[C-]([H])[Si](C)(C)C.C/C(CC)=C\C',	# R2 C/C(CC)=C/C (cis/trans alkenes)
         'ritter_reaction': '',
         'cope_elimination': '',
         'cornforth_rearrangement': '',
