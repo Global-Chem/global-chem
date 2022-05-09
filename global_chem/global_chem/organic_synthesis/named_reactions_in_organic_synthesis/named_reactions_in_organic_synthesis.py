@@ -151,25 +151,25 @@ class NamedReactionsInOrganicSynthesis(object):
         'jones_oxidation_primary_alcohol': 'CCO.CC(O)=O',
 	'jones_oxidation_secondary_alcohol': 'CC(O)C.CC(C)=O',
         'peterson_olefination': r'CC(CC)=O.C[C-]([H])[Si](C)(C)C.C/C(CC)=C\C',	# R2 C/C(CC)=C/C (cis/trans alkenes)
-        'ritter_reaction': '',
-        'cope_elimination': '',
-        'cornforth_rearrangement': '',
-        'bamford-stevens-shapiro_olefination': '',
-        'grob_fragmentation': '',
-        'wharton_fragmentation': '',
-        'stork_enamine_synthesis': '',
-        'alkene_olefin_metathesis': '',
-        'brown_hydroboration_reaction': '',
-        'kornblum_oxidation': '',
-        'brook_rearrangement': '',
-        'doering-laflamme_allene_synthesis': '',
-        'horner-wadsworth-emmons_olefination': '',
-        'simmons-smith_cyclopropanation': '',
+        'ritter_reaction': 'CC(C)(O)C.N#CC.CC(C)(NC(C)=O)C',
+        'cope_elimination': 'CCCN(C)C.CN(O)C',	# R2 C=CC
+        'cornforth_rearrangement': 'CC1=NC(C(C)=O)=C(CC)O1.CC2=NC(C(CC)=O)=C(C)O2',
+        'bamford-stevens-shapiro_olefination': r'CC(CC)=O.C/C=C/C',	# R2 C/C=C\C (cis/trans alkenes)
+        'grob_fragmentation': 'BrC1CCC(Br)CC1.C=CCCC=C',	# original reaction or [F,Cl,Br,I]CCCOC.C[O+]=C + R2 C=C (similar to wharton fragmentation)
+        'wharton_fragmentation': 'OC(C)(C)C(C)(C)C(C)(C)[F,Cl,Br,I].O=C(C)C',	# R2 C/C(C)=C(C)\C
+        'stork_enamine_synthesis': 'O=C1CCCCC1.C2CNCC2.C3(N4CCCC4)=CCCCC3',	# enamine = temporary activator, further reactions: alkylation, acylation, and conjugate addition	
+        'alkene_olefin_metathesis': r'CC/C=C\CC.C/C=C\C.C/C=C\CC',	# name reaction? haha 
+        'brown_hydroboration_reaction': 'CC=C.CCCO',	# with BH3
+        'kornblum_oxidation': '[Br,I]CC1=CC=CC=C1.C=CC2=CC=CC=C2',	# or with carbonyl group [Br,I]CC1=CC=CC=C1.C=CC2=CC=CC=C2
+        'brook_rearrangement': 'C[Si](C)(CO)C.C[Si](C)(OC)C',
+        'doering-laflamme_allene_synthesis': r'C/C(C)=C(C)/C.[Cl,Br]C[Cl,Br].CC(C)=C=C(C)C',
+        'horner-wadsworth-emmons_olefination': r'O=P(OC)(CC)OC.CC=O.C/C=C/C',
+        'simmons-smith_cyclopropanation': r'C/C(C)=C(C)/C.ICI.CC1(C)C(C)(C)C1',
         'heine_reaction': 'O=C(C)N1CC1.CC2=NCCO2',  # Aziridine synthesis into oxazolines are important, transformations for potential warheads this one makes me happy.
-        'ugi_multicomponent_reaction': '',
-        'vilsmeier-haack_formylation': '',
-        'vinylcyclopropane-cyclopetene_rearrangement': '',
-        'barton_nitrile_ester_reaction': '',
+        'ugi_multicomponent_reaction': 'CC(O)=O.CN.CC(C)=O.[C-]#[N+]C.CC(N(C)C(C)(C)C(NC)=O)=O',
+        'vilsmeier-haack_formylation': 'CN(C)C1=CC=CC=C1.O=CN(C)C.O=CC2=CC=C(N(C)C)C=C2',
+        'vinylcyclopropane-cyclopetene_rearrangement': 'C=CC1CC1.C2=CCCC2',
+        'barton_nitrile_ester_reaction': 'CCCCON=O.OCCCCN=O',
         'kröhnke_pyridine_synthesis': 'O=CC[N+]1=CC=CC=C1.C2=CN=CC=C2', # hahaha
         'barton_radical_decarboxylation_reaction': '',
         'corey-chaykovsky_epoxidation_and_cyclopropanation': '',
