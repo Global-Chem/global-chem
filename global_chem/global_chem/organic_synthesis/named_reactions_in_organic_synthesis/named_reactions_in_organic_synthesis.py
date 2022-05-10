@@ -171,16 +171,16 @@ class NamedReactionsInOrganicSynthesis(object):
         'vinylcyclopropane-cyclopetene_rearrangement': 'C=CC1CC1.C2=CCCC2',
         'barton_nitrile_ester_reaction': 'CCCCON=O.OCCCCN=O',
         'kröhnke_pyridine_synthesis': 'O=CC[N+]1=CC=CC=C1.C2=CN=CC=C2', # hahaha
-        'barton_radical_decarboxylation_reaction': '',
-        'corey-chaykovsky_epoxidation_and_cyclopropanation': '',
-        'demayo_cycloaddition_enone-alkene_[2+2]_photocycloaddition': '',
-        'nagata_hydrocyanation_reaction': '',
-        'castro-stevens_coupling': '',
-        'corey-winter_olefination': '',
-        'pfitzner-moffatt_oxidation': '',
-        'eschenmoser-claisen_rearrangement': '',
-        'oxy-cope_rearrangement': '',
-        'tsuji-trost_reaction': '',
+        'barton_radical_decarboxylation_reaction': 'CC(O)=O.C',	# (R2 O=C=O) or with acyl chloride CC(Cl)=O.C
+        'corey-chaykovsky_epoxidation_and_cyclopropanation': 'CC(C)=S.CC(C)=O.CC1(C)OC1',
+        'demayo_cycloaddition_enone-alkene_[2+2]_photocycloaddition': 'CC(CC(C)=O)=O.C/C=C\C.CC(C(C)C(C)CC(C)=O)=O',	# 1,3 diketone with alkene to cyclobutane (= [2+2] cycloaddition) further to 1,5 diketone   
+        'nagata_hydrocyanation_reaction': r'CC(/C=C/C)=O.CC(CC(C#N)C)=O',
+        'castro-stevens_coupling': '[Cl,Br,I]C1=CC=CC=C1.[Cu]C#CC.CC#CC2=CC=CC=C2',
+        'corey-winter_olefination': r'CC(C)(O)C(C)(C)O.C/C(C)=C(C)/C',
+        'pfitzner-moffatt_oxidation': 'CCO.CC=O',	# primary alcohol to aldehy (no further oxidation to carboxylic acids); secondary alcohols to ketones CC(C)O.CC(C)=O
+        'eschenmoser-claisen_rearrangement': 'CCOC=C.C=CCO.O=CCCC=C',
+        'oxy-cope_rearrangement': 'C=CCC(O)C=C.C=CCCCC=O',
+        'tsuji-trost_reaction': r'C/C=C/CCl.C/C=C/C/C(O)=C/C',	# instead of Cl other leaving groups (carbonates/phenols/phosphates/…), instead of enolate other nucleophiles (malonates/amines/sulfones/…)
         'tsuji-wilkinson_decarbonylation': '',
         'wittig_reaction-schlosser_modification': '',
         'aza-claisen_rearrangement': '',
