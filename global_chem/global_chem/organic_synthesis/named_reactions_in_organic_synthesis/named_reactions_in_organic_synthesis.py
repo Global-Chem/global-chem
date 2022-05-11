@@ -181,32 +181,32 @@ class NamedReactionsInOrganicSynthesis(object):
         'eschenmoser-claisen_rearrangement': 'CCOC=C.C=CCO.O=CCCC=C',
         'oxy-cope_rearrangement': 'C=CCC(O)C=C.C=CCCCC=O',
         'tsuji-trost_reaction': r'C/C=C/CCl.C/C=C/C/C(O)=C/C',	# instead of Cl other leaving groups (carbonates/phenols/phosphates/…), instead of enolate other nucleophiles (malonates/amines/sulfones/…)
-        'tsuji-wilkinson_decarbonylation': '',
-        'wittig_reaction-schlosser_modification': '',
-        'aza-claisen_rearrangement': '',
-        'aza-cope_rearrangement': '',
-        'eschenmoser-tanabe_fragmentation': '',
-        'krapcho_dealkoxycarbonylation': '',
-        'mitsunobo_reaction': '',
-        'seyferth-gilber_homologation': '',
-        'baylis-hillman_reaction': '',
-        'heck_reaction': r'CC=C.C/C=C/C',
-        'minisci_reaction': '',
-        'mislow-evans_rearrangement': '',
-        'prins-pinacol_rearrangement': '',
-        'schwartz_hydrozirconation': '',
-        'burgess_dehydration_reaction': '',
-        'johnson-claisen_rearrangement': '',
-        'aza-[2,3]-wittig_rearrangement': '',
-        'corey-kim_oxidation': '',
-        'eschenmoser_methenylation': '',
-        'hajos-parrish_reaction': '',
-        'nicholas_reaction': '',
-        'bergman_cycloaromatization_reaction': '',
-        'corey-fuch_alkyne_synthesis': '',
-        'kumada_cross_coupling_reaction': '',
-        'mcmurry_coupling': '',
-        'saegusa_oxidation': '',
+        'tsuji-wilkinson_decarbonylation': r'O=C/C=C/C1=CC=CC=C1.C=CC2=CC=CC=C2',	# reaction also with acyl chloride
+        'wittig_reaction-schlosser_modification': r'CC=O.CC[P+](C)(C)C.C/C=C/C',
+        'aza-claisen_rearrangement': r'C=CCN(C)C=C.C=CCC/C=N/C',
+        'aza-cope_rearrangement': 'C=CCNC=C.N=CCCC=C', # aza-1 (very similar to aza-claisen); also aza-2, aza-3 rearrangement
+        'eschenmoser-tanabe_fragmentation': 'CC(C1(C)C(C)(C)O1)=O.CC(C)=O',	# R2 CC#CC
+        'krapcho_dealkoxycarbonylation': 'CC(C(C)C(OC)=O)=O.CC(CC)=O',
+        'mitsunobo_reaction': 'OC(C)CCC.CC(OC(C)CC)=O',
+        'seyferth-gilber_homologation': 'CC(C)=O.O=P(OC)(OC)C=[N+]=[N-].CC#CC',	# with aldehydes to CC#C
+        'baylis-hillman_reaction': 'CC=O.C=CC(OC)=O.CC(O)C(C(OC)=O)=C',		# insted of ester other EWGs
+        'heck_reaction': r'C[F,Cl,Br,I].CC=C.C/C=C/C',
+        'minisci_reaction': 'C1=CC=CN=C1.OC(C(C)(C)C)=O.CC(C)(C)C2=NC=CC=C2',
+        'mislow-evans_rearrangement': r'O=S(C/C=C/C)C.C=CC(O)C',
+        'prins-pinacol_rearrangement': 'C=C1C(CCC(OC)OC)(O[Si](C)(C)C)CCCC1.O=C2C3(CCC(OC)C3)CCCC2',
+        'schwartz_hydrozirconation': 'CC(N(C)C)=O.CC=O',	# with schwarz’s reagent = zirconozene hydrochloride 
+        'burgess_dehydration_reaction': r'CC(C)C(C)(C)O.C/C(C)=C(C)/C',	# with burgess reagent	
+        'johnson-claisen_rearrangement': 'C=CCO.CC(OC)(OC)OC.C=CCCC(OC)=O',
+        'aza-[2,3]-wittig_rearrangement': r'CN(CC#N)C/C=C/C.C=CC(C)C(C#N)NC',
+        'corey-kim_oxidation': 'CC(O)C.CC(C)=O',	# aldehydes from primary alcohols CCO.CC=O
+        'eschenmoser_methenylation': 'CC(CC)=O.CC(C(C)=C)=C',	# with eschenmoser salt
+        'hajos-parrish_reaction': 'O=C1C(C)(CCC(C)=O)C(CC1)=O.O=C2CCC3(C)C(CCC3=O)(O)C2',	# hajos–parrish–eder–sauer–wiechert_reaction ?
+        'nicholas_reaction': 'CC#CC(C)(C)OC.CC#CC(C)(C)O',
+        'bergman_cycloaromatization_reaction': r'C#C/C=C\C#C.C1=CC=CC=C1',
+        'corey-fuch_alkyne_synthesis': r'C/C=C(Br)/Br.CC#C',
+        'kumada_cross_coupling_reaction': 'C[Mg][Cl,Br,I].C[Cl,Br,I].CC',
+        'mcmurry_coupling': r'O=C1CCCCC1.C2(/CCCCC2)=C3CCCCC/3',
+        'saegusa_oxidation': r'CCCC=O.C/C=C/C=O',	# with aldehydes; with ketones CCCC(C)=O.C/C=C/C(C)=O
         'julia-lythgoe_olefination': '',
         'mukaiyama_aldol_reaction': '',
         'pauson-khand_reaction': '',
