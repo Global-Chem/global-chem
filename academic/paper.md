@@ -1,8 +1,5 @@
 ---
 title: 'Global-Chem: Collections of common small molecules and their SMILES/SMARTS to support diverse chemical communities'
-tags:
-  - Python
-  - Cheminformatics
 authors:
   - name: Suliman Sharif [first author]
     orcid: 0000-0002-1342-9258
@@ -11,13 +8,13 @@ authors:
     orcid: 0000-0003-4628-526X
     affiliation: 1
   - name: Bettina Lier
-    orcid: 
+    orcid: XXX
     affiliation: 4
   - name: Anastasia Croitoru
-    orcid: 
+    orcid: XXX
     affiliation: 5
   - Jacob Weiner
-    orcid: 
+    orcid: XXX
     affiliation: 1
   - name: Sunhwan Jo
     affiliation: 2
@@ -32,7 +29,7 @@ authors:
   - name: Chris Burke
     affiliation: 2
   - name: iwatopben
-    orcid: 
+    orcid: XXX
     affiliation: 6
   - name: Aarion Romany
     affiliation: 1
@@ -54,8 +51,6 @@ affiliations:
     index: 5
   - name: Takeda Pharmaceuticals
     index: 6
-date: 14 January 2022
-bibliography: paper.bib
 ---
 
 # Introduction
