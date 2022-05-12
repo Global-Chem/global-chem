@@ -13,7 +13,7 @@ authors:
   - name: Anastasia Croitoru
     orcid: XXX
     affiliation: 5
-  - Jacob Weiner
+  - name: Jacob Weiner
     orcid: XXX
     affiliation: 1
   - name: Sunhwan Jo
