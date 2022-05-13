@@ -207,24 +207,24 @@ class NamedReactionsInOrganicSynthesis(object):
         'kumada_cross_coupling_reaction': 'C[Mg][Cl,Br,I].C[Cl,Br,I].CC',
         'mcmurry_coupling': r'O=C1CCCCC1.C2(/CCCCC2)=C3CCCCC/3',
         'saegusa_oxidation': r'CCCC=O.C/C=C/C=O',	# with aldehydes; with ketones CCCC(C)=O.C/C=C/C(C)=O
-        'julia-lythgoe_olefination': '',
-        'mukaiyama_aldol_reaction': '',
-        'pauson-khand_reaction': '',
-        'pinnick_oxidation': '',
-        'polonovski_reaction': '',
-        'stetter_reaction': '',
-        'overman_rearrangement': '',
-        'alkyne_metathesis': '', # Huh....
-        'corey-nicolau_macrolactonization': '',
-        'danishefskys_diene_cycloaddition': '',
-        'rubottom_oxidation': '',
-        'swern_oxidation': 'CC(C)O.CC(C)=O',
-        'barton-mccombie_radical_deoxygenation_reaction': '',
-        'dötz_benzannulation_reaction': '',
-        'sonogashira_cross-coupling': '',
-        'enders_samp_ramp_hydrazone_alkylation': '',
-        'negishi_cross-coupling': '',
-        'sakurai_allylation': '',
+        'julia-lythgoe_olefination': r'CCS(C1=CC=CC=C1)(=O)=O.CC=O.C/C=C/C',
+        'mukaiyama_aldol_reaction': r'CC=O.C/C(O[Si](C)(C)C)=C/C.CC(O)C(C)C(C)=O',	# syn and anti product
+        'pauson-khand_reaction': r'CC#CC.C/C=C\C.CC1=C(C)C(C)C(C)C1=O',	# [2+2+1] cycloaddition with [C-]#[O+] and dicobalt octacarbonyl 
+        'pinnick_oxidation': r'C/C(C)=C(C=O)\C.C/C(C)=C(C(O)=O)\C',
+        'polonovski_reaction': 'CC=O.[O-]Cl=O.CC(O)=O',
+        'stetter_reaction': 'CC=O.C=CC(C)=O.CC(CCC(C)=O)=O',
+        'overman_rearrangement': r'C/C=C/C(O)C.N#CC(Cl)(Cl)Cl.CC(NC(C(Cl)(Cl)Cl)=O)/C=C/C',	# last step is the actual rearrangement from C/C=C/C(OC(C(Cl)(Cl)Cl)=N)C to CC(NC(C(Cl)(Cl)Cl)=O)/C=C/C
+        'alkyne_metathesis': 'CC#CC.C#C.CC#C', # Huh....
+        'corey-nicolau_macrolactonization': 'OC(CCCCO)=O.O=C1OCCCC1',	# lactones from hydroxy acids
+        'danishefskys_diene_cycloaddition': r'CC(/C=C/OC)=O.O=C(C=C1)OC1=O.O=C2OC(C3CC(CC(OC)C32)=O)=O',
+        'rubottom_oxidation': 'CC(C)=O.CC(CO)=O',	# ketone to alpha-hydroxy ketone; also with aldehydes
+        'swern_oxidation': 'CC(O)C.CC(C)=O',	# secondary alcohols to ketones; also primary alcohols to aldehydes; with oxalyl chloride, DMSO and organic base
+        'barton-mccombie_radical_deoxygenation_reaction': 'CO.C',	# radical substitution (through carbonothioyl)
+        'dötz_benzannulation_reaction': r'C/C(C)=C(C(OC)=[Cr](C#O)(C#O)(C#O)(C#O)C#O)\C.CC#CC.CC1=C(C)C(OC)=C(C)C(C)=C1O',	# also wulff _dötz_reaction ?
+        'sonogashira_cross-coupling': 'C#CC.[Cl,Br,I]C1=CC=CC=C1.CC#CC2=CC=CC=C2',
+        'enders_samp_ramp_hydrazone_alkylation': 'CCC(C)=O.[F,Cl,Br,I]CC.CC(CC)C(C)=O',	# through S or R AMP (amino-methoxymethly-pyrrolidine) COCC1N(N)CCC1
+        'negishi_cross-coupling': '[Cl,Br,I]CC.C[Zn][Cl,Br,I].CCC',
+        'sakurai_allylation': 'CC(C)=O.CC(O)(CC=C)C',
         'stille_cross-coupling': '',
         'tebbe_olefination': '',
         'davis_oxaziridine_oxidation': '',
