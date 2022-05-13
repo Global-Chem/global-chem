@@ -225,21 +225,21 @@ class NamedReactionsInOrganicSynthesis(object):
         'enders_samp_ramp_hydrazone_alkylation': 'CCC(C)=O.[F,Cl,Br,I]CC.CC(CC)C(C)=O',	# through S or R AMP (amino-methoxymethly-pyrrolidine) COCC1N(N)CCC1
         'negishi_cross-coupling': '[Cl,Br,I]CC.C[Zn][Cl,Br,I].CCC',
         'sakurai_allylation': 'CC(C)=O.CC(O)(CC=C)C',
-        'stille_cross-coupling': '',
-        'tebbe_olefination': '',
-        'davis_oxaziridine_oxidation': '',
-        'nozaki-hiyama-kishi_coupling': '',
-        'bartoli_indole_synthesis': '',
-        'luche_reduction': '',
-        'roush_asymmetric_allylation': '',
-        'midland_alpine_borane_reduction': '',
-        'suzuki_cross-coupling': '',
-        'yamaguchi_macrolactonization': '',
-        'kagan-molander_samarium-diiodide_coupling': '',
-        'noyori_asymmetric_hydrogenation': '',
-        'sharpless_asymmetric_dihydroxylation_reaction': '',
-        'Sharpless_asymmetric_epoxidation_reaction': '',
-        'corey-bakashi-shibata_reduction': '',
+        'stille_cross-coupling': r'[Cl,Br,I]C1=CC=CC=C1.[Sn]/C=C/C.C/C=C/C2=CC=CC=C2',
+        'tebbe_olefination': 'CC(C)=O.CC(C)=C',		# from ketones; also with aldehydes, esters, amides 
+        'davis_oxaziridine_oxidation': 'CC(CC)=O.CC(C(O)C)=O',	# using 2-(phenylsulfonyl)-3-phenyloxaziridine (= Davis readent)
+        'nozaki-hiyama-kishi_coupling': 'CC=O.[F,Cl,Br,I]CC.CC(O)CC',
+        'bartoli_indole_synthesis': 'O=[N+](C1=CC=CC=C1)[O-].C=C[Mg]Br.C23=CC=CC=C2C=CN3',
+        'luche_reduction': r'C/C=C/C(C)=O.C/C=C/C(O)C',		# with NaBH4 and lanthanide chlorides (usually CeCl3)
+        'roush_asymmetric_allylation': 'CC=O.C=CCB1OCCO1.CC(O)CC=C',	
+        'midland_alpine_borane_reduction': 'CC#CC(C)=O.CC#CC(O)C',	# with Alpine borane: B1(C2CCCC1CCC2)C3CC4CC(C3C)C4(C)C
+        'suzuki_cross-coupling': '[Cl,Br,I]C1=CC=CC=C1.OB(O)C2=CC=CC=C2.C3(C4=CC=CC=C4)=CC=CC=C3',
+        'yamaguchi_macrolactonization': 'OC(CCCCO)=O.O=C1OCCCC1',	# lactones from hydroxycarboxylic acids with 2,4,6-trichlorobenzoyl chloride and DMAP(similar corey-nicolau_macrolactonization)
+        'kagan-molander_samarium-diiodide_coupling': 'CC(C)=O.[F,Cl,Br,I]CC.CC(O)(CC)C',	# with SmI2
+        'noyori_asymmetric_hydrogenation': 'CC(C1=CC=CC=C1)=O.CC(O)C2=CC=CC=C2',	# cis and trans products, with R/S-BINAP-Ru and H2
+        'sharpless_asymmetric_dihydroxylation_reaction': r'C1(/C=C/C2=CC=CC=C2)=CC=CC=C1.OC(C(O)C3=CC=CC=C3)C4=CC=CC=C4',	# enantioselectivity through (DHQD)2PHAL/(DHQ)2PHAL
+        'sharpless_asymmetric_epoxidation_reaction': r'C/C(CO)=C(C)\C.CC1(CO)C(C)(C)O1',	# enantioselectivity through (+)/(-)-DET
+        'corey-bakashi-shibata_reduction': 'CCC(C)=O.CCC(O)C',	# achiral ketone to chiral alcohol
         'danheiser_cyclopentene_annulation': '',
         'evans_aldol_reaction': '',
         'weinreb_ketone_synthesis': '',
