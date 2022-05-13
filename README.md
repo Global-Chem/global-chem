@@ -58,7 +58,7 @@ Overview
 
 Installation 
 ============
-https://colab.research.google.com/drive/1E6roBxG4XeSHW_50jYy25A08aJKkBdPu?usp=sharing
+
 GlobalChem is going to be distribute via PyPi and as the tree and it's extensions grows we can expand it to other pieces of software
 making it accessible to all regardless of what you use. Alternatively, you could have a glance at the source code and copy/paste
 it yourself.
