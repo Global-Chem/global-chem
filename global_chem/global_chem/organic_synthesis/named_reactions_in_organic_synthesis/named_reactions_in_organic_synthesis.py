@@ -240,33 +240,33 @@ class NamedReactionsInOrganicSynthesis(object):
         'sharpless_asymmetric_dihydroxylation_reaction': r'C1(/C=C/C2=CC=CC=C2)=CC=CC=C1.OC(C(O)C3=CC=CC=C3)C4=CC=CC=C4',	# enantioselectivity through (DHQD)2PHAL/(DHQ)2PHAL
         'sharpless_asymmetric_epoxidation_reaction': r'C/C(CO)=C(C)\C.CC1(CO)C(C)(C)O1',	# enantioselectivity through (+)/(-)-DET
         'corey-bakashi-shibata_reduction': 'CCC(C)=O.CCC(O)C',	# achiral ketone to chiral alcohol
-        'danheiser_cyclopentene_annulation': '',
-        'evans_aldol_reaction': '',
-        'weinreb_ketone_synthesis': '',
-        'buchwald-hartwig_cross-coupling': '',
-        'dess-martin_oxidation': '',
-        'fleming-tamao_oxidation': '',
-        'danheiser_benzannulation': '',
-        'stille_carbonylative_cross-couping': '',
-        'enyne_metathesis': '',
-        'keck_macrolactonization': '',
-        'ley_oxidation': '',
-        'takai-utimoto_olefination': '',
-        'stille-kelly_coupling': '',
-        'kahne_glycosidation': '',
-        'kulinkovich_reaction': '',
-        'jacobsen-katsuki_epoxidation': '',
-        'larock_indole_synthesis': '',
-        'keck_asymmetric_allylation': '',
-        'keck_radical_allylation': '',
-        'petasis_boronic_acid-mannich_reaction': '',
-        'myers_asymmetric_alkylation': '',
-        'smith-tietze_multicomponent_dithiane_linchpin_coupling': '',
-        'jacobsen_hydrolytic_kinetic_resolution_of_epoxides': '',
-        'miyaura boration_reaction': '',
-        'petasis-ferrier_rearrangement': '',
-        'sharpless_asymmetric_aminohydroxylation_reaction': '',
-        'shi_asymmetric_epoxidation': '',
+        'danheiser_cyclopentene_annulation': 'C=CC(C)=O.C=C=C(C)[Si](C)(C)C.CC1=C([Si](C)(C)C)CCC1C(C)=O',
+        'evans_aldol_reaction': 'CC=O.CCC(N1C(C(C)C)COC1=O)=O.O=C(N2C(C(C)C)COC2=O)C(C)C(O)C',
+        'weinreb_ketone_synthesis': 'CC(Cl)=O.CC(C)=O',	# intermediate product CC(N(C)OC)=O (weinreb amide); with R-Li or R-MgBr to ketone; with LiAlH4 to aldehyd CC=O
+        'buchwald-hartwig_cross-coupling': '[Cl,Br,I]C1=CC=CC=C1.CN.CNC2=CC=CC=C2',
+        'dess-martin_oxidation': 'CC(O)C.CC(C)=O',	# using Dess-Martin-periodinane O=C1C2=CC=CC=C2[I](OC(C)=O)(OC(C)=O)(OC(C)=O)O1
+        'fleming-tamao_oxidation': 'C[Si](C(C)C)(C)C1=CC=CC=C1.CC(O)C',	# intermediate product CC(C)[Si](C)(C)[Cl,Br,I]
+        'danheiser_benzannulation': '[F,Cl,Br,I]C#CC.O=C1C(C)C(C)=C1CC.OC2=C(C)C(C)=C(CC)C([F,Cl,Br,I])=C2C',
+        'stille_carbonylative_cross-couping': 'ClC(C1=CC=CC=C1)=O.O=C(CC)C2=CC=CC=C2',	# with organotin CC[Sn](CC)(CC)CC to Cl[Sn](CC)(CC)CC
+        'enyne_metathesis': r'CC#C.C=CC.CC(/C=C/C)=C',	# alkyne + alkene to 1,3-diene
+        'keck_macrolactonization': 'OCCCC(O)=O.O=C1OCCC1',	# with DMAP and DCC
+       'ley_oxidation': 'CC(O)C.CC(C)=O',	#  with TRAP and NMO
+        'takai-utimoto_olefination': r'O=CC1=CC=CC=C1.[Br,I]/C=C/C2=CC=CC=C2',	# with THF
+        'stille-kelly_coupling': 'BrC1=CC=CC=C1N(S(=O)(C)=O)C2=C(Br)C=CC=N2.O=S(N3C4=CC=CC=C4C5=C3N=CC=C5)(C)=O',
+        'kahne_glycosidation': 'O=S(C1=CC=CC=C1)C2C(OC(C)=C)C(OC(C)=C)C(OC(C)=C)C(OC(C)=O)O2.CCO.CC(OC3OC(OCC)C(OC(C)=C)C(OC(C)=C)C3OC(C)=C)=O',
+        'kulinkovich_reaction': 'CC(OC)=O.CC[Mg]Br.CC1(O)CC1',
+        'jacobsen-katsuki_epoxidation': r'C/C(C)=C(C)/C.CC1(C)OC1(C)C',	# cis and trans products
+        'larock_indole_synthesis': 'IC1=CC=CC=C1NC.CC#CC.CC2=C(C)N(C)C3=CC=CC=C32',
+        'keck_asymmetric_allylation': 'CC=O.CC(O)CC=C',	# with allyl tributyltin C=CC[Sn](CCCC)(CCCC)CCCC
+        'keck_radical_allylation': 'COCC1OC([F,Cl,Br,I])C(COC)C(COC)C1COC.COCC2OC(CC=C)C(COC)C(COC)C2COC',	# with allyl tributyltin C=CC[Sn](CCCC)(CCCC)CCCC
+        'petasis_boronic_acid-mannich_reaction': 'CNC.CC=O.OB(O)CC.CC(CC)N(C)C',	# instead of aryl boronic acid also vinyl boronic acid possible 
+        'myers_asymmetric_alkylation': 'OC(C(C)N(C)C(CC)=O)C1=CC=CC=C1.[Br,I]CC.OC(C(C)N(C)C(C(CC)C)=O)C2=CC=CC=C2',
+        'smith-tietze_multicomponent_dithiane_linchpin_coupling': 'CC1SCCCS1.CC2CO2.CC(OC)CC3(CC(O)C)SCCCS3',	# with CCCC[Li]
+        'jacobsen_hydrolytic_kinetic_resolution_of_epoxides': 'CC1(C)C(C)(C)O1.OC(C)(C)C(C)(C)O',	# with Jacobsen's Co(III)salen catalysts; with Jacobsen's Cr(III)salen catalysts insteadd of one OH group anionic species
+        'miyaura_boration_reaction': 'COB(OC)B(OC)OC.[Br,I]C1=CC=CC=C1.COB(OC)C2=CC=CC=C2',
+        'petasis-ferrier_rearrangement': 'C=C1OC(C)OC(C)C1.O=C2CC(C)OC(C)C2',
+        'sharpless_asymmetric_aminohydroxylation_reaction': r'C/C(C)=C(C)/C.OC(C)(C)C(C)(NS(=O)(C)=O)C',	# ms or other amine protecting groups
+        'shi_asymmetric_epoxidation': r'C/C(C)=C(C)/C.CC1(C)C(C)(C)O1' 	# with Shi’s catalyst
       }
       
       return smiles
