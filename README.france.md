@@ -1,11 +1,8 @@
 <h1 align="center">Global-Chem: A Chemical Knowledge Graph of common small molecules and their IUPAC/SMILES/SMARTS for selection of compounds relevant to diverse chemical communities </h1>
 
-Global Chem est une base de données de graphes open source et une API pour les listes de produits chimiques courants et rares utilisant IUPAC en entrée et SMILES/SMARTS en sortie. Comme
-dont j'ai surtout besoin pour moi-même alors que je cherche à travers l'infini chimique.
+Global Chem est une base de données de graphes open source et une API pour les listes de produits chimiques courants et rares utilisant IUPAC en entrée et SMILES/SMARTS en sortie, comme dont j'ai surtout besoin pour moi-même alors que je cherche à travers l'infini chimique.
 
-J'ai trouvé ces listes écrites dans l'histoire utiles, elles proviennent de différents domaines mais sont agrégées
-dans le format le plus courant des chimistes organiques (IUPAC) et le langage commun du cheminformaticien (SMILES) et pour
-correspondance de motifs (SMART).
+J'ai trouvé ces listes écrites dans l'histoire utiles, elles proviennent de différents domaines mais sont agrégées dans le format le plus courant des chimistes organiques (IUPAC) et le langage commun du cheminformaticien (SMILES) et pour correspondance de motifs (SMART).
 
 <p align="center">
   <img width="800" height="400" src="images/globalchemlogo.png">
@@ -49,17 +46,18 @@ correspondance de motifs (SMART).
 
 | Application                 | Introduction                                                                                                                                               | Utilisation avancée                                                                                 |                                                                                                                                                            |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| champs de force             | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hW0K6V5zPDFdZvFkYarbOr9wRoof2n4s?usp=sharing) | CGenFF Molecule Loader et similarité des types d'atomes                                             | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1OEm1dACd_wkw_JQITemy18pgfKdE4XlX?usp=sharing) |
-| bioinformatique             | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1sCNw9FIcFfTEgmrdokADXgJGnsPEOGbX?usp=sharing) | Utilisez l'algorithme de Bostrom pour filtrer les ligands par PDB                                   | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1a3Ys1rpqFzxBz95DQwJVHfunBxpywP7f?usp=sharing) |
+| champs de force             | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hW0K6V5zPDFdZvFkYarbOr9wRoof2n4s?usp=sharing) | Chargeur de molécules CGenFF et similarité des types d'atomes	
+                                             | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1OEm1dACd_wkw_JQITemy18pgfKdE4XlX?usp=sharing) |
+| bioinformatique             | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1sCNw9FIcFfTEgmrdokADXgJGnsPEOGbX?usp=sharing) | Utiliser l'algorithme de Bostrom pour filtrer les ligands par PDB	
+                                   | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1a3Ys1rpqFzxBz95DQwJVHfunBxpywP7f?usp=sharing) |
 | cheminformatics             | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1z0ilrakoRJ8maapMNHwtPf83pKK1THST?usp=sharing) |                                                                                                     |                                                                                                                                                            |
-| chimie quantique            | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1BGLQphP1IMLndeyavHM_6_qXQJI_7gFU?usp=sharing) | Tracer la théorie quantique et l'ensemble de base par rapport à l'hamiltonien des petites molécules | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11JGsen912TmyR5Dds-Opon5cRkrtVoT7?usp=sharing) |
+| chimie quantique            | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1BGLQphP1IMLndeyavHM_6_qXQJI_7gFU?usp=sharing) | Tracer la théorie quantique et l'ensemble de base par rapport à l'hamiltonien des petites molécules
+ | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11JGsen912TmyR5Dds-Opon5cRkrtVoT7?usp=sharing) |
 | opérations_de_développement | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1v_yXPXPilbWUZGkel_yekBr3EFnIUNUL?usp=sharing) |                                                                                                     |                                                                                                                                                            |
 
 # Installation
 
-GlobalChem va être distribué via PyPi et au fur et à mesure que l'arborescence et ses extensions grandissent, nous pouvons l'étendre à d'autres logiciels
-le rendant accessible à tous, peu importe ce que vous utilisez. Alternativement, vous pouvez jeter un coup d'œil au code source et copier/coller
-le toi-même.
+GlobalChem sera distribué via PyPi et au fur et à mesure que l'arbre et ses extensions grandiront, nous pourrons l'étendre à d'autres logiciels, le rendant ainsi disponible à tous, quel que soit votre usage. Alternativement, vous pouvez jeter un coup d'oeil au code source et le copier/coller vous-même.
 
 ```bash
 
@@ -67,7 +65,7 @@ pip install global-chem
 
 ```
 
-Si vous souhaitez installer le package d'extensions pour des fonctionnalités supplémentaires, chaque application peut être installée indépendamment l'une de l'autre ou vous pouvez toutes les installer avec le`all`:
+Si vous voulez installer le paquet d'extension pour des fonctionnalités supplémentaires, chaque application peut être installée indépendamment ou vous pouvez les installer toutes avec le`all`:
 
 ```bash
 
@@ -83,7 +81,8 @@ pip install 'global-chem[all]'
 
 # Démarrage rapide
 
-Ici, nous chargeons le`global-chem[cheminformatics]`paquet d'extensions et le`GlobalChem`arbre. Nous extrayons SMILES du livre populaire, Pihkal, et effectuons une analyse en composantes principales chimio-informatique sur la liste chimique.
+Ici, nous chargeons le`global-chem[cheminformatics]`paquet d'extensions et le`GlobalChem`arbre. Nous extrayons les SMILES du livre populaire, Pihkal, et effectuons une analyse en composantes principales chimio-informatique sur la liste chimique.
+
 
 ```python
 
@@ -109,18 +108,18 @@ gc_cheminfo.node_pca_analysis(smiles_list)
 Le Graph Network (GN) est livré avec quelques règles qui, pour l'instant, facilitent l'ingénierie logicielle pour le développeur.
 
 -   Il doit y avoir un nœud racine.
--   Lors de l'ajout d'un nœud, chaque nœud doit être connecté.
--   Pour supprimer un nœud, il ne doit pas avoir d'enfant.
+-   Pour ajouter un nœud, chaque nœud doit être connecté.
+-   Pour supprimer un nœud, il ne doit pas avoir d'enfants.
 
-Le Deep Graph Network (DGN) est également livré avec quelques règles pour faciliter la mise en œuvre :
+Le Deep Graph Network (DGN) s'accompagne également de quelques règles pour faciliter la mise en œuvre :
 
 -   Il doit y avoir un nœud racine de 1 qui marque comme votre nœud "d'entrée".
--   Lors de l'ajout d'une couche, tous les nœuds seront ajoutés à toutes les couches précédentes en tant qu'enfants. (Les gens peuvent utiliser la fonction de suppression de nœud pour effectuer des abandons).
+-   Lors de l'ajout d'une couche, tous les nœuds seront ajoutés à toutes les couches précédentes comme enfants. (Les gens peuvent utiliser la fonction de suppression de nœud pour effectuer des dépôts).
 
 ### Graphique des connaissances
 
-Juste sans dépendances, initialisez la classe et c'est parti ! Tous les groupes communs et rares du monde
-a ta disposition.
+Il suffit de ne pas avoir de dépendances, d'initialiser la classe et c'est parti ! Tous les groupes communs et rares du monde sont à votre disposition.
+
 
 <p align="center">
   <img width="850" height="650" src="images/figures/figure_1_new.png">
@@ -128,7 +127,7 @@ a ta disposition.
 
 ### Nœuds Contributeurs
 
-Veuillez suivre les directives de contribution des nœuds si vous souhaitez élire vous-même ou quelqu'un d'autre.
+Veuillez suivre les directives de contribution aux nœuds si vous voulez vous élire ou élire quelqu'un d'autre.
 
     'global_chem': Node,
     'emerging_perfluoroalkyls': EmergingPerFluoroAlkyls,                      # Asuka Orr & Suliman Sharif
@@ -196,7 +195,7 @@ Veuillez suivre les directives de contribution des nœuds si vous souhaitez éli
 
 # GlobalChemExtensions
 
-Une variété d'outils sont disponibles pour vous permettre de parcourir et d'analyser les données et la liste complète des différentes applications peut être trouvée dans la démo google colab ou la documentation Gitbook. Une démonstration des extensions de visualisation de données conçues avec plotly et bokeh est présentée ci-dessous :
+Une variété d'outils sont disponibles pour vous permettre de parcourir et d'analyser les données et la liste complète des différentes applications peut être trouvée dans la démo google colab ou la documentation Gitbook. Une démonstration des extensions de visualisation des données conçues avec plotly et bokeh est présentée ci-dessous :
 
 <p align="center">
   <img width="800" height="600" src="https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_10.png">
@@ -232,63 +231,68 @@ Une variété d'outils sont disponibles pour vous permettre de parcourir et d'an
 
 # Conformité des logiciels open source
 
-`GlobalChem`suit les mêmes principes énoncés dans la partie 11 du titre 21 du Code of Federal Regulations ; Dossiers électroniques,
+`GlobalChem`suit les mêmes principes que ceux énoncés dans la partie 11 du titre 21 du Code of Federal Regulations ; Dossiers électroniques,
 Document d'orientation sur les signatures électroniques (21 CFR Part 11). Puisqu'il n'y a pas de directives formelles sur la façon dont les logiciels open source doivent être manipulés, nous
-tenter de répondre aux exigences. La FDA considère que la partie 11 s'applique aux critères suivants d'enregistrements électroniques et comment`GlobalChem`accomplit chaque composant :
+tenter de répondre aux exigences. La FDA considère que la partie 11 s'applique aux critères suivants pour les enregistrements électroniques et comment`GlobalChem`accomplit chaque composant :
 
--   **Plausibilité :**`GlobalChem`a été construit sur des données extraites de livres et d'articles en utilisant la lecture et le redessin. Il ajoute une composante de
-    Chaînes IUPAC/SMILES/SMARTS pour le stocker électroniquement, ce qui donne à ses données son composant unique. Les enregistrements sont open source
+-   **Plausibilité :**`GlobalChem`a été construit sur des données extraites de livres et d'articles en utilisant la méthode "la lecture et le redessin." Il ajoute une composante de
+    Chaînes IUPAC/SMILES/SMARTS pour les stocker électroniquement, ce qui donne à ses données leur composante unique. Les enregistrements sont open source
     et la version contrôlée de manière appropriée par les mainteneurs du référentiel et les commentaires de la communauté open source.`GlobalChem`Les objectifs de sont encore inconnus car il entre dans le déploiement open source. Nous avons construit des fonctions étendues qui vivent dans
     un paquet séparé`GlobalChemExtensions`qui dépendent de`GlobalChem`. Étant donné que chaque version est emballée de manière appropriée, de
     s'appuyer sur une version est un besoin alors son logiciel est disponible sur`Github`et`PyPi`. Une Procédure Opérationnelle Standard (SOP)
     peut être déposé à partir de la documentation de l'utilitaire d'extensions conservée sur`Gitbook`.
 
--   **Validation:**`GlobalChem`respecte la catégorie 3 des bonnes pratiques de fabrication automatisées (GAMP) qui correspond à "un logiciel utilisé tel qu'il est installé"
+-   **Validation:**`GlobalChem`se conforme à la catégorie 3 des bonnes pratiques de fabrication automatisées (GAMP) qui correspond à "un logiciel utilisé tel qu'il est installé"
     et potentiellement "configurable".`GlobalChem`les tests viennent de l'intérieur, la documentation sert de test ultime
     pour la fonctionnalité car c'est ce que les utilisateurs testeront le plus puisque nous nous appuyons sur l'open source. Une intégration continue (IC)
     système est également construit simultanément pour servir de test de fonctionnalité de base du`GlobalChem`réseau de graphes. Les Données stockées
     est maintenu par des experts dans le domaine mais peut être modifié en fonction des commentaires de la communauté si une erreur est détectée.
+  
 
--   **Piste d'audit :**`GlobalChem`est sous contrôle de version avec`Git`et hébergé sur la plateforme de Microsoft`Github`.`GlobalChem`suit une sémantique
-    contrôle de version du schéma`X1.X2.X3`:`X1`marque les versions stables formelles avec des tests et une documentation et signifie
-    gros refactoring au logiciel ou en fonctionnalité,`X2`signifie qu'une nouvelle fonctionnalité est ajoutée avec ou sans tests et documentation, mais
-    itère comme tel.`X3`signifie un correctif "à chaud" (quelque chose qui est un bogue facile), une petite fonctionnalité ou un paramètre supplémentaire à ajouter à une fonction
+-   **Piste d'audit :**`GlobalChem`est sous contrôle de version avec`Git`et hébergé sur la plateforme de Microsoft`Github`.`GlobalChem`suit la sémantique
+    de contrôle de version du schéma`X1.X2.X3`:`X1`marque les versions stables formelles avec des tests et de la documentation et signifie
+    une refonte majeure du logiciel ou de la fonctionnalité,`X2`signifie qu'une nouvelle fonctionnalité est ajoutée avec ou sans tests et documentation, mais
+    itère en taut que telle.`X3`signifie un correctif "chaud" (quelque chose qui est un bug facile), une petite fonctionnalité ou un paramètre supplémentaire à ajouter à une fonction
     , ou itération aux données.
 
--   **Systèmes hérités :**`GlobalChem`est opérationnel depuis près de 2 ans depuis sa première version avec la version`0.3.0`en mai 2020.`GlobalChem`a été construit avec un parcours complet dans la communauté open source avec chaque version cataloguée et une visibilité pour tous. Cela satisfait
+-   **Systèmes hérités :**`GlobalChem`a été opérationnel pendant presque 2 ans depuis sa première version avec la version`0.3.0`en mai 2020.`GlobalChem`a été construit avec un chemin complet à travers la communauté open source avec chaque version cataloguée et visible par tous. Cela satisfait
     les grandes lignes des règles pour déterminer un système hérité. Nous utilisons les commentaires de la communauté fournis par les plateformes de médias sociaux (Twitter, Github, LinkedIn)
-    comme preuve documentée et justification que`GlobalChem`est adapté à l'utilisation prévue de cheminformatics.
+    comme preuve documentée et justification que`GlobalChem`est adapté à l'usage de la chimiométrie
 
 -   **Copies des enregistrements :**`GlobalChem`a des enregistrements stockés sur`Github`pour le logiciel qui peut être exporté vers une variété de formats fournis par
-    Microsoft. Pour la documentation, il est hébergé sur`Gitbook`et version contrôlée conformément au logiciel. Chaque "livre"
+    Microsoft. Pour la documentation, elle est hébergé sur`Gitbook`en version contrôlée conformément au logiciel. Chaque "livre"
     peut être exporté au format de données portable (PDF) approprié pour la soumission à la FDA.
 
 -   **Conservation des dossiers:**`GlobalChem`a un enregistrement de la documentation versionnée contrôlée par un identifiant unique (UUID) qui sert d'identifiant
     pour chaque itération stockée sur`Gitbook`. Chaque version est stockée sous forme de fichiers Markdown et peut être convertie en PDF, si nécessaire.
 
-`GlobalChem`possède une licence publique Mozilla version 2.0.`GlobalChem`vous permet d'utiliser le logiciel dans votre travail plus large et
-étendez-le avec des modifications si vous le souhaitez. L'éventualité est que si vous installez`GlobalChem`et publier un nouveau logiciel
+`GlobalChem`possède une licence publique Mozilla version 2.0.`GlobalChem`vous permet d'utiliser le logiciel dans votre travail au sens large et
+de l'eétendre avec des modifications si vous le souhaitez. La condition préalable est que si vous avez installez`GlobalChem`et que vous publiez un nouveau logiciel
 alors vous devez suivre les mêmes principes installés dans notre licence pour la communauté open source.
 
 # Collecte de données
 
-Les références et les listes de composés associés sont sélectionnées en fonction des intérêts des contributeurs scientifiques. Cela devrait inclure l'examen de la pertinence pour la communauté scientifique.
-Les chaînes SMILES peuvent être abstraites dans une variété de méthodes :
+Les références et les listes de composés associés sont sélectionnées en fonction des intérêts des contributeurs scientifiques. Cela devrait inclure l'examen de la pertinence pour la communauté scientifique. 
+Les chaînes SMILES peuvent être abstraites dans une variété de méthodes :
 
--   Pour les molécules simples, une représentation des SMILES peut être directement traduite à l'aide de visuels.
+-  Pour les molécules simples, une représentation des SMILES peut être directement traduite à l'aide de visuels. 
     inspection. Ceci est généralement approprié pour les composés au début d'une liste rapportée qui contiennent les anneaux de dénominateur les plus courants.
+
 
 -   Pour les molécules complexes, l'image peut être redessinée dans la version gratuite de ChemDraw, puis traduite en SMILES.
 
--   Pour les sources où les SMILES sont écrits et l'IUPAC n'est pas connu, les SMILES sont traduits en ChemDraw et le nom récupéré.
+-   Pour les sources où les SMILES sont écrits et l'IUPAC n'est pas connu, les SMILES sont traduits en ChemDraw et le nom récupéré. 
     Notez que certains des noms peuvent être modifiés en fonction de l'inspection humaine en faveur des noms préférés.
 
--   Pour les papiers polymères, les points de site ont été omis du nom et une partie de la nomenclature a été ajustée pour les noms préférés
-    sur traditionnel. Par exemple : "yl" pour marquer les points de site pour les connexions polymères a été supprimé au profit d'une complexité anglaise réduite.
+-   Pour les papiers polymères, les points de site ont été omis du nom et une partie de la nomenclature a été ajustée pour les noms préférés 
+    sur traditionnel. Par exemple : "yl" pour marquer les points de site pour les connexions polymères a été supprimé au profit d'une complexité anglaise réduite.
 
--   Dans le cas des radicaux, certains SMILES ont été ajustés pour supprimer la caractéristique chimique radicale car ils servent de points de connexion. Cependant, dans certains cas, la composante radicale a été maintenue, en particulier dans le cas des substituants communs du livre bleu IUPAC.
 
--   Les chaînes SMARTS ont été adaptées de SMILES à l'aide de RDKit (4).
+-  Dans le cas des radicaux, certains SMILES ont été ajustés pour supprimer la caractéristique chimique radicale car ils servent de points de connexion. Cependant, dans certains cas, la composante radicale a été maintenue, en particulier dans le cas des substituants communs du livre bleu IUPAC.
+
+
+-  Les chaînes SMARTS ont été adaptées de SMILES à l'aide de RDKit (4).
+
 
 * * *
 
