@@ -7,8 +7,14 @@
 # Base Imports
 
 import os
+import sys
 import os.path
 import pprint
+
+# Reconfigurations
+# ----------------
+
+sys.stdout.reconfigure(encoding='utf-8')
 
 # Environment
 
@@ -302,7 +308,9 @@ class GlobalChem(object):
     __allow_update__ = False
 
     """
+    
     GlobalChem will be the master class of all variables, as the content store grows we can use this as the parent class.
+    
     """
 
     # NODE CONTRIBUTORS
