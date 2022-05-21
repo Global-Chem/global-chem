@@ -7,14 +7,8 @@
 # Base Imports
 
 import os
-import sys
 import os.path
 import pprint
-
-# Reconfigurations
-# ----------------
-
-sys.stdout.reconfigure(encoding='utf-8')
 
 # Environment
 
@@ -286,7 +280,7 @@ class PrintTreeUtilities(object):
             fans = [get_repr(x) for x in node.children]
             labelled = PrintTreeUtilities.labelFan(node, PrintTreeUtilities.connectFans(fans))
             return labelled
-        print("\n".join(get_repr(node)))
+        print(str("\n".join(get_repr(node))))
 
 class GraphNetworkError(Exception):
 
@@ -1104,9 +1098,9 @@ class GlobalChem(object):
 
                         _PRINT_NODE_KEY[ parent ] = PrintNode(child, _PRINT_NODE_KEY[parent])
 
-        print(_PRINT_NODE_KEY)
+        print(str(_PRINT_NODE_KEY))
 
-        print(PrintTreeUtilities.printTrees(_PRINT_NODE_KEY['global_chem']))
+        print(str(PrintTreeUtilities.printTrees(_PRINT_NODE_KEY['global_chem'])))
 
     def print_deep_network(self):
 
