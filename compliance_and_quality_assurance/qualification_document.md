@@ -17,6 +17,8 @@ to it's dedicated functionality.
 - [GlobalChem Core Operational Qualifications - System Tests](#operational-qualification)
 - [Summary of Findings](#features)
 
+</details>
+
 # Introduction
 
 This document will provide as a qualification document for `GlobalChem` being tested on multiple platforms and it's insurance
