@@ -24,9 +24,19 @@ jobs:
         run: |
            
            python -m pip install -r global_chem_extensions/requirements.txt
+           pip install python-coveralls
+           pip install coveralls
+           pip install coverage==4.5.4     
+           pip install nose   
            
-      - name: InstallGraphing Library
+      - name: Install Bioinformatic Library
         run: |
           
           cd global_chem_extensions
           python -m pip install -e .[bioinformatics]
+    
+      - name: Run GlobalChem tests
+        env:
+          GITHUB_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        run: |
+          python -m nose --verbose --with-coverage -s -w tests/
