@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: ["ubuntu-latest", "macos-latest"]
+        os: ["ubuntu-latest", "windows-latest", "macos-latest"]
         python-version: ["3.7", "3.8", "3.9"]
 
     steps:
@@ -24,7 +24,7 @@ jobs:
       - name: Install
         run: |
           cd global_chem_extensions
-#          python setup.py install
+          python setup.py install
 
 #       - name: Cache Requirements.txt
 #         uses: actions/cache@v3
