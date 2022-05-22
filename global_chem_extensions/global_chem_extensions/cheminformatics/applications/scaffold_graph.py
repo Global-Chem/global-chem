@@ -8,16 +8,12 @@
 # Imports
 # -------
 
-
 import pandas as pd
 import scaffoldgraph as sg
 
 from global_chem import GlobalChem
 
 class ScaffoldGraphAdapter(object):
-
-    __version__ = '0.0.1'
-
 
     def __init__(self,
                  node,
@@ -26,31 +22,6 @@ class ScaffoldGraphAdapter(object):
 
         self.node = node
         self.verbose = verbose
-
-    def ignite(self):
-
-        '''
-
-        Ignite the Adapter ~
-
-        '''
-
-        smiles_list, iupac_list = self.fetch_network_data()
-
-        if self.verbose:
-            print ("Length of SMILES List: %s" % len(smiles_list))
-            print ("Length of IUPAC List: %s" % len(iupac_list))
-
-        df = self.prepare_dataframe(
-            smiles_list,
-            iupac_list
-        )
-
-        tree = self.prepare_scaffold_graph(
-            df
-        )
-
-        return tree
 
     def fetch_network_data(self):
 
@@ -98,3 +69,29 @@ class ScaffoldGraphAdapter(object):
         )
 
         return tree
+
+    def connect(self):
+
+        '''
+
+        Connect the Adapter
+
+        '''
+
+        smiles_list, iupac_list = self.fetch_network_data()
+        df = self.prepare_dataframe(
+            smiles_list,
+            iupac_list
+        )
+
+        graph = self.prepare_scaffold_graph(
+            df
+        )
+
+        if self.verbose:
+            print ("Length of SMILES List: %s" % len(smiles_list))
+            print ("Length of IUPAC List: %s" % len(iupac_list))
+            print ("DataFrame: %s" % df)
+            print ("Scaffold Graph: %s " % graph)
+
+        return graph

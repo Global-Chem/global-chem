@@ -454,7 +454,7 @@ class ChemInformatics(object):
         return visualizer.get_image()
 
     @staticmethod
-    def create_scaffold_graph(node_key):
+    def create_scaffold_graph(node_key, verbose=False):
 
         '''
 
@@ -462,6 +462,7 @@ class ChemInformatics(object):
 
         Arguments:
             node_key (String): The Node Key
+            verbose (Bool): Verbose flag
 
         Returns:
             gc_sg_adapter (Object): Adapter Object
@@ -470,7 +471,10 @@ class ChemInformatics(object):
 
         from global_chem_extensions.cheminformatics.applications.scaffold_graph import ScaffoldGraphAdapter
 
-        gc_sg_adapter = ScaffoldGraphAdapter(node_key)
+        gc_sg_adapter = ScaffoldGraphAdapter(
+            node_key,
+            verbose=verbose
+        )
 
         return gc_sg_adapter
 
