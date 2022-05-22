@@ -1,7 +1,5 @@
 name: GlobalChemExtensions Cheminformatics API
 
-on: [pull_request, push, workflow_dispatch]
-
 jobs:
   test:
     runs-on: ${{ matrix.os }}
