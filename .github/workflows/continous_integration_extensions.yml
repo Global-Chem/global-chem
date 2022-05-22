@@ -20,21 +20,13 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           architecture: x64
-
-      - name: Install
+      - name: Install Requirements
         run: |
+           
+           python -m pip install -r global_chem_extensions/requirements.txt
+           
+      - name: Install All of GlobalChemExtensions
+        run: |
+          
           cd global_chem_extensions
-          python setup.py install
-
-#       - name: Cache Requirements.txt
-#         uses: actions/cache@v3
-#         with:
-#           path: ~/.cache/pip
-#           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-#           restore-keys: |
-#             ${{ runner.os }}-pip-
-#       - name: Run GlobalChemExtensions Tests
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-#         run: |
-#           python -m nose --verbose --with-coverage -s -w tests/
+          python -m pip install -e .[all]
