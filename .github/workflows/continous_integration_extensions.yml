@@ -34,5 +34,4 @@ jobs:
           python -m pip install -e .[quantum_chemistry]
           python -m pip install -e .[bioinformatics]
           python -m pip install -e .[development_operations]
-          python -m pip install -e .[cheminformatics]
 
