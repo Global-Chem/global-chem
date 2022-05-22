@@ -38,7 +38,7 @@ class ScaffoldGraphAdapter(object):
 
         return iupac_list, smiles_list
 
-    def prepare_dataframe(self, smiles_list, iupac_list):
+    def prepare_dataframe(self, iupac_list, smiles_list):
 
         '''
 
@@ -48,8 +48,8 @@ class ScaffoldGraphAdapter(object):
 
         df = pd.DataFrame()
 
-        df['smiles_list'] = smiles_list
         df['iupac_list'] = iupac_list
+        df['smiles_list'] = smiles_list
 
         return df
 
@@ -78,10 +78,10 @@ class ScaffoldGraphAdapter(object):
 
         '''
 
-        smiles_list, iupac_list = self.fetch_network_data()
+        iupac_list, smiles_list = self.fetch_network_data()
         df = self.prepare_dataframe(
+            iupac_list,
             smiles_list,
-            iupac_list
         )
 
         graph = self.prepare_scaffold_graph(
