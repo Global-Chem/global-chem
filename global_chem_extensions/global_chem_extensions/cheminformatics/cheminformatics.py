@@ -454,19 +454,23 @@ class ChemInformatics(object):
         return visualizer.get_image()
 
     @staticmethod
-    def iupac_to_smiles(iupac_list):
+    def create_scaffold_graph(node_key):
 
         '''
 
-        Arguments;
-            iupac_list (List): list of IUPAC Names
+        Create a Scaffold Graph of a Node Key
+
+        Arguments:
+            node_key (String): The Node Key
+
+        Returns:
+            scaffold_graph (Object): Network object of the scaffold graph
 
         '''
 
-        from global_chem_extensions.cheminformatics.applications.iupac_to_umap import IupacUmap
+        from global_chem_extensions.cheminformatics.applications.scaffold_graph import ScaffoldGraphAdapter
 
-        iupac_umap = IupacUmap(
-            iupac_list = iupac_list
-        )
+        scaffold_graph = ScaffoldGraphAdapter(node_key)
 
-        return iupac_umap
+        return scaffold_graph.network
+
