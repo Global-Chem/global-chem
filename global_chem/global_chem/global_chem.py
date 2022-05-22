@@ -819,7 +819,8 @@ class GlobalChem(object):
                         print ("Node Object Paths: %s: " % object_path)
 
                     path_objects.append(object_path)
-
+        
+        print ("PATH OBJECTS: %s" % path_objects)
         # Add the objects recursively
 
         for chemical_object in path_objects:
