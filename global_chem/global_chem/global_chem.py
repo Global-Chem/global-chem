@@ -802,11 +802,7 @@ class GlobalChem(object):
         # Fetch All the File Paths
 
         path_objects = []
-        
-        if os.name == 'nt':
-            absolute_file_path = "C:" + '/'.join(os.path.dirname(os.path.realpath('__file__')).split('/')[:-1])
-        else:
-            absolute_file_path = '/'.join(os.path.dirname(os.path.realpath('__file__')).split('/')[:-1])
+        absolute_file_path = os.path.join(*os.path.dirname(os.path.realpath('__file__')).split('/')[:-1]))
         
         print ("ABSOLUTE FILE PATH: %s" % absolute_file_path)
         
