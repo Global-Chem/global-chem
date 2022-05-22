@@ -788,6 +788,10 @@ class GlobalChem(object):
                 'layer': self.deep_layer_count
             }
 
+    def join_path_regardless_of_separators(*paths):
+
+        return os.path.sep.join(path.rstrip(r"\/") for path in paths)
+
     def build_global_chem_network(self, print_output=False, debugger=False):
 
         '''
@@ -811,7 +815,7 @@ class GlobalChem(object):
         print (os.path.abspath(__file__).split('\\'))
 
         if os.name == 'nt':
-            absolute_file_path = os.path.abspath(os.path.dirname(sys.argv[0]))
+            absolute_file_path = self.join_path_regardless_of_separators(os.path.abspath(__file__).split('\\')[:-1])
         else:
             absolute_file_path = "/".join(os.path.abspath(__file__).split('/')[:-1])
 
