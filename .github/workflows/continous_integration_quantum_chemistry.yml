@@ -1,6 +1,6 @@
 name: GlobalChemExtensions Quantum Chemistry API
 
-on: [pull_request, push, workflow_dispatch]
+# on: [pull_request, push, workflow_dispatch]
 
 jobs:
   test:
