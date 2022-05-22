@@ -15,7 +15,7 @@ to it's dedicated functionality.
 - [Installation Architecture](#installation-architecture)
 - [GlobalChem Installation Qualifications - System Tests](#installation-qualification)
 - [GlobalChem Core Operational Qualifications - System Tests](#operational-qualification)
-- [Summary of Findings](#features)
+- [Summary of Findings](#summary-findings)
 
 # Introduction
 
@@ -323,3 +323,20 @@ global_chem/materials/polymers/common_monomer_repeating_units.py                
 global_chem/medicinal_chemistry/__init__.py                                                   0      0   100%
 ```
 
+# Summary Findings
+
+`GlobalChem` is qualified to install and perform on multiple operating systems with multiple python versions:
+
+| GlobalChem Version | Platform \| Python Version | Installation Results | Operational Results |
+|--------------------|----------------------------|----------------------|---------------------|
+| 1.6.1.5            | Linux x86 \| 3.7           | PASS                 | PASS                |
+| 1.6.1.5            | Linux x86 \| 3.8           | PASS                 | PASS                |
+| 1.6.1.5            | Linux x86 \| 3.9           | PASS                 | PASS                |
+| 1.6.1.5            | Windows 11 \| 3.7          | PASS                 | PASS                |
+| 1.6.1.5            | Windows 11 \| 3.8          | PASS                 | PASS                |
+| 1.6.1.5            | Windows 11 \| 3.9          | PASS                 | PASS                |
+| 1.6.1.5            | Mac OS Monterey \| 3.7     | PASS                 | PASS                |
+| 1.6.1.5            | Mac OS Monterey \| 3.8     | PASS                 | PASS                |
+| 1.6.1.5            | Mac OS Monterey \| 3.9     | PASS                 | PASS                |
+
+Currently, version `1.6.1.5` can perform adequately within the guidelines of 21 Part CFR 11 Compliance
