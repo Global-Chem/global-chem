@@ -25,13 +25,9 @@ jobs:
            
            python -m pip install -r global_chem_extensions/requirements.txt
            
-      - name: Install All of GlobalChemExtensions
+      - name: InstallGraphing Library
         run: |
           
           cd global_chem_extensions
           python -m pip install -e .[graphing]
-          python -m pip install -e .[forcefields]
-          python -m pip install -e .[quantum_chemistry]
-          python -m pip install -e .[bioinformatics]
-          python -m pip install -e .[development_operations]
 
