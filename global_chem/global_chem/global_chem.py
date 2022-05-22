@@ -803,7 +803,9 @@ class GlobalChem(object):
 
         path_objects = []
         absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
-
+        
+        print ("ABSOLUTE FILE PATH: %s" % absolute_file_path)
+        
         for dirpath, dirnames, filenames in os.walk(absolute_file_path):
 
             for file in filenames:
@@ -820,7 +822,6 @@ class GlobalChem(object):
 
                     path_objects.append(object_path)
         
-        print ("PATH OBJECTS: %s" % path_objects)
         # Add the objects recursively
 
         for chemical_object in path_objects:
