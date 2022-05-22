@@ -811,7 +811,7 @@ class GlobalChem(object):
         print (os.path.abspath(__file__).split('\\'))
 
         if os.name == 'nt':
-            absolute_file_path = "/\/".join(os.path.abspath(__file__).split('\\')[:-1])
+            absolute_file_path = "\\".join(os.path.abspath(__file__).split('\\')[:-1])
         else:
             absolute_file_path = "/".join(os.path.abspath(__file__).split('/')[:-1])
 
