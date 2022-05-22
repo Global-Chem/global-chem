@@ -405,6 +405,7 @@ class GlobalChem(object):
         '''
 
         path_objects = []
+        print (os.path.abspath(__file__))
         absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
 
         for dirpath, dirnames, filenames in os.walk(absolute_file_path):
