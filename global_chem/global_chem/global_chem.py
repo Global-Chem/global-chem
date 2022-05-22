@@ -365,6 +365,10 @@ class GlobalChem(object):
         self.root_node = ''
         self.deep_layer_count = 0
         self.verbose = verbose
+        self.splitter = '/'
+
+        if os.name == 'nt':
+            self.splitter = '\\'
 
     def check_available_nodes(self):
 
@@ -803,20 +807,8 @@ class GlobalChem(object):
         # Fetch All the File Paths
 
         path_objects = []
+        absolute_file_path = self.splitter.join(os.path.abspath(__file__).split(self.splitter)[:-1])
 
-        print ("File: %s" % __file__)
-        print ("File Path: %s" % os.path.abspath(__file__))
-        print (os.path.abspath(__file__))
-        print ('yo')
-        print (os.path.abspath(__file__).split('\\'))
-
-        if os.name == 'nt':
-            absolute_file_path = "\\".join(os.path.abspath(__file__).split('\\')[:-1])
-        else:
-            absolute_file_path = "/".join(os.path.abspath(__file__).split('/')[:-1])
-
-        print ("ABSOLUTE FILE PATH: %s" % absolute_file_path)
-        
         for dirpath, dirnames, filenames in os.walk(absolute_file_path):
 
             for file in filenames:
@@ -826,7 +818,7 @@ class GlobalChem(object):
                         'cli.py' not in file and \
                         'global_chem.py' not in file:
 
-                    object_path = os.path.join(''.join(dirpath.rsplit(absolute_file_path)), file).split('/')
+                    object_path = os.path.join(''.join(dirpath.rsplit(absolute_file_path)), file).split(self.splitter)
 
                     if debugger:
                         print ("Node Object Paths: %s: " % object_path)
