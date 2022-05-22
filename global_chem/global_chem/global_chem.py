@@ -1060,7 +1060,7 @@ class GlobalChem(object):
         _PRINT_NODE_KEY = {}
 
         path_objects = []
-        absolute_file_path = '/'.join(os.path.dirname(os.path.realpath('__file__')).split('/')[:-1])
+        absolute_file_path = self.splitter.join(os.path.dirname(os.path.realpath('__file__')).split(self.splitter)[:-1])
 
         for dirpath, dirnames, filenames in os.walk(absolute_file_path):
 
@@ -1071,9 +1071,8 @@ class GlobalChem(object):
                         'cli.py' not in file and \
                         'global_chem.py' not in file:
 
-                    object_path = os.path.join(''.join(dirpath.rsplit(absolute_file_path)), file).split('/')
+                    object_path = os.path.join(''.join(dirpath.rsplit(absolute_file_path)), file).split(self.splitter)
                     path_objects.append(object_path)
-                    print(object_path)
 
         # Add the objects recursively
 
