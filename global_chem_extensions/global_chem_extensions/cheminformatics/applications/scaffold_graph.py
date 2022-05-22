@@ -20,14 +20,37 @@ class ScaffoldGraphAdapter(object):
 
 
     def __init__(self,
-                 node
+                 node,
+                 verbose=False,
                  ):
 
         self.node = node
+        self.verbose = verbose
 
-        self.smiles_list, self.iupac_list = self.fetch_network_data()
-        self.dataframe = self.prepare_dataframe()
-        self.network = self.prepare_scaffold_graph()
+    def ignite(self):
+
+        '''
+
+        Ignite the Adapter ~
+
+        '''
+
+        smiles_list, iupac_list = self.fetch_network_data()
+
+        if self.verbose:
+            print ("Length of SMILES List: %s" % len(smiles_list))
+            print ("Length of IUPAC List: %s" % len(iupac_list))
+
+        df = self.prepare_dataframe(
+            smiles_list,
+            iupac_list
+        )
+
+        tree = self.prepare_scaffold_graph(
+            df
+        )
+
+        return tree
 
     def fetch_network_data(self):
 
@@ -44,7 +67,7 @@ class ScaffoldGraphAdapter(object):
 
         return iupac_list, smiles_list
 
-    def prepare_dataframe(self):
+    def prepare_dataframe(self, smiles_list, iupac_list):
 
         '''
 
@@ -52,13 +75,14 @@ class ScaffoldGraphAdapter(object):
 
         '''
 
-        dataframe = pd.DataFrame()
-        dataframe['smiles_list'] = self.smiles_list
-        dataframe['iupac_list'] = self.iupac_list
+        df = pd.DataFrame()
 
-        return dataframe
+        df['smiles_list'] = smiles_list
+        df['iupac_list'] = iupac_list
 
-    def prepare_scaffold_graph(self):
+        return df
+
+    def prepare_scaffold_graph(self, df):
 
         '''
 
@@ -66,11 +90,11 @@ class ScaffoldGraphAdapter(object):
 
         '''
 
-        network = sg.ScaffoldTree.from_dataframe(
-            self.dataframe,
+        tree = sg.ScaffoldTree.from_dataframe(
+            df,
             smiles_column='smiles_list',
             name_column='iupac_list',
             progress=True,
         )
 
-        return network
+        return tree

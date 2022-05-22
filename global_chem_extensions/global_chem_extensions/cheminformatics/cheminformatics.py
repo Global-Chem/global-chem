@@ -464,13 +464,13 @@ class ChemInformatics(object):
             node_key (String): The Node Key
 
         Returns:
-            scaffold_graph (Object): Network object of the scaffold graph
+            gc_sg_adapter (Object): Adapter Object
 
         '''
 
         from global_chem_extensions.cheminformatics.applications.scaffold_graph import ScaffoldGraphAdapter
 
-        scaffold_graph = ScaffoldGraphAdapter(node_key)
+        gc_sg_adapter = ScaffoldGraphAdapter(node_key)
 
-        return scaffold_graph.network
+        return gc_sg_adapter
 
