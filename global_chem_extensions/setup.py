@@ -36,7 +36,7 @@ else:
 # ----
 setup(
     name="global_chem_extensions",
-    version="0.9.9.9.9.9.7",
+    version="0.9.9.9.9.9.9",
     packages=find_packages(),
     license='MPL 2.0',
     author="Suliman Sharif",
@@ -48,7 +48,7 @@ setup(
             'partialsmiles', 'pysmiles', 'deepsmiles',
             'selfies', 'molvs', 'flask', 'plotly', 'kaleido',
             'bokeh', 'molpdf', 'dimorphite_dl',
-            'cohere', 'umap-learn', 'altair' ,'annoy', 'datasets','tqdm', 'bertopic'
+            'scaffoldgraph'
         ],
         'bioinformatics': [
             'biopython', 'dna_features_viewer', 'biopandas',
