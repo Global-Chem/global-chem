@@ -802,7 +802,7 @@ class GlobalChem(object):
         # Fetch All the File Paths
 
         path_objects = []
-        absolute_file_path = '/'.join(os.path.dirname(os.path.abspath("__file__")).split('/')[:-1])
+        absolute_file_path = '/'.join(os.path.dirname(os.path.realpath('__file__')).split('/')[:-1])
         
         print ("ABSOLUTE FILE PATH: %s" % absolute_file_path)
         
@@ -1057,8 +1057,7 @@ class GlobalChem(object):
         _PRINT_NODE_KEY = {}
 
         path_objects = []
-        absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
-        print(absolute_file_path)
+        absolute_file_path = '/'.join(os.path.dirname(os.path.realpath('__file__')).split('/')[:-1])
 
         for dirpath, dirnames, filenames in os.walk(absolute_file_path):
 
