@@ -452,3 +452,21 @@ class ChemInformatics(object):
         )
 
         return visualizer.get_image()
+
+    @staticmethod
+    def iupac_to_smiles(iupac_list):
+
+        '''
+
+        Arguments;
+            iupac_list (List): list of IUPAC Names
+
+        '''
+
+        from global_chem_extensions.cheminformatics.applications.iupac_to_umap import IupacUmap
+
+        iupac_umap = IupacUmap(
+            iupac_list = iupac_list
+        )
+
+        return iupac_umap

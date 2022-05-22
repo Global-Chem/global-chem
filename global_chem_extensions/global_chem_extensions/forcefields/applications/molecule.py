@@ -344,3 +344,4 @@ class GlobalChemMolecule(object):
                 atom.SetIntProp('atom_idx', idx)
 
         return Chem.MolToCXSmiles(self.molecule)
+

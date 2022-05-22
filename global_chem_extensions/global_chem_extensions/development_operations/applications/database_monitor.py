@@ -13,9 +13,25 @@ class DatabaseMonitor(object):
 
     __version__ = '0.0.1'
 
-    def __init__(self):
+    def __init__(self, choice='chemistry'):
 
+        self.choice = choice
+        self.base_url = ''
+        self._determine_parameters()
         self.urls, self.names = self.prepare_urls()
+
+    def _determine_parameters(self):
+
+        '''
+
+        Determine the parameters that comes from the choice of chemistry or bacteria.
+
+        '''
+
+        if self.choice == 'chemistry':
+            self.base_url = 'https://raw.githubusercontent.com/Sulstice/Uptime-Cheminformatics/master/.upptimerc.yml'
+        elif self.choice == 'bacteria':
+            self.base_url = 'https://raw.githubusercontent.com/Sulstice/Uptime-Bacteria/master/.upptimerc.yml'
 
     def prepare_urls(self):
 
@@ -27,7 +43,7 @@ class DatabaseMonitor(object):
 
         '''
 
-        contents = urllib.request.urlopen("https://raw.githubusercontent.com/Sulstice/Uptime-Cheminformatics/master/.upptimerc.yml").readlines()
+        contents = urllib.request.urlopen(self.base_url).readlines()
         contents = [ i.decode('utf-8') for i in contents ]
 
         urls = []
@@ -35,8 +51,8 @@ class DatabaseMonitor(object):
 
         for i in contents:
             if 'name' in i and \
-                '#' not in i and 'chemistrydb.com' not in i \
-                and 'Cheminformatic Database Statuses' not in i:
+                '#' not in i and '.com' not in i \
+                and ' Database Statuses' not in i:
                 i = i.strip('\n').split('name:')[1]
                 names.append(i)
 
