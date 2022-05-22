@@ -16,4 +16,5 @@ to it's dedicated functionality.
 - [Summary of Findings](#features)
 
 </details>
-`GlobalChem`
+
+# Introduction
