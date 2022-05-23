@@ -12,16 +12,20 @@ class NamedReactionsInOrganicSynthesis(object):
       
   @staticmethod
   def get_smiles():
-
-      smiles = {
-        'lieben_haloform_reaction': 'CC(C)=O.CC([O-])=O',
-        'benzilic_acid_rearrangement': 'O=C(C1=CC=CC=C1)C(C2=CC=CC=C2)=O.OC(C(O)=O)(C3=CC=CC=C3)C4=CC=CC=C4',
+	
+      validated = {
+        'lieben_haloform_reaction': 'CC(C)=O.CC(O)=O',    
+	'benzilic_acid_rearrangement': 'O=C(C1=CC=CC=C1)C(C2=CC=CC=C2)=O.OC(C(O)=O)(C3=CC=CC=C3)C4=CC=CC=C4',
         'aldol_reaction': 'CC(C(C)=O)C.CC(C(C)=O)(C(O)C)C',
         'dieckmann_condensation': 'O=C(O)CCCCC(O)=O.O=C1C(C(O)=O)CCC1',
         'strecker_reation': 'CC=O.O=C(O)CN',
         'hofmann_elimination': 'CCC(C)N.CCC=C',
-        'wiallmson_ether_synthesis': 'CO.C[F,Cl,Br,I].COC',
-        'cannizzaro_reaction': 'CC=O.CCO',	# R2 CC(O)=O
+        'wiallmson_ether_synthesis': 'C[F,Cl,Br,I].COC',
+        'cannizzaro_reaction': 'CC=O.[*:1].CCO.CC(O)=O'
+
+      }
+
+      smiles = {
         'wurtz_coulping': 'CBr.CC',
         'kolbe-schmitt_reaction': 'OC2=CC=CC=C2.OC1=C(C(O)=O)C=CC=C1',
         'pinacol_rearrangement': 'OC(C)(C)C(O)(C)C.O=C(C)C(C)(C)C',
