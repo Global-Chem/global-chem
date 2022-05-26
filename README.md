@@ -205,6 +205,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Nickel Bidendate Phosphine Ligands  | N/A          | Clevenger, Andrew L., et al. “Trends in the Usage of Bidentate Phosphines as Ligands in Nickel Catalysis.” Chemical Reviews, vol. 120, no. 13, July 2020, pp. 6124–96. DOI.org (Crossref), https://doi.org/10.1021/acs.chemrev.9b00682.                                                                              |
 | HowToLiveLonger                     | 4            | https://github.com/geekan/HowToLiveLonger |
 | Monoclonal Antibodies               | 19           | https://labels.fda.gov/ |
+| Common Lubricants for Sex           | 38           | https://exsens-usa.com/blogs/your-body-your-pleasure/lube-lessons-glossary-of-common-sex-lube-ingredients                                                                                                                                                                                                            |                                          
 | Common Regex Patterns               | 1            |                                                                                                     
 
 </details>                            
