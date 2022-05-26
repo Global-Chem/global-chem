@@ -170,6 +170,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 'common_regex_patterns': CommonRegexPatterns,                             # Chris Burke & Suliman Sharif
 'how_to_live_longer': HowToLiveLonger                                     # Suliman Sharif
 'monoclonal_antibodies': MonoclonalAntibodies                             # Asuka Orr & Suliman Sharif
+'lube': Lube,                                                             # Daniel Khavrutskii & Suliman Sharif
 ```
 
 <details><summary><h3>Node List</h1><br/></summary>

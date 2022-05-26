@@ -88,6 +88,11 @@ from global_chem.miscellaneous.open_smiles import OpenSmiles
 from global_chem.miscellaneous.amino_acids import AminoAcids
 from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
 
+# Sex
+
+from global_chem.sex.exsens.lube import Lube
+
+
 class Node:
 
     '''
@@ -350,6 +355,7 @@ class GlobalChem(object):
         'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                      # Suliman Sharif
         'how_to_live_longer': HowToLiveLonger,                                   # Suliman Sharif
         'monoclonal_antibodies': MonoclonalAntibodies,                           # Asuka Orr & Suliman Sharif
+        'lube': Lube,                                                            # Daniel Khavrutskii & Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                            # Chris Burke & Suliman Sharif
     }
 

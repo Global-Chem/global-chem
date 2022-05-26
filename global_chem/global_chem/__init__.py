@@ -74,6 +74,10 @@ from global_chem.miscellaneous.open_smiles import OpenSmiles
 from global_chem.miscellaneous.amino_acids import AminoAcids
 from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
 
+# Sex
+
+from global_chem.sex.exsens.lube import Lube
+
 from global_chem.global_chem import GlobalChem
 
 __all__ = ['GlobalChem']
