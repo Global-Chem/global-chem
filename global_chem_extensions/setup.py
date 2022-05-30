@@ -32,11 +32,12 @@ if os.path.exists('README.md'):
 else:
     long_description = 'GlobalChemExtensions - Your Extension functionality for GlobalChem'
 
+
 # exec
 # ----
 setup(
     name="global_chem_extensions",
-    version="0.9.9.9.9.9.9.2",
+    version="0.9.9.9.9.9.9.5",
     packages=find_packages(),
     license='MPL 2.0',
     author="Suliman Sharif",

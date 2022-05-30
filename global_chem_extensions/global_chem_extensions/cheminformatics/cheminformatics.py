@@ -478,3 +478,18 @@ class ChemInformatics(object):
 
         return gc_sg_adapter
 
+    def get_sexual_enhancement_tainted_products(self):
+
+        '''
+
+        Fetch the Sexual Enhacement tainted products.
+
+        '''
+
+        from global_chem_extensions.cheminformatics.applications.tainted_sexual_enhancement_products import TaintedSexualProducts
+
+        tainted_sexual_products = TaintedSexualProducts()
+
+        tp = tainted_sexual_products.fetch_brands()
+
+        return tp
