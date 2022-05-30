@@ -486,7 +486,7 @@ class ChemInformatics(object):
 
         '''
 
-        from global_chem_extensions.cheminformatics.applications.tainted_sexual_enhancement_products import TaintedSexualProducts
+        from global_chem_extensions.cheminformatics.applications.sexual_enhancements import TaintedSexualProducts
 
         tainted_sexual_products = TaintedSexualProducts()
 
