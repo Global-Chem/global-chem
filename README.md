@@ -171,6 +171,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 'how_to_live_longer': HowToLiveLonger                                     # Suliman Sharif
 'monoclonal_antibodies': MonoclonalAntibodies                             # Asuka Orr & Suliman Sharif
 'lube': Lube,                                                             # Daniel Khavrutskii & Suliman Sharif
+'tainted_sexual_enhancements': TaintedSexualEnhancements                  # Suliman Sharif
 ```
 
 <details><summary><h3>Node List</h1><br/></summary>
@@ -203,9 +204,10 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Pihkal                              | 179          | Shulgin, Alexander T., and Ann Shulgin. Pihkal: A Chemical Love Story. 1. ed., 8. print, Transform, 2010.                                                                                                                                                                                                            |
 | Excipients Cimetidine & Acyclovir   | 14           | Vaithianathan, Soundarya, et al. “Effect of Common Excipients on the Oral Drug Absorption of Biopharmaceutics Classification System Class 3 Drugs Cimetidine and Acyclovir.” Journal of Pharmaceutical Sciences, vol. 105, no. 2, Feb. 2016, pp. 996–1005. PubMed, https://doi.org/10.1002/jps.24643.                |
 | Nickel Bidendate Phosphine Ligands  | N/A          | Clevenger, Andrew L., et al. “Trends in the Usage of Bidentate Phosphines as Ligands in Nickel Catalysis.” Chemical Reviews, vol. 120, no. 13, July 2020, pp. 6124–96. DOI.org (Crossref), https://doi.org/10.1021/acs.chemrev.9b00682.                                                                              |
-| HowToLiveLonger                     | 4            | https://github.com/geekan/HowToLiveLonger |
-| Monoclonal Antibodies               | 19           | https://labels.fda.gov/ |
+| HowToLiveLonger                     | 4            | https://github.com/geekan/HowToLiveLonger                                                                                                                                                                                                                                                                            |
+| Monoclonal Antibodies               | 19           | https://labels.fda.gov/                                                                                                                                                                                                                                                                                              |
 | Common Lubricants for Sex           | 38           | https://exsens-usa.com/blogs/your-body-your-pleasure/lube-lessons-glossary-of-common-sex-lube-ingredients                                                                                                                                                                                                            |                                          
+| Tainted Sexual Enhancements         | 4            | FDA Tainted Sexual Enhancements                                                                                                                                                                                                                                                                                      |                                          
 | Common Regex Patterns               | 1            |                                                                                                     
 
 </details>                            
@@ -225,7 +227,7 @@ A Variety of Tools are available for you to browse and analyze data and with the
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------|------------------|
 | GlobalChem Chemical Entities    | GlobalChem has internal Molecule objects with all common attributes associated and conversion to SMILES                 | forcefields       |
 | GlobalChem Biological Entities  | GlobalChem has internal DNA/RNA/Protein/Molecule objects with all common attributes associated and conversion to SMILES | bioinformatics   |
-  | Visualize DNA/RNA Strands  | Visualize DNA and RNA Strands and add labels to them | bioinformatics   |
+| Visualize DNA/RNA Strands       | Visualize DNA and RNA Strands and add labels to them | bioinformatics   |
 | ForceField Molecules            | GlobalChem can parse, manipulate, and write CGenFF and GaFF2 files as objects                                           | forcefields       |
 | PDF Generation and Parsing      | GlobalChem can generate SMILES to PDF and convert the PDF to SMILES                                                     | cheminformatics              |
 | SMILES Validation               | GlobalChem has connection to PySMILES, DeepSMILES, PartialSmiles, SELFIES, MolVS for validation of SMILES sets          | cheminformatics       |
