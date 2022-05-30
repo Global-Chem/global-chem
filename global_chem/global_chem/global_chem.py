@@ -380,7 +380,9 @@ class GlobalChem(object):
     def check_available_nodes(self):
 
         '''
+
         Checks the existing Nodes within the network.
+
         '''
 
         return list(self.__NODES__.keys())
@@ -388,7 +390,9 @@ class GlobalChem(object):
     def get_all_nodes(self):
 
         '''
+
         Returns all the nodes in no particular order
+
         '''
 
         # Skip the head node
@@ -401,8 +405,10 @@ class GlobalChem(object):
 
         '''
         Return a node based on the key by the user.
+
         Arguments:
             node_key (String): node keys within the network
+
         '''
 
         return self.__NODES__[node_key]
@@ -410,14 +416,20 @@ class GlobalChem(object):
     def get_depth_of_globalchem(self):
 
         '''
+
         Returns the Depth of the GlobalChem Tree
+
         Returns:
             max_depth (Int): Max depth of the object
+
         '''
 
         path_objects = []
 
-        absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
+        if os.name == 'nt':
+            absolute_file_path = self.splitter.join(os.path.dirname(os.path.realpath('__file__')).split(self.splitter)[:-1])
+        else:
+            absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
 
         for dirpath, dirnames, filenames in os.walk(absolute_file_path):
 
@@ -446,10 +458,12 @@ class GlobalChem(object):
     def get_nodes(self, node_keys):
 
         '''
+
         Arguments:
             node_keys (List): return the list of nodes based on the user keys.
         Returns
             nodes (List): List of the node objects
+
         '''
 
         nodes = []
@@ -487,15 +501,19 @@ class GlobalChem(object):
     def add_node(self, parent_key, child_key):
 
         '''
+
         Add a node into the network
+
         Rules:
             1.) There must be a connection from one node to the next. Nodes in space cannot exist.
+
         Algorithm:
             1.) First Find the Node in the Network
             2.) Add the Child to the Parent
             3.) Add the Child to the Network
             4.) Add the Parent to the Child
             5.) Add the Parent to the Network
+
         Graph Algorithm:
             O(c): Child Node
             O(p): Parent Node
@@ -505,9 +523,11 @@ class GlobalChem(object):
             3.) O(c) <---- N
             4.) O(p) ----> O(c)
             5.) O(p) ----> N
+
         Errors:
             GraphNetworkError Step 1: If the Parent Node was never found
             GraphNetworkError Step 4: If the Newly Child node was never added.
+
         '''
 
         # Step 1
@@ -650,13 +670,16 @@ class GlobalChem(object):
     def get_node(self, name):
 
         '''
+
         Get the Node
+
         Arguments:
             name: Parent key of the node | Type: String
         Returns:
             node: Returns the node.
         Errors:
             GraphNetworkError: If the node doesn't exist.
+
         '''
 
         # Hack for the python file: Need to fix later on.
@@ -745,25 +768,31 @@ class GlobalChem(object):
     def add_deep_layer(self, nodes):
 
         '''
+
         Arguments:
             nodes (List): Add a Layer of Nodes to the previous parents
+
         Rules:
             1.) When adding a deep layer add children to all the previous parents.
+
         Algorithm:
             1.) Fetch all the parents of the current layer
             2.) Add all the node children to the parents.
             3.) Increase the deep layer count.
             4.) All all the parents to the children.
+
         Graph Algorithm:
             O(cs): Childrens Node
             O(ps): Parents Node
             DN: Deep Network
             DCL: Deep Current Layer
+
             <F>: Fetch Function
             1.) O(ps) <F> DCL <F> DN
             2.) O(cs) <---- O(ps)
             3.) DCL += 1
             4.) O(ps) ----> O(cs)
+
         '''
 
         parents = []
@@ -814,7 +843,11 @@ class GlobalChem(object):
         # Fetch All the File Paths
 
         path_objects = []
-        absolute_file_path = self.splitter.join(os.path.abspath(__file__).split(self.splitter)[:-1])
+
+        if os.name == 'nt':
+            absolute_file_path = self.splitter.join(os.path.dirname(os.path.realpath('__file__')).split(self.splitter)[:-1])
+        else:
+            absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
 
         for dirpath, dirnames, filenames in os.walk(absolute_file_path):
 
@@ -1067,7 +1100,11 @@ class GlobalChem(object):
         _PRINT_NODE_KEY = {}
 
         path_objects = []
-        absolute_file_path = self.splitter.join(os.path.dirname(os.path.realpath('__file__')).split(self.splitter)[:-1])
+
+        if os.name == 'nt':
+            absolute_file_path = self.splitter.join(os.path.dirname(os.path.realpath('__file__')).split(self.splitter)[:-1])
+        else:
+            absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
 
         for dirpath, dirnames, filenames in os.walk(absolute_file_path):
 
@@ -1115,8 +1152,6 @@ class GlobalChem(object):
 
                         _PRINT_NODE_KEY[ parent ] = PrintNode(child, _PRINT_NODE_KEY[parent])
 
-        print(str(_PRINT_NODE_KEY))
-
         print(str(PrintTreeUtilities.printTrees(_PRINT_NODE_KEY['global_chem'])))
 
     def print_deep_network(self):
@@ -1152,7 +1187,6 @@ class GlobalChem(object):
                         for previous_parent in previous_parents:
 
                             _DEEP_NETWORK_KEY[ node_key ] = PrintNode(node_key, _DEEP_NETWORK_KEY[ previous_parent ])
-
 
         print(PrintTreeUtilities.printTrees(_DEEP_NETWORK_KEY[ self.root_node ]))
 
