@@ -23,7 +23,9 @@ which is more commonly known as `cocaine`, so we prefer the general language of 
 In some cases where we report narcotics such as `2C` class family which their chemicals are most commonly known as their class '2c' followed by the one-letter derivative to represent the analogue. 
 
 ```python
+
 2CI, 2CE
+
 ```
 
 #### Rule 2: Remove Stereochemistry (Trans and Cis) from both SMILES and IUPAC which can be determined algorithmically. 
@@ -33,7 +35,7 @@ down the information and makes the language more approachable. Let's say we eval
 
 ```python
 delta-9-(trans)-tetrahydrocannabinol
-``
+```
 
 We remove the `trans`:
 
