@@ -50,6 +50,10 @@ from global_chem.organic_synthesis.solvents.common_organic_solvents import Commo
 from global_chem.organic_synthesis.protecting_groups.amino_acid_protecting_groups import AminoAcidProtectingGroups
 from global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands import NickelBidendatePhosphineLigands
 
+# Food
+
+from global_chem.food.salt.salt import Salt
+
 # Narcotics
 
 from global_chem.narcotics.schedule_one import ScheduleOne

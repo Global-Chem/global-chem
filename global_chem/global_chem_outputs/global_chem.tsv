@@ -2417,3 +2417,20 @@ gluconolactone	C(C1C(C(C(C(=O)O1)O)O)O)O	lube		global_chem.sex.exsens.lube
 sodium hyaluronate	CC(=O)NC1CC(C(OC1OC2C(C(C(OC2C(=O)[O-])O)O)O)CO)O.[Na+]	lube		global_chem.sex.exsens.lube
 castor oil	CCCCCCC(CC=CCCCCCCCC(=O)OCC(COC(=O)CCCCCCCC=CCC(CCCCCC)O)OC(=O)CCCCCCCC=CCC(CCCCCC)O)O	lube		global_chem.sex.exsens.lube
 benzocaine	CCOC(=O)C1=CC=C(C=C1)N	lube		global_chem.sex.exsens.lube
+sildenafil	CCCC1=NN(C2=C1N=C(NC2=O)C3=C(C=CC(=C3)S(=O)(=O)N4CCN(CC4)C)OCC)C	tainted_sexual_enhancements		global_chem.sex.tainted_sexual_enhancement.tainted_sexual_enhancement
+tadalafil,	CN1CC(=O)N2C(C1=O)CC3=C(C2C4=CC5=C(C=C4)OCO5)NC6=CC=CC=C36	tainted_sexual_enhancements		global_chem.sex.tainted_sexual_enhancement.tainted_sexual_enhancement
+nitroglycerin	C(C(CO[N+](=O)[O-])O[N+](=O)[O-])O[N+](=O)[O-]	tainted_sexual_enhancements		global_chem.sex.tainted_sexual_enhancement.tainted_sexual_enhancement
+siedesalz	[Na+].[Cl-]	salt		global_chem.food.salt.salt
+black salt	[Na+].[Cl-].[Na+].[O-]S([O-])(=O)=O.OS(=O)(=O)[O-].[O-]S(=O)(=O)[O-].[Fe+3]	salt		global_chem.food.salt.salt
+finegrained salt	[Na+].[Cl-]	salt		global_chem.food.salt.salt
+himalayan salt	[Na+].[Cl-].[K+].[Fe+3]	salt		global_chem.food.salt.salt
+iodised salt	[Na+].[Cl-].[I-]	salt		global_chem.food.salt.salt
+kosher salt	[Na+].[Cl-]	salt		global_chem.food.salt.salt
+pink salt	[Na+].[Cl-].[K+].[Fe+3]	salt		global_chem.food.salt.salt
+potassium salt	[K+].[Cl-].[I-]	salt		global_chem.food.salt.salt
+refined salt	[Na+].[Cl-].[O-][Si](=O)[O-].[O-][Si](=O)[O-].[Al+3].C(=O)([O-])[O-].[Mg+2]	salt		global_chem.food.salt.salt
+sea salt	[Na+].[K+].[Mg+2].[Ca+2].[Cl-]	salt		global_chem.food.salt.salt
+smoked salt	[a].[Na+].[K+].[Mg+2].[Ca+2].[Cl-]	salt		global_chem.food.salt.salt
+sodium iodide	[Na+].[I-]	salt		global_chem.food.salt.salt
+unrefined salt	[Na+].[K+].[Mg+2].[Ca+2].[Cl-].[Zn+2].[Cu+].[Fe+3].[P]	salt		global_chem.food.salt.salt
+rock salt	[Na+].[Cl-]	salt		global_chem.food.salt.salt

@@ -64,6 +64,10 @@ from global_chem.organic_synthesis.protecting_groups.amino_acid_protecting_group
 from global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands import NickelBidendatePhosphineLigands
 # from global_chem.organic_synthesis.named_reactions_in_organic_synthesis.named_reactions_in_organic_synthesis import NamedReactionsInOrganicSynthesis
 
+# Food
+
+from global_chem.food.salt.salt import Salt
+
 # Narcotics
 
 from global_chem.narcotics.pihkal import Pihkal
@@ -358,6 +362,7 @@ class GlobalChem(object):
         'monoclonal_antibodies': MonoclonalAntibodies,                           # Asuka Orr & Suliman Sharif
         'lube': Lube,                                                            # Daniel Khavrutskii & Suliman Sharif
         'tainted_sexual_enhancements': TaintedSexualEnhancements,                # Suliman Sharif
+        'salt': Salt,                                                            # Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                            # Chris Burke & Suliman Sharif
     }
 
