@@ -22,23 +22,22 @@ class NamedReactionsInOrganicSynthesis(object):
         'hofmann_elimination': 'CCC(C)N.CCC=C',
         'wiallmson_ether_synthesis': 'C[F,Cl,Br,I].COC',
         'cannizzaro_reaction': 'CC=O.[*:1].CCO.CC(O)=O'
-
-      }
-
-      smiles = {
-        'wurtz_coulping': 'CBr.CC',
+	'wurtz_coulping': 'CBr.CC',
         'kolbe-schmitt_reaction': 'OC2=CC=CC=C2.OC1=C(C(O)=O)C=CC=C1',
         'pinacol_rearrangement': 'OC(C)(C)C(O)(C)C.O=C(C)C(C)(C)C',
         'semipinacol_rearrangement': 'OC(C)(C)C([F,Cl,Br,I])(C)C.O=C(C)C(C)(C)C',
-        'acyloin_condensation': 'COC(C)=O.CC(O)C(C)=O',
-        'hunsdiecker_reaction_borodin_reaction': 'CC([O-])=O.CBr',
-        'perkin_reaction': r'O=CC1=CC=CC=C1.O=C(C)OC(C)=O.O=C(O)/C=C\C2=CC=CC=C2',
-        'glaser_coupling_reaction': 'CC#C[H].CC#CC#CC',
-        'lossen_rearrangement': 'CC(N([H])OC(C)=O)=O.CN=C=O',
+	'acyloin_condensation': 'COC(C)=O.CC(O)C(C)=O',
+	'hunsdiecker_reaction_borodin_reaction': 'CC([O-])=O.CBr',
+	'perkin_reaction': r'O=CC1=CC=CC=C1.O=C(O)/C=C\C2=CC=CC=C2',
+	'glaser_coupling_reaction': 'CC#C[H].CC#CC#CC',
+	'lossen_rearrangement': 'CC(N([H])OC(C)=O)=O.CN=C=O',
         'reimer-tiemann_reaction': 'OC1=CC=CC=C1.OC2=C(C([H])=O)C=CC=C2',
-        'friedel-crafts_acylation': 'C1=CC=CC=C1.O=C(C)C2=CC=CC=C2',
+	'friedel-crafts_acylation': 'C1=CC=CC=C1.O=C(C)C2=CC=CC=C2',
         'friedel-crafts_alkylation': 'C1=CC=CC=C1.CC2=CC=CC=C2',
-        'malonic_ester_synthesis': 'O=C(CC(OC)=O)OC.O=C(OC)CC',
+	'malonic_ester_synthesis': 'O=C(CC(OC)=O)OC.O=C(OC)CC',
+      }
+
+      smiles = {
         'pinner_reaction': 'CC#N.CC(OC)=N',
         'koenigs-knorr_glycosidation': 'CC(OCC1C(OC(C)=O)C(OC(C)=O)C(OC(C)=O)C(Br)O1)=O.CC(OCC2C(OC(C)=O)C(OC(C)=O)C(OC(C)=O)C(OC)O2)=O',
         'skraup_and_doebner-miller_reaction': r'NC1=CC=CC=C1.O=C/C=C/C.CC2=NC3=CC=CC=C3C=C2',
