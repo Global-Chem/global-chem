@@ -172,6 +172,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 'monoclonal_antibodies': MonoclonalAntibodies                             # Asuka Orr & Suliman Sharif
 'lube': Lube,                                                             # Daniel Khavrutskii & Suliman Sharif
 'tainted_sexual_enhancements': TaintedSexualEnhancements                  # Suliman Sharif
+'salt': Salt                                                              # Suliman Sharif
 ```
 
 <details><summary><h3>Node List</h1><br/></summary>
@@ -208,13 +209,14 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Monoclonal Antibodies               | 19           | https://labels.fda.gov/                                                                                                                                                                                                                                                                                              |
 | Common Lubricants for Sex           | 38           | https://exsens-usa.com/blogs/your-body-your-pleasure/lube-lessons-glossary-of-common-sex-lube-ingredients                                                                                                                                                                                                            |                                          
 | Tainted Sexual Enhancements         | 4            | FDA Tainted Sexual Enhancements                                                                                                                                                                                                                                                                                      |                                          
+| Salt                                | 14           | OpenFoodFacts https://github.com/openfoodfacts                                                                                                                                                                                                                                                                       |                                          
 | Common Regex Patterns               | 1            |                                                                                                     
 
 </details>                            
 
 GlobalChemExtensions
 ====================
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 A Variety of Tools are available for you to browse and analyze data and with the full list of different applications can be found in the google colab demo or the Gitbook documentation. A demonstration of the data visualization extensions designed with plotly and bokeh are displayed below:
 
 <p align="center">
