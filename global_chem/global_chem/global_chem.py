@@ -96,6 +96,7 @@ from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
 # Sex
 
 from global_chem.sex.exsens.lube import Lube
+from global_chem.sex.exsens.products import ExsensProducts
 from global_chem.sex.tainted_sexual_enhancement.tainted_sexual_enhancement import TaintedSexualEnhancements
 
 class Node:
@@ -363,6 +364,7 @@ class GlobalChem(object):
         'lube': Lube,                                                            # Daniel Khavrutskii & Suliman Sharif
         'tainted_sexual_enhancements': TaintedSexualEnhancements,                # Suliman Sharif
         'salt': Salt,                                                            # Suliman Sharif
+        'exsens_products': ExsensProducts,                                       # Rebecca Pinette-Dorin & Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                            # Chris Burke & Suliman Sharif
     }
 

@@ -81,6 +81,7 @@ from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
 # Sex
 
 from global_chem.sex.exsens.lube import Lube
+from global_chem.sex.exsens.products import ExsensProducts
 from global_chem.sex.tainted_sexual_enhancement.tainted_sexual_enhancement import TaintedSexualEnhancements
 
 from global_chem.global_chem import GlobalChem
