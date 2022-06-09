@@ -172,6 +172,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 'monoclonal_antibodies': MonoclonalAntibodies                             # Asuka Orr & Suliman Sharif
 'lube': Lube,                                                             # Daniel Khavrutskii & Suliman Sharif
 'tainted_sexual_enhancements': TaintedSexualEnhancements                  # Suliman Sharif
+'exsens_products': ExsensProducts,                                        # Rebecca Pinette-Dorin & Suliman Sharif
 'salt': Salt                                                              # Suliman Sharif
 ```
 
