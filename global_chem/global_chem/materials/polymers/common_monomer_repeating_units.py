@@ -110,7 +110,7 @@ class CommonMonomerRepeatingUnits(object):
             '[3,3′-biquinoline]-6,6′': '[#6]1(-[#6]2:[#6]:[#6]3:[#6]:[#6]:[#6]:[#6]:[#6]:3:[#7]:[#6]:2):[#6]:[#6]2:[#6]:[#6]:[#6]:[#6]:[#6]:2:[#7]:[#6]:1',
             '[2,3′-bipyridine]-4,5′': '[#6]1(-[#6]2:[#6]:[#6]:[#6]:[#7]:[#6]:2):[#7]:[#6]:[#6]:[#6]:[#6]:1',
             '(Z)-but-1-enel': '[#6]=[#6]-[#6]-[#6]',
-            'threo-(E)-3-(methoxycarbonyl)-4-methylbut-1-ene-1,4-diyl': '',
+            'threo-(E)-3-(methoxycarbonyl)-4-methylbut-1-ene-1,4-diyl': '*',
             'ethene-1,2-diyl': '[#6]=[#6]',
             'propane-1,3-diyl': '[#6]-[#6]-[#6]',
             'methylmethylene': '[#6H]-[#6]',

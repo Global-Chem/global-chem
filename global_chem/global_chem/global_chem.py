@@ -67,7 +67,13 @@ from global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands im
 # Food
 
 from global_chem.food.salt.salt import Salt
-
+from global_chem.food.color_additives.fda_list_one import FDAListOne
+from global_chem.food.color_additives.fda_list_two import FDAListTwo
+from global_chem.food.color_additives.fda_list_three import FDAListThree
+from global_chem.food.color_additives.fda_list_four import FDAListFour
+from global_chem.food.color_additives.fda_list_five import FDAListFive
+from global_chem.food.color_additives.fda_list_six import FDAListSix
+from global_chem.food.color_additives.fda_list_seven import FDAListSeven
 # Narcotics
 
 from global_chem.narcotics.pihkal import Pihkal
@@ -365,6 +371,13 @@ class GlobalChem(object):
         'tainted_sexual_enhancements': TaintedSexualEnhancements,                # Suliman Sharif
         'salt': Salt,                                                            # Suliman Sharif
         'exsens_products': ExsensProducts,                                       # Rebecca Pinette-Dorin & Suliman Sharif
+        'fda_color_additive_list_one': FDAListOne,                               # Mike Wostner & Suliman Sharif
+        'fda_color_additive_list_two': FDAListTwo,                               # Mike Wostner & Suliman Sharif
+        'fda_color_additive_list_three': FDAListThree,                           # Mike Wostner & Suliman Sharif
+        'fda_color_additive_list_four': FDAListFour,                             # Mike Wostner & Suliman Sharif
+        'fda_color_additive_list_five': FDAListFive,                             # Mike Wostner & Suliman Sharif
+        'fda_color_additive_list_six': FDAListSix,                               # Mike Wostner & Suliman Sharif
+        'fda_color_additive_list_seven': FDAListSeven,                           # Mike Wostner & Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                            # Chris Burke & Suliman Sharif
     }
 
