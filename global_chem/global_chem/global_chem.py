@@ -371,13 +371,13 @@ class GlobalChem(object):
         'tainted_sexual_enhancements': TaintedSexualEnhancements,                # Suliman Sharif
         'salt': Salt,                                                            # Suliman Sharif
         'exsens_products': ExsensProducts,                                       # Rebecca Pinette-Dorin & Suliman Sharif
-        'fda_color_additive_list_one': FDAListOne,                               # Mike Wostner & Suliman Sharif
-        'fda_color_additive_list_two': FDAListTwo,                               # Mike Wostner & Suliman Sharif
-        'fda_color_additive_list_three': FDAListThree,                           # Mike Wostner & Suliman Sharif
-        'fda_color_additive_list_four': FDAListFour,                             # Mike Wostner & Suliman Sharif
-        'fda_color_additive_list_five': FDAListFive,                             # Mike Wostner & Suliman Sharif
-        'fda_color_additive_list_six': FDAListSix,                               # Mike Wostner & Suliman Sharif
-        'fda_color_additive_list_seven': FDAListSeven,                           # Mike Wostner & Suliman Sharif
+        'fda_list_one': FDAListOne,                                              # Mike Wostner & Suliman Sharif
+        'fda_list_two': FDAListTwo,                                              # Mike Wostner & Suliman Sharif
+        'fda_list_three': FDAListThree,                                          # Mike Wostner & Suliman Sharif
+        'fda_list_four': FDAListFour,                                            # Mike Wostner & Suliman Sharif
+        'fda_list_five': FDAListFive,                                            # Mike Wostner & Suliman Sharif
+        'fda_list_six': FDAListSix,                                              # Mike Wostner & Suliman Sharif
+        'fda_list_seven': FDAListSeven,                                          # Mike Wostner & Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                            # Chris Burke & Suliman Sharif
     }
 
