@@ -28,7 +28,7 @@ class FDAListTwo(object):
             'd&c red #33': 'C1=CC=C(C=C1)N=NC2=C(C3=C(C=C(C=C3C=C2S(=O)(=O)O)S(=O)(=O)O)N)O',
             'd&c red #36': 'C1=CC=C2C(=C1)C=CC(=C2N=NC3=C(C=C(C=C3)[N+](=O)[O-])Cl)O',
             'd&c yellow #10': 'C1=CC=C2C(=C1)C(=O)C(C2=O)C3=NC4=C(C=C(C=C4C=C3)S(=O)(=O)O)S(=O)(=O)O',
-            'd&c lakes': '.[Na+].[Zr+2].[Ca+2]',
+            'd&c lakes': '[Na+].[Zr+2].[Ca+2]',
         }
 
         return smiles
