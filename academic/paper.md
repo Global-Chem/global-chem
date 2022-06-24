@@ -1,38 +1,55 @@
 ---
-title: 'Global-Chem: Collections of common small molecules and their SMILES/SMARTS to support diverse chemical communities'
+title: 'Global-Chem: A Chemical Knowledge Graph of common small molecules and their IUPAC/SMILES/SMARTS for selection of compounds relevant to diverse chemical communities'
+
 authors:
   - name: Suliman Sharif [first author]
     orcid: 0000-0002-1342-9258
     affiliation: 1
-  - name: Asuka Orr
-    orcid: 0000-0003-4628-526X
+  - name: Ruibin Liu
+    orcid: 0000-0001-8395-9353
     affiliation: 1
   - name: Bettina Lier
     orcid: XXX
     affiliation: 4
+  - name: Asuka Orr
+    orcid: 0000-0003-4628-526X
+    affiliation: 1
   - name: Anastasia Croitoru
     orcid: XXX
     affiliation: 5
+  - name: Daniel Khavrutskii
+    orcid: XXX
+    affiliation: 5
+  - name: Sunhwan Jo
+    affiliation: 2
   - name: Jacob Weiner
     orcid: XXX
     affiliation: 1
-  - name: Sunhwan Jo
-    affiliation: 2
+  - name: Mingtian Zhao
+    orcid: XXX
+    affiliation: 1
+  - name: Aarion Romany
+    affiliation: 1
   - name: Aziza Frank
+    affiliation: 1
+  - name: Ian Jones
     affiliation: 1
   - name: Shaoqi Zhan
     orcid: 0000-0002-6383-1771
     affiliation: 3
-  - name: Ruibin Liu
-    orcid: 0000-0001-8395-9353
-    affiliation: 1
   - name: Chris Burke
     affiliation: 2
-  - name: iwatopben
+  - name: Takayuki Serizawa
     orcid: XXX
+    affiliation: 6
+  - name: Jared Deacon
+    affiliation: 6
+  - name: Anmol Kumar
     affiliation: 6
   - name: Aarion Romany
     affiliation: 1
+  - name: Mike Woster
+    affiliation: 6
   - name: Elena Yi Chow
     orcid: 0000-0001-5559-1635
     affiliation: 2
