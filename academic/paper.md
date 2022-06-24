@@ -9,7 +9,6 @@ authors:
     orcid: 0000-0001-8395-9353
     affiliation: 1
   - name: Bettina Lier
-    orcid: XXX
     affiliation: 4
   - name: Asuka Orr
     orcid: 0000-0003-4628-526X
@@ -40,7 +39,6 @@ authors:
   - name: Chris Burke
     affiliation: 2
   - name: Takayuki Serizawa
-    orcid: XXX
     affiliation: 6
   - name: Jared Deacon
     affiliation: 6
@@ -49,6 +47,8 @@ authors:
   - name: Aarion Romany
     affiliation: 1
   - name: Mike Woster
+    affiliation: 6
+  - name: Rebecca Pinette-Dorin
     affiliation: 6
   - name: Elena Yi Chow
     orcid: 0000-0001-5559-1635
@@ -322,10 +322,13 @@ The actual growth of the tree will be decided on by the common chemical communit
 
 # Acknowledgements
 
-Thank you to Daniel Khavrutskii, Jacob Weiner, Tyree Wilson, and Paul Shapiro for their helpful discussions into the usability and functionality of Global-Chem.
+Thank you to Tyree Wilson, and Paul Shapiro for their helpful discussions into the usability and functionality of Global-Chem.
 Appreciation to past mentors James Ryan, Robert Zeigler, and Blake Printy for discussions on good manufacturing practices of python packaging and distribution.
-Appreciation to the University of Maryland Baltimore, School of Pharmacy, Department of Pharmaceutical Chemistry for promoting a collaborative and useful space for 
-academics. Financial support from the NIH (GM131710) is acknowledged.
+Appreciation to the University of Maryland Baltimore, School of Pharmacy, Department of Pharmaceutical Chemistry for promoting a collaborative and useful space for academics. Financial support from the NIH (GM131710) is acknowledged.
+
+# References
+
+
 
 # Conflict of Interets
 
