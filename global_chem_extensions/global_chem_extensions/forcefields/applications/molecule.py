@@ -337,13 +337,15 @@ class GlobalChemMolecule(object):
 
         hetereo_atom_types = [i.split()[2] for i in self.cgenff_molecule.atoms if i.split()[2][0] != 'H']
 
-        curly_smiles = self.smiles
+        curly_smiles = ''
 
-        for i, atom in enumerate(curly_smiles):
+        for i, character in enumerate(self.smiles):
 
-            if atom.isalpha():
+            if character.isalpha():
 
-                curly_smiles.replace('%s{%s}' % (atom, hetereo_atom_types[i]))
+                curly_smiles += '%s{%s}' % (character, hetereo_atom_types[i])
+            else:
+                curly_smiles += character
 
         return curly_smiles
 
