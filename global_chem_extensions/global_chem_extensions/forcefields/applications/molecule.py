@@ -345,3 +345,21 @@ class GlobalChemMolecule(object):
 
         return Chem.MolToCXSmiles(self.molecule)
 
+    def get_cgenff_cxsmarts(self):
+
+        '''
+
+        Get the CGenFF CX SMARTS
+
+        '''
+
+        if self.cgenff_molecule:
+
+            hetereo_atom_types = [i.split()[2] for i in self.cgenff_molecule.atoms if i.split()[2][0] != 'H']
+
+            for idx, atom in enumerate(self.molecule.GetAtoms()):
+                atom.SetProp('atom_type', hetereo_atom_types[idx])
+                atom.SetIntProp('atom_idx', idx)
+
+        return Chem.MolToCXSmarts(self.molecule)
+
