@@ -343,7 +343,7 @@ class GlobalChemMolecule(object):
 
             if character.isalpha():
 
-                curly_smiles += '%s{%s}' % (character, hetereo_atom_types[i])
+                curly_smiles += '%s{%s}' % (character, hetereo_atom_types.pop(0))
             else:
                 curly_smiles += character
 
