@@ -327,6 +327,26 @@ class GlobalChemMolecule(object):
 
         return svg.replace('svg:','')
 
+    def get_curly_smiles(self):
+
+        '''
+
+        Get the CurlySMILES
+
+        '''
+
+        hetereo_atom_types = [i.split()[2] for i in self.cgenff_molecule.atoms if i.split()[2][0] != 'H']
+
+        curly_smiles = self.smiles
+
+        for i, atom in enumerate(curly_smiles):
+
+            if atom.isalpha():
+
+                curly_smiles.replace('%s{%s}' % (atom, hetereo_atom_types[i]))
+
+        return curly_smiles
+
     def get_cgenff_cxsmiles(self):
 
         '''
@@ -362,4 +382,3 @@ class GlobalChemMolecule(object):
                 atom.SetIntProp('atom_idx', idx)
 
         return Chem.MolToCXSmarts(self.molecule)
-
