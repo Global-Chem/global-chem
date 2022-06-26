@@ -126,7 +126,7 @@ by experts in the different fields. `Figure 3` depicts the node Module layout of
 arbitrary node hierarchy of the chemical sets included in `Global-Chem` as defined by the experts that introduce the data. Each blue circle represents a relevant field and their subsequent tree networks are highlighted by a contrasting colour.
 
 <p align="center">
-  <img width="1000" height="700" src="../images/figures/official_figure_1.png">
+  <img width="1000" height="900" src="../images/figures/figure_1_official.png">
   <i>Figure 3: Node Network of Global-Chem</i>
 </p>
 
