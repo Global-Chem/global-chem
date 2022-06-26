@@ -83,28 +83,28 @@ to process, manipulate, and derive new compound structures are established. Whil
 </p>
 
 For example, in `Figure 1`, the directory setup for downloading ZincDB molecules is shown. As is evident, the information content of the directory nomenclature does not contain information on the compounds they contain, making it nearly impossible to access specific molecules or classes molecules.  Towards overcoming this, partial organizational attempts were made in PubMed, filling chemical data linkages for computational toxicology called Actor for a specific
-refactored and refined effort [Judson:2019-9]. In another example, for the EnamineDB a scaffold associated with biological activity was designed to target 
-Toll-Like Receptors in an object-oriented fashion [Perez-Regidor:2016-9]. However, these organizational methods are difficult
+refactored and refined effort [23]. In another example, for the EnamineDB a scaffold associated with biological activity was designed to target 
+Toll-Like Receptors in an object-oriented fashion [24]. However, these organizational methods are difficult
 to extend to other systems and can be difficult to implement given the large amount of data.
 In addition, the information content of these papers is of limited utility to the common developer. 
 
 To organize chemical compounds we apply the idea of communication. Humans use symbols and drawings to communicate, a set of symbols and the rules to combining them are called a language. Languages can be employed to carry relevant, distinct features and mean something to their respective community. diagrammatically shown in `Figure 2`. 
 International Union of Pure and Applied Chemistry (IUPAC) was a coalition that formed in the 1800s and their method of communication was named after the organization, IUPAC. 
-IUPAC is a written language that predates even drawing atoms as a method of communication between chemists [Cooke-Fox:1989-5]. 
+IUPAC is a written language that predates even drawing atoms as a method of communication between chemists [6]. 
 Other chemical sub-communities adopted the IUPAC language and applied it to their fields that are comprised of different dialects i.e polymer chemistry, organo-metallic chemistry.
 Due to it's "first to market" status, the scientific chemical language IUPAC is the legacy language that is the lexical key to unlocking information about a chemical pattern or group. 
 But there are problems with the language due to it's length in describing bigger molecules and failure to give a more natural name for smaller molecules ex. water is oxidane. Simply, IUPAC names in organic chemisty papers are impractical, effecting extending the length of a manuscript, while being of limited value given the challenge of interpreting such names. Over time, the IUPAC names naturally turned into a slang ("preferred") language due to humans wanting to speak it while communicating with each other. Effectively, the **natural** chemical language that is extant today is a blend of both a formal and informal nomenclature. 
 
-To compact information, chemists presented drawings of chemical structures but information in such a format is hard to store precisely. Alternatively, SMILES [Weininger:1988-5] has become a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D chemical connectivity information with ease.  Algorithms
+To compact information, chemists presented drawings of chemical structures but information in such a format is hard to store precisely. Alternatively, SMILES [7] has become a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D chemical connectivity information with ease.  Algorithms
 have been designed to abstract and interpolate skeletal patterns and languages from chemical drawings and convert them into SMILES for data processing and analysis. 
-A number of these tools, which work to varying degrees of accuracy, have been well summarized by the Blue Obelisk Society Open Source Review [OBoyle:2016-9]. 
+A number of these tools, which work to varying degrees of accuracy, have been well summarized by the Blue Obelisk Society Open Source Review [25]. 
 Efforts to improve these tools recently have included machine learning (ML) methods that essential "sit" on top of the underlying algoritm to fix any inaccuracies of the method. 
 As an alternative we can take another direction, where data is selectively aggregated based on known classifications, popularity and utility, being organized to a degree of functionality that facilitates more widespread use. However, the criteria for such an aggregation of data is built upon human expertise, requiring input from a variety of people to attain the broadness and accessibility that would facilitate scientific discovery. In other words, in the context of a well-classified natural chemical database the major challenge is the enormity of the chemical universe, requring a range of chemical expertise to put togethe well-thought chemical lists of compounds relevant to their respective communities. Thus, it is necessary to create a tool to allow for a large number of participants to contribute in order for such a data compilation to grow. 
 However, most software and especially old software can be difficult to install and handle on top of modern technology thus hindering participation. This situation drives the
 need for a tool that is sustainable and readily accessible to potential participants, allowing the database to naturally grow.
 This need motivated the development of the presented `Global-Chem` database tool.
 
-To implement `Global-Chem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python [10.5555/159351][Cooke:1989-5].
+To implement `Global-Chem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python [10.5555/159351][7].
 
 <p align="center">
   <img width="1000" height="750" src="../images/figures/figure_2.png">
@@ -135,7 +135,7 @@ The tree network follows a simple object-oriented pythonic design in conjunction
 Each reference object has either the functional groups that correspond to that paper's overall functionality in IUPAC, Preferred Name, Acronyms, SMILES, or SMARTS
 format. The motivation for this design was that as more users contribute they can expand into different directories, add their own directory, 
 and provide their chemical list of interest. Each paper that is submitted is converted into a `namespace` module, an object
-whose name is indicative of it's functionality. An example for the drug design community is the paper "Rings In Drugs" [Taylor:2014-6] whose
+whose name is indicative of it's functionality. An example for the drug design community is the paper "Rings In Drugs" [11] whose
 python object equivalent is now "RingsInDrugs" with two functional methods that retrieve the  IUPAC:SMILES/SMARTS dictionary that was embedded included in the master object `Global-Chem`. 
 Users can choose to cross reference leaf nodes between each other and do comparative chemical list studies since the IUPAC name and SMILES name are consistent across lists.
 Note that not all the SMILES being portrayed are canonical given that users can create their own SMILES, which are not unique. To account for this users can parse `Global-Chem` SMILES into the `RDKit` parser
@@ -143,7 +143,8 @@ for canonical SMILES conversion.
 
 ## Data Collection
 
-References and associatied compound lists are selected based on the interests of the scientific contributors.  This should include consideration of relevance to the scientific community. 
+References and associatied compound lists are selected based on the interests of the scientific contributors.  This should include consideration of relevance to the scientific community. To authenticate and validate SMILES strings we employ interoperability tools to other cheminformatic software to verify it's usability. Global-Chem parsed through six different tools with majority being successful: RDKit 100% [Reference Here], DeepSMILES 99.25% [Reference Here], PartialSMILES 85.7% [Reference Here] , SELFIES 100% [Reference Here], MolVS 98.5% [Reference Here], PySMILES 99.8% [Reference Here]. PartialSMILES proved to be the most robust acceptance/rejection tool in identifying misrepresentations of SMILES. 
+
 The SMILES strings may be abstracted in a variety of methods:
 
 -  For simple molecules one representation of the SMILES can be directly translated using visual 
@@ -155,12 +156,12 @@ inspection. This is typically appropriate for compounds at the beginning of a re
 Note that some of the names may be modified based on human inspection in favor of preferred names. 
 
 - For polymer papers, the site points were omitted from the name and some of the nomenclature adjusted for preferred names
-over traditional. For example: 'yl' to mark site points for polymer connections was removed in favor of reduced english complexity. 
+over traditional. For example: 'yl' to mark site points for polymer connections was removed in favor of reduced english complexity. Site points are marked with a virtual atom that can be installed into the SMILES string with the character '*'.
 
-- In the case of radicals, some SMILES were adjusted to remove the radical chemical feature as they serve as connection points. However in some cases the radical component was maintained, especially in the case of IUPAC blue book common substituents.
+- In the case of radicals, some SMILES were adjusted to remove the radical chemical feature as they serve as connection points. However in some cases the radical component was maintained, especially in the case of IUPAC blue book common substituents or instellar space where radicals are more unknown and not as well explored.
 
-- SMARTS strings were adapted from the SMILES using RDKit [@Landrum:2019-5]
-
+- SMARTS strings were adapted from the SMILES using RDKit [@Landrum:2019-5]. 
+- 
 # Data
 
 At the time of writing the list of objects include those shown in Table 1. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. In addition, the languages used for each list are given, along with the number entires in the list and the reference.  In addition, the number of times that compounds in each list fail in the CGenFF program, as discussed below, is given.
@@ -189,6 +190,20 @@ At the time of writing the list of objects include those shown in Table 1. The l
 | Schedule 3 United States Narcotics  | Preferred Name/SMILES/SMARTS | 22           | [21CFRPart1]             | 1                         |
 | Schedule 4 United States Narcotics  | Preferred Name/SMILES/SMARTS | 77           | [21CFRPart1]             | 0                         |
 | Schedule 5 United States Narcotics  | Preferred Name/SMILES/SMARTS | 8            | [21CFRPart1]             | 0                         |
+| PihKal                              | Preferred Name/SMILES/SMARTS | 179          | [Reference Here]         | 0                         |
+| Excipients Cimetidine & Acyclovir   | Preferred Name/SMILES/SMARTS | 14           | [Reference Here]         | 0                         |
+| HowToLiveLonger	                    | Preferred Name/SMILES/SMARTS | 4            | [Reference Here]         | 0                         |
+| Monoclonal Antibodies               | Preferred Name/SMILES/SMARTS | 19           | [Reference Here]         | 0                         |
+| Common Lubricants for Sex Wellness  | Preferred Name/SMILES/SMARTS | 38           | [Reference Here]         | 0                         |
+| FDA Tainted Sexual Enhancements     | Preferred Name/SMILES/SMARTS | 4            | [Reference Here]         | 0                         |
+| Common Food Salts                   | Preferred Name/SMILES/SMARTS | 14           | [Reference Here]         | 0                         |
+| FDA Color Additive List 1           | FDA Name/SMILES/SMARTS       | 12           | [Reference Here]         | 0                         |
+| FDA Color Additive List 2           | FDA Name/SMILES/SMARTS       | 15           | [Reference Here]         | 0                         |
+| FDA Color Additive List 3           | FDA Name/SMILES/SMARTS       | 16           | [Reference Here]         | 0                         |
+| FDA Color Additive List 4           | FDA Name/SMILES/SMARTS       | 39           | [Reference Here]         | 0                         |
+| FDA Color Additive List 5           | FDA Name/SMILES/SMARTS       | 27           | [Reference Here]         | 0                         |
+| FDA Color Additive List 6           | FDA Name/SMILES/SMARTS       | 29           | [Reference Here]         | 0                         |
+| FDA Color Additive List 7           | FDA Name/SMILES/SMARTS       | 37           | [Reference Here]         | 0                         |
 | Common Regex Patterns               | Mol2                         | 1            |                          | N/A                       |
 
 <p align="center">
