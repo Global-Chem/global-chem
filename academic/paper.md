@@ -218,7 +218,7 @@ At the time of writing the list of objects include those shown in Table 1. The l
 
 # Tests & Applications
 
-A total collection of 2572 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 37 objects in
+A total collection of 2572 unique IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 37 objects in
 an organized fashion by subject. The code was refactored extensively to allow for ease of object addition according to subject and functionality.
 `Common Regex Patterns` was omitted from the test because it's not a functional group but rather a substring pattern to extrapolate Tripos `mol2` file information. 
 
