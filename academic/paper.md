@@ -145,7 +145,14 @@ for canonical SMILES conversion.
 
 References and associatied compound lists are selected based on the interests of the scientific contributors.  This should include consideration of relevance to the scientific community. To authenticate and validate SMILES strings we employ interoperability tools to other cheminformatic software to verify it's usability. Global-Chem parsed through six different tools with majority being successful: RDKit 100% [Reference Here], DeepSMILES 99.25% [Reference Here], PartialSMILES 85.7% [Reference Here] , SELFIES 100% [Reference Here], MolVS 98.5% [Reference Here], PySMILES 99.8% [Reference Here]. PartialSMILES proved to be the most robust acceptance/rejection tool in identifying misrepresentations of SMILES. 
 
-The SMILES strings may be abstracted in a variety of methods:
+The IUPAC/SMILES strings may be abstracted in a variety of methods:
+
+- For IUPAC naming we opted for naming things as they were reported in the literature. If no names were available, then we opted to find a natural name to fill the slot.
+
+- For IUPAC naming, we chose to reduce the complexity of the name by opting to remove as much stereochemistry as made sense. 
+
+- For Polymer IUPAC, the site points were omitted from the name and some of the nomenclature adjusted for preferred names
+over traditional. For example: 'yl' to mark site points for polymer connections was removed in favor of reduced english complexity. Site points are marked with a virtual atom that can be installed into the SMILES string with the character '*'.
 
 -  For simple molecules one representation of the SMILES can be directly translated using visual 
 inspection. This is typically appropriate for compounds at the beginning of a reported list that contain the most common denominator rings. 
@@ -155,13 +162,12 @@ inspection. This is typically appropriate for compounds at the beginning of a re
 - For sources where the SMILES are written and the IUPAC is not known the SMILES are translated into ChemDraw and the name retrieved. 
 Note that some of the names may be modified based on human inspection in favor of preferred names. 
 
-- For polymer papers, the site points were omitted from the name and some of the nomenclature adjusted for preferred names
-over traditional. For example: 'yl' to mark site points for polymer connections was removed in favor of reduced english complexity. Site points are marked with a virtual atom that can be installed into the SMILES string with the character '*'.
-
 - In the case of radicals, some SMILES were adjusted to remove the radical chemical feature as they serve as connection points. However in some cases the radical component was maintained, especially in the case of IUPAC blue book common substituents or instellar space where radicals are more unknown and not as well explored.
 
 - SMARTS strings were adapted from the SMILES using RDKit [@Landrum:2019-5]. 
-- 
+
+- Stereochemistry which is represented as '@' and '@@' as R and S respectively are removed from the SMILES in order to reduce complexity.
+
 # Data
 
 At the time of writing the list of objects include those shown in Table 1. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. In addition, the languages used for each list are given, along with the number entires in the list and the reference.  In addition, the number of times that compounds in each list fail in the CGenFF program, as discussed below, is given.
@@ -170,26 +176,26 @@ At the time of writing the list of objects include those shown in Table 1. The l
 |-------------------------------------|------------------------------|--------------|--------------------------| --------------------------|
 | Amino Acids                         | IUPAC/SMILES/SMARTS          | 20           | Common Knowledge         | 0                         |
 | Essential Vitamins                  | Preferred Name/SMILES/SMARTS | 13           | Common Knowledge         | 0                         |
-| Common Organic Solvents             | IUPAC/SMILES/SMARTS          | 42           | [Fulmer:2010-5]          | 3                         |
-| Open Smiles                         | IUPAC/SMILES/SMARTS          | 94           | [OpenSmiles]             | 10                        |
-| IUPAC Blue Book (CRC Handbook) 2003 | Preferred Name/SMILES/SMARTS | 333          | [CRC:2004]               | 1 (Excluding Radicals)    |
-| Rings in Drugs                      | IUPAC/SMILES/SMARTS          | 92           | [Taylor:2014-6]          | 0                         |
-| Phase 2 Hetereocyclic Rings         | IUPAC/SMILES/SMARTS          | 19           | [Broughton:2004-9]       | 0                         |
-| Privileged Scaffolds                | IUPAC/SMILES/SMARTS          | 47           | [Welsch:2010-6]          | 0                         |
-| Common Warheads Covalent Inhibitors | IUPAC/SMILES/SMARTS          | 29           | [Gehringer:2019-6]       | 4                         |
-| Common Polymer Repeating Units      | IUPAC/SMILES/SMARTS          | 78           | [Hiorns:2019-6]          | 7                         |
-| Common R Group Replacements         | IUPAC/SMILES/SMARTS          | 499          | [Takeuchi:2021-9]        | 15                        |
-| Electrophillic Warheads for Kinases | Preferred Name/SMILES/SMARTS | 24           | [Petri:2020-12]          | 0                         |
-| Privileged Scaffolds for Kinases    | IUPAC/SMILES/SMARTS          | 29           | [Hu:2021-3]              | 0                         |
-| BRAF Inhibitors                     | IUPAC/SMILES/SMARTS          | 54           | [Agianian:2018-6]        | 5                         |
-| Common Amino Acid Protecting Groups | IUPAC/ACRONYM/SMILES/SMARTS  | 346          | [Isidro-Llobet:2009-6]   | 41                        |
-| Emerging Perfluoroalkyls            | IUPAC/SMILES/SMARTS          | 27           | [Pelch:2019-9]           | 1                         |
-| Chemicals For Clay Adsorption       | IUPAC/SMILES/SMARTS          | 33           | [Orr:2019-9]             | 0                         |
-| Schedule 1 United States Narcotics  | Preferred Name/SMILES/SMARTS | 240          | [21CFRPart1]             | 1                         |
-| Schedule 2 United States Narcotics  | Preferred Name/SMILES/SMARTS | 60           | [21CFRPart1]             | 1                         |
-| Schedule 3 United States Narcotics  | Preferred Name/SMILES/SMARTS | 22           | [21CFRPart1]             | 1                         |
-| Schedule 4 United States Narcotics  | Preferred Name/SMILES/SMARTS | 77           | [21CFRPart1]             | 0                         |
-| Schedule 5 United States Narcotics  | Preferred Name/SMILES/SMARTS | 8            | [21CFRPart1]             | 0                         |
+| Common Organic Solvents             | IUPAC/SMILES/SMARTS          | 42           | [8]                      | 3                         |
+| Open Smiles                         | IUPAC/SMILES/SMARTS          | 94           | [9]                      | 10                        |
+| IUPAC Blue Book (CRC Handbook) 2003 | Preferred Name/SMILES/SMARTS | 333          | [10]                     | 1 (Excluding Radicals)    |
+| Rings in Drugs                      | IUPAC/SMILES/SMARTS          | 92           | [11]                     | 0                         |
+| Phase 2 Hetereocyclic Rings         | IUPAC/SMILES/SMARTS          | 19           | [12]                     | 0                         |
+| Privileged Scaffolds                | IUPAC/SMILES/SMARTS          | 47           | [13]                     | 0                         |
+| Common Warheads Covalent Inhibitors | IUPAC/SMILES/SMARTS          | 29           | [14]                     | 4                         |
+| Common Polymer Repeating Units      | IUPAC/SMILES/SMARTS          | 78           | [15]                     | 7                         |
+| Common R Group Replacements         | IUPAC/SMILES/SMARTS          | 499          | [16]                     | 15                        |
+| Electrophillic Warheads for Kinases | Preferred Name/SMILES/SMARTS | 24           | [17]                     | 0                         |
+| Privileged Scaffolds for Kinases    | IUPAC/SMILES/SMARTS          | 29           | [18]                     | 0                         |
+| BRAF Inhibitors                     | IUPAC/SMILES/SMARTS          | 54           | [19]                     | 5                         |
+| Common Amino Acid Protecting Groups | IUPAC/ACRONYM/SMILES/SMARTS  | 346          | [20]                     | 41                        |
+| Emerging Perfluoroalkyls            | IUPAC/SMILES/SMARTS          | 27           | [21]                     | 1                         |
+| Chemicals For Clay Adsorption       | IUPAC/SMILES/SMARTS          | 33           | [22]                     | 0                         |
+| Schedule 1 United States Narcotics  | Preferred Name/SMILES/SMARTS | 240          | [26]                     | 1                         |
+| Schedule 2 United States Narcotics  | Preferred Name/SMILES/SMARTS | 60           | [26]                     | 1                         |
+| Schedule 3 United States Narcotics  | Preferred Name/SMILES/SMARTS | 22           | [26]                     | 1                         |
+| Schedule 4 United States Narcotics  | Preferred Name/SMILES/SMARTS | 77           | [26]                     | 0                         |
+| Schedule 5 United States Narcotics  | Preferred Name/SMILES/SMARTS | 8            | [26]                     | 0                         |
 | PihKal                              | Preferred Name/SMILES/SMARTS | 179          | [Reference Here]         | 0                         |
 | Excipients Cimetidine & Acyclovir   | Preferred Name/SMILES/SMARTS | 14           | [Reference Here]         | 0                         |
 | HowToLiveLonger	                    | Preferred Name/SMILES/SMARTS | 4            | [Reference Here]         | 0                         |
