@@ -306,15 +306,13 @@ Accordingly, if even a few perfluoroalkyls are added to the `CGenFF` training se
 In addition to the ability of CGenFF to treat the selected chemical lists discussed above other noteworthy failures are listed in `Figure 5`. 
 For example, cyclobutadiene is a non-traditional ring system with a lot of ring strain although the carbon atom types are common.
 `CGenFF` might determine that this particular ring system with it's existing atom type network is not allowed or detrimental to the network if added and needs to be handled with care. An interesting group that fails in CGenFF are allene-based compounds and perhaps warrants extension of the force.
-Silicon has not been included in CGenFF leading to the failures of the silicon-based compounds. Similarly, the IUPAC blue book valuable list includes radicals, which are relevant for synthesis purposes. This is another class for `CGenFF`has not yet been parametrized.
+Silicon has not been included in CGenFF leading to the failures of the silicon-based compounds. Similarly, the IUPAC blue book valuable list includes radicals, which are relevant for synthesis purposes. This is another class for `CGenFF`has not yet been parametirized. Full logs of failed compounds are found in the `tests` directory in the github repository. 
 
 <p align="center">
   <img width="1000" height="450" src="../images/figures/figure_6_new.png">
   <br>
   <i>Figure 5: Failed CGenFF Compounds</i>
 </p>
-
-Full logs of failed compounds are found in the `tests` directory in the github repository. 
 
 # Chemical List Selection 
 
