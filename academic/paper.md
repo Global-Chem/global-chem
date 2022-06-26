@@ -232,15 +232,15 @@ include functional groups that could not be parsed.
 
 Global-Chem parsed through seven different tools with majority being successful minus diamond represented with an '&' and still under debate as an acceptable grammar for material chemical species: RDKit 100% [Reference Here], DeepSMILES 99.25% [Reference Here], PartialSMILES 85.7% [Reference Here] , SELFIES 100% [Reference Here], MolVS 98.5% [Reference Here], PySMILES 99.8% [Reference Here]. PartialSMILES proved to be the most robust acceptance/rejection tool in identifying misrepresentations of SMILES. 
 
-| Software        | Encoder Description        | Number of Failed Compounds | Example of Failed SMILES                                |
-|-----------------| ---------------------------|----------------------------|---------------------------------------------------------|
-| RDKit           |                            | 0                          |                                                         |
-| Indigo          |                            | 8                          | 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'                    |
-| PySMILES        |                            | 5                          | 'c1ccccc1C&1&1', '[a].[Na+].[K+].[Mg+2].[Ca+2].[Cl-]'   |
-| PartialSMILES   |                            | 337                        | '[CH]C',  '[N]=[N+]=[N-]'                               |
-| MolVS           |                            | 24                         | 'n1ccnc1', 'HF', 'O=N1CCCCC1'                           |
-| DeepSMILES      |                            | 8                          |                                                         |
-| SELFIES         |                            | 0                          |                                                         |
+| Software        | Encoder Description        | Number of Failed Compounds | Example of Failed SMILES                                   |
+|-----------------| ---------------------------|----------------------------|------------------------------------------------------------|
+| RDKit           |                            | 0                          |                                                            |
+| Indigo          |                            | 8                          | 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'                       |
+| PySMILES        |                            | 5                          | 'c1ccccc1C&1&1', '[a].[Na+].[K+].[Mg+2].[Ca+2].[Cl-]'      |
+| PartialSMILES   |                            | 337                        | '[CH]C', '[N]=[N+]=[N-]'                                   |
+| MolVS           |                            | 24                         | 'n1ccnc1', 'HF', 'O=N1CCCCC1'                              |
+| DeepSMILES      |                            | 8                          | 'OC(C1=CC=CC=C1N2)C2=O', 'C1(N2C(CN=C3)=NN=C2)=C3C=CC=C1'  |                 
+| SELFIES         |                            | 0                          |                                                            |
 
 <p align="center">
   <i>Table 2: Compounds in Global-Chem that fail cheminformatic tests</i>
