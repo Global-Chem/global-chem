@@ -321,7 +321,11 @@ Silicon has not been included in CGenFF leading to the failures of the silicon-b
 
 Full logs of failed compounds are found in the `tests` directory in the github repository. 
 
-### Discussion 
+# Chemical List Selection & GlobalChemExtensions
+
+# Parametirization of the 1,2-Dithiolane
+
+#Conclusion 
 
 `Global-Chem` was developed to facilitate accessing lists of known chemical compounds as objects to allow them to be used in the context of python-based workflows.
 However, it can also facilitate the evaluation of other tools to access chemical information in the form of SMILES. An interesting observation from the present data is the ability of tools to handle the ampersand `&` operator in SMILES for materials. 
@@ -330,18 +334,7 @@ documentation as a `C&1&1&1&1`. As shown in Table 2, this fails in both `RDKit` 
 
 Beyond accessing SMILES stings we've shown the utility of `Global-Chem` to interogate the coverage of the force field `CGenFF`. By partitioning chemical space into well-defined chemical lists, `Global-Chem` allows for regions of chemical space where the CGenFF programs fails or assigns parameters of low analogy to be readily identified. This information will allow for decisions to be made concerning the addition of molecules in the CGenFF training set thereby allowing for systematic improvements in the force field.
 
-## GlobalChemExtensions
-
-Other than interacting with the network and designing your own, we made a software architectural decision that any extended functionality
-that has python dependencies will live in a separate extended package `GlobalChem` called `GlobalChemExtensions`. An exhibition of it's functionality is displayed 
-in `Figure 4`. 
-
-![Extended Functionality of GlobalChem .\label{fig:figure_4}](https://raw.githubusercontent.com/Sulstice/global-chem/master/images/figures/figure_10.png){ width=100% }
-
-In `Figure 4`, from left to right we demonstrate functionality of radial analysis, principal component analysis, open
-source database monitoring and a parallel coordinates diagram. With more details provided in the documentation available on GitBook.
-
-# Statement of Need
+# Statement of Purpose
 
 `Global-Chem` was developed to facilitate the ability of scientists in both academia and industry to make their compounds of interest readily available to the scientific community in the form of objects that may be directly accessed from python. 
 Accordingly, `Global-Chem` has a number of potential purposes, including teaching and cheminformatics, but our main perogative is to create a free record collection.
