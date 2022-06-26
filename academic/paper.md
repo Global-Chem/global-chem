@@ -218,7 +218,7 @@ At the time of writing the list of objects include those shown in Table 1. The l
 
 # Tests & Applications
 
-A total collection of 2560 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 22 objects in
+A total collection of 2572 IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 37 objects in
 an organized fashion by subject. The code was refactored extensively to allow for ease of object addition according to subject and functionality.
 `Common Regex Patterns` was omitted from the test because it's not a functional group but rather a substring pattern to extrapolate Tripos `mol2` file information. 
 
@@ -236,13 +236,19 @@ Results on the number of failed compounds out of the 2560 compounds along with e
 Cheminformatic interoperability between different platforms promotes wider utilization. For example, OpenBabel is another
 utility that may used as a tolerance checker.
 
-| Software | Number of Failed Compounds | Example of Failed SMILES                                |
-|----------|----------------------------|---------------------------------------------------------|
-| RDKit    | 11                         | 'CSi(C(C)(C)C)C', 'C&1&1&1&1',                          |
-| Indigo   | 8                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
+| Software        | Number of Failed Compounds | Example of Failed SMILES                                |
+|-----------------|----------------------------|---------------------------------------------------------|
+| RDKit           | 0                          | 'CSi(C(C)(C)C)C', 'C&1&1&1&1',                          |
+| Indigo          | 8                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
+| PySMILES        | 8                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
+| PartialSMILES   | 8                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
+| DeepSMILES      | 8                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
+| PartialSMILES   | 8                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
+| SELFIES         | 0                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
+| PySMILES        | 8                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
 
 <p align="center">
-  <i>Table 2: Compounds in Global-Chem that fail in RDKit or Indigo</i>
+  <i>Table 2: Compounds in Global-Chem that fail cheminformatic tests</i>
 </p>
 
 ## Force Field Test
