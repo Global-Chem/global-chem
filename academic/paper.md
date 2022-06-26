@@ -316,11 +316,11 @@ Silicon has not been included in CGenFF leading to the failures of the silicon-b
 
 Full logs of failed compounds are found in the `tests` directory in the github repository. 
 
-# Chemical List Selection & GlobalChemExtensions
+# Chemical List Selection 
 
-# Parametirization of the 1,2-Dithiolane
+# ForceField Parametirization of the 1,2-Dithiolane
 
-#Conclusion 
+# Conclusion 
 
 `Global-Chem` was developed to facilitate accessing lists of known chemical compounds as objects to allow them to be used in the context of python-based workflows.
 However, it can also facilitate the evaluation of other tools to access chemical information in the form of SMILES. An interesting observation from the present data is the ability of tools to handle the ampersand `&` operator in SMILES for materials. 
