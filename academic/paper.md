@@ -143,7 +143,7 @@ for canonical SMILES conversion.
 
 ## Data Collection
 
-References and associatied compound lists are selected based on the interests of the scientific contributors.  This should include consideration of relevance to the scientific community. To authenticate and validate SMILES strings we employ interoperability tools to other cheminformatic software to verify it's usability. Global-Chem parsed through six different tools with majority being successful: RDKit 100% [Reference Here], DeepSMILES 99.25% [Reference Here], PartialSMILES 85.7% [Reference Here] , SELFIES 100% [Reference Here], MolVS 98.5% [Reference Here], PySMILES 99.8% [Reference Here]. PartialSMILES proved to be the most robust acceptance/rejection tool in identifying misrepresentations of SMILES. 
+References and associatied compound lists are selected based on the interests of the scientific contributors.  This should include consideration of relevance to the scientific community. To authenticate and validate SMILES strings we employ interoperability tools to other cheminformatic software to verify it's usability. Global-Chem parsed through six different tools with majority being successful minus diamond represented with an '&' and still under debate as an acceptable grammar for material chemical species: RDKit 100% [Reference Here], DeepSMILES 99.25% [Reference Here], PartialSMILES 85.7% [Reference Here] , SELFIES 100% [Reference Here], MolVS 98.5% [Reference Here], PySMILES 99.8% [Reference Here]. PartialSMILES proved to be the most robust acceptance/rejection tool in identifying misrepresentations of SMILES. 
 
 The IUPAC/SMILES strings may be abstracted in a variety of methods:
 
@@ -236,16 +236,17 @@ Results on the number of failed compounds out of the 2560 compounds along with e
 Cheminformatic interoperability between different platforms promotes wider utilization. For example, OpenBabel is another
 utility that may used as a tolerance checker.
 
+
+  
 | Software        | Number of Failed Compounds | Example of Failed SMILES                                |
 |-----------------|----------------------------|---------------------------------------------------------|
-| RDKit           | 0                          | 'CSi(C(C)(C)C)C', 'C&1&1&1&1',                          |
-| Indigo          | 8                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
-| PySMILES        | 8                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
-| PartialSMILES   | 8                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
-| DeepSMILES      | 8                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
-| PartialSMILES   | 8                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
-| SELFIES         | 0                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
-| PySMILES        | 8                          | 'C&1&1&1&1', 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'       |
+| RDKit           | 0                          |                                                         |
+| Indigo          | 8                          | 'CC(Si(C1=CC=CC=C1)C2=CC=CC=C2)(C)C'                    |
+| PySMILES        | 5                          | 'c1ccccc1C&1&1', '[a].[Na+].[K+].[Mg+2].[Ca+2].[Cl-]'   |
+| PartialSMILES   | 337                        | '[CH]C',  '[N]=[N+]=[N-]'                               |
+| MolVS           | 24                         | 'n1ccnc1', 'HF', 'O=N1CCCCC1'                           |
+| DeepSMILES      | 8                          |                                                         |
+| SELFIES         | 0                          | '', ''                                                  |
 
 <p align="center">
   <i>Table 2: Compounds in Global-Chem that fail cheminformatic tests</i>
