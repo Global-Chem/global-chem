@@ -281,7 +281,7 @@ assigned penalties that indicate the level of analogy of the assigned bonded par
 Larger penalities indicate a lower extent of analogy to known parameters, information that may be used to identify 
 molecules for additional force field optimization.
 
-Motivated by the availability of the CGenFF penalty scores we passed each object individually into the `CGenFF program` and recorded the results.
+Motivated by the availability of the CGenFF penalty scores we passed a variety of objects individually into the `CGenFF program` using our in-house version that can process SMILES strings and recorded the results.
 The penalty score distributions are shown in `Figure 6` in a rug fashion using Plotly [Plotly] to show the extent of `CGenFF` penalites
 for the different chemical lists. As may be seen the extent of penalties differs significantly for the various lists. 
 To understand the utility of this information we focus on five leaf nodes: Schedule One US Narcotics (240), BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds (47), Common Warheads (29), [Gehringer:2019-6] and Emerging PerfluoroAlkyls (27). Schedule One are active drugs that are popular in the black market [21CFRPart1], kinase inhibitors should contain drug-like features, privileged scaffolds are selected compounds produced by nature, warheads are designed for covalent inhibition, and PerfluoroAlkyls include herbicides and other compounds that are toxic to humans. Based on the compounds used in the development of CGenFF,
