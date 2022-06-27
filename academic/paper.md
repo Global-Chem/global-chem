@@ -288,7 +288,7 @@ we expected the penalties to be lower on drugs and drug-like species and higher 
   <i>Figure 4: Penalty Score Probability Distributions</i>
 </p>
 
-From `Figure 6`, if we use the charge penalty score as a metric for performance, it is evident that the `CGenFF program` 
+From `Figure 4`, if we use the charge penalty score as a metric for performance, it is evident that the `CGenFF program` 
 assigns parameters with generally low penalty scores less than 200 for Schedule One and BRAF Kinase Inhibitors owed to its
 initial training set of "drug-like" molecules. Privileged Scaffolds encompass a lot of natural products which 
 have functional groups that fall into the definition of "drug-like" but not all as indicated by the purple lines  
@@ -308,7 +308,7 @@ For forcefield parametirization, there are two avenues for sufficient chemical s
 <p align="center">
   <img width="500" height="350" src="../images/figures/official_figure_6.png">
   <br>
-  <i>Figure 6: Chemical Selection List determined off relevance and charge distribution score and ease of paramitirization with their respective atom-types</i>
+  <i>Figure 5: Chemical Selection List determined off relevance and charge distribution score and ease of paramitirization with their respective atom-types</i>
 </p>
 
 To detect rare based compounds we utilize the sunbursting software method within the Global-Chem Extensions package to illunminate a portion of the Enamine Database that passed CGenFF to find new ring system compounds. 
@@ -321,11 +321,43 @@ Which could be useful to the community for small functional group conversion and
 <p align="center">
   <img width="900" height="1250" src="../images/figures/official_figure_7.png">
   <br>
-  <i>Figure 7: Application of the Sunbursting Method Applied on CGenFF Atom Types and RingsInDrugs GlobalChem Node</i>
+  <i>Figure 6: Application of the Sunbursting Method Applied on CGenFF Atom Types and RingsInDrugs GlobalChem Node</i>
 </p>
 
+We found an amide in conjunction with the disulphur embedded cyclopentyl ring called officially a dithiolane. 
+Dithiolanes are easy to synthesize [Reference Here], naturally occurring [Reference Here], and becoming an emerging potent anchor fragments in drug design [Reference Here] and
+ their parameters were deemed the most valuable to append to CGenFF out of the dataset.
 
 # ForceField Parametirization of the 1,2-Dithiolane
+
+We truncated dithiolane from the amide and passed through CGenFF (Full data available in the Supporting Information) which indicated that the dilemma was in part due to the extent of puckering caused by the 2 Sulphur atoms within the constrained cyclopentane ring system. T
+To begin our parametirization process we chose to focus on `S1-C3-C4-S2`, backbone to the cyclopentane ring and the dihedral from the methyl to one carbon on the backbone `C1-C2-S1-C3`. Since the molecule is symmetric, it makes the complexity of the molecule decrease twofold. 
+The parametirization of 1,2-dithiolane was performed using FFParam [Reference Here] following the FFParam Workflow [Reference Here]. To begin our process, we first subject the compound to quantum mechanics (QM) geometry optimization, with Gaussian [Reference HEre], using mp2 theory to treat electron correlation [Reference Here] and basis set of “6-31/+G*” to handle the orbital polarizability of the sulphur atom. 
+Our intended goal is to use the QM as a reference target data that the molecular mechanics (MM), CHARMM [Reference Here], should approximately match. We perform potential energy surface (PES) scans around our selected dihedrals and compare the surface of the QM vs the MM. 
+
+To match the PES scan for the MM to the QM we have to tweak “tunable” parameters as defined in charmm potential energy function (i.e force constants, multiplicity) [Reference Here] 
+until we reach a reasonable surface scan and numbers that make common sense. To determine the partial charges, we observe 
+the dipole moment induced by the interaction between the atom of interest and water. When the dipole moment of the QM and MM reach within a range 
+(< 0.5kcal/mol) we consider that reasonable. 
+
+To accomplish our parametirization we applied the following: for `S1-C3-C4-S2`, if we break the connection ring component 
+around the C3-C4 single bond in the  atom ring we obtain a natural rotation of a thiomethyl group. Additional multiplicities of 1 and 2 of varying force constants
+seemed to have a negative effect. We added a relatively high force constant of a value of 2.3800 to because this particular 
+dihedral is part of a ring where there is a significant energy barrier of rotation due to constraint of the cyclopentane backbone. 
+
+For C1-C2-S1-C3, still maintained the multiplicity of 3 but with a far less reduced force constant of 1.1000. 
+This was due to the methyl that replaced the amide allowing some degrees of rotation but the S1 is still constrained within the ring system. 
+Final PES scans are displayed in Figure 8. 
+
+<p align="center">
+  <img width="900" height="1250" src="../images/figures/official_figure_8.png">
+  <br>
+  <i>Figure 7: Final Potential Energy Scans of dihedrals S1-C3-C4-S2 and C1-C2-S1-C3</i>
+</p>
+
+Lastly, the S1-S2 charges needed adjustment. We used Monte Carlo Simulated Annealing (MCSA) method [Reference Here] utilized in
+FFparam to predict the approximate partial charges. The sulphur atoms were adjusted to have a partial negative charge of -0.208.
+The initial and final modeled result of the dithiolane is displayed in Figure 9.
 
 # Conclusion 
 
