@@ -107,7 +107,8 @@ This need motivated the development of the presented `Global-Chem` database tool
 To implement `Global-Chem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python [10.5555/159351][7].
 
 <p align="center">
-  <img width="1000" height="750" src="../images/figures/figure_2.png">
+  <img width="700" height="450" src="../images/figures/figure_2.png">
+  <br />
   <i>Figure 2: Language organized by category and functionality </i>
 </p>
 
@@ -296,22 +297,16 @@ between penalties 200 and 400 representing high charge penalties. A similar tren
 Accordingly, for this list, there are no low penalty scores with the scores clustered in the intermediate range. This is consistent with halogens being inlcuded the training of CGenFF but the specific connectivity of perfluoroalkyls (long haloalkyl chains) not being included.
 Accordingly, if even a few perfluoroalkyls are added to the `CGenFF` training set it will help reduce penalties and improve that treatment of this class of molecules making CGenFF of more utility to the chemical hazard community. 
 
-In addition to the ability of CGenFF to treat the selected chemical lists discussed above other noteworthy failures are listed in `Figure 5`. 
-For example, cyclobutadiene is a non-traditional ring system with a lot of ring strain although the carbon atom types are common.
+In addition to the ability of CGenFF to treat the selected chemical lists discussed above other noteworthy failures are explained. For example, cyclobutadiene is a non-traditional ring system with a lot of ring strain although the carbon atom types are common.
 `CGenFF` might determine that this particular ring system with it's existing atom type network is not allowed or detrimental to the network if added and needs to be handled with care. An interesting group that fails in CGenFF are allene-based compounds and perhaps warrants extension of the force.
 Silicon has not been included in CGenFF leading to the failures of the silicon-based compounds. Similarly, the IUPAC blue book valuable list includes radicals, which are relevant for synthesis purposes. This is another class for `CGenFF`has not yet been parametirized. Full logs of failed compounds are found in the `tests` directory in the github repository. 
-
-<p align="center">
-  <img width="1000" height="750" src="../images/figures/figure_6_new.png">
-  <i>Figure 5: Failed CGenFF Compounds</i>
-</p>
 
 # Chemical Selection 
 
 For forcefield parametirization, there are two avenues for sufficient chemical selection. First, **common** compounds relevant to the community which expands the forcefield coverage into relevant chemical space while avoiding compounds that would most likely never exist, this avoids performing brute force parametirization on mass molecular datasets. Second, is **rare** compounds that were valuable history but has been potentially buried in data that we have forgotten about them. To demonstrate the versaility of our software, we will use it to explore both avenues of explored and unexplored chemical space. Let's revisit Figure 4, when evaluating the distributions of the penalty scores and the nodes that accodomate it, we can intuitively guess where to look for most likely a compound that we didn't account for. If we look into the covalent warhead inhibitors with charge penalty scores ranging from 0 to 300. Warhead inhibtors are usually small esoteric chemical environments that are most likely an atom type that CGenFF program hasn't seen before and is most likely misreprensting it. Aziridine, as labeled in Figure 6, is most likely a good candidate because it's similar to epoxide but the atom type assignment is different where oxygens in a 3-ring membered ring system have their own specific sub category and nitrogens do not. Aziridine is also useful in synthtesis as a a great electrophile drug fragment to add 2 carbones and a terminal amine to a molecule. Aziridine has a recent popularity as well with the rise of covalent warhead inbitors  being subject to act by the cysteines on proteins. This makes aziridine a prime candidate for forcefield paramtirization relevant to the chemical community. By applying this analysis method of the charge distribution and casual inference to determine relevance we selected our list.
 
 <p align="center">
-  <img width="900" height="650" src="../images/figures/official_figure_6.png">
+  <img width="500" height="350" src="../images/figures/official_figure_6.png">
   <br>
   <i>Figure 6: Chemical Selection List determined off relevance and charge distribution score and ease of paramitirization with their respective atom-types</i>
 </p>
@@ -324,7 +319,7 @@ It is the highest penalized atom type in the functional group that is the inform
 Which could be useful to the community for small functional group conversion and preserveing functionality while possibly expanding it's application.
 
 <p align="center">
-  <img width="900" height="650" src="../images/figures/official_figure_7.png">
+  <img width="900" height="1250" src="../images/figures/official_figure_7.png">
   <br>
   <i>Figure 7: Application of the Sunbursting Method Applied on CGenFF Atom Types and RingsInDrugs GlobalChem Node</i>
 </p>
