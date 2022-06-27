@@ -274,12 +274,7 @@ Once atom types along with chemical connectivity are known, bonded parameters av
 If exact matches of the bonded parameters are not available, a second tree traversal browses for alternate parameter by using a second rules files that assigns penalties based on the analogy to known parameters. 
 Once the lowest penalty score bonded parameter substitutions are determined, the `CGenFF Program` assigns those parameters along with the associated penalties.
 In addition, the program identifies the original parameters that is also output into the stream file that is used in the 
-various molecular modeling programs. Partial atomic charges and associated penalties are assigned through an extended bond-charge increment scheme where atom type along with chemical connectivity including  
-bond, angle and dihedral are associated with charge increment values subtracted from the atoms formal charge. 
-Thus, while the CGenFF program can successfully ingest a large number of molecules, the majority of those molecules are 
-assigned penalties that indicate the level of analogy of the assigned bonded parameters and charges.
-Larger penalities indicate a lower extent of analogy to known parameters, information that may be used to identify 
-molecules for additional force field optimization.
+various molecular modeling programs. Partial atomic charges and associated penalties are assigned through an extended bond-charge increment scheme where atom type along with chemical connectivity including  bond, angle and dihedral are associated with charge increment values subtracted from the atoms formal charge. Thus, while the CGenFF program can successfully ingest a large number of molecules, the majority of those molecules are assigned penalties that indicate the level of analogy of the assigned bonded parameters and charges. Larger penalities indicate a lower extent of analogy to known parameters, information that may be used to identify molecules for additional force field optimization.
 
 Motivated by the availability of the CGenFF penalty scores we passed a variety of objects individually into the `CGenFF program` using our in-house version that can process SMILES strings and recorded the results.
 The penalty score distributions are shown in `Figure 6` in a rug fashion using Plotly [Plotly] to show the extent of `CGenFF` penalites
