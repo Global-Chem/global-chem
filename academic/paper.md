@@ -328,7 +328,7 @@ We found an amide in conjunction with the disulphur embedded cyclopentyl ring ca
 Dithiolanes are easy to synthesize [Reference Here], naturally occurring [Reference Here], and becoming an emerging potent anchor fragments in drug design [Reference Here] and
  their parameters were deemed the most valuable to append to CGenFF out of the dataset.
 
-# ForceField Parametirization of the 1,2-Dithiolane
+# CGenFF ForceField Parametirization of the 1,2-Dithiolane
 
 We truncated dithiolane from the amide and passed through CGenFF (Full data available in the Supporting Information) which indicated that the dilemma was in part due to the extent of puckering caused by the 2 Sulphur atoms within the constrained cyclopentane ring system. T
 To begin our parametirization process we chose to focus on `S1-C3-C4-S2`, backbone to the cyclopentane ring and the dihedral from the methyl to one carbon on the backbone `C1-C2-S1-C3`. Since the molecule is symmetric, it makes the complexity of the molecule decrease twofold. 
@@ -350,14 +350,14 @@ This was due to the methyl that replaced the amide allowing some degrees of rota
 Final PES scans are displayed in Figure 8. 
 
 <p align="center">
-  <img width="900" height="1250" src="../images/figures/official_figure_8.png">
+  <img width="700" height="450" src="../images/figures/official_figure_8.png">
   <br>
   <i>Figure 7: Final Potential Energy Scans of dihedrals S1-C3-C4-S2 and C1-C2-S1-C3</i>
 </p>
 
 Lastly, the S1-S2 charges needed adjustment. We used Monte Carlo Simulated Annealing (MCSA) method [Reference Here] utilized in
 FFparam to predict the approximate partial charges. The sulphur atoms were adjusted to have a partial negative charge of -0.208.
-The initial and final modeled result of the dithiolane is displayed in Figure 9.
+The initial and final modeled result of the dithiolane is displayed in Figure 7.
 
 # Conclusion 
 
