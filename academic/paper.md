@@ -319,7 +319,7 @@ It is the highest penalized atom type in the functional group that is the inform
 Which could be useful to the community for small functional group conversion and preserveing functionality while possibly expanding it's application.
 
 <p align="center">
-  <img width="900" height="1250" src="../images/figures/official_figure_7.png">
+  <img width="900" height="1350" src="../images/figures/official_figure_7.png">
   <br>
   <i>Figure 6: Application of the Sunbursting Method Applied on CGenFF Atom Types and RingsInDrugs GlobalChem Node</i>
 </p>
