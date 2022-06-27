@@ -312,7 +312,9 @@ Silicon has not been included in CGenFF leading to the failures of the silicon-b
   <i>Figure 5: Failed CGenFF Compounds</i>
 </p>
 
-# Chemical List Selection 
+# Chemical Selection 
+
+For forcefield parametirization, there are two avenues for sufficient chemical selection. First, **common** compounds relevant to the community which expands the forcefield coverage into relevant chemical space while avoiding compounds that would most likely never exist. Second is **rare** compounds that were useful history but has been buried in data. To demonstrate the versaility of our software, we will use it to demonstrate both avenues. 
 
 # ForceField Parametirization of the 1,2-Dithiolane
 
