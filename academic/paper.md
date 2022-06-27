@@ -220,15 +220,11 @@ At the time of writing the list of objects include those shown in Table 1. The l
 
 A total collection of 2572 unique IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 37 objects in
 an organized fashion by subject. The code was refactored extensively to allow for ease of object addition according to subject and functionality.
-`Common Regex Patterns` was omitted from the test because it's not a functional group but rather a substring pattern to extrapolate Tripos `mol2` file information. 
-
-## Results 
-
-To test the utility of these lists with other software tests were performed on three open source platforms to determine 
+`Common Regex Patterns` was omitted from the test because it's not a functional group but rather a substring pattern to extrapolate Tripos `mol2` file information. To test the utility of these lists with other software tests were performed on three open source platforms to determine 
 data interoperability. In addition, such tests can indicate cases in which some of the software implemented should be expanded to
 include functional groups that could not be parsed. 
 
-## Cheminformatics Test
+### Cheminformatics Test
 
 Global-Chem parsed through seven different tools with majority being successful minus diamond represented with an '&' [Reference Here] and fails with all software including RDKit except the GlobalChem Encoder does account for it. The percentage of passing is as follows: RDKit 100% [Reference Here], DeepSMILES 99.25% [Reference Here], PartialSMILES 85.7% [Reference Here] , SELFIES 100% [Reference Here], MolVS 98.5% [Reference Here], PySMILES 99.8% [Reference Here]. PartialSMILES proved to be the most robust acceptance/rejection tool in identifying misrepresentations of SMILES. 
 
@@ -248,7 +244,7 @@ Global-Chem parsed through seven different tools with majority being successful 
 
 Indigo's encoder was pretty robust and their software allows for a lot of inteoperabiltiy with different software tools (i.e pdf data parsing of SMILES), when faced with the tert-butyldiphenylsilyl protecting group and the SMILES string with the `Si` is not wrapped in a square brackets that specify an element that doesn't have a complete valence shell. For PySMILES, the inclusion of the '[a]' denoting aromaticity for an "aromatic salt" in the database couldn't be processed. Some other encoders have encoded for an aromaticity keyword as specified in the Daylight Technical Documentation [Reference Here].  DeepSMILES was interesting because it failed on specific functional groups as shown in the example with an oxindole and triazolodiazepines that had complex small branch complexities and moetieies that it didn't foresee existing. MolVS had some interesting results where imidazole (and derivatives) failed probably because it expected fora hydrogen perhaps to be explicity stated due to it's varying protonation states. Hydrofluoric acid was something I was expecting but again the hydrogen actually needed to be enforced with a [H] which is not as intuitive. PartialSMILES proved to be the most robust eluding to SMILES that were partially complete and rejected by their criteria. Failures included a ethyl radical and a azido complex stemming from the interstellarspace molecules. 
 
-## Force Field Test
+### Force Field Test
 
 Access to broad collections of chemical groups will be of interest for development of force fields, also known as potential energy functions,[MacKerell:2004-10] for molecular modeling and molecular dynamic simulations, 
 allowing for studies on a wider range of chemicals and biological systems. The ability of a force field to treat molecules in the database can also serve as dual interoperable test 
