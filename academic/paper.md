@@ -308,7 +308,6 @@ Silicon has not been included in CGenFF leading to the failures of the silicon-b
 
 <p align="center">
   <img width="1000" height="750" src="../images/figures/figure_6_new.png">
-  <br>
   <i>Figure 5: Failed CGenFF Compounds</i>
 </p>
 
