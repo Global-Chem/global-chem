@@ -307,7 +307,7 @@ For example, cyclobutadiene is a non-traditional ring system with a lot of ring 
 Silicon has not been included in CGenFF leading to the failures of the silicon-based compounds. Similarly, the IUPAC blue book valuable list includes radicals, which are relevant for synthesis purposes. This is another class for `CGenFF`has not yet been parametirized. Full logs of failed compounds are found in the `tests` directory in the github repository. 
 
 <p align="center">
-  <img width="1000" height="450" src="../images/figures/figure_6_new.png">
+  <img width="1000" height="750" src="../images/figures/figure_6_new.png">
   <br>
   <i>Figure 5: Failed CGenFF Compounds</i>
 </p>
@@ -317,9 +317,9 @@ Silicon has not been included in CGenFF leading to the failures of the silicon-b
 For forcefield parametirization, there are two avenues for sufficient chemical selection. First, **common** compounds relevant to the community which expands the forcefield coverage into relevant chemical space while avoiding compounds that would most likely never exist. Second is **rare** compounds that were useful history but has been buried in data. To demonstrate the versaility of our software, we will use it to demonstrate both avenues. Let's revisit Figure 4. When evaluating the distributions of the penalty scores and the nodes that accodomate it, we can intuitively guess where to look for most likely a compound that we didn't account for. If we look into the covalent warhead inhibitors with charge penalty scores ranging from 0 to 300. Warhead inhibtors are usually small esoteric chemical environments that are most likely an atom type that CGenFF program hasn't seen before and is most likely misreprensting it. Aziridine, as labeled in Figure 6, is most likely a good candidate because it's similar to epoxide but the atom type assignment is different where oxygens in a 3-ring membered ring system have their own specific sub category and nitrogens do not. Aziridine is also useful in synthtesis as a a great electrophile drug fragment to add 2 carbones and a terminal amine to a molecule. Aziridine has a recent popularity as well with the rise of covalent warhead inbitors  being subject to act by the cysteines on proteins. This makes aziridine a prime candidate for forcefield paramtirization relevant to the chemical community. By applying this analysis method of the charge distribution and casual inference to determine relevance we selected our list.
 
 <p align="center">
-  <img width="1000" height="450" src="../images/figures/official_figure_6.png">
+  <img width="900" height="650" src="../images/figures/official_figure_6.png">
   <br>
-  <i>Figure 6: Chemical Selection List determined off relevance and charge distribution score and ease of paramitirization </i>
+  <i>Figure 6: Chemical Selection List determined off relevance and charge distribution score and ease of paramitirization with their respective atom-types</i>
 </p>
 
 
