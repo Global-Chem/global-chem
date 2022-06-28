@@ -13,6 +13,8 @@ authors:
   - name: Asuka Orr
     orcid: 0000-0003-4628-526X
     affiliation: 1
+  - name: Aziza Frank
+    affiliation: 1
   - name: Anastasia Croitoru
     orcid: XXX
     affiliation: 5
@@ -29,8 +31,6 @@ authors:
     affiliation: 1
   - name: Aarion Romany
     affiliation: 1
-  - name: Aziza Frank
-    affiliation: 1
   - name: Ian Jones
     affiliation: 1
   - name: Shaoqi Zhan
@@ -44,8 +44,6 @@ authors:
     affiliation: 6
   - name: Anmol Kumar
     affiliation: 6
-  - name: Aarion Romany
-    affiliation: 1
   - name: Mike Woster
     affiliation: 6
   - name: Rebecca Pinette-Dorin
