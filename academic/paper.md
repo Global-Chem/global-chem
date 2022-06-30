@@ -86,7 +86,7 @@ Toll-Like Receptors in an object-oriented fashion [24]. However, these organizat
 to extend to other systems and can be difficult to implement given the large amount of data.
 In addition, the information content of these papers is of limited utility to the common developer. 
 
-To organize chemical compounds we apply the idea of communication. Humans use symbols and drawings to communicate, a set of symbols and the rules to combining them are called a language. Languages can be employed to carry relevant, distinct features and mean something to their respective community. diagrammatically shown in `Figure 2`. 
+To organize chemical compounds we apply the idea of communication. Humans use symbols and drawings to communicate, a set of symbols and the rules to combining them are called a language. Languages can be employed to carry relevant, distinct features and mean something to their respective community, diagrammatically shown in `Figure 2`. 
 International Union of Pure and Applied Chemistry (IUPAC) was a coalition that formed in the 1800s and their method of communication was named after the organization, IUPAC. 
 IUPAC is a written language that predates even drawing atoms as a method of communication between chemists [6]. 
 Other chemical sub-communities adopted the IUPAC language and applied it to their fields that are comprised of different dialects i.e polymer chemistry, organo-metallic chemistry.
