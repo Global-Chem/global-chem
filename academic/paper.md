@@ -13,6 +13,8 @@ authors:
   - name: Asuka Orr
     orcid: 0000-0003-4628-526X
     affiliation: 1
+  - name: Aziza Frank
+    affiliation: 1
   - name: Anastasia Croitoru
     orcid: XXX
     affiliation: 5
@@ -29,8 +31,6 @@ authors:
     affiliation: 1
   - name: Aarion Romany
     affiliation: 1
-  - name: Aziza Frank
-    affiliation: 1
   - name: Ian Jones
     affiliation: 1
   - name: Shaoqi Zhan
@@ -44,8 +44,6 @@ authors:
     affiliation: 6
   - name: Anmol Kumar
     affiliation: 6
-  - name: Aarion Romany
-    affiliation: 1
   - name: Mike Woster
     affiliation: 6
   - name: Rebecca Pinette-Dorin
@@ -88,7 +86,7 @@ Toll-Like Receptors in an object-oriented fashion [24]. However, these organizat
 to extend to other systems and can be difficult to implement given the large amount of data.
 In addition, the information content of these papers is of limited utility to the common developer. 
 
-To organize chemical compounds we apply the idea of communication. Humans use symbols and drawings to communicate, a set of symbols and the rules to combining them are called a language. Languages can be employed to carry relevant, distinct features and mean something to their respective community. diagrammatically shown in `Figure 2`. 
+To organize chemical compounds we apply the idea of communication. Humans use symbols and drawings to communicate, a set of symbols and the rules to combining them are called a language. Languages can be employed to carry relevant, distinct features and mean something to their respective community, diagrammatically shown in `Figure 2`. 
 International Union of Pure and Applied Chemistry (IUPAC) was a coalition that formed in the 1800s and their method of communication was named after the organization, IUPAC. 
 IUPAC is a written language that predates even drawing atoms as a method of communication between chemists [6]. 
 Other chemical sub-communities adopted the IUPAC language and applied it to their fields that are comprised of different dialects i.e polymer chemistry, organo-metallic chemistry.
@@ -99,7 +97,7 @@ To compact information, chemists presented drawings of chemical structures but i
 have been designed to abstract and interpolate skeletal patterns and languages from chemical drawings and convert them into SMILES for data processing and analysis. 
 A number of these tools, which work to varying degrees of accuracy, have been well summarized by the Blue Obelisk Society Open Source Review [25]. 
 Efforts to improve these tools recently have included machine learning (ML) methods that essential "sit" on top of the underlying algoritm to fix any inaccuracies of the method. 
-As an alternative we can take another direction, where data is selectively aggregated based on known classifications, popularity and utility, being organized to a degree of functionality that facilitates more widespread use. However, the criteria for such an aggregation of data is built upon human expertise, requiring input from a variety of people to attain the broadness and accessibility that would facilitate scientific discovery. In other words, in the context of a well-classified natural chemical database the major challenge is the enormity of the chemical universe, requring a range of chemical expertise to put togethe well-thought chemical lists of compounds relevant to their respective communities. Thus, it is necessary to create a tool to allow for a large number of participants to contribute in order for such a data compilation to grow. 
+As an alternative we can take another direction, where data is selectively aggregated based on known classifications, popularity and utility, being organized to a degree of functionality that facilitates more widespread use. However, the criteria for such an aggregation of data is built upon human expertise, requiring input from a variety of people to attain the broadness and accessibility that would facilitate scientific discovery. In other words, in the context of a well-classified natural chemical database the major challenge is the enormity of the chemical universe, requring a range of chemical expertise to put together well-thought chemical lists of compounds relevant to their respective communities. Thus, it is necessary to create a tool to allow for a large number of participants to contribute in order for such a data compilation to grow. 
 However, most software and especially old software can be difficult to install and handle on top of modern technology thus hindering participation. This situation drives the
 need for a tool that is sustainable and readily accessible to potential participants, allowing the database to naturally grow.
 This need motivated the development of the presented `Global-Chem` database tool.
@@ -144,7 +142,7 @@ for canonical SMILES conversion.
 
 ## Data Collection
 
-References and associatied compound lists are selected based on the interests of the scientific contributors.  This should include consideration of relevance to the scientific community. To authenticate and validate SMILES strings we employ interoperability tools to other cheminformatic software to verify it's usability.
+References and associated compound lists are selected based on the interests of the scientific contributors.  This should include consideration of relevance to the scientific community. To authenticate and validate SMILES strings we employ interoperability tools to other cheminformatic software to verify it's usability.
 
 The IUPAC/SMILES strings may be abstracted in a variety of methods:
 
@@ -227,7 +225,7 @@ include functional groups that could not be parsed.
 
 ### Cheminformatics Test
 
-Global-Chem parsed through seven different tools with majority being successful minus diamond represented with an '&' [Reference Here] and fails with all software including RDKit except the GlobalChem Encoder does account for it. The percentage of passing is as follows: RDKit 100% [Reference Here], DeepSMILES 99.25% [Reference Here], PartialSMILES 85.7% [Reference Here] , SELFIES 100% [Reference Here], MolVS 98.5% [Reference Here], PySMILES 99.8% [Reference Here]. PartialSMILES proved to be the most robust acceptance/rejection tool in identifying misrepresentations of SMILES. 
+Global-Chem parsed through seven different tools with majority being successful minus diamond represented with an '&' [Reference Here] and fails with all software including RDKit except the GlobalChem Encoder does account for it. (it is not clear) The percentage of passing is as follows: RDKit 100% [Reference Here], DeepSMILES 99.25% [Reference Here], PartialSMILES 85.7% [Reference Here] , SELFIES 100% [Reference Here], MolVS 98.5% [Reference Here], PySMILES 99.8% [Reference Here]. PartialSMILES proved to be the most robust acceptance/rejection tool in identifying misrepresentations of SMILES. 
 
 | Software        | Number of Failed Compounds | Example of Failed SMILES                                   |
 |-----------------|----------------------------|------------------------------------------------------------|
@@ -243,24 +241,23 @@ Global-Chem parsed through seven different tools with majority being successful 
   <i>Table 2: Intereoperability Results of Common Moleculesfrom Global-Chem against different cheminformatic software</i>
 </p>
 
-Indigo's encoder was pretty robust and their software allows for a lot of inteoperabiltiy with different software tools (i.e pdf data parsing of SMILES), when faced with the tert-butyldiphenylsilyl protecting group and the SMILES string with the `Si` is not wrapped in a square brackets that specify an element that doesn't have a complete valence shell. For PySMILES, the inclusion of the '[a]' denoting aromaticity for an "aromatic salt" in the database couldn't be processed. Some other encoders have encoded for an aromaticity keyword as specified in the Daylight Technical Documentation [Reference Here].  DeepSMILES was interesting because it failed on specific functional groups as shown in the example with an oxindole and triazolodiazepines that had complex small branch complexities and moetieies that it didn't foresee existing. MolVS had some interesting results where imidazole (and derivatives) failed probably because it expected fora hydrogen perhaps to be explicity stated due to it's varying protonation states. Hydrofluoric acid was something I was expecting but again the hydrogen actually needed to be enforced with a [H] which is not as intuitive. PartialSMILES proved to be the most robust eluding to SMILES that were partially complete and rejected by their criteria. Failures included a ethyl radical and a azido complex stemming from the interstellarspace molecules. 
+Indigo's encoder was pretty robust and their software allows for a lot of inteoperabiltiy with different software tools (i.e pdf data parsing of SMILES), when faced with the tert-butyldiphenylsilyl protecting group and the SMILES string with the `Si` is not wrapped in a square brackets that specify an element that doesn't have a complete valence shell. For PySMILES, the inclusion of the '[a]' denoting aromaticity for an "aromatic salt" in the database couldn't be processed. Some other encoders have encoded for an aromaticity keyword as specified in the Daylight Technical Documentation [Reference Here].  DeepSMILES was interesting because it failed on specific functional groups as shown in the example with an oxindole and triazolodiazepines that had complex small branch complexities and moetieies that it didn't foresee existing. MolVS had some interesting results where imidazole (and derivatives) failed probably because it expected for a hydrogen perhaps to be explicity stated due to it's varying protonation states. Hydrofluoric acid was something I was expecting but again the hydrogen actually needed to be enforced with a [H] which is not as intuitive. PartialSMILES proved to be the most robust eluding to SMILES that were partially complete and rejected by their criteria. Failures included a ethyl radical and a azido complex stemming from the interstellarspace molecules. 
 
 ### Force Field Test
 
-Access to broad collections of chemical groups will be of interest for development of force fields, also known as potential energy functions,[MacKerell:2004-10] for molecular modeling and molecular dynamic simulations, 
+Access to broad collections of chemical groups will be of interest for development of force fields, *("also known as potential energy functions" not aacurate because a force field is a potential energy function and a collection of parameters. During force field development we mostrly work on adding new parameters or ameliorating the existing ones. If the potential energy function is modified, a completely new molecular mechanics model will be created and it would be incompatible with the previous parameters)*,[MacKerell:2004-10] for molecular modeling and molecular dynamic simulations, 
 allowing for studies on a wider range of chemicals and biological systems. The ability of a force field to treat molecules in the database can also serve as dual interoperable test 
 for SMILES strings. Popular force fields such as General Amber ForceField (GAFF) [Wang:2004-7], Optimized Potentials for Liquid Simulations (OPLS)
 [Jorgensen:1988-7], and Charmm General Force Field (CGenFF) [Vanommeslaeghe:2010-3] are based on collections of chemicals that are representative of the particular region 
 of chemical space that the force field was designed to cover. In practice, this involves the atom-typing engine of each force field being applied 
-to each molecule followed by assignment of the appropriate parameters. This is to a large extent associated with the coverage of a force field.
-Thus, the compound lists in Global-Chem can be used to identify specific regions of chemical space that have limited coverage and, therefore, 
-represents future regions of chemical space for force field development. In the present study, we used CGenFF to check it's tolerance level for
+to each molecule followed by assignment of the appropriate parameters by analogy to molecules present in the force field. The accuracy of new parameters is limited by the coverage of a specific force field.
+Thus, the compound lists in Global-Chem can be used to identify specific regions of chemical space that have limited coverage. Therefore, the compound lists in Global-Chem represent future regions of chemical space for force field development. In the present study, we used CGenFF to check its tolerance level for
 the range of molecules currently in Global-Chem. To facilitate this an in-house extension of CGenFF was used that can assign atom types from `SDF` bond type column.
 This enabled us to pass the SMILES strings through `RDKit` and transform `SDF` to a `CGenFF` stream output. The resulting failures are also presented in Table 1.
 It should be noted by nature of the data processing workflow anything that fails in `RDKit` fails in `CGenFF`.
 
-`CGenFF` was founded on small molecules representative of biological macromolecules and subsequently extended to drug-like molecules. 
-The force field subsequently acted as the foundation for the development of the `CGenFF Program` [Vanommeslaeghe:2010-3] that inputs
+
+The CGenFF acted as the foundation for the development of the `CGenFF Program` [Vanommeslaeghe:2010-3] that inputs
 molecules and outputs the topology information and parameters required to perform various types of molecular modeling and simulations
 using programs such as CHARMM, NAMD, OpenMM and Gromacs [Jo:2008-06]. To test the ability of the CGenFF program to handle the chemical 
 lists in Global-Chem each list was individually submitted to the program. As shown in Table 1, the range of failures varies widely.
@@ -274,8 +271,8 @@ passed through the CGenFF program it navigates through a set of rules that repre
 Once atom types along with chemical connectivity are known, bonded parameters available in CGenFF are assigned to the molecule. 
 If exact matches of the bonded parameters are not available, a second tree traversal browses for alternate parameter by using a second rules files that assigns penalties based on the analogy to known parameters. 
 Once the lowest penalty score bonded parameter substitutions are determined, the `CGenFF Program` assigns those parameters along with the associated penalties.
-In addition, the program identifies the original parameters that is also output into the stream file that is used in the 
-various molecular modeling programs. Partial atomic charges and associated penalties are assigned through an extended bond-charge increment scheme where atom type along with chemical connectivity including  bond, angle and dihedral are associated with charge increment values subtracted from the atoms formal charge. Thus, while the CGenFF program can successfully ingest a large number of molecules, the majority of those molecules are assigned penalties that indicate the level of analogy of the assigned bonded parameters and charges. Larger penalities indicate a lower extent of analogy to known parameters, information that may be used to identify molecules for additional force field optimization.
+In addition, the program identifies the original parameters that is also output into the stream file  used in the 
+various molecular modeling programs. Partial atomic charges and associated penalties are assigned through an extended bond-charge increment scheme. It consist in associating atom type along with chemical connectivity (including  bond, angle and dihedral) with charge increment values subtracted from the atoms formal charge. Thus, while the CGenFF program can successfully ingest a large number of molecules, the majority of those molecules are assigned penalties that indicate the level of analogy of the assigned bonded parameters and charges. Larger penalities indicate a lower extent of analogy to known parameters, information that may be used to identify molecules for additional force field optimization.
 
 Motivated by the availability of the CGenFF penalty scores we passed a variety of objects individually into the `CGenFF program` using our in-house version that can process SMILES strings and recorded the results.
 The penalty score distributions are shown in `Figure 6` in a rug fashion using Plotly [Plotly] to show the extent of `CGenFF` penalites
@@ -289,7 +286,7 @@ we expected the penalties to be lower on drugs and drug-like species and higher 
 </p>
 
 From `Figure 4`, if we use the charge penalty score as a metric for performance, it is evident that the `CGenFF program` 
-assigns parameters with generally low penalty scores less than 200 for Schedule One and BRAF Kinase Inhibitors owed to its
+assigns parameters with generally low penalty scores, less than 200, for Schedule One and BRAF Kinase Inhibitors owed to its
 initial training set of "drug-like" molecules. Privileged Scaffolds encompass a lot of natural products which 
 have functional groups that fall into the definition of "drug-like" but not all as indicated by the purple lines  
 between penalties 200 and 400 representing high charge penalties. A similar trend is seen with the Common Warheads, with most charge penalties being less than 200, but two prominent purple lines between 200 and 400 associated with high charge penalties, as these compounds contain drug-like features along with reactive functional groups that were not in the CGenFF training set. With both of these lists, it would be useful to identify specific molecules with high penalties and include them in the CGenFF training set. And lastly, Perfluoroalkyls are used in chemical manufacturing of everyday goods [Pelch:2019-9]. While the `CGenFF` training set did include halogens [Soteras:2016-10], motivated by their inclusion in many drugs, `CGenFF` was not extended to perfluoroalkyls.
@@ -299,11 +296,11 @@ Accordingly, if even a few perfluoroalkyls are added to the `CGenFF` training se
 
 In addition to the ability of CGenFF to treat the selected chemical lists discussed above other noteworthy failures are explained. For example, cyclobutadiene is a non-traditional ring system with a lot of ring strain although the carbon atom types are common.
 `CGenFF` might determine that this particular ring system with it's existing atom type network is not allowed or detrimental to the network if added and needs to be handled with care. An interesting group that fails in CGenFF are allene-based compounds and perhaps warrants extension of the force.
-Silicon has not been included in CGenFF leading to the failures of the silicon-based compounds. Similarly, the IUPAC blue book valuable list includes radicals, which are relevant for synthesis purposes. This is another class for `CGenFF`has not yet been parametirized. Full logs of failed compounds are found in the `tests` directory in the github repository. 
+Silicon has not been included in CGenFF leading to the failures of the silicon-based compounds. Similarly, the IUPAC blue book valuable list includes radicals, which are relevant for synthesis purposes. This is another class for `CGenFF`has not yet been parametrized. Full logs of failed compounds are found in the `tests` directory in the github repository. 
 
 # Chemical Selection 
 
-For forcefield parametirization, there are two avenues for sufficient chemical selection. First, **common** compounds relevant to the community which expands the forcefield coverage into relevant chemical space while avoiding compounds that would most likely never exist, this avoids performing brute force parametirization on mass molecular datasets. Second, is **rare** compounds that were valuable history but has been potentially buried in data that we have forgotten about them. To demonstrate the versaility of our software, we will use it to explore both avenues of explored and unexplored chemical space. Let's revisit Figure 4, when evaluating the distributions of the penalty scores and the nodes that accodomate it, we can intuitively guess where to look for most likely a compound that we didn't account for. If we look into the covalent warhead inhibitors with charge penalty scores ranging from 0 to 300. Warhead inhibtors are usually small esoteric chemical environments that are most likely an atom type that CGenFF program hasn't seen before and is most likely misreprensting it. Aziridine, as labeled in Figure 6, is most likely a good candidate because it's similar to epoxide but the atom type assignment is different where oxygens in a 3-ring membered ring system have their own specific sub category and nitrogens do not. Aziridine is also useful in synthtesis as a a great electrophile drug fragment to add 2 carbones and a terminal amine to a molecule. Aziridine has a recent popularity as well with the rise of covalent warhead inbitors  being subject to act by the cysteines on proteins. This makes aziridine a prime candidate for forcefield paramtirization relevant to the chemical community. By applying this analysis method of the charge distribution and casual inference to determine relevance we selected our list.
+For force field parametrization, there are two avenues for sufficient chemical selection. First, **common** compounds relevant to the community which expands the force field coverage into relevant chemical space while avoiding compounds that would most likely never exist, this avoids performing brute force parametirization on mass molecular datasets. Second, is **rare** compounds that were valuable history but has been potentially buried in data that we have forgotten about them. To demonstrate the versaility of our software, we will use it to explore both avenues of explored and unexplored chemical space. Let's revisit Figure 4, when evaluating the distributions of the penalty scores and the nodes that accodomate it, we can intuitively guess where to look for most likely a compound that we didn't account for. If we look into the covalent warhead inhibitors with charge penalty scores ranging from 0 to 300. Warhead inhibtors are usually small esoteric chemical environments that are most likely an atom type that CGenFF program hasn't seen before and is most likely misreprensting it. Aziridine, as labeled in Figure 6, is most likely a good candidate because it's similar to epoxide but the atom type assignment is different where oxygens in a 3-ring membered ring system have their own specific sub category and nitrogens do not. Aziridine is also useful in synthtesis as a a great electrophile drug fragment to add 2 carbones and a terminal amine to a molecule. Aziridine has a recent popularity as well with the rise of covalent warhead inbitors  being subject to act by the cysteines on proteins. This makes aziridine a prime candidate for force field parametrization relevant to the chemical community. By applying this analysis method of the charge distribution and casual inference to determine relevance we selected our list.
 
 <p align="center">
   <img width="500" height="350" src="../images/figures/official_figure_6.png">
@@ -319,7 +316,7 @@ It is the highest penalized atom type in the functional group that is the inform
 Which could be useful to the community for small functional group conversion and preserveing functionality while possibly expanding it's application.
 
 <p align="center">
-  <img width="900" height="1250" src="../images/figures/official_figure_7.png">
+  <img width="900" height="1350" src="../images/figures/official_figure_7.png">
   <br>
   <i>Figure 6: Application of the Sunbursting Method Applied on CGenFF Atom Types and RingsInDrugs GlobalChem Node</i>
 </p>
@@ -328,7 +325,7 @@ We found an amide in conjunction with the disulphur embedded cyclopentyl ring ca
 Dithiolanes are easy to synthesize [Reference Here], naturally occurring [Reference Here], and becoming an emerging potent anchor fragments in drug design [Reference Here] and
  their parameters were deemed the most valuable to append to CGenFF out of the dataset.
 
-# ForceField Parametirization of the 1,2-Dithiolane
+# CGenFF ForceField Parametirization of the 1,2-Dithiolane
 
 We truncated dithiolane from the amide and passed through CGenFF (Full data available in the Supporting Information) which indicated that the dilemma was in part due to the extent of puckering caused by the 2 Sulphur atoms within the constrained cyclopentane ring system. T
 To begin our parametirization process we chose to focus on `S1-C3-C4-S2`, backbone to the cyclopentane ring and the dihedral from the methyl to one carbon on the backbone `C1-C2-S1-C3`. Since the molecule is symmetric, it makes the complexity of the molecule decrease twofold. 
@@ -350,14 +347,14 @@ This was due to the methyl that replaced the amide allowing some degrees of rota
 Final PES scans are displayed in Figure 8. 
 
 <p align="center">
-  <img width="900" height="1250" src="../images/figures/official_figure_8.png">
+  <img width="700" height="450" src="../images/figures/official_figure_8.png">
   <br>
   <i>Figure 7: Final Potential Energy Scans of dihedrals S1-C3-C4-S2 and C1-C2-S1-C3</i>
 </p>
 
 Lastly, the S1-S2 charges needed adjustment. We used Monte Carlo Simulated Annealing (MCSA) method [Reference Here] utilized in
 FFparam to predict the approximate partial charges. The sulphur atoms were adjusted to have a partial negative charge of -0.208.
-The initial and final modeled result of the dithiolane is displayed in Figure 9.
+The initial and final modeled result of the dithiolane is displayed in Figure 7.
 
 # Conclusion 
 
