@@ -8,7 +8,7 @@ class FDAListFour(object):
 
     def __init__(self):
 
-        self.name = 'fda_list_four'
+        self.name = 'fda__list_four'
 
     @staticmethod
     def get_smiles():

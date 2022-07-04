@@ -8,7 +8,7 @@ class HowToLiveLonger(object):
 
     def __init__(self):
 
-        self.name = 'i_want_to_live_longer'
+        self.name = 'how_to_live_longer'
 
 
     @staticmethod

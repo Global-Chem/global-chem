@@ -27,13 +27,14 @@ from global_chem.environment.emerging_perfluoroalkyls import EmergingPerFluoroAl
 from global_chem.materials.clay.montmorillonite_adsorption import MontmorilloniteAdsorption
 from global_chem.materials.polymers.common_monomer_repeating_units import CommonMonomerRepeatingUnits
 
+# Medicinal Chemistry - Cannabis
+
+from global_chem.medicinal_chemistry.cannabinoids.phytocannabinoids import PhytoCannabinoids
+from global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa import ConstituentsOfCannabisSativa
+
 # Medicinal Chemistry - International
 
 from global_chem.medicinal_chemistry.chinese.how_to_live_longer import HowToLiveLonger
-
-# Medicinal Chemistry - Cannabinoids
-
-from global_chem.medicinal_chemistry.cannabinoids.cannabinoids import Cannabinoids
 
 # Medicinal Chemistry - Warheads
 
@@ -349,7 +350,7 @@ class GlobalChem(object):
         'privileged_scaffolds': PrivilegedScaffolds,                             # Suliman Sharif
         'iupac_blue_book': IUPACBlueBook,                                        # Suliman Sharif
         'common_r_group_replacements': CommonRGroupReplacements,                 # Sunhwan Jo & Suliman Sharif
-        'braf_inhibitors': BRAFInhibitors,                                       # Aarion Romany
+        'braf_inhibitors': BRAFInhibitors,                                       # Aarion Romany & Suliman Sharif
         'privileged_kinase_inhibitors': PrivilegedKinaseInhibitors,              # Suliman Sharif
         'common_organic_solvents': CommonOrganicSolvents,                        # Suliman Sharif
         'amino_acid_protecting_groups': AminoAcidProtectingGroups,               # Aziza Frank & Suliman Sharif
@@ -378,12 +379,13 @@ class GlobalChem(object):
         'fda_list_five': FDAListFive,                                            # Mike Wostner & Suliman Sharif
         'fda_list_six': FDAListSix,                                              # Mike Wostner & Suliman Sharif
         'fda_list_seven': FDAListSeven,                                          # Mike Wostner & Suliman Sharif
+        'constituents_of_cannabis_sativa': ConstituentsOfCannabisSativa,         # Ian Jones & Bettina Lier & Suliman Sharif
+        'phytocannabinoids': PhytoCannabinoids,                                  # Ian Jones & Bettina Lier & Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                            # Chris Burke & Suliman Sharif
     }
 
     __INCOMPLETE_NODES = {
-        'cannabinoids': Cannabinoids
-        # 'named_reactions_in_organic_synthesis': NamedReactionsInOrganicSynthesis # Aziza Frank & Betty & Suliman Sharif
+        # 'named_reactions_in_organic_synthesis': NamedReactionsInOrganicSynthesis # Aziza Frank & Bettina Lier & Suliman Sharif
     }
 
     def __init__(self, verbose=False):
