@@ -33,7 +33,7 @@ from global_chem.warfare.organophosphorous_nerve_agents import OrganoPhosphorous
 
 # Education
 
-from global_chem.education.organic_and_inorganic_bronsted_acids import OrganicAndInorganicBronstedAcids
+from global_chem.education.cengage.organic_and_inorganic_bronsted_acids import OrganicAndInorganicBronstedAcids
 
 # Medicinal Chemistry - Cannabis
 
