@@ -14,6 +14,14 @@ from global_chem.environment.emerging_perfluoroalkyls import EmergingPerFluoroAl
 from global_chem.materials.clay.montmorillonite_adsorption import MontmorilloniteAdsorption
 from global_chem.materials.polymers.common_monomer_repeating_units import CommonMonomerRepeatingUnits
 
+# Education
+
+from global_chem.education.organic_and_inorganic_bronsted_acids import OrganicAndInorganicBronstedAcids
+
+# Warfare
+
+from global_chem.warfare.organophosphorous_nerve_agents import OrganoPhosphorousNerveAgents
+
 # Medicinal Chemistry - Cannabinoids
 
 from global_chem.medicinal_chemistry.cannabinoids.phytocannabinoids import PhytoCannabinoids

@@ -182,6 +182,8 @@ Please follow the node contribution guidelines if you would like to elect your o
 'fda_list_seven': FDAListSeven,                                           # Mike Wostner & Suliman Sharif
 'constituents_of_cannabis_sativa': ConstituentsOfCannabisSativa,          # Ian Jones & Bettina Lier & Suliman Sharif
 'phytocannabinoids': PhytoCannabinoids,                                   # Ian Jones & Bettina Lier & Suliman Sharif
+'organophosphorous_nerve_agents': OrganoPhosphorousNerveAgents,           # Suliman Sharif
+'organic_and_inorganic_bronsted_acids': OrganicAndInorganicBronstedAcids, # Nathaniel McClean & Suliman Sharif
 'salt': Salt                                                              # Suliman Sharif
 ```
 
@@ -229,6 +231,8 @@ Please follow the node contribution guidelines if you would like to elect your o
 | FDA Color Additive List 7           | 37           | https://www.fda.gov/industry/color-additive-inventories/color-additive-status-list                                                                                                                                                                                                                                   |
 | Constituents of Cannabis Sativa     | 394          | Turner, C. E., et al. “Constituents of Cannabis Sativa L. XVII. A Review of the Natural Constituents.” Journal of Natural Products, vol. 43, no. 2, Apr. 1980, pp. 169–234. PubMed                                                                                                                                   |
 | Phytocannabinoids                   | 111          | Hanuš, Lumír Ondřej, et al. “Phytocannabinoids: A Unified Critical Inventory.” Natural Product Reports, vol. 33, no. 12, Nov. 2016, pp. 1357–92. PubMed,                                                                                                                                                             |
+| OrganoPhosphorous Nerve Agents      | 14           | Mukherjee, Sudisha, and Rinkoo Devi Gupta. “Organophosphorus Nerve Agents: Types, Toxicity, and Treatments.” Journal of Toxicology, vol. 2020, Sept. 2020, p. 3007984.                                                                                                                                               |
+| Cengage Bronsted Acids              | 42           | https://cxp.cengage.com/contentservice/assets/owms01h/references/chemtables/org_chem/pKaTable.html                                                                                                                                                                                                                   |
 | Common Regex Patterns               | 1            |                                                                                                     
 
 </details>                            

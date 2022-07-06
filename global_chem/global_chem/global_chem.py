@@ -27,6 +27,14 @@ from global_chem.environment.emerging_perfluoroalkyls import EmergingPerFluoroAl
 from global_chem.materials.clay.montmorillonite_adsorption import MontmorilloniteAdsorption
 from global_chem.materials.polymers.common_monomer_repeating_units import CommonMonomerRepeatingUnits
 
+# Warfare
+
+from global_chem.warfare.organophosphorous_nerve_agents import OrganoPhosphorousNerveAgents
+
+# Education
+
+from global_chem.education.organic_and_inorganic_bronsted_acids import OrganicAndInorganicBronstedAcids
+
 # Medicinal Chemistry - Cannabis
 
 from global_chem.medicinal_chemistry.cannabinoids.phytocannabinoids import PhytoCannabinoids
@@ -339,49 +347,51 @@ class GlobalChem(object):
 
     __NODES__ = {
         'global_chem': Node,
-        'emerging_perfluoroalkyls': EmergingPerFluoroAlkyls,                     # Asuka Orr & Suliman Sharif
-        'montmorillonite_adsorption': MontmorilloniteAdsorption,                 # Asuka Orr & Suliman Sharif
-        'common_monomer_repeating_units': CommonMonomerRepeatingUnits,           # Suliman Sharif
-        'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,   # Ruibin Liu & Suliman Sharif
-        'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors, # Shaoqi Zhan & Suliman Sharif
-        'rings_in_drugs': RingsInDrugs,                                          # Alexander Mackerell Jr. & Suliman Sharif
-        'iupac_blue_book_rings': IUPACBlueBookRings,                             # Suliman Sharif
-        'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,                 # Suliman Sharif
-        'privileged_scaffolds': PrivilegedScaffolds,                             # Suliman Sharif
-        'iupac_blue_book': IUPACBlueBook,                                        # Suliman Sharif
-        'common_r_group_replacements': CommonRGroupReplacements,                 # Sunhwan Jo & Suliman Sharif
-        'braf_inhibitors': BRAFInhibitors,                                       # Aarion Romany & Suliman Sharif
-        'privileged_kinase_inhibitors': PrivilegedKinaseInhibitors,              # Suliman Sharif
-        'common_organic_solvents': CommonOrganicSolvents,                        # Suliman Sharif
-        'amino_acid_protecting_groups': AminoAcidProtectingGroups,               # Aziza Frank & Suliman Sharif
-        'schedule_one': ScheduleOne,                                             # Suliman Sharif
-        'schedule_two': ScheduleTwo,                                             # Suliman Sharif
-        'schedule_three': ScheduleThree,                                         # Suliman Sharif
-        'schedule_four': ScheduleFour,                                           # Suliman Sharif
-        'schedule_five': ScheduleFive,                                           # Suliman Sharif
-        'interstellar_space': InterstellarSpace,                                 # Suliman Sharif
-        'vitamins': Vitamins,                                                    # Suliman Sharif
-        'open_smiles': OpenSmiles,                                               # Suliman Sharif
-        'amino_acids': AminoAcids,                                               # Suliman Sharif
-        'pihkal': Pihkal,                                                        # Suliman Sharif
-        'nickel_ligands': NickelBidendatePhosphineLigands,                       # Suliman Sharif
-        'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                      # Suliman Sharif
-        'how_to_live_longer': HowToLiveLonger,                                   # Suliman Sharif
-        'monoclonal_antibodies': MonoclonalAntibodies,                           # Asuka Orr & Suliman Sharif
-        'lube': Lube,                                                            # Daniel Khavrutskii & Suliman Sharif
-        'tainted_sexual_enhancements': TaintedSexualEnhancements,                # Suliman Sharif
-        'salt': Salt,                                                            # Suliman Sharif
-        'exsens_products': ExsensProducts,                                       # Rebecca Pinette-Dorin & Suliman Sharif
-        'fda_list_one': FDAListOne,                                              # Mike Wostner & Suliman Sharif
-        'fda_list_two': FDAListTwo,                                              # Mike Wostner & Suliman Sharif
-        'fda_list_three': FDAListThree,                                          # Mike Wostner & Suliman Sharif
-        'fda_list_four': FDAListFour,                                            # Mike Wostner & Suliman Sharif
-        'fda_list_five': FDAListFive,                                            # Mike Wostner & Suliman Sharif
-        'fda_list_six': FDAListSix,                                              # Mike Wostner & Suliman Sharif
-        'fda_list_seven': FDAListSeven,                                          # Mike Wostner & Suliman Sharif
-        'constituents_of_cannabis_sativa': ConstituentsOfCannabisSativa,         # Ian Jones & Bettina Lier & Suliman Sharif
-        'phytocannabinoids': PhytoCannabinoids,                                  # Ian Jones & Bettina Lier & Suliman Sharif
-        'common_regex_patterns': CommonRegexPatterns,                            # Chris Burke & Suliman Sharif
+        'emerging_perfluoroalkyls': EmergingPerFluoroAlkyls,                      # Asuka Orr & Suliman Sharif
+        'montmorillonite_adsorption': MontmorilloniteAdsorption,                  # Asuka Orr & Suliman Sharif
+        'common_monomer_repeating_units': CommonMonomerRepeatingUnits,            # Suliman Sharif
+        'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,    # Ruibin Liu & Suliman Sharif
+        'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors,  # Shaoqi Zhan & Suliman Sharif
+        'rings_in_drugs': RingsInDrugs,                                           # Alexander Mackerell Jr. & Suliman Sharif
+        'iupac_blue_book_rings': IUPACBlueBookRings,                              # Suliman Sharif
+        'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,                  # Suliman Sharif
+        'privileged_scaffolds': PrivilegedScaffolds,                              # Suliman Sharif
+        'iupac_blue_book': IUPACBlueBook,                                         # Suliman Sharif
+        'common_r_group_replacements': CommonRGroupReplacements,                  # Sunhwan Jo & Suliman Sharif
+        'braf_inhibitors': BRAFInhibitors,                                        # Aarion Romany & Suliman Sharif
+        'privileged_kinase_inhibitors': PrivilegedKinaseInhibitors,               # Suliman Sharif
+        'common_organic_solvents': CommonOrganicSolvents,                         # Suliman Sharif
+        'amino_acid_protecting_groups': AminoAcidProtectingGroups,                # Aziza Frank & Suliman Sharif
+        'schedule_one': ScheduleOne,                                              # Suliman Sharif
+        'schedule_two': ScheduleTwo,                                              # Suliman Sharif
+        'schedule_three': ScheduleThree,                                          # Suliman Sharif
+        'schedule_four': ScheduleFour,                                            # Suliman Sharif
+        'schedule_five': ScheduleFive,                                            # Suliman Sharif
+        'interstellar_space': InterstellarSpace,                                  # Suliman Sharif
+        'vitamins': Vitamins,                                                     # Suliman Sharif
+        'open_smiles': OpenSmiles,                                                # Suliman Sharif
+        'amino_acids': AminoAcids,                                                # Suliman Sharif
+        'pihkal': Pihkal,                                                         # Suliman Sharif
+        'nickel_ligands': NickelBidendatePhosphineLigands,                        # Suliman Sharif
+        'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                       # Suliman Sharif
+        'how_to_live_longer': HowToLiveLonger,                                    # Suliman Sharif
+        'monoclonal_antibodies': MonoclonalAntibodies,                            # Asuka Orr & Suliman Sharif
+        'lube': Lube,                                                             # Daniel Khavrutskii & Suliman Sharif
+        'tainted_sexual_enhancements': TaintedSexualEnhancements,                 # Suliman Sharif
+        'salt': Salt,                                                             # Suliman Sharif
+        'exsens_products': ExsensProducts,                                        # Rebecca Pinette-Dorin & Suliman Sharif
+        'fda_list_one': FDAListOne,                                               # Mike Wostner & Suliman Sharif
+        'fda_list_two': FDAListTwo,                                               # Mike Wostner & Suliman Sharif
+        'fda_list_three': FDAListThree,                                           # Mike Wostner & Suliman Sharif
+        'fda_list_four': FDAListFour,                                             # Mike Wostner & Suliman Sharif
+        'fda_list_five': FDAListFive,                                             # Mike Wostner & Suliman Sharif
+        'fda_list_six': FDAListSix,                                               # Mike Wostner & Suliman Sharif
+        'fda_list_seven': FDAListSeven,                                           # Mike Wostner & Suliman Sharif
+        'constituents_of_cannabis_sativa': ConstituentsOfCannabisSativa,          # Ian Jones & Bettina Lier & Suliman Sharif
+        'phytocannabinoids': PhytoCannabinoids,                                   # Ian Jones & Bettina Lier & Suliman Sharif
+        'organophosphorous_nerve_agents': OrganoPhosphorousNerveAgents,           # Suliman Sharif
+        'organic_and_inorganic_bronsted_acids': OrganicAndInorganicBronstedAcids, # Nathaniel McClean & Suliman Sharif
+        'common_regex_patterns': CommonRegexPatterns,                             # Chris Burke & Suliman Sharif
     }
 
     __INCOMPLETE_NODES = {
