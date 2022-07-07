@@ -364,7 +364,13 @@ Final PES scans are displayed in Figure 8.
 
 Lastly, the S1-S2 charges needed adjustment. We used Monte Carlo Simulated Annealing (MCSA) method [Reference Here] utilized in
 FFparam to predict the approximate partial charges. The sulphur atoms were adjusted to have a partial negative charge of -0.208.
-The initial and final modeled result of the dithiolane is displayed in Figure 7.
+The initial and final modeled result of the dihedral energy scans dithiolane is displayed in Figure 7 with a visual validation allowing us to see inspect what the results of the work performed displayed in figure 8.
+
+<p align="center">
+  <img width="700" height="450" src="../images/figures/official_figure_8_again.png">
+  <br>
+  <i>Figure 8: Visual Inspection of the 1,2-dithiolane</i>
+</p>
 
 # Conclusion 
 
