@@ -8,40 +8,43 @@ authors:
   - name: Ruibin Liu
     orcid: 0000-0001-8395-9353
     affiliation: 1
-  - name: Bettina Lier
-    affiliation: 4
   - name: Asuka Orr
     orcid: 0000-0003-4628-526X
     affiliation: 1
-  - name: Aziza Frank
-    affiliation: 1
-  - name: Anastasia Croitoru
-    orcid: XXX
-    affiliation: 5
   - name: Daniel Khavrutskii
     orcid: XXX
     affiliation: 5
+  - name: Bettina Lier
+    affiliation: 4
+  - name: Anastasia Croitoru
+    orcid: XXX
+    affiliation: 5
+  - name: Chris Burke
+    affiliation: 2
+  - name: Aziza Frank
+    affiliation: 1
   - name: Sunhwan Jo
     affiliation: 2
   - name: Jacob Weiner
     orcid: XXX
     affiliation: 1
+  - name: Nathaniel McClean
+  - orcid: XXX
+  - affiliation: 1
+  - name: Aarion Romany
+    affiliation: 1
   - name: Mingtian Zhao
     orcid: XXX
     affiliation: 1
-  - name: Aarion Romany
-    affiliation: 1
+  - name: Takayuki Serizawa
+    affiliation: 6
+  - name: Jared Deacon
+    affiliation: 6
   - name: Ian Jones
     affiliation: 1
   - name: Shaoqi Zhan
     orcid: 0000-0002-6383-1771
     affiliation: 3
-  - name: Chris Burke
-    affiliation: 2
-  - name: Takayuki Serizawa
-    affiliation: 6
-  - name: Jared Deacon
-    affiliation: 6
   - name: Anmol Kumar
     affiliation: 6
   - name: Mike Woster
@@ -51,6 +54,9 @@ authors:
   - name: Elena Yi Chow
     orcid: 0000-0001-5559-1635
     affiliation: 2
+  - name: Sevien Schulhoff
+    orcid: XXXX
+    affiliation: 1
   - name: Alexander D. MacKerell Jr. [corresponding author]
     affiliation: 1
 affiliations:
