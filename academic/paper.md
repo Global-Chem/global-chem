@@ -440,6 +440,30 @@ Appreciation to the University of Maryland Baltimore, School of Pharmacy, Depart
 
 (28) Chemical Weapons Disarmament in Russia : Problems and Prospects | 九大コレクション | 九州大学附属図書館. catalog.lib.kyushu-u.ac.jp,
 
+(29) Shulgin, Alexander T., and Ann Shulgin. Pihkal: A Chemical Love Story. 1. ed., 8. print, Transform, 2010.
+
+(30) Vaithianathan, Soundarya, et al. “Effect of Common Excipients on the Oral Drug Absorption of Biopharmaceutics Classification System Class 3 Drugs Cimetidine and Acyclovir.” Journal of Pharmaceutical Sciences, vol. 105, no. 2, Feb. 2016, pp. 996–1005. PubMed
+
+(31) https://github.com/geekan/HowToLiveLonger
+
+(32) https://labels.fda.gov/
+
+(33) EXSENS-USA.com. “Lube Lessons 3: The Sex Lube Ingredient Glossary.” EXSENS-USA.Com,
+
+(34) Research, Center for Drug Evaluation and. “Tainted Sexual Enhancement Products.” FDA, June 2022
+
+(35) Belot, Laure  "Alimentation : face aux doutes, les internautes s'organisent". Le Monde.
+
+(36) https://www.fda.gov/industry/color-additive-inventories/color-additive-status-list
+
+(37) Turner, C. E., et al. “Constituents of Cannabis Sativa L. XVII. A Review of the Natural Constituents.” Journal of Natural Products, vol. 43, no. 2, Apr. 1980, pp. 169–234. PubMed
+
+(38) Hanuš, Lumír Ondřej, et al. “Phytocannabinoids: A Unified Critical Inventory.” Natural Product Reports, vol. 33, no. 12, Nov. 2016, pp. 1357–92. PubMed,
+
+(39) Mukherjee, Sudisha, and Rinkoo Devi Gupta. “Organophosphorus Nerve Agents: Types, Toxicity, and Treatments.” Journal of Toxicology, vol. 2020, Sept. 2020, p. 3007984.
+
+(40) PKa Values for Organic and Inorganic Bronsted Acids at 25o Ca.
+
 # Conflict of Interets
 
 ADM is cofounder and CSO and SJ is Commercial Development Director of SilcsBio LLC. Chris Burke is Senior DevOps Engineer at L7 Informatics. 
