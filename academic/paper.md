@@ -171,45 +171,49 @@ Note that some of the names may be modified based on human inspection in favor o
 
 At the time of writing the list of objects include those shown in Table 1. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. In addition, the languages used for each list are given, along with the number entires in the list and the reference.  In addition, the number of times that compounds in each list fail in the CGenFF program, as discussed below, is given.
 
-| Chemical List                       | Languages                    | # of Entries | References               |  CGenFF Errors            |
-|-------------------------------------|------------------------------|--------------|--------------------------| --------------------------|
-| Amino Acids                         | IUPAC/SMILES/SMARTS          | 20           | Common Knowledge         | 0                         |
-| Essential Vitamins                  | Preferred Name/SMILES/SMARTS | 13           | Common Knowledge         | 0                         |
-| Common Organic Solvents             | IUPAC/SMILES/SMARTS          | 42           | [8]                      | 3                         |
-| Open Smiles                         | IUPAC/SMILES/SMARTS          | 94           | [9]                      | 10                        |
-| IUPAC Blue Book (CRC Handbook) 2003 | Preferred Name/SMILES/SMARTS | 333          | [10]                     | 1 (Excluding Radicals)    |
-| Rings in Drugs                      | IUPAC/SMILES/SMARTS          | 92           | [11]                     | 0                         |
-| Phase 2 Hetereocyclic Rings         | IUPAC/SMILES/SMARTS          | 19           | [12]                     | 0                         |
-| Privileged Scaffolds                | IUPAC/SMILES/SMARTS          | 47           | [13]                     | 0                         |
-| Common Warheads Covalent Inhibitors | IUPAC/SMILES/SMARTS          | 29           | [14]                     | 4                         |
-| Common Polymer Repeating Units      | IUPAC/SMILES/SMARTS          | 78           | [15]                     | 7                         |
-| Common R Group Replacements         | IUPAC/SMILES/SMARTS          | 499          | [16]                     | 15                        |
-| Electrophillic Warheads for Kinases | Preferred Name/SMILES/SMARTS | 24           | [17]                     | 0                         |
-| Privileged Scaffolds for Kinases    | IUPAC/SMILES/SMARTS          | 29           | [18]                     | 0                         |
-| BRAF Inhibitors                     | IUPAC/SMILES/SMARTS          | 54           | [19]                     | 5                         |
-| Common Amino Acid Protecting Groups | IUPAC/ACRONYM/SMILES/SMARTS  | 346          | [20]                     | 41                        |
-| Emerging Perfluoroalkyls            | IUPAC/SMILES/SMARTS          | 27           | [21]                     | 1                         |
-| Chemicals For Clay Adsorption       | IUPAC/SMILES/SMARTS          | 33           | [22]                     | 0                         |
-| Schedule 1 United States Narcotics  | Preferred Name/SMILES/SMARTS | 240          | [26]                     | 1                         |
-| Schedule 2 United States Narcotics  | Preferred Name/SMILES/SMARTS | 60           | [26]                     | 1                         |
-| Schedule 3 United States Narcotics  | Preferred Name/SMILES/SMARTS | 22           | [26]                     | 1                         |
-| Schedule 4 United States Narcotics  | Preferred Name/SMILES/SMARTS | 77           | [26]                     | 0                         |
-| Schedule 5 United States Narcotics  | Preferred Name/SMILES/SMARTS | 8            | [26]                     | 0                         |
-| PihKal                              | Preferred Name/SMILES/SMARTS | 179          | [Reference Here]         | 0                         |
-| Excipients Cimetidine & Acyclovir   | Preferred Name/SMILES/SMARTS | 14           | [Reference Here]         | 0                         |
-| HowToLiveLonger	                  | Preferred Name/SMILES/SMARTS | 4            | [Reference Here]         | 0                         |
-| Monoclonal Antibodies               | Preferred Name/SMILES/SMARTS | 19           | [Reference Here]         | 0                         |
-| Common Lubricants for Sex Wellness  | Preferred Name/SMILES/SMARTS | 38           | [Reference Here]         | 0                         |
-| FDA Tainted Sexual Enhancements     | Preferred Name/SMILES/SMARTS | 4            | [Reference Here]         | 0                         |
-| Common Food Salts                   | Preferred Name/SMILES/SMARTS | 14           | [Reference Here]         | 0                         |
-| FDA Color Additive List 1           | FDA Name/SMILES/SMARTS       | 12           | [Reference Here]         | 0                         |
-| FDA Color Additive List 2           | FDA Name/SMILES/SMARTS       | 15           | [Reference Here]         | 0                         |
-| FDA Color Additive List 3           | FDA Name/SMILES/SMARTS       | 16           | [Reference Here]         | 0                         |
-| FDA Color Additive List 4           | FDA Name/SMILES/SMARTS       | 39           | [Reference Here]         | 0                         |
-| FDA Color Additive List 5           | FDA Name/SMILES/SMARTS       | 27           | [Reference Here]         | 0                         |
-| FDA Color Additive List 6           | FDA Name/SMILES/SMARTS       | 29           | [Reference Here]         | 0                         |
-| FDA Color Additive List 7           | FDA Name/SMILES/SMARTS       | 37           | [Reference Here]         | 0                         |
-| Common Regex Patterns               | Mol2                         | 1            |                          | N/A                       |
+| Chemical List                        | Languages                    | # of Entries | References               |  CGenFF Errors            |
+|--------------------------------------|------------------------------|--------------|--------------------------| --------------------------|
+| Amino Acids                          | IUPAC/SMILES/SMARTS          | 20           | Common Knowledge         | 0                         |
+| Essential Vitamins                   | Preferred Name/SMILES/SMARTS | 13           | Common Knowledge         | 0                         |
+| Common Organic Solvents              | IUPAC/SMILES/SMARTS          | 42           | [8]                      | 3                         |
+| Open Smiles                          | IUPAC/SMILES/SMARTS          | 94           | [9]                      | 10                        |
+| IUPAC Blue Book (CRC Handbook) 2003  | Preferred Name/SMILES/SMARTS | 333          | [10]                     | 1 (Excluding Radicals)    |
+| Rings in Drugs                       | IUPAC/SMILES/SMARTS          | 92           | [11]                     | 0                         |
+| Phase 2 Hetereocyclic Rings          | IUPAC/SMILES/SMARTS          | 19           | [12]                     | 0                         |
+| Privileged Scaffolds                 | IUPAC/SMILES/SMARTS          | 47           | [13]                     | 0                         |
+| Common Warheads Covalent Inhibitors  | IUPAC/SMILES/SMARTS          | 29           | [14]                     | 4                         |
+| Common Polymer Repeating Units       | IUPAC/SMILES/SMARTS          | 78           | [15]                     | 7                         |
+| Common R Group Replacements          | IUPAC/SMILES/SMARTS          | 499          | [16]                     | 15                        |
+| Electrophillic Warheads for Kinases  | Preferred Name/SMILES/SMARTS | 24           | [17]                     | 0                         |
+| Privileged Scaffolds for Kinases     | IUPAC/SMILES/SMARTS          | 29           | [18]                     | 0                         |
+| BRAF Inhibitors                      | IUPAC/SMILES/SMARTS          | 54           | [19]                     | 5                         |
+| Common Amino Acid Protecting Groups  | IUPAC/ACRONYM/SMILES/SMARTS  | 346          | [20]                     | 41                        |
+| Emerging Perfluoroalkyls             | IUPAC/SMILES/SMARTS          | 27           | [21]                     | 1                         |
+| Chemicals For Clay Adsorption        | IUPAC/SMILES/SMARTS          | 33           | [22]                     | 0                         |
+| Schedule 1 United States Narcotics   | Preferred Name/SMILES/SMARTS | 240          | [26]                     | 1                         |
+| Schedule 2 United States Narcotics   | Preferred Name/SMILES/SMARTS | 60           | [26]                     | 1                         |
+| Schedule 3 United States Narcotics   | Preferred Name/SMILES/SMARTS | 22           | [26]                     | 1                         |
+| Schedule 4 United States Narcotics   | Preferred Name/SMILES/SMARTS | 77           | [26]                     | 0                         |
+| Schedule 5 United States Narcotics   | Preferred Name/SMILES/SMARTS | 8            | [26]                     | 0                         |
+| PihKal                               | Preferred Name/SMILES/SMARTS | 179          | [Reference Here]         | 0                         |
+| Excipients Cimetidine & Acyclovir    | Preferred Name/SMILES/SMARTS | 14           | [Reference Here]         | 0                         |
+| HowToLiveLonger	                     | Preferred Name/SMILES/SMARTS | 4            | [Reference Here]         | 0                         |
+| Monoclonal Antibodies                | Preferred Name/SMILES/SMARTS | 19           | [Reference Here]         | 0                         |
+| Common Lubricants for Sex Wellness   | Preferred Name/SMILES/SMARTS | 38           | [Reference Here]         | 0                         |
+| FDA Tainted Sexual Enhancements      | Preferred Name/SMILES/SMARTS | 4            | [Reference Here]         | 0                         |
+| Common Food Salts                    | Preferred Name/SMILES/SMARTS | 14           | [Reference Here]         | 0                         |
+| FDA Color Additive List 1            | FDA Name/SMILES/SMARTS       | 12           | [Reference Here]         | 0                         |
+| FDA Color Additive List 2            | FDA Name/SMILES/SMARTS       | 15           | [Reference Here]         | 0                         |
+| FDA Color Additive List 3            | FDA Name/SMILES/SMARTS       | 16           | [Reference Here]         | 0                         |
+| FDA Color Additive List 4            | FDA Name/SMILES/SMARTS       | 39           | [Reference Here]         | 0                         |
+| FDA Color Additive List 5            | FDA Name/SMILES/SMARTS       | 27           | [Reference Here]         | 0                         |
+| FDA Color Additive List 6            | FDA Name/SMILES/SMARTS       | 29           | [Reference Here]         | 0                         |
+| FDA Color Additive List 7            | FDA Name/SMILES/SMARTS       | 37           | [Reference Here]         | 0                         |
+| Constituents of Cannabis Sativa      | Name/SMILES/SMARTS           | 394          | [Reference Here]         | 0                         |
+| Phytocanniboids                      | Name/SMILES/SMARTS           | 111          | [Reference Here]         | 0                         |
+| Organophosphorous Nerve Toxic Agents | Name/SMILES/SMARTS           | 14           | [Reference Here]         | 0                         |
+| Cengage Bronsted Acids               | Name/SMILES/SMARTS           | 42           | [Reference Here]         | 0                         |
+| Common Regex Patterns                | Mol2                         | 1            |                          | N/A                       |
 
 <p align="center">
   <i>Table 1: GlobalChem Object List</i>
