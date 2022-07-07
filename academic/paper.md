@@ -195,24 +195,24 @@ At the time of writing the list of objects include those shown in Table 1. The l
 | Schedule 3 United States Narcotics   | Preferred Name/SMILES/SMARTS | 22           | [26]                     | 1                         |
 | Schedule 4 United States Narcotics   | Preferred Name/SMILES/SMARTS | 77           | [26]                     | 0                         |
 | Schedule 5 United States Narcotics   | Preferred Name/SMILES/SMARTS | 8            | [26]                     | 0                         |
-| PihKal                               | Preferred Name/SMILES/SMARTS | 179          | [Reference Here]         | 0                         |
-| Excipients Cimetidine & Acyclovir    | Preferred Name/SMILES/SMARTS | 14           | [Reference Here]         | 0                         |
-| HowToLiveLonger	                     | Preferred Name/SMILES/SMARTS | 4            | [Reference Here]         | 0                         |
-| Monoclonal Antibodies                | Preferred Name/SMILES/SMARTS | 19           | [Reference Here]         | 0                         |
-| Common Lubricants for Sex Wellness   | Preferred Name/SMILES/SMARTS | 38           | [Reference Here]         | 0                         |
-| FDA Tainted Sexual Enhancements      | Preferred Name/SMILES/SMARTS | 4            | [Reference Here]         | 0                         |
-| Common Food Salts                    | Preferred Name/SMILES/SMARTS | 14           | [Reference Here]         | 0                         |
-| FDA Color Additive List 1            | FDA Name/SMILES/SMARTS       | 12           | [Reference Here]         | 0                         |
-| FDA Color Additive List 2            | FDA Name/SMILES/SMARTS       | 15           | [Reference Here]         | 0                         |
-| FDA Color Additive List 3            | FDA Name/SMILES/SMARTS       | 16           | [Reference Here]         | 0                         |
-| FDA Color Additive List 4            | FDA Name/SMILES/SMARTS       | 39           | [Reference Here]         | 0                         |
-| FDA Color Additive List 5            | FDA Name/SMILES/SMARTS       | 27           | [Reference Here]         | 0                         |
-| FDA Color Additive List 6            | FDA Name/SMILES/SMARTS       | 29           | [Reference Here]         | 0                         |
-| FDA Color Additive List 7            | FDA Name/SMILES/SMARTS       | 37           | [Reference Here]         | 0                         |
-| Constituents of Cannabis Sativa      | Name/SMILES/SMARTS           | 394          | [Reference Here]         | 0                         |
-| Phytocanniboids                      | Name/SMILES/SMARTS           | 111          | [Reference Here]         | 0                         |
-| Organophosphorous Nerve Toxic Agents | Name/SMILES/SMARTS           | 14           | [Reference Here]         | 0                         |
-| Cengage Bronsted Acids               | Name/SMILES/SMARTS           | 42           | [Reference Here]         | 0                         |
+| PihKal                               | Preferred Name/SMILES/SMARTS | 179          | [29]                     | 0                         |
+| Excipients Cimetidine & Acyclovir    | Preferred Name/SMILES/SMARTS | 14           | [30]                     | 0                         |
+| HowToLiveLonger	                     | Preferred Name/SMILES/SMARTS | 4            | [31]                     | 0                         |
+| Monoclonal Antibodies                | Preferred Name/SMILES/SMARTS | 19           | [32]                     | 0                         |
+| Common Lubricants for Sex Wellness   | Preferred Name/SMILES/SMARTS | 38           | [33]                     | 0                         |
+| FDA Tainted Sexual Enhancements      | Preferred Name/SMILES/SMARTS | 4            | [34]                     | 0                         |
+| Common Food Salts                    | Preferred Name/SMILES/SMARTS | 14           | [35]                     | 0                         |
+| FDA Color Additive List 1            | FDA Name/SMILES/SMARTS       | 12           | [36]                     | 0                         |
+| FDA Color Additive List 2            | FDA Name/SMILES/SMARTS       | 15           | [36]                     | 0                         |
+| FDA Color Additive List 3            | FDA Name/SMILES/SMARTS       | 16           | [36]                     | 0                         |
+| FDA Color Additive List 4            | FDA Name/SMILES/SMARTS       | 39           | [36]                     | 0                         |
+| FDA Color Additive List 5            | FDA Name/SMILES/SMARTS       | 27           | [36]                     | 0                         |
+| FDA Color Additive List 6            | FDA Name/SMILES/SMARTS       | 29           | [36]                     | 0                         |
+| FDA Color Additive List 7            | FDA Name/SMILES/SMARTS       | 37           | [36]                     | 0                         |
+| Constituents of Cannabis Sativa      | Name/SMILES/SMARTS           | 394          | [37]                     | 0                         |
+| Phytocanniboids                      | Name/SMILES/SMARTS           | 111          | [38]                     | 0                         |
+| Organophosphorous Nerve Toxic Agents | Name/SMILES/SMARTS           | 14           | [39]                     | 0                         |
+| Cengage Bronsted Acids               | Name/SMILES/SMARTS           | 42           | [40]                     | 0                         |
 | Common Regex Patterns                | Mol2                         | 1            |                          | N/A                       |
 
 <p align="center">
