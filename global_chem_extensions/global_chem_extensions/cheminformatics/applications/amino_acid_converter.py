@@ -21,6 +21,8 @@ class AminoAcidConverter(object):
 
         '''
 
+        # Natural and Unnatural
+
         amino_acids_sequence = {
             "A": "C",
             "R": "CCCCNC(N)=N",
@@ -43,13 +45,19 @@ class AminoAcidConverter(object):
             "T": "C(C)([H])O",
             "W": "CCC1=CNC2=C1C=CC=C2",
             "Y": "CC1=CC=C(O)C=C1",
-            "V": "C(C)C"
+            "V": "C(C)C",
+            "(DHA)": "C=C",
+            "(DHB)": "CC",
+            "(ABU)": "CC",
         }
 
         peptide_n_terminus = 'NCC('
         peptide_c_terminus = 'O)=O)'
 
-        for i in range(len(sequence)):
+        unusual_amino_acid_counts = sequence.count('(')
+        sequence_length = len(sequence) - (unusual_amino_acid_counts * 5)
+
+        for i in range(sequence_length):
 
             peptide_n_terminus += 'NCC('
             peptide_c_terminus += '=O)'
@@ -61,12 +69,25 @@ class AminoAcidConverter(object):
             start_index_pattern = peptide_backbone.find('NCC')
             peptide_backbone = peptide_backbone[0:start_index_pattern + 1] + 'C([*:' + str(i) + '])' + peptide_backbone[start_index_pattern + 2:]
 
+        unusual_amino_acid = False
+
         for i in range(0, len(sequence)):
 
             letter = sequence[i]
-            smiles_to_add = amino_acids_sequence[letter]
 
-            peptide_backbone = peptide_backbone.replace('[*:%s]' % (i + 1), smiles_to_add)
+            if letter == '(' and not unusual_amino_acid:
+
+                unusual_amino_acid = sequence[i: i + 5]
+                smiles_to_add = amino_acids_sequence[unusual_amino_acid]
+                peptide_backbone = peptide_backbone.replace('[*:%s]' % (i + 1), smiles_to_add)
+                unusual_amino_acid = True
+
+            elif letter == ')' and unusual_amino_acid:
+                unusual_amino_acid = False
+            else:
+                smiles_to_add = amino_acids_sequence[letter]
+
+                peptide_backbone = peptide_backbone.replace('[*:%s]' % (i + 1), smiles_to_add)
 
 
         return peptide_backbone
@@ -116,3 +137,11 @@ class AminoAcidConverter(object):
             sequence += amino_acids_sequence[match]
 
         return sequence
+
+if __name__ == '__main__':
+
+    aminoacid_sequence = 'V(DHA)'
+
+    converter = AminoAcidConverter()
+    sequence = converter.convert_amino_acid_sequence_to_smiles(aminoacid_sequence)
+    print (sequence)
