@@ -8,40 +8,43 @@ authors:
   - name: Ruibin Liu
     orcid: 0000-0001-8395-9353
     affiliation: 1
-  - name: Bettina Lier
-    affiliation: 4
   - name: Asuka Orr
     orcid: 0000-0003-4628-526X
     affiliation: 1
-  - name: Aziza Frank
-    affiliation: 1
-  - name: Anastasia Croitoru
-    orcid: XXX
-    affiliation: 5
   - name: Daniel Khavrutskii
     orcid: XXX
     affiliation: 5
+  - name: Bettina Lier
+    affiliation: 4
+  - name: Anastasia Croitoru
+    orcid: XXX
+    affiliation: 5
+  - name: Chris Burke
+    affiliation: 2
+  - name: Aziza Frank
+    affiliation: 1
   - name: Sunhwan Jo
     affiliation: 2
   - name: Jacob Weiner
     orcid: XXX
     affiliation: 1
+  - name: Nathaniel McClean
+  - orcid: XXX
+  - affiliation: 1
+  - name: Aarion Romany
+    affiliation: 1
   - name: Mingtian Zhao
     orcid: XXX
     affiliation: 1
-  - name: Aarion Romany
-    affiliation: 1
+  - name: Takayuki Serizawa
+    affiliation: 6
+  - name: Jared Deacon
+    affiliation: 6
   - name: Ian Jones
     affiliation: 1
   - name: Shaoqi Zhan
     orcid: 0000-0002-6383-1771
     affiliation: 3
-  - name: Chris Burke
-    affiliation: 2
-  - name: Takayuki Serizawa
-    affiliation: 6
-  - name: Jared Deacon
-    affiliation: 6
   - name: Anmol Kumar
     affiliation: 6
   - name: Mike Woster
@@ -51,6 +54,9 @@ authors:
   - name: Elena Yi Chow
     orcid: 0000-0001-5559-1635
     affiliation: 2
+  - name: Sevien Schulhoff
+    orcid: XXXX
+    affiliation: 1
   - name: Alexander D. MacKerell Jr. [corresponding author]
     affiliation: 1
 affiliations:
@@ -171,45 +177,49 @@ Note that some of the names may be modified based on human inspection in favor o
 
 At the time of writing the list of objects include those shown in Table 1. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. In addition, the languages used for each list are given, along with the number entires in the list and the reference.  In addition, the number of times that compounds in each list fail in the CGenFF program, as discussed below, is given.
 
-| Chemical List                       | Languages                    | # of Entries | References               |  CGenFF Errors            |
-|-------------------------------------|------------------------------|--------------|--------------------------| --------------------------|
-| Amino Acids                         | IUPAC/SMILES/SMARTS          | 20           | Common Knowledge         | 0                         |
-| Essential Vitamins                  | Preferred Name/SMILES/SMARTS | 13           | Common Knowledge         | 0                         |
-| Common Organic Solvents             | IUPAC/SMILES/SMARTS          | 42           | [8]                      | 3                         |
-| Open Smiles                         | IUPAC/SMILES/SMARTS          | 94           | [9]                      | 10                        |
-| IUPAC Blue Book (CRC Handbook) 2003 | Preferred Name/SMILES/SMARTS | 333          | [10]                     | 1 (Excluding Radicals)    |
-| Rings in Drugs                      | IUPAC/SMILES/SMARTS          | 92           | [11]                     | 0                         |
-| Phase 2 Hetereocyclic Rings         | IUPAC/SMILES/SMARTS          | 19           | [12]                     | 0                         |
-| Privileged Scaffolds                | IUPAC/SMILES/SMARTS          | 47           | [13]                     | 0                         |
-| Common Warheads Covalent Inhibitors | IUPAC/SMILES/SMARTS          | 29           | [14]                     | 4                         |
-| Common Polymer Repeating Units      | IUPAC/SMILES/SMARTS          | 78           | [15]                     | 7                         |
-| Common R Group Replacements         | IUPAC/SMILES/SMARTS          | 499          | [16]                     | 15                        |
-| Electrophillic Warheads for Kinases | Preferred Name/SMILES/SMARTS | 24           | [17]                     | 0                         |
-| Privileged Scaffolds for Kinases    | IUPAC/SMILES/SMARTS          | 29           | [18]                     | 0                         |
-| BRAF Inhibitors                     | IUPAC/SMILES/SMARTS          | 54           | [19]                     | 5                         |
-| Common Amino Acid Protecting Groups | IUPAC/ACRONYM/SMILES/SMARTS  | 346          | [20]                     | 41                        |
-| Emerging Perfluoroalkyls            | IUPAC/SMILES/SMARTS          | 27           | [21]                     | 1                         |
-| Chemicals For Clay Adsorption       | IUPAC/SMILES/SMARTS          | 33           | [22]                     | 0                         |
-| Schedule 1 United States Narcotics  | Preferred Name/SMILES/SMARTS | 240          | [26]                     | 1                         |
-| Schedule 2 United States Narcotics  | Preferred Name/SMILES/SMARTS | 60           | [26]                     | 1                         |
-| Schedule 3 United States Narcotics  | Preferred Name/SMILES/SMARTS | 22           | [26]                     | 1                         |
-| Schedule 4 United States Narcotics  | Preferred Name/SMILES/SMARTS | 77           | [26]                     | 0                         |
-| Schedule 5 United States Narcotics  | Preferred Name/SMILES/SMARTS | 8            | [26]                     | 0                         |
-| PihKal                              | Preferred Name/SMILES/SMARTS | 179          | [Reference Here]         | 0                         |
-| Excipients Cimetidine & Acyclovir   | Preferred Name/SMILES/SMARTS | 14           | [Reference Here]         | 0                         |
-| HowToLiveLonger	                  | Preferred Name/SMILES/SMARTS | 4            | [Reference Here]         | 0                         |
-| Monoclonal Antibodies               | Preferred Name/SMILES/SMARTS | 19           | [Reference Here]         | 0                         |
-| Common Lubricants for Sex Wellness  | Preferred Name/SMILES/SMARTS | 38           | [Reference Here]         | 0                         |
-| FDA Tainted Sexual Enhancements     | Preferred Name/SMILES/SMARTS | 4            | [Reference Here]         | 0                         |
-| Common Food Salts                   | Preferred Name/SMILES/SMARTS | 14           | [Reference Here]         | 0                         |
-| FDA Color Additive List 1           | FDA Name/SMILES/SMARTS       | 12           | [Reference Here]         | 0                         |
-| FDA Color Additive List 2           | FDA Name/SMILES/SMARTS       | 15           | [Reference Here]         | 0                         |
-| FDA Color Additive List 3           | FDA Name/SMILES/SMARTS       | 16           | [Reference Here]         | 0                         |
-| FDA Color Additive List 4           | FDA Name/SMILES/SMARTS       | 39           | [Reference Here]         | 0                         |
-| FDA Color Additive List 5           | FDA Name/SMILES/SMARTS       | 27           | [Reference Here]         | 0                         |
-| FDA Color Additive List 6           | FDA Name/SMILES/SMARTS       | 29           | [Reference Here]         | 0                         |
-| FDA Color Additive List 7           | FDA Name/SMILES/SMARTS       | 37           | [Reference Here]         | 0                         |
-| Common Regex Patterns               | Mol2                         | 1            |                          | N/A                       |
+| Chemical List                        | Languages                    | # of Entries | References               |  CGenFF Errors            |
+|--------------------------------------|------------------------------|--------------|--------------------------| --------------------------|
+| Amino Acids                          | IUPAC/SMILES/SMARTS          | 20           | Common Knowledge         | 0                         |
+| Essential Vitamins                   | Preferred Name/SMILES/SMARTS | 13           | Common Knowledge         | 0                         |
+| Common Organic Solvents              | IUPAC/SMILES/SMARTS          | 42           | [8]                      | 3                         |
+| Open Smiles                          | IUPAC/SMILES/SMARTS          | 94           | [9]                      | 10                        |
+| IUPAC Blue Book (CRC Handbook) 2003  | Preferred Name/SMILES/SMARTS | 333          | [10]                     | 1 (Excluding Radicals)    |
+| Rings in Drugs                       | IUPAC/SMILES/SMARTS          | 92           | [11]                     | 0                         |
+| Phase 2 Hetereocyclic Rings          | IUPAC/SMILES/SMARTS          | 19           | [12]                     | 0                         |
+| Privileged Scaffolds                 | IUPAC/SMILES/SMARTS          | 47           | [13]                     | 0                         |
+| Common Warheads Covalent Inhibitors  | IUPAC/SMILES/SMARTS          | 29           | [14]                     | 4                         |
+| Common Polymer Repeating Units       | IUPAC/SMILES/SMARTS          | 78           | [15]                     | 7                         |
+| Common R Group Replacements          | IUPAC/SMILES/SMARTS          | 499          | [16]                     | 15                        |
+| Electrophillic Warheads for Kinases  | Preferred Name/SMILES/SMARTS | 24           | [17]                     | 0                         |
+| Privileged Scaffolds for Kinases     | IUPAC/SMILES/SMARTS          | 29           | [18]                     | 0                         |
+| BRAF Inhibitors                      | IUPAC/SMILES/SMARTS          | 54           | [19]                     | 5                         |
+| Common Amino Acid Protecting Groups  | IUPAC/ACRONYM/SMILES/SMARTS  | 346          | [20]                     | 41                        |
+| Emerging Perfluoroalkyls             | IUPAC/SMILES/SMARTS          | 27           | [21]                     | 1                         |
+| Chemicals For Clay Adsorption        | IUPAC/SMILES/SMARTS          | 33           | [22]                     | 0                         |
+| Schedule 1 United States Narcotics   | Preferred Name/SMILES/SMARTS | 240          | [26]                     | 1                         |
+| Schedule 2 United States Narcotics   | Preferred Name/SMILES/SMARTS | 60           | [26]                     | 1                         |
+| Schedule 3 United States Narcotics   | Preferred Name/SMILES/SMARTS | 22           | [26]                     | 1                         |
+| Schedule 4 United States Narcotics   | Preferred Name/SMILES/SMARTS | 77           | [26]                     | 0                         |
+| Schedule 5 United States Narcotics   | Preferred Name/SMILES/SMARTS | 8            | [26]                     | 0                         |
+| PihKal                               | Preferred Name/SMILES/SMARTS | 179          | [29]                     | 0                         |
+| Excipients Cimetidine & Acyclovir    | Preferred Name/SMILES/SMARTS | 14           | [30]                     | 0                         |
+| HowToLiveLonger	                     | Preferred Name/SMILES/SMARTS | 4            | [31]                     | 0                         |
+| Monoclonal Antibodies                | Preferred Name/SMILES/SMARTS | 19           | [32]                     | 0                         |
+| Common Lubricants for Sex Wellness   | Preferred Name/SMILES/SMARTS | 38           | [33]                     | 0                         |
+| FDA Tainted Sexual Enhancements      | Preferred Name/SMILES/SMARTS | 4            | [34]                     | 0                         |
+| Common Food Salts                    | Preferred Name/SMILES/SMARTS | 14           | [35]                     | 0                         |
+| FDA Color Additive List 1            | FDA Name/SMILES/SMARTS       | 12           | [36]                     | 0                         |
+| FDA Color Additive List 2            | FDA Name/SMILES/SMARTS       | 15           | [36]                     | 0                         |
+| FDA Color Additive List 3            | FDA Name/SMILES/SMARTS       | 16           | [36]                     | 0                         |
+| FDA Color Additive List 4            | FDA Name/SMILES/SMARTS       | 39           | [36]                     | 0                         |
+| FDA Color Additive List 5            | FDA Name/SMILES/SMARTS       | 27           | [36]                     | 0                         |
+| FDA Color Additive List 6            | FDA Name/SMILES/SMARTS       | 29           | [36]                     | 0                         |
+| FDA Color Additive List 7            | FDA Name/SMILES/SMARTS       | 37           | [36]                     | 0                         |
+| Constituents of Cannabis Sativa      | Name/SMILES/SMARTS           | 394          | [37]                     | 0                         |
+| Phytocanniboids                      | Name/SMILES/SMARTS           | 111          | [38]                     | 0                         |
+| Organophosphorous Nerve Toxic Agents | Name/SMILES/SMARTS           | 14           | [39]                     | 0                         |
+| Cengage Bronsted Acids               | Name/SMILES/SMARTS           | 42           | [40]                     | 0                         |
+| Common Regex Patterns                | Mol2                         | 1            |                          | N/A                       |
 
 <p align="center">
   <i>Table 1: GlobalChem Object List</i>
@@ -277,7 +287,7 @@ various molecular modeling programs. Partial atomic charges and associated penal
 Motivated by the availability of the CGenFF penalty scores we passed a variety of objects individually into the `CGenFF program` using our in-house version that can process SMILES strings and recorded the results.
 The penalty score distributions are shown in `Figure 6` in a rug fashion using Plotly [Plotly] to show the extent of `CGenFF` penalites
 for the different chemical lists. As may be seen the extent of penalties differs significantly for the various lists. 
-To understand the utility of this information we focus on five leaf nodes: Schedule One US Narcotics (240), BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds (47), Common Warheads (29), [Gehringer:2019-6] and Emerging PerfluoroAlkyls (27). Schedule One are active drugs that are popular in the black market [21CFRPart1], kinase inhibitors should contain drug-like features, privileged scaffolds are selected compounds produced by nature, warheads are designed for covalent inhibition, and PerfluoroAlkyls include herbicides and other compounds that are toxic to humans. Based on the compounds used in the development of CGenFF,
+To understand the utility of this information we focus on six key leaf nodes: Nerve Toxic Agents for War(14), Schedule One US Narcotics (240), BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds elect by Nature (47), Common Covalent Inhibitor Warheads (29), [Gehringer:2019-6] and Emerging PerfluoroAlkyls for Environmental Hazards (27). Nerve Toxic Agents are drugs used to kill, Schedule One are active drugs that are popular in the black market [21CFRPart1], kinase inhibitors should contain drug-like features, privileged scaffolds are selected compounds produced by nature, warheads are designed for covalent inhibition, and PerfluoroAlkyls include herbicides and other compounds that are toxic to humans. Based on the compounds used in the development of CGenFF,
 we expected the penalties to be lower on drugs and drug-like species and higher for compounds from chemical manufacturing. 
 
 <p align="center">
@@ -300,7 +310,7 @@ Silicon has not been included in CGenFF leading to the failures of the silicon-b
 
 # Chemical Selection 
 
-For force field parametrization, there are two avenues for sufficient chemical selection. First, **common** compounds relevant to the community which expands the force field coverage into relevant chemical space while avoiding compounds that would most likely never exist, this avoids performing brute force parametirization on mass molecular datasets. Second, is **rare** compounds that were valuable history but has been potentially buried in data that we have forgotten about them. To demonstrate the versaility of our software, we will use it to explore both avenues of explored and unexplored chemical space. Let's revisit Figure 4, when evaluating the distributions of the penalty scores and the nodes that accodomate it, we can intuitively guess where to look for most likely a compound that we didn't account for. If we look into the covalent warhead inhibitors with charge penalty scores ranging from 0 to 300. Warhead inhibtors are usually small esoteric chemical environments that are most likely an atom type that CGenFF program hasn't seen before and is most likely misreprensting it. Aziridine, as labeled in Figure 6, is most likely a good candidate because it's similar to epoxide but the atom type assignment is different where oxygens in a 3-ring membered ring system have their own specific sub category and nitrogens do not. Aziridine is also useful in synthtesis as a a great electrophile drug fragment to add 2 carbones and a terminal amine to a molecule. Aziridine has a recent popularity as well with the rise of covalent warhead inbitors  being subject to act by the cysteines on proteins. This makes aziridine a prime candidate for force field parametrization relevant to the chemical community. By applying this analysis method of the charge distribution and casual inference to determine relevance we selected our list.
+For force field parametrization, there are two avenues for sufficient chemical selection. First, **common** compounds relevant to the community which expands the force field coverage into relevant chemical space while avoiding compounds that would most likely never exist, this avoids performing brute force parametirization on mass molecular datasets. Second, is **rare** compounds that were valuable history but has been potentially buried in data that we have forgotten about them. To demonstrate the versaility of our software, we will use it to explore both avenues of explored and unexplored chemical space. Let's revisit Figure 4, when evaluating the distributions of the penalty scores and the nodes that accodomate it, we can intuitively guess where to look for most likely a compound that we didn't account for.  We recorded partial G, V, and A-series toxic agents due to the Dr. Mirzayanov's account of the Novichok Program at the GosNIIOKhT facility in Russia (28). Novichok-5 and Sarin contained fluorophosphane bonds that CGenFF hasn't seen before and did not know how to account for the partial charge with penalities upwards of 200, due it's unique chemical environment for specifically designed for warfare which qualifies them as relevant candidates. Another example, if we investigate the covalent warhead inhibitors with charge penalty scores ranging from 0 to 300. Warhead inhibtors are usually small esoteric chemical environments that are most likely an atom type that CGenFF program hasn't seen before and is most likely misreprensting it. Aziridine, as labeled in Figure 6, is most likely a good candidate because it's similar to epoxide but the atom type assignment is different where oxygens in a 3-ring membered ring system have their own specific sub category and nitrogens do not. Aziridine is also useful in synthtesis as a a great electrophile drug fragment to add 2 carbones and a terminal amine to a molecule. Aziridine has a recent popularity as well with the rise of covalent warhead inbitors  being subject to act by the cysteines on proteins. This makes aziridine a prime candidate for force field parametrization relevant to the chemical community. By applying this analysis method of the charge distribution and casual inference to determine relevance we selected our list.
 
 <p align="center">
   <img width="500" height="350" src="../images/figures/official_figure_6.png">
@@ -347,14 +357,20 @@ This was due to the methyl that replaced the amide allowing some degrees of rota
 Final PES scans are displayed in Figure 8. 
 
 <p align="center">
-  <img width="700" height="450" src="../images/figures/official_figure_8.png">
+  <img width="600" height="350" src="../images/figures/official_figure_8.png">
   <br>
   <i>Figure 7: Final Potential Energy Scans of dihedrals S1-C3-C4-S2 and C1-C2-S1-C3</i>
 </p>
 
 Lastly, the S1-S2 charges needed adjustment. We used Monte Carlo Simulated Annealing (MCSA) method [Reference Here] utilized in
 FFparam to predict the approximate partial charges. The sulphur atoms were adjusted to have a partial negative charge of -0.208.
-The initial and final modeled result of the dithiolane is displayed in Figure 7.
+The initial and final modeled result of the dihedral energy scans dithiolane is displayed in Figure 7 with a visual validation allowing us to see inspect what the results of the work performed displayed in figure 8.
+
+<p align="center">
+  <img width="800" height="400" src="../images/figures/official_figure_8_again.png">
+  <br>
+  <i>Figure 8: Visual Inspection of the 1,2-dithiolane</i>
+</p>
 
 # Conclusion 
 
@@ -434,6 +450,32 @@ Appreciation to the University of Maryland Baltimore, School of Pharmacy, Depart
 
 (27) Van Rossum, G.; Drake, F. L. Python 3 Reference Manual; CreateSpace: Scotts Valley, CA, 2009.
 
+(28) Chemical Weapons Disarmament in Russia : Problems and Prospects | 九大コレクション | 九州大学附属図書館. catalog.lib.kyushu-u.ac.jp,
+
+(29) Shulgin, Alexander T., and Ann Shulgin. Pihkal: A Chemical Love Story. 1. ed., 8. print, Transform, 2010.
+
+(30) Vaithianathan, Soundarya, et al. “Effect of Common Excipients on the Oral Drug Absorption of Biopharmaceutics Classification System Class 3 Drugs Cimetidine and Acyclovir.” Journal of Pharmaceutical Sciences, vol. 105, no. 2, Feb. 2016, pp. 996–1005. PubMed
+
+(31) https://github.com/geekan/HowToLiveLonger
+
+(32) https://labels.fda.gov/
+
+(33) EXSENS-USA.com. “Lube Lessons 3: The Sex Lube Ingredient Glossary.” EXSENS-USA.Com,
+
+(34) Research, Center for Drug Evaluation and. “Tainted Sexual Enhancement Products.” FDA, June 2022
+
+(35) Belot, Laure  "Alimentation : face aux doutes, les internautes s'organisent". Le Monde.
+
+(36) https://www.fda.gov/industry/color-additive-inventories/color-additive-status-list
+
+(37) Turner, C. E., et al. “Constituents of Cannabis Sativa L. XVII. A Review of the Natural Constituents.” Journal of Natural Products, vol. 43, no. 2, Apr. 1980, pp. 169–234. PubMed
+
+(38) Hanuš, Lumír Ondřej, et al. “Phytocannabinoids: A Unified Critical Inventory.” Natural Product Reports, vol. 33, no. 12, Nov. 2016, pp. 1357–92. PubMed,
+
+(39) Mukherjee, Sudisha, and Rinkoo Devi Gupta. “Organophosphorus Nerve Agents: Types, Toxicity, and Treatments.” Journal of Toxicology, vol. 2020, Sept. 2020, p. 3007984.
+
+(40) PKa Values for Organic and Inorganic Bronsted Acids at 25o Ca.
+
 # Conflict of Interets
 
-ADM is cofounder and CSO and SJ is Commercial Development Director of SilcsBio LLC. Chris Burke is Senior DevOps Engineer at L7 Informatics. 
+ADM is cofounder and CSO and SJ is Commercial Development Director of SilcsBio LLC. Chris Burke is Senior DevOps Engineer at L7 Informatics. Mike Woster is the Chief Revenue Officer of the Linux Foundation, Rebecca Pinette-Dorin is marketing researcher at Exsens.
