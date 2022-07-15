@@ -120,43 +120,51 @@ class Node:
     Node Object
     '''
 
-    def __init__(self, name, smiles=[], smarts=[], value=None, colour=None):
+    def __init__(self, name, smiles=[], smarts=[], bit_vectors=[], value=None, colour=None):
 
         self.name = name.split('.')[0]
         self.children = []
         self.parents = []
         self.smiles = smiles
         self.smarts = smarts
+        self.bit_vector = bit_vectors
         self.state = [ self.smiles, self.smarts ]
         self.value = None
         self.colour = None
 
-    def add_parent(self, name, smiles=[], smarts=[]):
+    def add_parent(self, name, smiles=[], smarts=[], bit_vectors=[]):
 
         '''
+
         Add the Parent Node
+
         '''
 
         self.parents.append(
-            Node(name, smiles, smarts)
+            Node(name, smiles, smarts, bit_vectors)
         )
 
-    def add_child(self, name, smiles=[], smarts=[]):
+    def add_child(self, name, smiles=[], smarts=[], bit_vectors=[]):
 
         '''
+
         Add the Child Node
+
         '''
 
         self.children.append(
-            Node(name, smiles, smarts)
+            Node(name, smiles, smarts, bit_vectors)
         )
 
     def get_node_state(self):
 
         '''
+
         Get the Node State
+
         Returns:
             state (Node): Node state
+
         '''
 
         return self.state
@@ -164,7 +172,9 @@ class Node:
     def set_node_state(self):
 
         '''
+
         Set the Node State with the children and the parents.
+
         '''
 
         self.state = [ self.children, self.parents ]
@@ -172,7 +182,9 @@ class Node:
     def print_stat(self):
 
         """
+
         Print statistics of the node
+
         """
         print("Children: %s" % self.children)
         print("Parents: %s" % self.parents)
@@ -180,9 +192,12 @@ class Node:
     def set_node_value(self, value):
 
         '''
+
         Set the Node Value
+
         Arguments:
             value: value of the node you would like to set it to | Type: Anything
+
         '''
 
         self.value = value
@@ -190,10 +205,13 @@ class Node:
     def get_node_value(self):
 
         '''
+
         Get the Node Value
+
         '''
 
         return self.value
+
     # This hack is for the root node to have dummy dictionaries.
 
     @staticmethod
@@ -205,6 +223,11 @@ class Node:
     def get_smarts():
 
         smarts = {}
+
+    @staticmethod
+    def get_bit_vector():
+
+        bit_vector = {}
 
 class PrintNode:
 
@@ -524,7 +547,8 @@ class GlobalChem(object):
             "node_value": Node(
                 root_node,
                 self.__NODES__[root_node].get_smiles(),
-                self.__NODES__[root_node].get_smarts()
+                self.__NODES__[root_node].get_smarts(),
+                self.__NODES__[root_node].get_bit_vector()
             ),
             "children": [],
             "parents": [],
@@ -580,6 +604,7 @@ class GlobalChem(object):
                 child_key,
                 self.__NODES__[ child_key ].get_smiles(),
                 self.__NODES__[ child_key ].get_smarts(),
+                self.__NODES__[ child_key ].get_bit_vector()
             )
         except:
             _ = parent_node.add_child(
@@ -595,7 +620,8 @@ class GlobalChem(object):
                 "node_value": Node(
                     child_key,
                     self.__NODES__[ child_key ].get_smiles(),
-                    self.__NODES__[ child_key ].get_smarts()
+                    self.__NODES__[ child_key ].get_smarts(),
+                    self.__NODES__[ child_key ].get_bit_vector()
                 ),
                 "children": [],
                 "parents": [],
@@ -640,7 +666,8 @@ class GlobalChem(object):
             _ = new_child_node.add_parent(
                 parent_key,
                 self.__NODES__[ parent_key ].get_smiles(),
-                self.__NODES__[ parent_key ].get_smarts()
+                self.__NODES__[ parent_key ].get_smarts(),
+                self.__NODES__[ child_key ].get_bit_vector()
             )
 
         except:
