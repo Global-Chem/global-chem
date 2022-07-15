@@ -493,3 +493,20 @@ class ChemInformatics(object):
         tp = tainted_sexual_products.fetch_brands()
 
         return tp
+
+    def get_decoder_engine(self):
+
+        '''
+
+        Retrieve the GlobalChem Decoder Engine
+
+        Returns:
+            decoder_engine (Object): DecoderEngine object used for the user.
+
+        '''
+
+        from global_chem_extensions.cheminformatics.applications.decoder_engine import DecoderEngine
+
+        decoder_engine = DecoderEngine()
+
+        return decoder_engine
