@@ -762,11 +762,14 @@ class GlobalChem(object):
     def get_node_smiles(self, node_key):
 
         '''
+
         Get the Node SMILES
+
         Arguments:
             node_key: Node key to query | Type: String
         Returns:
             smiles_dict: Dictionary of the SMILES for that object.
+
         '''
 
         node = self.network.get(node_key, None)
@@ -782,11 +785,14 @@ class GlobalChem(object):
     def get_node_smarts(self, node_key):
 
         '''
+
         Get the Node SMARTS
+
         Arguments:
             node_key: Node key to query | Type: String
         Returns:
             smarts_dict: Dictionary of the SMARTS for that object.
+
         '''
 
         node = self.network.get(node_key, None)
@@ -798,6 +804,24 @@ class GlobalChem(object):
             )
 
         return self.__NODES__[node_key].get_smarts()
+
+    def get_node_bits(self, node_key):
+
+        '''
+
+        Get the Node Bit Vector
+
+        '''
+
+        node = self.network.get(node_key, None)
+
+        if not node:
+            raise GraphNetworkError(
+                message=f'No Node named {node_key} exists',
+                errors=''
+            )
+
+        return self.__NODES__[node_key].get_bit_vector()
 
     def initiate_deep_layer_network(self, root_node='global_chem'):
 
@@ -1009,10 +1033,35 @@ class GlobalChem(object):
 
         return smarts
 
+    def get_all_bits(self):
+
+        '''
+
+        Fetches all the smarts in the network
+
+        Returns:
+            bits (List): Full list of SMARTS in the network.
+
+        '''
+
+        bits = []
+
+        for node_key, node_value in self.__NODES__.items():
+
+            if node_key != 'global_chem' and node_key != 'common_regex_patterns':
+
+                bits.append(list(node_value.get_bit_vector().values()))
+
+        bits = sum(bits, [])
+
+        return bits
+
     def get_smiles_by_iupac(self, iupac_key, return_network_path=False, return_all_network_paths=False):
 
         '''
+
         Get the SMILES by the IUPAC.
+
         Arguments:
             iupac_key (String): Key for the iupac.
             return_network_path (Bool): whether the user wants the network path as well.
@@ -1021,6 +1070,7 @@ class GlobalChem(object):
             definition (String): definiton of the iupac.
             network_path (Dict): { definition: last network path in }
             network_paths (Dict[List]): { definition: all_networks }
+
         '''
 
         network_paths = []
