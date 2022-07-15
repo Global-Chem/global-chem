@@ -128,8 +128,3 @@ class DecoderEngine(object):
 
         return functional_groups
 
-if __name__ == '__main__':
-
-    decoder_engine = DecoderEngine()
-    classifications = decoder_engine.classify_smiles_using_bits('C1=CC=CC=C1')
-
