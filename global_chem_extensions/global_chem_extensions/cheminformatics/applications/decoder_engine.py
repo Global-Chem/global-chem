@@ -13,51 +13,34 @@ from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit.Chem import DataStructs
 
-class ClassifyChemicalFingerprints(object):
+from global_chem import GlobalChem
 
-    '''
+functional_groups = {
+    'tabun': 'CCOP(=O)(C#N)N(C)C',
+    'sarin': 'CC(C)OP(=O)(C)F',
+    'soman': 'CC(C(C)(C)C)OP(=O)(C)F',
+    'cyclosarin': 'CP(=O)(OC1CCCCC1)F',
+    'vx': 'CCOP(C)(=O)SCCN(C(C)C)C(C)C',
+    'russian vx': 'CCN(CC)CCSP(=O)(C)OCC(C)C',
+    'mirzayanov-a230': 'CCN(CC)C(C)=N[P](C)(F)=O',
+    'mirzayanov-a232': 'CCN(CC)C(\C)=N\P(F)(=O)OC',
+    'mirzayanov-a234': r'CCOP(F)(=O)\N=C(/C)\N(CC)CC',
+    'hoenig-a230': r'Cl/C(F)=N/OP(F)(OCCCl)=O',
+    'hoenig-a232': r'Cl/C(F)=N/OP(F)(OC(C)CCl)=O',
+    'hoenig-a234': r'Cl/C(F)=N/OP(F)(OC(C)C(C)Cl)=O',
+    'novichok-5': 'FP1OC(C)CO1',
+    'novichok-7': 'FP1OC(C)C(C)O1',
+}
 
-    Return a classification layer to RDKF Fingerprints for Daylight Substructure
+class DecoderEngine(object):
 
-    '''
-
-    def __init__(self, bit_info = {}, smiles = None):
-
-        self.bit_info = bit_info
-        self.smiles = smiles
-        self.molecule = Chem.MolFromSmiles(self.smiles)
-        self.smiles_fragments = []
-
-        # Generate fingerprints
-
-        self.fingerprint = self.generate_morgan_fingerprint(self.molecule)
-
-    def generate_fragments(self, molecule):
-
-
-        '''
-
-        Generate the Fragments of the molecule using the BRICS Module
-
-        '''
-
-
-
-    def generate_fingerprint(self):
-
-        fingerprint = Chem.RDKFingerprint(
-            self.molecule,
-            bitInfo=self.bit_info,
-            maxPath=10,
-            minPath=3
-        )
+    def __init__(self, fingerprint = None):
 
         self.fingerprint = fingerprint
-
-        return fingerprint
+        self.gc = GlobalChem()
 
     @staticmethod
-    def generate_morgan_fingerprint(molecule):
+    def generate_morgan_fingerprint(smiles):
 
         '''
 
@@ -69,122 +52,94 @@ class ClassifyChemicalFingerprints(object):
 
         '''
 
-        dummy_array = np.zeros((0,))
+        molecule = Chem.MolFromSmiles(smiles)
 
-        fingerprint = AllChem.GetMorganFingerprintAsBitVect(
+        bit_string = AllChem.GetMorganFingerprintAsBitVect(
             molecule,
-            1,
+            2,
             nBits=512
-        )
-        DataStructs.ConvertToNumpyArray(fingerprint, dummy_array)
+        ).ToBitString()
 
-        return dummy_array
+        return bit_string
 
-    def classify_globalchem_fingerprint(self):
+    def classify_fingerprint(self, fingerprint, node='cengage'):
 
-        '''
+        scores = []
+        identified_functional_groups = []
+        all_smiles = []
 
-        Compare fingerprint arrays against each other for most probably match
+        fingerprint = DataStructs.cDataStructs.CreateFromBitString(fingerprint)
 
-        '''
+        for smiles, reference_fingerprint in bit_strings.items():
 
-        from global_chem import GlobalChem
+            reference_fingerprint = DataStructs.cDataStructs.CreateFromBitString(reference_fingerprint)
+            score = DataStructs.FingerprintSimilarity(fingerprint, reference_fingerprint)
 
+            all_smiles.append(smiles)
+            scores.append(score)
 
-        gc = GlobalChem()
+        for i, score in enumerate(scores):
 
-        all_names = gc.get_all_names()
-        all_smiles = gc.get_all_smiles()
+            if score > 0.90:
+                identified_functional_groups.append(all_smiles[i])
 
-        all_molecules = [
-            Chem.MolFromSmiles(smiles) for smiles in all_smiles
-        ]
+        print (identified_functional_groups)
 
-        all_molecules = []
-
-    def generate_smiles_map(self):
-
-
-        '''
-
-        Convert the fingerprint to IUPAC name based on the GlobalChem
+    def classify_smiles(self, node='all'):
 
         '''
 
-        for key, bond_indices in self.bit_info.items():
-
-            atoms = set()
-
-            for bond_index in bond_indices[0]:
-
-                atoms.add(self.molecule.GetBondWithIdx(bond_index).GetBeginAtomIdx())
-                atoms.add(self.molecule.GetBondWithIdx(bond_index).GetEndAtomIdx())
-
-            self.smiles_fragments.append(
-                Chem.MolFragmentToSmiles(
-                    self.molecule,
-                    atomsToUse=list(atoms),
-                    bondsToUse=self.bit_info[key][0])
-            )
-
-        self.smiles_fragments = list(set(self.smiles_fragments))
-
-        return self.smiles_fragments
-
-    def generate_iupac_map(self):
-
+        Classify the SMILES of a molecule by decomposing into it's functional groups
+        using the BRICS module and then generating fingerprints.
 
         '''
 
-        Generate the IUPAC map from the SMILES string
-
-        '''
-
-
-        from global_chem import GlobalChem
-
-        iupac_map = []
-
-        gc = GlobalChem()
-
-        all_names = gc.get_all_names()
-        all_smiles = gc.get_all_smiles()
-
-        lower_all_smiles = [i.lower() for i in all_smiles]
-
-        for fragment in self.smiles_fragments:
-
-            try:
-
-                smiles_index = lower_all_smiles.index(fragment)
-                print (all_smiles[smiles_index])
-
-            except Exception as e:
-                continue
-
-        return iupac_map
 
 
 if __name__ == '__main__':
 
     from rdkit import Chem
+    from rdkit.Chem import BRICS
 
-    fingerprint_classifier = ClassifyChemicalFingerprints(
-        smiles = 'C1=CC=CC=N1'
-    )
-
-    fingerprint_classifier = ClassifyChemicalFingerprints(
-        smiles = 'c1ccncc1'
-    )
-
-    # fingerprint_classifier.classify_globalchem_fingerprint()
-
-    # print(fingerprint_classifier.generate_morgan_fingerprint())
-
-    fingerprint = fingerprint_classifier.generate_fingerprint()
-    smiles_map = fingerprint_classifier.generate_smiles_map()
-    # print (fingerprint)
-
-    # iupac_map = fingerprint_classifier.generate_iupac_map()
+    # import re
     #
-    # print (iupac_map)
+    # fragments = list(BRICS.BRICSDecompose(Chem.MolFromSmiles('CCC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3')))
+    #
+    # pattern_match_1 = re.compile(r'(?!\])\(\[\d+\*]\).*?', flags=re.MULTILINE)
+    # pattern_match_2 = re.compile(r'(?!\])\[\d+\*].*?', flags=re.MULTILINE)
+    #
+    # cleaned_fragments = []
+    #
+    # for fragment in fragments:
+    #
+    #     match_1 = pattern_match_1.findall(fragment)
+    #     match_2 = pattern_match_2.findall(fragment)
+    #
+    #     if match_1:
+    #         for i in match_1:
+    #             fragment = fragment.replace(i, '')
+    #
+    #     if match_2:
+    #         for i in match_2:
+    #             fragment = fragment.replace(i, '')
+    #
+    #     cleaned_fragments.append(fragment)
+    #
+    decoder_engine = DecoderEngine()
+    #
+    # for cleaned_fragment in cleaned_fragments:
+    #
+    #     morgan_fingerprint  = decoder_engine.generate_morgan_fingerprint(
+    #         cleaned_fragment
+    #     )
+    #
+    #     decoder_engine.classify_fingerprint(
+    #         morgan_fingerprint
+    #     )
+
+    for k, v in functional_groups.items():
+        try:
+            print (f"'{k}': '{decoder_engine.generate_morgan_fingerprint(v)}',")
+        except:
+            continue
+
