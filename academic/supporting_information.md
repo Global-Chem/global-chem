@@ -66,7 +66,7 @@ We found an amide in conjunction with the disulphur embedded cyclopentyl ring ca
 Dithiolanes are easy to synthesize [Reference Here], naturally occurring [Reference Here], and becoming an emerging potent anchor fragments in drug design [Reference Here] and
  their parameters were deemed the most valuable to append to CGenFF out of the dataset.
 
-# CGenFF ForceField Parametirization of the 1,2-Dithiolane
+## CGenFF ForceField Parametirization of the 1,2-Dithiolane
 
 We truncated dithiolane from the amide and passed through CGenFF (Full data available in the Supporting Information) which indicated that the dilemma was in part due to the extent of puckering caused by the 2 Sulphur atoms within the constrained cyclopentane ring system. T
 To begin our parametirization process we chose to focus on `S1-C3-C4-S2`, backbone to the cyclopentane ring and the dihedral from the methyl to one carbon on the backbone `C1-C2-S1-C3`. Since the molecule is symmetric, it makes the complexity of the molecule decrease twofold. 
