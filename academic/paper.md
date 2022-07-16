@@ -1,5 +1,5 @@
 ---
-title: 'Global-Chem: A Chemical Knowledge Graph of common small molecules and their IUPAC/SMILES/SMARTS/Binary for selection of compounds relevant to diverse chemical communities'
+title: 'Global-Chem: A Chemical Knowledge Graph of common small molecules and their IUPAC/SMILES/SMARTS for selection of compounds relevant to diverse chemical communities'
 
 authors:
   - name: Suliman Sharif [first author]
