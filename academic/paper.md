@@ -143,55 +143,15 @@ At the time of writing the list of objects include those shown in Table 1. The l
   <i>Table 1: GlobalChem Object List</i>
 </p>
 
-# Tests & Applications
+# Chemical Selection for ForceFields
 
-A total collection of 2572 unique IUPAC/Preferred Name/Acronym to SMILES/SMARTS was collected (with redundacy) across 37 objects in
-an organized fashion by subject. The code was refactored extensively to allow for ease of object addition according to subject and functionality.
-`Common Regex Patterns` was omitted from the test because it's not a functional group but rather a substring pattern to extrapolate Tripos `mol2` file information. To test the utility of these lists with other software tests were performed on three open source platforms to determine 
-data interoperability. In addition, such tests can indicate cases in which some of the software implemented should be expanded to
-include functional groups that could not be parsed. 
+Access to broad collections of chemical groups will be of interest for development of force fields,[MacKerell:2004-10] for molecular modeling and molecular dynamic simulations, allowing for studies on a wider range of chemicals and biological systems. The ability of a force field to treat molecules in the graph can also serve as a performance test coverage of useful chemical space general popular force fields such as General Amber ForceField (GAFF) [Wang:2004-7], Optimized Potentials for Liquid Simulations (OPLS) [Jorgensen:1988-7], and Charmm General Force Field (CGenFF) [Vanommeslaeghe:2010-3] for which they are designed to cover. In practice, this involves the atom-typing engine of each force field being applied to each molecule followed by assignment of the appropriate parameters by analogy to molecules present in the force field. The accuracy of new parameters is limited by the coverage of a specific force field. Thus, the compound lists in Global-Chem can be used to identify specific regions of chemical space that have limited coverage. Therefore, the compound lists in Global-Chem represent future regions of chemical space for force field development. In the present study, we used CGenFF to check its tolerance level for a range of molecules currently in Global-Chem. More granular information on the regions of chemical space that need additional development in CGenFF can be made based on the CGenFF penalty score distribution [Vanommeslaeghe:2012]. Penalty scores are attributed to molecules by the CGenFF program whose entire chemical connectivity is not present in CGenFF. When an arbitrary molecule is passed through the CGenFF program it navigates through a set of rules that represent a atom type similarity network tree similar to GlobalChem file structure. Once atom types along with chemical connectivity are known, bonded parameters available in CGenFF are assigned to the molecule. If exact matches of the bonded parameters are not available, a second tree traversal browses for alternate parameter by using a second rules files that assigns penalties based on the analogy to known parameters. Once the lowest penalty score bonded parameter substitutions are determined, the `CGenFF Program` assigns those parameters along with the associated penalties. In addition, the program identifies the original parameters that is also output into the stream file used in the various molecular modeling programs. Partial atomic charges and associated penalties are assigned through an extended bond-charge increment scheme. It consist in associating atom type along with chemical connectivity (including  bond, angle and dihedral) with charge increment values subtracted from the atoms formal charge. Thus, while the CGenFF program can successfully ingest a large number of molecules, the majority of those molecules are assigned penalties that indicate the level of analogy of the assigned bonded parameters and charges. Larger penalities indicate a lower extent of analogy to known parameters, information that may be used to identify molecules for additional force field optimization.
 
-
-### Force Field Test
-
-Access to broad collections of chemical groups will be of interest for development of force fields, *("also known as potential energy functions" not aacurate because a force field is a potential energy function and a collection of parameters. During force field development we mostrly work on adding new parameters or ameliorating the existing ones. If the potential energy function is modified, a completely new molecular mechanics model will be created and it would be incompatible with the previous parameters)*,[MacKerell:2004-10] for molecular modeling and molecular dynamic simulations, 
-allowing for studies on a wider range of chemicals and biological systems. The ability of a force field to treat molecules in the database can also serve as dual interoperable test 
-for SMILES strings. Popular force fields such as General Amber ForceField (GAFF) [Wang:2004-7], Optimized Potentials for Liquid Simulations (OPLS)
-[Jorgensen:1988-7], and Charmm General Force Field (CGenFF) [Vanommeslaeghe:2010-3] are based on collections of chemicals that are representative of the particular region 
-of chemical space that the force field was designed to cover. In practice, this involves the atom-typing engine of each force field being applied 
-to each molecule followed by assignment of the appropriate parameters by analogy to molecules present in the force field. The accuracy of new parameters is limited by the coverage of a specific force field.
-Thus, the compound lists in Global-Chem can be used to identify specific regions of chemical space that have limited coverage. Therefore, the compound lists in Global-Chem represent future regions of chemical space for force field development. In the present study, we used CGenFF to check its tolerance level for
-the range of molecules currently in Global-Chem. To facilitate this an in-house extension of CGenFF was used that can assign atom types from `SDF` bond type column.
-This enabled us to pass the SMILES strings through `RDKit` and transform `SDF` to a `CGenFF` stream output. The resulting failures are also presented in Table 1.
-It should be noted by nature of the data processing workflow anything that fails in `RDKit` fails in `CGenFF`.
-
-
-The CGenFF acted as the foundation for the development of the `CGenFF Program` [Vanommeslaeghe:2010-3] that inputs
-molecules and outputs the topology information and parameters required to perform various types of molecular modeling and simulations
-using programs such as CHARMM, NAMD, OpenMM and Gromacs [Jo:2008-06]. To test the ability of the CGenFF program to handle the chemical 
-lists in Global-Chem each list was individually submitted to the program. As shown in Table 1, the range of failures varies widely.
-The majority of lists associated with biological or drug-like molecules have zero failures. In contrast, lists such as Common R-group replacements 
-or Protecting Groups show a number of failures. In addition, CGenFF does not cover radicals, which were excluded from the analysis. 
-Thus, Global-Chem allows for areas of poor coverage of CGenFF to be identified, information that can be used to facilitate future force field development.
-
-More granular information on the regions of chemical space that need additional development in CGenFF can be made based on the CGenFF penalty score distribution [Vanommeslaeghe:2012].
-Penalty scores are attributed to molecules by the CGenFF program whose entire chemical connectivity is not present in CGenFF. When an arbitrary molecule is 
-passed through the CGenFF program it navigates through a set of rules that represent a atom type similarity network tree.
-Once atom types along with chemical connectivity are known, bonded parameters available in CGenFF are assigned to the molecule. 
-If exact matches of the bonded parameters are not available, a second tree traversal browses for alternate parameter by using a second rules files that assigns penalties based on the analogy to known parameters. 
-Once the lowest penalty score bonded parameter substitutions are determined, the `CGenFF Program` assigns those parameters along with the associated penalties.
-In addition, the program identifies the original parameters that is also output into the stream file  used in the 
-various molecular modeling programs. Partial atomic charges and associated penalties are assigned through an extended bond-charge increment scheme. It consist in associating atom type along with chemical connectivity (including  bond, angle and dihedral) with charge increment values subtracted from the atoms formal charge. Thus, while the CGenFF program can successfully ingest a large number of molecules, the majority of those molecules are assigned penalties that indicate the level of analogy of the assigned bonded parameters and charges. Larger penalities indicate a lower extent of analogy to known parameters, information that may be used to identify molecules for additional force field optimization.
-
-Motivated by the availability of the CGenFF penalty scores we passed a variety of objects individually into the `CGenFF program` using our in-house version that can process SMILES strings and recorded the results.
-The penalty score distributions are shown in `Figure 6` in a rug fashion using Plotly [Plotly] to show the extent of `CGenFF` penalites
-for the different chemical lists. As may be seen the extent of penalties differs significantly for the various lists. 
-To understand the utility of this information we focus on six key leaf nodes: Nerve Toxic Agents for War(14), Schedule One US Narcotics (240), BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds elect by Nature (47), Common Covalent Inhibitor Warheads (29), [Gehringer:2019-6] and Emerging PerfluoroAlkyls for Environmental Hazards (27). Nerve Toxic Agents are drugs used to kill, Schedule One are active drugs that are popular in the black market [21CFRPart1], kinase inhibitors should contain drug-like features, privileged scaffolds are selected compounds produced by nature, warheads are designed for covalent inhibition, and PerfluoroAlkyls include herbicides and other compounds that are toxic to humans. Based on the compounds used in the development of CGenFF,
-we expected the penalties to be lower on drugs and drug-like species and higher for compounds from chemical manufacturing. 
+Motivated by the availability of the CGenFF penalty scores we passed a variety of objects individually into the `CGenFF program` plotted penalty score distributions, shown in `Figure 2` to show the extent of `CGenFF` penalites for the different chemical lists. As may be seen the extent of penalties differs significantly for the various lists. To understand the utility of this information we focus on six key leaf nodes: Nerve Toxic Agents for Chemical Warfare by the Soviet Union (14), Schedule One US Narcotics (240), BRAF Kinases Inhibitors for Cancer (54), Privileged Scaffolds elect by Nature (47), Common Covalent Inhibitor Warheads (29), [Gehringer:2019-6] and Emerging PerfluoroAlkyls for Environmental Hazards (27). Nerve Toxic Agents are drugs used to kill, Schedule One are active drugs that are popular in the black market [21CFRPart1], kinase inhibitors should contain drug-like features, privileged scaffolds are selected compounds produced by nature, warheads are designed for covalent inhibition, and PerfluoroAlkyls include herbicides and other compounds that are toxic to humans. Based on the compounds used in the development of CGenFF, we expected the penalties to be lower on molecules that are declared as drugs and drug-like species and higher for compounds for things that are classified under a different umbrella 
 
 <p align="center">
   <img width="1000" height="950" src="../images/figures/figure_5.png">
-  <i>Figure 4: Penalty Score Probability Distributions</i>
+  <i>Figure 2: Penalty Score Probability Distributions</i>
 </p>
 
 From `Figure 4`, if we use the charge penalty score as a metric for performance, it is evident that the `CGenFF program` 
@@ -215,60 +175,6 @@ For force field parametrization, there are two avenues for sufficient chemical s
   <img width="500" height="350" src="../images/figures/official_figure_6.png">
   <br>
   <i>Figure 5: Chemical Selection List determined off relevance and charge distribution score and ease of paramitirization with their respective atom-types</i>
-</p>
-
-To detect rare based compounds we utilize the sunbursting software method within the Global-Chem Extensions package to illunminate a portion of the Enamine Database that passed CGenFF to find new ring system compounds. 
-The first layer is a lexical key to the functional groups abstracted from the the "RingsInDrugs" node reported in GlobalChem that could be a good reference to common rings with possible rare atom type scenarios. 
-The next layer identifies chemical compounds that have at least two matches with the ring functional groups being considered meaning they exist within the same SMILES string. 
-The next layer is the total atom charge penalty score for the SMILES string and the final layer consists of the individual, highest penalty atom and its atom type existing within that SMILES string. 
-It is the highest penalized atom type in the functional group that is the information needed by the user to initiate the parameter optimization process. By using this combination of common ring systems with rare atom types we can possibly find new rings that are similar but slightly different according to the atom type.
-Which could be useful to the community for small functional group conversion and preserveing functionality while possibly expanding it's application.
-
-<p align="center">
-  <img width="900" height="1350" src="../images/figures/official_figure_7.png">
-  <br>
-  <i>Figure 6: Application of the Sunbursting Method Applied on CGenFF Atom Types and RingsInDrugs GlobalChem Node</i>
-</p>
-
-We found an amide in conjunction with the disulphur embedded cyclopentyl ring called officially a dithiolane. 
-Dithiolanes are easy to synthesize [Reference Here], naturally occurring [Reference Here], and becoming an emerging potent anchor fragments in drug design [Reference Here] and
- their parameters were deemed the most valuable to append to CGenFF out of the dataset.
-
-# CGenFF ForceField Parametirization of the 1,2-Dithiolane
-
-We truncated dithiolane from the amide and passed through CGenFF (Full data available in the Supporting Information) which indicated that the dilemma was in part due to the extent of puckering caused by the 2 Sulphur atoms within the constrained cyclopentane ring system. T
-To begin our parametirization process we chose to focus on `S1-C3-C4-S2`, backbone to the cyclopentane ring and the dihedral from the methyl to one carbon on the backbone `C1-C2-S1-C3`. Since the molecule is symmetric, it makes the complexity of the molecule decrease twofold. 
-The parametirization of 1,2-dithiolane was performed using FFParam [Reference Here] following the FFParam Workflow [Reference Here]. To begin our process, we first subject the compound to quantum mechanics (QM) geometry optimization, with Gaussian [Reference HEre], using mp2 theory to treat electron correlation [Reference Here] and basis set of “6-31/+G*” to handle the orbital polarizability of the sulphur atom. 
-Our intended goal is to use the QM as a reference target data that the molecular mechanics (MM), CHARMM [Reference Here], should approximately match. We perform potential energy surface (PES) scans around our selected dihedrals and compare the surface of the QM vs the MM. 
-
-To match the PES scan for the MM to the QM we have to tweak “tunable” parameters as defined in charmm potential energy function (i.e force constants, multiplicity) [Reference Here] 
-until we reach a reasonable surface scan and numbers that make common sense. To determine the partial charges, we observe 
-the dipole moment induced by the interaction between the atom of interest and water. When the dipole moment of the QM and MM reach within a range 
-(< 0.5kcal/mol) we consider that reasonable. 
-
-To accomplish our parametirization we applied the following: for `S1-C3-C4-S2`, if we break the connection ring component 
-around the C3-C4 single bond in the  atom ring we obtain a natural rotation of a thiomethyl group. Additional multiplicities of 1 and 2 of varying force constants
-seemed to have a negative effect. We added a relatively high force constant of a value of 2.3800 to because this particular 
-dihedral is part of a ring where there is a significant energy barrier of rotation due to constraint of the cyclopentane backbone. 
-
-For C1-C2-S1-C3, still maintained the multiplicity of 3 but with a far less reduced force constant of 1.1000. 
-This was due to the methyl that replaced the amide allowing some degrees of rotation but the S1 is still constrained within the ring system. 
-Final PES scans are displayed in Figure 8. 
-
-<p align="center">
-  <img width="600" height="350" src="../images/figures/official_figure_8.png">
-  <br>
-  <i>Figure 7: Final Potential Energy Scans of dihedrals S1-C3-C4-S2 and C1-C2-S1-C3</i>
-</p>
-
-Lastly, the S1-S2 charges needed adjustment. We used Monte Carlo Simulated Annealing (MCSA) method [Reference Here] utilized in
-FFparam to predict the approximate partial charges. The sulphur atoms were adjusted to have a partial negative charge of -0.208.
-The initial and final modeled result of the dihedral energy scans dithiolane is displayed in Figure 7 with a visual validation allowing us to see inspect what the results of the work performed displayed in figure 8.
-
-<p align="center">
-  <img width="800" height="400" src="../images/figures/official_figure_8_again.png">
-  <br>
-  <i>Figure 8: Visual Inspection of the 1,2-dithiolane</i>
 </p>
 
 # Conclusion 
