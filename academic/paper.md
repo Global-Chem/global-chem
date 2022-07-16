@@ -169,7 +169,7 @@ For force field parametrization, we want to focus on the most interesting compou
 # Acknowledgements
 
 Thank you to Tyree Wilson, and Paul Shapiro for their helpful discussions into the usability and functionality of Global-Chem.
-Appreciation to past mentors James Ryan, Robert Zeigler, and Blake Printy for discussions on good manufacturing practices of python packaging and distribution. Appreciation to the University of Maryland Baltimore, School of Pharmacy, Department of Pharmaceutical Chemistry for promoting a collaborative and useful space for academics. Financial support from the NIH (GM131710) is acknowledged.
+Appreciation to past mentors James Ryan, Robert Zeigler, and Blake Printy for discussions on good manufacturing practices of python packaging and distribution. Appreciation to the University of Maryland Baltimore, School of Pharmacy, Department of Pharmaceutical Chemistry for promoting a collaborative and useful space for academics from all different scientific disciplines. Financial support from the NIH (GM131710) is acknowledged.
 
 # References
 
