@@ -90,10 +90,10 @@ To select compounds, humans, by nature of their work, are required to read exten
     <i>Figure 1: Knowledge Graph of GlobalChem</i>
 </p>
 
-
 # Data
 
-At the time of writing the list of objects include those shown in Table 1. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. In addition, the languages used for each list are given, along with the number entires in the list and the reference.  In addition, the number of times that compounds in each list fail in the CGenFF program is given where f the value is "N/A" it means it was a node added after testing. 
+At the time of writing the list of objects include those shown in Table 1. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. In addition, the languages used for each list are given, along with the number entires in the list and the reference. The number of times that compounds in each list fail in our automated SMILES to CGenFF workflow is given where if the value is "N/A" it means it was a node added after testing and allows room for additional chemical space exploraton.
+
 
 | Chemical List                        | Languages                    | # of Entries | References               |  CGenFF Errors            |
 |--------------------------------------|------------------------------|--------------|--------------------------| --------------------------|
