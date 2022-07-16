@@ -76,7 +76,7 @@ affiliations:
 
 # Introduction
 
-The in-silico chemical universe is expanding rapidly as open access titan databases (Enamine Database (20 Billion) (1),
+The in-silico chemical universe is expanding rapidly as open access titan databases Enamine Database (20 Billion) (1),
 Zinc Database (2 Billion) (2), PubMed Database (68 Million) (3) and cheminformatic tools
 to process, manipulate, and derive new compound structures are established. While this chemical data big bang has yielded useful ultra-large datasets they are based on ambiguous classification systems making it difficult to systematically organize them and select the most relevant compounds for forcefield paramirization. These organizational methods are difficult to extend to other systems and can be difficult to implement given the large amount of data. In addition, the information content of these papers is of limited utility to the common developer. 
 
