@@ -84,6 +84,13 @@ To organize chemical compounds we apply the idea of communication. International
 
 To select compounds, humans, by nature of their work, are required to read extensively about selected fields to pass knowledge as well as access the associated data that we can often find some connection to the root subject of life, organic chemistry. This allows for GlobalChem to grow naturally as an open source knowledge graph by the people.
 
+<p align="center">
+    <img width="795" alt="Screen Shot 2022-07-16 at 5 26 52 PM" src="https://user-images.githubusercontent.com/11812946/179372437-b8470cfa-862d-452f-afe1-5e2cd3052863.png">
+    <br>
+    <i>Figure 1: Knowledge Graph of GlobalChem</i>
+</p>
+
+
 ## Data Collection
 
 References and associated compound lists are selected based on the interests of the scientific contributors.  This should include consideration of relevance to the scientific community. To authenticate and validate SMILES strings we employ interoperability tools to other cheminformatic software to verify it's usability.
