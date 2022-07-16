@@ -78,73 +78,17 @@ affiliations:
 
 The in-silico chemical universe is expanding rapidly as open access titan databases (Enamine Database (20 Billion) [1],
 Zinc Database (2 Billion) [2], PubMed Database (68 Million) [3] and cheminformatic tools
-to process, manipulate, and derive new compound structures are established. While this chemical data big bang has yielded useful ultra-large datasets they are based on ambiguous classification systems making it difficult to systematically organize them for specific uses.
+to process, manipulate, and derive new compound structures are established. While this chemical data big bang has yielded useful ultra-large datasets they are based on ambiguous classification systems making it difficult to systematically organize them and select the most relevant compounds for forcefield paramirization. These organizational methods are difficult to extend to other systems and can be difficult to implement given the large amount of data. In addition, the information content of these papers is of limited utility to the common developer. 
 
-<p align="center">
-  <img width="400" height="300" src="../images/figures/figure_4.png">
-  <br />
-  <i>Figure 1: Screenshot of the ZincDB request URLS</i>
-</p>
+To organize chemical compounds we apply the idea of communication. International Union of Pure and Applied Chemistry (IUPAC) is a written language that predates even drawing atoms as a method of communication between chemists [6]. Over time, the IUPAC names naturally turned into a slang ("preferred") language due to humans wanting to speak it while communicating with each other. Effectively, the **natural** chemical language that is extant today is a blend of both a formal and informal nomenclature. To compact information, chemists presented drawings of chemical structures but information in such a format is hard to store precisely. Alternatively, SMILES [7] has become a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D chemical connectivity information with ease.  Algorithms have been designed to abstract and interpolate skeletal patterns and languages from chemical drawings and convert them into SMILES for data processing and analysis, but we did manually to ensure data integrity. 
 
-For example, in `Figure 1`, the directory setup for downloading ZincDB molecules is shown. As is evident, the information content of the directory nomenclature does not contain information on the compounds they contain, making it nearly impossible to access specific molecules or classes molecules.  Towards overcoming this, partial organizational attempts were made in PubMed, filling chemical data linkages for computational toxicology called Actor for a specific
-refactored and refined effort [23]. In another example, for the EnamineDB a scaffold associated with biological activity was designed to target 
-Toll-Like Receptors in an object-oriented fashion [24]. However, these organizational methods are difficult
-to extend to other systems and can be difficult to implement given the large amount of data.
-In addition, the information content of these papers is of limited utility to the common developer. 
-
-To organize chemical compounds we apply the idea of communication. Humans use symbols and drawings to communicate, a set of symbols and the rules to combining them are called a language. Languages can be employed to carry relevant, distinct features and mean something to their respective community, diagrammatically shown in `Figure 2`. 
-International Union of Pure and Applied Chemistry (IUPAC) was a coalition that formed in the 1800s and their method of communication was named after the organization, IUPAC. 
-IUPAC is a written language that predates even drawing atoms as a method of communication between chemists [6]. 
-Other chemical sub-communities adopted the IUPAC language and applied it to their fields that are comprised of different dialects i.e polymer chemistry, organo-metallic chemistry.
-Due to it's "first to market" status, the scientific chemical language IUPAC is the legacy language that is the lexical key to unlocking information about a chemical pattern or group. 
-But there are problems with the language due to it's length in describing bigger molecules and failure to give a more natural name for smaller molecules ex. water is oxidane. Simply, IUPAC names in organic chemisty papers are impractical, effecting extending the length of a manuscript, while being of limited value given the challenge of interpreting such names. Over time, the IUPAC names naturally turned into a slang ("preferred") language due to humans wanting to speak it while communicating with each other. Effectively, the **natural** chemical language that is extant today is a blend of both a formal and informal nomenclature. 
-
-To compact information, chemists presented drawings of chemical structures but information in such a format is hard to store precisely. Alternatively, SMILES [7] has become a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D chemical connectivity information with ease.  Algorithms
-have been designed to abstract and interpolate skeletal patterns and languages from chemical drawings and convert them into SMILES for data processing and analysis. 
-A number of these tools, which work to varying degrees of accuracy, have been well summarized by the Blue Obelisk Society Open Source Review [25]. 
-Efforts to improve these tools recently have included machine learning (ML) methods that essential "sit" on top of the underlying algoritm to fix any inaccuracies of the method. 
-As an alternative we can take another direction, where data is selectively aggregated based on known classifications, popularity and utility, being organized to a degree of functionality that facilitates more widespread use. However, the criteria for such an aggregation of data is built upon human expertise, requiring input from a variety of people to attain the broadness and accessibility that would facilitate scientific discovery. In other words, in the context of a well-classified natural chemical database the major challenge is the enormity of the chemical universe, requring a range of chemical expertise to put together well-thought chemical lists of compounds relevant to their respective communities. Thus, it is necessary to create a tool to allow for a large number of participants to contribute in order for such a data compilation to grow. 
-However, most software and especially old software can be difficult to install and handle on top of modern technology thus hindering participation. This situation drives the
-need for a tool that is sustainable and readily accessible to potential participants, allowing the database to naturally grow.
-This need motivated the development of the presented `Global-Chem` database tool.
-
-To implement `Global-Chem` we selected a coding language that has the ability to write easy objects for particpants to understand; Python [10.5555/159351][7].
-
-<p align="center">
-  <img width="700" height="450" src="../images/figures/figure_2.png">
-  <br />
-  <i>Figure 2: Language organized by category and functionality </i>
-</p>
-
-Python was also chosen because of it's distribution infrastructure that allows for easy installation of objects available on the cloud. This 
-allows `Global-Chem` to function as a highly accessible tool that will allow users to readily access the chemical lists as well as to add content thereby continuosly expanding its utility. 
-
-# Methodology and Implementation
-
-## Chemical Set Selection & Object-Oriented Design Philosophy
-
-Scientists, by nature of their work, are required to read extensively about 
-selected scientific fields as well as access the associated data. This allows for scientists to develop expert knowledge in the fields and data they value most.
+To select compounds, people, by nature of their work, are required to read extensively about 
+selected fields as well as access the associated data that often contain some relevance to chemistry. This allows for GlobalChem to grow naturally as an open source knowledge graph.
 To take advantage of this knowledges requires a thin layer data organization that allows for the relevant information and data to be readily accessed.
 To achieve this we begin by forming connections of the most relevant data according to chemicals sub-fields that have been authored
 by experts in the different fields. `Figure 3` depicts the node Module layout of `Global-Chem`.  The layout shows an unweighted, 
 arbitrary node hierarchy of the chemical sets included in `Global-Chem` as defined by the experts that introduce the data. Each blue circle represents a relevant field and their subsequent tree networks are highlighted by a contrasting colour.
 
-<p align="center">
-  <img width="800" height="700" src="../images/figures/figure_1_official.png">
-  <br/>
-  <i>Figure 3: Node Network of Global-Chem</i>
-</p>
-
-The tree network follows a simple object-oriented pythonic design in conjunction with literature where head nodes are the major corresponding scientific field (example: "Medicinal Chemistry") and their corresponding child nodes are the manuals, articles or books that are the references for the lists.
-Each reference object has either the functional groups that correspond to that paper's overall functionality in IUPAC, Preferred Name, Acronyms, SMILES, or SMARTS
-format. The motivation for this design was that as more users contribute they can expand into different directories, add their own directory, 
-and provide their chemical list of interest. Each paper that is submitted is converted into a `namespace` module, an object
-whose name is indicative of it's functionality. An example for the drug design community is the paper "Rings In Drugs" [11] whose
-python object equivalent is now "RingsInDrugs" with two functional methods that retrieve the  IUPAC:SMILES/SMARTS dictionary that was embedded included in the master object `Global-Chem`. 
-Users can choose to cross reference leaf nodes between each other and do comparative chemical list studies since the IUPAC name and SMILES name are consistent across lists.
-Note that not all the SMILES being portrayed are canonical given that users can create their own SMILES, which are not unique. To account for this users can parse `Global-Chem` SMILES into the `RDKit` parser
-for canonical SMILES conversion. 
 
 ## Data Collection
 
