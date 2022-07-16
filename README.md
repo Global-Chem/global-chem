@@ -130,7 +130,7 @@ Just with no dependencies, intialize the class and there you go! All the common 
 at your disposal. 
 
 <p align="center">
-  <img width="850" height="650" src="images/figures/figure_1_new.png">
+<img width="800" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/179372564-c286b115-af14-4ad8-a37f-0a216297b6c1.png">
 </p>
 
 ### Nodes Contributors
