@@ -8,7 +8,7 @@ into the most common format of organic chemists (IUPAC) and the common language 
 pattern matching (SMARTS). 
 
 <p align="center">
-  <img width="800" height="400" src="images/globalchemlogo.png">
+<img width="800" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/179372564-c286b115-af14-4ad8-a37f-0a216297b6c1.png">
 </p>
 
 Overview
@@ -123,15 +123,8 @@ The Deep Graph Network (DGN)s comes also with a couple of rules to make the impl
 - There must be a root node of 1 which marks as your "input" node. 
 - When adding a layer all nodes will be added to all the previous layers as children. (Folk can use the remove node feature to perform dropouts).
 
-### Knowledge Graph
-
-
 Just with no dependencies, intialize the class and there you go! All the common and rare groups of the world
 at your disposal. 
-
-<p align="center">
-<img width="800" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/179372564-c286b115-af14-4ad8-a37f-0a216297b6c1.png">
-</p>
 
 ### Nodes Contributors
 
