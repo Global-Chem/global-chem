@@ -159,7 +159,7 @@ For force field parametrization, we want to focus on the most interesting compou
 <p align="center">
   <img width="800" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/179373993-d66bb841-b669-4760-aa36-84b24a9a7949.png">
   <br>
-  <i>Figure 3: MolCloud of Chemical Selection: Aziridine (Top Left), Perfluorobutanoic Acid (Top Right), Vitamin C (Bottom Left), Novichok (Bottom Right) </i>
+  <i>Figure 3: MolCloud of Chemical Selection: Aziridine (Top Left), Perfluorobutanoic Acid (Top Right), Vitamin C (Bottom Left), Novichok-7 (Bottom Right) </i>
 </p>
 
 # Conclusion 
