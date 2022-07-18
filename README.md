@@ -132,7 +132,7 @@ at your disposal.
 Please follow the node contribution guidelines if you would like to elect your own or someone elses. 
 
 ```
-'global_chem': Node,
+'global_chem': Node,                                                      # Suliman Sharif
 'emerging_perfluoroalkyls': EmergingPerFluoroAlkyls,                      # Asuka Orr & Suliman Sharif
 'montmorillonite_adsorption': MontmorilloniteAdsorption,                  # Asuka Orr & Suliman Sharif
 'common_monomer_repeating_units': CommonMonomerRepeatingUnits,            # Suliman Sharif
