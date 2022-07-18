@@ -144,7 +144,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 'privileged_scaffolds': PrivilegedScaffolds,                              # Suliman Sharif
 'iupac_blue_book': IUPACBlueBook,                                         # Suliman Sharif
 'common_r_group_replacements': CommonRGroupReplacements,                  # Sunhwan Jo & Suliman Sharif
-'braf_inhibitors': BRAFInhibitors,                                        # Aarion Romany
+'braf_inhibitors': BRAFInhibitors,                                        # Aarion Romany & Suliman Sharif
 'privileged_kinase_inhibitors': PrivilegedKinaseInhibitors,               # Suliman Sharif
 'common_organic_solvents': CommonOrganicSolvents,                         # Suliman Sharif
 'amino_acid_protecting_groups': AminoAcidProtectingGroups,                # Aziza Frank & Suliman Sharif
