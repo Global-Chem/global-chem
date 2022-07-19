@@ -121,7 +121,7 @@ At the time of writing the list of objects include those shown in Table 1. The l
 | Schedule 5 United States Narcotics   | Preferred Name/SMILES/SMARTS | 8            | (21)                     | 0                         |
 | PihKal                               | Preferred Name/SMILES/SMARTS | 179          | (22)                     | 0                         |
 | Excipients Cimetidine & Acyclovir    | Preferred Name/SMILES/SMARTS | 14           | (23)                     | N/A                       |
-| HowToLiveLonger	                     | Preferred Name/SMILES/SMARTS | 4            | (24)                     | N/A                       |
+| HowToLiveLonger	                   | Preferred Name/SMILES/SMARTS | 4            | (24)                     | N/A                       |
 | Monoclonal Antibodies                | Preferred Name/SMILES/SMARTS | 19           | (25)                     | N/A                       |
 | Common Lubricants for Sex Wellness   | Preferred Name/SMILES/SMARTS | 38           | (26)                     | N/A                       |
 | FDA Tainted Sexual Enhancements      | Preferred Name/SMILES/SMARTS | 4            | (27)                     | N/A                       |
@@ -154,12 +154,31 @@ Motivated by the availability of the CGenFF penalty scores we passed a variety o
   <i>Figure 2: Penalty Score Probability Distributions</i>
 </p>
 
-For force field paramitirization, we want to focus on the most interesting compounds based on human expertise and on the charge penalty score as an indicator to a new chemical environment that was left unaccounted for in `CGenFF`. This avoids brute force parametirization on mass molecular datasets with no clear intention and allows our force field to remain the best chemical space representation of the community with human guided direction. To demonstrate our versaility, we use our own tools to explore both avenues of explored and unexplored chemical space. Let's revisit Figure 2, when evaluating the distributions of the penalty scores and the nodes that accodomate it, we can intuitively guess where to look for most likely a compound that we didn't account for rapidly allowing an initial guess of where to look.  We recorded partial G, V, and A-series toxic agents according to Dr. Mirzayanov's account of the Novichok Program (39). Novichok-5 and Sarin contained fluorophosphane bonds that CGenFF hasn't seen before and did not know how to account for the partial charge with penalities upwards of 200, due to its unique chemical environment for specifically designed for warfare which qualifies them as relevant candidates. The phosphorous could require a new atom type rather than what is declared now 'PG0'. If we investigate the covalent warhead inhibitors with charge penalty scores ranging from 0 to 300. Meaning we have some basic small warheads but missing sim Warhead inhibtors are usually small esoteric chemical environments that are most likely an atom type that CGenFF program hasn't seen before and is most likely misreprensting it. Aziridine is most likely a good candidate because it's similar to epoxide but the atom type assignment is different where oxygens in a 3-ring membered ring system have their own specific sub category and nitrogens do not. Aziridine is also useful in synthtesis as a a great electrophile drug fragment to add 2 carbones and a terminal amine to a molecule. Aziridine has a recent popularity as well with the rise of covalent warhead inbitors  being subject to act by the reactive cysteines on proteins. This makes aziridine a prime candidate for force field paramitirization relevant to the chemical and medicinal community. Perfluorobutanoic acid is the smallest perfluoroalkyl with a high halogen environment but makes a cruical starter compound for exploring common herbicide space. A challenge, but a formidable one that would be of extending the forcefield into environment protection. Finally, in the vitamin lists, we found Vitamin C missing dihedral parameters where it is evident, by the name, that this molecule is of relevant interest to any general force fields. 
+For force field paramitirization, we want to focus on the most interesting compounds based on human expertise and on the charge
+penalty score as an indicator to a new chemical environment that was left unaccounted for in `CGenFF`. This avoids brute force paramitirization 
+on mass molecular datasets with no clear intention and allows our force field to remain the best chemical space representation of the community
+with human guided direction. To demonstrate our versatility, we use our own tools to explore both avenues of explored and unexplored chemical space.
+Let's revisit Figure 2, when evaluating the distributions of the penalty scores and the nodes that accommodate it, we can begin to evaluate trends to provide
+an initial guess of where to look for most likely a compound that wasn't accounted for rapidly.  We recorded partial G, V, and A-series toxic agents according 
+to Dr. Mirzayanov's account of the Novichok Program (39). Novichok-5 and Sarin contained fluorophosphane bonds that CGenFF has not seen before evident by the partial charge of the phosphorous with penalties upwards of 200, 
+which we can owe to its unique chemical environment specifically designed for warfare which qualifies them as relevant candidates given their history.
+If we investigate the covalent warhead inhibitors with a distribution of charge penalty scores ranging from 0 to 300.
+The range indicates that we have accounted for some warheards but in the most recent years they have gained popularity and are being employed elsewhere especiall synthesis. Aziridine was chosen because it's similar to an epoxide 
+because of it's usefulness in synthesis acting as a great electrophile drug fragment to add expand an alkyl chain by 2 carbons and provide a terminal amine functional group for chemical extension.
+The difference in the CGenFF atom type assignment of the Aziridine is the categorical layer where the oxygen in a 3-ring membered ring system have their own specific sub category and 3-membered ring nitrogen do not. This suggests
+the developers of the CGenFF should consider adding a new atom type for this compound. Common herbicides are very popular for the environmental protection agency
+with a unique chemical pattern of long alkyl chains surrounded in fluorine halogens with, typically, a tail carboxylic acid. The smallest of the Perfluoroalkanes was perfluorobutanoic acid, where each carbon substituent, when available, is a fluorine. 
+This is not typical feature of drug-like molecules and is shown with majority of the charge penalty scores being averagely high on the distribution. This makes them a prime candidate for force field paramitirization. 
+What was interesting that the common vitamin list we found Vitamin C to have a high charge penalty score which was unexpected initially but looking more at the structure with the sp2 carbon enwrapped in the furanone might be difficult to add but makes a formidable opponent to add
+due to it's legacy as an important ubiquitous compound in human history. Finally, a dithiolane fragment was discovered, when analyzing partial of the Enamine Database, and using Global-Chem's RingsInDrugs as a reference for filtering common ring systems and display new ring systems of interest. 
+The 1,2-dithiolane was selected because of it's simple cyclopentyl architecture but two sulphurs separated by 1 carbon but makes a great potential drug 
+fragment anchor to enhance binding affinity due to the nucleophicility of the sulphurs and their respective geometry. `CGenFF` did not recognize this structure 
+and was ultimately selected as the first compound for force field paramirization with the full account provided in the Supporting Information. 
 
 <p align="center">
   <img width="800" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/179373993-d66bb841-b669-4760-aa36-84b24a9a7949.png">
   <br>
-  <i>Figure 3: MolCloud of Chemical Selection: Aziridine (Top Left), Perfluorobutanoic Acid (Top Right), Vitamin C (Bottom Left), Novichok-7 (Bottom Right) </i>
+  <i>Figure 3: MolCloud of Chemical Selection: Aziridine, Perfluorobutanoic Acid, Vitamin C, Novichok-5, 1,2-Dithiolane </i>
 </p>
 
 # Conclusion 
