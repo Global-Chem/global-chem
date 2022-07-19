@@ -171,19 +171,19 @@ with a unique chemical pattern of long alkyl chains surrounded in fluorine halog
 This is not typical feature of drug-like molecules and is shown with majority of the charge penalty scores being averagely high on the distribution. This makes them a prime candidate for force field paramitirization. 
 What was interesting that the common vitamin list we found Vitamin C to have a high charge penalty score which was unexpected initially but looking more at the structure with the sp2 carbon enwrapped in the furanone might be difficult to add but makes a formidable opponent to add
 due to it's legacy as an important ubiquitous compound in human history. Finally, a dithiolane fragment was discovered, when analyzing partial of the Enamine Database, and using Global-Chem's RingsInDrugs as a reference for filtering common ring systems and display new ring systems of interest. 
-The 1,2-dithiolane was selected because of it's simple cyclopentyl architecture but two sulphurs separated by 1 carbon but makes a great potential drug 
+The 1,3-dithiolane was selected because of it's simple cyclopentyl architecture but two sulphurs separated by 1 carbon but makes a great potential drug 
 fragment anchor to enhance binding affinity due to the nucleophicility of the sulphurs and their respective geometry. `CGenFF` did not recognize this structure 
 and was ultimately selected as the first compound for force field paramirization with the full account provided in the Supporting Information. 
 
 <p align="center">
-  <img width="800" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/179373993-d66bb841-b669-4760-aa36-84b24a9a7949.png">
+<img width="598" alt="Screen Shot 2022-07-19 at 8 09 17 AM" src="https://user-images.githubusercontent.com/11812946/179746963-fc09c731-4f05-4c12-9278-cbccc3ac5efe.png">
   <br>
-  <i>Figure 3: MolCloud of Chemical Selection: Aziridine, Perfluorobutanoic Acid, Vitamin C, Novichok-5, 1,2-Dithiolane </i>
+  <i>Figure 3: MolCloud of Chemical Selection</i>
 </p>
 
 # Conclusion 
 
-`Global-Chem` was developed to facilitate the ability of scientists in both academia and industry to make their compounds of interest readily available to the scientific community in the form of objects that may be directly accessed from python. However, it can also facilitate the evaluation of other tools to access chemical information in the form of SMILES. Beyond accessing SMILES stings we've shown the utility of `Global-Chem` to interogate the coverage of the force field `CGenFF`. By partitioning chemical space into well-defined chemical lists, `Global-Chem` allows for regions of chemical space where the CGenFF programs fails or assigns parameters of low analogy to be readily identified. This information will allow for decisions to be made concerning the addition of molecules in the CGenFF training set thereby allowing for systematic improvements in the force field. Accordingly, `Global-Chem` has a number of potential purposes, including teaching and cheminformatics, but our main perogative is to create a free record collection. As `Global-Chem` requires direct user input, if we plant the seed now then, hopefully, our tree will grow. The actual growth of the tree will be decided on by the common chemical community and people in the field. Enjoy.
+`Global-Chem` was developed to facilitate the ability of scientists in both academia and industry to make their compounds of interest readily available to the scientific community in the form of objects that may be directly accessed from python. However, it can also facilitate the evaluation of other tools to access chemical information in the form of SMILES. Beyond accessing SMILES stings we've shown the utility of `Global-Chem` to interogate the coverage of the force field `CGenFF`. By partitioning chemical space into well-defined chemical lists, `Global-Chem` allows for regions of chemical space where the CGenFF programs fails or assigns parameters of low analogy to be readily identified. This information will allow for decisions to be made concerning the addition of molecules in the CGenFF training set thereby allowing for systematic improvements in the force field. Accordingly, `Global-Chem` has a number of potential purposes, including teaching and cheminformatics, but our main perogative is to create a free record collection. As `Global-Chem` requires direct user input, if we plant the seed now then, hopefully, our tree will grow. The actual growth of the tree will be decided on by the experts of the  community dedicated to their field. Enjoy.
 
 # Acknowledgements
 
