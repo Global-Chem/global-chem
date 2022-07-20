@@ -151,36 +151,36 @@ At the time of writing the list of objects include those shown in Table 1. The l
 
 At the time of writing the list of features include those shown in Table 2. The list range from well defined algorithms implemented into Global-Chem and their respective description and discipline.
 
-| Software Feature              | Description                                                                    | # of Code | Reference | Discipline |
+| Software Feature              | Description                                                                    | Feature Code Length | Discipline | Reference |
 |-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|---------- |-----------|--------------|
-| Validating SMILES             | An adapter to other SMILES platforms (RDKit, PySMILES, SELFIES, PartialSMILES, DeepSMILES, MolVS) to validate by interoperability           | 20        | Cheminformatics          | 
-| Decoding Fingerprints and Classifying SMILES            | Decoding your fingerprints to your complex SMILES and to an IUPAC using a annotated dictionary of bit vectors | 20        | Cheminformatics          | 
-| SMILES Bidirectional PDF Parsing      | Converting lists of SMILES to 2D drawings in PDF parsing and parsing PDF back to SMILES | 20        | Cheminformatics          | 
-| Drug Design Filtering      | Filtering lists of SMILES by a variety of common drug filters (Lipinski Rule of 5, Ghose, Veber, Rule of 3, REOS, Drug-Like, Filters | 20        | Cheminformatics           | 
-| Deep Layer Scattering     | Scattering Nodes of Collective SMILES and their relations to each other in Parallel Coordinate Diagram implemented in Plotly | 20        | Cheminformatics          | 
-| SMARTS Identifier     | A web application implemented in Flask to test the validation of SMARTS submatching of strings against the MiniFrag Database | 20        | Cheminformatics          | 
-| Protonating SMILES    | A distributable version of the Dimorphite-DL package to protonate SMILES over a range of pH with a control over variant production | 20        | Cheminformatics          | 
-| Sunbursting SMILES    | Applying a sunburst plot to large collection of SMILES to identify functional groups and pairs of functional groups within the set | 20        | Cheminformatics          | 
-| Peptide Sequence to SMILES    | An evolution of Cocktail-Shaker to include Lanthipeptides and covalent sulphur linkages in SMILES strings | 20        | Cheminformatics     
-| Visualization SMARTS    | A python application programming interface to port the SMARTS.plus visualizer for SMARTS strings into a jupyter notebook | 20        | Cheminformatics          | 
-| One-Hot Encoding SMILES    | A GlobalChem encoder that encodes SMILES for Machine Learning including the '&' denoted as a polymer ex. Diamond | 20        | Cheminformatics          | 
-| Principal Component Analysis on SMILES    | A principal component analysis on a list of SMILES with hyperparamter tuning for morgan fingerprinting provided and visualization with Bokeh | 20        | Cheminformatics          | 
-| Networkx Adapter    | A graph to graph network adapter between GlobalChem and NetworkX for ease of interoperability for data engineering | 20        | Cheminformatics          | 
-| Scaffold Graph Adapter   | An adapter to take a large collection of GlobalChem Nodes and analyze their Structure Hierachy with Scaffold Graphs | 20        | Cheminformatics          | 
-| GlobalChem Protein  | An adapter to biopandas to process pdb protein files as well as an implementation of the Bostrom Algorithm to Structurally Filter SMILES | 20        | Bioinformatics          | 
-| GlobalChem RNA  | Conversion of RNA Sequence to SMILES and a visualizer for RNA sequences for Python Jupyter Notebooks | 20        | Bioinformatics          | 
-| GlobalChem DNA  | Conversion of DNA Sequence to SMILES and a visualizer for DNA sequences for Python Jupyter Notebooks | 20        | Bioinformatics          | 
-| GlobalChem Bacteria  | A python model with attributes for general bacteria classifications as well as a common list | 20        | Bioinformatics          | 
+| Validating SMILES             | An adapter to other SMILES platforms (RDKit, PySMILES, SELFIES, PartialSMILES, DeepSMILES, MolVS) to validate by interoperability           | 107        | Cheminformatics          | 
+| Decoding Fingerprints and Classifying SMILES            | Decoding your fingerprints to your complex SMILES and to an IUPAC using a annotated dictionary of bit vectors | 129        | Cheminformatics          | 
+| SMILES Bidirectional PDF Parsing      | Converting lists of SMILES to 2D drawings in PDF parsing and parsing PDF back to SMILES | 685        | Cheminformatics          | 
+| Drug Design Filtering      | Filtering lists of SMILES by a variety of common drug filters (Lipinski Rule of 5, Ghose, Veber, Rule of 3, REOS, Drug-Like, Filters | 137        | Cheminformatics           | 
+| Deep Layer Scattering     | Scattering Nodes of Collective SMILES and their relations to each other in Parallel Coordinate Diagram implemented in Plotly | 184        | Cheminformatics          | 
+| SMARTS Identifier     | A web application implemented in Flask to test the validation of SMARTS submatching of strings against the MiniFrag Database | 307        | Cheminformatics          | 
+| Protonating SMILES    | A distributable version of the Dimorphite-DL package to protonate SMILES over a range of pH with a control over variant production | 56        | Cheminformatics          | 
+| Sunbursting SMILES    | Applying a sunburst plot to large collection of SMILES to identify functional groups and pairs of functional groups within the set | 253        | Cheminformatics          | 
+| Peptide Sequence to SMILES    | An evolution of Cocktail-Shaker to include Lanthipeptides and covalent sulphur linkages in SMILES strings | 147        | Cheminformatics     
+| Visualization SMARTS    | A python application programming interface to port the SMARTS.plus visualizer for SMARTS strings into a jupyter notebook | 47        | Cheminformatics          | 
+| One-Hot Encoding SMILES    | A GlobalChem encoder that encodes SMILES for Machine Learning including the '&' denoted as a polymer ex. Diamond | 112        | Cheminformatics          | 
+| Principal Component Analysis on SMILES    | A principal component analysis on a list of SMILES with hyperparamter tuning for morgan fingerprinting provided and visualization with Bokeh | 154        | Cheminformatics          | 
+| Networkx Adapter    | A graph to graph network adapter between GlobalChem and NetworkX for ease of interoperability for data engineering | 65        | Cheminformatics          | 
+| Scaffold Graph Adapter   | An adapter to take a large collection of GlobalChem Nodes and analyze their Structure Hierachy with Scaffold Graphs | 97        | Cheminformatics          | 
+| GlobalChem Protein  | An adapter to biopandas to process pdb protein files as well as an implementation of the Bostrom Algorithm to Structurally Filter SMILES | 467        | Bioinformatics          | 
+| GlobalChem RNA  | Conversion of RNA Sequence to SMILES and a visualizer for RNA sequences for Python Jupyter Notebooks | 181        | Bioinformatics          | 
+| GlobalChem DNA  | Conversion of DNA Sequence to SMILES and a visualizer for DNA sequences for Python Jupyter Notebooks | 181        | Bioinformatics          | 
+| GlobalChem Bacteria  | A python model with attributes for general bacteria classifications as well as a common list | 214        | Bioinformatics          | 
 | GlobalChem Monoclonal Antibodies  | A python model with attributes for general monoclonoal antibodies classifications as well as a common list | 20        | Bioinformatics          | 
-| Z-Matrix Store  | A python model store where users can pull standard z-matrices for molecules queried by their IUPAC | 20        | Quantum Chemistry          | 
-| Psi4 Parser  | A python model for analyzing psi4 output files and plotting interaction energy data automatically through Plotly | 20        | Quantum Chemistry          | 
-| Moly Adapter  | A software adapter and enhanced functionality for Moly and visualizing HOMO/LUMO orbitals of molecules | 20        | Quantum Chemistry          | 
-| GlobalChem Molecule  | A Global Molecule that can parse SMILES, GAFF, CGenFF Stream files into Pandas dataframes, a visualizer with Atom Types and SMILES in RDKit, new mix of cross-discipling languages (SMILES and CGenFF Atom Types) using CXSMILES, CXSMARTS, and CurlySMILES | 20        | Force Fields         | 
-| CGenFF Molecule  | A CGenFF Parser that can parse, write edit, and update stream files with Pandas DataFrames | 20        | Force Fields         | 
-| GAFF2 Molecule   | A GAFF2 Parser that can parse, write edit, and update stream files with Pandas DataFrames  | 20        | Force Fields         | 
-| CGenFF Disimiliarity Score   | A CGenFF dissimilarity algorithm based on the atom types and their tuples of bonded parameters (bonds, angles, dihedrals, impropers) to determine a dissimilarity score | 20        | Force Fields         | 
-| Open Source Database Monitor   | An open source database monitor that performs heartbeat checks on common chemical lists running on cloud web servers | 20        | Development Operations         | 
-| Plotly Templates   | A Graphing template to use for Ploty to make your data look "pretty" | 20        | Graphing         | 
+| Z-Matrix Store  | A python model store where users can pull standard z-matrices for molecules queried by their IUPAC | 159        | Quantum Chemistry          | 
+| Psi4 Parser  | A python model for analyzing psi4 output files and plotting interaction energy data automatically through Plotly | 193        | Quantum Chemistry          | 
+| Moly Adapter  | A software adapter and enhanced functionality for Moly and visualizing HOMO/LUMO orbitals of molecules | 87        | Quantum Chemistry          | 
+| GlobalChem Molecule  | A Global Molecule that can parse SMILES, GAFF, CGenFF Stream files into Pandas dataframes, a visualizer with Atom Types and SMILES in RDKit, new mix of cross-discipling languages (SMILES and CGenFF Atom Types) using CXSMILES, CXSMARTS, and CurlySMILES | 386        | Force Fields         | 
+| CGenFF Molecule  | A CGenFF Parser that can parse, write edit, and update stream files with Pandas DataFrames | 532        | Force Fields         | 
+| GAFF2 Molecule   | A GAFF2 Parser that can parse, write edit, and update stream files with Pandas DataFrames  | 454        | Force Fields         | 
+| CGenFF Disimiliarity Score   | A CGenFF dissimilarity algorithm based on the atom types and their tuples of bonded parameters (bonds, angles, dihedrals, impropers) to determine a dissimilarity score | 191        | Force Fields         | 
+| Open Source Database Monitor   | An open source database monitor that performs heartbeat checks on common chemical lists running on cloud web servers | 95        | Development Operations         | 
+| Plotly Templates   | A Graphing template to use for Ploty to make your data look "pretty" | 80        | Graphing         | 
 
 # Chemical Selection for Force Fields
 
