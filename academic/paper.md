@@ -151,7 +151,7 @@ At the time of writing the list of objects include those shown in Table 1. The l
 
 At the time of writing the list of features include those shown in Table 2. The list range from well defined algorithms implemented into Global-Chem and their respective description and discipline.
 
-| Software Feature              | Description                                                                    | Feature Code Length | Discipline | Reference |
+| Software Feature              | Description                                                                    |  Code Length | Discipline | Reference |
 |-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|---------- |-----------|--------------|
 | Validating SMILES             | An adapter to other SMILES platforms (RDKit, PySMILES, SELFIES, PartialSMILES, DeepSMILES, MolVS) to validate by interoperability           | 107        | Cheminformatics          | 
 | Decoding Fingerprints and Classifying SMILES            | Decoding your fingerprints to your complex SMILES and to an IUPAC using a annotated dictionary of bit vectors | 129        | Cheminformatics          | 
