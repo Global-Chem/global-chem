@@ -47,7 +47,6 @@ setup(
         'quantum_chemistry': ['global-chem-extensions[quantum_chemistry]'],
         'development_operations': ['global-chem-extensions[development_operations]'],
         'all': [
-            'global-chem-extensions',
             'global-chem-extensions[graphing]',
             'global-chem-extensions[forcefields]',
             'global-chem-extensions[bioinformatics]',
