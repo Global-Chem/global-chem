@@ -8,7 +8,7 @@ authors:
   - name: Ruibin Liu
     orcid: 0000-0001-8395-9353
     affiliation: 1
-  - name: Asuka Orr
+  - name: Asuka Autumn Grace Orr
     orcid: 0000-0003-4628-526X
     affiliation: 1
   - name: Daniel Khavrutskii
