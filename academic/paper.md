@@ -164,7 +164,7 @@ For force field paramitirization, we want to focus on the most interesting compo
 penalty score as an indicator to a new chemical environment that was left unaccounted for in `CGenFF`. This avoids brute force paramitirization 
 on mass molecular datasets with no clear intention and allows our force field to remain the best chemical space representation of the community
 with human guided direction. To demonstrate our versatility, we use our own tools to explore both avenues of explored and unexplored chemical space.
-Let's revisit Figure 2, when evaluating the distributions of the penalty scores and the nodes that accommodate it, we can begin to evaluate trends to provide
+In Figure 2, when evaluating the distributions of the penalty scores and the nodes that accommodate it, we can begin to evaluate trends to provide
 an initial guess of where to look for most likely a compound that wasn't accounted for rapidly. We recorded partial G, V, and A-series toxic agents according 
 to Dr. Mirzayanov's account of the Novichok Program (39). Novichok-5 and Sarin contained fluorophosphane bonds that CGenFF has not seen before evident by the partial charge of the phosphorous with penalties upwards of 200, 
 which we can owe to its unique chemical environment specifically designed for warfare which qualifies them as relevant candidates given their history.
