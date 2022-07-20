@@ -88,7 +88,7 @@ Penalty scores are attributed by the CGenFF program to molecules whose entire ch
  
 To capture enough chemical lists we communicated, debated and elected papers of relevance and wrote a dictionary of IUPAC/Preferred to SMILES **manually** to effectively learn the language, organize the chemicals appropiately by their purpose, and develop rules to ensure data integrity and consistency. We developed an in-house automated workflow to process IUPAC/Preferred to SMILES to CGenFF (40) to enable us to safely exchange chemical information between collaborators by something we can naturally speak to select the most relevant compounds for forcefield paramitirization. 
 
-Selecting chemical compounds requires expertise. Expertise is gained by experience and reading about a dedicated discipline. Dedicated displines most often has a set of common functional groups that are relevant to that community, this allows us to focus on compounds that are valuable. We do not need all the compounds, since a lot of them are not useful or not possible. In our paper, we describe how `Global-Chem`, an open source knowledge graph, was developed to facilitate the ability of scientists in both academia and industry to make their compounds of interest readily available to the scientific community in the form of objects that may be directly accessed from python. 
+Selecting chemical compounds requires expertise. Expertise is gained by experience and studying a dedicated discipline. Dedicated displines most often have a set of common functional groups that are relevant to that community, this allows us to focus on compounds that are valuable. We do not need all the compounds, since a lot of them are not useful or not possible. In our paper, we describe how `Global-Chem`, an open source knowledge graph, was developed to facilitate the ability of scientists in both academia and industry to make their compounds of interest readily available to the scientific community in the form of objects that may be directly accessed from python. 
 
 <p align="center">
 <img width="1000" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/179372511-61758864-6b0a-410e-b15f-578fd8227a14.png">
@@ -98,7 +98,7 @@ Selecting chemical compounds requires expertise. Expertise is gained by experien
 
 # Data
 
-At the time of writing the list of objects include those shown in Table 1. The list range from well defined classes of chemicals, such as amino acids, to more diverse lists such as Rings in Drugs. In addition, the languages used for each list are given, along with the number entires in the list and the reference. The number of times that compounds in each list fail in our automated SMILES to CGenFF workflow is given where if the value is "N/A" it means it was a node added after testing and allows room for additional chemical space exploraton.
+At the time of writing the list of objects include those shown in Table 1. The list range from well defined natural classes of chemicals, such as amino acids, vitamins, salt, and to more diverse lists such as rings in drugs, emerging perfluoroalkyls etc. In addition, the languages used for each list are given, along with the number entires in the list and the reference. The number of times that compounds in each list fail in our automated SMILES to CGenFF workflow.
 
 
 | Chemical List                        | Languages                    | # of Entries | References               |  CGenFF Errors            |
@@ -146,7 +146,7 @@ At the time of writing the list of objects include those shown in Table 1. The l
 | Common Regex Patterns                | Mol2                         | 1            |                          | N/A                       |
 
 <p align="center">
-  <i>Table 1: GlobalChem Object List</i>
+  <i>Table 1: GlobalChem Object List: If the value is "N/A" it means it was a node added after testing and allows room for additional chemical space exploraton.</i>
 </p>
 
 # Chemical Selection for Force Fields
