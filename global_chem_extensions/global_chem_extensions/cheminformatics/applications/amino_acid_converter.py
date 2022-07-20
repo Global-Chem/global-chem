@@ -137,11 +137,3 @@ class AminoAcidConverter(object):
             sequence += amino_acids_sequence[match]
 
         return sequence
-
-if __name__ == '__main__':
-
-    aminoacid_sequence = 'V(DHA)'
-
-    converter = AminoAcidConverter()
-    sequence = converter.convert_amino_acid_sequence_to_smiles(aminoacid_sequence)
-    print (sequence)
