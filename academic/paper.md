@@ -182,7 +182,7 @@ At the time of writing the list of features include those shown in Table 2. The 
 | Open Source Database Monitor   | An open source database monitor that performs heartbeat checks on common chemical lists running on cloud web servers | 95        | Development Operations         | 
 | Plotly Templates   | A Graphing template to use for Ploty to make your data look "pretty" | 80        | Graphing         | 
 
-# Chemical Selection for Force Fields
+# Chemical Selection for Force Fields Paramirization
 
 Compound lists in Global-Chem can be used to identify specific regions of chemical space that have limited coverage. Therefore, the compound lists in Global-Chem represent future regions of chemical space for force field development. In the CGenFF program we can use larger penalities to indicate a lower extent of analogy to known parameters, information that may be used to identify molecules for additional force field optimization. We passed a variety of Global-Chem objects individually into the software and plotted penalty score distributions of their bonded and non-bonded parameters shown in `Figure 2`. As may be seen the extent of penalties differs significantly for the various lists. Based on the compounds used in the development of CGenFF, we expected the penalties to be lower on molecules that are declared as drugs (Schedule One US Narcotics) and drug-like species (BRAF Kinases Inhibitors for Cancer,  Privileged Scaffolds) whereas we expect the penalty score will be higher for compounds for things that are were not it's original intention ( Emerging PerfluoroAlkyls for Environmental Hazards). 
 
@@ -210,6 +210,34 @@ Look at the common vitamin list in Figure 2 we found Vitamin C to have a high di
   <br>
   <i>Figure 3: MolCloud of Chemical Selection</i>
 </p>
+
+We truncated dithiolane from the amide and passed through CGenFF (Full data available in the Supporting Information) which indicated that the dilemma was in part due to the extent of puckering caused by the 2 Sulphur atoms within the constrained cyclopentane ring system. T
+To begin our parametirization process we chose to focus on `S1-C3-C4-S2`, backbone to the cyclopentane ring and the dihedral from the methyl to one carbon on the backbone `C1-C2-S1-C3`. Since the molecule is symmetric, it makes the complexity of the molecule decrease twofold. 
+The parametirization of 1,2-dithiolane was performed using FFParam [Reference Here] following the FFParam Workflow [Reference Here]. To begin our process, we first subject the compound to quantum mechanics (QM) geometry optimization, with Gaussian [Reference HEre], using mp2 theory to treat electron correlation [Reference Here] and basis set of “6-31/+G*” to handle the orbital polarizability of the sulphur atom. 
+Our intended goal is to use the QM as a reference target data that the molecular mechanics (MM), CHARMM [Reference Here], should approximately match. We perform potential energy surface (PES) scans around our selected dihedrals and compare the surface of the QM vs the MM. 
+
+To match the PES scan for the MM to the QM we have to tweak “tunable” parameters as defined in charmm potential energy function (i.e force constants, multiplicity) [Reference Here] until we reach a reasonable surface scan and numbers that make common sense. To determine the partial charges, we observe 
+the dipole moment induced by the interaction between the atom of interest and water. When the dipole moment of the QM and MM reach within a range 
+(< 0.5kcal/mol) we consider that reasonable. 
+
+To accomplish our parametirization we applied the following: for `S1-C3-C4-S2`, if we break the connection ring component 
+around the C3-C4 single bond in the  atom ring we obtain a natural rotation of a thiomethyl group. Additional multiplicities of 1 and 2 of varying force constants
+seemed to have a negative effect. We added a relatively high force constant of a value of 2.3800 to because this particular 
+dihedral is part of a ring where there is a significant energy barrier of rotation due to constraint of the cyclopentane backbone. 
+
+For C1-C2-S1-C3, still maintained the multiplicity of 3 but with a far less reduced force constant of 1.1000. 
+This was due to the methyl that replaced the amide allowing some degrees of rotation but the S1 is still constrained within the ring system. 
+Final PES scans are displayed in Figure 4. 
+
+<p align="center">
+  <img width="600" height="350" src="../images/figures/official_figure_8.png">
+  <br>
+  <i>Figure 4: Final Potential Energy Scans of dihedrals S1-C3-C4-S2 and C1-C2-S1-C3</i>
+</p>
+
+Lastly, the S1-S2 charges needed adjustment. We used Monte Carlo Simulated Annealing (MCSA) method [Reference Here] utilized in
+FFparam to predict the approximate partial charges. The sulphur atoms were adjusted to have a partial negative charge of -0.208.
+
 
 # Discussion 
 
