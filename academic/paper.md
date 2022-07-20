@@ -146,7 +146,7 @@ At the time of writing the list of objects include those shown in Table 1. The l
 | Common Regex Patterns                | Mol2                         | 1            |                          | N/A                       |
 
 <p align="center">
-  <i>Table 1: GlobalChem Object List: If the value is "N/A" it means it was a node added after testing and allows room for additional chemical space exploraton.</i>
+  <i>Table 1: GlobalChem Object List Columns: "Chemical List" is the name of the node that contains the chemical list, "Languages" specifies the name and their respective translations, "Number of Entries" is how many molcules exist within one node, "References" are the what resource the molecules were recorded from, and the last column "CGenFF Errors" is the many times CGenFF skipped a molecule. If the value is "N/A" it means it was a node added after testing and allows room for additional chemical space exploraton.</i>
 </p>
 
 # Chemical Selection for Force Fields
