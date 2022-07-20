@@ -29,8 +29,8 @@ authors:
     orcid: 0000-0003-0033-6033
     affiliation: 1
   - name: Nathaniel McClean
-  - orcid: XXX
-  - affiliation: 1
+    orcid: XXX
+    affiliation: 1
   - name: Aarion Romany
     affiliation: 1
   - name: Mingtian Zhao
