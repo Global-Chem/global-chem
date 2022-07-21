@@ -44,16 +44,16 @@ authors:
     orcid: XXX
     affiliation: 1
   - name: Takayuki Serizawa
-    affiliation: 6
+    affiliation: 2
   - name: Jared Deacon
-    affiliation: 6
+    affiliation: 2
   - name: Ian Jones
     affiliation: 1
   - name: Shaoqi Zhan
     orcid: 0000-0002-6383-1771
     affiliation: 3
   - name: Mike Woster
-    affiliation: 7
+    affiliation: 6
   - name: Rebecca Pinette-Dorin
     affiliation: 6
   - name: Sevien Schulhoff
@@ -73,10 +73,8 @@ affiliations:
     index: 4
   - name: École Polytechnique
     index: 5
-  - name: Takeda Pharmaceuticals
-    index: 6
   - name: Linux Foundation
-    index: 7
+    index: 6
 ---
 
 # Introduction
