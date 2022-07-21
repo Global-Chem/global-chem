@@ -240,12 +240,22 @@ Final PES scans are displayed in Figure 4.
 Lastly, the S1-S2 charges needed adjustment. We used Monte Carlo Simulated Annealing (MCSA) method [Reference Here] utilized in
 FFparam to predict the approximate partial charges. The sulphur atoms were adjusted to have a partial negative charge of -0.208.
 
+# Theory 
 
-# Discussion 
+#### One molecule representation of CGenFF and SMILES  
 
-## One molecule representation of CGenFF and SMILES  
+CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We present the first GlobalChem Atom-Type SMILES language with CGenFF:
 
-## Decoder Engine
+| Molecule                     | Proposed GlobalChem Language                                                                                         | 
+|------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| Perfluorobutanoic acid       | F{FGA2}C{CG312}(F{FGA2})(C{CG312}(F{FGA2})(C{CG2O2}(O{OG311})=O{OG2D1})F{FGA2})C{CG302}(F{FGA3})(F{FGA3})F{FGA3}     |
+| Vitamin C                    | C{CG321}(C{CG311}(C{CG3C51}1C{CG2R51}(=C{CG2R51}(C{CG2R53}(=O{OG2D1})O{OG3C51}1)O{OG311})O{OG311})O{OG311})O{OG311}  |
+| Aziridine                    | N{NG311}1C{CG3C31}C{CG3C31}1                                                                                         |
+| 1,3-Dithiolane               | C{CG331}C{CG3C51}2S{SG311}C{CG3C52}C{CG3C52}S{SG311}2                                                                |
+
+Using this new language, we can probably determine easily from which atom type could be incorrectly misconfigured in conjunction with the SMILES. For example a N1 in a 3 membered ring is mostly likely not going to be NG311 but probably a new atom type like NG3C31 according to the CGenFF nomenclature.
+
+#### Decoder Engine
 
 # Conclusion
 
