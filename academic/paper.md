@@ -47,6 +47,8 @@ authors:
     affiliation: 3
   - name: Anmol Kumar
     affiliation: 1
+  - name: Paween Mahinthichaichan
+    affiliation: 1
   - name: Mike Woster
     affiliation: 7
   - name: Rebecca Pinette-Dorin
