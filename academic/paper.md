@@ -463,7 +463,14 @@ Thank you to Tyree Wilson, Garrick Centola and Paul Shapiro for their helpful di
 
 (75) Drefahl, Axel. “CurlySMILES: A Chemical Language to Customize and Annotate Encodings of Molecular and Nanodevice Structures.” Journal of Cheminformatics, vol. 3, Jan. 2011, p. 1. PubMed Central
 
-(76) 
+(76) Barr, Avron, and Edward A. Feigenbaum. The Handbook of Artificial Intelligence. Volume I Volume I. 1981.
+
+(77) Reback, Jeff, et al. Pandas-Dev/Pandas: Pandas 1.4.3. v1.4.3, Zenodo, 2022.
+
+(78) Hall, Lowell H., et al. “Molecular Similarity Based on Novel Atom-Type Electrotopological State Indices.” Journal of Chemical Information and Computer Sciences, vol. 35, no. 6, Nov. 1995, pp. 1074–80
+
+(79) "Upptime" Github, https://github.com/upptime/upptime
+
 (39) Chemical Weapons Disarmament in Russia: Problems and Prospects. Henry L. Stimson Center, 1995.
 
 # Conflict of Interets
