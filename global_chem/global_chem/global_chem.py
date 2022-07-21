@@ -1114,7 +1114,7 @@ class GlobalChem(object):
                     if distance == 0:
                         exact_definition = definition
 
-                definitions.append(definition)
+                    definitions.append(definition)
 
         if return_partial_definitions:
             return definitions
