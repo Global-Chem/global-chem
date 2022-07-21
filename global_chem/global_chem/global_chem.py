@@ -1087,8 +1087,6 @@ class GlobalChem(object):
 
         for node_key, node_value in self.__NODES__.items():
 
-            definition = {}
-
             if node_key == 'global_chem' or node_key == 'common_regex_patterns':
                 continue
 
@@ -1097,6 +1095,8 @@ class GlobalChem(object):
             names = entity.get_smiles()
 
             for name, smiles in names.items():
+
+                definition = {}
 
                 # Sanitize the Node Key
 
