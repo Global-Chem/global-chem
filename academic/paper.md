@@ -253,7 +253,7 @@ Final PES scans are displayed in Figure 4.
 Lastly, the S1-S2 charges needed adjustment. We used Monte Carlo Simulated Annealing (MCSA) method (88) utilized in
 FFparam to predict the approximate partial charges. The sulphur atoms were adjusted to have a partial negative charge of -0.208.
 
-# Applications 
+# Philosophy 
 
 ### General Artificial Intelligence 
 
