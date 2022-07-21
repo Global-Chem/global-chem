@@ -282,7 +282,7 @@ Chemical Education is important for future generations and especially organic ch
 
 ### Machine Learning
 
-Morgan Fingerprints (101) are one of the most common fingerprint mechanism used to day to capture a local chemical environment. The radius of a local environment is captured through integers denoting how many times to iterate from one connection point to another. By iterating through each atom in a molecule and capturing it's local environment we can capture fragments of molecules and piece them back to together to represent the molecule as a whole. This is done in the form of binary strings implemented in RDKit (102).
+Morgan Fingerprints (90) are one of the most common fingerprint mechanism used to day to capture a local chemical environment. The radius of a local environment is captured through integers denoting how many times to iterate from one connection point to another. By iterating through each atom in a molecule and capturing it's local environment we can capture fragments of molecules and piece them back to together to represent the molecule as a whole. This is done in the form of binary strings implemented in RDKit.
 
 | Molecule      | Binary String.                                                                                                       | 
 |---------------|----------------------------------------------------------------------------------------------------------------------|
@@ -473,7 +473,25 @@ Thank you to Tyree Wilson, Garrick Centola and Paul Shapiro for their helpful di
 
 (80) Chemical Weapons Disarmament in Russia: Problems and Prospects. Henry L. Stimson Center, 1995.
 
-(81)
+(81) Kumar, Anmol, et al. “FFParam: Standalone Package for CHARMM Additive and Drude Polarizable Force Field Parametrization of Small Molecules.” Journal of Computational Chemistry, vol. 41, no. 9, 2020, pp. 958–70. Wiley Online Library
+
+(82) "About FFParam-GUI", Ffparam 1.0 Documentation.
+
+(83) Gaussian 16, Revision C.01, Frisch, M. J.; Trucks, G. W.; Schlegel, H. B.; Scuseria, G. E.; Robb, M. A.; Cheeseman, J. R.; Scalmani, G.; Barone, V.; Petersson, G. A.; Nakatsuji, H.; Li, X.; Caricato, M.; Marenich, A. V.; Bloino, J.; Janesko, B. G.; Gomperts, R.; Mennucci, B.; Hratchian, H. P.; Ortiz, J. V.; Izmaylov, A. F.; Sonnenberg, J. L.; Williams-Young, D.; Ding, F.; Lipparini, F.; Egidi, F.; Goings, J.; Peng, B.; Petrone, A.; Henderson, T.; Ranasinghe, D.; Zakrzewski, V. G.; Gao, J.; Rega, N.; Zheng, G.; Liang, W.; Hada, M.; Ehara, M.; Toyota, K.; Fukuda, R.; Hasegawa, J.; Ishida, M.; Nakajima, T.; Honda, Y.; Kitao, O.; Nakai, H.; Vreven, T.; Throssell, K.; Montgomery, J. A., Jr.; Peralta, J. E.; Ogliaro, F.; Bearpark, M. J.; Heyd, J. J.; Brothers, E. N.; Kudin, K. N.; Staroverov, V. N.; Keith, T. A.; Kobayashi, R.; Normand, J.; Raghavachari, K.; Rendell, A. P.; Burant, J. C.; Iyengar, S. S.; Tomasi, J.; Cossi, M.; Millam, J. M.; Klene, M.; Adamo, C.; Cammi, R.; Ochterski, J. W.; Martin, R. L.; Morokuma, K.; Farkas, O.; Foresman, J. B.; Fox, D. J. Gaussian, Inc., Wallingford CT, 2016.
+
+(84) Møller, Chr., and M. S. Plesset. “Note on an Approximation Treatment for Many-Electron Systems.” Physical Review, vol. 46, no. 7, Oct. 1934, pp. 618–22. 
+
+(85) Dunning, Thom H. “Gaussian Basis Sets for Use in Correlated Molecular Calculations. I. The Atoms Boron through Neon and Hydrogen.” The Journal of Chemical Physics, vol. 90, no. 2, Jan. 1989, pp. 1007–23
+
+(86) Brooks, B. R., et al. “CHARMM: The Biomolecular Simulation Program.” Journal of Computational Chemistry, vol. 30, no. 10, July 2009, pp. 1545–614. PubMed Central
+
+(87) Vanommeslaeghe, Kenno, et al. “Robustness in the Fitting of Molecular Mechanics Parameters.” Journal of Computational Chemistry, vol. 36, no. 14, May 2015, pp. 1083–101. PubMed
+
+(88) Guvench, Olgun, and Alexander D. MacKerell. “Automated Conformational Energy Fitting for Force-Field Development.” Journal of Molecular Modeling, vol. 14, no. 8, Aug. 2008, pp. 667–79. Springer Link
+
+(89) Draghici, Cristian, and Jon T. Njardarson. “Chemistry By Design: A Web-Based Educational Flashcard for Exploring Synthetic Organic Chemistry.” Journal of Chemical Education, vol. 89, no. 8, July 2012, pp. 1080–82.
+
+(90) Morgan, H. L. “The Generation of a Unique Machine Description for Chemical Structures-A Technique Developed at Chemical Abstracts Service.” Journal of Chemical Documentation, vol. 5, no. 2, May 1965, pp. 107–13
 
 # Conflict of Interets
 
