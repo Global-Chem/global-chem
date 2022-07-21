@@ -373,7 +373,7 @@ Thank you to Tyree Wilson, Garrick Centola and Paul Shapiro for their helpful di
 
 (30) Vaithianathan, Soundarya, et al. “Effect of Common Excipients on the Oral Drug Absorption of Biopharmaceutics Classification System Class 3 Drugs Cimetidine and Acyclovir.” Journal of Pharmaceutical Sciences, vol. 105, no. 2, Feb. 2016, pp. 996–1005. PubMed
 
-(31) https://github.com/geekan/HowToLiveLonger
+(31) "How to Live Longer" Github, https://github.com/geekan/HowToLiveLonger
 
 (32) Data Abstracted from https://labels.fda.gov/
 
@@ -393,7 +393,77 @@ Thank you to Tyree Wilson, Garrick Centola and Paul Shapiro for their helpful di
 
 (40) PKa Values for Organic and Inorganic Bronsted Acids at 25 Celsius.
 
+(41) The RDKit 2021.03.1 Documentation
 
+(42) "Pysmiles: The lightweight and pure-python SMILES reader and writer" Github, https://github.com/pckroon/pysmiles
+
+(43) Krenn, Mario, et al. “Self-Referencing Embedded Strings (SELFIES): A 100% Robust Molecular String Representation.” Machine Learning: Science and Technology, vol. 1, no. 4, Dec. 2020, p. 045024.
+
+(44) "Partialsmiles" Github, https://github.com/baoilleach/partialsmiles
+
+(45) O’Boyle, Noel, and Andrew Dalke. DeepSMILES: An Adaptation of SMILES for Use in Machine-Learning of Chemical Structures. Sept. 2018. chemrxiv.org,
+
+(46) "MolVS: Molecule Validation and Standardization." Github, https://github.com/mcs07/MolVS
+
+(47) Rogers, David, and Mathew Hahn. “Extended-Connectivity Fingerprints.” Journal of Chemical Information and Modeling, vol. 50, no. 5, May 2010, pp. 742–54.
+
+(48) "Epam/Indigo: Universal Cheminformatics Libraries, Utilities and Database Search Tools.” GitHub, https://github.com/epam/Indigo
+
+(49) Lipinski, C. A., et al. “Experimental and Computational Approaches to Estimate Solubility and Permeability in Drug Discovery and Development Settings.” Advanced Drug Delivery Reviews, vol. 46, no. 1–3, Mar. 2001, pp. 3–26. PubMed
+
+(50) Ghose, A. K., et al. “A Knowledge-Based Approach in Designing Combinatorial or Medicinal Chemistry Libraries for Drug Discovery. 1. A Qualitative and Quantitative Characterization of Known Drug Databases.” Journal of Combinatorial Chemistry, vol. 1, no. 1, Jan. 1999, pp. 55–68. PubMed
+
+(51) Veber, Daniel F., et al. “Molecular Properties That Influence the Oral Bioavailability of Drug Candidates.” Journal of Medicinal Chemistry, vol. 45, no. 12, June 2002, pp. 2615–23. PubMed
+
+(52) Congreve, Miles, et al. “A ‘Rule of Three’ for Fragment-Based Lead Discovery?” Drug Discovery Today, vol. 8, no. 19, Oct. 2003, pp. 876–77. 
+
+(53) Walters, W. Patrick, and Mark Namchuk. “Designing Screens: How to Make Your Hits a Hit.” Nature Reviews Drug Discovery, vol. 2, no. 4, Apr. 2003, pp. 259–66.
+
+(54) Bickerton, G. Richard, et al. “Quantifying the Chemical Beauty of Drugs.” Nature Chemistry, vol. 4, no. 2, Jan. 2012, pp. 90–98. PubMed Central.
+
+(55) Wilkinson, Leland, and Graham Wills. The Grammar of Graphics. 2nd ed, Springer, 2005.
+
+(56) O’Reilly, Marc, et al. “Crystallographic Screening Using Ultra-Low-Molecular-Weight Ligands to Guide Drug Design.” Drug Discovery Today, vol. 24, no. 5, May 2019, pp. 1081–86. ScienceDirect
+
+(57) Ropp, Patrick J., et al. “Dimorphite-DL: An Open-Source Program for Enumerating the Ionization States of Drug-like Small Molecules.” Journal of Cheminformatics, vol. 11, no. 1, Feb. 2019, p. 14. BioMed Central
+
+(58) Corp, (c) 2008-2018 Software Ambience. “DaisyDisk, the Most Popular Disk Analyzer for Mac.” DaisyDisk
+
+(59) Sunburst. https://plotly.com/python/sunburst-charts/
+
+(60) Sharif, Suliman. “Cocktail Shaker: An Open Source Drug Expansion and Enumeration Library for Peptides.” Journal of Open Source Software, vol. 5, no. 52, Aug. 2020, p. 1992. joss.theoj.org
+
+(61) Ehrt, Christiane, et al. “SMARTS.plus – A Toolbox for Chemical Pattern Design.” Molecular Informatics, vol. 39, no. 12, Dec. 2020, p. 2000216
+
+(62) Franky. “Basic Molecular Representation for Machine Learning.” Medium, 20 Sept. 2021,
+
+(63) Ding, Chris, and Xiaofeng He. “K -Means Clustering via Principal Component Analysis.” Twenty-First International Conference on Machine Learning  - ICML ’04, ACM Press, 2004, p. 29. 
+
+(64) A Step-by-Step Explanation of Principal Component Analysis (PCA) | Built In.
+
+(65) Hagberg Aric A., Schult Daniel A., and Swart Pieter J., “Exploring network structure, dynamics, and function using NetworkX”, in Proceedings of the 7th Python in Science Conference (SciPy2008), Gäel Varoquaux, Travis Vaught, and Jarrod Millman (Eds), (Pasadena, CA USA), pp. 11–15, Aug 2008
+
+(66) Scott Oliver B., A W Edith Chan, "ScaffoldGraph: an open-source library for the generation and analysis of molecular scaffold networks and scaffold trees, Bioinformatics" Vol. 36, 12, 15 June 2020, pp. 3930–3931, https://doi.org/10.1093/bioinformatics/btaa219
+
+(67) Raschka, Sebastian. “BioPandas: Working with Molecular Structures in Pandas DataFrames.” Journal of Open Source Software, vol. 2, no. 14, June 2017, p. 279. joss.theoj.org
+
+(68) Boström, Jonas, et al. “Do Structurally Similar Ligands Bind in a Similar Fashion?” Journal of Medicinal Chemistry, vol. 49, no. 23, Nov. 2006, pp. 6716–25.
+
+(69) "DNA Features Viewer" Github, https://github.com/Edinburgh-Genome-Foundry/DnaFeaturesViewer
+
+(70) 
+
+(71) Orr, Asuka, Sharif Suliman "Common Monoclonal Antibodies", Unpublished. 
+
+(72) Turney, Justin M., et al. “Psi4: An Open-Source Ab Initio Electronic Structure Program: Psi4: An Electronic Structure Program.” Wiley Interdisciplinary Reviews: Computational Molecular Science, vol. 2, no. 4, July 2012, pp. 556–65. 
+
+(73) "Moly - Molecular Visualization in Jupyter" Github, https://github.com/VHchavez/moly
+
+(74) Chemaxon Extended SMILES and SMARTS - CXSMILES and CXSMARTS | Chemaxon Docs
+
+(75) Drefahl, Axel. “CurlySMILES: A Chemical Language to Customize and Annotate Encodings of Molecular and Nanodevice Structures.” Journal of Cheminformatics, vol. 3, Jan. 2011, p. 1. PubMed Central
+
+(76) 
 (39) Chemical Weapons Disarmament in Russia: Problems and Prospects. Henry L. Stimson Center, 1995.
 
 # Conflict of Interets
