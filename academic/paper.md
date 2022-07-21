@@ -215,7 +215,7 @@ Look at the common vitamin list in Figure 2 we found Vitamin C to have a high di
   <i>Figure 3: MolCloud of Chemical Selection</i>
 </p>
 
-# Paramitirization of 1,3 Dithiolane
+# Paramitirization of 1,3-Dithiolane
 
 We truncated dithiolane from the amide and passed through CGenFF (Full data available in the Supporting Information) which indicated that the dilemma was in part due to the extent of puckering caused by the 2 Sulphur atoms within the constrained cyclopentane ring system. T
 To begin our parametirization process we chose to focus on `S1-C3-C4-S2`, backbone to the cyclopentane ring and the dihedral from the methyl to one carbon on the backbone `C1-C2-S1-C3`. Since the molecule is symmetric, it makes the complexity of the molecule decrease twofold. 
