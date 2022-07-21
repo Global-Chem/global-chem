@@ -246,7 +246,7 @@ FFparam to predict the approximate partial charges. The sulphur atoms were adjus
 
 # Theory 
 
-#### Communication - GlobalChem Molecule Language
+### Communication - GlobalChem Molecule Language
 
 CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We present the first Global-Chem Moleculer Language that contains both CGenFF Atom-Types and SMILES based on scientific inclusion not exclusion (41):
 
@@ -263,7 +263,7 @@ CGenFF and SMILES are built on the same language philosophy yet are independent 
 
 Using this new language, we can probably determine easily from which atom type could be incorrectly misassigned without looking at the partial charges in conjunction with the SMILES allowing intuition to supersede the penalty score. For example, a N1 in a 3 membered ring is mostly likely not going to be NG311 but probably a new atom type like NG3C31 according to the CGenFF nomenclature. 
 
-#### Machine Learning - Decoder Engine
+### Machine Learning - Decoder Engine
 
 Morgan Fingerprints are the most common fingerprint mechanism used to day to capture a local chemical environment. The radius of a local environment is captured through integers denoting how many times to iterate from one connection point to another. By iterating through each atom in a molecule and capturing it's local environment we can capture fragments of molecules and piece them back to together to represent the molecule as a whole. This is done in the form of binary strings.
 
@@ -278,7 +278,7 @@ Morgan Fingerprints are the most common fingerprint mechanism used to day to cap
   <i>Table 4: Global-Chem Annotated Bit Reference Index: "Molecule" name of the molecule, "Binary String" is the bit representation of the molecule with 512 bit length and a morgan radius of 2. </i>
 </p>
 
-When evaluating binary we can observe patterns for how a molecule is fragmented. In Table 4, Benzene can serve as a marker for any six-membered aromatic compound as a reference. When we expand into the second row looking at toluene we can begin to identify which numbers correlate to benzene and which relate to the methyl group and the respective bit topology. Comparing toluene to benzene at positions 32, 33, 34 with "101" we can start to infer this means a possible bond type from the sp2 carbon to sp3 for the methyl or another connection point. If we exchange the methyl for a hydroxyl we can observe the following bit representation where the positions from 32, 33, 34 of the toluene are reduced back to 0s yet expansion of the binary string at position 64, 65, 66 with a sequential "111" which might suggest the sp2 carbon with oxygen bond which is completely reduced to 0s in aniline. By having a reference annotated index we can read binary strings directly and decode the string which served as a motivation for the development of the decoder engine. 
+When evaluating binary we can observe patterns for how a molecule is fragmented. In Table 4, Benzene can serve as a marker for any six-membered aromatic compound as a reference. When we expand into the second row looking at toluene we can begin to identify which numbers correlate to benzene and which relate to the methyl group and the respective bit topology. Comparing toluene to benzene at positions 32, 33, 34 with "101" we can start to infer this means a possible bond type from the sp2 carbon to sp3 for the methyl or another connection point. If we exchange the methyl for a hydroxyl we can observe the following bit representation where the positions from 32, 33, 34 of the toluene are reduced back to 0s yet expansion of the binary string at position 64, 65, 66 with a sequential "111" which might suggest the sp2 carbon with oxygen bond which is completely reduced to 0s in aniline. By having a reference annotated index we can read binary strings directly and decode the string which served as a motivation for the development of the decoder engine. Machine Learning often requires converting the SMILES to a encoder with some hyper parameters that account for how the the bit representation of the molecule is encoded because machines learn on alpha characters not numeric. Decoding fingerprints is handled through visualization which disallows safe passage of chemical communication because it isn't recorded effecively.
 
 #### Chemical Education - Flash Cards
 
