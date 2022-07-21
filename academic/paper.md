@@ -246,7 +246,7 @@ FFparam to predict the approximate partial charges. The sulphur atoms were adjus
 
 # Applications 
 
-### Communication - Global-Chem Molecular Language
+### Linguistics 
 
 CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES (99) is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We present the first Global-Chem Moleculer Language that contains both CGenFF Atom-Types and SMILES based on scientific inclusion not exclusion (100):
 
@@ -263,7 +263,18 @@ CGenFF and SMILES are built on the same language philosophy yet are independent 
 
 Using this new language, we can probably determine easily from which atom type could be incorrectly misassigned without looking at the partial charges in conjunction with the SMILES allowing intuition to supersede the penalty score. For example, a N1 in a 3 membered ring is mostly likely not going to be NG311 but probably a new atom type like NG3C31 according to the CGenFF nomenclature. 
 
-### Artificial Intelligence - Decoder Engine
+### Chemical Education 
+
+Chemical Education is important for future generations and especially organic chemists in learning the modern nomenclature of the disicipline. Flash cards are the most common way for students to learn organic chemistry functional groups (103). Global-Chem uses this mechanism to created a Global flashcard list of all functional groups relevant to different communities so students can learn chemical structures, their names, and the SMILES that are relevant to their respective field as they learn. This installs foundational knowledge of chemical language which will be useful in their respective careers, shown in Figure 6 and available at chemicalgraptheory.com. 
+
+
+<p align="center">
+  <img width="1420" alt="Screen Shot 2022-07-21 at 6 45 30 AM" src="https://user-images.githubusercontent.com/11812946/180195972-538b61ca-181c-4c98-a3d5-0b76c0d9e6f0.png">
+  <br>
+  <i>Figure 6: Global-Chem Flash Card Application</i>
+</p>
+
+### Artificial Intelligence 
 
 Morgan Fingerprints (101) are one of the most common fingerprint mechanism used to day to capture a local chemical environment. The radius of a local environment is captured through integers denoting how many times to iterate from one connection point to another. By iterating through each atom in a molecule and capturing it's local environment we can capture fragments of molecules and piece them back to together to represent the molecule as a whole. This is done in the form of binary strings implemented in RDKit (102).
 
@@ -285,19 +296,6 @@ When evaluating binary we can observe patterns for how a molecule is fragmented.
   <br>
   <i>Figure 5: Decoder Engine's placement into the Machine Learning Workflow</i>
 </p>
-
-
-### Chemical Education - Flash Cards
-
-Chemical Education is important for future generations and especially organic chemists in learning the modern nomenclature of the disicipline. Flash cards are the most common way for students to learn organic chemistry functional groups (103). Global-Chem uses this mechanism to created a Global flashcard list of all functional groups relevant to different communities so students can learn chemical structures, their names, and the SMILES that are relevant to their respective field as they learn. This installs foundational knowledge of chemical language which will be useful in their respective careers, shown in Figure 6 and available at chemicalgraptheory.com. 
-
-
-<p align="center">
-  <img width="1420" alt="Screen Shot 2022-07-21 at 6 45 30 AM" src="https://user-images.githubusercontent.com/11812946/180195972-538b61ca-181c-4c98-a3d5-0b76c0d9e6f0.png">
-  <br>
-  <i>Figure 6: Global-Chem Flash Card Application</i>
-</p>
-
 
 # Conclusion
 
