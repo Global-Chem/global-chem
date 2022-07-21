@@ -192,7 +192,7 @@ Compound lists in Global-Chem can be used to identify specific regions of chemic
 
 <p align="center">
   <img width="1000" height="950" src="../images/figures/figure_5.png">
-  <i>Figure 2: Penalty Score Probability Distributions</i>
+  <i>Figure 2: Penalty Scores Probability Distributions of the Bond, Angle, Dihedral, and Charge in a rug fashion</i>
 </p>
 
 For force field paramitirization, we want to focus on the most interesting compounds based on human expertise and on the charge
