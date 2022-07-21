@@ -16,6 +16,8 @@ authors:
     affiliation: 5
   - name: Sunhwan Jo
     affiliation: 2
+  - name: Bettina Lier
+    affiliation: 4
   - name: Paween Mahinthichaichan
     affiliation: 1
   - name: Chris Burke
@@ -26,8 +28,6 @@ authors:
   - name: Elena Yi Chow
     orcid: 0000-0001-5559-1635
     affiliation: 2
-  - name: Bettina Lier
-    affiliation: 4
   - name: Anastasia Croitoru
     orcid: XXX
     affiliation: 5
