@@ -127,28 +127,28 @@ At the time of writing the list of objects include those shown in Table 1. The l
 | Emerging Perfluoroalkyls             | IUPAC/SMILES/SMARTS          | 27           | (26)                     | 1                         |
 | Chemicals For Clay Adsorption        | IUPAC/SMILES/SMARTS          | 33           | (27)                     | 0                         |
 | Schedule 1 United States Narcotics   | Preferred Name/SMILES/SMARTS | 240          | (28)                     | 1                         |
-| Schedule 2 United States Narcotics   | Preferred Name/SMILES/SMARTS | 60           | (29)                     | 1                         |
-| Schedule 3 United States Narcotics   | Preferred Name/SMILES/SMARTS | 22           | (30)                     | 1                         |
-| Schedule 4 United States Narcotics   | Preferred Name/SMILES/SMARTS | 77           | (31)                     | 0                         |
-| Schedule 5 United States Narcotics   | Preferred Name/SMILES/SMARTS | 8            | (32)                     | 0                         |
-| PihKal                               | Preferred Name/SMILES/SMARTS | 179          | (33)                     | 0                         |
-| Excipients Cimetidine & Acyclovir    | Preferred Name/SMILES/SMARTS | 14           | (34)                     | N/A                       |
-| HowToLiveLonger	                     | Preferred Name/SMILES/SMARTS | 4            | (35)                     | N/A                       |
-| Monoclonal Antibodies                | Preferred Name/SMILES/SMARTS | 19           | (36)                     | N/A                       |
-| Common Lubricants for Sex Wellness   | Preferred Name/SMILES/SMARTS | 38           | (37)                     | N/A                       |
-| FDA Tainted Sexual Enhancements      | Preferred Name/SMILES/SMARTS | 4            | (38)                     | N/A                       |
-| Common Food Salts                    | Preferred Name/SMILES/SMARTS | 14           | (39)                     | N/A                       |
-| FDA Color Additive List 1            | FDA Name/SMILES/SMARTS       | 12           | (40)                     | N/A                       |
-| FDA Color Additive List 2            | FDA Name/SMILES/SMARTS       | 15           | (40)                     | N/A                       |
-| FDA Color Additive List 3            | FDA Name/SMILES/SMARTS       | 16           | (40)                     | N/A                       |
-| FDA Color Additive List 4            | FDA Name/SMILES/SMARTS       | 39           | (40)                     | N/A                       |
-| FDA Color Additive List 5            | FDA Name/SMILES/SMARTS       | 27           | (40)                     | N/A                       |
-| FDA Color Additive List 6            | FDA Name/SMILES/SMARTS       | 29           | (40)                     | N/A                       |
-| FDA Color Additive List 7            | FDA Name/SMILES/SMARTS       | 37           | (40)                     | N/A                       |
-| Constituents of Cannabis Sativa      | Name/SMILES/SMARTS           | 394          | (41)                     | N/A                       |
-| Phytocanniboids                      | Name/SMILES/SMARTS           | 111          | (42)                     | N/A                       |
-| Organophosphorous Nerve Toxic Agents | Name/SMILES/SMARTS           | 14           | (43)                     | N/A                       |
-| Cengage Bronsted Acids               | Name/SMILES/SMARTS           | 42           | (44)                     | N/A                       |
+| Schedule 2 United States Narcotics   | Preferred Name/SMILES/SMARTS | 60           | (28)                     | 1                         |
+| Schedule 3 United States Narcotics   | Preferred Name/SMILES/SMARTS | 22           | (28)                     | 1                         |
+| Schedule 4 United States Narcotics   | Preferred Name/SMILES/SMARTS | 77           | (28)                     | 0                         |
+| Schedule 5 United States Narcotics   | Preferred Name/SMILES/SMARTS | 8            | (28)                     | 0                         |
+| PihKal                               | Preferred Name/SMILES/SMARTS | 179          | (29)                     | 0                         |
+| Excipients Cimetidine & Acyclovir    | Preferred Name/SMILES/SMARTS | 14           | (30)                     | N/A                       |
+| HowToLiveLonger	                     | Preferred Name/SMILES/SMARTS | 4            | (31)                     | N/A                       |
+| Monoclonal Antibodies                | Preferred Name/SMILES/SMARTS | 19           | (32)                     | N/A                       |
+| Common Lubricants for Sex Wellness   | Preferred Name/SMILES/SMARTS | 38           | (33)                     | N/A                       |
+| FDA Tainted Sexual Enhancements      | Preferred Name/SMILES/SMARTS | 4            | (34)                     | N/A                       |
+| Common Food Salts                    | Preferred Name/SMILES/SMARTS | 14           | (35)                     | N/A                       |
+| FDA Color Additive List 1            | FDA Name/SMILES/SMARTS       | 12           | (36)                     | N/A                       |
+| FDA Color Additive List 2            | FDA Name/SMILES/SMARTS       | 15           | (36)                     | N/A                       |
+| FDA Color Additive List 3            | FDA Name/SMILES/SMARTS       | 16           | (36)                     | N/A                       |
+| FDA Color Additive List 4            | FDA Name/SMILES/SMARTS       | 39           | (36)                     | N/A                       |
+| FDA Color Additive List 5            | FDA Name/SMILES/SMARTS       | 27           | (36)                     | N/A                       |
+| FDA Color Additive List 6            | FDA Name/SMILES/SMARTS       | 29           | (36)                     | N/A                       |
+| FDA Color Additive List 7            | FDA Name/SMILES/SMARTS       | 37           | (36)                     | N/A                       |
+| Constituents of Cannabis Sativa      | Name/SMILES/SMARTS           | 394          | (37)                     | N/A                       |
+| Phytocanniboids                      | Name/SMILES/SMARTS           | 111          | (38)                     | N/A                       |
+| Organophosphorous Nerve Toxic Agents | Name/SMILES/SMARTS           | 14           | (39)                     | N/A                       |
+| Cengage Bronsted Acids               | Name/SMILES/SMARTS           | 42           | (40)                     | N/A                       |
 | Common Regex Patterns                | Mol2                         | 1            |                          | N/A                       |
 
 <p align="center">
@@ -159,33 +159,33 @@ At the time of writing the list of features include those shown in Table 2. The 
 
 | Software Feature              | Description                                                                    |  Code Length | Discipline | Reference |
 |-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|---------- |-----------|--------------|
-| Validating SMILES             | An adapter to other SMILES platforms (RDKit, PySMILES, SELFIES, PartialSMILES, DeepSMILES, MolVS) to validate by interoperability           | 107        | Cheminformatics          |  (51, (52), (53), (54), (55), (56) | 
-| Decoding Fingerprints and Classifying SMILES            | Decoding your fingerprints to your complex SMILES and to an IUPAC using a annotated dictionary of bit vectors | 129        | Cheminformatics          | (57) |
-| SMILES Bidirectional PDF Parsing      | Converting lists of SMILES to 2D drawings in PDF parsing and parsing PDF back to SMILES | 685        | Cheminformatics          | (58) |
-| Drug Design Filtering      | Filtering lists of SMILES by a variety of common drug filters (Lipinski Rule of 5, Ghose, Veber, Rule of 3, REOS, Drug-Like, Filters | 137        | Cheminformatics           | (59), (60), (61), (62), (63), (64) |
-| Deep Layer Scattering     | Scattering Nodes of Collective SMILES and their relations to each other in Parallel Coordinate Diagram implemented in Plotly | 184        | Cheminformatics          | (65) |
-| SMARTS Identifier     | A web application implemented in Flask to test the validation of SMARTS submatching of strings against the MiniFrag Database | 307        | Cheminformatics          |  (66) |
-| Protonating SMILES    | A distributable version of the Dimorphite-DL package to protonate SMILES over a range of pH with a control over variant production | 56        | Cheminformatics          | (67) |
-| Sunbursting SMILES    | Applying a sunburst plot to large collection of SMILES to identify functional groups and pairs of functional groups within the set | 253        | Cheminformatics          | (68), (69) |
-| Peptide Sequence to SMILES    | An evolution of Cocktail-Shaker to include Lanthipeptides and covalent sulphur linkages in SMILES strings | 147        | Cheminformatics     | (70) |
-| Visualization SMARTS    | A python application programming interface to port the SMARTS.plus visualizer for SMARTS strings into a jupyter notebook | 47        | Cheminformatics          | (71) |
-| One-Hot Encoding SMILES    | A GlobalChem encoder that encodes SMILES for Machine Learning including the '&' denoted as a polymer ex. Diamond | 112        | Cheminformatics          | (72) | 
-| Principal Component Analysis on SMILES    | A principal component analysis on a list of SMILES with hyperparamter tuning for morgan fingerprinting provided and visualization with Bokeh | 154        | Cheminformatics          | (73), (74) |
-| Networkx Adapter    | A graph to graph network adapter between GlobalChem and NetworkX for ease of interoperability for data engineering | 65        | Cheminformatics          | (75) |
-| Scaffold Graph Adapter   | An adapter to take a large collection of GlobalChem Nodes and analyze their Structure Hierachy with Scaffold Graphs | 97        | Cheminformatics          | (76) |
-| GlobalChem Protein  | An adapter to biopandas to process pdb protein files as well as an implementation of the Bostrom Algorithm to Structurally Filter SMILES | 467        | Bioinformatics          | (77), (78) |
-| GlobalChem RNA  | Conversion of RNA Sequence to SMILES and a visualizer for RNA sequences for Python Jupyter Notebooks | 181        | Bioinformatics          | (79) |
-| GlobalChem DNA  | Conversion of DNA Sequence to SMILES and a visualizer for DNA sequences for Python Jupyter Notebooks | 181        | Bioinformatics          | (79) | 
-| GlobalChem Bacteria  | A python model with attributes for general bacteria classifications as well as a common list | 214        | Bioinformatics          | (80) |
-| GlobalChem Monoclonal Antibodies  | A python model with attributes for general monoclonoal antibodies classifications as well as a common list | 20        | Bioinformatics          | (81) | 
-| Z-Matrix Store  | A python model store where users can pull standard z-matrices for molecules queried by their IUPAC | 159        | Quantum Chemistry          | (82) |
-| Psi4 Parser  | A python model for analyzing psi4 output files and plotting interaction energy data automatically through Plotly | 193        | Quantum Chemistry          | (82) |
-| Moly Adapter  | A software adapter and enhanced functionality for Moly and visualizing HOMO/LUMO orbitals of molecules | 87        | Quantum Chemistry          | (83) |
-| GlobalChem Molecule  | A Global Molecule that can parse SMILES, GAFF, CGenFF Stream files into Pandas dataframes, a visualizer with Atom Types and SMILES in RDKit, new mix of cross-discipling languages (SMILES and CGenFF Atom Types) using CXSMILES, CXSMARTS, and CurlySMILES | 386        | Force Fields         | (84), (85), (86) | 
-| CGenFF Molecule  | A CGenFF Parser that can parse, write edit, and update stream files with Pandas DataFrames | 532        | Force Fields         | (87) |
-| GAFF2 Molecule   | A GAFF2 Parser that can parse, write edit, and update stream files with Pandas DataFrames  | 454        | Force Fields         | (87) |
-| CGenFF Disimiliarity Score   | A CGenFF dissimilarity algorithm based on the atom types and their tuples of bonded parameters (bonds, angles, dihedrals, impropers) to determine a dissimilarity score | 191        | Force Fields         | (88) |
-| Open Source Database Monitor   | An open source database monitor that performs heartbeat checks on common chemical lists running on cloud web servers | 95        | Development Operations         | (89) |
+| Validating SMILES             | An adapter to other SMILES platforms (RDKit, PySMILES, SELFIES, PartialSMILES, DeepSMILES, MolVS) to validate by interoperability           | 107        | Cheminformatics          |  (41, (42), (43), (44), (45), (46) | 
+| Decoding Fingerprints and Classifying SMILES            | Decoding your fingerprints to your complex SMILES and to an IUPAC using a annotated dictionary of bit vectors | 129        | Cheminformatics          | (47) |
+| SMILES Bidirectional PDF Parsing      | Converting lists of SMILES to 2D drawings in PDF parsing and parsing PDF back to SMILES | 685        | Cheminformatics          | (48) |
+| Drug Design Filtering      | Filtering lists of SMILES by a variety of common drug filters (Lipinski Rule of 5, Ghose, Veber, Rule of 3, REOS, Drug-Like, Filters | 137        | Cheminformatics           | (49), (50), (51), (52), (53), (54) |
+| Deep Layer Scattering     | Scattering Nodes of Collective SMILES and their relations to each other in Parallel Coordinate Diagram implemented in Plotly | 184        | Cheminformatics          | (55) |
+| SMARTS Identifier     | A web application implemented in Flask to test the validation of SMARTS submatching of strings against the MiniFrag Database | 307        | Cheminformatics          |  (56) |
+| Protonating SMILES    | A distributable version of the Dimorphite-DL package to protonate SMILES over a range of pH with a control over variant production | 56        | Cheminformatics          | (57) |
+| Sunbursting SMILES    | Applying a sunburst plot to large collection of SMILES to identify functional groups and pairs of functional groups within the set | 253        | Cheminformatics          | (58), (59) |
+| Peptide Sequence to SMILES    | An evolution of Cocktail-Shaker to include Lanthipeptides and covalent sulphur linkages in SMILES strings | 147        | Cheminformatics     | (60) |
+| Visualization SMARTS    | A python application programming interface to port the SMARTS.plus visualizer for SMARTS strings into a jupyter notebook | 47        | Cheminformatics          | (61) |
+| One-Hot Encoding SMILES    | A GlobalChem encoder that encodes SMILES for Machine Learning including the '&' denoted as a polymer ex. Diamond | 112        | Cheminformatics          | (62) | 
+| Principal Component Analysis on SMILES    | A principal component analysis on a list of SMILES with hyperparamter tuning for morgan fingerprinting provided and visualization with Bokeh | 154        | Cheminformatics          | (63), (64) |
+| Networkx Adapter    | A graph to graph network adapter between GlobalChem and NetworkX for ease of interoperability for data engineering | 65        | Cheminformatics          | (65) |
+| Scaffold Graph Adapter   | An adapter to take a large collection of GlobalChem Nodes and analyze their Structure Hierachy with Scaffold Graphs | 97        | Cheminformatics          | (66) |
+| GlobalChem Protein  | An adapter to biopandas to process pdb protein files as well as an implementation of the Bostrom Algorithm to Structurally Filter SMILES | 467        | Bioinformatics          | (67), (68) |
+| GlobalChem RNA  | Conversion of RNA Sequence to SMILES and a visualizer for RNA sequences for Python Jupyter Notebooks | 181        | Bioinformatics          | (69) |
+| GlobalChem DNA  | Conversion of DNA Sequence to SMILES and a visualizer for DNA sequences for Python Jupyter Notebooks | 181        | Bioinformatics          | (69) | 
+| GlobalChem Bacteria  | A python model with attributes for general bacteria classifications as well as a common list | 214        | Bioinformatics          | (70) |
+| GlobalChem Monoclonal Antibodies  | A python model with attributes for general monoclonoal antibodies classifications as well as a common list | 20        | Bioinformatics          | (71) | 
+| Z-Matrix Store  | A python model store where users can pull standard z-matrices for molecules queried by their IUPAC | 159        | Quantum Chemistry          | (72) |
+| Psi4 Parser  | A python model for analyzing psi4 output files and plotting interaction energy data automatically through Plotly | 193        | Quantum Chemistry          | (72) |
+| Moly Adapter  | A software adapter and enhanced functionality for Moly and visualizing HOMO/LUMO orbitals of molecules | 87        | Quantum Chemistry          | (73) |
+| GlobalChem Molecule  | A Global Molecule that can parse SMILES, GAFF, CGenFF Stream files into Pandas dataframes, a visualizer with Atom Types and SMILES in RDKit, new mix of cross-discipling languages (SMILES and CGenFF Atom Types) using CXSMILES, CXSMARTS, and CurlySMILES | 386        | Force Fields         | (74), (75), (76) | 
+| CGenFF Molecule  | A CGenFF Parser that can parse, write edit, and update stream files with Pandas DataFrames | 532        | Force Fields         | (77) |
+| GAFF2 Molecule   | A GAFF2 Parser that can parse, write edit, and update stream files with Pandas DataFrames  | 454        | Force Fields         | (77) |
+| CGenFF Disimiliarity Score   | A CGenFF dissimilarity algorithm based on the atom types and their tuples of bonded parameters (bonds, angles, dihedrals, impropers) to determine a dissimilarity score | 191        | Force Fields         | (78) |
+| Open Source Database Monitor   | An open source database monitor that performs heartbeat checks on common chemical lists running on cloud web servers | 95        | Development Operations         | (79) |
 | Plotly Templates   | A Graphing template to use for Ploty to make your data look "pretty" | 80        | Graphing         |
 
 <p align="center">
