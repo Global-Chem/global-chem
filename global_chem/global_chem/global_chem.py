@@ -1094,25 +1094,27 @@ class GlobalChem(object):
 
             network_path = node_value.__module__
             entity = node_value()
-            smiles = entity.get_smiles()
+            names = entity.get_smiles()
 
-            # Sanitize the Node Key
+            for name in names:
 
-            node_key = iupac_key.lower()
-            node_key = re.sub(r'[^a-zA-Z]', '', node_key)
+                # Sanitize the Node Key
 
-            distance = self.levenshtein_distance(iupac_key, node_key)
+                name = iupac_key.lower()
+                name = re.sub(r'[^a-zA-Z]', '', name)
 
-            if 0 <= distance <= distance_tolerance:
+                distance = self.levenshtein_distance(iupac_key, name)
 
-                definition[node_key] = smiles
-                definition['network_path'] = network_path[-1]
-                definition['levenshtein_distance'] = distance
+                if 0 <= distance <= distance_tolerance:
 
-                if distance == 0:
-                    exact_definition = definition
+                    definition[iupac_key] = name
+                    definition['network_path'] = network_path[-1]
+                    definition['levenshtein_distance'] = distance
 
-            definitions.append(definition)
+                    if distance == 0:
+                        exact_definition = definition
+
+                definitions.append(definition)
 
         if return_partial_definitions:
             return definitions
