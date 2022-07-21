@@ -244,7 +244,7 @@ Final PES scans are displayed in Figure 4.
 Lastly, the S1-S2 charges needed adjustment. We used Monte Carlo Simulated Annealing (MCSA) method [Reference Here] utilized in
 FFparam to predict the approximate partial charges. The sulphur atoms were adjusted to have a partial negative charge of -0.208.
 
-# Theory 
+# Applications 
 
 ### Communication - Global-Chem Molecular Language
 
@@ -287,9 +287,9 @@ When evaluating binary we can observe patterns for how a molecule is fragmented.
 </p>
 
 
-#### Chemical Education - Flash Cards
+### Chemical Education - Flash Cards
 
-Chemical Education is important for future generations to learn what we have done. Flash cards are the most common way for students to learn organic chemistry functional groups. Global-Chem uses this mechanism to created a Global flashcard list of all functional groups relevant to different communities so students can learn chemical structures, their names, and the SMILES that are relevant to their respective field as they learn. This installs foundational knowledge of chemical language which will be useful in their respective careers, shown in Figure 6 and available at www.chemicalgraptheory.com
+Chemical Education is important for future generations to learn what we have done. Flash cards are the most common way for students to learn organic chemistry functional groups. Global-Chem uses this mechanism to created a Global flashcard list of all functional groups relevant to different communities so students can learn chemical structures, their names, and the SMILES that are relevant to their respective field as they learn. This installs foundational knowledge of chemical language which will be useful in their respective careers, shown in Figure 6 and available at www.chemicalgraptheory.com. 
 
 
 <p align="center">
