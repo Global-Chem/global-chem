@@ -207,7 +207,7 @@ on mass molecular datasets with no clear intention and allows our force field to
 with human guided direction. To demonstrate our versatility, we use our own tools to explore both avenues of explored and unexplored chemical space.
 In Figure 2, when evaluating the distributions of the penalty scores and the nodes that accommodate it, we can begin to evaluate trends to provide
 an initial guess of where to look for most likely a compound that wasn't accounted for rapidly. We recorded partial G, V, and A-series toxic agents according 
-to Dr. Mirzayanov's account of the Novichok Program (90). Novichok-5 and Sarin contained fluorophosphane bonds that CGenFF has not seen before evident by the partial charge of the phosphorous with penalties upwards of 200. 
+to Dr. Mirzayanov's account of the Novichok Program (80). Novichok-5 and Sarin contained fluorophosphane bonds that CGenFF has not seen before evident by the partial charge of the phosphorous with penalties upwards of 200. 
 We can attribute these high scores to its unique chemical environment specifically designed for warfare which qualifies them as relevant candidates given their history.
 If we investigate the covalent warhead inhibitors with a distribution of charge penalty scores ranging from 0 to 300 in Figure 2.
 The range indicates that we have accounted for some warheads but in the most recent years they have gained popularity and are being employed elsewhere especially synthesis. Aziridine, in Figure 3, was chosen because it's similar to an epoxide, acting as a good electrophilic drug fragment to extend a molecule by 2 carbons and provide a terminal reactive amine functional group for further extension.
@@ -225,10 +225,10 @@ Look at the common vitamin list in Figure 2 we found Vitamin C to have a high di
 
 We truncated dithiolane from the amide and passed through CGenFF (Full data available in the Supporting Information) which indicated that the dilemma was in part due to the extent of puckering caused by the 2 Sulphur atoms within the constrained cyclopentane ring system. T
 To begin our parametirization process we chose to focus on `S1-C3-C4-S2`, backbone to the cyclopentane ring and the dihedral from the methyl to one carbon on the backbone `C1-C2-S1-C3`. Since the molecule is symmetric, it makes the complexity of the molecule decrease twofold. 
-The parametirization of 1,2-dithiolane was performed using FFParam (91) following the FFParam Workflow (92). To begin our process, we first subject the compound to quantum mechanics (QM) geometry optimization, with Gaussian (93), using mp2 theory to treat electron correlation (94) and basis set of “6-31/+G*” to handle the orbital polarizability of the sulphur atom (95). 
-Our intended goal is to use the QM as a reference target data that the molecular mechanics (MM), CHARMM (96), should approximately match. We perform potential energy surface (PES) scans around our selected dihedrals and compare the surface of the QM vs the MM. 
+The parametirization of 1,2-dithiolane was performed using FFParam (81) following the FFParam Workflow (82). To begin our process, we first subject the compound to quantum mechanics (QM) geometry optimization, with Gaussian (83), using mp2 theory to treat electron correlation (84) and basis set of “6-31/+G*” to handle the orbital polarizability of the sulphur atom (85). 
+Our intended goal is to use the QM as a reference target data that the molecular mechanics (MM), CHARMM (86), should approximately match. We perform potential energy surface (PES) scans around our selected dihedrals and compare the surface of the QM vs the MM. 
 
-To match the PES scan for the MM to the QM we have to tweak “tunable” parameters as defined in charmm potential energy function (i.e force constants, multiplicity) (97) until we reach a reasonable surface scan and numbers that make common sense. To determine the partial charges, we observe 
+To match the PES scan for the MM to the QM we have to tweak “tunable” parameters as defined in charmm potential energy function (i.e force constants, multiplicity) (87) until we reach a reasonable surface scan and numbers that make common sense. To determine the partial charges, we observe 
 the dipole moment induced by the interaction between the atom of interest and water. When the dipole moment of the QM and MM reach within a range 
 (< 0.5kcal/mol) we consider that reasonable. 
 
@@ -247,14 +247,14 @@ Final PES scans are displayed in Figure 4.
   <i>Figure 4: Final Potential Energy Scans of dihedrals S1-C3-C4-S2 and C1-C2-S1-C3</i>
 </p>
 
-Lastly, the S1-S2 charges needed adjustment. We used Monte Carlo Simulated Annealing (MCSA) method (98) utilized in
+Lastly, the S1-S2 charges needed adjustment. We used Monte Carlo Simulated Annealing (MCSA) method (88) utilized in
 FFparam to predict the approximate partial charges. The sulphur atoms were adjusted to have a partial negative charge of -0.208.
 
 # Applications 
 
 ### General Artificial Intelligence 
 
-CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES (99) is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We present the first Global-Chem Moleculer Language that contains both CGenFF Atom-Types and SMILES based on scientific inclusion not exclusion (100):
+CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We present the first Global-Chem Moleculer Language that contains both CGenFF Atom-Types and SMILES based on scientific inclusion not exclusion (100):
 
 | Molecule                     | Proposed Global-Chem Language                                                                                         | 
 |------------------------------|----------------------------------------------------------------------------------------------------------------------|
@@ -271,7 +271,7 @@ Using this new language, we can probably determine easily from which atom type c
 
 ### Chemical Education 
 
-Chemical Education is important for future generations and especially organic chemists in learning the modern nomenclature of the disicipline. Flash cards are the most common way for students to learn organic chemistry functional groups (103). Global-Chem uses this mechanism to created a Global flashcard list of all functional groups relevant to different communities so students can learn chemical structures, their names, and the SMILES that are relevant to their respective field as they learn. This installs foundational knowledge of chemical language which will be useful in their respective careers, shown in Figure 6 and available at chemicalgraptheory.com. 
+Chemical Education is important for future generations and especially organic chemists in learning the modern nomenclature of the disicipline. Flash cards are the most common way for students to learn organic chemistry functional groups (89). Global-Chem uses this mechanism to created a Global flashcard list of all functional groups relevant to different communities so students can learn chemical structures, their names, and the SMILES that are relevant to their respective field as they learn. This installs foundational knowledge of chemical language which will be useful in their respective careers, shown in Figure 6 and available at chemicalgraptheory.com. 
 
 
 <p align="center">
@@ -471,7 +471,9 @@ Thank you to Tyree Wilson, Garrick Centola and Paul Shapiro for their helpful di
 
 (79) "Upptime" Github, https://github.com/upptime/upptime
 
-(39) Chemical Weapons Disarmament in Russia: Problems and Prospects. Henry L. Stimson Center, 1995.
+(80) Chemical Weapons Disarmament in Russia: Problems and Prospects. Henry L. Stimson Center, 1995.
+
+(81)
 
 # Conflict of Interets
 
