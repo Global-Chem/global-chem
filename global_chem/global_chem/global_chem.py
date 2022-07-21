@@ -5,11 +5,14 @@
 # -----------------------------------
 
 # Base Imports
+# ------------
 
+import re
 import os
 import sys
 import os.path
 import pprint
+from functools import lru_cache
 
 # Reconfigurations
 # ----------------
@@ -1056,7 +1059,12 @@ class GlobalChem(object):
 
         return bits
 
-    def get_smiles_by_iupac(self, iupac_key, return_network_path=False, return_all_network_paths=False):
+    def get_smiles_by_iupac(
+            self,
+            iupac_key,
+            distance_tolerance=4,
+            return_partial_definitions=False,
+        ):
 
         '''
 
@@ -1064,19 +1072,22 @@ class GlobalChem(object):
 
         Arguments:
             iupac_key (String): Key for the iupac.
-            return_network_path (Bool): whether the user wants the network path as well.
-            return_all_network_paths (Bool): return all the network paths
+            distance_tolerance (Int): Distance tolerance for Levenshetin Distances.
+            return_partial_definitions (Bool): Return the Levenshetin Distances between words
         Returns:
-            definition (String): definiton of the iupac.
-            network_path (Dict): { definition: last network path in }
-            network_paths (Dict[List]): { definition: all_networks }
+            definition (Dict): A definition of the IUPAC.
 
         '''
 
-        network_paths = []
-        definition = ''
+        iupac_key = iupac_key.lower()
+        iupac_key = re.sub(r'[^a-zA-Z]', '', iupac_key)
+
+        definitions = []
+        exact_definition = {}
 
         for node_key, node_value in self.__NODES__.items():
+
+            definition = {}
 
             if node_key == 'global_chem' or node_key == 'common_regex_patterns':
                 continue
@@ -1085,19 +1096,28 @@ class GlobalChem(object):
             entity = node_value()
             smiles = entity.get_smiles()
 
-            if iupac_key in smiles:
+            # Sanitize the Node Key
 
-                network_paths.append(network_path)
-                definition = smiles[iupac_key]
+            node_key = iupac_key.lower()
+            node_key = re.sub(r'[^a-zA-Z]', '', node_key)
 
-        if return_network_path:
-            return { definition: network_paths[-1] }
+            distance = self.levenshtein_distance(iupac_key, node_key)
 
-        elif return_all_network_paths:
-            return { definition: return_all_network_paths }
+            if 0 <= distance <= distance_tolerance:
 
+                definition[node_key] = smiles
+                definition['network_path'] = network_path[-1]
+                definition['levenshtein_distance'] = distance
+
+                if distance == 0:
+                    exact_definition = definition
+
+            definitions.append(definition)
+
+        if return_partial_definitions:
+            return definitions
         else:
-            return definition
+            return exact_definition
 
     def set_node_value(self, node_key, value):
 
@@ -1336,3 +1356,36 @@ class GlobalChem(object):
                 out_file.write(f'{key}\t{value}\t{node_name}\t{category}\t{tree_path}\n')
 
         out_file.close()
+
+    @staticmethod
+    def levenshtein_distance(iupac_a, iupac_b):
+
+        '''
+
+        This function will calculate the levenshtein distance between two IUPAC strings
+
+        params:
+            a (String) : The first string you want to compare
+            b (String) : The second string you want to compare
+
+        returns:
+            This function will return the distnace between string a and b.
+
+        '''
+
+        @lru_cache(None)
+        def min_dist(string_1, string_2):
+
+            if string_1 == len(iupac_a) or string_2 == len(iupac_b):
+                return len(iupac_a) - string_1 + len(iupac_b) - string_2
+
+            if iupac_a[string_1] == iupac_b[string_2]:
+                return min_dist(string_1 + 1, string_2 + 1)
+
+            return 1 + min(
+                min_dist(string_1, string_2 + 1),
+                min_dist(string_1 + 1, string_2),
+                min_dist(string_1 + 1, string_2 + 1),
+            )
+
+        return min_dist(0, 0)
