@@ -253,7 +253,7 @@ CGenFF and SMILES are built on the same language philosophy yet are independent 
 | Aziridine                    | N{NG311}1C{CG3C31}C{CG3C31}1                                                                                         |
 | 1,3-Dithiolane               | C{CG331}C{CG3C51}2S{SG311}C{CG3C52}C{CG3C52}S{SG311}2                                                                |
 
-Using this new language, we can probably determine easily from which atom type could be incorrectly misconfigured in conjunction with the SMILES. For example a N1 in a 3 membered ring is mostly likely not going to be NG311 but probably a new atom type like NG3C31 according to the CGenFF nomenclature.
+Using this new language, we can probably determine easily from which atom type could be incorrectly misassigned without looking at the partial charges in conjunction with the SMILES allowing intuition to supersede the penalty score. For example, a N1 in a 3 membered ring is mostly likely not going to be NG311 but probably a new atom type like NG3C31 according to the CGenFF nomenclature.
 
 #### Decoder Engine
 
