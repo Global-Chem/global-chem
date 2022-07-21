@@ -244,7 +244,7 @@ FFparam to predict the approximate partial charges. The sulphur atoms were adjus
 
 #### GlobalChem Molecule Language
 
-CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We present the first GlobalChem Molecule Language that contains both CGenFF Atom-Types and SMILES language:
+CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We present the first Global-Chem Moleculer Language that contains both CGenFF Atom-Types and SMILES language:
 
 | Molecule                     | Proposed GlobalChem Language                                                                                         | 
 |------------------------------|----------------------------------------------------------------------------------------------------------------------|
