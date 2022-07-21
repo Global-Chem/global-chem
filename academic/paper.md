@@ -105,7 +105,7 @@ Selecting chemical compounds requires expertise. Expertise is gained by experien
     <i>Figure 1: Open Source Knowledge Graph Layer 1 File Architecture of Global-Chem</i>
 </p>
 
-# Data & Software Features
+# Data & Features
 
 At the time of writing the list of objects include those shown in Table 1. The list range from well defined natural classes of chemicals, such as amino acids, vitamins, salt, and to more diverse lists such as rings in drugs, emerging perfluoroalkyls etc. In addition, the languages used for each list are given, along with the number entires in the list and the reference. The number of times that compounds in each list fail in our automated SMILES to CGenFF workflow.
 
