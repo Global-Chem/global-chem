@@ -1100,14 +1100,14 @@ class GlobalChem(object):
 
                 # Sanitize the Node Key
 
-                name = iupac_key.lower()
+                name = name.lower()
                 name = re.sub(r'[^a-zA-Z]', '', name)
 
                 distance = self.levenshtein_distance(iupac_key, name)
 
                 if 0 <= distance <= distance_tolerance:
 
-                    definition[iupac_key] = name
+                    definition[iupac_key] = names[name]
                     definition['network_path'] = network_path[-1]
                     definition['levenshtein_distance'] = distance
 
