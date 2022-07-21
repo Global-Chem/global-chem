@@ -1108,7 +1108,7 @@ class GlobalChem(object):
                 if 0 <= distance <= distance_tolerance:
 
                     definition[name] = smiles
-                    definition['network_path'] = network_path[-1]
+                    definition['network_path'] = network_path
                     definition['levenshtein_distance'] = distance
 
                     if distance == 0:
