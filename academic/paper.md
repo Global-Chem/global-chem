@@ -14,19 +14,26 @@ authors:
   - name: Daniel Khavrutskii
     orcid: XXX
     affiliation: 5
+  - name: Sunhwan Jo
+    affiliation: 2
+  - name: Paween Mahinthichaichan
+    affiliation: 1
+  - name: Chris Burke
+    affiliation: 2
+  - name: Jacob Weiner
+    orcid: 0000-0003-0033-6033
+    affiliation: 1
+  - name: Elena Yi Chow
+    orcid: 0000-0001-5559-1635
+    affiliation: 2
   - name: Bettina Lier
     affiliation: 4
   - name: Anastasia Croitoru
     orcid: XXX
     affiliation: 5
-  - name: Chris Burke
-    affiliation: 2
-  - name: Aziza Frank
+  - name: Anmol Kumar
     affiliation: 1
-  - name: Sunhwan Jo
-    affiliation: 2
-  - name: Jacob Weiner
-    orcid: 0000-0003-0033-6033
+  - name: Aziza Frank
     affiliation: 1
   - name: Nathaniel McClean
     orcid: XXX
@@ -45,17 +52,10 @@ authors:
   - name: Shaoqi Zhan
     orcid: 0000-0002-6383-1771
     affiliation: 3
-  - name: Anmol Kumar
-    affiliation: 1
-  - name: Paween Mahinthichaichan
-    affiliation: 1
   - name: Mike Woster
     affiliation: 7
   - name: Rebecca Pinette-Dorin
     affiliation: 6
-  - name: Elena Yi Chow
-    orcid: 0000-0001-5559-1635
-    affiliation: 2
   - name: Sevien Schulhoff
     orcid: XXXX
     affiliation: 1
