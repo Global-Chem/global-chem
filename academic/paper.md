@@ -252,7 +252,7 @@ FFparam to predict the approximate partial charges. The sulphur atoms were adjus
 
 # Applications 
 
-### Linguistics 
+### General Artificial Intelligence 
 
 CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES (99) is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We present the first Global-Chem Moleculer Language that contains both CGenFF Atom-Types and SMILES based on scientific inclusion not exclusion (100):
 
@@ -280,7 +280,7 @@ Chemical Education is important for future generations and especially organic ch
   <i>Figure 6: Global-Chem Flash Card Application</i>
 </p>
 
-### Artificial Intelligence 
+### Machine Learning
 
 Morgan Fingerprints (101) are one of the most common fingerprint mechanism used to day to capture a local chemical environment. The radius of a local environment is captured through integers denoting how many times to iterate from one connection point to another. By iterating through each atom in a molecule and capturing it's local environment we can capture fragments of molecules and piece them back to together to represent the molecule as a whole. This is done in the form of binary strings implemented in RDKit (102).
 
