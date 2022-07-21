@@ -263,7 +263,7 @@ CGenFF and SMILES are built on the same language philosophy yet are independent 
 
 Using this new language, we can probably determine easily from which atom type could be incorrectly misassigned without looking at the partial charges in conjunction with the SMILES allowing intuition to supersede the penalty score. For example, a N1 in a 3 membered ring is mostly likely not going to be NG311 but probably a new atom type like NG3C31 according to the CGenFF nomenclature. 
 
-### Machine Learning - Decoder Engine
+### Artificial Intelligence - Decoder Engine
 
 Morgan Fingerprints are the most common fingerprint mechanism used to day to capture a local chemical environment. The radius of a local environment is captured through integers denoting how many times to iterate from one connection point to another. By iterating through each atom in a molecule and capturing it's local environment we can capture fragments of molecules and piece them back to together to represent the molecule as a whole. This is done in the form of binary strings.
 
