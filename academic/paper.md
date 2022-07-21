@@ -48,7 +48,7 @@ authors:
   - name: Anmol Kumar
     affiliation: 1
   - name: Mike Woster
-    affiliation: 6
+    affiliation: 7
   - name: Rebecca Pinette-Dorin
     affiliation: 6
   - name: Elena Yi Chow
@@ -58,6 +58,7 @@ authors:
     orcid: XXXX
     affiliation: 1
   - name: Alexander D. MacKerell Jr. [corresponding author]
+    orcid: 0000-0001-8287-6804
     affiliation: 1
 affiliations:
   - name: University of Maryland Baltimore, School of Pharmacy
@@ -72,6 +73,8 @@ affiliations:
     index: 5
   - name: Takeda Pharmaceuticals
     index: 6
+  - name: Linux Foundation
+    index: 7
 ---
 
 # Introduction
@@ -501,4 +504,4 @@ Thank you to Tyree Wilson, Garrick Centola and Paul Shapiro for their helpful di
 
 # Conflict of Interets
 
-ADM is cofounder and CSO and SJ is Commercial Development Director of SilcsBio LLC. Chris Burke is Senior DevOps Engineer at L7 Informatics. Mike Woster is the Chief Revenue Officer of the Linux Foundation, Rebecca Pinette-Dorin is marketing researcher at Exsens.
+ADM is cofounder and CSO, and SJ is Commercial Development Director of SilcsBio LLC. Chris Burke is Senior DevOps Engineer at L7 Informatics. Mike Woster is the Chief Revenue Officer of the Linux Foundation, Rebecca Pinette-Dorin is marketing researcher at Exsens.
