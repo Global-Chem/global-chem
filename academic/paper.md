@@ -8,7 +8,7 @@ authors:
   - name: Ruibin Liu
     orcid: 0000-0001-8395-9353
     affiliation: 1
-  - name: Asuka Autumn Grace Orr
+  - name: Asuka A. Orr
     orcid: 0000-0003-4628-526X
     affiliation: 1
   - name: Daniel Khavrutskii
@@ -46,7 +46,7 @@ authors:
     orcid: 0000-0002-6383-1771
     affiliation: 3
   - name: Anmol Kumar
-    affiliation: 6
+    affiliation: 1
   - name: Mike Woster
     affiliation: 6
   - name: Rebecca Pinette-Dorin
