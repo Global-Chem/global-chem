@@ -1096,7 +1096,7 @@ class GlobalChem(object):
             entity = node_value()
             names = entity.get_smiles()
 
-            for name in names:
+            for name, smiles in names.items():
 
                 # Sanitize the Node Key
 
@@ -1107,7 +1107,7 @@ class GlobalChem(object):
 
                 if 0 <= distance <= distance_tolerance:
 
-                    definition[iupac_key] = names[name]
+                    definition[name] = smiles
                     definition['network_path'] = network_path[-1]
                     definition['levenshtein_distance'] = distance
 
