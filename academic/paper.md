@@ -244,7 +244,7 @@ FFparam to predict the approximate partial charges. The sulphur atoms were adjus
 
 #### GlobalChem Molecule Language
 
-CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We present the first Global-Chem Moleculer Language that contains both CGenFF Atom-Types and SMILES language:
+CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We present the first Global-Chem Moleculer Language that contains both CGenFF Atom-Types and SMILES based on scientific inclusion not exclusion (41):
 
 | Molecule                     | Proposed GlobalChem Language                                                                                         | 
 |------------------------------|----------------------------------------------------------------------------------------------------------------------|
@@ -253,7 +253,7 @@ CGenFF and SMILES are built on the same language philosophy yet are independent 
 | Aziridine                    | N{NG311}1C{CG3C31}C{CG3C31}1                                                                                         |
 | 1,3-Dithiolane               | C{CG331}C{CG3C51}2S{SG311}C{CG3C52}C{CG3C52}S{SG311}2                                                                |
 
-Using this new language, we can probably determine easily from which atom type could be incorrectly misassigned without looking at the partial charges in conjunction with the SMILES allowing intuition to supersede the penalty score. For example, a N1 in a 3 membered ring is mostly likely not going to be NG311 but probably a new atom type like NG3C31 according to the CGenFF nomenclature.
+Using this new language, we can probably determine easily from which atom type could be incorrectly misassigned without looking at the partial charges in conjunction with the SMILES allowing intuition to supersede the penalty score. For example, a N1 in a 3 membered ring is mostly likely not going to be NG311 but probably a new atom type like NG3C31 according to the CGenFF nomenclature. 
 
 #### Decoder Engine
 
@@ -349,6 +349,8 @@ Thank you to Tyree Wilson, Garrick Centola and Paul Shapiro for their helpful di
 (39) Chemical Weapons Disarmament in Russia: Problems and Prospects. Henry L. Stimson Center, 1995.
 
 (40) Vanommeslaeghe, K., and A. D. MacKerell. “Automation of the CHARMM General Force Field (CGenFF) I: Bond Perception and Atom Typing.” Journal of Chemical Information and Modeling, vol. 52, no. 12, Dec. 2012, pp. 3144–54
+
+(41) Mobley, David L., et al. “Escaping Atom Types in Force Fields Using Direct Chemical Perception.” Journal of Chemical Theory and Computation, vol. 14, no. 11, Nov. 2018, pp. 6076–92.
 
 # Conflict of Interets
 
