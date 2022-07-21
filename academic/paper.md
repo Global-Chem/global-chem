@@ -289,6 +289,15 @@ When evaluating binary we can observe patterns for how a molecule is fragmented.
 
 #### Chemical Education - Flash Cards
 
+Chemical Education is important for future generations to learn what we have done. Flash cards are the most common way for students to learn organic chemistry functional groups. Global-Chem uses this mechanism to created a Global flashcard list of all functional groups relevant to different communities so students can learn chemical structures, their names, and the SMILES that are relevant to their respective field as they learn. This installs foundational knowledge of chemical language which will be useful in their respective careers, shown in Figure 6 and available at www.chemicalgraptheory.com
+
+
+<p align="center">
+  <img width="1420" alt="Screen Shot 2022-07-21 at 6 45 30 AM" src="https://user-images.githubusercontent.com/11812946/180195972-538b61ca-181c-4c98-a3d5-0b76c0d9e6f0.png">
+  <br>
+  <i>Figure 6: Global-Chem Flash Card Application</i>
+</p>
+
 
 # Conclusion
 
