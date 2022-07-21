@@ -254,7 +254,7 @@ FFparam to predict the approximate partial charges. The sulphur atoms were adjus
 
 ### General Artificial Intelligence 
 
-CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We present the first Global-Chem Moleculer Language that contains both CGenFF Atom-Types and SMILES based on scientific inclusion not exclusion (100):
+CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We present the first Global-Chem Moleculer Language that contains both CGenFF Atom-Types and SMILES based on scientific inclusion not exclusion (92):
 
 | Molecule                     | Proposed Global-Chem Language                                                                                         | 
 |------------------------------|----------------------------------------------------------------------------------------------------------------------|
@@ -497,6 +497,7 @@ Thank you to Tyree Wilson, Garrick Centola and Paul Shapiro for their helpful di
 
 (91) Levenshtein, V. I. “Binary Codes Capable of Correcting Deletions, Insertions and Reversals.” Soviet Physics Doklady, vol. 10, Feb. 1966, p. 707. 
 
+(92) Mobley, David L., et al. “Escaping Atom Types in Force Fields Using Direct Chemical Perception.” Journal of Chemical Theory and Computation, vol. 14, no. 11, Nov. 2018, pp. 6076–92.
 
 # Conflict of Interets
 
