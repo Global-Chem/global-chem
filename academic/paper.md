@@ -210,7 +210,7 @@ the developers of the CGenFF should consider adding a new atom type for this com
 Look at the common vitamin list in Figure 2 we found Vitamin C to have a high dihedral penalty scores which was unexpected initially due to it's legacy as an important ubiquitous compound but deeper look into the parameters suggest that the chemical environment,the sp2 carbon in the furanone with surrounding hydroxyls as seen in Figure 3, suggest that this would be tough to navigate through paramitirization. Finally, a dithiolane fragment was discovered using the sunbursting, principal component analysis, and pdf parsing features provided in Global-Chem, when analyzing partial of the Enamine Database, and using Global-Chem's RingsInDrugs as a reference for filtering common ring systems to display emerging ring systems of interest to find **rare** viable ring systems. The 1,3-dithiolane was selected because of its simple cyclopentyl architecture but two sulphurs separated by 1 carbon makes a great potential drug fragment anchor to enhance binding affinity due to the nucleophicility of the sulphurs and their respective geometry. `CGenFF` did not recognize this structure and was ultimately selected as the first compound for force field paramirization with the full account provided in the Supporting Information. 
 
 <p align="center">
-<img width="598" alt="Screen Shot 2022-07-19 at 8 09 17 AM" src="https://user-images.githubusercontent.com/11812946/179746963-fc09c731-4f05-4c12-9278-cbccc3ac5efe.png">
+<img width="634" alt="Screen Shot 2022-07-21 at 8 33 12 AM" src="https://user-images.githubusercontent.com/11812946/180214368-77583477-6d90-4142-98d0-ec8705307c43.png">
   <br>
   <i>Figure 3: MolCloud of Chemical Selection</i>
 </p>
