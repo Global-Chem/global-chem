@@ -261,20 +261,20 @@ FFparam to predict the approximate partial charges. The sulphur atoms were adjus
 
 ### General Artificial Intelligence 
 
-CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We present the first Global-Chem Moleculer Language that contains both CGenFF Atom-Types and SMILES based on scientific inclusion not exclusion (92):
+CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We suggest a new language based that contains both CGenFF Atom-Types and SMILES based on scientific inclusion not exclusion (92):
 
-| Molecule                     | Proposed Global-Chem Language                                                                                         | 
-|------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| Perfluorobutanoic acid       | F{FGA2}C{CG312}(F{FGA2})(C{CG312}(F{FGA2})(C{CG2O2}(O{OG311})=O{OG2D1})F{FGA2})C{CG302}(F{FGA3})(F{FGA3})F{FGA3}     |
-| Vitamin C                    | C{CG321}(C{CG311}(C{CG3C51}1C{CG2R51}(=C{CG2R51}(C{CG2R53}(=O{OG2D1})O{OG3C51}1)O{OG311})O{OG311})O{OG311})O{OG311}  |
-| Aziridine                    | N{NG311}1C{CG3C31}C{CG3C31}1                                                                                         |
-| 1,3-Dithiolane               | C{CG331}C{CG3C51}2S{SG311}C{CG3C52}C{CG3C52}S{SG311}2                                                                |
+| Name                         | Weininger Notation | New Notation Suggested                                                                          | 
+|------------------------------|--------------------|-------------------------------------------------------------------------------------------------|
+| Perfluorobutanoic acid       | FC(F)(C(F)(C(O)=O)F)C(F)(F)F	  | F{FGA2}C{CG312}(F{FGA2})(C{CG312}(F{FGA2})(C{CG2O2}(O{OG311})=O{OG2D1})F{FGA2})C{CG302}(F{FGA3})(F{FGA3})F{FGA3}     |
+| Vitamin C                    | C(C(C1C(=C(C(=O)O1)O)O)O)O	    | C{CG321}(C{CG311}(C{CG3C51}1C{CG2R51}(=C{CG2R51}(C{CG2R53}(=O{OG2D1})O{OG3C51}1)O{OG311})O{OG311})O{OG311})O{OG311}  |
+| Aziridine                    | N1CC1                          | N{NG311}1C{CG3C31}C{CG3C31}1                                                                                         |
+| 1,3-Dithiolane               | CC2SCCS2                       | C{CG331}C{CG3C51}2S{SG311}C{CG3C52}C{CG3C52}S{SG311}2                                                                |
 
 <p align="center">
-  <i>Table 3: Global-Chem Molecular Columns: "Molecule" name of the molecule, "Proposed Global-Chem Language" is the SMILES and CGenFF Atom Types language representation in CurlySMILES </i>
+  <i>Table 3: Global-Chem Molecular Columns: "Molecule" name of the molecule, "Proposed New Notation" is the SMILES and CGenFF Atom Types language representation in CurlySMILES </i>
 </p>
 
-Using this new language, we can probably determine easily from which atom type could be incorrectly misassigned without looking at the partial charges in conjunction with the SMILES allowing intuition to supersede the penalty score. For example, a N1 in a 3 membered ring is mostly likely not going to be NG311 but probably a new atom type like NG3C31 according to the CGenFF nomenclature. 
+Using this new notation, we can infer  easily from which atom type could be incorrectly misassigned without looking at the partial charges in conjunction with the SMILES allowing intuition to supersede the penalty score and using it as an ultimate feedback loop for validation. For example, a N1 in a 3 membered ring, for Aziridine, is mostly likely not going to be NG311 but probably a new atom type because it is too general of an atom type, using the CGenFF nomenclature we can safely make assumptions of what it can be, perhaps NG3C31, which allows us to expand rapidly in predicting new chemical space and allowing a queryable language to bridge atom types to ultimately bridge to the Name using Global-Chem.
 
 ### Chemical Education 
 
