@@ -98,7 +98,7 @@ To capture enough chemical lists we communicated, debated and elected resources 
 <p align="center">
 <img width="549" alt="Screen Shot 2022-07-21 at 9 01 59 AM" src="https://user-images.githubusercontent.com/11812946/180219967-3828c3cd-931b-4c73-a988-f8876062d09d.png">
     <br>
-    <i>Equation 1: Charmm Potential Energy Function with bonded terms (bonds, angles, dihedrals) including improper dihedrals (out of plane) and urey-bradley (1-3 interactions) and non-bonded interactions of the 6-12 Lennard-Jones (van der waals) and electrostatics (columbic)</i>
+    <i>Equation 1: Charmm Potential Energy Function with bonded terms (bonds, angles, dihedrals) including improper dihedrals (out of plane) and Urey-Bradley (1-3 interactions) and non-bonded interactions of the 6-12 Lennard-Jones (van der waals) and electrostatics (columbic)</i>
 </p>
 
 Selecting chemical compounds requires expertise. Expertise is gained by experience and studying a dedicated discipline. Dedicated displines most often have a set of common functional groups that are relevant to that community, this allows us to focus on compounds that are valuable. We do not need all the compounds, since a lot of them are not useful or not possible. In our paper, we describe how `Global-Chem`, an open source knowledge graph, was developed to facilitate the ability of scientists in both academia and industry to make their compounds of interest readily available to the scientific community in the form of objects that may be directly accessed from python. 
