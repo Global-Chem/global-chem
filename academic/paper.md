@@ -101,7 +101,7 @@ To capture enough chemical lists we communicated, debated and elected resources 
     <i>Equation 1: Charmm Potential Energy Function with bonded terms (bonds, angles, dihedrals) including improper dihedrals (out of plane) and urey-bradley (1-3 interactions) and non-bonded interactions of the 6-12 Lennard-Jones (van der waals) and electrostatics (columbic charge)</i>
 </p>
 
-Selecting chemical compounds requires expertise. Expertise is gained by experience and studying a dedicated discipline. Dedicated displines most often have a set of common functional groups that are relevant to that community, this allows us to focus on compounds that are valuable. We do not need all the compounds, since a lot of them are not useful or not possible. In our paper, we describe how `Global-Chem`, an open source knowledge graph, was developed to facilitate the ability of scientists in both academia and industry to make their compounds of interest readily available to the scientific community in the form of objects that may be directly accessed from python. However, research was directed under the guidance of the first author whose opinion may lead to some bias in the present methodolgy. 
+Selecting chemical compounds requires expertise. Expertise is gained by experience and studying a dedicated discipline. Dedicated displines most often have a set of common functional groups that are relevant to that community, this allows us to focus on compounds that are valuable. We do not need all the compounds, since a lot of them are not useful or not possible. In our paper, we describe how `Global-Chem`, an open source knowledge graph, was developed to facilitate the ability of scientists in both academia and industry to make their compounds of interest readily available to the scientific community in the form of objects that may be directly accessed from python. 
 
 <p align="center">
 <img width="1000" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/179372511-61758864-6b0a-410e-b15f-578fd8227a14.png">
@@ -259,6 +259,10 @@ FFparam to predict the approximate partial charges. The sulphur atoms were adjus
 
 # Philosophy 
 
+### Flexible Chemistry Graph Networks
+
+Global-Chem uses a directory and sub-directory system to organize files as we, the community, see fit. If you, the users, would like to build your own graph enetworks 
+
 ### General Artificial Intelligence 
 
 CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We suggest a new language based that contains both CGenFF Atom-Types and SMILES based on scientific inclusion not exclusion (92):
@@ -311,6 +315,11 @@ When evaluating binary we can observe patterns for how a molecule is fragmented.
 </p>
 
 IUPAC and Natural name submatching would be of best interest in determining functional group similaritiy between two different names of compounds of unequal length. Global-Chem implements the Levenshtein Distance (91) without grammar modifications to generate the best naming fit as possible if an exact definition is not known. With the inclusion of grammar, molecular similarity on IUPACs with long names (large molecules) might be possible to deduce common functionality and connection points and a new avenue area for chemical linguistic research.  
+
+### Open Source Legal Infrastructure
+
+Legal research was performed in the implementation of Global-Chem and serve as precedence for future packages to follow the same legal infrastructure. Global-Chem was filed under the "Mozilla Public License 2.0" namely for the purpose that if a company uses the Global-Chem in any commercial software must defend the code contributors should any lawsuits or damages arise regarding that software. This helps validate and form a legal bridge between academia and industry. Global-Chem does not grant trademark or copyright rights, and was filed with the U.S Copyright and U.S Patent and Trademark Office. Global-Chem, the graph network, has no other dependencies and is a self-contained code. However, the extensions for functionality do have dependencies of roughly 
+106 open source licenses and 1106 dependecies of a depth of to 5. To manage legal at scale we used free open source software academia, FOSSA, to perform dependency search. 
 
 # Conclusion
 
