@@ -13,7 +13,7 @@ authors:
     affiliation: 1
   - name: Daniel Khavrutskii
     orcid: XXX
-    affiliation: 5
+    affiliation: 7
   - name: Sunhwan Jo
     affiliation: 2
   - name: Bettina Lier
@@ -46,7 +46,7 @@ authors:
   - name: Takayuki Serizawa
     affiliation: 2
   - name: Jared Deacon
-    affiliation: 2
+    affiliation: 8
   - name: Ian Jones
     affiliation: 1
   - name: Shaoqi Zhan
@@ -75,6 +75,10 @@ affiliations:
     index: 5
   - name: Linux Foundation
     index: 6
+  - name: University of Maryland, Baltimore County
+    index: 7
+  - name: University of Maryland, College Park
+    index: 8
 ---
 
 # Introduction
