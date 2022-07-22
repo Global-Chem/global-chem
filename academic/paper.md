@@ -261,7 +261,7 @@ FFparam to predict the approximate partial charges. The sulphur atoms were adjus
 
 Global-Chem comes with a variety of applications and with accessible data comes new avenues of research, here we present our gallery of a highlight features that we find the most interesting to us, the authors. 
 
-### Graph Network Application Programming Interface
+### Knowledge Graph Application Programming Interface
 
 Global-Chem uses a directory and sub-directory system to organize files as we, the community, see best. If you, the users, would like to build your own graph networks we would like to have that ability as well. Global-Chem classifies each file or directory as a Node, using a Dummy Node named "Global-Chem" as a root. For example, in Figure 5, section A is a Global-Chem node, "parent", with 6 nodes, "childern" connected on some arbitrary line. Each node is self-aware of only it's parents and children which allows for a user to determine their own navigate into the graph network. This was designed in a way to allow flexibility for variable change, a look into adding a node object algorithm is shown in section B in Figure 5. A prototype feature would be too add nodes in a series of layers and have all parents connect to all children in a sequential fashion which allows for a node architecture similar to deep learning represented in section C Figure 5. 
 
