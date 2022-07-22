@@ -334,12 +334,6 @@ over traditional. For example: 'yl' to mark site points for polymer connections 
 
 * * * * *
 
-Citation
-========
-
-It's on it's way
-
-
 Licensing
 =========
  
