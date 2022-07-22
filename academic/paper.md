@@ -460,7 +460,7 @@ Thank you to Tyree Wilson, Garrick Centola and Paul Shapiro for their helpful di
 
 (69) "DNA Features Viewer" Github, https://github.com/Edinburgh-Genome-Foundry/DnaFeaturesViewer
 
-(70) 
+(70) Pitt, T. L., and M. R. Barer. “Classification, Identification and Typing of Micro-Organisms.” Medical Microbiology, 2012, pp. 24–38. PubMed Central
 
 (71) Orr, Asuka, Sharif Suliman "Common Monoclonal Antibodies", Unpublished. 
 
