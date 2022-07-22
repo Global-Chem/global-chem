@@ -259,9 +259,11 @@ FFparam to predict the approximate partial charges. The sulphur atoms were adjus
 
 # Philosophy 
 
+Global-Chem comes with a variety of applications and with accessible data comes new avenues of research, here we present our gallery of a highlight features that we find the most interesting to us, the authors. 
+
 ### Flexible Chemistry Graph Networks
 
-Global-Chem uses a directory and sub-directory system to organize files as we, the community, see fit. If you, the users, would like to build your own graph enetworks 
+Global-Chem uses a directory and sub-directory system to organize files as we, the community, see fit. If you, the users, would like to build your own graph networks 
 
 ### General Artificial Intelligence 
 
