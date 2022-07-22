@@ -314,6 +314,8 @@ When evaluating binary we can observe patterns for how a molecule is fragmented.
   <i>Figure 5: Decoder Engine's placement into the Machine Learning Workflow</i>
 </p>
 
+### Levenshtein Distance IUPAC/Preferred Names
+
 IUPAC and Natural name submatching would be of best interest in determining functional group similaritiy between two different names of compounds of unequal length. Global-Chem implements the Levenshtein Distance (91) without grammar modifications to generate the best naming fit as possible if an exact definition is not known. With the inclusion of grammar, molecular similarity on IUPACs with long names (large molecules) might be possible to deduce common functionality and connection points and a new avenue area for chemical linguistic research.  
 
 ### Legal
