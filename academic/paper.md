@@ -265,7 +265,7 @@ Global-Chem comes with a variety of applications and with accessible data comes 
 
 Global-Chem uses a directory and sub-directory system to organize files as we, the community, see fit. If you, the users, would like to build your own graph networks 
 
-### General Artificial Intelligence 
+### General Molecular Language 
 
 CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We suggest a new language based that contains both CGenFF Atom-Types and SMILES based on scientific inclusion not exclusion (92):
 
