@@ -12,7 +12,7 @@ authors:
     orcid: 0000-0003-4628-526X
     affiliation: 1
   - name: Daniel Khavrutskii
-    orcid: XXX
+    orcid: 0000-0001-5014-5572
     affiliation: 7
   - name: Sunhwan Jo
     affiliation: 2
