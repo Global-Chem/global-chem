@@ -257,7 +257,7 @@ Final PES scans are displayed in Figure 4.
 Lastly, the S1-S2 charges needed adjustment. We used Monte Carlo Simulated Annealing (MCSA) method (88) utilized in
 FFparam to predict the approximate partial charges. The sulphur atoms were adjusted to have a partial negative charge of -0.208.
 
-# Theory 
+# Chemical Graph Theory 
 
 Global-Chem comes with a variety of applications and with accessible data comes new avenues of research, here we present our gallery of a highlight features that we find the most interesting to us, the authors. 
 
@@ -290,6 +290,28 @@ CGenFF and SMILES are built on the same language philosophy yet are independent 
 
 Using this new notation, we can infer  easily from which atom type could be incorrectly misassigned without looking at the partial charges in conjunction with the SMILES allowing intuition to supersede the penalty score and using it as an ultimate feedback loop for validation. For example, a N1 in a 3 membered ring, for Aziridine, is mostly likely not going to be NG311 but probably a new atom type because it is too general of an atom type, using the CGenFF nomenclature we can safely make assumptions of what it can be, perhaps NG3C31, which allows us to expand rapidly in predicting new chemical space and allowing a queryable language to bridge atom types to ultimately bridge to the Name using Global-Chem.
 
+# Applications 
+
+### Intereoperability
+
+Global-Chem parsed through seven different tools with majority being successful minus diamond represented with an '&' [Reference Here] and fails with all software including RDKit except the GlobalChem Encoder does account for it. (it is not clear) The percentage of passing is as follows: RDKit 100% [Reference Here], DeepSMILES 99.25% [Reference Here], PartialSMILES 85.7% [Reference Here] , SELFIES 100% [Reference Here], MolVS 98.5% [Reference Here], PySMILES 99.8% [Reference Here]. PartialSMILES proved to be the most robust acceptance/rejection tool in identifying misrepresentations of SMILES. 
+
+| Software        | Number of Failed Compounds | Example of Failed SMILES                                   |
+|-----------------|----------------------------|------------------------------------------------------------|
+| RDKit           | 0                          |  N/A                                                       |
+| SELFIES         | 0                          |  N/A                                                       |
+| Indigo          | 8                          | 'CC([Si](C1=CC=CC=C1)C2=CC=CC=C2)(C)C'                     |
+| PySMILES        | 5                          | '[a].[Na+].[K+].[Mg+2].[Ca+2].[Cl-]'                       |
+| DeepSMILES      | 8                          | 'OC(C1=CC=CC=C1N2)C2=O', 'C1(N2C(CN=C3)=NN=C2)=C3C=CC=C1'  |    
+| MolVS           | 24                         | 'n1ccnc1', 'HF', 'O=N1CCCCC1'                              |
+| PartialSMILES   | 337                        | '[CH]C', '[N]=[N+]=[N-]'                                   |
+
+<p align="center">
+  <i>Table 4: Intereoperability Results of Common Moleculesfrom Global-Chem against different cheminformatic software</i>
+</p>
+
+Indigo's encoder was pretty robust and their software allows for a lot of inteoperabiltiy with different software tools (i.e pdf data parsing of SMILES), when faced with the tert-butyldiphenylsilyl protecting group and the SMILES string with the `Si` is not wrapped in a square brackets that specify an element that doesn't have a complete valence shell. For PySMILES, the inclusion of the '[a]' denoting aromaticity for an "aromatic salt" in the database couldn't be processed. Some other encoders have encoded for an aromaticity keyword as specified in the Daylight Technical Documentation [Reference Here].  DeepSMILES was interesting because it failed on specific functional groups as shown in the example with an oxindole and triazolodiazepines that had complex small branch complexities and moetieies that it didn't foresee existing. MolVS had some interesting results where imidazole (and derivatives) failed probably because it expected for a hydrogen perhaps to be explicity stated due to it's varying protonation states. Hydrofluoric acid was something we were expecting but again the hydrogen actually needed to be enforced with a [H] which is not as intuitive. PartialSMILES proved to be the most robust eluding to SMILES that were partially complete and rejected by their criteria. Failures included a ethyl radical and a azido complex stemming from the interstellarspace molecules. 
+
 ### Chemical Education 
 
 Chemical Education is important for future generations and especially organic chemists in learning the modern nomenclature of the disicipline. Flash cards are the most common way for students to learn organic chemistry functional groups (89). Global-Chem uses this mechanism to created a Global flashcard list of all functional groups relevant to different communities so students can learn chemical structures, their names, and the SMILES that are relevant to their respective field as they learn. This installs foundational knowledge of chemical language which will be useful in their respective careers, shown in Figure 6 and available at www.chemicalgraphtheory.com. 
@@ -313,10 +335,10 @@ Morgan Fingerprints (90) are one of the most common fingerprint mechanism used t
 | Aniline       | 00000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000001000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000001000000000000000000100000000000000000001000000000000100000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000001000000000000000                                                                             |
 
 <p align="center">
-  <i>Table 4: Global-Chem Annotated Bit Reference Index: "Name" name of the molecule, "Binary String" is the bit representation of the molecule with 512 bit length and a morgan radius of 2. </i>
+  <i>Table 5: Global-Chem Annotated Bit Reference Index: "Name" name of the molecule, "Binary String" is the bit representation of the molecule with 512 bit length and a morgan radius of 2. </i>
 </p>
 
-When evaluating binary we can observe patterns for how a molecule is fragmented. In Table 4, Benzene can serve as a marker for any six-membered aromatic compound as a reference. When we expand into the second row looking at toluene we can begin to identify which numbers correlate to benzene and which relate to the methyl group and the respective bit topology. Comparing toluene to benzene at positions 32, 33, 34 with "101" we can start to infer this means a possible bond type from the sp2 carbon to sp3 for the methyl or another connection point. If we exchange the methyl for a hydroxyl we can observe the following bit representation where the positions from 32, 33, 34 of the toluene are reduced back to 0s yet expansion of the binary string at position 64, 65, 66 with a sequential "111" which might suggest the sp2 carbon with oxygen bond which is completely reduced to 0s in aniline. By having a reference annotated index we can read binary strings directly and decode the string which served as a motivation for the development of the decoder engine. Machine Learning often requires converting the SMILES to a encoder with some hyper parameters that account for how the the bit representation of the molecule is encoded because machines learn on numeric characters not alpha. Decoding fingerprints is handled through visualization which disallows safe passage of chemical communication because it isn't recorded effecively. To solve the problem, Global-Chem is a list of common small molecules which can be extended to a reference index of common fingerprints which allows for drawings of bit representations to have an associated name, the decoder engine schematic can be found in Figure 7.
+When evaluating binary we can observe patterns for how a molecule is fragmented. In Table 5, Benzene can serve as a marker for any six-membered aromatic compound as a reference. When we expand into the second row looking at toluene we can begin to identify which numbers correlate to benzene and which relate to the methyl group and the respective bit topology. Comparing toluene to benzene at positions 32, 33, 34 with "101" we can start to infer this means a possible bond type from the sp2 carbon to sp3 for the methyl or another connection point. If we exchange the methyl for a hydroxyl we can observe the following bit representation where the positions from 32, 33, 34 of the toluene are reduced back to 0s yet expansion of the binary string at position 64, 65, 66 with a sequential "111" which might suggest the sp2 carbon with oxygen bond which is completely reduced to 0s in aniline. By having a reference annotated index we can read binary strings directly and decode the string which served as a motivation for the development of the decoder engine. Machine Learning often requires converting the SMILES to a encoder with some hyper parameters that account for how the the bit representation of the molecule is encoded because machines learn on numeric characters not alpha. Decoding fingerprints is handled through visualization which disallows safe passage of chemical communication because it isn't recorded effecively. To solve the problem, Global-Chem is a list of common small molecules which can be extended to a reference index of common fingerprints which allows for drawings of bit representations to have an associated name, the decoder engine schematic can be found in Figure 7.
 
 <p align="center">
 <img width="1011" alt="Screen Shot 2022-07-21 at 6 34 38 AM" src="https://user-images.githubusercontent.com/11812946/180194794-f9347179-d0b4-4e27-a6fa-3bd6593a1a6f.png">
@@ -327,6 +349,8 @@ When evaluating binary we can observe patterns for how a molecule is fragmented.
 ### Levenshtein Distance IUPAC/Preferred Names
 
 IUPAC and Natural name submatching would be of best interest in determining functional group similaritiy between two different names of compounds of unequal length. Global-Chem implements the Levenshtein Distance (91) without grammar modifications to generate the best naming fit as possible if an exact definition is not known. With the inclusion of grammar, molecular similarity on IUPACs with long names (large molecules) might be possible to deduce common functionality and connection points and a new avenue area for chemical linguistic research.  
+
+# Open Source
 
 ### Legal
 
