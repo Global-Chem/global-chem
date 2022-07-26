@@ -350,7 +350,7 @@ IUPAC and Natural name submatching would be of best interest in determining func
 
 ### Legal
 
-Legal research was performed in the implementation of Global-Chem and serve as precedence for future packages to follow the same legal infrastructure. Global-Chem was filed under the "Mozilla Public License 2.0" namely for the purpose that if a company uses the Global-Chem in any commercial software must defend the code contributors should any lawsuits or damages arise regarding that software. This helps validate and form a legal bridge between academia and industry. Global-Chem does not grant trademark or copyright rights, and was filed with the U.S Copyright and U.S Patent and Trademark Office. Global-Chem, the graph network, has no other dependencies and is a self-contained code. However, the extensions for functionality do have dependencies of roughly 
+Legal research was performed in the implementation of Global-Chem and serve as precedence for future packages to follow the same legal infrastructure. Global-Chem was filed under the "Mozilla Public License 2.0" namely for the purpose that if a company uses the Global-Chem in any commercial software must defend the code contributors should any lawsuits or damages arise regarding that software. This helps validate and form a legal bridge between academia and industry. Global-Chem does not grant trademark or copyright rights. Global-Chem, the graph network, has no other dependencies and is a self-contained code. However, the extensions for functionality do have dependencies of roughly 
 106 open source licenses and 1106 dependecies of a depth of to 5. To manage legal at scale we used free open source software academia, FOSSA, to perform dependency search. 
 
 ### Compliance
