@@ -33,7 +33,7 @@ from global_chem.medicinal_chemistry.chinese.how_to_live_longer import HowToLive
 
 # Medicinal Chemistry - Warheads
 
-from global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases import ElectrophilicWarheadsForKinases
+from global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases import ElectrophilicWarheadsForKinases
 from global_chem.medicinal_chemistry.warheads.common_warheads_covalent_inhibitors import CommonWarheadsCovalentInhibitors
 
 # Medicinal Chemistry - Rings
@@ -86,7 +86,13 @@ from global_chem.interstellar_space.interstellar_space import InterstellarSpace
 # Biopharmaceutics - Excipients
 
 from global_chem.formulation.excipients.monoclonal_antibodies.monoclonal_antibodies import MonoclonalAntibodies
-from global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir import CimetidineAndAcyclovir
+from global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_and_acyclovir import CimetidineAndAcyclovir
+
+# Sex
+
+from global_chem.sex.exsens.lube import Lube
+from global_chem.sex.exsens.products import ExsensProducts
+from global_chem.sex.tainted_sexual_enhancements.tainted_sexual_enhancements import TaintedSexualEnhancements
 
 # Miscellaneous
 
@@ -94,12 +100,6 @@ from global_chem.miscellaneous.vitamins import Vitamins
 from global_chem.miscellaneous.open_smiles import OpenSmiles
 from global_chem.miscellaneous.amino_acids import AminoAcids
 from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
-
-# Sex
-
-from global_chem.sex.exsens.lube import Lube
-from global_chem.sex.exsens.products import ExsensProducts
-from global_chem.sex.tainted_sexual_enhancement.tainted_sexual_enhancement import TaintedSexualEnhancements
 
 from global_chem.global_chem import GlobalChem
 
