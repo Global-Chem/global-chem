@@ -308,7 +308,6 @@ Indigo's encoder was pretty robust and their software allows for a lot of inteop
 
 Chemical Education is important for future generations and especially organic chemists in learning the modern nomenclature of the disicipline. Flash cards are the most common way for students to learn organic chemistry functional groups (89). Global-Chem uses this mechanism to created a Global flashcard list of all functional groups relevant to different communities so students can learn chemical structures, their names, and the SMILES that are relevant to their respective field as they learn. This installs foundational knowledge of chemical language which will be useful in their respective careers, shown in Figure 6 and available at www.chemicalgraphtheory.com. 
 
-
 <p align="center">
   <img width="1420" alt="Screen Shot 2022-07-21 at 6 45 30 AM" src="https://user-images.githubusercontent.com/11812946/180195972-538b61ca-181c-4c98-a3d5-0b76c0d9e6f0.png">
   <br>
@@ -346,12 +345,11 @@ IUPAC and Natural name submatching would be of best interest in determining func
 
 ### Legal
 
-Legal research was performed in the implementation of Global-Chem and serve as precedence for future packages to follow the same legal infrastructure. Global-Chem was filed under the "Mozilla Public License 2.0" namely for the purpose that if a company uses the Global-Chem in any commercial software must defend the code contributors should any lawsuits or damages arise regarding that software. This helps validate and form a legal bridge between academia and industry. Global-Chem does not grant trademark or copyright rights. Global-Chem, the graph network, has no other dependencies and is a self-contained code. However, the extensions for functionality do have dependencies of roughly 
-106 open source licenses and 1106 dependecies of a depth of to 5. To manage legal at scale we used free open source software academia, FOSSA, to perform dependency search. 
+Legal research was performed in the implementation of Global-Chem and serve as precedence for future packages to follow the same legal infrastructure. Global-Chem was filed under the "Mozilla Public License 2.0" namely for the purpose that if a company uses the Global-Chem in any commercial software must defend the code contributors should any lawsuits or damages arise regarding that software (94). This helps validate and form a legal bridge between academia and industry. Global-Chem does not grant trademark or copyright rights. Global-Chem, the graph network, has no other dependencies and is a self-contained code. However, the extensions for functionality do have dependencies of roughly 106 open source licenses and 1106 dependecies of a depth of to 5. To manage legal at scale we used free open source software academia, FOSSA, to perform dependency search. 
 
 ### Compliance
 
-Global-Chem follows the same principles outlined in part 11 of Title 21 of the Code of Federal Regulations; Electronic Records, Electronic Signatures (21 CFR Part 11) guidance documentation. Since there are no formal guidelines for how open source software should be handled, we attempt at completing requirements. The Federal Drug and Administration (FDA) considers part 11 to be applicable to the following criteria of electronic records and, using our software architecture, we show how Global-Chem accomplishes each component:
+Global-Chem follows the same principles outlined in part 11 of Title 21 of the Code of Federal Regulations; Electronic Records, Electronic Signatures (21 CFR Part 11) guidance documentation (95). Since there are no formal guidelines for how open source software should be handled, we attempt at completing requirements (96). The Federal Drug and Administration (FDA) considers part 11 to be applicable to the following criteria of electronic records and, using our software architecture, we show how Global-Chem accomplishes each component:
 
 Plausabilitiy: Global-Chem was built on data that was abstracted from books and papers using reading and redrawing. It adds a component of IUPAC/SMILES/SMARTS strings to store it electronically which give it's data it's unique component. The records are open sourced and appropiately version controlled by maintainers of the repository and open source community feedback. Global-Chem's purposes are still unknown as it enters open source deployment. We have built extended functions that live in a seperate package Global-Chem-Extensions that do depend on Global-Chem. Since each version is packaged appropiately, if reliance on a version is a need then it's software is available on Github and PyPi. A Standard Operating Procedure (SOP) can be filed submitted from the extensions utility documentation maintained on Gitbook.
 
@@ -560,6 +558,12 @@ Thank you to Tyree Wilson, Garrick Centola and Paul Shapiro for their helpful di
 (92) Mobley, David L., et al. “Escaping Atom Types in Force Fields Using Direct Chemical Perception.” Journal of Chemical Theory and Computation, vol. 14, no. 11, Nov. 2018, pp. 6076–92.
 
 (93) Tol, Paul. 2021. “Colour Schemes.” Technical note SRON/EPS/TN/09-002 3.2. SRON.
+
+(94) Mozilla Public License, Version 2.0. https://www.mozilla.org/en-US/MPL/2.0/.
+
+(95) Commissioner, Office of the. “Part 11, Electronic Records; Electronic Signatures - Scope and Application.” U.S. Food and Drug Administration, 11 June 2020,
+
+(96) Rhodes, Colin, et al. “Regulatory Compliance Requirements for an Open Source Electronic Image Trial Management System.” Conference Proceedings : ... Annual International Conference of the IEEE Engineering in Medicine and Biology Society. IEEE Engineering in Medicine and Biology Society. Annual Conference, vol. 2010, 2010, pp. 3475–78. PubMed Centra
 
 # Conflict of Interets
 
