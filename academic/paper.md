@@ -205,7 +205,7 @@ Compound lists in Global-Chem can be used to identify specific regions of chemic
 
 <p align="center">
 <img width="1000" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/181523510-f924f53c-f8f5-400c-bf80-55411cf74c9b.png">
-  <i>Figure 2: Penalty Scores Probability Density Distributions of the Charge Penalty Score by Subcommunity </i>
+  <i>Figure 2: Penalty Scores Probability Density Distributions of the Uncertainty Percentage by Subcommunity with Discrete Colours (93)</i>
 </p>
 
 For force field parametrization, we want to focus on the most interesting compounds based on human expertise and on the charge
@@ -558,6 +558,8 @@ Thank you to Tyree Wilson, Garrick Centola and Paul Shapiro for their helpful di
 (91) Levenshtein, V. I. “Binary Codes Capable of Correcting Deletions, Insertions and Reversals.” Soviet Physics Doklady, vol. 10, Feb. 1966, p. 707. 
 
 (92) Mobley, David L., et al. “Escaping Atom Types in Force Fields Using Direct Chemical Perception.” Journal of Chemical Theory and Computation, vol. 14, no. 11, Nov. 2018, pp. 6076–92.
+
+(93) Tol, Paul. 2021. “Colour Schemes.” Technical note SRON/EPS/TN/09-002 3.2. SRON.
 
 # Conflict of Interets
 
