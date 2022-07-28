@@ -204,7 +204,7 @@ At the time of writing the list of features include those shown in Table 2. The 
 Compound lists in Global-Chem can be used to identify specific regions of chemical space that have limited coverage. Therefore, the compound lists in Global-Chem represent future regions of chemical space for force field development. In the CGenFF program we can use larger penalities to indicate a lower extent of analogy to known parameters, information that may be used to identify molecules for additional force field optimization. We passed a variety of Global-Chem objects individually into the software and plotted penalty score distributions of their bonded and non-bonded parameters shown in `Figure 2`. As may be seen the extent of penalties differs significantly for the various lists. Based on the compounds used in the development of CGenFF, we expected the penalties to be lower on molecules that are declared as drugs (Schedule One US Narcotics) and drug-like species (BRAF Kinases Inhibitors for Cancer,  Privileged Scaffolds) whereas we expect the penalty score will be higher for compounds for things that are were not it's original intention (Emerging PerfluoroAlkyls for Environmental Hazards). 
 
 <p align="center">
-<img width="1000" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/180995921-c138034e-ccd4-4204-b341-dc17bd179340.png">
+<img width="1000" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/181523510-f924f53c-f8f5-400c-bf80-55411cf74c9b.png">
   <i>Figure 2: Penalty Scores Probability Density Distributions of the Charge Penalty Score by Subcommunity </i>
 </p>
 
