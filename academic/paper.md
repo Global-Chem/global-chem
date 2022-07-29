@@ -217,7 +217,7 @@ no reference for Plotly?
 
 # Chemical List Selection & Force Field Parametrization
 
-Compound lists in Global-Chem can be used to identify specific regions of chemical space that have limited coverage. Therefore, the compound lists in Global-Chem represent future regions of chemical space for force field development. In the CGenFF program we can use larger penalities to indicate a lower extent of analogy to known parameters, information that may be used to identify molecules for additional force field optimization. We passed a variety of Global-Chem objects individually into the software and plotted penalty score distributions of their bonded and non-bonded parameters shown in `Figure 2`. As may be seen the extent of penalties differs significantly for the various lists. Based on the compounds used in the development of CGenFF, we expected the penalties to be lower on molecules that are declared as drugs (Schedule One US Narcotics) and drug-like species (BRAF Kinases Inhibitors for Cancer,  Privileged Scaffolds) whereas we expect the penalty score will be higher for compounds for things that are were not it's original intention ( Emerging PerfluoroAlkyls for Environmental Hazards). 
+Compound lists in Global-Chem can be used to identify specific regions of chemical space that have limited coverage. Therefore, the compound lists in Global-Chem represent future regions of chemical space for force field development. In the CGenFF program we can use larger penalities to indicate a lower extent of analogy to known parameters, information that may be used to identify molecules for additional force field optimization. We passed a variety of Global-Chem objects individually into the software and plotted penalty score distributions of their bonded and non-bonded parameters shown in `Figure 2`. As may be seen, the extent of penalties differs significantly for the various lists. Based on the compounds used in the development of CGenFF, we expected the penalties to be lower on molecules that are declared as drugs (Schedule One US Narcotics) and drug-like species (BRAF Kinases Inhibitors for Cancer,  Privileged Scaffolds) whereas we expect the penalty score will be higher for compounds for things that are were not it's original intention ( Emerging PerfluoroAlkyls for Environmental Hazards). 
 
 <p align="center">
   <img width="1000" height="950" src="../images/figures/figure_5.png">
@@ -225,18 +225,18 @@ Compound lists in Global-Chem can be used to identify specific regions of chemic
 </p>
 
 For force field parametrization, we want to focus on the most interesting compounds based on human expertise and on the charge
-penalty score as an indicator to a new chemical environment that was left unaccounted for in `CGenFF`. This avoids brute force parametrization 
+penalty score as an indicator to a new chemical environment that was left unaccounted for in `CGenFF` <!--why CGenFF is called out here for the first time, or why not before?-->. This avoids brute force parametrization 
 on mass molecular datasets with no clear intention and allows our force field to remain the best chemical space representation of the community
 with human guided direction. To demonstrate our versatility, we use our own tools to explore both avenues of explored and unexplored chemical space.
-In Figure 2, when evaluating the distributions of the penalty scores and the nodes that accommodate it, we can begin to evaluate trends to provide
-an initial guess of where to look for most likely a compound that wasn't accounted for rapidly. We recorded partial G, V, and A-series toxic agents according 
+In Figure 2 <!--why Figure 2 was called out before and not here?-->, when evaluating the distributions of the penalty scores and the nodes that accommodate it, we can begin to evaluate trends. This provides
+an initial guess of where to look for a compound most likely that wasn't accounted for rapidly. We recorded partial G, V, and A-series toxic agents according 
 to Dr. Mirzayanov's account of the Novichok Program (80). Novichok-5 and Sarin contained fluorophosphane bonds that CGenFF has not seen before evident by the partial charge of the phosphorous with penalties upwards of 200. 
 We can attribute these high scores to its unique chemical environment specifically designed for warfare which qualifies them as relevant candidates given their history.
 If we investigate the covalent warhead inhibitors with a distribution of charge penalty scores ranging from 0 to 300 in Figure 2.
-The range indicates that we have accounted for some warheads but in the most recent years they have gained popularity and are being employed elsewhere especially synthesis. Aziridine, in Figure 3, was chosen because it's similar to an epoxide, acting as a good electrophilic drug fragment to extend a molecule by 2 carbons and provide a terminal reactive amine functional group for further extension.
-The difference in the CGenFF atom type assignment of the Aziridine is the categorical layer where the oxygen in a 3-ring membered ring system have their own specific sub category and 3-membered ring nitrogen do not. This suggests
-the developers of the CGenFF should consider adding a new atom type for this compound. Perfluorobutanoic acid, in Figure 3, is a common herbicide that is popular for the environmental protection agency with a unique chemical pattern where fluorine takes the place of each hydrogen along the alkyl chain, and with, typically, a tail carboxylic acid. This is not typical feature of drug-like molecules and is shown with majority of the charge penalty scores being higher on average on the charge penalty score distribution in Figure 2. This makes them a prime candidate for force field parametrization. 
-Look at the common vitamin list in Figure 2 we found Vitamin C to have a high dihedral penalty scores which was unexpected initially due to it's legacy as an important ubiquitous compound but deeper look into the parameters suggest that the chemical environment,the sp2 carbon in the furanone with surrounding hydroxyls as seen in Figure 3, suggest that this would be tough to navigate through parametrization. Finally, a dithiolane fragment was discovered using the sunbursting, principal component analysis, and pdf parsing features provided in Global-Chem, when analyzing partial of the Enamine Database, and using Global-Chem's RingsInDrugs as a reference for filtering common ring systems to display emerging ring systems of interest to find **rare** viable ring systems. The 1,3-dithiolane was selected because of its simple cyclopentyl architecture but two sulphurs separated by 1 carbon makes a great potential drug fragment anchor to enhance binding affinity due to the nucleophicility of the sulphurs and their respective geometry. `CGenFF` did not recognize this structure and was ultimately selected as the first compound for force field paramirization with the full account provided in the Supporting Information. 
+The range indicates that we have accounted for some warheads but in the most recent years they have gained popularity and are being employed elsewhere, especially synthesis. Aziridine, in Figure 3, was chosen because it's similar to an epoxide, acting as a good electrophilic drug fragment to extend a molecule by 2 carbons and provide a terminal reactive amine functional group for further extension.
+The difference in the CGenFF atom type assignment of the Aziridine is the categorical layer where the oxygen in a 3-ring membered ring system has its own specific sub category and 3-membered ring nitrogen does not. This suggests
+the developers of the CGenFF should consider adding a new atom type for this compound. Perfluorobutanoic acid, in Figure 3, is a common herbicide that is popular for the environmental protection agency with a unique chemical pattern where fluorine takes the place of each hydrogen along the alkyl chain, and with, typically, a tail carboxylic acid. This is not a typical feature of drug-like molecules and is shown with majority of the charge penalty scores being higher on average on the charge penalty score distribution in Figure 2. This makes them a prime candidate for force field parametrization. 
+Looking at the common vitamin list in Figure 2, we found Vitamin C to have a high dihedral penalty scores, which was unexpected initially due to its legacy as an important ubiquitous compound. But deeper look into the parameters suggest that the chemical environment, the sp2 carbon in the furanone with surrounding hydroxyls, as seen in Figure 3, would be tough to navigate through parametrization. Finally, a dithiolane fragment was discovered by principal component analysis and pdf parsing features provided in Global-Chem, when analyzing a portion of the Enamine Database. Global-Chem's RingsInDrugs were used as a reference for filtering common ring systems to display emerging ring systems of interest to find **rare** viable ring systems. <!--I rewrote the sentence(s) before because I was confused by it. Please check it if it makes sence, or rewrite again.-->The 1,3-dithiolane was selected because of its simple cyclopentyl architecture, but two sulphurs separated by 1 carbon makes a great potential drug fragment anchor to enhance binding affinity due to the nucleophilicity of the sulphurs and their respective geometry. `CGenFF` did not recognize this structure and was ultimately selected as the first compound for force field parametrization with the full account provided in the Supporting Information. 
 
 <p align="center">
 <img width="604" alt="Screen Shot 2022-07-21 at 8 34 24 AM" src="https://user-images.githubusercontent.com/11812946/180214512-4175c15f-33eb-44a8-84e6-4d22e85ef9aa.png">
@@ -246,22 +246,22 @@ Look at the common vitamin list in Figure 2 we found Vitamin C to have a high di
 
 ### 1,3-Dithiolane
 
-We truncated dithiolane from the amide and passed through CGenFF (Full data available in the Supporting Information) which indicated that the dilemma was in part due to the extent of puckering caused by the 2 Sulphur atoms within the constrained cyclopentane ring system.
-To begin our paramitirization process we chose to focus on `S1-C3-C4-S2`, backbone to the cyclopentane ring and the dihedral from the methyl to one carbon on the backbone `C1-C2-S1-C3`. Since the molecule is symmetric, it makes the complexity of the molecule decrease twofold. 
-The parametirization of 1,2-dithiolane was performed using FFParam (81) following the FFParam Workflow (82). To begin our process, we first subject the compound to quantum mechanics (QM) geometry optimization, with Gaussian (83), using mp2 theory to treat electron correlation (84) and basis set of “6-31/+G*” to handle the orbital polarizability of the sulphur atom (85). 
+We truncated dithiolane from the amide and passed through CGenFF (full data available in the Supporting Information), which indicated that the dilemma was in part due to the extent of puckering caused by the 2 Sulphur atoms within the constrained cyclopentane ring system.
+To begin our parametrization process, we chose to focus on `S1-C3-C4-S2`, backbone to the cyclopentane ring and the dihedral from the methyl to one carbon on the backbone `C1-C2-S1-C3`. Since the molecule is symmetric, it makes the complexity of the molecule decrease twofold. 
+The parametrization of 1,2-dithiolane was performed using FFParam (81) following the FFParam Workflow (82). To begin our process, we first subject the compound to quantum mechanics (QM) geometry optimization, with Gaussian (83), using mp2 theory to treat electron correlation (84) and basis set of “6-31/+G*” to handle the orbital polarizability of the sulphur atom (85). 
 Our intended goal is to use the QM as a reference target data that the molecular mechanics (MM), CHARMM (86), should approximately match. We perform potential energy surface (PES) scans around our selected dihedrals and compare the surface of the QM vs the MM. 
 
-To match the PES scan for the MM to the QM we have to tweak “tunable” parameters as defined in charmm potential energy function (i.e force constants, multiplicity) (87) until we reach a reasonable surface scan and numbers that make common sense. To determine the partial charges, we observe 
-the dipole moment induced by the interaction between the atom of interest and water. When the dipole moment of the QM and MM reach within a range 
-(< 0.5kcal/mol) we consider that reasonable. 
+To match the PES scan for the MM to the QM we had to tweak “tunable” parameters as defined in CHARMM potential energy function (i.e force constants, multiplicity) (87) until we reached a reasonable surface scan and numbers that make common sense. To determine the partial charges, we observed 
+the dipole moment induced by the interaction between the atom of interest and water. When the dipole moment of the QM and MM reached within a range 
+(< 0.5 kcal/mol) we considered that reasonable. 
 
-To accomplish our parametirization we applied the following: for `S1-C3-C4-S2`, if we break the connection ring component 
-around the C3-C4 single bond in the  atom ring we obtain a natural rotation of a thiomethyl group. Additional multiplicities of 1 and 2 of varying force constants
-seemed to have a negative effect. We added a relatively high force constant of a value of 2.3800 to because this particular 
+To accomplish our parametrization we applied the following: for `S1-C3-C4-S2`, if we break the connection ring component 
+around the C3-C4 single bond in the atom ring we obtained a natural rotation of a thiomethyl group. Additional multiplicities of 1 and 2 of varying force constants
+seemed to have a negative effect. We added a relatively high force constant of a value of 2.3800 because this particular 
 dihedral is part of a ring where there is a significant energy barrier of rotation due to constraint of the cyclopentane backbone. 
 
-For C1-C2-S1-C3, still maintained the multiplicity of 3 but with a far less reduced force constant of 1.1000. 
-This was due to the methyl that replaced the amide allowing some degrees of rotation but the S1 is still constrained within the ring system. 
+For C1-C2-S1-C3, we still maintained the multiplicity of 3 but with a far less reduced force constant of 1.1000. 
+This was due to the methyl, that replaced the amide allowing some degrees of rotation, but the S1 is still constrained within the ring system. 
 Final PES scans are displayed in Figure 4. 
 
 <p align="center">
@@ -270,7 +270,7 @@ Final PES scans are displayed in Figure 4.
   <i>Figure 4: Final Potential Energy Scans of dihedrals S1-C3-C4-S2 and C1-C2-S1-C3</i>
 </p>
 
-Lastly, the S1-S2 charges needed adjustment. We used Monte Carlo Simulated Annealing (MCSA) method (88) utilized in
+Lastly, the S1-S2 charges needed adjustment. We used the Monte Carlo Simulated Annealing (MCSA) method (88) utilized in
 FFparam to predict the approximate partial charges. The sulphur atoms were adjusted to have a partial negative charge of -0.208.
 
 # Chemical Graph Theory 
