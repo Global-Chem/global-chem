@@ -13,49 +13,60 @@ class NamedReactionsInOrganicSynthesis(object):
   @staticmethod
   def get_smiles():
 	
+      '''
+      
+      There are rules that we need to record this data. Since there are multiple conformations of a reaction tied to the name, we will
+      try to only elect one and eventually they will be objects.
+      
+      Reactants to Products will be split by a virtual bond as a reaction pathway arrow that can get eliminated when processing the strings. 
+      and is useful for natural language processing to know the start and ends. 
+      
+      '''
+	
       validated = {
-        'lieben_haloform_reaction': 'CC(C)=O.CC(O)=O',    
-	'benzilic_acid_rearrangement': 'O=C(C1=CC=CC=C1)C(C2=CC=CC=C2)=O.OC(C(O)=O)(C3=CC=CC=C3)C4=CC=CC=C4',
-        'aldol_reaction': 'CC(C(C)=O)C.CC(C(C)=O)(C(O)C)C',
-        'dieckmann_condensation': 'O=C(O)CCCCC(O)=O.O=C1C(C(O)=O)CCC1',
-        'strecker_reation': 'CC=O.O=C(O)CN',
-        'hofmann_elimination': 'CCC(C)N.CCC=C',
-        'wiallmson_ether_synthesis': 'C[F,Cl,Br,I].COC',
-        'cannizzaro_reaction': 'CC=O.[*:1].CCO.CC(O)=O'
-	'wurtz_coulping': 'CBr.CC',
-        'kolbe-schmitt_reaction': 'OC2=CC=CC=C2.OC1=C(C(O)=O)C=CC=C1',
-        'pinacol_rearrangement': 'OC(C)(C)C(O)(C)C.O=C(C)C(C)(C)C',
-        'semipinacol_rearrangement': 'OC(C)(C)C([F,Cl,Br,I])(C)C.O=C(C)C(C)(C)C',
-	'acyloin_condensation': 'COC(C)=O.CC(O)C(C)=O',
-	'hunsdiecker_reaction_borodin_reaction': 'CC([O-])=O.CBr',
-	'perkin_reaction': r'O=CC1=CC=CC=C1.O=C(O)/C=C\C2=CC=CC=C2',
-	'glaser_coupling_reaction': 'CC#C[H].CC#CC#CC',
-	'lossen_rearrangement': 'CC(N([H])OC(C)=O)=O.CN=C=O',
-        'reimer-tiemann_reaction': 'OC1=CC=CC=C1.OC2=C(C([H])=O)C=CC=C2',
-	'friedel-crafts_acylation': 'C1=CC=CC=C1.O=C(C)C2=CC=CC=C2',
-        'friedel-crafts_alkylation': 'C1=CC=CC=C1.CC2=CC=CC=C2',
-	'malonic_ester_synthesis': 'O=C(CC(OC)=O)OC.O=C(OC)CC',
+	'pinner reaction': 'CC#N.~.CC(OC)=N',
+        'lieben haloform reaction': 'CC(C)=O.~.CC(O)=O',    
+	'benzilic acid rearrangement': 'O=C(C1=CC=CC=C1)C(C2=CC=CC=C2)=O.~.OC(C(O)=O)(C3=CC=CC=C3)C4=CC=CC=C4',
+        'aldol reaction': 'CC(C(C)=O)C.~.CC(C(C)=O)(C(O)C)C',
+        'dieckmann condensation': 'O=C(O)CCCCC(O)=O.~.O=C1C(C(O)=O)CCC1',
+        'strecker reation': 'CC=O.~.O=C(O)CN',
+        'hofmann elimination': 'CCC(C)N.~.CCC=C',
+        'wiallmson ether synthesis': 'C[F,Cl,Br,I].~.COC',
+        'cannizzaro reaction': 'CC=O.~.CCO.CC(O)=O'
+	'wurtz coulping': 'CBr.~.CC',
+        'kolbe schmitt reaction': 'OC2=CC=CC=C2.~.OC1=C(C(O)=O)C=CC=C1',
+        'pinacol rearrangement': 'OC(C)(C)C(O)(C)C.~.O=C(C)C(C)(C)C',
+        'semipinacol rearrangement': 'OC(C)(C)C([F,Cl,Br,I])(C)C.~.O=C(C)C(C)(C)C',
+	'acyloin condensation': 'COC(C)=O.~.CC(O)C(C)=O',
+	'hunsdiecker borodin reaction': 'CC([O-])=O.~.CBr',
+	'perkin reaction': r'O=CC1=CC=CC=C1.~.O=C(O)/C=C\C2=CC=CC=C2',
+	'glaser coupling reaction': 'CC#C[H].~.CC#CC#CC',
+	'lossen rearrangement': 'CC(N([H])OC(C)=O)=O.~.CN=C=O',
+        'reimer tiemann reaction': 'OC1=CC=CC=C1.~.OC2=C(C([H])=O)C=CC=C2',
+	'friedel crafts acylation': 'C1=CC=CC=C1.~.O=C(C)C2=CC=CC=C2',
+        'friedel crafts alkylation': 'C1=CC=CC=C1.~.CC2=CC=CC=C2',
+	'malonic ester synthesis': 'O=C(CC(OC)=O)OC.~.O=C(OC)CC',
+	'koenigs knorr glycosidation': 'CC(OCC1C(OC(C)=O)C(OC(C)=O)C(OC(C)=O)C(Br)O1)=O.~.CC(OCC2C(OC(C)=O)C(OC(C)=O)C(OC(C)=O)C(OC)O2)=O',
+        'skraup and doebner miller reaction': r'NC1=CC=CC=C1.~.CC2=NC3=CC=CC=C3C=C2',
+        'ciamician dennstedt rearrangement': 'C1=CNC=C1.~.[Cl,Br,I]C2=CC=CN=C2',
+        'para fries photo fries rearrangement': 'O=C(C)OC1=CC=CC=C1.~.OC2=CC=C(C(C)=O)C=C2',
+	'ortho fries photo rearrangement': 'O=C(C)OC1=CC=CC=C1.~.O=C(C)C2=C(O)C=CC=C2',
+        'hell volhard zelinsky reaction': 'CCC(O)=O.~.CC([Cl,Br])C(O)=O',
+        'hofmann rearrangement': 'CC(N)=O.~.CN',
+        'hantzsch dihydropyridine synthesis': 'CC(CC(C)=O)=O.~.CC1=C(C(C)=O)C(C)C(C(C)=O)=C(C)N1',
+        'combes quinoline synthesis': 'NC1=CC=CC=C1.~.CC2=CC(C)=NC3=CC=CC=C32',
+        'fischer indole synthesis': 'NNC1=CC=CC=C1.~.CC2=C(C)NC3=CC=CC=C32',
+        'hofmann löffler freytag reaction': 'CCCCCN([Cl,Br,I])C.~.CC1CCCN1C',
+        'michael addition': 'C=CC.~.CC(CCC)C',
+        'von pechmann reaction': 'OC1=CC=CC=C1.~.CC(C2=CC=CC=C2O3)=CC3=O',
+        'paal knorr furan synthesis': 'CC(CCC(C)=O)=O.~.CC1=CC=C(C)O1',
+        'paal knorr pyrrole synthesis': 'CC(CCC(C)=O)=O.~.CC1=CC=C(C)N1C',
+        'sandmeyer reaction': 'NC1=CC=CC=C1.~.[F,Cl,Br,I]C2=CC=CC=C2',
+
       }
 
       smiles = {
-        'pinner_reaction': 'CC#N.CC(OC)=N',
-        'koenigs-knorr_glycosidation': 'CC(OCC1C(OC(C)=O)C(OC(C)=O)C(OC(C)=O)C(Br)O1)=O.CC(OCC2C(OC(C)=O)C(OC(C)=O)C(OC(C)=O)C(OC)O2)=O',
-        'skraup_and_doebner-miller_reaction': r'NC1=CC=CC=C1.O=C/C=C/C.CC2=NC3=CC=CC=C3C=C2',
-        'ciamician-dennstedt_rearrangement': 'C1=CNC=C1.[Cl,Br,I]C2=CC=CN=C2',
-        'fries-_photo-fries_rearrangement': 'O=C(C)OC1=CC=CC=C1.OC2=CC=C(C(C)=O)C=C2',
-	'anionic_ortho-fries_rearrangement': 'O=C(C)OC1=CC=CC=C1.O=C(C)C2=C(O)C=CC=C2',
-        'hell-volhard-zelinsky_reaction': 'CCC(O)=O.CC([Cl,Br])C(O)=O',
-        'hofmann_rearrangement': 'CC(N)=O.CN',
-        'hantzsch_dihydropyridine_synthesis': 'CC(CC(C)=O)=O.CC=O.CC1=C(C(C)=O)C(C)C(C(C)=O)=C(C)N1',
-        'combes_quinoline_synthesis': 'NC1=CC=CC=C1.CC(CC(C)=O)=O.CC2=CC(C)=NC3=CC=CC=C32',
-        'fischer_indole_synthesis': 'NNC1=CC=CC=C1.CCC(C)=O.CC2=C(C)NC3=CC=CC=C32',
-        'hofmann–löffler-freytag_reaction': 'CCCCCN([Cl,Br,I])C.CC1CCCN1C',
-        'michael_addition': 'CC(CC(OCC)=O)=O.C=CC(C)=O.CC(C(C(OCC)=O)CCC(C)=O)=O',
-        'von_pechmann_reaction': 'OC1=CC=CC=C1.CC(CC(OCC)=O)=O.CC(C2=CC=CC=C2O3)=CC3=O',
-        'paal-knorr_furan_synthesis': 'CC(CCC(C)=O)=O.CC1=CC=C(C)O1',
-        'paal-knorr_pyrrole_synthesis': 'CC(CCC(C)=O)=O.CN.CC1=CC=C(C)N1C',
-        'sandmeyer_reaction': 'NC1=CC=CC=C1.[F,Cl,Br,I]C2=CC=CC=C2',
-        'schotten-baumann_reaction': 'CC(Cl)=O.CN.CC(NC)=O',	# from amine, R CC(OC)=O from alcohol 
+        'schotten baumann reaction': 'CC(Cl)=O.CN.CC(NC)=O',	# from amine, R CC(OC)=O from alcohol 
         'buchner_method_of_ring_enlargement_buchner_reaction': 'C1=CC=CC=C1.O=C(OCC)C=[N+]=[N-].O=C(OCC)C2C=CC=CC=C2',
         'curtius_rearrangement': 'CC(N=[N+]=[N-])=O.CN',	# from water, R CNC(=O)OC from alcohol, R CNC(=O)NC from amine 
         'beckman_rearrangement': 'CC(=NO)C.CC(NC)=O',
