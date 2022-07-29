@@ -127,7 +127,7 @@ class PCAAnalysis(object):
 
         kmean_data = dict(
             x=chemicalspace[:,0],
-            y=chemicalspace[:,2],
+            y=chemicalspace[:,1],
             img=[PCAAnalysis.mol2svg(m) for m in molecules_list],
             ids=[str(i) for i in range(0, len(self.smiles_list))],
             fill_color=kmeanc,
