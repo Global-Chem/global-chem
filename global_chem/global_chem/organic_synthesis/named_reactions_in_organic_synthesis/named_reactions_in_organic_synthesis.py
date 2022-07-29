@@ -62,21 +62,20 @@ class NamedReactionsInOrganicSynthesis(object):
         'paal knorr furan synthesis': 'CC(CCC(C)=O)=O.~.CC1=CC=C(C)O1',
         'paal knorr pyrrole synthesis': 'CC(CCC(C)=O)=O.~.CC1=CC=C(C)N1C',
         'sandmeyer reaction': 'NC1=CC=CC=C1.~.[F,Cl,Br,I]C2=CC=CC=C2',
-
+        'schotten baumann reaction': 'CC(Cl)=O.~.CC(NC)=O',	
+	'buchner method of ring enlargement buchner reaction': 'C1=CC=CC=C1.~.O=C(OCC)C2C=CC=CC=C2',
+	'curtius_rearrangement': 'CC(N=[N+]=[N-])=O.~.CN',	
+        'beckman rearrangement': 'CC(=NO)C.CC(NC)=O',
+        'knorr pyrrole synthesis': 'O=C(C(C)N)C.~.CC1=C(C(OCC)=O)C(C)=C(C)N1',
+        'claisen condensation': 'CCOC(C)=O.CCOC(CC(C)=O)=O',
+        'gabriel synthesis': 'C[F,Cl,Br,I].CN',
+        'japp klingemann reaction': r'N#[N+]C1=CC=CC=C1.~.C/C(C(OC)=O)=N\NC2=CC=CC=C2',
+        'reformatsky reaction': '[F,Cl,Br,I]CC(OC)=O.~.COC(CCO)=O',
+        'tishchenko reaction': 'CC=O.CC(OCC)=O',
       }
 
       smiles = {
-        'schotten baumann reaction': 'CC(Cl)=O.CN.CC(NC)=O',	# from amine, R CC(OC)=O from alcohol 
-        'buchner_method_of_ring_enlargement_buchner_reaction': 'C1=CC=CC=C1.O=C(OCC)C=[N+]=[N-].O=C(OCC)C2C=CC=CC=C2',
-        'curtius_rearrangement': 'CC(N=[N+]=[N-])=O.CN',	# from water, R CNC(=O)OC from alcohol, R CNC(=O)NC from amine 
-        'beckman_rearrangement': 'CC(=NO)C.CC(NC)=O',
-        'knorr_pyrrole_synthesis': 'O=C(C(C)N)C.O=C(OCC)CC(C)=O.CC1=C(C(OCC)=O)C(C)=C(C)N1',
-        'claisen_condensation': 'CCOC(C)=O.CCOC(CC(C)=O)=O',
-        'gabriel_synthesis': 'C[F,Cl,Br,I].CN',
-        'japp-klingemann_reaction': r'[N+]=NC1=CC=CC=C1.CC(C(C)C(O)=O)=O.C/C(C(OC)=O)=N\NC1=CC=CC=C1',
-        'reformatsky_reaction': '[F,Cl,Br,I]CC(OC)=O.C=O.COC(CCO)=O',
-        'tishchenko_reaction': 'CC=O.CC(OCC)=O',
-        'dimroth_rearrangement': 'NC1=C(C)N=NN1C.CC2=C(NC)NN=N2',
+        'dimroth rearrangement': 'NC1=C(C)N=NN1C.CC2=C(NC)NN=N2',
         'biginelli_reaction': 'NC(N)=O.O=CC1=CC=CC=C1.CC(CC(OCC)=O)=O.O=C(OCC)C(C(N2)C3=CC=CC=C3)=C(C)NC2=O',
         'darzens_glycidic_ester_condensation': 'CC(C)=O.CC(C)C(C)=O',
         'bischler-napieralski_isoquinoline_synthesis': 'CC(NCCC1=CNC2=CC=CC=C21)=O.CC3=NCCC4=C3NC5=CC=CC=C54',
