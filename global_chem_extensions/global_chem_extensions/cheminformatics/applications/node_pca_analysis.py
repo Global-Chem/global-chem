@@ -8,6 +8,7 @@ import sys
 
 # Scientific Imports
 # ------------------
+import pandas as pd
 import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
@@ -48,7 +49,8 @@ class PCAAnalysis(object):
                  random_state,
                  file_name,
                  save_file = False,
-                 return_mol_ids = False,
+                 save_pcs = False,
+                 return_mol_ids = False
         ):
 
         self.smiles_list = smiles_list
@@ -59,6 +61,7 @@ class PCAAnalysis(object):
         self.random_state = random_state
         self.file_name = file_name
         self.save_file = save_file
+        self.save_pcs = save_pcs
         self.return_mol_ids = return_mol_ids
 
         self.plot_mappings = {}
@@ -126,16 +129,23 @@ class PCAAnalysis(object):
 
 
         kmean_data = dict(
-            x=chemicalspace[:,0],
-            y=chemicalspace[:,1],
+            PC1=chemicalspace[:,0],
+            PC2=chemicalspace[:,1],
+            PC3=chemicalspace[:,2],
             img=[PCAAnalysis.mol2svg(m) for m in molecules_list],
             ids=[str(i) for i in range(0, len(self.smiles_list))],
             fill_color=kmeanc,
         )
+        
+        #create df of pcs for optional output
+        ds={'cols': ['ids','PC1','PC2','PC3','fill_color']}
+        PCdf=pd.DataFrame(kmean_data)
+        PCdf=PCdf[ds['cols']]
+        PCdf['smiles']=self.smiles_list
 
         source = ColumnDataSource(kmean_data)
         plot = figure(plot_width=1000, plot_height=1000, tooltips=TOOLTIPS, title='Compounds')
-        plot.circle('x', 'y',color='fill_color', size=10, fill_alpha=0.2,source=source)
+        plot.circle('PC1', 'PC2',color='fill_color', size=10, fill_alpha=0.2,source=source)
 
         plot = gridplot([
             [plot]
@@ -143,12 +153,15 @@ class PCAAnalysis(object):
 
         if self.save_file:
 
-            output_file(filename=self.file_name, title="Static HTML file")
+            output_file(filename=(self.file_name + ".html"), title="Static HTML file")
             save(plot)
 
         else:
             output_notebook()
             show(plot)
+            
+        if self.save_pcs:
+            PCdf.to_csv((self.file_name + ".tsv"), sep="\t", index=False)
 
         if self.return_mol_ids:
             return self.plot_mappings
