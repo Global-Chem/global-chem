@@ -77,16 +77,16 @@ class NamedReactionsInOrganicSynthesis(object):
         'darzens glycidic ester condensation': 'CC(C)=O.~.O=C(OCC)C1OC1',
         'bischler napieralski isoquinoline synthesis': 'CC(NCCC1=CNC2=CC=CC=C21)=O.~.CC3=NCCC4=C3NC5=CC=CC=C54',
         'dienone phenol rearrangement': 'CC(C=C1)(C)C=CC1=O.~.CC2=C(C)C=C(O)C=C2',
+	'pomeranz fritsch reaction': 'O=CC1=CC=CC=C1.NCC(OC)OC.~.C23=CC=CC=C2C=NC=C3',
+        'stobbe condensation': r'CCOC(CCC(OCC)=O)=O.O=C(C1=CC=CC=C1)C2=CC=CC=C2.~.OC(C/C(C(OCC)=O)=C(C3=CC=CC=C3)\C4=CC=CC=C4)=O',
+        'favorskii rearrangement': '[F,Cl,Br,I]C1CCCCC1=O.~.O=C(O)C2CCCC2',
+        'knoevenagel condensation': 'O=C(C)C.~.C=C(C)C',
+        'nef reaction': 'O=[N+](C(C)C)[O-].~.O=C(C)C',
 
       }
 
       smiles = {
-        'pomeranz fritsch reaction': 'O=CC1=CC=CC=C1.NCC(OC)OC.C23=CC=CC=C2C=NC=C3',
-        'stobbe_condensation': r'CCOC(CCC(OCC)=O)=O.CC(C)=O.C/C(C)=C(CC(O)=O)\C(OCC)=O',
-        'favorskii_rearrangement_and_homo-favorskii_rearrangement': '[F,Cl,Br,I]C1CCCCC1=O.O=C(O)C2CCCC2',
-        'knoevenagel_condensation': r'O=CC1=CC=CC=C1.COC(CC(OC)=O)=O.O=C(OC)/C(C(OC)=O)=C/C2=CC=CC=C2',
-        'nef_reaction': 'O=[N]([O])C(C)C.O=C(C)C',
-        'smiles_rearrangement': '[F,Cl,Br,I]C1=C(OCCN)C=CC([N+]([O-])=O)=C1.[F,Cl,Br,I]C2=C(NCCO)C=CC([N+]([O-])=O)=C2',	# X-Y rearrangment where X(here O) and Y(here NH2) can be many different groups, also ortho- and para- substituents(here halogens and NO2) can be different groups
+        'smiles rearrangement': '[F,Cl,Br,I]C1=C(OCCN)C=CC([N+]([O-])=O)=C1.[F,Cl,Br,I]C2=C(NCCO)C=CC([N+]([O-])=O)=C2',	# X-Y rearrangment where X(here O) and Y(here NH2) can be many different groups, also ortho- and para- substituents(here halogens and NO2) can be different groups
         'wacker_oxidation': 'C=C.CC=O',
         'henry_reaction': 'CC[N+]([O-])=O.CC(C)=O.C/C([N+]([O-])=O)=C(C)\C',	# from dehydration, CC(C(C)=C)[N+]([O-])=O from oxidation, CC(C(O)(C)C)N from reduction
         'michaelis-arbuzov_reaction': 'CP(C)OC.CP(C)(C)=O',	# phosphinite to phosphine, CP(OC)OC.CP(C)(OC)=O phosphonite to phosphinate, COP(OC)OC.CP(OC)(OC)=O phosphite ester to phosphonate oxide
