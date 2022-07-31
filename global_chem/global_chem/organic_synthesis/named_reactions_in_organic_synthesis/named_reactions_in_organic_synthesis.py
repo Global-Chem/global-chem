@@ -64,7 +64,7 @@ class NamedReactionsInOrganicSynthesis(object):
         'sandmeyer reaction': 'NC1=CC=CC=C1.~.[F,Cl,Br,I]C2=CC=CC=C2',
         'schotten baumann reaction': 'CC(Cl)=O.~.CC(NC)=O',	
 	'buchner method of ring enlargement buchner reaction': 'C1=CC=CC=C1.~.O=C(OCC)C2C=CC=CC=C2',
-	'curtius_rearrangement': 'CC(N=[N+]=[N-])=O.~.CN',	
+	'curtius rearrangement': 'CC(N=[N+]=[N-])=O.~.CN',	
         'beckman rearrangement': 'CC(=NO)C.CC(NC)=O',
         'knorr pyrrole synthesis': 'O=C(C(C)N)C.~.CC1=C(C(OCC)=O)C(C)=C(C)N1',
         'claisen condensation': 'CCOC(C)=O.CCOC(CC(C)=O)=O',
@@ -72,15 +72,16 @@ class NamedReactionsInOrganicSynthesis(object):
         'japp klingemann reaction': r'N#[N+]C1=CC=CC=C1.~.C/C(C(OC)=O)=N\NC2=CC=CC=C2',
         'reformatsky reaction': '[F,Cl,Br,I]CC(OC)=O.~.COC(CCO)=O',
         'tishchenko reaction': 'CC=O.CC(OCC)=O',
+	'dimroth rearrangement': 'NC1=C(N=NN1C2=CC=CC=C2)C.~.CC(N=NN3)=C3NC4=CC=CC=C4',
+        'biginelli reaction': 'NC(N)=O.O=CC1=CC=CC=C1.CC(CC(OCC)=O)=O.~.O=C(OCC)C(C(N2)C3=CC=CC=C3)=C(C)NC2=O',
+        'darzens glycidic ester condensation': 'CC(C)=O.~.O=C(OCC)C1OC1',
+        'bischler napieralski isoquinoline synthesis': 'CC(NCCC1=CNC2=CC=CC=C21)=O.~.CC3=NCCC4=C3NC5=CC=CC=C54',
+        'dienone phenol rearrangement': 'CC(C=C1)(C)C=CC1=O.~.CC2=C(C)C=C(O)C=C2',
+
       }
 
       smiles = {
-        'dimroth rearrangement': 'NC1=C(C)N=NN1C.CC2=C(NC)NN=N2',
-        'biginelli_reaction': 'NC(N)=O.O=CC1=CC=CC=C1.CC(CC(OCC)=O)=O.O=C(OCC)C(C(N2)C3=CC=CC=C3)=C(C)NC2=O',
-        'darzens_glycidic_ester_condensation': 'CC(C)=O.CC(C)C(C)=O',
-        'bischler-napieralski_isoquinoline_synthesis': 'CC(NCCC1=CNC2=CC=CC=C21)=O.CC3=NCCC4=C3NC5=CC=CC=C54',
-        'dienone-phenol_rearrangement': 'CC(C=C1)(C)C=CC1=O.CC2=C(C)C=C(O)C=C2',
-        'pomeranz-fritsch_reaction': 'O=CC1=CC=CC=C1.NCC(OC)OC.C23=CC=CC=C2C=NC=C3',
+        'pomeranz fritsch reaction': 'O=CC1=CC=CC=C1.NCC(OC)OC.C23=CC=CC=C2C=NC=C3',
         'stobbe_condensation': r'CCOC(CCC(OCC)=O)=O.CC(C)=O.C/C(C)=C(CC(O)=O)\C(OCC)=O',
         'favorskii_rearrangement_and_homo-favorskii_rearrangement': '[F,Cl,Br,I]C1CCCCC1=O.O=C(O)C2CCCC2',
         'knoevenagel_condensation': r'O=CC1=CC=CC=C1.COC(CC(OC)=O)=O.O=C(OC)/C(C(OC)=O)=C/C2=CC=CC=C2',
