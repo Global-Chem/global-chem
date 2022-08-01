@@ -18,25 +18,20 @@ authors:
     affiliation: 2
   - name: Bettina Lier
     affiliation: 4
-  - name: Paween Mahinthichaichan
-    affiliation: 1
   - name: Chris Burke
     affiliation: 2
   - name: Jacob Weiner
     orcid: 0000-0003-0033-6033
     affiliation: 1
-  - name: Elena Yi Chow
-    orcid: 0000-0001-5559-1635
-    affiliation: 2
   - name: Anastasia Croitoru
     orcid: XXX
     affiliation: 5
-  - name: Anmol Kumar
-    affiliation: 1
   - name: Aziza Frank
     affiliation: 1
   - name: Nathaniel McClean
     orcid: XXX
+  - name: Anmol Kumar
+    affiliation: 1
     affiliation: 1
   - name: Aarion Romany
     affiliation: 1
@@ -56,6 +51,9 @@ authors:
     affiliation: 6
   - name: Rebecca Pinette-Dorin
     affiliation: 6
+  - name: Elena Yi Chow
+    orcid: 0000-0001-5559-1635
+    affiliation: 2
   - name: Sevien Schulhoff
     orcid: XXXX
     affiliation: 1
