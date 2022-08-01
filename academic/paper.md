@@ -366,7 +366,7 @@ Legacy Systems: Global-Chem has been operational for nearly three years since it
 
 Copies of Records: Global-Chem has records stored on Github for the software that can be exported to a variety of formats as provided by Microsoft. For documentation, it is hosted on Gitbook and versioning controlled in accordance to the software. Each "book" can be exported into Portable Data Format (PDF) appropiate for FDA submission.
 
-Record Retention: Global-Chem has a record of the documentation versioned controlled to a unique id (UUID) that serves as it's identifier for each iteration stored on Gitbook. Each version is stored as markdown files and be converted to PDF, if needed.
+Record Retention: Global-Chem has a record of the documentation versioned controlled to a unique id (UUID) that serves as it's identifier for each iteration stored on Gitbook (99). Each version is stored as markdown files and be converted to PDF, if needed.
 
 # Conclusion
 
@@ -573,6 +573,8 @@ Thank you to Tyree Wilson, Garrick Centola and Paul Shapiro for their helpful di
 (97). Jolliffe, I. T., editor. “Principal Component Analysis and Factor Analysis.” Principal Component Analysis, Springer, 2002, pp. 150–66. Springer Link, https://doi.org/10.1007/0-387-22440-8_7.
 
 (98) Ding, Chris, and Xiaofeng He. “K -Means Clustering via Principal Component Analysis.” Twenty-First International Conference on Machine Learning  - ICML ’04, ACM Press, 2004, p. 29.
+
+(99) Leach, Paul J., et al. A Universally Unique IDentifier (UUID) URN Namespace. Request for Comments, RFC 4122, Internet Engineering Task Force, July 2005. IETF,
 
 # Conflict of Interets
 
