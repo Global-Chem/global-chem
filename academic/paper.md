@@ -347,8 +347,7 @@ It is important for any general chemical artificial intelligence to distinguish 
   <i>Figure 8: PCA of all the molecules in Global-Chem with a Morgan Radius of 1, 512 bit representation, and a k-means clustering of two to distinguish aromatic (red) and non-aromatic (green) </i>
 </p>
 
-In Figure 8, from hovering over the data we can visually inspect how the machine classified the data into two categories: aromatic and non-aromatic. A clear distinct line between the two major features is obvious which means using these parameters and this particular dataset any general artificial intelligence program can use Global-Chem and these respective hyperparameters as a starting point for learning aromaticity is a root of life fundamental feature. 
-
+In Figure 8, from hovering over the data we can visually inspect how the machine classified the data into two categories: aromatic and non-aromatic. A clear distinct line between the two major features is obvious which means using these parameters and this combined particular dataset, based on expertise of different humans, can create new general artificial intelligence programs can use this as a starting point for learning aromaticity which is a root of life fundamental feature for organic molecules. 
 
 ### Compliance
 
