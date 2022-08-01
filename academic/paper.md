@@ -280,7 +280,7 @@ CGenFF and SMILES are built on the same language philosophy yet are independent 
   <i>Table 3: Global-Chem Molecular Columns: "Name" name of the molecule, "Weininger Notation" is the original SMILES notation,  "Proposed New Notation" is the SMILES and CGenFF Atom Types language representation in CurlySMILES </i>
 </p>
 
-Using this new notation, we can infer  easily from which atom type could be incorrectly misassigned without looking at the partial charges in conjunction with the SMILES allowing intuition to supersede the penalty score and using it as an ultimate feedback loop for validation. For example, a N1 in a 3 membered ring, for Aziridine, is mostly likely not going to be NG311 but probably a new atom type because it is too general of an atom type, using the CGenFF nomenclature we can safely make assumptions of what it can be, perhaps NG3C31, which allows us to expand rapidly in predicting new chemical space and allowing a queryable language to bridge atom types to ultimately bridge to the Name using Global-Chem.
+Using this new language, we can infer  easily from which atom type could be incorrectly misassigned without looking at the partial charges in conjunction with the SMILES allowing intuition to supersede the penalty score and using it as an ultimate feedback loop for validation. For example, a N1 in a 3 membered ring, for Aziridine, is mostly likely not going to be NG311 but probably a new atom type because it is too general of an atom type, using the CGenFF nomenclature we can safely make assumptions of what it can be, perhaps NG3C31, which allows us to expand rapidly in predicting new chemical space and allowing a queryable language to bridge atom types to ultimately bridge to the Name using Global-Chem.
 
 # Applications 
 
@@ -314,6 +314,10 @@ Chemical Education is important for future generations and especially organic ch
   <i>Figure 6: Global-Chem Flash Card Application</i>
 </p>
 
+### Levenshtein Distance
+
+IUPAC and Natural name submatching would be of best interest in determining functional group similaritiy between two different names of compounds of unequal length. Global-Chem implements the Levenshtein Distance (91) without grammar modifications to generate the best naming fit as possible if an exact definition is not known. With the inclusion of grammar, molecular similarity on IUPACs with long names (large molecules) might be possible to deduce common functionality and connection points and a new avenue area for chemical linguistic research.  
+
 ### Machine Learning
 
 Morgan Fingerprints (90) are one of the most common fingerprint mechanism used to day to capture a local chemical environment. The radius of a local environment is captured through integers denoting how many times to iterate from one connection point to another. By iterating through each atom in a molecule and capturing it's local environment we can capture fragments of molecules and piece them back to together to represent the molecule as a whole. This is done in the form of binary strings implemented in RDKit.
@@ -337,12 +341,6 @@ When evaluating binary we can observe patterns for how a molecule is fragmented.
   <i>Figure 7: Decoder Engine's placement into the Machine Learning Workflow</i>
 </p>
 
-### Levenshtein Distance IUPAC/Preferred Names
-
-IUPAC and Natural name submatching would be of best interest in determining functional group similaritiy between two different names of compounds of unequal length. Global-Chem implements the Levenshtein Distance (91) without grammar modifications to generate the best naming fit as possible if an exact definition is not known. With the inclusion of grammar, molecular similarity on IUPACs with long names (large molecules) might be possible to deduce common functionality and connection points and a new avenue area for chemical linguistic research.  
-
-# Open Source
-
 ### Legal
 
 Legal research was performed in the implementation of Global-Chem and serve as precedence for future packages to follow the same legal infrastructure. Global-Chem was filed under the "Mozilla Public License 2.0" namely for the purpose that if a company uses the Global-Chem in any commercial software must defend the code contributors should any lawsuits or damages arise regarding that software (94). This helps validate and form a legal bridge between academia and industry. Global-Chem does not grant trademark or copyright rights. Global-Chem, the graph network, has no other dependencies and is a self-contained code. However, the extensions for functionality do have dependencies of roughly 106 open source licenses and 1106 dependecies of a depth of to 5. To manage legal at scale we used free open source software academia, FOSSA, to perform dependency search. 
@@ -362,6 +360,18 @@ Legacy Systems: Global-Chem has been operational for nearly three years since it
 Copies of Records: Global-Chem has records stored on Github for the software that can be exported to a variety of formats as provided by Microsoft. For documentation, it is hosted on Gitbook and versioning controlled in accordance to the software. Each "book" can be exported into Portable Data Format (PDF) appropiate for FDA submission.
 
 Record Retention: Global-Chem has a record of the documentation versioned controlled to a unique id (UUID) that serves as it's identifier for each iteration stored on Gitbook. Each version is stored as markdown files and be converted to PDF, if needed.
+
+### General Artificial Intelligence 
+
+It is important for any general chemical artificial intelligence to distinguish hollisitic characteristics that make sense. Principal Component Analysis (PCA) is a well defined technique in identifying feature characteristics of a set of data based on their variance to a reference axis line . PCA can be applied to a list of SMILES by converting to morgan fingerprint bit vectors to determine significant features of a dataset (97). We applied a k-means clustering because we want to machine to determine the two most important features of the common universe and what can the machine easily distinguish to start classifying molecules, an unsupervised learning approach (98). 
+
+<p align="center">
+<img width="1011" alt="Screen Shot 2022-07-21 at 6 34 38 AM" src="https://user-images.githubusercontent.com/11812946/182135734-1cb5733c-358d-49c3-a22f-ae363a9edbfa.png">
+  <br>
+  <i>Figure 8: PCA of all the molecules in Global-Chem with a Morgan Radius of 1, 512 bit representation, and a k-means clustering of two to distinguish aromatic (red) and non-aromatic (green) </i>
+</p>
+
+In Figure 8, from hovering over the data we can visually inspect how the machine classified the data into two categories: aromatic and non-aromatic. A clear distinct line between the two major features is obvious which means using these parameters and this particular dataset any general artificial intelligence program can use Global-Chem and these respective hyperparameters as a starting point for learning aromaticity is a root of life fundamental feature. 
 
 # Conclusion
 
@@ -564,6 +574,10 @@ Thank you to Tyree Wilson, Garrick Centola and Paul Shapiro for their helpful di
 (95) Commissioner, Office of the. “Part 11, Electronic Records; Electronic Signatures - Scope and Application.” U.S. Food and Drug Administration, 11 June 2020,
 
 (96) Rhodes, Colin, et al. “Regulatory Compliance Requirements for an Open Source Electronic Image Trial Management System.” Conference Proceedings : ... Annual International Conference of the IEEE Engineering in Medicine and Biology Society. IEEE Engineering in Medicine and Biology Society. Annual Conference, vol. 2010, 2010, pp. 3475–78. PubMed Centra
+
+(97). Jolliffe, I. T., editor. “Principal Component Analysis and Factor Analysis.” Principal Component Analysis, Springer, 2002, pp. 150–66. Springer Link, https://doi.org/10.1007/0-387-22440-8_7.
+
+(98) Ding, Chris, and Xiaofeng He. “K -Means Clustering via Principal Component Analysis.” Twenty-First International Conference on Machine Learning  - ICML ’04, ACM Press, 2004, p. 29.
 
 # Conflict of Interets
 
