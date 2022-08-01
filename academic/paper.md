@@ -113,7 +113,6 @@ Selecting chemical compounds requires expertise. Expertise is gained by experien
 
 At the time of writing the list of objects include those shown in Table 1. The list range from well defined natural classes of chemicals, such as amino acids, vitamins, salt, and to more diverse lists such as rings in drugs, emerging perfluoroalkyls etc. In addition, the languages used for each list are given, along with the number entires in the list and the reference. The number of times that compounds in each list fail in our automated SMILES to CGenFF workflow.
 
-
 | Chemical List                        | Languages                    | # of Entries | References               |  CGenFF Errors            |
 |--------------------------------------|------------------------------|--------------|--------------------------| --------------------------|
 | Amino Acids                          | IUPAC/SMILES/SMARTS          | 20           | Common Knowledge         | 0                         |
@@ -199,7 +198,9 @@ At the time of writing the list of features include those shown in Table 2. The 
   <i>Table 2: Global-Chem-Extensions Feature List Columns: "Feature" name of the feature model, "Description" a summarized account of what the feature does, "Feature Code Length" is how many lines does the actual feature occupy not including infrastructure, "Discipline" is what scientific discipline and distribution pathway does the feature exist, and the last column "References" is what scientific resource, if any, does the feature stem from.</i>
 </p>
 
-# Chemical List Selection & Force Field Parametirization
+# Selection
+
+### Chemical Lists
 
 Compound lists in Global-Chem can be used to identify specific regions of chemical space that have limited coverage. Therefore, the compound lists in Global-Chem represent future regions of chemical space for force field development. In the CGenFF program we can use larger penalities to indicate a lower extent of analogy to known parameters, information that may be used to identify molecules for additional force field optimization. We passed a variety of Global-Chem objects individually into the software and plotted penalty score distributions of their bonded and non-bonded parameters shown in `Figure 2`. As may be seen the extent of penalties differs significantly for the various lists. Based on the compounds used in the development of CGenFF, we expected the penalties to be lower on molecules that are declared as drugs (Schedule One US Narcotics) and drug-like species (BRAF Kinases Inhibitors for Cancer,  Privileged Scaffolds) whereas we expect the penalty score will be higher for compounds for things that are were not it's original intention (Emerging PerfluoroAlkyls for Environmental Hazards). 
 
@@ -221,7 +222,7 @@ If we investigate the medicinal chemistry (dark green) with a uncertainity perce
   <i>Figure 3: MolCloud of Chemical Selection</i>
 </p>
 
-### 1,3-Dithiolane
+### Parametirization of 1,3-Dithiolane
 
 We truncated dithiolane from the amide and passed through CGenFF (Full data available in the Supporting Information) which indicated that the dilemma was in part due to the extent of puckering caused by the 2 Sulphur atoms within the constrained cyclopentane ring system.
 To begin our parametrization process we chose to focus on `S1-C3-C4-S2`, backbone to the cyclopentane ring and the dihedral from the methyl to one carbon on the backbone `C1-C2-S1-C3`. Since the molecule is symmetric, it makes the complexity of the molecule decrease two-fold. 
@@ -249,11 +250,11 @@ Final PES scans are displayed in Figure 4.
 Lastly, the S1-S2 charges needed adjustment. We used Monte Carlo Simulated Annealing (MCSA) method (88) utilized in
 FFparam to predict the approximate partial charges. The sulphur atoms were adjusted to have a partial negative charge of -0.208.
 
-# Chemical Graph Theory 
+# Theory 
 
 Global-Chem comes with a variety of applications and with accessible data comes new avenues of research, here we present our gallery of a highlight features that we find the most interesting to us, the authors. 
 
-### Knowledge Graph Application Programming Interface
+### Graph Data Structure
 
 Global-Chem uses a directory and sub-directory system to organize files as we, the community, see best. If you, the users, would like to build your own graph networks we would like to have that ability as well. Global-Chem classifies each file or directory as a Node, using a Dummy Node named "Global-Chem" as a root. For example, in Figure 5, section A is a Global-Chem node, "parent", with 6 nodes, "childern" connected on some arbitrary line. Each node is self-aware of only it's parents and children which allows for a user to determine their own navigate into the graph network. This was designed in a way to allow flexibility for variable change, a look into adding a node object algorithm is shown in section B in Figure 5. A prototype feature would be too add nodes in a series of layers and have all parents connect to all children in a sequential fashion which allows for a node architecture similar to deep learning represented in section C Figure 5. 
 
