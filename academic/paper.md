@@ -285,7 +285,7 @@ Using this new language, we can infer  easily from which atom type could be inco
 
 # Applications 
 
-### Cheminformatic Intereoperability
+### Cheminformatics
 
 Global-Chem parsed through seven different tools with majority being successful minus diamond represented with an 'C&1' (14) and fails with all software including RDKit indicating a possible new addition to the grammar that has been left unaccounted for. The percentage of passing is as follows: RDKit 100% (41), DeepSMILES 99.25% (45), PartialSMILES 85.7% (44) , SELFIES 100% (43), MolVS 98.5% (46), PySMILES 99.8% (42) presented in Table 4. PartialSMILES proved to be the most robust acceptance/rejection tool in identifying incomplete SMILES and highlighting errors within Global-Chem. 
 
@@ -315,7 +315,7 @@ Chemical Education is important for future generations and especially organic ch
   <i>Figure 6: Global-Chem Flash Card Application</i>
 </p>
 
-### Levenshtein Distance
+### Natual Language Processing
 
 IUPAC and Natural name submatching would be of best interest in determining functional group similaritiy between two different names of compounds of unequal length. Global-Chem implements the Levenshtein Distance (91) without grammar modifications to generate the best naming fit as possible if an exact definition is not known. With the inclusion of grammar, molecular similarity on IUPACs with long names (large molecules) might be possible to deduce common functionality and connection points and a new avenue area for chemical linguistic research.  
 
