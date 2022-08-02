@@ -7,6 +7,7 @@
 
 # Environment
 
+from global_chem.environment.chemicals_from_biomass import ChemicalsFromBioMass
 from global_chem.environment.emerging_perfluoroalkyls import EmergingPerFluoroAlkyls
 
 # Materials

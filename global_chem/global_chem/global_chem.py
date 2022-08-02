@@ -23,6 +23,7 @@ if os.name == 'nt':
 
 # Environment
 
+from global_chem.environment.chemicals_from_biomass import ChemicalsFromBioMass
 from global_chem.environment.emerging_perfluoroalkyls import EmergingPerFluoroAlkyls
 
 # Materials
@@ -417,6 +418,7 @@ class GlobalChem(object):
         'phytocannabinoids': PhytoCannabinoids,                                   # Ian Jones & Bettina Lier & Suliman Sharif
         'organophosphorous_nerve_agents': OrganoPhosphorousNerveAgents,           # Suliman Sharif
         'organic_and_inorganic_bronsted_acids': OrganicAndInorganicBronstedAcids, # Nathaniel McClean & Suliman Sharif
+        'chemicals_from_biomass': ChemicalsFromBioMass,                           # Anthony Maiorana & Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                             # Chris Burke & Suliman Sharif
     }
 
