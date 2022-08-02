@@ -339,7 +339,7 @@ IUPAC and Natural name submatching would be of best interest in determining func
 
 ### Artificial Intelligence 
 
-It is important for any general chemical artificial intelligence to distinguish hollisitic characteristics that make sense. Principal Component Analysis (PCA) is a well defined technique in identifying feature characteristics of a set of data based on their variance to a reference axis line . PCA can be applied to a list of SMILES by converting to morgan fingerprint bit vectors to determine significant features of a dataset (97). We applied a k-means clustering because we want to machine to determine the two most important features of the common universe and what can the machine easily distinguish to start classifying molecules, an unsupervised learning approach (98). 
+It is important for any general chemical artificial intelligence to distinguish hollisitic characteristics that make sense. Principal Component Analysis (PCA) is a well defined technique in identifying feature characteristics of a set of data based on their variance to a reference axis line . PCA can be applied to a list of SMILES by converting to morgan fingerprint bit vectors to determine significant features of a dataset (97). We applied a k-means clustering because we want to machine to determine the two most important features of the common universe and what can the machine easily distinguish to start classifying molecules, a semi-supervised learning approach where we control the data and the machine learns (98). 
 
 <p align="center">
 <img width="1011" alt="Screen Shot 2022-07-21 at 6 34 38 AM" src="https://user-images.githubusercontent.com/11812946/182135734-1cb5733c-358d-49c3-a22f-ae363a9edbfa.png">
