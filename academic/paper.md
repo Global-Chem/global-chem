@@ -18,25 +18,20 @@ authors:
     affiliation: 2
   - name: Bettina Lier
     affiliation: 4
-  - name: Paween Mahinthichaichan
-    affiliation: 1
   - name: Chris Burke
     affiliation: 2
   - name: Jacob Weiner
     orcid: 0000-0003-0033-6033
     affiliation: 1
-  - name: Elena Yi Chow
-    orcid: 0000-0001-5559-1635
-    affiliation: 2
   - name: Anastasia Croitoru
     orcid: XXX
     affiliation: 5
-  - name: Anmol Kumar
-    affiliation: 1
   - name: Aziza Frank
     affiliation: 1
   - name: Nathaniel McClean
     orcid: XXX
+  - name: Anmol Kumar
+    affiliation: 1
     affiliation: 1
   - name: Aarion Romany
     affiliation: 1
@@ -56,6 +51,9 @@ authors:
     affiliation: 6
   - name: Rebecca Pinette-Dorin
     affiliation: 6
+  - name: Elena Yi Chow
+    orcid: 0000-0001-5559-1635
+    affiliation: 2
   - name: Sevien Schulhoff
     orcid: XXXX
     affiliation: 1
@@ -112,7 +110,6 @@ Selecting chemical compounds requires expertise. Expertise is gained by experien
 # Data & Features
 
 At the time of writing the list of objects include those shown in Table 1. The list range from well defined natural classes of chemicals, such as amino acids, vitamins, salt, and to more diverse lists such as rings in drugs, emerging perfluoroalkyls etc. In addition, the languages used for each list are given, along with the number entires in the list and the reference. The number of times that compounds in each list fail in our automated SMILES to CGenFF workflow.
-
 
 | Chemical List                        | Languages                    | # of Entries | References               |  CGenFF Errors            |
 |--------------------------------------|------------------------------|--------------|--------------------------| --------------------------|
@@ -199,7 +196,9 @@ At the time of writing the list of features include those shown in Table 2. The 
   <i>Table 2: Global-Chem-Extensions Feature List Columns: "Feature" name of the feature model, "Description" a summarized account of what the feature does, "Feature Code Length" is how many lines does the actual feature occupy not including infrastructure, "Discipline" is what scientific discipline and distribution pathway does the feature exist, and the last column "References" is what scientific resource, if any, does the feature stem from.</i>
 </p>
 
-# Chemical List Selection & Force Field Parametirization
+# Selection
+
+### Chemical Lists
 
 Compound lists in Global-Chem can be used to identify specific regions of chemical space that have limited coverage. Therefore, the compound lists in Global-Chem represent future regions of chemical space for force field development. In the CGenFF program we can use larger penalities to indicate a lower extent of analogy to known parameters, information that may be used to identify molecules for additional force field optimization. We passed a variety of Global-Chem objects individually into the software and plotted penalty score distributions of their bonded and non-bonded parameters shown in `Figure 2`. As may be seen the extent of penalties differs significantly for the various lists. Based on the compounds used in the development of CGenFF, we expected the penalties to be lower on molecules that are declared as drugs (Schedule One US Narcotics) and drug-like species (BRAF Kinases Inhibitors for Cancer,  Privileged Scaffolds) whereas we expect the penalty score will be higher for compounds for things that are were not it's original intention (Emerging PerfluoroAlkyls for Environmental Hazards). 
 
@@ -221,7 +220,7 @@ If we investigate the medicinal chemistry (dark green) with a uncertainity perce
   <i>Figure 3: MolCloud of Chemical Selection</i>
 </p>
 
-### 1,3-Dithiolane
+### Force Field Parametirization of 1,3-Dithiolane
 
 We truncated dithiolane from the amide and passed through CGenFF (Full data available in the Supporting Information) which indicated that the dilemma was in part due to the extent of puckering caused by the 2 Sulphur atoms within the constrained cyclopentane ring system.
 To begin our parametrization process we chose to focus on `S1-C3-C4-S2`, backbone to the cyclopentane ring and the dihedral from the methyl to one carbon on the backbone `C1-C2-S1-C3`. Since the molecule is symmetric, it makes the complexity of the molecule decrease two-fold. 
@@ -249,11 +248,11 @@ Final PES scans are displayed in Figure 4.
 Lastly, the S1-S2 charges needed adjustment. We used Monte Carlo Simulated Annealing (MCSA) method (88) utilized in
 FFparam to predict the approximate partial charges. The sulphur atoms were adjusted to have a partial negative charge of -0.208.
 
-# Chemical Graph Theory 
+# Theory 
 
 Global-Chem comes with a variety of applications and with accessible data comes new avenues of research, here we present our gallery of a highlight features that we find the most interesting to us, the authors. 
 
-### Knowledge Graph Application Programming Interface
+### Chemical Graphs
 
 Global-Chem uses a directory and sub-directory system to organize files as we, the community, see best. If you, the users, would like to build your own graph networks we would like to have that ability as well. Global-Chem classifies each file or directory as a Node, using a Dummy Node named "Global-Chem" as a root. For example, in Figure 5, section A is a Global-Chem node, "parent", with 6 nodes, "childern" connected on some arbitrary line. Each node is self-aware of only it's parents and children which allows for a user to determine their own navigate into the graph network. This was designed in a way to allow flexibility for variable change, a look into adding a node object algorithm is shown in section B in Figure 5. A prototype feature would be too add nodes in a series of layers and have all parents connect to all children in a sequential fashion which allows for a node architecture similar to deep learning represented in section C Figure 5. 
 
@@ -265,7 +264,7 @@ Global-Chem uses a directory and sub-directory system to organize files as we, t
 
 With readily availablitily of the data and allowing users to own graph model or build their own allows for possibility a more robust artifical intelligence for organic chemistry.    
 
-### General Molecular Language 
+### Linguistics
 
 CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We suggest a new language based that contains both CGenFF Atom-Types and SMILES based on scientific inclusion not exclusion (92):
 
@@ -280,11 +279,11 @@ CGenFF and SMILES are built on the same language philosophy yet are independent 
   <i>Table 3: Global-Chem Molecular Columns: "Name" name of the molecule, "Weininger Notation" is the original SMILES notation,  "Proposed New Notation" is the SMILES and CGenFF Atom Types language representation in CurlySMILES </i>
 </p>
 
-Using this new notation, we can infer  easily from which atom type could be incorrectly misassigned without looking at the partial charges in conjunction with the SMILES allowing intuition to supersede the penalty score and using it as an ultimate feedback loop for validation. For example, a N1 in a 3 membered ring, for Aziridine, is mostly likely not going to be NG311 but probably a new atom type because it is too general of an atom type, using the CGenFF nomenclature we can safely make assumptions of what it can be, perhaps NG3C31, which allows us to expand rapidly in predicting new chemical space and allowing a queryable language to bridge atom types to ultimately bridge to the Name using Global-Chem.
+Using this new language, we can infer  easily from which atom type could be incorrectly misassigned without looking at the partial charges in conjunction with the SMILES allowing intuition to supersede the penalty score and using it as an ultimate feedback loop for validation. For example, a N1 in a 3 membered ring, for Aziridine, is mostly likely not going to be NG311 but probably a new atom type because it is too general of an atom type, using the CGenFF nomenclature we can safely make assumptions of what it can be, perhaps NG3C31, which allows us to expand rapidly in predicting new chemical space and allowing a queryable language to bridge atom types to ultimately bridge to the Name using Global-Chem.
 
 # Applications 
 
-### Cheminformatic Intereoperability
+### Cheminformatics
 
 Global-Chem parsed through seven different tools with majority being successful minus diamond represented with an 'C&1' (14) and fails with all software including RDKit indicating a possible new addition to the grammar that has been left unaccounted for. The percentage of passing is as follows: RDKit 100% (41), DeepSMILES 99.25% (45), PartialSMILES 85.7% (44) , SELFIES 100% (43), MolVS 98.5% (46), PySMILES 99.8% (42) presented in Table 4. PartialSMILES proved to be the most robust acceptance/rejection tool in identifying incomplete SMILES and highlighting errors within Global-Chem. 
 
@@ -303,8 +302,6 @@ Global-Chem parsed through seven different tools with majority being successful 
 </p>
 
 Indigo's encoder was pretty robust and their software allows for a lot of inteoperabiltiy with different software tools (i.e pdf data parsing of SMILES), when faced with the tert-butyldiphenylsilyl protecting group and the SMILES string with the `Si` is not wrapped in a square brackets that specify an element that doesn't have a complete valence shell. For PySMILES, the inclusion of the '[a]' denoting aromaticity for an "aromatic salt" in the database couldn't be processed. Some other encoders have encoded for an aromaticity keyword as specified in the Daylight Technical Documentation (14). DeepSMILES was interesting because it failed on specific functional groups as shown in the example with an oxindole and triazolodiazepines that had complex small branch complexities and moetieies that it didn't foresee existing. MolVS had some interesting results where imidazole (and derivatives) failed probably because it expected for a hydrogen perhaps to be explicity stated due to it's varying protonation states. Hydrofluoric acid was something I was expecting but again the hydrogen actually needed to be enforced with a [H] which is not as intuitive. PartialSMILES proved to be the most robust eluding to SMILES that were partially complete and rejected by their criteria. Failures included a ethyl radical and a azido complex stemming from the interstellarspace molecules. 
-
-### Chemical Education 
 
 Chemical Education is important for future generations and especially organic chemists in learning the modern nomenclature of the disicipline. Flash cards are the most common way for students to learn organic chemistry functional groups (89). Global-Chem uses this mechanism to created a Global flashcard list of all functional groups relevant to different communities so students can learn chemical structures, their names, and the SMILES that are relevant to their respective field as they learn. This installs foundational knowledge of chemical language which will be useful in their respective careers, shown in Figure 6 and available at www.chemicalgraphtheory.com. 
 
@@ -337,17 +334,24 @@ When evaluating binary we can observe patterns for how a molecule is fragmented.
   <i>Figure 7: Decoder Engine's placement into the Machine Learning Workflow</i>
 </p>
 
-### Levenshtein Distance IUPAC/Preferred Names
 
 IUPAC and Natural name submatching would be of best interest in determining functional group similaritiy between two different names of compounds of unequal length. Global-Chem implements the Levenshtein Distance (91) without grammar modifications to generate the best naming fit as possible if an exact definition is not known. With the inclusion of grammar, molecular similarity on IUPACs with long names (large molecules) might be possible to deduce common functionality and connection points and a new avenue area for chemical linguistic research.  
 
-# Open Source
+### Artificial Intelligence 
 
-### Legal
+It is important for any general chemical artificial intelligence to distinguish hollisitic characteristics that make sense. Principal Component Analysis (PCA) is a well defined technique in identifying feature characteristics of a set of data based on their variance to a reference axis line . PCA can be applied to a list of SMILES by converting to morgan fingerprint bit vectors to determine significant features of a dataset (97). We applied a k-means clustering because we want to machine to determine the two most important features of the common universe and what can the machine easily distinguish to start classifying molecules, an unsupervised learning approach (98). 
 
-Legal research was performed in the implementation of Global-Chem and serve as precedence for future packages to follow the same legal infrastructure. Global-Chem was filed under the "Mozilla Public License 2.0" namely for the purpose that if a company uses the Global-Chem in any commercial software must defend the code contributors should any lawsuits or damages arise regarding that software (94). This helps validate and form a legal bridge between academia and industry. Global-Chem does not grant trademark or copyright rights. Global-Chem, the graph network, has no other dependencies and is a self-contained code. However, the extensions for functionality do have dependencies of roughly 106 open source licenses and 1106 dependecies of a depth of to 5. To manage legal at scale we used free open source software academia, FOSSA, to perform dependency search. 
+<p align="center">
+<img width="1011" alt="Screen Shot 2022-07-21 at 6 34 38 AM" src="https://user-images.githubusercontent.com/11812946/182135734-1cb5733c-358d-49c3-a22f-ae363a9edbfa.png">
+  <br>
+  <i>Figure 8: PCA of all the molecules in Global-Chem with a Morgan Radius of 1, 512 bit representation, and a k-means clustering of two to distinguish aromatic (red) and non-aromatic (green) </i>
+</p>
+
+In Figure 8, from hovering over the data we can visually inspect how the machine classified the data into two categories: aromatic and non-aromatic. A clear distinct line between the two major features is obvious which means using these parameters and this combined particular dataset, based on expertise of different humans, can create new general artificial intelligence programs can use this as a starting point for learning aromaticity which is a root of life fundamental feature for organic molecules. 
 
 ### Compliance
+
+Legal research was performed in the implementation of Global-Chem and serve as precedence for future packages to follow the same legal infrastructure. Global-Chem was filed under the "Mozilla Public License 2.0" namely for the purpose that if a company uses the Global-Chem in any commercial software must defend the code contributors should any lawsuits or damages arise regarding that software (94). This helps validate and form a legal bridge between academia and industry. Global-Chem does not grant trademark or copyright rights. Global-Chem, the graph network, has no other dependencies and is a self-contained code. However, the extensions for functionality do have dependencies of roughly 106 open source licenses and 1106 dependecies of a depth of to 5. To manage legal at scale we used free open source software academia, FOSSA, to perform dependency search. 
 
 Global-Chem follows the same principles outlined in part 11 of Title 21 of the Code of Federal Regulations; Electronic Records, Electronic Signatures (21 CFR Part 11) guidance documentation (95). Since there are no formal guidelines for how open source software should be handled, we attempt at completing requirements (96). The Federal Drug and Administration (FDA) considers part 11 to be applicable to the following criteria of electronic records and, using our software architecture, we show how Global-Chem accomplishes each component:
 
@@ -361,7 +365,7 @@ Legacy Systems: Global-Chem has been operational for nearly three years since it
 
 Copies of Records: Global-Chem has records stored on Github for the software that can be exported to a variety of formats as provided by Microsoft. For documentation, it is hosted on Gitbook and versioning controlled in accordance to the software. Each "book" can be exported into Portable Data Format (PDF) appropiate for FDA submission.
 
-Record Retention: Global-Chem has a record of the documentation versioned controlled to a unique id (UUID) that serves as it's identifier for each iteration stored on Gitbook. Each version is stored as markdown files and be converted to PDF, if needed.
+Record Retention: Global-Chem has a record of the documentation versioned controlled to a unique id (UUID) that serves as it's identifier for each iteration stored on Gitbook (99). Each version is stored as markdown files and be converted to PDF, if needed.
 
 # Conclusion
 
@@ -564,6 +568,12 @@ Thank you to Tyree Wilson, Garrick Centola and Paul Shapiro for their helpful di
 (95) Commissioner, Office of the. “Part 11, Electronic Records; Electronic Signatures - Scope and Application.” U.S. Food and Drug Administration, 11 June 2020,
 
 (96) Rhodes, Colin, et al. “Regulatory Compliance Requirements for an Open Source Electronic Image Trial Management System.” Conference Proceedings : ... Annual International Conference of the IEEE Engineering in Medicine and Biology Society. IEEE Engineering in Medicine and Biology Society. Annual Conference, vol. 2010, 2010, pp. 3475–78. PubMed Centra
+
+(97). Jolliffe, I. T., editor. “Principal Component Analysis and Factor Analysis.” Principal Component Analysis, Springer, 2002, pp. 150–66. Springer Link, https://doi.org/10.1007/0-387-22440-8_7.
+
+(98) Ding, Chris, and Xiaofeng He. “K -Means Clustering via Principal Component Analysis.” Twenty-First International Conference on Machine Learning  - ICML ’04, ACM Press, 2004, p. 29.
+
+(99) Leach, Paul J., et al. A Universally Unique IDentifier (UUID) URN Namespace. Request for Comments, RFC 4122, Internet Engineering Task Force, July 2005. IETF,
 
 # Conflict of Interets
 
