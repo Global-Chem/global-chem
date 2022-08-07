@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 #
-# GlobalChem - Emerging PerfluoroAlkyls
+# GlobalChem - Chemicals From Biomass
 #
-# -------------------------------------
+# -----------------------------------
 
 class ChemicalsFromBioMass(object):
 
