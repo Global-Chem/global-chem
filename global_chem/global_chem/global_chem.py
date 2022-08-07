@@ -1066,6 +1066,7 @@ class GlobalChem(object):
             iupac_key,
             distance_tolerance=4,
             return_partial_definitions=False,
+            reconstruct_smiles=False,
         ):
 
         '''
@@ -1076,52 +1077,88 @@ class GlobalChem(object):
             iupac_key (String): Key for the iupac.
             distance_tolerance (Int): Distance tolerance for Levenshetin Distances.
             return_partial_definitions (Bool): Return the Levenshetin Distances between words
+            reconstruct_smiles (Bool): Reconstruct the Chemical Space SMILES from the IUPAC
         Returns:
             definition (Dict): A definition of the IUPAC.
 
         '''
 
-        iupac_key = iupac_key.lower()
-        iupac_key = re.sub(r'[^a-zA-Z]', '', iupac_key)
+        if reconstruct_smiles:
 
-        definitions = []
-        exact_definition = {}
+            reconstructed_smiles = ''
 
-        for node_key, node_value in self.__NODES__.items():
+            iupac_keys = iupac_key.lower().split('-')
+            iupac_keys = [re.sub(r'\b[^a-zA-Z]\b', '', iupac_key) for iupac_key in iupac_keys]
+            iupac_keys = [iupac_key for iupac_key in iupac_keys if not any(char.isdigit() for char in iupac_key) and iupac_key]
 
-            if node_key == 'global_chem' or node_key == 'common_regex_patterns':
-                continue
 
-            network_path = node_value.__module__
-            entity = node_value()
-            names = entity.get_smiles()
+            for node_key, node_value in self.__NODES__.items():
 
-            for name, smiles in names.items():
+               if node_key == 'global_chem' or node_key == 'common_regex_patterns':
+                   continue
 
-                definition = {}
+               entity = node_value()
+               names = entity.get_smiles()
 
-                # Sanitize the Node Key
+               for name, smiles in names.items():
 
-                name = name.lower()
-                name = re.sub(r'[^a-zA-Z]', '', name)
+                   # Sanitize the Node Key
 
-                distance = self.levenshtein_distance(iupac_key, name)
+                   name = name.lower()
+                   name = re.sub(r'[^a-zA-Z]', '', name)
 
-                if 0 <= distance <= distance_tolerance:
+                   for iupac_key in iupac_keys:
 
-                    definition[name] = smiles
-                    definition['network_path'] = network_path
-                    definition['levenshtein_distance'] = distance
+                       distance = self.levenshtein_distance(iupac_key, name)
 
-                    if distance == 0:
-                        exact_definition = definition
+                       if 0 <= distance <= distance_tolerance:
 
-                    definitions.append(definition)
+                           reconstructed_smiles += smiles + '.'
 
-        if return_partial_definitions:
-            return definitions
+            return reconstructed_smiles[:-1]
         else:
-            return exact_definition
+
+            iupac_key = iupac_key.lower()
+            iupac_key = re.sub(r'[^a-zA-Z]', '', iupac_key)
+
+            definitions = []
+            exact_definition = {}
+
+            for node_key, node_value in self.__NODES__.items():
+
+                if node_key == 'global_chem' or node_key == 'common_regex_patterns':
+                    continue
+
+                network_path = node_value.__module__
+                entity = node_value()
+                names = entity.get_smiles()
+
+                for name, smiles in names.items():
+
+                    definition = {}
+
+                    # Sanitize the Node Key
+
+                    name = name.lower()
+                    name = re.sub(r'[^a-zA-Z]', '', name)
+
+                    distance = self.levenshtein_distance(iupac_key, name)
+
+                    if 0 <= distance <= distance_tolerance:
+
+                        definition[name] = smiles
+                        definition['network_path'] = network_path
+                        definition['levenshtein_distance'] = distance
+
+                        if distance == 0:
+                            exact_definition = definition
+
+                        definitions.append(definition)
+
+            if return_partial_definitions:
+                return definitions
+            else:
+                return exact_definition
 
     def set_node_value(self, node_key, value):
 
