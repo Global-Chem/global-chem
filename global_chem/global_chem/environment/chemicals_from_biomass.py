@@ -14,14 +14,19 @@ class ChemicalsFromBioMass(object):
     def get_smiles():
 
         '''
-
+        added SMILES
+        
         Missing Entries:
              '8:2 chlorinated polyfluorinated ether sulfonic acid': '',
 
         '''
 
         smiles = {
-            'synthesis gas': '[C-]#[O+].[HH]',
+            'synthesis gas': '[C-]#[O+].[HH].C(=O)=O.C',
+            'hydrogen gas': '[HH]',
+            'carbon monoxide': '[C-]#[O+]',
+            'carbon dioxide': 'C(=O)=O',
+            'methane': 'C',
             'ethane': 'CC',
             'ethylene': 'C=C',
             'propylene': 'CC=C',
@@ -38,6 +43,9 @@ class ChemicalsFromBioMass(object):
             'o-xylene': 'CC1=CC=CC=C1C',
             'm-xylene': 'CC1=CC(=CC=C1)C',
             'glycerol': 'C(C(CO)O)O',
+            'perfluoro octane sulfonate': 'C(C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)(F)F',
+            '6:2 chlorinated polyfluorinated ether sulfonic acid': 'C(C(C(O(C(C(F)(F)S(=O)(=O)O)(F)F))(F)F)(F)F)(C(C(C(F)(Cl)F)(F)F)(F)F)(F)F',
+            '8:2 chlorinated polyfluorinated ether sulfonic acid': 'C(C(C(O(C(C(F)(F)S(=O)(=O)O)(F)F))(F)F)(F)F)(C(C(C(C(C(F)(Cl)F)(F)F)(F)F)(F)F)(F)F)(F)F',
         }
 
         return smiles
