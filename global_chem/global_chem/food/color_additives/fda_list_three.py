@@ -14,22 +14,22 @@ class FDAListThree(object):
     def get_smiles():
 
         smiles = {
-            'd&C brown #1': 'CC1=CC(=C(C=C1)NN=C2C(=O)C=CC(=NNC3=CC=C(C=C3)S(=O)(=O)[O-])C2=O)C.[Na+]',
-            'fD&C red #4': 'CC1=CC(=C(C=C1N=NC2=C(C3=CC=CC=C3C(=C2)S(=O)(=O)O)O)S(=O)(=O)O)C',
-            'd&c red #17': 'C1=CC=C(C=C1)N=NC2=CC=C(C=C2)N=NC3=C(C=CC4=CC=CC=C43)O',
-            'd&c red #31': 'C1=CC=C(C=C1)N=NC2=C(C(=CC3=CC=CC=C32)C(=O)O)[O-].C1=CC=C(C=C1)N=NC2=C(C(=CC3=CC=CC=C32)C(=O)O)[O-].[Ca+2]',
-            'd&c red #34': 'C1=CC=C2C(=C1)C=CC(=C2S(=O)(=O)[O-])N=NC3=C(C(=CC4=CC=CC=C43)C(=O)O)[O-].[Ca+2]',
-            'd&c red #39': 'C1=CC=C(C(=C1)C(=O)O)N=NC2=CC=C(C=C2)N(CCO)CCO',
-            'd&c violet #2': 'CC1=CC=C(C=C1)NC2=C3C(=C(C=C2)O)C(=O)C4=CC=CC=C4C3=O',
-            'd&c blue #4': 'CCN(CC1=CC=C(C=C1)S(=O)(=O)[O-])C2=CC=C(C=C2)C(=C3C=CC(=[N+](CC)CC4=CC=C(C=C4)S(=O)(=O)[O-])C=C3)C5=CC=CC=C5S(=O)(=O)[O-].[NH4+].[NH4+]',
-            'd&c green #6': 'CC1=CC=C(C=C1)NC2=C3C(=C(C=C2)NC4=CC=C(C=C4)C)C(=O)C5=CC=CC=C5C3=O',
-            'd&c green #8': 'C1=CC2=C3C(=C(C=C2S(=O)(=O)[O-])S(=O)(=O)[O-])C=CC4=C(C=C(C1=C43)O)S(=O)(=O)[O-].[Na+].[Na+].[Na+]',
-            'd&c yellow #7': 'C1=CC2=C(C=C1S(=O)(=O)[O-])C(=C(C=C2[N+](=O)[O-])[N+](=O)[O-])[O-].[Na+].[Na+]',
-            'd&c yellow #8': 'C1=CC=C(C(=C1)C2=C3C=CC(=O)C=C3OC4=C2C=CC(=C4)[O-])C(=O)[O-].[Na+].[Na+]',
-            'd&c yellow #11': 'C1=CC=C2C(=C1)C=CC(=N2)C3C(=O)C4=CC=CC=C4C3=O',
-            'd&c orange #4': 'C1=CC=C2C(=C1)C=CC(=C2N=NC3=CC=C(C=C3)S(=O)(=O)O)O.[Na+]',
-            'd&c orange #10': 'C1=CC2=C(C(=C1)I)C(=O)OC23C4=C(C=C(C=C4)O)OC5=C3C=CC(=C5I)O',
-            'd&c orange #11': 'C1=CC=C2C(=C1)C(=O)OC23C4=C(C=C(C=C4)O)OC5=C3C=CC(=C5)O',
+            'd&C brown #1': 'CC1=CC(=C(C=C1)NN=C2C(=O)C=CC(=NNC3=CC=C(C=C3)S(=O)(=O)[O-])C2=O)C.[Na+]', # Acid Orange 24
+            'fD&C red #4': 'CC1=CC(=C(C=C1N=NC2=C(C3=CC=CC=C3C(=C2)S(=O)(=O)O)O)S(=O)(=O)O)C',  # Ponceau Red SX
+            'd&c red #17': 'C1=CC=C(C=C1)N=NC2=CC=C(C=C2)N=NC3=C(C=CC4=CC=CC=C43)O',    # Sudan III or Solvent Red 23
+            'd&c red #31': 'C1=CC=C(C=C1)N=NC2=C(C(=CC3=CC=CC=C32)C(=O)O)[O-].C1=CC=C(C=C1)N=NC2=C(C(=CC3=CC=CC=C32)C(=O)O)[O-].[Ca+2]',    # Brilliant Scarlet G
+            'd&c red #34': 'C1=CC=C2C(=C1)C=CC(=C2S(=O)(=O)[O-])N=NC3=C(C(=CC4=CC=CC=C43)C(=O)O)[O-].[Ca+2]',   # Pigment Red 63
+            'd&c red #39': 'C1=CC=C(C(=C1)C(=O)O)N=NC2=CC=C(C=C2)N(CCO)CCO',    # Alba Red
+            'd&c violet #2': 'CC1=CC=C(C=C1)NC2=C3C(=C(C=C2)O)C(=O)C4=CC=CC=C4C3=O',    # Solvent Violet 13 or Disperse Blue 72
+            'd&c blue #4': 'CCN(CC1=CC=C(C=C1)S(=O)(=O)[O-])C2=CC=C(C=C2)C(=C3C=CC(=[N+](CC)CC4=CC=C(C=C4)S(=O)(=O)[O-])C=C3)C5=CC=CC=C5S(=O)(=O)[O-].[NH4+].[NH4+]',   # Diazanium
+            'd&c green #6': 'CC1=CC=C(C=C1)NC2=C3C(=C(C=C2)NC4=CC=C(C=C4)C)C(=O)C5=CC=CC=C5C3=O',   # Solvent Green 3 or Quinizarin Green SS
+            'd&c green #8': 'C1=CC2=C3C(=C(C=C2S(=O)(=O)[O-])S(=O)(=O)[O-])C=CC4=C(C=C(C1=C43)O)S(=O)(=O)[O-].[Na+].[Na+].[Na+]',   # Solvent Green 7 or Pyranine
+            'd&c yellow #7': 'C1=CC2=C(C=C1S(=O)(=O)[O-])C(=C(C=C2[N+](=O)[O-])[N+](=O)[O-])[O-].[Na+].[Na+]',  # Naphthol Yellow S or Acid Yellow 1
+            'd&c yellow #8': 'C1=CC=C(C(=C1)C2=C3C=CC(=O)C=C3OC4=C2C=CC(=C4)[O-])C(=O)[O-].[Na+].[Na+]',    # Fluorescein or Uranin
+            'd&c yellow #11': 'C1=CC=C2C(=C1)C=CC(=N2)C3C(=O)C4=CC=CC=C4C3=O',  # Quinoline Yellow or Quinophthalone
+            'd&c orange #4': 'C1=CC=C2C(=C1)C=CC(=C2N=NC3=CC=C(C=C3)S(=O)(=O)O)O.[Na+]',    # Persian Orange or Fenazo Orange or Colacid Orange or Solar Orange
+            'd&c orange #10': 'C1=CC=C2C(=C1)C(=O)OC23C4=C(C(=C(C=C4)O)I)OC5=C3C=CC(=C5I)O.C1=CC=C2C(=C1)C(=O)OC23C4=C(C(=C(C=C4)O)I)OC5=C(C(=C(C=C35)I)O)I.C1=CC=C2C(=C1)C(=O)OC23C4=CC(=C(C(=C4OC5=C(C(=C(C=C35)I)O)I)I)O)I', # (Di- Tri- and Tetra-Iodofluorescein)
+            'd&c orange #11': 'C1=CC=C2C(=C1)C(=O)OC23C4=C(C=C(C=C4)O)OC5=C3C=CC(=C5)O',    # Fluorescein or Solvent Yellow 94
         }
 
         return smiles
