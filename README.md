@@ -179,6 +179,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 'organic_and_inorganic_bronsted_acids': OrganicAndInorganicBronstedAcids, # Nathaniel McClean & Suliman Sharif
 'chemicals_from_biomass': ChemicalsFromBioMass,                           # Anthony Maiorana & Suliman Sharif 
 'salt': Salt                                                              # Suliman Sharif
+'drugs_from_snake_venom': DrugsFromSnakeVenom,                            # Suliman Sharif
 ```
 
 <details><summary><h3>Node List</h1><br/></summary>
@@ -228,6 +229,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 | OrganoPhosphorous Nerve Agents      | 14           | Mukherjee, Sudisha, and Rinkoo Devi Gupta. “Organophosphorus Nerve Agents: Types, Toxicity, and Treatments.” Journal of Toxicology, vol. 2020, Sept. 2020, p. 3007984.                                                                                                                                               |
 | Cengage Bronsted Acids              | 42           | https://cxp.cengage.com/contentservice/assets/owms01h/references/chemtables/org_chem/pKaTable.html                                                                                                                                                                                                                   |
 | Chemicals From Biomass              | 17           | Wittcoff, Harold A., et al. Industrial Organic Chemicals: Wittcoff/Organic Chemicals. John Wiley & Sons, Inc., 2004                                                                                                                                                                                                  |
+| Drugs From Snake Venom              | 7            | Oliveira, Ana L., et al. “The Chemistry of Snake Venom and Its Medicinal Potential.” Nature Reviews Chemistry, vol. 6, no. 7, July 2022, pp. 451–69                                                                                                                                                                  |
 | Common Regex Patterns               | 1            |                                                                                                                                                                                                                                                                                                                      |
 
 </details>                            

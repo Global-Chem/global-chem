@@ -4,6 +4,9 @@
 #
 # ----------------------------
 
+# Animals
+
+from global_chem.animals.snakes.drugs_from_snake_venom import DrugsFromSnakeVenom
 
 # Environment
 

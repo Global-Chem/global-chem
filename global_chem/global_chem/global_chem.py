@@ -21,6 +21,10 @@ if os.name == 'nt':
     sys.stdin.reconfigure(encoding='utf-8')
     sys.stdout.reconfigure(encoding='utf-8')
 
+# Animals
+
+from global_chem.animals.snakes.drugs_from_snake_venom import DrugsFromSnakeVenom
+
 # Environment
 
 from global_chem.environment.chemicals_from_biomass import ChemicalsFromBioMass
@@ -419,6 +423,7 @@ class GlobalChem(object):
         'organophosphorous_nerve_agents': OrganoPhosphorousNerveAgents,           # Suliman Sharif
         'organic_and_inorganic_bronsted_acids': OrganicAndInorganicBronstedAcids, # Nathaniel McClean & Suliman Sharif
         'chemicals_from_biomass': ChemicalsFromBioMass,                           # Anthony Maiorana & Suliman Sharif
+        'drugs_from_snake_venom': DrugsFromSnakeVenom,                            # Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                             # Chris Burke & Suliman Sharif
     }
 
