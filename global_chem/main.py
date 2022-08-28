@@ -1,53 +1,13 @@
 from global_chem import GlobalChem
 
-
-import selfies as sf
-
 if __name__ == '__main__':
 
-    gc = GlobalChem()
 
-    gc.build_global_chem_network()
-    gc.to_tsv()
-    #
-    # nodes = [
-    #     # 'pihkal',
-    #     # 'schedule_one',
-    #     # 'schedule_two',
-    #     # 'schedule_three',
-    #     # 'schedule_four',
-    #     # 'schedule_five',
-    #     # 'vitamins',
-    #     # 'open_smiles',
-    #     # 'common_warheads_covalent_inhibitors',
-    #     # 'emerging_perfluoroalkyls',
-    #     'amino_acids',
-    #     # 'braf_inhibitors',
-    #     # 'privileged_kinase_inhibitors',
-    # ]
-    #
-    # names_list = []
-    # selfies_list = []
-    #
-    # for node in nodes:
-    #
-    #     names_list = list(gc.get_node_smiles(node).keys())
-    #     smiles_list = list(gc.get_node_smiles(node).values())
-    #
-    #     for i, smiles in enumerate(smiles_list):
-    #         try:
-    #             selfies = sf.encoder(smiles)
-    #             names_list.append(names_list[i])
-    #             selfies_list.append(selfies)
-    #         except sf.EncoderError:
-    #             pass
-    #
-    # print (selfies_list)
-    # print (names_list)
-    #
-    # with open('SELFIES_TO_IUPAC.txt', 'w') as f:
-    #
-    #
-    #     for i, selfie in enumerate(selfies_list):
-    #
-    #         f.write(selfie + '\t' + names_list[i] + '\n')
+    gc = GlobalChem()
+    definition = gc.get_smiles_by_iupac(
+        '(4R,4aR,7S,7aR,12bS)-3-methyl-2,4,4a,7,7a,13-hexahydro-1H-4,12-methanobenzofuro[3,2-e]isoquinoline-7,9-diol',
+        distance_tolerance=1,
+        return_partial_definitions=False,
+        reconstruct_smiles=True,
+    )
+    print (definition)
