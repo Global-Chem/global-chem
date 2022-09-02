@@ -1,0 +1,41 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "@type": "SoftwareSourceCode",
+    "license": "https://spdx.org/licenses/MPL-2.0",
+    "codeRepository": "git+https://github.com/Sulstice/global-chem.git",
+    "contIntegration": "https://github.com/Sulstice/global-chem/actions",
+    "dateCreated": "2019-04-20",
+    "datePublished": "2019-04-20",
+    "dateModified": "2022-08-25",
+    "downloadUrl": "https://github.com/Sulstice/global-chem/archive/refs/tags/v1.7.3.2.tar.gz",
+    "issueTracker": "https://github.com/Sulstice/global-chem/issues",
+    "name": "Global-Chem",
+    "version": "1.7.3.2",
+    "identifier": "10.5281/zenodo.7029446",
+    "description": "A knowledge graph of common small molecules and their IUPAC/SMILES/SMARTS",
+    "applicationCategory": "Chemistry",
+    "funding": "N/A",
+    "developmentStatus": "active",
+    "funder": {
+        "@type": "Organization",
+        "name": "N/A"
+    },
+    "keywords": [
+        "cheminformatics",
+        "IUPAC",
+        "SMILES",
+        "SMARTS"
+    ],
+    "programmingLanguage": [
+        "Python3"
+    ],
+    "runtimePlatform": [
+        "Python",
+        "Conda"
+    ],
+    "operatingSystem": [
+        "Linux",
+        "Windows",
+        "MacOS"
+    ]
+}
