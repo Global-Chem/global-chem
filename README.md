@@ -185,6 +185,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 'chemicals_from_biomass': ChemicalsFromBioMass,                           # Anthony Maiorana & Suliman Sharif 
 'salt': Salt                                                              # Suliman Sharif
 'drugs_from_snake_venom': DrugsFromSnakeVenom,                            # Suliman Sharif
+'oral_contraceptives': OralContraceptives,                                # Suliman Sharif
 ```
 
 <details><summary><h3>Node List</h1><br/></summary>
@@ -235,6 +236,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Cengage Bronsted Acids              | 42           | https://cxp.cengage.com/contentservice/assets/owms01h/references/chemtables/org_chem/pKaTable.html                                                                                                                                                                                                                   |
 | Chemicals From Biomass              | 17           | Wittcoff, Harold A., et al. Industrial Organic Chemicals: Wittcoff/Organic Chemicals. John Wiley & Sons, Inc., 2004                                                                                                                                                                                                  |
 | Drugs From Snake Venom              | 7            | Oliveira, Ana L., et al. “The Chemistry of Snake Venom and Its Medicinal Potential.” Nature Reviews Chemistry, vol. 6, no. 7, July 2022, pp. 451–69                                                                                                                                                                  |
+| Oral Contraceptives                 | 17           | Coleman, William F. “The Molecules of Oral Contraceptives.” Journal of Chemical Education, vol. 87, no. 7, July 2010, pp. 760–61.                                                                                                                                                                                    |
 | Common Regex Patterns               | 1            |                                                                                                                                                                                                                                                                                                                      |
 
 </details>                            
