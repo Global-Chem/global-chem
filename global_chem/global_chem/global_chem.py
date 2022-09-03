@@ -91,6 +91,7 @@ from global_chem.food.color_additives.fda_list_four import FDAListFour
 from global_chem.food.color_additives.fda_list_five import FDAListFive
 from global_chem.food.color_additives.fda_list_six import FDAListSix
 from global_chem.food.color_additives.fda_list_seven import FDAListSeven
+
 # Narcotics
 
 from global_chem.narcotics.pihkal import Pihkal
@@ -121,6 +122,7 @@ from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
 from global_chem.sex.exsens.lube import Lube
 from global_chem.sex.exsens.exsens_products import ExsensProducts
 from global_chem.sex.tainted_sexual_enhancements.tainted_sexual_enhancements import TaintedSexualEnhancements
+from global_chem.sex.contraceptives.oral_contraceptives import OralContraceptives
 
 class Node:
 
@@ -424,6 +426,7 @@ class GlobalChem(object):
         'organic_and_inorganic_bronsted_acids': OrganicAndInorganicBronstedAcids, # Nathaniel McClean & Suliman Sharif
         'chemicals_from_biomass': ChemicalsFromBioMass,                           # Anthony Maiorana & Suliman Sharif
         'drugs_from_snake_venom': DrugsFromSnakeVenom,                            # Suliman Sharif
+        'oral_contraceptives': OralContraceptives,                                # Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                             # Chris Burke & Suliman Sharif
     }
 
