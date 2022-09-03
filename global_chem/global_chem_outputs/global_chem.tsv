@@ -135,30 +135,30 @@ iminomethyleneiminocarbonyl{2-[(2,4-dinitrophenyl)hydrazono]cyclopentane}carbony
 oxyterephthaloyloxyhexane	NCCNC(C1/C(C(C=O)CC1)=N/NC2=C([N+]([O-])=O)C=C([N+]([O-])=O)C=C2)=O	common_monomer_repeating_units	materials_chemistry	global_chem.materials.polymers.common_monomer_repeating_units
 nitrilocyclohexa-2,5-diene-idenenitrilo-1,4-phenyleneimino-1,4-phenyleneimino1,4-phenylene	N=C1C=CC(C=C1)=NC2=CC=C(NC3=CC=C(NC4=CC=CC=C4)C=C3)C=C2	common_monomer_repeating_units	materials_chemistry	global_chem.materials.polymers.common_monomer_repeating_units
 cyclohexane-methanylylidenecyclohexane-idenemethanylylidenecyclohexane-methylene	CC(CC1)CCC1C=C(CC2)CCC2=CC3CCCCC3	common_monomer_repeating_units	materials_chemistry	global_chem.materials.polymers.common_monomer_repeating_units
-methylacrylamide	CNC(C=C)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-methyl acrylate	COC(C=C)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-methyl propiolate	COC(C#C)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-2-cyanoacrylamide	N#CC(C(N)=O)=C	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-n-methylmaleimide	CN1C(C=CC1=O)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-n-ethylmaleimide	O=C(C=CC1=O)N1CC	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-crotonamide	C/C=C/C(N)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-ethyl crotonate	C/C=C/C(OCC)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-crotononitrile	C/C=C/C#N	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-methyl methylpropiolate	CC#CC(OC)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-isothiocyanatomethane	CN=C=S	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-isothiocyanatoethane	CCN=C=S	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-prop-1-ene	CC=C	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-prop-1-yne	CC#C	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-acetonitrile	CC#N	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-tert-butyl (Z)-2-ethylidenehydrazine-1-carboxylate	C/C=N/\/NC(OC(C)(C)C)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-n-methylchloroacetamide	CNC(CCl)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-n-methyl-2-chloropropanamide	CNC(C(C)Cl)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-n-methyl-2-bromopropanamide	CNC(C(C)Br)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-bromoacetone	CC(CBr)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-2-methyloxirane	CC1OC1	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-fluoromethane	CF	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-methylsulfane	CS	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
-aldehyde	CC=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases
+methylacrylamide	CNC(C=C)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+methyl acrylate	COC(C=C)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+methyl propiolate	COC(C#C)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+2-cyanoacrylamide	N#CC(C(N)=O)=C	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+n-methylmaleimide	CN1C(C=CC1=O)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+n-ethylmaleimide	O=C(C=CC1=O)N1CC	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+crotonamide	C/C=C/C(N)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+ethyl crotonate	C/C=C/C(OCC)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+crotononitrile	C/C=C/C#N	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+methyl methylpropiolate	CC#CC(OC)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+isothiocyanatomethane	CN=C=S	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+isothiocyanatoethane	CCN=C=S	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+prop-1-ene	CC=C	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+prop-1-yne	CC#C	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+acetonitrile	CC#N	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+tert-butyl (Z)-2-ethylidenehydrazine-1-carboxylate	C/C=N/\/NC(OC(C)(C)C)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+n-methylchloroacetamide	CNC(CCl)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+n-methyl-2-chloropropanamide	CNC(C(C)Cl)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+n-methyl-2-bromopropanamide	CNC(C(C)Br)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+bromoacetone	CC(CBr)=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+2-methyloxirane	CC1OC1	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+fluoromethane	CF	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+methylsulfane	CS	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
+aldehyde	CC=O	electrophilic_warheads_for_kinases	organic_chemistry	global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases
 propiolamide	C#CC(N)=O	common_warheads_covalent_inhibitors	organic_chemistry	global_chem.medicinal_chemistry.warheads.common_warheads_covalent_inhibitors
 fumarate ester	NC(/C=C/CC(OC)=O)=O	common_warheads_covalent_inhibitors	organic_chemistry	global_chem.medicinal_chemistry.warheads.common_warheads_covalent_inhibitors
 allenamide	NC(C=C=C)=O	common_warheads_covalent_inhibitors	organic_chemistry	global_chem.medicinal_chemistry.warheads.common_warheads_covalent_inhibitors
@@ -690,8 +690,8 @@ formic acid	C(=O)O	common_r_group_replacements	organic_chemistry	global_chem.med
 hydrogen bromide	Br	common_r_group_replacements	organic_chemistry	global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements
 fluroform	C(F)(F)F	common_r_group_replacements	organic_chemistry	global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements
 propane	C(C)C	common_r_group_replacements	organic_chemistry	global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements
-toulene	Cc1ccccc1	common_r_group_replacements	organic_chemistry	global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements
-pyridine	c1cccnc1	common_r_group_replacements	organic_chemistry	global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements
+toulene	CC1=CC=CC=C1	common_r_group_replacements	organic_chemistry	global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements
+pyridine	C1=NC=CC=C1	common_r_group_replacements	organic_chemistry	global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements
 dimethylamine	N(C)C	common_r_group_replacements	organic_chemistry	global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements
 ethanol	OCC	common_r_group_replacements	organic_chemistry	global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements
 formamide	C(N)=O	common_r_group_replacements	organic_chemistry	global_chem.medicinal_chemistry.scaffolds.common_r_group_replacements
@@ -2328,20 +2328,20 @@ pentane-2,4-diylbis(diphenylphosphine)	CC(CC(C)P(C1=CC=CC=C1)C2=CC=CC=C2)P(C3=CC
 (6,6′-dimethoxy-[1,1′-biphenyl]-2,2′-diyl)bis(diphenylphosphane	COc1cccc(P(c2ccccc2)c3ccccc3)c1-c4c(OC)cccc4P(c5ccccc5)c6ccccc6	nickel_ligands	organic_chemistry	global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands
 (6,6′-dimethoxy-[1,1′-biphenyl]-2,2′-diyl)bis(bis(3,5-di-tert-butyl4-methoxyphenyl)phosphine)	COc1cccc(P(c2cc(c(OC)c(c2)C(C)(C)C)C(C)(C)C)c3cc(c(OC)c(c3)C(C)(C)C)C(C)(C)C)c1-c4c(OC)cccc4P(c5cc(c(OC)c(c5)C(C)(C)C)C(C)(C)C)c6cc(c(OC)c(c6)C(C)(C)C)C(C)(C)C	nickel_ligands	organic_chemistry	global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands
 (6,6′-dimethoxy-[1,1′-biphenyl]-2,2′-diyl)bis(bis(3,5-di-tertbutylphenyl)phosphine)	COc1cccc(P(c2cc(cc(c2)C(C)(C)C)C(C)(C)C)c3cc(cc(c3)C(C)(C)C)C(C)(C)C)c1-c4c(OC)cccc4P(c5cc(cc(c5)C(C)(C)C)C(C)(C)C)c6cc(cc(c6)C(C)(C)C)C(C)(C)C	nickel_ligands	organic_chemistry	global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands
-microcrystalline_cellulose	COC1OC(CO)C(OC2OC(CO)C(OC)C(O)C2O)C(O)C1O	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir
-corn_starch	COC4C(CO)OC(OCC2OC(OC1C(CO)OC(C)C(O)C1O)C(O)C(O)C2OC3OC(CO)C(OC)C(O)C3O)C(O)C4O	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir
-dibasic_calcium_phosphate	O.O.OP(=O)([O-])[O-].[Ca+2]	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir
-lactose	C(C1C(C(C(C(O1)OC2C(OC(C(C2O)O)O)CO)O)O)O)O	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir
-pregelatinized_starch	COC1C(O)C(O)C(OCC2OC(OC3C(O)C(O)C(C)OC3CO)C(O)C(O)C2OC2OC(CO)C(OC)C(O)C2O)OC1CO	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir
-hydroxypropyl_methylcellulose	CC(COCC1C(C(C(C(O1)OC2C(OC(C(C2OCC(C)O)OCC(C)O)OCC(C)O)COCC(C)O)OCC(C)O)OCC(C)O)OCC(C)O)O.COCC1C(C(C(C(O1)OC2C(OC(C(C2OC)OC)OC)COC)OC)OC)OC	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir
-sodium_starch_glycolate	NN1CC2N(C(C)=O)C(C1)CC2	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir
-sodium_lauryl_sulfate	CCCCCCCCCCCCOS(=O)(=O)[O-].[Na+]	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir
-povidone	C1CC(=O)N(C1)C(CP)P	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir
-croscarmellose_sodium	CC(=O)O.C(C(C(C(C(C=O)O)O)O)O)O.[Na]	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir
-colloidal_silicon_dioxide	O=[Si]=O	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir
-crospovidone	C1CC(=O)NC1	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir
-stearic_acid	CCCCCCCCCCCCCCCCCC(=O)O	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir
-magnesium_stearate	CCCCCCCCCCCCCCCCCC(=O)[O-].CCCCCCCCCCCCCCCCCC(=O)[O-].[Mg+2]	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir
+microcrystalline_cellulose	COC1OC(CO)C(OC2OC(CO)C(OC)C(O)C2O)C(O)C1O	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_and_acyclovir
+corn_starch	COC4C(CO)OC(OCC2OC(OC1C(CO)OC(C)C(O)C1O)C(O)C(O)C2OC3OC(CO)C(OC)C(O)C3O)C(O)C4O	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_and_acyclovir
+dibasic_calcium_phosphate	O.O.OP(=O)([O-])[O-].[Ca+2]	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_and_acyclovir
+lactose	C(C1C(C(C(C(O1)OC2C(OC(C(C2O)O)O)CO)O)O)O)O	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_and_acyclovir
+pregelatinized_starch	COC1C(O)C(O)C(OCC2OC(OC3C(O)C(O)C(C)OC3CO)C(O)C(O)C2OC2OC(CO)C(OC)C(O)C2O)OC1CO	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_and_acyclovir
+hydroxypropyl_methylcellulose	CC(COCC1C(C(C(C(O1)OC2C(OC(C(C2OCC(C)O)OCC(C)O)OCC(C)O)COCC(C)O)OCC(C)O)OCC(C)O)OCC(C)O)O.COCC1C(C(C(C(O1)OC2C(OC(C(C2OC)OC)OC)COC)OC)OC)OC	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_and_acyclovir
+sodium_starch_glycolate	NN1CC2N(C(C)=O)C(C1)CC2	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_and_acyclovir
+sodium_lauryl_sulfate	CCCCCCCCCCCCOS(=O)(=O)[O-].[Na+]	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_and_acyclovir
+povidone	C1CC(=O)N(C1)C(CP)P	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_and_acyclovir
+croscarmellose_sodium	CC(=O)O.C(C(C(C(C(C=O)O)O)O)O)O.[Na]	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_and_acyclovir
+colloidal_silicon_dioxide	O=[Si]=O	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_and_acyclovir
+crospovidone	C1CC(=O)NC1	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_and_acyclovir
+stearic_acid	CCCCCCCCCCCCCCCCCC(=O)O	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_and_acyclovir
+magnesium_stearate	CCCCCCCCCCCCCCCCCC(=O)[O-].CCCCCCCCCCCCCCCCCC(=O)[O-].[Mg+2]	cimetidine_and_acyclovir	pharmaceutical_sciences	global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_and_acyclovir
 metformin	CN(C)C(=N)N=C(N)N	how_to_live_longer	organic_chemistry	global_chem.medicinal_chemistry.chinese.how_to_live_longer
 glucosamine	NC1C(OC(C(O)C1O)CO)O	how_to_live_longer	organic_chemistry	global_chem.medicinal_chemistry.chinese.how_to_live_longer
 chondroitin_sulfate	CC(=O)NC1C(C(C(OC1O)OS(=O)(=O)O)O)OC2C(C(C(C(O2)C(=O)O)O)O)O	how_to_live_longer	organic_chemistry	global_chem.medicinal_chemistry.chinese.how_to_live_longer
@@ -2404,9 +2404,9 @@ gluconolactone	C(C1C(C(C(C(=O)O1)O)O)O)O	lube		global_chem.sex.exsens.lube
 sodium hyaluronate	CC(=O)NC1CC(C(OC1OC2C(C(C(OC2C(=O)[O-])O)O)O)CO)O.[Na+]	lube		global_chem.sex.exsens.lube
 castor oil	CCCCCCC(CC=CCCCCCCCC(=O)OCC(COC(=O)CCCCCCCC=CCC(CCCCCC)O)OC(=O)CCCCCCCC=CCC(CCCCCC)O)O	lube		global_chem.sex.exsens.lube
 benzocaine	CCOC(=O)C1=CC=C(C=C1)N	lube		global_chem.sex.exsens.lube
-sildenafil	CCCC1=NN(C2=C1N=C(NC2=O)C3=C(C=CC(=C3)S(=O)(=O)N4CCN(CC4)C)OCC)C	tainted_sexual_enhancements		global_chem.sex.tainted_sexual_enhancement.tainted_sexual_enhancement
-tadalafil,	CN1CC(=O)N2C(C1=O)CC3=C(C2C4=CC5=C(C=C4)OCO5)NC6=CC=CC=C36	tainted_sexual_enhancements		global_chem.sex.tainted_sexual_enhancement.tainted_sexual_enhancement
-nitroglycerin	C(C(CO[N+](=O)[O-])O[N+](=O)[O-])O[N+](=O)[O-]	tainted_sexual_enhancements		global_chem.sex.tainted_sexual_enhancement.tainted_sexual_enhancement
+sildenafil	CCCC1=NN(C2=C1N=C(NC2=O)C3=C(C=CC(=C3)S(=O)(=O)N4CCN(CC4)C)OCC)C	tainted_sexual_enhancements		global_chem.sex.tainted_sexual_enhancements.tainted_sexual_enhancements
+tadalafil,	CN1CC(=O)N2C(C1=O)CC3=C(C2C4=CC5=C(C=C4)OCO5)NC6=CC=CC=C36	tainted_sexual_enhancements		global_chem.sex.tainted_sexual_enhancements.tainted_sexual_enhancements
+nitroglycerin	C(C(CO[N+](=O)[O-])O[N+](=O)[O-])O[N+](=O)[O-]	tainted_sexual_enhancements		global_chem.sex.tainted_sexual_enhancements.tainted_sexual_enhancements
 siedesalz	[Na+].[Cl-]	salt		global_chem.food.salt.salt
 black salt	[Na+].[Cl-].[Na+].[O-]S([O-])(=O)=O.OS(=O)(=O)[O-].[O-]S(=O)(=O)[O-].[Fe+3]	salt		global_chem.food.salt.salt
 finegrained salt	[Na+].[Cl-]	salt		global_chem.food.salt.salt
@@ -2421,62 +2421,62 @@ smoked salt	[a].[Na+].[K+].[Mg+2].[Ca+2].[Cl-]	salt		global_chem.food.salt.salt
 sodium iodide	[Na+].[I-]	salt		global_chem.food.salt.salt
 unrefined salt	[Na+].[K+].[Mg+2].[Ca+2].[Cl-].[Zn+2].[Cu+].[Fe+3].[P]	salt		global_chem.food.salt.salt
 rock salt	[Na+].[Cl-]	salt		global_chem.food.salt.salt
-water	O	exsens_products		global_chem.sex.exsens.products
-sodium hydroxide	[OH-].[Na+]	exsens_products		global_chem.sex.exsens.products
-glycerin	C(C(CO)O)O	exsens_products		global_chem.sex.exsens.products
-propylene glycol	CC(CO)O	exsens_products		global_chem.sex.exsens.products
-hydroxyethylcellulose	CC(COCC1C(C(C(C(O1)OC2C(OC(C(C2OCC(C)O)OCC(C)O)OCC(C)O)COCC(C)O)OCC(C)O)OCC(C)O)OCC(C)O)O	exsens_products		global_chem.sex.exsens.products
-sodium benzoate	C1=CC=C(C=C1)C(=O)[O-].[Na+]	exsens_products		global_chem.sex.exsens.products
-potassium sorbate	CC=CC=CC(=O)[O-].[K+]	exsens_products		global_chem.sex.exsens.products
-sodium saccharine	C1=CC=C2C(=C1)C(=O)NS2(=O)=O.[Na+]	exsens_products		global_chem.sex.exsens.products
-citric acid	C(C(=O)O)C(CC(=O)O)(C(=O)O)O	exsens_products		global_chem.sex.exsens.products
-rebaudioside a	CC12CCCC(C1CCC34C2CCC(C3)(C(=C)C4)OC5C(C(C(C(O5)CO)O)OC6C(C(C(C(O6)CO)O)O)O)OC7C(C(C(C(O7)CO)O)O)O)(C)C(=O)OC8C(C(C(C(O8)CO)O)O)O	exsens_products		global_chem.sex.exsens.products
-sunflower seed oil	N12C(N([H])[H])=NC([H])([H])C1([H])C1=C([H])C([H])=C([H])C([H])=C1C([H])([H])C1=C([H])C([H])=C([H])C([H])=C21	exsens_products		global_chem.sex.exsens.products
-polyglyceryl 6 distearate	CCCCCCCCCCCCCCCCCC(=O)OCC(COCC(COCC(COC(=O)CCCCCCCCCCCCCCCCC)O)O)O	exsens_products		global_chem.sex.exsens.products
-beeswax	CCCCCCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCC(=O)O.CC(CCCCCCCCCCCCCC(=O)[O-])O.CCCCCCCCC=CCCCCCCCC(=O)O	exsens_products		global_chem.sex.exsens.products
-sodium acrylate	C=CC(=O)[O-].[Na+]	exsens_products		global_chem.sex.exsens.products
-shea butter oil	CCCCCCCCC=CCCCCCCCC(=O)O.CCCCCCCCCCCCCCCCCC(=O)O.CCCCCCCCCCCCCCCC(=O)O.CCCCC/C=C\C/C=C\CCCCCCCC(=O)O	exsens_products		global_chem.sex.exsens.products
-tocopherol	CC1=C(C2=C(CCC(O2)(C)CCCC(C)CCCC(C)CCCC(C)C)C(=C1O)C)C	exsens_products		global_chem.sex.exsens.products
-jojoba oil	CCCCCCCCC=CCCCCCCCC=O.CCCCCCCCC=CCCCCCCCCCCO.CCCCCCCCC=CCCCCCCCCCCCCO[Si](C)(C)C(C)(C)C.CCCCCCCCC=CCCCCCCCCCCCCCC(=O)O	exsens_products		global_chem.sex.exsens.products
-lecithin	CCCCCCCCC(=O)OC(COC(=O)CCCCCCCC=CCC=CCCCCC)COP(=O)(CC[N+](C)(C)C)[O-]	exsens_products		global_chem.sex.exsens.products
-cetyl alcohol	OCCCCCCCCCCCCCCCC	exsens_products		global_chem.sex.exsens.products
-polyglyceryl-3 beeswax	C(C(CO)O)O.CCCCCCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCC(=O)O.CC(CCCCCCCCCCCCCC(=O)[O-])O.CCCCCCCCC=CCCCCCCCC(=O)O	exsens_products		global_chem.sex.exsens.products
-xanthan gum	CC(=O)OCC1C(C(C(C(O1)OC2C(C(OC(C2OC3C(C(C(C(O3)CO)OP)O)O)CO)CP)O)OC4C(C(C(C(O4)C(=O)O)OC5C(C(C6C(O5)COC(O6)(C)C(=O)O)O)O)O)O)O)O	exsens_products		global_chem.sex.exsens.products
-benzyl alcohol	C1=CC=C(C=C1)CO	exsens_products		global_chem.sex.exsens.products
-polyglyceryl-6 disterate	CCCCCCCCCCCCCCCCCC(=O)O.C(C(COCC(COCC(COCC(COCC(COCC(CO)O)O)O)O)O)O)O	exsens_products		global_chem.sex.exsens.products
-ethyl menthane carboxamide	CCNC(=O)C1CC(CCC1C(C)C)C	exsens_products		global_chem.sex.exsens.products
-caprylic acid	CCCCCCCC(=O)O	exsens_products		global_chem.sex.exsens.products
-capric triglyceride	CCCCCCCCCCCCCCCC(=O)O.C(C(CO)O)O	exsens_products		global_chem.sex.exsens.products
-isopropyl palmitate	CCCCCCCCCCCCCCCC(=O)OC(C)C	exsens_products		global_chem.sex.exsens.products
-prunus amygdalus dulcis oil	CS(=O)(=O)O.CS(=O)(=O)O.C=CCNC1=NC(=NC(=N1)N2CCN(CC2)C(C3=CC=C(C=C3)F)C4=CC=C(C=C4)F)NCC=C	exsens_products		global_chem.sex.exsens.products
-hydrated silica	O.O=[Si]=O	exsens_products		global_chem.sex.exsens.products
-parfum	CCOC(=O)C1=CC=CC=C1C(=O)OCC	exsens_products		global_chem.sex.exsens.products
-synthetic fluorphlogopite	[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[F-].[F-].[Mg+2].[Mg+2].[Mg+2].[Al+3].[Si+4].[Si+4].[Si+4].[K+]	exsens_products		global_chem.sex.exsens.products
-iron hydroxide	[OH-].[OH-].[OH-].[Fe+3]	exsens_products		global_chem.sex.exsens.products
-titanium dioxide	O=[Ti]=O	exsens_products		global_chem.sex.exsens.products
-hexyl cinnamal	CCCCCCC(=CC1=CC=CC=C1)C=O	exsens_products		global_chem.sex.exsens.products
-linalool	CC(=CCCC(C)(C=C)O)C	exsens_products		global_chem.sex.exsens.products
-citronellol	CC(CCC=C(C)C)CCO	exsens_products		global_chem.sex.exsens.products
-alpha isomethyl ionone	CC1=CCCC(C1C=C(C)C(=O)C)(C)C	exsens_products		global_chem.sex.exsens.products
-benzyl salicylate	C1=CC=C(C=C1)COC(=O)C2=CC=CC=C2O	exsens_products		global_chem.sex.exsens.products
-citral	O=CC=C(C)CCC=C(C)C	exsens_products		global_chem.sex.exsens.products
-eugenol	COC1=C(C=CC(=C1)CC=C)O	exsens_products		global_chem.sex.exsens.products
-amyl cinnamal	CCCCCC(=CC1=CC=CC=C1)C=O	exsens_products		global_chem.sex.exsens.products
-isoeugenol	C/C=C/C1=CC(=C(C=C1)O)OC	exsens_products		global_chem.sex.exsens.products
-sesame seed oil	CCCCCCCCCCCCCCCCCC(=O)O.CCCCCCCCCCCCCCCC(=O)O.CCCCCCCCC=CCCCCCCCC(=O)O.CCCCCC=CCC=CCCCCCCCC(=O)O	exsens_products		global_chem.sex.exsens.products
-orbignya oleifera seed oil	CCCCCCCCCCCC(=O)O.CCCCCCCCCCCCCC(=O)O.CCCCCCCCC=CCCCCCCCC(=O)O	exsens_products		global_chem.sex.exsens.products
-macadamia ternifolia seed oil	O=C(O)CCCCCCC\C=C/CCCCCC	exsens_products		global_chem.sex.exsens.products
-limonene	CC1=CCC(CC1)C(=C)C	exsens_products		global_chem.sex.exsens.products
-avocado oil	CCCCCCCCCCCCCCCCCC(=O)OCC.CCCCCCCCCCCCCCCC(=O)OCC.CCCCCCCCC=CCCCCCCCC(=O)OCC.CCCCCCC=CCCCCCCCC(=O)OCC.CCCCCC=CCC=CCCCCCCCC(=O)OCC.CCC=CCC=CCC=CCCCCCCCC(=O)OCC	exsens_products		global_chem.sex.exsens.products
-coconut oil	CCCCCCCCCCCC(=O)OC(COC(=O)CCCCCCC)COC(=O)CCCCCCCCC	exsens_products		global_chem.sex.exsens.products
-hydroxycitronellal	CC(CCCC(C)(C)O)CC=O	exsens_products		global_chem.sex.exsens.products
-geraniol	CC(=CCC/C(=C/CO)/C)C	exsens_products		global_chem.sex.exsens.products
-cinnamyl alcohol	C1=CC=C(C=C1)C=CCO	exsens_products		global_chem.sex.exsens.products
-coumarin	C1=CC=C2C(=C1)C=CC(=O)O2	exsens_products		global_chem.sex.exsens.products
-phenoxyethanol	C1=CC=C(C=C1)OCCO	exsens_products		global_chem.sex.exsens.products
-butylphenyl methylpropional	CC(CC1=CC=C(C=C1)C(C)(C)C)C=O	exsens_products		global_chem.sex.exsens.products
-apricot kernel oil	C1=CC=C(C=C1)C(C#N)OC2C(C(C(C(O2)COC3C(C(C(C(O3)CO)O)O)O)O)O)O	exsens_products		global_chem.sex.exsens.products
-aloe vera leaf juice	CC1=CC=C(C=C1)C(=O)C=CC2=CC(=CC=C2)[N+](=O)[O-]	exsens_products		global_chem.sex.exsens.products
+water	O	exsens_products		global_chem.sex.exsens.exsens_products
+sodium hydroxide	[OH-].[Na+]	exsens_products		global_chem.sex.exsens.exsens_products
+glycerin	C(C(CO)O)O	exsens_products		global_chem.sex.exsens.exsens_products
+propylene glycol	CC(CO)O	exsens_products		global_chem.sex.exsens.exsens_products
+hydroxyethylcellulose	CC(COCC1C(C(C(C(O1)OC2C(OC(C(C2OCC(C)O)OCC(C)O)OCC(C)O)COCC(C)O)OCC(C)O)OCC(C)O)OCC(C)O)O	exsens_products		global_chem.sex.exsens.exsens_products
+sodium benzoate	C1=CC=C(C=C1)C(=O)[O-].[Na+]	exsens_products		global_chem.sex.exsens.exsens_products
+potassium sorbate	CC=CC=CC(=O)[O-].[K+]	exsens_products		global_chem.sex.exsens.exsens_products
+sodium saccharine	C1=CC=C2C(=C1)C(=O)NS2(=O)=O.[Na+]	exsens_products		global_chem.sex.exsens.exsens_products
+citric acid	C(C(=O)O)C(CC(=O)O)(C(=O)O)O	exsens_products		global_chem.sex.exsens.exsens_products
+rebaudioside a	CC12CCCC(C1CCC34C2CCC(C3)(C(=C)C4)OC5C(C(C(C(O5)CO)O)OC6C(C(C(C(O6)CO)O)O)O)OC7C(C(C(C(O7)CO)O)O)O)(C)C(=O)OC8C(C(C(C(O8)CO)O)O)O	exsens_products		global_chem.sex.exsens.exsens_products
+sunflower seed oil	N12C(N([H])[H])=NC([H])([H])C1([H])C1=C([H])C([H])=C([H])C([H])=C1C([H])([H])C1=C([H])C([H])=C([H])C([H])=C21	exsens_products		global_chem.sex.exsens.exsens_products
+polyglyceryl 6 distearate	CCCCCCCCCCCCCCCCCC(=O)OCC(COCC(COCC(COC(=O)CCCCCCCCCCCCCCCCC)O)O)O	exsens_products		global_chem.sex.exsens.exsens_products
+beeswax	CCCCCCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCC(=O)O.CC(CCCCCCCCCCCCCC(=O)[O-])O.CCCCCCCCC=CCCCCCCCC(=O)O	exsens_products		global_chem.sex.exsens.exsens_products
+sodium acrylate	C=CC(=O)[O-].[Na+]	exsens_products		global_chem.sex.exsens.exsens_products
+shea butter oil	CCCCCCCCC=CCCCCCCCC(=O)O.CCCCCCCCCCCCCCCCCC(=O)O.CCCCCCCCCCCCCCCC(=O)O.CCCCC/C=C\C/C=C\CCCCCCCC(=O)O	exsens_products		global_chem.sex.exsens.exsens_products
+tocopherol	CC1=C(C2=C(CCC(O2)(C)CCCC(C)CCCC(C)CCCC(C)C)C(=C1O)C)C	exsens_products		global_chem.sex.exsens.exsens_products
+jojoba oil	CCCCCCCCC=CCCCCCCCC=O.CCCCCCCCC=CCCCCCCCCCCO.CCCCCCCCC=CCCCCCCCCCCCCO[Si](C)(C)C(C)(C)C.CCCCCCCCC=CCCCCCCCCCCCCCC(=O)O	exsens_products		global_chem.sex.exsens.exsens_products
+lecithin	CCCCCCCCC(=O)OC(COC(=O)CCCCCCCC=CCC=CCCCCC)COP(=O)(CC[N+](C)(C)C)[O-]	exsens_products		global_chem.sex.exsens.exsens_products
+cetyl alcohol	OCCCCCCCCCCCCCCCC	exsens_products		global_chem.sex.exsens.exsens_products
+polyglyceryl-3 beeswax	C(C(CO)O)O.CCCCCCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCCCCCCCCC.CCCCCCCCCCCCCCCC(=O)O.CC(CCCCCCCCCCCCCC(=O)[O-])O.CCCCCCCCC=CCCCCCCCC(=O)O	exsens_products		global_chem.sex.exsens.exsens_products
+xanthan gum	CC(=O)OCC1C(C(C(C(O1)OC2C(C(OC(C2OC3C(C(C(C(O3)CO)OP)O)O)CO)CP)O)OC4C(C(C(C(O4)C(=O)O)OC5C(C(C6C(O5)COC(O6)(C)C(=O)O)O)O)O)O)O)O	exsens_products		global_chem.sex.exsens.exsens_products
+benzyl alcohol	C1=CC=C(C=C1)CO	exsens_products		global_chem.sex.exsens.exsens_products
+polyglyceryl-6 disterate	CCCCCCCCCCCCCCCCCC(=O)O.C(C(COCC(COCC(COCC(COCC(COCC(CO)O)O)O)O)O)O)O	exsens_products		global_chem.sex.exsens.exsens_products
+ethyl menthane carboxamide	CCNC(=O)C1CC(CCC1C(C)C)C	exsens_products		global_chem.sex.exsens.exsens_products
+caprylic acid	CCCCCCCC(=O)O	exsens_products		global_chem.sex.exsens.exsens_products
+capric triglyceride	CCCCCCCCCCCCCCCC(=O)O.C(C(CO)O)O	exsens_products		global_chem.sex.exsens.exsens_products
+isopropyl palmitate	CCCCCCCCCCCCCCCC(=O)OC(C)C	exsens_products		global_chem.sex.exsens.exsens_products
+prunus amygdalus dulcis oil	CS(=O)(=O)O.CS(=O)(=O)O.C=CCNC1=NC(=NC(=N1)N2CCN(CC2)C(C3=CC=C(C=C3)F)C4=CC=C(C=C4)F)NCC=C	exsens_products		global_chem.sex.exsens.exsens_products
+hydrated silica	O.O=[Si]=O	exsens_products		global_chem.sex.exsens.exsens_products
+parfum	CCOC(=O)C1=CC=CC=C1C(=O)OCC	exsens_products		global_chem.sex.exsens.exsens_products
+synthetic fluorphlogopite	[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[F-].[F-].[Mg+2].[Mg+2].[Mg+2].[Al+3].[Si+4].[Si+4].[Si+4].[K+]	exsens_products		global_chem.sex.exsens.exsens_products
+iron hydroxide	[OH-].[OH-].[OH-].[Fe+3]	exsens_products		global_chem.sex.exsens.exsens_products
+titanium dioxide	O=[Ti]=O	exsens_products		global_chem.sex.exsens.exsens_products
+hexyl cinnamal	CCCCCCC(=CC1=CC=CC=C1)C=O	exsens_products		global_chem.sex.exsens.exsens_products
+linalool	CC(=CCCC(C)(C=C)O)C	exsens_products		global_chem.sex.exsens.exsens_products
+citronellol	CC(CCC=C(C)C)CCO	exsens_products		global_chem.sex.exsens.exsens_products
+alpha isomethyl ionone	CC1=CCCC(C1C=C(C)C(=O)C)(C)C	exsens_products		global_chem.sex.exsens.exsens_products
+benzyl salicylate	C1=CC=C(C=C1)COC(=O)C2=CC=CC=C2O	exsens_products		global_chem.sex.exsens.exsens_products
+citral	O=CC=C(C)CCC=C(C)C	exsens_products		global_chem.sex.exsens.exsens_products
+eugenol	COC1=C(C=CC(=C1)CC=C)O	exsens_products		global_chem.sex.exsens.exsens_products
+amyl cinnamal	CCCCCC(=CC1=CC=CC=C1)C=O	exsens_products		global_chem.sex.exsens.exsens_products
+isoeugenol	C/C=C/C1=CC(=C(C=C1)O)OC	exsens_products		global_chem.sex.exsens.exsens_products
+sesame seed oil	CCCCCCCCCCCCCCCCCC(=O)O.CCCCCCCCCCCCCCCC(=O)O.CCCCCCCCC=CCCCCCCCC(=O)O.CCCCCC=CCC=CCCCCCCCC(=O)O	exsens_products		global_chem.sex.exsens.exsens_products
+orbignya oleifera seed oil	CCCCCCCCCCCC(=O)O.CCCCCCCCCCCCCC(=O)O.CCCCCCCCC=CCCCCCCCC(=O)O	exsens_products		global_chem.sex.exsens.exsens_products
+macadamia ternifolia seed oil	O=C(O)CCCCCCC\C=C/CCCCCC	exsens_products		global_chem.sex.exsens.exsens_products
+limonene	CC1=CCC(CC1)C(=C)C	exsens_products		global_chem.sex.exsens.exsens_products
+avocado oil	CCCCCCCCCCCCCCCCCC(=O)OCC.CCCCCCCCCCCCCCCC(=O)OCC.CCCCCCCCC=CCCCCCCCC(=O)OCC.CCCCCCC=CCCCCCCCC(=O)OCC.CCCCCC=CCC=CCCCCCCCC(=O)OCC.CCC=CCC=CCC=CCCCCCCCC(=O)OCC	exsens_products		global_chem.sex.exsens.exsens_products
+coconut oil	CCCCCCCCCCCC(=O)OC(COC(=O)CCCCCCC)COC(=O)CCCCCCCCC	exsens_products		global_chem.sex.exsens.exsens_products
+hydroxycitronellal	CC(CCCC(C)(C)O)CC=O	exsens_products		global_chem.sex.exsens.exsens_products
+geraniol	CC(=CCC/C(=C/CO)/C)C	exsens_products		global_chem.sex.exsens.exsens_products
+cinnamyl alcohol	C1=CC=C(C=C1)C=CCO	exsens_products		global_chem.sex.exsens.exsens_products
+coumarin	C1=CC=C2C(=C1)C=CC(=O)O2	exsens_products		global_chem.sex.exsens.exsens_products
+phenoxyethanol	C1=CC=C(C=C1)OCCO	exsens_products		global_chem.sex.exsens.exsens_products
+butylphenyl methylpropional	CC(CC1=CC=C(C=C1)C(C)(C)C)C=O	exsens_products		global_chem.sex.exsens.exsens_products
+apricot kernel oil	C1=CC=C(C=C1)C(C#N)OC2C(C(C(C(O2)COC3C(C(C(C(O3)CO)O)O)O)O)O)O	exsens_products		global_chem.sex.exsens.exsens_products
+aloe vera leaf juice	CC1=CC=C(C=C1)C(=O)C=CC2=CC(=CC=C2)[N+](=O)[O-]	exsens_products		global_chem.sex.exsens.exsens_products
 fd&c blue #1	[Na+].[Na+].[O-]S(=O)(=O)c1cccc(c1)CN(c2ccc(cc2)/C(=C4/C=CC(=[N+](CC)Cc3cccc(c3)S([O-])(=O)=O)/C=C/4)c5ccccc5S([O-])(=O)=O)CC	fda_list_one		global_chem.food.color_additives.fda_list_one
 fd&c blue #1 Aluminum Lake	CCN(CC1=CC(=CC=C1)S(=O)(=O)[O-])C2=CC=C(C=C2)C(=C3C=CC(=[N+](CC)CC4=CC(=CC=C4)S(=O)(=O)[O-])C=C3)C5=CC=CC=C5S(=O)(=O)[O-].CCN(CC1=CC(=CC=C1)S(=O)(=O)[O-])C2=CC=C(C=C2)C(=C3C=CC(=[N+](CC)CC4=CC(=CC=C4)S(=O)(=O)[O-])C=C3)C5=CC=CC=C5S(=O)(=O)[O-].CCN(CC1=CC(=CC=C1)S(=O)(=O)[O-])C2=CC=C(C=C2)C(=C3C=CC(=[N+](CC)CC4=CC(=CC=C4)S(=O)(=O)[O-])C=C3)C5=CC=CC=C5S(=O)(=O)[O-].[Al+3].[Al+3]	fda_list_one		global_chem.food.color_additives.fda_list_one
 fd&c blue #2	C1=CC(=CC=C1C2=CC=C(C=C2)N=NC3=C(C=C4C=CC(=CC4=C3O)N)S(=O)(=O)[O-])N=NC5=C(C6=C(C=C(C=C6C=C5S(=O)(=O)[O-])S(=O)(=O)[O-])N)O.[Na+].[Na+].[Na+]	fda_list_one		global_chem.food.color_additives.fda_list_one
@@ -3036,10 +3036,10 @@ orientin	OCC1OC(C(O)C(O)C1O)c2c(O)cc(O)c3C(=O)C=C(Oc23)c4ccc(O)c(O)c4	constituen
 orientin-O-glucoside	C1=CC(=C(C=C1C2=CC(=O)C3=C(O2)C(=C(C=C3O)O)C4C(C(C(C(O4)CO)O)O)O)O)O	constituents_of_cannabis_sativa	organic_chemistry	global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa
 orientin-7-O-rhamnoglucoside	CC1C(C(C(C(O1)OC2=C(C3=C(C(=C2)O)C(=O)C=C(O3)C4=CC(=C(C=C4)O)O)C5C(C(C(C(O5)CO)O)O)O)O)O)O	constituents_of_cannabis_sativa	organic_chemistry	global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa
 quercetin-O-glucoside	C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)OC4C(C(C(C(O4)CO)O)O)O)O)O)O)O	constituents_of_cannabis_sativa	organic_chemistry	global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa
-vitexin-7-O-g-glucoside	C1=CC(=CC=C1C2=CC(=O)C3=C(O2)C(=C(C=C3O)OC4C(C(C(C(O4)CO)O)O)O)C5C(C(C(C(O5)CO)O)O)O)O	constituents_of_cannabis_sativa	organic_chemistry	global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa
+vitexin-7-O-g"-glucoside	C1=CC(=CC=C1C2=CC(=O)C3=C(O2)C(=C(C=C3O)OC4C(C(C(C(O4)CO)O)O)O)C5C(C(C(C(O5)CO)O)O)O)O	constituents_of_cannabis_sativa	organic_chemistry	global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa
 vitexin-O-glucoside	C1=CC(=CC=C1C2=CC(=O)C3=C(O2)C(=C(C=C3O)O)C4C(C(C(C(O4)CO)O)O)O)OC5C(C(C(C(O5)CO)O)O)O	constituents_of_cannabis_sativa	organic_chemistry	global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa
 vitexin-O-rhamnoglucoside	CC1C(C(C(C(O1)OC2C(C(C(OC2C3=C(C=C(C4=C3OC(=CC4=O)C5=CC=C(C=C5)O)O)O)CO)O)O)O)O)O	constituents_of_cannabis_sativa	organic_chemistry	global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa
-2-O-glucopyranosylvitexin	C1=CC(=CC=C1C2=CC(=O)C3=C(O2)C(=C(C=C3O)O)C4C(C(C(C(O4)CO)O)O)OC5C(C(C(C(O5)CO)O)O)O)O	constituents_of_cannabis_sativa	organic_chemistry	global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa
+2"-O-glucopyranosylvitexin	C1=CC(=CC=C1C2=CC(=O)C3=C(O2)C(=C(C=C3O)O)C4C(C(C(C(O4)CO)O)O)OC5C(C(C(C(O5)CO)O)O)O)O	constituents_of_cannabis_sativa	organic_chemistry	global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa
 vitamin k	CC(C)CCCC(C)CCCC(C)CCC/C(C)=C/CC1=C(C)C(=O)c2ccccc2C1=O	constituents_of_cannabis_sativa	organic_chemistry	global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa
 carotene	CC1=C(C(CCC1)(C)C)C=CC(=CC=CC(=CC=CC=C(C)C=CC=C(C)C=CC2=C(CCCC2(C)C)C)C)C	constituents_of_cannabis_sativa	organic_chemistry	global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa
 zanthophylls	CC1=C(C(CC(C1)O)(C)C)C=CC(=CC=CC(=CC=CC=C(C)C=CC=C(C)C=CC2C(=CC(CC2(C)C)O)C)C)C	constituents_of_cannabis_sativa	organic_chemistry	global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa
@@ -3171,45 +3171,86 @@ hoenig-a232	Cl/C(F)=N/OP(F)(OC(C)CCl)=O	organophosphorous_nerve_agents		global_c
 hoenig-a234	Cl/C(F)=N/OP(F)(OC(C)C(C)Cl)=O	organophosphorous_nerve_agents		global_chem.warfare.organophosphorous_nerve_agents
 novichok-5	FP1OC(C)CO1	organophosphorous_nerve_agents		global_chem.warfare.organophosphorous_nerve_agents
 novichok-7	FP1OC(C)C(C)O1	organophosphorous_nerve_agents		global_chem.warfare.organophosphorous_nerve_agents
-sulfuric acid	OS(O)(=O)=O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-hydrogen iodide	[H]I	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-hydrogen bromide	[H]Br	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-hydrogen chloride	[H]Cl	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-benzenesulfonic acid	OS(C1=CC=CC=C1)(=O)=O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-methanesulfonic acid	CS(O)(=O)=O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-nitric acid	[O-][N+](O)=O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-trifluoroacetic acid	OC(C(F)(F)F)=O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-benzoic acid	OC(C1=CC=CC=C1)=O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-acetic acid	CC(O)=O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-carbonic acid	OC(O)=O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-thiophenol	SC1=CC=CC=C1	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-hydrogen sulfide	[H]S[H]	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-peracetic acid	CC(OO)=O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-phthanlimide	O=C1NC(C2=CC=CC=C21)=O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-nitroethane	CC[N+]([O-])=O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-pentane-2,4-dione	CC(CC(C)=O)=O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-hydrogen cyanide	N#C[H]	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-hexaflurorisopropanol	OC(C(F)(F)F)C(F)(F)F	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-phenol	OC1=CC=CC=C1	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-methanethiol	CS	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-diethyl malonate	O=C(CC(OC)=O)OC	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-cyclopentadiene	C1=CC=CC1	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-water	O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-ethanol	OCC	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-cyclohexanone	O=C1CCCCC1	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-acetamide	CC(N)=O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-isopropanol	CC(C)O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-t-butanol	CC(C)(C)O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-acetone	CC(C)=O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-ethyl acetate	CC(OCC)=O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-ethyne	C#C	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-acetonitrile	N#CC	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-dimethylsulfone	CS(C)(=O)=O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-dimethylsulfoxide	CS(C)=O	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-ammonia	N	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-diisopropylamine	CC(C)NC(C)C	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-toluene	CC1=CC=CC=C1	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-benzene	C1=CC=CC=C1	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-propene	C=CC	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-ethene	C=C	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
-methane	C	organic_and_inorganic_bronsted_acids		global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+sulfuric acid	OS(O)(=O)=O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+hydrogen iodide	[H]I	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+hydrogen bromide	[H]Br	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+hydrogen chloride	[H]Cl	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+benzenesulfonic acid	OS(C1=CC=CC=C1)(=O)=O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+methanesulfonic acid	CS(O)(=O)=O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+nitric acid	[O-][N+](O)=O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+trifluoroacetic acid	OC(C(F)(F)F)=O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+benzoic acid	OC(C1=CC=CC=C1)=O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+acetic acid	CC(O)=O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+carbonic acid	OC(O)=O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+thiophenol	SC1=CC=CC=C1	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+hydrogen sulfide	[H]S[H]	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+peracetic acid	CC(OO)=O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+phthalimide	O=C1NC(C2=CC=CC=C21)=O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+nitroethane	CC[N+]([O-])=O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+pentane-2,4-dione	CC(CC(C)=O)=O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+hydrogen cyanide	N#C[H]	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+hexafluoroisopropanol	OC(C(F)(F)F)C(F)(F)F	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+phenol	OC1=CC=CC=C1	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+methanethiol	CS	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+diethyl malonate	O=C(CC(OC)=O)OC	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+cyclopentadiene	C1=CC=CC1	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+water	O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+ethanol	OCC	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+cyclohexanone	O=C1CCCCC1	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+acetamide	CC(N)=O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+isopropanol	CC(C)O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+t-butanol	CC(C)(C)O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+acetone	CC(C)=O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+ethyl acetate	CC(OCC)=O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+ethyne	C#C	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+acetonitrile	N#CC	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+dimethylsulfone	CS(C)(=O)=O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+dimethylsulfoxide	CS(C)=O	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+ammonia	N	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+diisopropylamine	CC(C)NC(C)C	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+toluene	CC1=CC=CC=C1	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+benzene	C1=CC=CC=C1	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+propene	C=CC	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+ethene	C=C	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+methane	C	organic_and_inorganic_bronsted_acids	organic_chemistry	global_chem.education.cengage.organic_and_inorganic_bronsted_acids
+synthesis gas	[C-]#[O+].[HH]	chemicals_from_biomass	environmental_chemistry	global_chem.environment.chemicals_from_biomass
+ethane	CC	chemicals_from_biomass	environmental_chemistry	global_chem.environment.chemicals_from_biomass
+ethylene	C=C	chemicals_from_biomass	environmental_chemistry	global_chem.environment.chemicals_from_biomass
+propylene	CC=C	chemicals_from_biomass	environmental_chemistry	global_chem.environment.chemicals_from_biomass
+1,3-butadiene	C=CC=C	chemicals_from_biomass	environmental_chemistry	global_chem.environment.chemicals_from_biomass
+butene	CCC=C	chemicals_from_biomass	environmental_chemistry	global_chem.environment.chemicals_from_biomass
+butane	CCCC	chemicals_from_biomass	environmental_chemistry	global_chem.environment.chemicals_from_biomass
+dicyclopentadiene	C1C=CC2C1C3CC2C=C3	chemicals_from_biomass	environmental_chemistry	global_chem.environment.chemicals_from_biomass
+isoprene	CC(=C)C=C	chemicals_from_biomass	environmental_chemistry	global_chem.environment.chemicals_from_biomass
+pentene	CCCC=C	chemicals_from_biomass	environmental_chemistry	global_chem.environment.chemicals_from_biomass
+piperylene	CC=CC=C	chemicals_from_biomass	environmental_chemistry	global_chem.environment.chemicals_from_biomass
+benzene	C1=CC=CC=C1	chemicals_from_biomass	environmental_chemistry	global_chem.environment.chemicals_from_biomass
+toluene	CC1=CC=CC=C1	chemicals_from_biomass	environmental_chemistry	global_chem.environment.chemicals_from_biomass
+p-xylene	CC1=CC=C(C=C1)C	chemicals_from_biomass	environmental_chemistry	global_chem.environment.chemicals_from_biomass
+o-xylene	CC1=CC=CC=C1C	chemicals_from_biomass	environmental_chemistry	global_chem.environment.chemicals_from_biomass
+m-xylene	CC1=CC(=CC=C1)C	chemicals_from_biomass	environmental_chemistry	global_chem.environment.chemicals_from_biomass
+glycerol	C(C(CO)O)O	chemicals_from_biomass	environmental_chemistry	global_chem.environment.chemicals_from_biomass
+ziconotide	CC1C(=O)NC(C(=O)NC2CSSCC3C(=O)NC(C(=O)NC(C(=O)NCC(=O)NC(C(=O)NC(CSSCC(C(=O)NC(CSSCC(C(=O)NC(C(=O)NCC(=O)NC(C(=O)NCC(=O)N1)CCCCN)CCCCN)N)C(=O)NC(C(=O)NCC(=O)NC(C(=O)N3)CO)C(C)O)NC(=O)C(NC(=O)C(NC(=O)C(NC(=O)C(NC(=O)C(NC(=O)C(NC2=O)CO)CCCNC(=N)N)CC(C)C)CCSC)CC4=CC=C(C=C4)O)CC(=O)O)C(=O)N)CCCCN)CO)CCCNC(=N)N)CCCCN	drugs_from_snake_venom		global_chem.animals.snakes.drugs_from_snake_venom
+captopril	CC(CS)C(=O)N1CCCC1C(=O)O	drugs_from_snake_venom		global_chem.animals.snakes.drugs_from_snake_venom
+tirofiban	CCCCS(=O)(=O)NC(CC1=CC=C(C=C1)OCCCCC2CCNCC2)C(=O)O	drugs_from_snake_venom		global_chem.animals.snakes.drugs_from_snake_venom
+eptifibatide	C1CC2C(=O)NC(CSSCCC(=O)NC(C(=O)NCC(=O)NC(C(=O)NC(C(=O)N2C1)CC3=CNC4=CC=CC=C43)CC(=O)O)CCCCN=C(N)N)C(=O)N	drugs_from_snake_venom		global_chem.animals.snakes.drugs_from_snake_venom
+batroxobin	NC(CCSC)C(NC(C(C)C)C(NC(CC(C)C)C(NC(C(CC)([H])C)C(NC(CCCCNC(N)=N)C(NC(C(C)C)C(NC(C(CC)([H])C)C(NC(C)C(NC(CC(N)=O)C(NC(CC(C)C)C(NC(CC(C)C)C(NC(C(CC)([H])C)C(NC(CC(C)C)C(NC(CCC(N)=O)C(NC(C(C)C)C(NC(CO)C(NC(CC1=CC=C(O)C=C1)C(NC(C)C(NC(CCC(N)=O)C(NC(CCCCN)C(NC(CO)C(NC(CO)C(NC(CCC(O)=O)C(NC(CC(C)C)C(NC(C(C)C)C(NC(C(CC)([H])C)C(NC([H])C(NC([H])C(NC(CC(O)=O)C(NC(CCC(O)=O)C(NC(CS)C(NC(CC(O)=O)C(NC(C(CC)([H])C)C(NC(CC(N)=O)C(NC(CCC(O)=O)C(NC(CC1=CNC=N1)C(NC(C2CCCN2)C(NC(CC1=CC=CC=C1)C(NC(CC(C)C)C(NC(C)C(NC(CC1=CC=CC=C1)C(NC(CCSC)C(NC(CC1=CC=C(O)C=C1)C(NC(CC1=CC=C(O)C=C1)C(NC(CO)C(NC(C2CCCN2)C(NC(CCCCNC(N)=N)C(NC(CC1=CC=C(O)C=C1)C(NC(CC1=CC=CC=C1)C(NC(CS)C(NC([H])C(NC(CCSC)C(NC(C(C)([H])O)C(NC(CC(C)C)C(NC(C(CC)([H])C)C(NC(CC(N)=O)C(NC(CCC(N)=O)C(NC(CCC(O)=O)C(NC(CCC1=CNC2=C1C=CC=C2)C(NC(C(C)C)C(NC(CC(C)C)C(NC(C(C)([H])O)C(NC(C)C(NC(C)C(NC(CC1=CNC=N1)C(NC(CS)C(NC(CC(N)=O)C(NC(CCCCNC(N)=N)C(NC(CCCCNC(N)=N)C(NC(CC1=CC=CC=C1)C(NC(CCSC)C(NC(CCCCNC(N)=N)C(NC(C(CC)([H])C)C(NC(CC1=CNC=N1)C(NC(CC(C)C)C(NC([H])C(NC(CCCCN)C(NC(CC1=CNC=N1)C(NC(C)C(NC([H])C(NC(CO)C(NC(C(C)C)C(NC(C)C(NC(CC(N)=O)C(NC(CC1=CC=C(O)C=C1)C(NC(CC(O)=O)C(NC(CCC(O)=O)C(NC(C(C)C)C(NC(C(C)C)C(NC(CCCCNC(N)=N)C(NC(CC1=CC=C(O)C=C1)C(NC(C2CCCN2)C(NC(CCCCN)C(NC(CCC(O)=O)C(NC(CCCCN)C(NC(CC1=CC=CC=C1)C(NC(C(CC)([H])C)C(NC(CS)C(NC(C2CCCN2)C(NC(CC(N)=O)C(NC(CCCCN)C(NC(CCCCN)C(NC(CCCCN)C(NC(CC(N)=O)C(NC(C(C)C)C(NC(C(CC)([H])C)C(NC(C(C)([H])O)C(NC(CC(O)=O)C(NC(CCCCN)C(NC(CC(O)=O)C(NC(C(CC)([H])C)C(NC(CCSC)C(NC(CC(C)C)C(NC(C(CC)([H])C)C(NC(CCCCNC(N)=N)C(NC(CC(C)C)C(NC(CC(O)=O)C(NC(CCCCNC(N)=N)C(NC(C2CCCN2)C(NC(C(C)C)C(NC(CCCCN)C(NC(CC(N)=O)C(NC(CO)C(NC(CCC(O)=O)C(NC(CC1=CNC=N1)C(NC(C(CC)([H])C)C(NC(C)C(NC(C2CCCN2)C(NC(CC(C)C)C(NC(CO)C(NC(CC(C)C)C(NC(C2CCCN2)C(NC(CO)C(NC(CC(N)=O)C(NC(C2CCCN2)C(NC(C2CCCN2)C(NC(CO)C(NC(C(C)C)C(NC([H])C(NC(CO)C(NC(C(C)C)C(NC(CS)C(NC(CCCCNC(N)=N)C(NC(C(CC)([H])C)C(NC(CCSC)C(NC([H])C(NC(CCC1=CNC2=C1C=CC=C2)C(NC([H])C(NC(C)C(NC(C(CC)([H])C)C(NC(C(C)([H])O)C(NC(C(C)([H])O)C(NC(CO)C(NC(CCC(O)=O)C(NC(CC(O)=O)C(NC(C(C)([H])O)C(NC(CC1=CC=C(O)C=C1)C(NC(C2CCCN2)C(NC(CC(O)=O)C(NC(C(C)C)C(NC(C2CCCN2)C(NC(CC1=CNC=N1)C(NC(CS)C(NC(C)C(NC(CC(N)=O)C(NC(C(CC)([H])C)C(NC(CC(N)=O)C(NC(CC(C)C)C(NC(CC1=CC=CC=C1)C(NC(CC(N)=O)C(NC(CC(N)=O)C(NC(C(C)([H])O)C(NC(C(C)C)C(NC(CS)C(NC(CCCCNC(N)=N)C(NC(CCC(O)=O)C(NC(C)C(NC(CC1=CC=C(O)C=C1)C(NC(CC(N)=O)C(NC([H])C(NC(CC(C)C)C(NC(C2CCCN2)C(NC(C)C(NC(CCCCN)C(NC(C(C)([H])O)C(NC(CC(C)C)C(NC(CS)C(NC(C)C(NC([H])C(NC(C(C)C)C(NC(CC(C)C)C(NC(CCC(N)=O)C(NC([H])C(NC([H])C(NC(C(CC)([H])C)C(NC(CC(O)=O)C(NC(C(C)([H])O)C(NC(CS)C(NC([H])C(NC([H])C(NC(CC(O)=O)C(NC(CO)C(NC([H])C(NC([H])C(NC(C2CCCN2)C(NC(CC(C)C)C(NC(C(CC)([H])C)C(NC(CS)C(NC(CC(N)=O)C(NC([H])C(NC(CCC(N)=O)C(NC(CC1=CC=CC=C1)C(NC(CCC(N)=O)C(NC([H])C(NC(C(CC)([H])C)C(NC(CC(C)C)C(NC(CO)C(NC(CCC1=CNC2=C1C=CC=C2)C(NC([H])C(NC(CO)C(NC(CC(O)=O)C(NC(C2CCCN2)C(NC(CS)C(NC(C)C(NC(CCC(O)=O)C(NC(C2CCCN2)C(NC(CCCCNC(N)=N)C(NC(CCCCN)C(NC(C2CCCN2)C(NC(C)C(NC(CC1=CC=CC=C1)C(NC(CC1=CC=C(O)C=C1)C(NC(C(C)([H])O)C(NC(CCCCN)C(NC(C(C)C)C(NC(CC1=CC=CC=C1)C(NC(CC(O)=O)C(NC(CC1=CC=C(O)C=C1)C(NC(CC(C)C)C(NC(C2CCCN2)C(NC(CCC1=CNC2=C1C=CC=C2)C(NC(C(CC)([H])C)C(NC(CCC(N)=O)C(NC(CO)C(NC(C(CC)([H])C)C(NC(C(CC)([H])C)C(NC(C)C(NC([H])C(NC(CC(N)=O)C(NC(CCCCN)C(NC(C(C)([H])O)C(NC(C)C(NC(C(C)([H])O)C(NC(CS)C(NC(C2CCCN2)C(NCC(O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O	drugs_from_snake_venom		global_chem.animals.snakes.drugs_from_snake_venom
+hemocoagulase	NC(CC(O)=O)C(NC(CS)C(NC(CO)C(NC(CO)C(NC([H])C(NC(CCC1=CNC2=C1C=CC=C2)C(NC(CO)C(NC(CO)C(NC(CC1=CC=C(O)C=C1)C(NC(CCC(O)=O)C(NC([H])C(NC(CC1=CNC=N1)C(NC(CS)C(NC(CC1=CC=C(O)C=C1)C(NC(CCCCN)C(NC(C(C)C)C(NC(CC1=CC=CC=C1)C(NC(CCCCN)C(NC(CCC(N)=O)C(NC(CO)C(NC(CCCCN)C(NC(C(C)([H])O)C(NC(CCC1=CNC2=C1C=CC=C2)C(NC(C)C(NC(CC(O)=O)C(NC(C)C(NC(CCC(O)=O)C(NC(CO)C(NC(CC1=CC=CC=C1)C(NC(CS)C(NC(C(C)([H])O)C(NC(CCCCN)C(NC(CCC(N)=O)C(NC(C(C)C)C(NC(CC(N)=O)C(NC([H])C(NC([H])C(NC(CC1=CNC=N1)C(NC(CC(C)C)C(NC(C(C)C)C(NC(CO)C(NC(CC(C)C)C(NC(CCC(O)=O)C(NC(CO)C(NC(CO)C(NC([H])C(NC(CCC(O)=O)C(NC(C)C(NC(CC(O)=O)C(NC(CC1=CC=CC=C1)C(NC(C(C)C)C(NC([H])C(NC(CCC(N)=O)C(NC(CC(C)C)C(NC(CC(C)C)C(NC(C)C(NC(CCC(N)=O)C(NC(CCCCN)C(NC(CC(C)C)C(NC(CCCCN)C(NC(CO)C(NC(C)C(NC(CCCCN)C(NC(CC(C)C)C(NC(CC1=CNC=N1)C(NC(C(C)C)C(NC(CCC1=CNC2=C1C=CC=C2)C(NC(CC(C)C)C(NC([H])C(NC(CC(C)C)C(NC(CCCCNC(N)=N)C(NC(C)C(NC(CCC(N)=O)C(NC(CC(N)=O)C(NC(CCCCN)C(NC(CCC(O)=O)C(NC(CCCCN)C(NC(CCC(N)=O)C(NC(CS)C(NC(CO)C(NC(CC(C)C)C(NC(CCC(N)=O)C(NC(CCC1=CNC2=C1C=CC=C2)C(NC(CO)C(NC(CC(O)=O)C(NC([H])C(NC(CO)C(NC(CO)C(NC(CC(C)C)C(NC(CO)C(NC(CC1=CC=C(O)C=C1)C(NC(CCC(O)=O)C(NC(CC(N)=O)C(NC(CCC1=CNC2=C1C=CC=C2)C(NC(CC(C)C)C(NC(CCC(O)=O)C(NC(CCC(O)=O)C(NC(CCC(O)=O)C(NC(CO)C(NC(CCCCN)C(NC(CCCCN)C(NC(CS)C(NC(CC(C)C)C(NC([H])C(NC(C(C)C)C(NC(CC1=CNC=N1)C(NC(CC(C)C)C(NC(CCC(O)=O)C(NC(C(C)([H])O)C(NC([H])C(NC(CC1=CC=CC=C1)C(NC(CC1=CNC=N1)C(NC(CCCCN)C(NC(CCC1=CNC2=C1C=CC=C2)C(NC(CCC(O)=O)C(NC(CC(N)=O)C(NC(CC1=CC=CC=C1)C(NC(CC1=CC=C(O)C=C1)C(NC(CS)C(NC(CCC(O)=O)C(NC(CCC(N)=O)C(NC(CCC(N)=O)C(NC(CC(O)=O)C(NC(C2CCCN2)C(NC(CC1=CC=CC=C1)C(NC(C(C)C)C(NC(CS)C(NC(CCC(O)=O)C(NC(C)C(NC(CC(O)=O)C(NC(CS)C(NC(C2CCCN2)C(NC(CO)C(NC(CC(O)=O)C(NC(CCC1=CNC2=C1C=CC=C2)C(NC(CO)C(NC(CO)C(NC(CC1=CC=C(O)C=C1)C(NC(CCC(O)=O)C(NC([H])C(NC(CC1=CNC=N1)C(NC(CS)C(NC(CC1=CC=C(O)C=C1)C(NC(CCCCN)C(NC(C2CCCN2)C(NC(CC1=CC=CC=C1)C(NC(CC(N)=O)C(NC(CCC(O)=O)C(NC(C2CCCN2)C(NC(CCCCN)C(NC(CC(N)=O)C(NC(CCC1=CNC2=C1C=CC=C2)C(NC(C)C(NC(CC(O)=O)C(NC(C)C(NC(CCC(O)=O)C(NC(CC(N)=O)C(NC(CC1=CC=CC=C1)C(NC(CS)C(NC(C(C)([H])O)C(NC(CCCCN)C(NC(CCC(N)=O)C(NC(CC1=CNC=N1)C(NC(C(C)([H])O)C(NC([H])C(NC([H])C(NC(CC1=CNC=N1)C(NC(CC(C)C)C(NC(C(C)C)C(NC(CO)C(NC(CC1=CC=CC=C1)C(NC(CCC(N)=O)C(NC(CO)C(NC(C(C)([H])O)C(NC(CCC(O)=O)C(NC(CCC(O)=O)C(NC(C)C(NC(CC(O)=O)C(NC(CC1=CC=CC=C1)C(NC(C(C)C)C(NC(C(C)C)C(NC(CCCCN)C(NC(CC(C)C)C(NC(C)C(NC(CC1=CC=CC=C1)C(NC(CCC(N)=O)C(NC(C(C)([H])O)C(NC(CC1=CC=CC=C1)C(NC(CC(O)=O)C(NC(CC1=CC=C(O)C=C1)C(NC([H])C(NC(CC(C)C)C(NC(CC1=CC=CC=C1)C(NC(CCC1=CNC2=C1C=CC=C2)C(NC(CC1=CC=CC=C1)C(NC([H])C(NC(CC(C)C)C(NC(CO)C(NC(CCCCN)C(NC(CC(C)C)C(NC(CCC1=CNC2=C1C=CC=C2)C(NC(CC(N)=O)C(NC(CCC(N)=O)C(NC(CS)C(NC(CC(N)=O)C(NC(CCC1=CNC2=C1C=CC=C2)C(NC(CCC(N)=O)C(NC(CCC1=CNC2=C1C=CC=C2)C(NC(CO)C(NC(CC(N)=O)C(NC(C)C(NC(C)C(NC(CCSC)C(NC(CC(C)C)C(NC(CCCCN)C(NC(CC1=CC=C(O)C=C1)C(NC(C(C)([H])O)C(NC(CC(O)=O)C(NC(CCC1=CNC2=C1C=CC=C2)C(NC(C)C(NC(CCC(O)=O)C(NC(CCC(O)=O)C(NC(CO)C(NC(CC1=CC=C(O)C=C1)C(NC(CS)C(NC(C(C)C)C(NC(CC1=CC=C(O)C=C1)C(NC(CC1=CC=CC=C1)C(NC(CCCCN)C(NC(CO)C(NC(C(C)([H])O)C(NC(CC(N)=O)C(NC(CC(N)=O)C(NC(CCCCN)C(NC(CCC1=CNC2=C1C=CC=C2)C(NC(CCCCNC(N)=N)C(NC(CO)C(NC(CC(C)C)C(NC(C(C)([H])O)C(NC(CS)C(NC(CCCCNC(N)=N)C(NC(CCSC)C(NC(CC(C)C)C(NC(C)C(NC(CC(N)=O)C(NC(CC1=CC=CC=C1)C(NC(C(C)C)C(NC(CS)C(NC(CCC(O)=O)C(NC(CC1=CC=CC=C1)C(NC(CCC(N)=O)C(NC(C)C(NCC(O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O	drugs_from_snake_venom		global_chem.animals.snakes.drugs_from_snake_venom
+alpha cobrotoxin	NC(CC(C)C)C(NC(CCC(O)=O)C(NC(CS)C(NC(CC1=CNC=N1)C(NC(CC(N)=O)C(NC(CCC(N)=O)C(NC(CCC(N)=O)C(NC(CO)C(NC(CO)C(NC(CCC(N)=O)C(NC(C(C)([H])O)C(NC(C2CCCN2)C(NC(C(C)([H])O)C(NC(C(C)([H])O)C(NC(C(C)([H])O)C(NC([H])C(NC(CS)C(NC(CO)C(NC([H])C(NC([H])C(NC(CCC(O)=O)C(NC(C(C)([H])O)C(NC(CC(N)=O)C(NC(CS)C(NC(CC1=CC=C(O)C=C1)C(NC(CCCCN)C(NC(CCCCN)C(NC(CCCCNC(N)=N)C(NC(CCC1=CNC2=C1C=CC=C2)C(NC(CCCCNC(N)=N)C(NC(CC(O)=O)C(NC(CC1=CNC=N1)C(NC(CCCCNC(N)=N)C(NC([H])C(NC(CC1=CC=C(O)C=C1)C(NC(CCCCNC(N)=N)C(NC(C(C)([H])O)C(NC(CCC(O)=O)C(NC(CCCCNC(N)=N)C(NC([H])C(NC(CS)C(NC([H])C(NC(CS)C(NC(C2CCCN2)C(NC(CO)C(NC(C(C)C)C(NC(CCCCN)C(NC(CC(N)=O)C(NC([H])C(NC(C(CC)([H])C)C(NC(CCC(O)=O)C(NC(C(CC)([H])C)C(NC(CC(N)=O)C(NC(CS)C(NC(CS)C(NC(C(C)([H])O)C(NC(C(C)([H])O)C(NC(CC(O)=O)C(NC(CCCCNC(N)=N)C(NC(CS)C(NC(CC(N)=O)C(NC(CC(N)=O)C(NCC(O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O)=O	drugs_from_snake_venom		global_chem.animals.snakes.drugs_from_snake_venom
+desogestrel	CCC12CC(=C)C3C(C1CCC2(C#C)O)CCC4=CCCCC34	oral_contraceptives		global_chem.sex.contraceptives.oral_contraceptives
+dienogest	CC12CCC3=C4CCC(=O)C=C4CCC3C1CCC2(CC#N)O	oral_contraceptives		global_chem.sex.contraceptives.oral_contraceptives
+drospirenone	CC12CCC(=O)C=C1C3CC3C4C2CCC5(C4C6CC6C57CCC(=O)O7)C	oral_contraceptives		global_chem.sex.contraceptives.oral_contraceptives
+estradiol	CC12CCC3C(C1CCC2O)CCC4=C3C=CC(=C4)O	oral_contraceptives		global_chem.sex.contraceptives.oral_contraceptives
+estradiol valerate	CCCCC(=O)OC1CCC2C1(CCC3C2CCC4=C3C=CC(=C4)O)C	oral_contraceptives		global_chem.sex.contraceptives.oral_contraceptives
+estriol	CC12CCC3C(C1CC(C2O)O)CCC4=C3C=CC(=C4)O	oral_contraceptives		global_chem.sex.contraceptives.oral_contraceptives
+estrone	CC12CCC3C(C1CCC2=O)CCC4=C3C=CC(=C4)O	oral_contraceptives		global_chem.sex.contraceptives.oral_contraceptives
+ethinyl estradiol	CC12CCC3C(C1CCC2(C#C)O)CCC4=C3C=CC(=C4)O	oral_contraceptives		global_chem.sex.contraceptives.oral_contraceptives
+etonogestrel	CCC12CC(=C)C3C(C1CCC2(C#C)O)CCC4=CC(=O)CCC34	oral_contraceptives		global_chem.sex.contraceptives.oral_contraceptives
+levonorgestrel	CCC12CCC3C(C1CCC2(C#C)O)CCC4=CC(=O)CCC34	oral_contraceptives		global_chem.sex.contraceptives.oral_contraceptives
+mestranol	CC12CCC3C(C1CCC2(C#C)O)CCC4=C3C=CC(=C4)OC	oral_contraceptives		global_chem.sex.contraceptives.oral_contraceptives
+norelgestromin	CCC12CCC3C(C1CCC2(C#C)O)CCC4=CC(=NO)CCC34	oral_contraceptives		global_chem.sex.contraceptives.oral_contraceptives
+norethisterone	CC12CCC3C(C1CCC2(C#C)O)CCC4=CC(=O)CCC34	oral_contraceptives		global_chem.sex.contraceptives.oral_contraceptives
+norethisterone acetate	CC(=O)OC1(CCC2C1(CCC3C2CCC4=CC(=O)CCC34)C)C#C	oral_contraceptives		global_chem.sex.contraceptives.oral_contraceptives
+norethynodre	CC12CCC3C(C1CCC2(C#C)O)CCC4=C3CCC(=O)C4	oral_contraceptives		global_chem.sex.contraceptives.oral_contraceptives
+norgestimate	CCC12CCC3C(C1CCC2(C#C)OC(=O)C)CCC4=CC(=NO)CCC34	oral_contraceptives		global_chem.sex.contraceptives.oral_contraceptives
+progesterone	CC(=O)C1CCC2C1(CCC3C2CCC4=CC(=O)CCC34C)C	oral_contraceptives		global_chem.sex.contraceptives.oral_contraceptives

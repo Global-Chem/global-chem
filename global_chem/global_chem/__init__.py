@@ -97,6 +97,7 @@ from global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_
 from global_chem.sex.exsens.lube import Lube
 from global_chem.sex.exsens.exsens_products import ExsensProducts
 from global_chem.sex.tainted_sexual_enhancements.tainted_sexual_enhancements import TaintedSexualEnhancements
+from global_chem.sex.contraceptives.oral_contraceptives import OralContraceptives
 
 # Miscellaneous
 
