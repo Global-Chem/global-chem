@@ -14,8 +14,8 @@ class FDAListThree(object):
     def get_smiles():
 
         smiles = {
-            'd&C brown #1': 'CC1=CC(=C(C=C1)NN=C2C(=O)C=CC(=NNC3=CC=C(C=C3)S(=O)(=O)[O-])C2=O)C.[Na+]',
-            'fD&C red #4': 'CC1=CC(=C(C=C1N=NC2=C(C3=CC=CC=C3C(=C2)S(=O)(=O)O)O)S(=O)(=O)O)C',
+            'd&c brown #1': 'CC1=CC(=C(C=C1)NN=C2C(=O)C=CC(=NNC3=CC=C(C=C3)S(=O)(=O)[O-])C2=O)C.[Na+]',
+            'fd&c red #4': 'CC1=CC(=C(C=C1N=NC2=C(C3=CC=CC=C3C(=C2)S(=O)(=O)O)O)S(=O)(=O)O)C',
             'd&c red #17': 'C1=CC=C(C=C1)N=NC2=CC=C(C=C2)N=NC3=C(C=CC4=CC=CC=C43)O',
             'd&c red #31': 'C1=CC=C(C=C1)N=NC2=C(C(=CC3=CC=CC=C32)C(=O)O)[O-].C1=CC=C(C=C1)N=NC2=C(C(=CC3=CC=CC=C32)C(=O)O)[O-].[Ca+2]',
             'd&c red #34': 'C1=CC=C2C(=C1)C=CC(=C2S(=O)(=O)[O-])N=NC3=C(C(=CC4=CC=CC=C43)C(=O)O)[O-].[Ca+2]',
