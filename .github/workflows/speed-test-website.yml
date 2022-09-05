@@ -1,7 +1,8 @@
 name: Audit GlobalChem Web Performance
-on:
-  schedule:
-    - cron: '0 0 * * *'
+on: [workflow_dispatch]
+#   schedule:
+#     - cron: '0 0 * * *'
+    
 jobs:
   perf:
     runs-on: ubuntu-latest
