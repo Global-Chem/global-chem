@@ -1,7 +1,9 @@
 name: Bot Checker for FDA Colour Additive List
 
-on: [workflow_dispatch]
-
+on:
+  schedule:
+    - cron: '0 0 * * *'
+    
 jobs:
   test:
     runs-on: "ubuntu-latest"
