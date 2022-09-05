@@ -1,17 +1,20 @@
-name: Speed Test GlobalChem Website
-
+name: Audit GlobalChem Web Performance
 on:
   schedule:
     - cron: '0 0 * * *'
-    
 jobs:
-  test:
-    runs-on: "ubuntu-latest"
+  perf:
+    runs-on: ubuntu-latest
     steps:
-      - name: Running Page Speed Insights
-        uses: jakepartusch/psi-action@v1.2
-        id: psi
+      - uses: actions/checkout@v1
+      - name: Generate Lighthouse Report
+        uses: justinribeiro/lighthouse-action@master
         with:
-          url: "https://www.globalchemistry.org"
-          threshold: 70
-          strategy: mobile
+          secret: ${{ secrets.GITHUB_TOKEN }}
+          url: https://www.globalchemistry.org
+          wptConnectionSpeed: threegfast
+      - name: Saving Lighthouse Audit Artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: lighthouse-artifacts
+          path: './results'
