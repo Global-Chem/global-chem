@@ -239,7 +239,7 @@ class BotColourAdditiveList(object):
 
         if len(differences) == 0:
 
-            token = os.environ['GITHUB_TOKEN']
+            token = os.getenv('GITHUB_TOKEN')
             headers = {
                 "Accept": 'Accept: application/vnd.github+json',
                 "Authorization" : "token {}".format(token)
