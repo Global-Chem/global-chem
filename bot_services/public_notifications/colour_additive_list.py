@@ -237,7 +237,7 @@ class BotColourAdditiveList(object):
                     differences.append(j)
 
 
-        if len(differences) == 0:
+        if len(differences) > 1:
 
             token = os.getenv('GITHUB_TOKEN')
             headers = {
