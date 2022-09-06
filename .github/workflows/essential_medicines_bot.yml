@@ -1,0 +1,30 @@
+name: Bot Checker for Essential Medicines List
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+    
+jobs:
+  test:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v2
+
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+          architecture: x64
+
+      - name: Install
+        run: |
+          pip install pandas
+          pip install beautifulsoup4
+          pip install requests   
+      - name: Run FDA Checker test
+        env:
+          GITHUB_TOKEN: ${{ secrets.COLOUR_BOT_TOKEN }}
+        run: |
+          cd bot_services/public_notifications
+          python essential_medicines.py
