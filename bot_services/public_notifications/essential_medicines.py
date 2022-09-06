@@ -179,7 +179,7 @@ class EssentialMedicinesBot(object):
             }
 
             data = {
-                "title": "Public Notification System: Colour Additive List Changes",
+                "title": "Public Notification System: Essential Medicines from WHO",
                 "body": "Differences found that need to be inspected: %s" % differences
 
             }
