@@ -1,0 +1,21 @@
+name: Audit GlobalChem Web Performance
+on: 
+  schedule:
+    - cron: '0 0 * * *'
+    
+jobs:
+  perf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Generate Lighthouse Report
+        uses: justinribeiro/lighthouse-action@master
+        with:
+          secret: ${{ secrets.GITHUB_TOKEN }}
+          url: https://www.globalchemistry.org
+          wptConnectionSpeed: threegfast
+      - name: Saving Lighthouse Audit Artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: lighthouse-artifacts
+          path: './results'
