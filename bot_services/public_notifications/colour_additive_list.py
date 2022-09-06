@@ -27,9 +27,7 @@ class BotColourAdditiveList(object):
     def get_fda_reported_lists(self):
 
         '''
-
         Get the FDA Lists of Each Seven Colour Additives.
-
         '''
 
         page = requests.get(self.master_url)
@@ -161,6 +159,7 @@ class BotColourAdditiveList(object):
         Check the Global-Chem Resource
 
         '''
+
         import re
         data = pd.read_csv(
             'https://raw.githubusercontent.com/Sulstice/global-chem/development/global_chem/global_chem_outputs/global_chem.tsv',
@@ -213,9 +212,7 @@ class BotColourAdditiveList(object):
     def check_list_status(self):
 
         '''
-
         File a Github Issue on the global chem Repo if there is a misalignment.
-
         '''
 
         differences = []
@@ -237,9 +234,10 @@ class BotColourAdditiveList(object):
                     differences.append(j)
 
 
-        if len(differences) == 0:
+        if len(differences) > 1:
 
             token = os.getenv('GITHUB_TOKEN')
+            
             headers = {
                 "Accept": 'Accept: application/vnd.github+json',
                 "Authorization" : "token {}".format(token)
