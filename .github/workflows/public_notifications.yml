@@ -22,7 +22,7 @@ jobs:
           pip install pandas
           pip install beautifulsoup4
           pip install requests   
-      - name: Run FDA Checker test
+      - name: Run Checker
         env:
           GITHUB_TOKEN: ${{ secrets.COLOUR_BOT_TOKEN }}
         run: |
