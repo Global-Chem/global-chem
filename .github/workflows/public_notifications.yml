@@ -1,4 +1,4 @@
-name: Bot Checker for FDA Colour Additive List
+name: Bot Checker for Colour Additive List
 
 on:
   schedule:
