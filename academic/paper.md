@@ -250,25 +250,25 @@ FFparam to predict the approximate partial charges. The sulphur atoms were adjus
 
 # Theory 
 
-Global-Chem comes with a variety of applications, and with accessible data comes new avenues of research. Here we present our gallery of highlight features that we find the most interesting. 
+Global-Chem comes with a variety of applications, and with accessible data comes new avenues of research. Here, we present our gallery of highlight features that we find most interesting. 
 
 ### Chemical Graphs
 
-Global-Chem uses a directory and sub-directory system to organize files. If you would like to build your own graph networks we would like to have that ability as well. Global-Chem classifies each file or directory as a node, using a dummy node named "Global-Chem" as a root. For example, in Figure 5, section A is a Global-Chem node, "parent", with 6 nodes, "children" connected on some arbitrary line. Each node is self-aware of only its parents and children which allows for a user to determine their own navigation into the graph network. This was designed in a way to allow flexibility for variable change. A look into adding a node object algorithm is shown in section B in Figure 5. A prototype feature would be to add nodes in a series of layers and have all parents connected to all children in a sequential fashion which allows for a node architecture similar to deep learning represented in section C Figure 5. 
+Global-Chem uses a directory and sub-directory system to organize files. It classifies each file or directory as a node, using a dummy node named "Global-Chem" as a root. For example, in Figure 5, section A is a Global-Chem node, "parent", with 6 nodes, "children" connected on some arbitrary line. Each node is self-aware of only its parents and children, which allows for a user to determine their own navigation into the graph network. This was designed to allow flexibility for variable changes. A look into adding a node object algorithm is shown in section B in Figure 5. A prototype feature would be to add nodes in a series of layers and have all parents connected to all children in a sequential fashion, which allows for a node architecture similar to deep learning represented in section C Figure 5. 
 
 <p align="center">
 <img width="922" alt="Screen Shot 2022-07-22 at 8 58 29 AM" src="https://user-images.githubusercontent.com/11812946/180444185-d02636cd-8a21-49ff-afa5-d5d827e8e4b5.png">
   <br>
-  <i>Figure 5: "Section A" Example of a Global-Chem root node with 6 child nodes, "Section B" Screenshot of the technical documentation of the algorithm of adding a node into the network, "Section C" is the representation of a deep layer network of the graph nodes with a similar adding mechanism in Section B. </i>
+  <i>Figure 5: "Section A" Example of a Global-Chem root node with 6 child nodes, "Section B" Screenshot of the technical documentation of the algorithm of adding a node into the network, "Section C" is the representation of a deep layer network of the graph nodes with a similar adding mechanism in section B. </i>
 </p>
 
 With availability of the data and allowing users to own graph models or build theirs, allows for the possibility of a more robust artificial intelligence for organic chemistry.
 
 ### Linguistics
 
-CGenFF and SMILES are built on the same language philosophy, yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something intuitive to read. CurlySMILES is a subset language of SMILES used to embed metadata next to an alpha element character for example "C" which means carbon can be read as "C{CG2R61}" an aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We suggest a new language that contains both CGenFF Atom-Types and SMILES based on scientific inclusion(92):
+CGenFF and SMILES are based on the same language philosophy, but are independent of each other. Global-Chem serves as a basis generator in combining the languages into one intuitive language. CurlySMILES is a sub-language of SMILES used to embed metadata next to an alpha element character for example "C" which means carbon can be read as "C{CG2R61}", an aromatic benzene sp2 carbon. Applying this feature to a more complex molecule, we can see how the new bridged language unfolds. We propose a new language that contains both CGenFF Atom-Types and SMILES based on scientific inclusion(92):
 
-| Name                         | Weininger SMILES Language | Proposed New Notation                                                                           | 
+| Name                         | Weininger SMILES Language | Proposed New Language                                                                           | 
 |------------------------------|---------------------------|-------------------------------------------------------------------------------------------------|
 | Perfluorobutanoic acid       | FC(F)(C(F)(C(O)=O)F)C(F)(F)F	  | F{FGA2}C{CG312}(F{FGA2})(C{CG312}(F{FGA2})(C{CG2O2}(O{OG311})=O{OG2D1})F{FGA2})C{CG302}(F{FGA3})(F{FGA3})F{FGA3}     |
 | Vitamin C                    | C(C(C1C(=C(C(=O)O1)O)O)O)O	    | C{CG321}(C{CG311}(C{CG3C51}1C{CG2R51}(=C{CG2R51}(C{CG2R53}(=O{OG2D1})O{OG3C51}1)O{OG311})O{OG311})O{OG311})O{OG311}  |
@@ -276,10 +276,10 @@ CGenFF and SMILES are built on the same language philosophy, yet are independent
 | 1,3-Dithiolane               | CC2SCCS2                       | C{CG331}C{CG3C51}2S{SG311}C{CG3C52}C{CG3C52}S{SG311}2                                                                |
 
 <p align="center">
-  <i>Table 3: Global-Chem Molecular Columns: "Name" name of the molecule, "Weininger Notation" is the original SMILES notation,  "Proposed New Notation" is the SMILES and CGenFF Atom-Types language representation in CurlySMILES </i>
+  <i>Table 3: Global-Chem Molecular Columns: "Name" name of the molecule, "Weininger Notation" is the original SMILES notation,  "Proposed New Language" is the SMILES and CGenFF Atom-Types notation representation in CurlySMILES </i>
 </p>
 
-Using this new language, we can easily infer which atom type could have been misassigned without looking at the partial charges. In conjunction with the SMILES, it would allow intuition to supersede the penalty score and use it as an ultimate feedback loop for validation. For example, an N1 in a 3-membered ring, for Aziridine, is likely not NG311, but probably a new atom type. It is too general of an atom type using the CGenFF nomenclature. We can safely make assumptions of what it can be, perhaps NG3C31, which allows us to expand rapidly in predicting new chemical space and allowing a queryable language to bridge atom types and ultimately bridge the name using Global-Chem.
+Using this new language, we can easily infer which atom type might have been incorrectly assigned without looking at partial charges. In conjunction with SMILES, intuition could take the place of penalty points and serve as the ultimate feedback loop for validation. For example, an N1 in a 3-membered ring, for Aziridine, is probably not NG311, but is likely to be a new atom type. NG311 is too general for an atom type when using CGenFF nomenclature. We can make assumptions with confidence about what it might be, perhaps NG3C31, which will allow us to expand rapidly in predicting new chemical space and enabling a queryable language for bridging atom types and eventually bridging the name using Global-Chem.
 
 # Applications 
 
