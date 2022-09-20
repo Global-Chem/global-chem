@@ -337,9 +337,9 @@ When evaluating binary we can observe patterns for how a molecule is fragmented.
 
 IUPAC and Natural name submatching would be of best interest in determining functional group similaritiy between two different names of compounds of unequal length. Global-Chem implements the Levenshtein Distance (91) without grammar modifications to generate the best naming fit as possible if an exact definition is not known. With the inclusion of grammar, molecular similarity on IUPACs with long names (large molecules) might be possible to deduce common functionality and connection points and a new avenue area for chemical linguistic research.  
 
-### Artificial Intelligence 
+### Machine Learning
 
-It is important for any general chemical artificial intelligence to distinguish hollisitic characteristics that make sense. Principal Component Analysis (PCA) is a well defined technique in identifying feature characteristics of a set of data based on their variance to a reference axis line . PCA can be applied to a list of SMILES by converting to morgan fingerprint bit vectors to determine significant features of a dataset (97). We applied a k-means clustering because we want to machine to determine the two most important features of the common universe and what can the machine easily distinguish to start classifying molecules, a semi-supervised learning approach where we control the data and the machine learns (98). 
+It is important for any general chemical machine learning to distinguish hollisitic characteristics that make sense. Principal Component Analysis (PCA) is a well defined technique in identifying feature characteristics of a set of data based on their variance to a reference axis line . PCA can be applied to a list of SMILES by converting to morgan fingerprint bit vectors to determine significant features of a dataset (97). We applied a k-means clustering because we want to machine to determine the two most important features of the common universe and what can the machine easily distinguish to start classifying molecules, a semi-supervised learning approach where we control the data and the machine learns (98). 
 
 <p align="center">
 <img width="1011" alt="Screen Shot 2022-07-21 at 6 34 38 AM" src="https://user-images.githubusercontent.com/11812946/182135734-1cb5733c-358d-49c3-a22f-ae363a9edbfa.png">
@@ -347,7 +347,7 @@ It is important for any general chemical artificial intelligence to distinguish 
   <i>Figure 8: PCA of all the molecules in Global-Chem with a Morgan Radius of 1, 512 bit representation, and a k-means clustering of two to distinguish aromatic (red) and non-aromatic (green) </i>
 </p>
 
-In Figure 8, from hovering over the data we can visually inspect how the machine classified the data into two categories: aromatic and non-aromatic. A clear distinct line between the two major features is obvious which means using these parameters and this combined particular dataset, based on expertise of different humans, can create new general artificial intelligence programs can use this as a starting point for learning aromaticity which is a root of life fundamental feature for organic molecules. 
+In Figure 8, from hovering over the data we can visually inspect how the machine classified the data into two categories: aromatic and non-aromatic. A clear distinct line between the two major features is obvious which means using these parameters and this combined particular dataset, based on expertise of different humans, can create new general artificial intelligence programs can use this as a starting point for learning aromaticity as a fundamental feature for organic molecules. 
 
 ### Compliance
 
