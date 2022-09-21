@@ -121,6 +121,10 @@ from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
 
 from global_chem.skin.transdermal_and_dermal_delivery.surfactants import Surfactants
 
+# Peptides
+
+from global_chem.peptides.lanthipeptides import LanthiPeptides
+
 # Sex
 
 from global_chem.sex.exsens.lube import Lube
@@ -432,6 +436,7 @@ class GlobalChem(object):
         'drugs_from_snake_venom': DrugsFromSnakeVenom,                            # Suliman Sharif
         'oral_contraceptives': OralContraceptives,                                # Suliman Sharif
         'surfactants': Surfactants,                                               # Yiling Nan & Suliman Sharif
+        'lanthipeptides': LanthiPeptides,                                         # Prabin Baral & Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                             # Chris Burke & Suliman Sharif
     }
 

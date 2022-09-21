@@ -103,6 +103,10 @@ from global_chem.sex.contraceptives.oral_contraceptives import OralContraceptive
 
 from global_chem.skin.transdermal_and_dermal_delivery.surfactants import Surfactants
 
+# Peptides
+
+from global_chem.peptides.lanthipeptides import LanthiPeptides
+
 # Miscellaneous
 
 from global_chem.miscellaneous.vitamins import Vitamins
