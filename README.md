@@ -16,7 +16,7 @@ Overview
 
 ## GlobalChem
 
-#### - Network Demo
+#### - Demo
 
 | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HaDvAYpaX0_2Eqx1NSl5uJTRkE_0na-L?usp=sharing) |
 |-|
