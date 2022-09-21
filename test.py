@@ -2,6 +2,7 @@
 from rdkit import Chem
 from rdkit.Chem import AllChem
 
+
 aa_key = {
     'Arg': 'R',
     'His': 'H',
@@ -26,23 +27,42 @@ aa_key = {
 }
 
 smiles = {
-    'desogestrel': 'CCC12CC(=C)C3C(C1CCC2(C#C)O)CCC4=CCCCC34',
-    'dienogest': 'CC12CCC3=C4CCC(=O)C=C4CCC3C1CCC2(CC#N)O',
-    'drospirenone': 'CC12CCC(=O)C=C1C3CC3C4C2CCC5(C4C6CC6C57CCC(=O)O7)C',
-    'estradiol': 'CC12CCC3C(C1CCC2O)CCC4=C3C=CC(=C4)O',
-    'estradiol valerate': 'CCCCC(=O)OC1CCC2C1(CCC3C2CCC4=C3C=CC(=C4)O)C',
-    'estriol': 'CC12CCC3C(C1CC(C2O)O)CCC4=C3C=CC(=C4)O',
-    'estrone': 'CC12CCC3C(C1CCC2=O)CCC4=C3C=CC(=C4)O',
-    'ethinyl estradiol': 'CC12CCC3C(C1CCC2(C#C)O)CCC4=C3C=CC(=C4)O',
-    'etonogestrel': 'CCC12CC(=C)C3C(C1CCC2(C#C)O)CCC4=CC(=O)CCC34',
-    'levonorgestrel': 'CCC12CCC3C(C1CCC2(C#C)O)CCC4=CC(=O)CCC34',
-    'mestranol': 'CC12CCC3C(C1CCC2(C#C)O)CCC4=C3C=CC(=C4)OC',
-    'norelgestromin': 'CCC12CCC3C(C1CCC2(C#C)O)CCC4=CC(=NO)CCC34',
-    'norethisterone': 'CC12CCC3C(C1CCC2(C#C)O)CCC4=CC(=O)CCC34',
-    'norethisterone acetate': 'CC(=O)OC1(CCC2C1(CCC3C2CCC4=CC(=O)CCC34)C)C#C',
-    'norethynodre': 'CC12CCC3C(C1CCC2(C#C)O)CCC4=C3CCC(=O)C4',
-    'norgestimate': 'CCC12CCC3C(C1CCC2(C#C)OC(=O)C)CCC4=CC(=NO)CCC34',
-    'progesterone': 'CC(=O)C1CCC2C1(CCC3C2CCC4=CC(=O)CCC34C)C',
+    'poe-20-sorbitan monooleate': 'CCCCCCCCC=CCCCCCCCC(=O)OCCOCC(C1C(CC(O1)OCCO)OCCO)OCCO',
+    'poe-20-sorbitan monolaurate': 'CCCCCCCCCCCC(=O)OCCOCC(C1C(C(CO1)OCCO)OCCO)OCCO',
+    'sorbitan monooleate': 'CCCCCCCCC=CCCCCCCCC(=O)OCC(C1C(C(CO1)O)O)O',
+    'sorbitan monolaurate': 'CCCCCCCCCCCC(=O)OCC(C1C(C(CO1)O)O)O',
+    'sorbitan monostearate': 'CCCCCCCCCCCCCCCCCC(=O)OCC(C1C(C(CO1)O)O)O',
+    'poloxamer 188': 'CCCOC(C)COCCO',
+    'poloxamer 407': 'CC1CO1.C1CO1',
+    'poe-35-castor oil': r'CCCCCCC(CC=CCCCCCCCOC(=O)OCCOCC(COCCOC(=O)OCCCCCCCC=CCC(CCCCCC)O)OCCOC(=O)OCCCCCCCC=CCC(CCCCCC)O)O',
+    'peg-660-12-hydroxystearate': 'CCCCCCC(C)O.[CH2]CCCCCCCCCC(=O)OCCO',
+    'tocopheryl-peg 1000-succinate': 'CC1=C(C(=C(C2=C1OC(CC2)(C)CCCC(C)CCCC(C)CCCC(C)C)C)OC(=O)CCC(=O)OCCO)C',
+    'sucrose laurate': 'CCCCCCCCCCCC(=O)OC1(C(C(C(C(O1)CO)O)O)O)C2(C(C(C(O2)CO)O)O)CO',
+    'sucrose palmitate': 'CCCCCCCCCCCCCCCC(=O)OC1(C(C(C(C(O1)CO)O)O)O)C2(C(C(C(O2)CO)O)O)CO',
+    'caprylyl glucoside': r'CCCCCCCCCCOC1C(C(C(C(O1)CO)O)O)O',
+    'polyetetramethyl butyl phenol ether': 'CC(C)(C)CC(C)(C)C1=CC=C(C=C1)OCCO',
+    'soybean lecithin': 'CCCCCCCCCCCCCCCC(=O)OCC(COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCC=CCC=CCCCCC',
+    'egg lecithin': 'CCCCCCCCCCCCCCCC(=O)OCC(COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCC=CCC=CCCCCC',
+    'diolelyl phosphatidyl choline': 'CCCCCCCCC=CCCCCCCCC(=O)OCC(COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCC=CCCCCCCCC',
+    'distearoyl phosphatidyl glycerol': 'CCCCCCCCCCCCCCCCCC(=O)OCC(COP(=O)(O)OCC(CO)O)OC(=O)CCCCCCCCCCCCCCCCC',
+    'dimyristoyl phosphotidyl choline': 'CCCCCCCCCCCCCC(=O)OCC(COP(=O)([O-])OCC[N+](C)(C)C)OC(=O)CCCCCCCCCCCCC',
+    'dioctyl sodium sulfosuccinate': 'CCCCCCCCOC(=O)CC(C(=O)OCCCCCCCC)S(=O)(=O)[O-].[Na+]',
+    'ethanol': 'CCO',
+    'benzyl alcohol': 'C1=CC=C(C=C1)CO',
+    'isopropanol': 'CC(C)O',
+    'phenethyl alcohol': 'C1=CC=C(C=C1)CCO',
+    'propylene glycol': 'CC(CO)O',
+    'glycerol': 'C(C(CO)O)O',
+    'butylene glycol': 'CC(CCO)O',
+    'peg 400': 'CC(C)CCCCCCCCCCCCCCC(=O)OCCO',
+    'transcutol': 'CCOCCOCCO',
+    'tetraglycol': 'C(COCCOCCOCCO)O',
+    'n-methyl pyrrolidone': 'CN1CCCC1=O',
+    '2-pyrrolidone': 'C1CC(=O)NC1',
+    'sodium deoxycholate': 'CC(CCC(=O)[O-])C1CCC2C1(C(CC3C2CCC4C3(CCC(C4)O)C)O)C.[Na+]',
+    'caprylic acid': 'CCCCCCCC(=O)O',
+    'sodium caprylate': 'CCCCCCCC(=O)[O-].[Na+]',
+    'potassium sorbate': 'CC=CC=CC(=O)[O-].[K+]'
 }
 
 if __name__ == '__main__':
@@ -53,9 +73,9 @@ if __name__ == '__main__':
     # aa = [key[i] for i in sequence]
     # print (''.join(aa))
     #
-    for i, v in smiles.items():
-
-        print ("'%s': '%s'," % (i, Chem.MolToSmarts(Chem.MolFromSmiles(v))))
+    # for i, v in smiles.items():
+    #
+    #     print ("'%s': '%s'," % (i, Chem.MolToSmarts(Chem.MolFromSmiles(v))))
 
     for i, v in smiles.items():
 
@@ -67,3 +87,6 @@ if __name__ == '__main__':
         ).ToBitString()
 
         print ("'%s': '%s'," % (i, bit_string))
+
+
+

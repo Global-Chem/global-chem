@@ -191,6 +191,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 'salt': Salt                                                              # Suliman Sharif
 'drugs_from_snake_venom': DrugsFromSnakeVenom,                            # Suliman Sharif
 'oral_contraceptives': OralContraceptives,                                # Suliman Sharif
+'surfactants': Surfactants,                                               # Yiling Nan & Suliman Sharif
 ```
 
 <details><summary><h3>Node List</h1><br/></summary>
@@ -242,6 +243,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Chemicals From Biomass              | 17           | Wittcoff, Harold A., et al. Industrial Organic Chemicals: Wittcoff/Organic Chemicals. John Wiley & Sons, Inc., 2004                                                                                                                                                                                                  |
 | Drugs From Snake Venom              | 7            | Oliveira, Ana L., et al. “The Chemistry of Snake Venom and Its Medicinal Potential.” Nature Reviews Chemistry, vol. 6, no. 7, July 2022, pp. 451–69                                                                                                                                                                  |
 | Oral Contraceptives                 | 17           | Coleman, William F. “The Molecules of Oral Contraceptives.” Journal of Chemical Education, vol. 87, no. 7, July 2010, pp. 760–61.                                                                                                                                                                                    |
+| Surfactants for Skin                | 36           | Date, Abhijit A., and Vandana B. Patravale. “Microemulsions: Applications in Transdermal and Dermal Delivery.” Critical Reviews&trade; in Therapeutic Drug Carrier Systems, vol. 24, no. 6, 2007.                                                                                                                    |
 | Common Regex Patterns               | 1            |                                                                                                                                                                                                                                                                                                                      |
 
 </details>                            
