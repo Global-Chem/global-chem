@@ -98,11 +98,12 @@ class NamedReactionsInOrganicSynthesis(object):
 	'wagner rearrangement': r'CCCO.~.C/C=C/C',
 	'wagner-meerwein rearrangement': r'CCC[F,Cl,Br,I].~.C/C=C/C',
 	'grignard reaction': 'C=O.~.CCO',
+	'demjanov rearrangement': 'NCC1CCC1.OC2CCCC2',
+	'tiffeneau demjanov rearrangement': 'OC1(CN)CCCC1.O=C2CCCCC2',
+
       }
 
       smiles = {
-        'demjanov_rearrangement': 'NCC1CCC1.OC2CCCC2',	# ring expansion, or ring reduction NC1CCCC1.OCC2CCC2
-	'tiffeneau-demjanov_rearrangement': 'OC1(CN)CCCC1.O=C2CCCCC2',
         'ullmann_reaction_coupling_biaryl_synthesis': '[F,Cl,Br,I]C1=CC=CC=C1.C2(C3=CC=CC=C3)=CC=CC=C2',
         'feist–bénary_furan_synthesis': 'CC(CC(C)=O)=O.O=C(C)C([Cl,Br,I])C.CC1=C(C(C)=O)C(C)=C(C)O1',
         'wolff_rearrangement': 'O=C(C)C(C)=[N+]=[N-].OC(C(C)C)=O',
