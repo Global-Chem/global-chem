@@ -24,7 +24,9 @@ class NamedReactionsInOrganicSynthesis(object):
       
       Debatable Entries:
       
-          'smiles rearrangement': '[F,Cl,Br,I]C1=C(OCCN)C=CC([N+]([O-])=O)=C1.[F,Cl,Br,I]C2=C(NCCO)C=CC([N+]([O-])=O)=C2',	# X-Y rearrangment where X(here O) and Y(here NH2) can be many different groups, also ortho- and para- substituents(here halogens and NO2) can be different groups
+          'smiles rearrangement': '[F,Cl,Br,I]C1=C(OCCN)C=CC([N+]([O-])=O)=C1.[F,Cl,Br,I]C2=C(NCCO)C=CC([N+]([O-])=O)=C2.
+          'barbier coupling reaction': 'C[Cl,Br,I].CC(C)=O.CC(O)(C)C',
+           'prins_reaction': 'CC=C.CC(C)=O.OC(C)CCO',	
 
       '''
 	
@@ -96,8 +98,6 @@ class NamedReactionsInOrganicSynthesis(object):
       }
 
       smiles = {
-        'barbier coupling reaction': 'C[Cl,Br,I].CC(C)=O.CC(O)(C)C',
-        'prins_reaction': 'CC=C.CC(C)=O.OC(C)CCO',	# to 1,3 diol, C/C=C/CO allylic alcohol in absence of water, CC1OCOCC1 dioxane with excess of CC(C)=O
         'wagner-meerwein_rearrangement': r'CCC[F,Cl,Br,I].C/C=C/C',	# or to CC([F,Cl,Br,I])C (hydrid shift)
         'grignard_reaction': 'C=O.C[Mg]Br.CCO',	# to primary alcohol, other aldehyds to secondary alcohols CC=O.CC(O)C, ketones to tertiary alcohols CC(C)=O.CC(C)(O)C,…  
         'demjanov_rearrangement': 'NCC1CCC1.OC2CCCC2',	# ring expansion, or ring reduction NC1CCCC1.OCC2CCC2
