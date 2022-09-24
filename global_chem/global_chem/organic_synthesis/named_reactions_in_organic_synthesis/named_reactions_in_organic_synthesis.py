@@ -95,11 +95,12 @@ class NamedReactionsInOrganicSynthesis(object):
 	'gattermann koch formylation': 'C1=CC=CC=C1.~.O=CC1=CC=CC=C1',
 	'chugaev elimination': r'CC(C)C(C)(C)O.~.C/C(C)=C(C)/C',
 	'baeyer villiger oxidation': 'CC(C)=O.~.CC(OC)=O',
+	'wagner rearrangement': r'CCCO.~.C/C=C/C',
+	'wagner-meerwein rearrangement': r'CCC[F,Cl,Br,I].~.C/C=C/C',
+	'grignard reaction': 'C=O.~.CCO',
       }
 
       smiles = {
-        'wagner-meerwein_rearrangement': r'CCC[F,Cl,Br,I].C/C=C/C',	# or to CC([F,Cl,Br,I])C (hydrid shift)
-        'grignard_reaction': 'C=O.C[Mg]Br.CCO',	# to primary alcohol, other aldehyds to secondary alcohols CC=O.CC(O)C, ketones to tertiary alcohols CC(C)=O.CC(C)(O)C,…  
         'demjanov_rearrangement': 'NCC1CCC1.OC2CCCC2',	# ring expansion, or ring reduction NC1CCCC1.OCC2CCC2
 	'tiffeneau-demjanov_rearrangement': 'OC1(CN)CCCC1.O=C2CCCCC2',
         'ullmann_reaction_coupling_biaryl_synthesis': '[F,Cl,Br,I]C1=CC=CC=C1.C2(C3=CC=CC=C3)=CC=CC=C2',
