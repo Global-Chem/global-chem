@@ -21,6 +21,11 @@ class NamedReactionsInOrganicSynthesis(object):
       Reactants to Products will be split by a virtual bond as a reaction pathway arrow that can get eliminated when processing the strings. 
       and is useful for natural language processing to know the start and ends. 
       
+      
+      Debatable Entries:
+      
+          'smiles rearrangement': '[F,Cl,Br,I]C1=C(OCCN)C=CC([N+]([O-])=O)=C1.[F,Cl,Br,I]C2=C(NCCO)C=CC([N+]([O-])=O)=C2',	# X-Y rearrangment where X(here O) and Y(here NH2) can be many different groups, also ortho- and para- substituents(here halogens and NO2) can be different groups
+
       '''
 	
       validated = {
@@ -82,18 +87,16 @@ class NamedReactionsInOrganicSynthesis(object):
         'favorskii rearrangement': '[F,Cl,Br,I]C1CCCCC1=O.~.O=C(O)C2CCCC2',
         'knoevenagel condensation': 'O=C(C)C.~.C=C(C)C',
         'nef reaction': 'O=[N+](C(C)C)[O-].~.O=C(C)C',
-
+        'wacker oxidation': 'C=C.~.CC=O',
+        'henry reaction': r'CC[N+]([O-])=O.CC=O.~.C/C([N+]([O-])=O)=C(C)\C',
+        'michaelis arbuzov reaction': 'COP(OC)OC.~.COP(OC)(C)=O',	
+	'gattermann koch formylation': 'C1=CC=CC=C1.~.O=CC1=CC=CC=C1',
+	'chugaev elimination': r'CC(C)C(C)(C)O.~.C/C(C)=C(C)/C',
+	'baeyer villiger oxidation': 'CC(C)=O.~.CC(OC)=O',
       }
 
       smiles = {
-        'smiles rearrangement': '[F,Cl,Br,I]C1=C(OCCN)C=CC([N+]([O-])=O)=C1.[F,Cl,Br,I]C2=C(NCCO)C=CC([N+]([O-])=O)=C2',	# X-Y rearrangment where X(here O) and Y(here NH2) can be many different groups, also ortho- and para- substituents(here halogens and NO2) can be different groups
-        'wacker_oxidation': 'C=C.CC=O',
-        'henry_reaction': 'CC[N+]([O-])=O.CC(C)=O.C/C([N+]([O-])=O)=C(C)\C',	# from dehydration, CC(C(C)=C)[N+]([O-])=O from oxidation, CC(C(O)(C)C)N from reduction
-        'michaelis-arbuzov_reaction': 'CP(C)OC.CP(C)(C)=O',	# phosphinite to phosphine, CP(OC)OC.CP(C)(OC)=O phosphonite to phosphinate, COP(OC)OC.CP(OC)(OC)=O phosphite ester to phosphonate oxide
-        'gattermann_and_gattermann-koch_formylation': 'C#N.O=CC1=CC=CC=C1',
-        'chugaev_elimination_xanthate_ester_pyrolysis': r'CC(C)C(C)(C)O.C/C(C)=C(C)/C',
-        'baeyer-villiger_oxidation': 'CC(C)=O.CC(OO)=O.CC(OC)=O',
-        'barbier_coupling_reaction': 'C[Cl,Br,I].CC(C)=O.CC(O)(C)C',
+        'barbier coupling reaction': 'C[Cl,Br,I].CC(C)=O.CC(O)(C)C',
         'prins_reaction': 'CC=C.CC(C)=O.OC(C)CCO',	# to 1,3 diol, C/C=C/CO allylic alcohol in absence of water, CC1OCOCC1 dioxane with excess of CC(C)=O
         'wagner-meerwein_rearrangement': r'CCC[F,Cl,Br,I].C/C=C/C',	# or to CC([F,Cl,Br,I])C (hydrid shift)
         'grignard_reaction': 'C=O.C[Mg]Br.CCO',	# to primary alcohol, other aldehyds to secondary alcohols CC=O.CC(O)C, ketones to tertiary alcohols CC(C)=O.CC(C)(O)C,…  
