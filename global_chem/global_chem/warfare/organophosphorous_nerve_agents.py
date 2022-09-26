@@ -75,3 +75,25 @@ class OrganoPhosphorousNerveAgents(object):
         }
 
         return bit_vector
+    
+    @staticmethod
+    def get_russian():
+        
+        smiles = {
+            'табун': 'CCOP(=O)(C#N)N(C)C',
+            'зарин': 'CC(C)OP(=O)(C)F',
+            'зоман': 'CC(C(C)(C)C)OP(=O)(C)F',
+            'циклозарин': 'CP(=O)(OC1CCCCC1)F',
+            'vx': 'CCOP(C)(=O)SCCN(C(C)C)C(C)C',
+            'русский vx': 'CCN(CC)CCSP(=O)(C)OCC(C)C',
+            'мирзаянов-a230': 'CCN(CC)C(C)=N[P](C)(F)=O',
+            'мирзаянов-a232': 'CCN(CC)C(\C)=N\P(F)(=O)OC',
+            'мирзаянов-a234': r'CCOP(F)(=O)\N=C(/C)\N(CC)CC',
+            'хоуниг-a230': r'Cl/C(F)=N/OP(F)(OCCCl)=O',
+            'хоуниг-a232': r'Cl/C(F)=N/OP(F)(OC(C)CCl)=O',
+            'хоуниг-a234': r'Cl/C(F)=N/OP(F)(OC(C)C(C)Cl)=O',
+            'новичок-5': 'FP1OC(C)CO1',
+            'новичок-7': 'FP1OC(C)C(C)O1',
+        }
+        
+        return smiles
