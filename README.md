@@ -1,9 +1,9 @@
 <h1 align="center">Global-Chem: A Chemical Knowledge Graph of common small molecules and their IUPAC/SMILES/SMARTS for selection of compounds relevant to diverse chemical communities </h1>
 
 Global Chem is an open-source graph database and api for common and rare chemical lists using IUPAC as input and SMILES/SMARTS as output. As 
-mostly needed by myself as I search through chemical infinity.
+mostly needed by us as we search through chemical infinity.
 
-I have found these lists written in history to be useful, they come from a variety of different fields but are aggregated 
+We have found these lists written in history to be useful, they come from a variety of different fields but are aggregated 
 into the most common format of organic chemists (IUPAC) and the common language of the cheminformatician (SMILES) and for 
 pattern matching (SMARTS). 
 
@@ -16,10 +16,20 @@ Overview
 
 ## GlobalChem
 
-#### - Getting Started
+#### - Demo
 
-|[![Documentation](https://img.shields.io/badge/GitBook-Docu-lightblue)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/) | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HaDvAYpaX0_2Eqx1NSl5uJTRkE_0na-L?usp=sharing) | [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://www.chemicalgraphtheory.com)| [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) | [![Discord](https://img.shields.io/discord/996592811887579317.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/dK2agwXSE7) |
-|-|-|-|-|-|
+| [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HaDvAYpaX0_2Eqx1NSl5uJTRkE_0na-L?usp=sharing) |
+|-|
+
+#### Documentation
+
+| [![Documentation](https://img.shields.io/badge/GitBook-Docu-lightblue)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/) |
+|-|
+
+#### Communicate With Us
+
+| [![Discord](https://img.shields.io/discord/996592811887579317.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/dK2agwXSE7) |
+|-|
 
 #### - Validation 
 
@@ -43,8 +53,8 @@ Overview
 
 #### - Build Information
 
-| [![PyPI version](https://badge.fury.io/py/global-chem.svg)](https://badge.fury.io/py/global-chem) | [![Coverage Status](https://coveralls.io/repos/github/Sulstice/global-chem/badge.svg?branch=master)](https://coveralls.io/github/Sulstice/global-chem?branch=master) | ![Repo Size](https://img.shields.io/github/repo-size/Sulstice/global-chem)| [![DOI](https://zenodo.org/badge/259046250.svg)](https://zenodo.org/badge/latestdoi/259046250) | [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem?ref=badge_shield) | [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/) | [![Maturity badge - level 2](https://img.shields.io/badge/Maturity-Level%202%20--%20First%20Release-yellowgreen.svg)](https://github.com/tophat/getting-started/blob/master/scorecard.md) | [![Repo Status](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org) |
-|-|-|-|-|-|-|-|-|
+| [![PyPI version](https://badge.fury.io/py/global-chem.svg)](https://badge.fury.io/py/global-chem) | [![Coverage Status](https://coveralls.io/repos/github/Sulstice/global-chem/badge.svg?branch=master)](https://coveralls.io/github/Sulstice/global-chem?branch=master) | ![Repo Size](https://img.shields.io/github/repo-size/Sulstice/global-chem)| [![DOI](https://zenodo.org/badge/259046250.svg)](https://zenodo.org/badge/latestdoi/259046250) | [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem?ref=badge_shield) | [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/) | [![Maturity badge - level 2](https://img.shields.io/badge/Maturity-Level%202%20--%20First%20Release-yellowgreen.svg)](https://github.com/tophat/getting-started/blob/master/scorecard.md) | [![Repo Status](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org) | [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)|
+|-|-|-|-|-|-|-|-|-|
 
 #### Regulatory Compliance
 
@@ -188,9 +198,11 @@ Please follow the node contribution guidelines if you would like to elect your o
 'organophosphorous_nerve_agents': OrganoPhosphorousNerveAgents,           # Suliman Sharif
 'organic_and_inorganic_bronsted_acids': OrganicAndInorganicBronstedAcids, # Nathaniel McClean & Suliman Sharif
 'chemicals_from_biomass': ChemicalsFromBioMass,                           # Anthony Maiorana & Suliman Sharif 
-'salt': Salt                                                              # Suliman Sharif
+'salt': Salt,                                                             # Suliman Sharif
 'drugs_from_snake_venom': DrugsFromSnakeVenom,                            # Suliman Sharif
 'oral_contraceptives': OralContraceptives,                                # Suliman Sharif
+'surfactants': Surfactants,                                               # Yiling Nan & Suliman Sharif
+'lanthipeptides: LanthiPeptides                                           # Prabin Baral & Suliman Sharif
 ```
 
 <details><summary><h3>Node List</h1><br/></summary>
@@ -242,6 +254,8 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Chemicals From Biomass              | 17           | Wittcoff, Harold A., et al. Industrial Organic Chemicals: Wittcoff/Organic Chemicals. John Wiley & Sons, Inc., 2004                                                                                                                                                                                                  |
 | Drugs From Snake Venom              | 7            | Oliveira, Ana L., et al. “The Chemistry of Snake Venom and Its Medicinal Potential.” Nature Reviews Chemistry, vol. 6, no. 7, July 2022, pp. 451–69                                                                                                                                                                  |
 | Oral Contraceptives                 | 17           | Coleman, William F. “The Molecules of Oral Contraceptives.” Journal of Chemical Education, vol. 87, no. 7, July 2010, pp. 760–61.                                                                                                                                                                                    |
+| Surfactants for Skin                | 36           | Date, Abhijit A., and Vandana B. Patravale. “Microemulsions: Applications in Transdermal and Dermal Delivery.” Critical Reviews&trade; in Therapeutic Drug Carrier Systems, vol. 24, no. 6, 2007.                                                                                                                    |
+| LanthiPeptides                      | 2            | Pokhrel, Rudramani, et al. “Molecular Mechanisms of Pore Formation and Membrane Disruption by the Antimicrobial Lantibiotic Peptide Mutacin 1140.” Physical Chemistry Chemical Physics, vol. 21, no. 23, June 2019, pp. 12530–39.                                                                                    |
 | Common Regex Patterns               | 1            |                                                                                                                                                                                                                                                                                                                      |
 
 </details>                            

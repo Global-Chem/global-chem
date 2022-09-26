@@ -117,6 +117,14 @@ from global_chem.miscellaneous.open_smiles import OpenSmiles
 from global_chem.miscellaneous.amino_acids import AminoAcids
 from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
 
+# Skin
+
+from global_chem.skin.transdermal_and_dermal_delivery.surfactants import Surfactants
+
+# Peptides
+
+from global_chem.peptides.lanthipeptides import LanthiPeptides
+
 # Sex
 
 from global_chem.sex.exsens.lube import Lube
@@ -427,6 +435,8 @@ class GlobalChem(object):
         'chemicals_from_biomass': ChemicalsFromBioMass,                           # Anthony Maiorana & Suliman Sharif
         'drugs_from_snake_venom': DrugsFromSnakeVenom,                            # Suliman Sharif
         'oral_contraceptives': OralContraceptives,                                # Suliman Sharif
+        'surfactants': Surfactants,                                               # Yiling Nan & Suliman Sharif
+        'lanthipeptides': LanthiPeptides,                                         # Prabin Baral & Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                             # Chris Burke & Suliman Sharif
     }
 
@@ -1378,7 +1388,7 @@ class GlobalChem(object):
         '''
 
         master_category_keys = {
-            'organic_chemistry': ['narcotics', 'organic_synthesis', 'medicinal_chemistry', 'proteins', 'miscellaneous'],
+            'organic_chemistry': ['education','narcotics', 'organic_synthesis', 'medicinal_chemistry', 'proteins', 'miscellaneous'],
             'environmental_chemistry': ['environment', 'interstellar_space'],
             'materials_chemistry': ['materials'],
             'pharmaceutical_sciences': ['formulation']

@@ -337,7 +337,7 @@ When evaluating binary strings we can observe patterns for how a molecule is fra
 
 IUPAC and Natural name submatching would be of best interest in determining functional group similaritiy between two different names of compounds of unequal length. Global-Chem implements the Levenshtein Distance (91) without grammar modifications to generate the best naming fit as possible if an exact definition is not known. With the inclusion of grammar, molecular similarity on IUPACs with long names (large molecules) might be possible to deduce common functionality and connection points and a new avenue area for chemical linguistic research.  
 
-### Artificial Intelligence 
+### Machine Learning
 
 Any general chemical artificial intelligence needs to distinguish holistic characteristics that make sense. Principal Component Analysis (PCA) is a well-defined technique for identifying feature characteristics of a set of data based on their variance to a reference axis line. PCA can be applied to a list of SMILES by converting to morgan fingerprint bit vectors to determine significant features of a dataset (97). We applied a k-means clustering because we want the machine to determine the two most important features of the common universe and what the machine can easily distinguish to start classifying molecules, a semi-supervised learning approach where we control the data and the machine (98). 
 
