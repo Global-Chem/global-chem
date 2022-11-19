@@ -833,12 +833,3 @@ class ConstituentsOfCannabisSativa(object):
         }
 
         return smarts
-
-    @staticmethod
-    def get_bit_vector():
-
-        bit_vector = {
-            
-        }
-
-        return bit_vector
