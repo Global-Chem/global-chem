@@ -160,11 +160,11 @@ class BotColourAdditiveList(object):
 
         '''
 
-        import re
         data = pd.read_csv(
             'https://raw.githubusercontent.com/Sulstice/global-chem/development/global_chem/global_chem_outputs/global_chem.tsv',
             sep='\t',
-            names=['Name', 'SMILES', 'Node', 'Category', 'Node Path']
+            names=['Name', 'SMILES', 'Node', 'Category', 'Node Path'],
+            skiprows=1
         )
 
         list_one = []
