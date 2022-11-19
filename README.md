@@ -11,6 +11,9 @@ pattern matching (SMARTS).
 <img width="800" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/179372564-c286b115-af14-4ad8-a37f-0a216297b6c1.png">
 </p>
 
+Just with no dependencies, intialize the class and there you go! All the common and rare groups of the world
+at your disposal. 
+
 Overview
 ========
 
@@ -81,20 +84,6 @@ pip install global-chem
 
 ```
 
-If you want to install the extensions package for extra functionality, each application can be installed independent of each other or you can install them all with the `all`:
-
-
-```python
-
-pip install 'global-chem[graphing]'
-pip install 'global-chem[forcefields]'
-pip install 'global-chem[bioinformatics]'
-pip install 'global-chem[cheminformatics]'
-pip install 'global-chem[quantum_chemistry]'
-pip install 'global-chem[development_operations]'
-pip install 'global-chem[all]'
-
-```
 
 QuickStart
 ==========
@@ -104,39 +93,18 @@ Here we load the `global-chem[cheminformatics]` extensions package and the `Glob
 ```python
 
 from global_chem import GlobalChem
-from global_chem_extensions import GlobalChemExtensions
 
 gc = GlobalChem()
-gc_cheminfo = GlobalChemExtensions().cheminformatics()
 
 gc.build_global_chem_network()
 smiles_list = list(gc.get_node_smiles('pihkal').values())
 
 print (f"SMILES: {smiles_list[0]}")
 
-gc_cheminfo.node_pca_analysis(smiles_list)
-
 ```
 
 GlobalChem
 ==========
-
-### Rules
-
-
-The Graph Network (GN)s comes with a couple of rules that for now make the software engineering easier on the developer. 
-
-- There must be a root node.
-- When Adding a Node every node must be connected. 
-- To remove a node it must not have any children. 
-
-The Deep Graph Network (DGN)s comes also with a couple of rules to make the implementation easier:
-
-- There must be a root node of 1 which marks as your "input" node. 
-- When adding a layer all nodes will be added to all the previous layers as children. (Folk can use the remove node feature to perform dropouts).
-
-Just with no dependencies, intialize the class and there you go! All the common and rare groups of the world
-at your disposal. 
 
 ### Nodes Contributors
 
@@ -195,9 +163,8 @@ Please follow the node contribution guidelines if you would like to elect your o
 'oral_contraceptives': OralContraceptives,                                # Suliman Sharif
 'surfactants': Surfactants,                                               # Yiling Nan & Suliman Sharif
 'lanthipeptides: LanthiPeptides                                           # Prabin Baral & Suliman Sharif
+'alternative_jet_fuels': AlternativeJetFuels                              # Suliman Sharif
 ```
-
-<details><summary><h3>Node List</h1><br/></summary>
 
 | Chemical List                       | # of Entries | References                                                                                                                                                                                                                                                                                                           |
 |-------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -248,13 +215,54 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Oral Contraceptives                 | 17           | Coleman, William F. “The Molecules of Oral Contraceptives.” Journal of Chemical Education, vol. 87, no. 7, July 2010, pp. 760–61.                                                                                                                                                                                    |
 | Surfactants for Skin                | 36           | Date, Abhijit A., and Vandana B. Patravale. “Microemulsions: Applications in Transdermal and Dermal Delivery.” Critical Reviews&trade; in Therapeutic Drug Carrier Systems, vol. 24, no. 6, 2007.                                                                                                                    |
 | LanthiPeptides                      | 2            | Pokhrel, Rudramani, et al. “Molecular Mechanisms of Pore Formation and Membrane Disruption by the Antimicrobial Lantibiotic Peptide Mutacin 1140.” Physical Chemistry Chemical Physics, vol. 21, no. 23, June 2019, pp. 12530–39.                                                                                    |
+| Alternative Jet Fuels               | 59           | Chemical Composition and Fuel Properties of Alternative Jet Fuels :: BioResources. https://bioresources.cnr.ncsu.edu/.                                                                                                                                                                                               |
 | Common Regex Patterns               | 1            |                                                                                                                                                                                                                                                                                                                      |
-
-</details>                            
 
 GlobalChemExtensions
 ====================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                
+Installation 
+============
+
+GlobalChemExtensions is going to be distribute via PyPi as saperate modules and as the tree and it's extensions grows we can expand it to other pieces of software
+making it accessible to all regardless of what you use. Alternatively, you could have a glance at the source code and copy/paste
+it yourself.
+
+
+```python
+
+pip install 'global-chem[graphing]'
+pip install 'global-chem[forcefields]'
+pip install 'global-chem[bioinformatics]'
+pip install 'global-chem[cheminformatics]'
+pip install 'global-chem[quantum_chemistry]'
+pip install 'global-chem[development_operations]'
+pip install 'global-chem[all]'
+
+```
+         
+Quickstart 
+==========     
+
+To conduct PCA Analysis on a list of SMILES in the network:
+
+```python
+
+from global_chem import GlobalChem
+from global_chem_extensions import GlobalChemExtensions
+
+gc = GlobalChem()
+gc_cheminfo = GlobalChemExtensions().cheminformatics()
+
+gc.build_global_chem_network()
+smiles_list = list(gc.get_node_smiles('pihkal').values())
+
+print (f"SMILES: {smiles_list[0]}")
+
+gc_cheminfo.node_pca_analysis(smiles_list)
+
+```
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 A Variety of Tools are available for you to browse and analyze data and with the full list of different applications can be found in the google colab demo or the Gitbook documentation. A demonstration of the data visualization extensions designed with plotly and bokeh are displayed below:
 
 <p align="center">
