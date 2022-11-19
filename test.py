@@ -2,6 +2,7 @@
 from rdkit import Chem
 from rdkit.Chem import AllChem
 
+
 aa_key = {
     'Arg': 'R',
     'His': 'H',
@@ -26,23 +27,65 @@ aa_key = {
 }
 
 smiles = {
-    'desogestrel': 'CCC12CC(=C)C3C(C1CCC2(C#C)O)CCC4=CCCCC34',
-    'dienogest': 'CC12CCC3=C4CCC(=O)C=C4CCC3C1CCC2(CC#N)O',
-    'drospirenone': 'CC12CCC(=O)C=C1C3CC3C4C2CCC5(C4C6CC6C57CCC(=O)O7)C',
-    'estradiol': 'CC12CCC3C(C1CCC2O)CCC4=C3C=CC(=C4)O',
-    'estradiol valerate': 'CCCCC(=O)OC1CCC2C1(CCC3C2CCC4=C3C=CC(=C4)O)C',
-    'estriol': 'CC12CCC3C(C1CC(C2O)O)CCC4=C3C=CC(=C4)O',
-    'estrone': 'CC12CCC3C(C1CCC2=O)CCC4=C3C=CC(=C4)O',
-    'ethinyl estradiol': 'CC12CCC3C(C1CCC2(C#C)O)CCC4=C3C=CC(=C4)O',
-    'etonogestrel': 'CCC12CC(=C)C3C(C1CCC2(C#C)O)CCC4=CC(=O)CCC34',
-    'levonorgestrel': 'CCC12CCC3C(C1CCC2(C#C)O)CCC4=CC(=O)CCC34',
-    'mestranol': 'CC12CCC3C(C1CCC2(C#C)O)CCC4=C3C=CC(=C4)OC',
-    'norelgestromin': 'CCC12CCC3C(C1CCC2(C#C)O)CCC4=CC(=NO)CCC34',
-    'norethisterone': 'CC12CCC3C(C1CCC2(C#C)O)CCC4=CC(=O)CCC34',
-    'norethisterone acetate': 'CC(=O)OC1(CCC2C1(CCC3C2CCC4=CC(=O)CCC34)C)C#C',
-    'norethynodre': 'CC12CCC3C(C1CCC2(C#C)O)CCC4=C3CCC(=O)C4',
-    'norgestimate': 'CCC12CCC3C(C1CCC2(C#C)OC(=O)C)CCC4=CC(=NO)CCC34',
-    'progesterone': 'CC(=O)C1CCC2C1(CCC3C2CCC4=CC(=O)CCC34C)C',
+    'heptane': 'CCCCCCC',
+    '2-methyl heptane': 'CCCCCC(C)C',
+    '3-methyl heptane': 'CCCCC(C)CC',
+    'octane': 'CCCCCCCC',
+    'ethyl cyclohexane': 'CCC1CCCCC1',
+    '4-methyl octane': 'CCCCC(C)CCC',
+    '2-methyl octane': 'CCCCCCC(C)C',
+    '2,5-dimethyl heptane': 'CCC(C)CCC(C)C',
+    '3-methyl octane': 'CCCCCC(C)CC',
+    '2,2,4-trimethyl heptane': 'CCCC(C)CC(C)(C)C',
+    'butyl cyclopentane': 'CCCCC1CCCC1',
+    'nonane': 'CCCCCCCCC',
+    '3-ethyl-2,5-dimethyl hexane': 'CCC(CC(C)C)C(C)C',
+    '1,3-dimethyl benzene': 'CC1=CC(=CC=C1)C',
+    'propyl cyclohexane': 'CCCC1CCCCC1',
+    '2,5,6-trimethyl octane': 'CCC(C)C(C)CCC(C)C',
+    '2-methyl nonane': 'CCCCCCCC(C)C',
+    '3-methyl nonane': 'CCCCCCC(C)CC',
+    '2,2,4,6,6-pentamethyl heptane': 'CC(CC(C)(C)C)CC(C)(C)C',
+    '2,3-dimethyl nonane': 'CCCCCCC(C)C(C)C',
+    'decane': 'CCCCCCCCCC',
+    '1-methyl-2-propyl cyclohexane': 'CCCC1CCCCC1C',
+    '5-ethyl-2,2,3-trimethyl heptane': 'CCC(CC)CC(C)C(C)(C)C',
+    '1-ethyl-2-methyl benzene': 'CCC1=CC=CC=C1C',
+    '3-methyl decane': 'CCCCCCCC(C)CC',
+    '1,2,3-trimethyl benzene': 'CC1=C(C(=CC=C1)C)C',
+    '3,7-dimethyl decane': 'CCCC(C)CCCC(C)CC',
+    '4-methyl undecane': 'CCCCCCCC(C)CCC',
+    'undecane': 'CCCCCCCCCCC',
+    '1-ethenyl-2-methyl benzene': 'C=CC1=CC=CC=C1C',
+    '1,2-diethyl benzene': 'CCC1=CC=CC=C1CC',
+    '1-methyl-4-(2-propenyl) benzene': 'CC1=CC=C(C=C1)C=C(C)C',
+    '1-ethyl-2,4-dimethyl benzene': 'CCC1=C(C=C(C=C1)C)C',
+    '1-methyl-2-(4-methylpentyl)cyclopentane': 'CC1CCCC1CCCC(C)C',
+    '3-methyl undecane': 'CCCCCCCCC(C)CC',
+    '1,2,3,5-tetramethyl benzene': 'CC1=CC(=C(C(=C1)C)C)C',
+    '2-methyl 1,1*-bicyclohexyl': 'CC1CCCCC1C2CCCCC2',
+    '1,6-tridecadiene': 'CCCCCCC=CCCCC=C',
+    'dodecane': 'CCCCCCCCCCCC',
+    '1-ethenyl-4-ethyl benzene': 'CCC1=CC=C(C=C1)C=C',
+    '1-methyl-2-(2-propenyl) benzene': 'CC=CC1=CC=CC=C1C',
+    '2,6-dimethyl undecane': 'CCCCCC(C)CCCC(C)C',
+    '1,2,3,4-tetrahydro naphthalene': 'C1CCC2=CC=CC=C2C1',
+    '2-ethenyl-1,3,5-trimethyl benzene': 'C=CC1=C(C)C=C(C)C=C1C',
+    'hexyl cyclohexane': 'CCCCCCC1CCCCC1',
+    '3-methyl dodecane': 'CCCCCCCCCC(C)CC',
+    '1,2,3,4-tetrahydro-2-methyl naphthalene': 'CC1CCC2=CC=CC=C2C1',
+    'tridecane': 'CCCCCCCCCCCCC',
+    '2,2,4,4,6,8,8-heptamethyl nonane': 'CC(CC(C)(C)C)CC(C)(C)CC(C)(C)C',
+    '1,2,3,4-tetrahydro-5-methyl naphthalene': 'CC1=C2CCCCC2=CC=C1',
+    '3-methyl tridecane': 'CCCCCCCCCCC(C)CC',
+    '2,6,10-trimethyl dodecane': 'CCC(C)CCCC(C)CCCC(C)C',
+    '1,2,3,4-tetrahydro-2,7-diemthyl napthalene': 'CC1CCC2=C(C1)C=C(C=C2)C',
+    'tetradecane': 'CCCCCCCCCCCCCC',
+    '7-methyl pentadecane': 'CCCCCCCCC(C)CCCCCC',
+    '3-methyl tetradecane': 'CCCCCCCCCCCC(C)CC',
+    'pentadecane': 'CCCCCCCCCCCCCCC',
+    'hexadecane': 'CCCCCCCCCCCCCCCC',
+    'heptadecane': 'CCCCCCCCCCCCCCCCC',
 }
 
 if __name__ == '__main__':
@@ -53,17 +96,21 @@ if __name__ == '__main__':
     # aa = [key[i] for i in sequence]
     # print (''.join(aa))
     #
+
     for i, v in smiles.items():
 
         print ("'%s': '%s'," % (i, Chem.MolToSmarts(Chem.MolFromSmiles(v))))
 
-    for i, v in smiles.items():
+    # for i, v in smiles.items():
+    #
+    #     molecule = Chem.MolFromSmiles(v)
+    #     bit_string = AllChem.GetMorganFingerprintAsBitVect(
+    #         molecule,
+    #         2,
+    #         nBits=512
+    #     ).ToBitString()
+    #
+    #     print ("'%s': '%s'," % (i, bit_string))
 
-        molecule = Chem.MolFromSmiles(v)
-        bit_string = AllChem.GetMorganFingerprintAsBitVect(
-            molecule,
-            2,
-            nBits=512
-        ).ToBitString()
 
-        print ("'%s': '%s'," % (i, bit_string))
+

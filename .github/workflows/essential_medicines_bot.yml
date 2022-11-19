@@ -1,4 +1,4 @@
-name: Bot Checker for Colour Additive List
+name: Bot Checker for Essential Medicines List
 
 on:
   schedule:
@@ -22,9 +22,9 @@ jobs:
           pip install pandas
           pip install beautifulsoup4
           pip install requests   
-      - name: Run Checker
+      - name: Run FDA Checker test
         env:
           GITHUB_TOKEN: ${{ secrets.COLOUR_BOT_TOKEN }}
         run: |
           cd bot_services/public_notifications
-          python colour_additive_list.py
+          python essential_medicines.py

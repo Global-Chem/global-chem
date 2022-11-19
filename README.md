@@ -1,9 +1,9 @@
 <h1 align="center">Global-Chem: A Chemical Knowledge Graph of common small molecules and their IUPAC/SMILES/SMARTS for selection of compounds relevant to diverse chemical communities </h1>
 
 Global Chem is an open-source graph database and api for common and rare chemical lists using IUPAC as input and SMILES/SMARTS as output. As 
-mostly needed by myself as I search through chemical infinity.
+mostly needed by us as we search through chemical infinity.
 
-I have found these lists written in history to be useful, they come from a variety of different fields but are aggregated 
+We have found these lists written in history to be useful, they come from a variety of different fields but are aggregated 
 into the most common format of organic chemists (IUPAC) and the common language of the cheminformatician (SMILES) and for 
 pattern matching (SMARTS). 
 
@@ -11,15 +11,20 @@ pattern matching (SMARTS).
 <img width="800" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/179372564-c286b115-af14-4ad8-a37f-0a216297b6c1.png">
 </p>
 
+Just with no dependencies, intialize the class and there you go! All the common and rare groups of the world
+at your disposal. 
+
 Overview
 ========
 
 ## GlobalChem
 
-#### - Getting Started
+#### - Introduction
 
-|[![Documentation](https://img.shields.io/badge/GitBook-Docu-lightblue)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/) | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HaDvAYpaX0_2Eqx1NSl5uJTRkE_0na-L?usp=sharing) | [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://www.chemicalgraphtheory.com)| [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) | [![Discord](https://img.shields.io/discord/996592811887579317.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/dK2agwXSE7) |
-|-|-|-|-|-|
+| Demo | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HaDvAYpaX0_2Eqx1NSl5uJTRkE_0na-L?usp=sharing) |
+|-|-|
+| Docs | [![Documentation](https://img.shields.io/badge/GitBook-Docu-lightblue)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/) |
+| Chat | [![Discord](https://img.shields.io/discord/996592811887579317.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/dK2agwXSE7) |
 
 #### - Validation 
 
@@ -33,13 +38,18 @@ Overview
 
 #### - Github Actions
 
-|[![Test System](https://github.com/Sulstice/global-chem/actions/workflows/continous_integration.yml/badge.svg)](https://github.com/Sulstice/global-chem/actions/workflows/continous_integration.yml) | [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/Sulstice/global-chem/master.svg)](https://results.pre-commit.ci/latest/github/Sulstice/global-chem/master) | [![publish](https://github.com/Sulstice/global-chem/actions/workflows/publish_package.yml/badge.svg)](https://github.com/Sulstice/global-chem/actions/workflows/publish_package.yml) | [![Translate README](https://github.com/Sulstice/global-chem/actions/workflows/translate_readme.yml/badge.svg)](https://github.com/Sulstice/global-chem/actions/workflows/translate_readme.yml) |
-|-|-|-|-|
+|[![Test System](https://github.com/Sulstice/global-chem/actions/workflows/continous_integration.yml/badge.svg)](https://github.com/Sulstice/global-chem/actions/workflows/continous_integration.yml) | [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/Sulstice/global-chem/master.svg)](https://results.pre-commit.ci/latest/github/Sulstice/global-chem/master) | [![publish](https://github.com/Sulstice/global-chem/actions/workflows/publish_package.yml/badge.svg)](https://github.com/Sulstice/global-chem/actions/workflows/publish_package.yml) | [![Translate README](https://github.com/Sulstice/global-chem/actions/workflows/translate_readme.yml/badge.svg)](https://github.com/Sulstice/global-chem/actions/workflows/translate_readme.yml) | [![Audit GlobalChem Web Performance](https://github.com/Sulstice/global-chem/actions/workflows/speed-test-website.yml/badge.svg)](https://github.com/Sulstice/global-chem/actions/workflows/speed-test-website.yml) |
+|-|-|-|-|-|
+
+#### - Public Notifications
+
+| [![Bot Checker for Essential Medicines List](https://github.com/Sulstice/global-chem/actions/workflows/essential_medicines_bot.yml/badge.svg)](https://github.com/Sulstice/global-chem/actions/workflows/essential_medicines_bot.yml) | [![Bot Checker for FDA Colour Additive List](https://github.com/Sulstice/global-chem/actions/workflows/public_notifications.yml/badge.svg)](https://github.com/Sulstice/global-chem/actions/workflows/public_notifications.yml) |
+|-|-|
 
 #### - Build Information
 
-| [![PyPI version](https://badge.fury.io/py/global-chem.svg)](https://badge.fury.io/py/global-chem) | [![Coverage Status](https://coveralls.io/repos/github/Sulstice/global-chem/badge.svg?branch=master)](https://coveralls.io/github/Sulstice/global-chem?branch=master) | ![Repo Size](https://img.shields.io/github/repo-size/Sulstice/global-chem)| [![DOI](https://zenodo.org/badge/259046250.svg)](https://zenodo.org/badge/latestdoi/259046250) | [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem?ref=badge_shield) | [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/) | [![Maturity badge - level 2](https://img.shields.io/badge/Maturity-Level%202%20--%20First%20Release-yellowgreen.svg)](https://github.com/tophat/getting-started/blob/master/scorecard.md) | [![Repo Status](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org) |
-|-|-|-|-|-|-|-|-|
+| [![PyPI version](https://badge.fury.io/py/global-chem.svg)](https://badge.fury.io/py/global-chem) | [![Coverage Status](https://coveralls.io/repos/github/Sulstice/global-chem/badge.svg?branch=master)](https://coveralls.io/github/Sulstice/global-chem?branch=master) | ![Repo Size](https://img.shields.io/github/repo-size/Sulstice/global-chem)| [![DOI](https://zenodo.org/badge/259046250.svg)](https://zenodo.org/badge/latestdoi/259046250) | [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem?ref=badge_shield) | [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/) | [![Maturity badge - level 2](https://img.shields.io/badge/Maturity-Level%202%20--%20First%20Release-yellowgreen.svg)](https://github.com/tophat/getting-started/blob/master/scorecard.md) | [![Repo Status](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org) | [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)|
+|-|-|-|-|-|-|-|-|-|
 
 #### Regulatory Compliance
 
@@ -74,20 +84,6 @@ pip install global-chem
 
 ```
 
-If you want to install the extensions package for extra functionality, each application can be installed independent of each other or you can install them all with the `all`:
-
-
-```python
-
-pip install 'global-chem[graphing]'
-pip install 'global-chem[forcefields]'
-pip install 'global-chem[bioinformatics]'
-pip install 'global-chem[cheminformatics]'
-pip install 'global-chem[quantum_chemistry]'
-pip install 'global-chem[development_operations]'
-pip install 'global-chem[all]'
-
-```
 
 QuickStart
 ==========
@@ -97,39 +93,18 @@ Here we load the `global-chem[cheminformatics]` extensions package and the `Glob
 ```python
 
 from global_chem import GlobalChem
-from global_chem_extensions import GlobalChemExtensions
 
 gc = GlobalChem()
-gc_cheminfo = GlobalChemExtensions().cheminformatics()
 
 gc.build_global_chem_network()
 smiles_list = list(gc.get_node_smiles('pihkal').values())
 
 print (f"SMILES: {smiles_list[0]}")
 
-gc_cheminfo.node_pca_analysis(smiles_list)
-
 ```
 
 GlobalChem
 ==========
-
-### Rules
-
-
-The Graph Network (GN)s comes with a couple of rules that for now make the software engineering easier on the developer. 
-
-- There must be a root node.
-- When Adding a Node every node must be connected. 
-- To remove a node it must not have any children. 
-
-The Deep Graph Network (DGN)s comes also with a couple of rules to make the implementation easier:
-
-- There must be a root node of 1 which marks as your "input" node. 
-- When adding a layer all nodes will be added to all the previous layers as children. (Folk can use the remove node feature to perform dropouts).
-
-Just with no dependencies, intialize the class and there you go! All the common and rare groups of the world
-at your disposal. 
 
 ### Nodes Contributors
 
@@ -183,12 +158,13 @@ Please follow the node contribution guidelines if you would like to elect your o
 'organophosphorous_nerve_agents': OrganoPhosphorousNerveAgents,           # Suliman Sharif
 'organic_and_inorganic_bronsted_acids': OrganicAndInorganicBronstedAcids, # Nathaniel McClean & Suliman Sharif
 'chemicals_from_biomass': ChemicalsFromBioMass,                           # Anthony Maiorana & Suliman Sharif 
-'salt': Salt                                                              # Suliman Sharif
+'salt': Salt,                                                             # Suliman Sharif
 'drugs_from_snake_venom': DrugsFromSnakeVenom,                            # Suliman Sharif
 'oral_contraceptives': OralContraceptives,                                # Suliman Sharif
+'surfactants': Surfactants,                                               # Yiling Nan & Suliman Sharif
+'lanthipeptides: LanthiPeptides                                           # Prabin Baral & Suliman Sharif
+'alternative_jet_fuels': AlternativeJetFuels                              # Suliman Sharif
 ```
-
-<details><summary><h3>Node List</h1><br/></summary>
 
 | Chemical List                       | # of Entries | References                                                                                                                                                                                                                                                                                                           |
 |-------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -237,13 +213,56 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Chemicals From Biomass              | 17           | Wittcoff, Harold A., et al. Industrial Organic Chemicals: Wittcoff/Organic Chemicals. John Wiley & Sons, Inc., 2004                                                                                                                                                                                                  |
 | Drugs From Snake Venom              | 7            | Oliveira, Ana L., et al. “The Chemistry of Snake Venom and Its Medicinal Potential.” Nature Reviews Chemistry, vol. 6, no. 7, July 2022, pp. 451–69                                                                                                                                                                  |
 | Oral Contraceptives                 | 17           | Coleman, William F. “The Molecules of Oral Contraceptives.” Journal of Chemical Education, vol. 87, no. 7, July 2010, pp. 760–61.                                                                                                                                                                                    |
+| Surfactants for Skin                | 36           | Date, Abhijit A., and Vandana B. Patravale. “Microemulsions: Applications in Transdermal and Dermal Delivery.” Critical Reviews&trade; in Therapeutic Drug Carrier Systems, vol. 24, no. 6, 2007.                                                                                                                    |
+| LanthiPeptides                      | 2            | Pokhrel, Rudramani, et al. “Molecular Mechanisms of Pore Formation and Membrane Disruption by the Antimicrobial Lantibiotic Peptide Mutacin 1140.” Physical Chemistry Chemical Physics, vol. 21, no. 23, June 2019, pp. 12530–39.                                                                                    |
+| Alternative Jet Fuels               | 59           | Chemical Composition and Fuel Properties of Alternative Jet Fuels :: BioResources. https://bioresources.cnr.ncsu.edu/.                                                                                                                                                                                               |
 | Common Regex Patterns               | 1            |                                                                                                                                                                                                                                                                                                                      |
-
-</details>                            
 
 GlobalChemExtensions
 ====================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                
+Installation 
+============
+
+GlobalChemExtensions is going to be distribute via PyPi as saperate modules and as the tree and it's extensions grows we can expand it to other pieces of software
+making it accessible to all regardless of what you use. Alternatively, you could have a glance at the source code and copy/paste
+it yourself.
+
+
+```python
+
+pip install 'global-chem[graphing]'
+pip install 'global-chem[forcefields]'
+pip install 'global-chem[bioinformatics]'
+pip install 'global-chem[cheminformatics]'
+pip install 'global-chem[quantum_chemistry]'
+pip install 'global-chem[development_operations]'
+pip install 'global-chem[all]'
+
+```
+         
+Quickstart 
+==========     
+
+To conduct PCA Analysis on a list of SMILES in the network:
+
+```python
+
+from global_chem import GlobalChem
+from global_chem_extensions import GlobalChemExtensions
+
+gc = GlobalChem()
+gc_cheminfo = GlobalChemExtensions().cheminformatics()
+
+gc.build_global_chem_network()
+smiles_list = list(gc.get_node_smiles('pihkal').values())
+
+print (f"SMILES: {smiles_list[0]}")
+
+gc_cheminfo.node_pca_analysis(smiles_list)
+
+```
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 A Variety of Tools are available for you to browse and analyze data and with the full list of different applications can be found in the google colab demo or the Gitbook documentation. A demonstration of the data visualization extensions designed with plotly and bokeh are displayed below:
 
 <p align="center">

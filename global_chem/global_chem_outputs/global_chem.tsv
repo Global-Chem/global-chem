@@ -1,3 +1,4 @@
+chemical name	molecule	node	node_path	
 perfluorohexanoic acid	C(=O)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)O	emerging_perfluoroalkyls	environmental_chemistry	global_chem.environment.emerging_perfluoroalkyls
 perfluoroheptanoic acid	C(=O)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O	emerging_perfluoroalkyls	environmental_chemistry	global_chem.environment.emerging_perfluoroalkyls
 perfluorononanoic acid	C(=O)(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O	emerging_perfluoroalkyls	environmental_chemistry	global_chem.environment.emerging_perfluoroalkyls

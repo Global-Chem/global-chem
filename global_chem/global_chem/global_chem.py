@@ -27,6 +27,7 @@ from global_chem.animals.snakes.drugs_from_snake_venom import DrugsFromSnakeVeno
 
 # Environment
 
+from global_chem.environment.alternative_jet_fuels import AlternativeJetFuels
 from global_chem.environment.chemicals_from_biomass import ChemicalsFromBioMass
 from global_chem.environment.emerging_perfluoroalkyls import EmergingPerFluoroAlkyls
 
@@ -117,6 +118,14 @@ from global_chem.miscellaneous.open_smiles import OpenSmiles
 from global_chem.miscellaneous.amino_acids import AminoAcids
 from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
 
+# Skin
+
+from global_chem.skin.transdermal_and_dermal_delivery.surfactants import Surfactants
+
+# Peptides
+
+from global_chem.peptides.lanthipeptides import LanthiPeptides
+
 # Sex
 
 from global_chem.sex.exsens.lube import Lube
@@ -130,19 +139,18 @@ class Node:
     Node Object
     '''
 
-    def __init__(self, name, smiles=[], smarts=[], bit_vectors=[], value=None, colour=None):
+    def __init__(self, name, smiles=[], smarts=[], value=None, colour=None):
 
         self.name = name.split('.')[0]
         self.children = []
         self.parents = []
         self.smiles = smiles
         self.smarts = smarts
-        self.bit_vector = bit_vectors
         self.state = [ self.smiles, self.smarts ]
         self.value = None
         self.colour = None
 
-    def add_parent(self, name, smiles=[], smarts=[], bit_vectors=[]):
+    def add_parent(self, name, smiles=[], smarts=[]):
 
         '''
 
@@ -151,10 +159,10 @@ class Node:
         '''
 
         self.parents.append(
-            Node(name, smiles, smarts, bit_vectors)
+            Node(name, smiles, smarts)
         )
 
-    def add_child(self, name, smiles=[], smarts=[], bit_vectors=[]):
+    def add_child(self, name, smiles=[], smarts=[]):
 
         '''
 
@@ -163,7 +171,7 @@ class Node:
         '''
 
         self.children.append(
-            Node(name, smiles, smarts, bit_vectors)
+            Node(name, smiles, smarts)
         )
 
     def get_node_state(self):
@@ -233,11 +241,6 @@ class Node:
     def get_smarts():
 
         smarts = {}
-
-    @staticmethod
-    def get_bit_vector():
-
-        bit_vector = {}
 
 class PrintNode:
 
@@ -427,6 +430,9 @@ class GlobalChem(object):
         'chemicals_from_biomass': ChemicalsFromBioMass,                           # Anthony Maiorana & Suliman Sharif
         'drugs_from_snake_venom': DrugsFromSnakeVenom,                            # Suliman Sharif
         'oral_contraceptives': OralContraceptives,                                # Suliman Sharif
+        'surfactants': Surfactants,                                               # Yiling Nan & Suliman Sharif
+        'lanthipeptides': LanthiPeptides,                                         # Prabin Baral & Suliman Sharif
+        'alternative_jet_fuels': AlternativeJetFuels,                             # Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                             # Chris Burke & Suliman Sharif
     }
 
@@ -561,7 +567,6 @@ class GlobalChem(object):
                 root_node,
                 self.__NODES__[root_node].get_smiles(),
                 self.__NODES__[root_node].get_smarts(),
-                self.__NODES__[root_node].get_bit_vector()
             ),
             "children": [],
             "parents": [],
@@ -617,7 +622,6 @@ class GlobalChem(object):
                 child_key,
                 self.__NODES__[ child_key ].get_smiles(),
                 self.__NODES__[ child_key ].get_smarts(),
-                self.__NODES__[ child_key ].get_bit_vector()
             )
         except:
             _ = parent_node.add_child(
@@ -634,7 +638,6 @@ class GlobalChem(object):
                     child_key,
                     self.__NODES__[ child_key ].get_smiles(),
                     self.__NODES__[ child_key ].get_smarts(),
-                    self.__NODES__[ child_key ].get_bit_vector()
                 ),
                 "children": [],
                 "parents": [],
@@ -680,7 +683,6 @@ class GlobalChem(object):
                 parent_key,
                 self.__NODES__[ parent_key ].get_smiles(),
                 self.__NODES__[ parent_key ].get_smarts(),
-                self.__NODES__[ child_key ].get_bit_vector()
             )
 
         except:
@@ -817,24 +819,6 @@ class GlobalChem(object):
             )
 
         return self.__NODES__[node_key].get_smarts()
-
-    def get_node_bits(self, node_key):
-
-        '''
-
-        Get the Node Bit Vector
-
-        '''
-
-        node = self.network.get(node_key, None)
-
-        if not node:
-            raise GraphNetworkError(
-                message=f'No Node named {node_key} exists',
-                errors=''
-            )
-
-        return self.__NODES__[node_key].get_bit_vector()
 
     def initiate_deep_layer_network(self, root_node='global_chem'):
 
@@ -1045,29 +1029,6 @@ class GlobalChem(object):
         smarts = sum(smarts, [])
 
         return smarts
-
-    def get_all_bits(self):
-
-        '''
-
-        Fetches all the smarts in the network
-
-        Returns:
-            bits (List): Full list of SMARTS in the network.
-
-        '''
-
-        bits = []
-
-        for node_key, node_value in self.__NODES__.items():
-
-            if node_key != 'global_chem' and node_key != 'common_regex_patterns':
-
-                bits.append(list(node_value.get_bit_vector().values()))
-
-        bits = sum(bits, [])
-
-        return bits
 
     def get_smiles_by_iupac(
             self,
@@ -1378,7 +1339,7 @@ class GlobalChem(object):
         '''
 
         master_category_keys = {
-            'organic_chemistry': ['narcotics', 'organic_synthesis', 'medicinal_chemistry', 'proteins', 'miscellaneous'],
+            'organic_chemistry': ['education','narcotics', 'organic_synthesis', 'medicinal_chemistry', 'proteins', 'miscellaneous'],
             'environmental_chemistry': ['environment', 'interstellar_space'],
             'materials_chemistry': ['materials'],
             'pharmaceutical_sciences': ['formulation']

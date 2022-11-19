@@ -10,6 +10,7 @@ from global_chem.animals.snakes.drugs_from_snake_venom import DrugsFromSnakeVeno
 
 # Environment
 
+from global_chem.environment.alternative_jet_fuels import AlternativeJetFuels
 from global_chem.environment.chemicals_from_biomass import ChemicalsFromBioMass
 from global_chem.environment.emerging_perfluoroalkyls import EmergingPerFluoroAlkyls
 
@@ -98,6 +99,14 @@ from global_chem.sex.exsens.lube import Lube
 from global_chem.sex.exsens.exsens_products import ExsensProducts
 from global_chem.sex.tainted_sexual_enhancements.tainted_sexual_enhancements import TaintedSexualEnhancements
 from global_chem.sex.contraceptives.oral_contraceptives import OralContraceptives
+
+# Skin
+
+from global_chem.skin.transdermal_and_dermal_delivery.surfactants import Surfactants
+
+# Peptides
+
+from global_chem.peptides.lanthipeptides import LanthiPeptides
 
 # Miscellaneous
 
