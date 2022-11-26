@@ -1,11 +1,11 @@
 <h1 align="center">Global-Chem: A General Public Dictionary of Common Chemical Names to SMILES</h1>
 
-Global Chem is an open-source graph database and api for common and rare chemical lists using IUPAC as input and SMILES/SMARTS as output. As 
-mostly needed by us as we search through chemical infinity.
+Global Chem is general public dictionary of common and rare chemical lists using the Common Chemical Name as input and SMILES/SMARTS as output. As  dictionary mostly needed by us as we search through chemical infinity and develop new chemicals for general purpose. 
 
 We have found these lists written in history to be useful, they come from a variety of different fields but are aggregated 
-into the most common format of organic chemists (IUPAC) and the common language of the cheminformatician (SMILES) and for 
-pattern matching (SMARTS). 
+into the most common language of the people to the molecule directly (SMILES) and for pattern matching (SMARTS). This allows for the name to not be ambiguous to what a chemical is is anymore and allows for full transparency. 
+
+Global-Chem if organized as intended Graph Database and it's API will follow a similar design pattern. Please feel free to install it and play around with the tools to analyze the data available to everyone and governed by the community. 
 
 <p align="center">
 <img width="800" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/179372564-c286b115-af14-4ad8-a37f-0a216297b6c1.png">
