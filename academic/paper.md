@@ -1,5 +1,5 @@
 ---
-title: 'Global-Chem: A Chemical Knowledge Graph of common small molecules and their IUPAC/SMILES/SMARTS for selection of compounds relevant to diverse chemical communities'
+title: 'Global-Chem: A General Public Dictionary of Common Chemical Names to SMILES'
 
 authors:
   - name: Suliman Sharif [first author]
