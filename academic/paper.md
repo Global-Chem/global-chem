@@ -89,73 +89,61 @@ are being developed for processing, manipulating, and deriving new compound stru
 
 An open source knowledge graph can be particularly useful for the selection of chemicals that are of "general" purpose to all communities. General Force Fields are designed to be chemically diverse capturing a wide span of chemical environments in the form of a dictionary of atom types and their physical properties with respect to themselves and each other. In molecular mechanics, a Force Field refers to a functional form and the associated parameters to describe the potential energies of molecules according to their coordinates. Major Force Fields such as General Amber Force Field (GAFF, 4), Optimized Potentials for Liquid Simulations (OPLS, 5), and CHARMM General Force Field (CGenFF, 6) were originally contrived from chemical lists that were "drug-like", since it was designed for the medicinal chemistry community. The selection of molecules serving as representatives of their respective fields, could facilitate the expansion and generalizability of Force Fields, such as CGenFF, beyond drug and drug-like molecules. 
 
-To select chemical compounds we apply the idea of communication. International Union of Pure and Applied Chemistry (IUPAC) is a written language that predates even drawing atoms as a method of communication between chemists (7). Over time, the IUPAC names naturally turned into a slang ("preferred") language due to humans wanting to speak it while communicating with each other. Effectively, the **natural** chemical language that is extant today is a blend of both formal and informal nomenclature. To visualize chemical information, chemists presented drawings of chemical structures (skeletal diagrams). However, in recent modern times, drawings are not easy to query on a mass scale. Alternatively, Simplified Molecular Input Line Entry Specification (SMILES, 8) was initiated for the organic chemist as a different way to encode compounds on the computer. SMILES strings were designed with a set of grammar rules and became a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D chemical connectivity information. Selecting chemical compounds for a given purpose requires expertise. Expertise is gained by experience and studying a dedicated discipline. Dedicated disciplines most often have a set of common functional groups that are relevant to that community. This allows us to focus on valuable compounds. We do not need all the compounds, since a lot of them are not useful or not possible. In our paper, we describe how `Global-Chem`, an open source knowledge graph, was developed to facilitate the ability of scientists in both academia and industry to make their compounds of interest readily available to the scientific community in the form of objects that may be directly accessed from python. 
+To select chemical compounds we apply the idea of communication. International Union of Pure and Applied Chemistry (IUPAC) is a written language that predates even drawing atoms as a method of communication between chemists (7). Over time, the IUPAC names naturally turned into a slang ("preferred") language due to humans wanting to speak it while communicating with each other. Effectively, the **natural** chemical language that is extant today is a blend of both formal and informal nomenclature with no defined rules. To visualize chemical information, chemists presented drawings of chemical structures (skeletal diagrams). However, in recent modern times, drawings are not easy to query on a mass scale. Alternatively, Simplified Molecular Input Line Entry Specification (SMILES, 8) was initiated for the organic chemist as a different way to encode compounds on the computer. SMILES strings were designed with a set of grammar rules and became a popular 1-D language amongst cheminformaticians as a sufficient way to write and retain 2D chemical connectivity information. Selecting chemical compounds for a given purpose requires expertise. Expertise is gained by experience and studying a dedicated discipline. Dedicated disciplines most often have a set of common functional groups that are relevant to that community. This allows us to focus on valuable compounds. We do not need all the compounds, since a lot of them are not useful or not possible. In our paper, we describe how `Global-Chem`, an open source chemical dictionary , was developed to facilitate the ability of scientists in both academia and industry to make their compounds of interest readily available to the scientific community in the form of objects that may be directly accessed from python. 
 
 <p align="center">
 <img width="1000" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/179372511-61758864-6b0a-410e-b15f-578fd8227a14.png">
     <br>
-    <i>Figure 1: Open Source Knowledge Graph Layer 1 File Architecture of Global-Chem</i>
+    <i>Figure 1: File Architecture of Global-Chem</i>
 </p>
-
-Penalty scores are attributed by the CGenFF program to molecules whose entire chemical connectivity is not present in CGenFF. When a molecule is passed to the CGenFF program, it navigates through a set of rules that represent an atom type similarity network, a tree structure, similar to the Global-Chem file structure (9). Once its atom types along with chemical connectivity are known, bonded parameters available in CGenFF are assigned to the molecule. If exact matches of the bonded parameters are not available, a second tree traversal browses for alternate parameters by using a second-rules file that assigns penalties based on the analogy to known parameters. Once the bonded parameter substitutions with the lowest penalty score are determined, the CGenFF Program assigns those parameters along with the associated penalties. In addition, the program identifies the original parameters that are also output into the stream file used in the various molecular modeling programs. Partial atomic charges and associated penalties are assigned through an extended bond-charge increment scheme. It consists in associating atom type along with chemical connectivity (including bond, angle and dihedral) with charge increment values subtracted from the atom's formal charge. Thus, while the CGenFF program can successfully ingest a large number of molecules, the majority of those molecules are assigned penalties that indicate the level of analogy of the assigned bonded parameters and charges (10).
- 
-<p align="center">
-<img width="549" alt="Screen Shot 2022-07-21 at 9 01 59 AM" src="https://user-images.githubusercontent.com/11812946/180219967-3828c3cd-931b-4c73-a988-f8876062d09d.png">
-    <br>
-    <i>Equation 1: CHARMM Potential Energy Function with bonded terms (bonds, angles, dihedrals) including improper dihedrals (out of plane) and Urey-Bradley (1-3 interactions) and non-bonded interactions of the 6-12 Lennard-Jones (dispersion and repulsion respectively) and electrostatics (columbic charge)</i>
-</p>
-
-To capture enough chemical lists we communicated, debated and elected resources of relevance and wrote a dictionary of IUPAC/Preferred to SMILES as it was stored, in its original nomenclature, **manually** to effectively learn the language, organize the chemicals appropriately by their purpose, and develop rules to ensure data integrity and consistency. We developed an in-house automated workflow to process IUPAC/Preferred to SMILES to CGenFF (11) to enable us to safely exchange chemical information between collaborators by something we can naturally speak to select the most relevant compounds using the penalty score as a feedback. This allows us to perform our automated workflow force field parametrization using FFParam (12).
-
-
 
 # Data & Features
 
 At the time of writing the list of objects includes those shown in Table 1. The list ranges from well defined natural classes of chemicals, such as amino acids, vitamins or salts to more diverse lists such as rings in drugs, emerging perfluoroalkyls etc. In addition, the languages used for each list are given, along with the number of entries in the list and the reference. The number of times that compounds in each list fail in our automated SMILES to CGenFF workflow.
 
-| Chemical List                        | Languages                    | # of Entries | References               |  CGenFF Errors            |
-|--------------------------------------|------------------------------|--------------|--------------------------| --------------------------|
-| Amino Acids                          | IUPAC/SMILES/SMARTS          | 20           | Common Knowledge         | 0                         |
-| Essential Vitamins                   | Preferred Name/SMILES/SMARTS | 13           | Common Knowledge         | 0                         |
-| Common Organic Solvents              | IUPAC/SMILES/SMARTS          | 42           | (13)                     | 3                         |
-| OPEN SMILES                          | IUPAC/SMILES/SMARTS          | 94           | (14)                     | 10                        |
-| IUPAC Blue Book (CRC Handbook) 2003  | Preferred Name/SMILES/SMARTS | 333          | (15)                     | 1 (Excluding Radicals)    |
-| Rings in Drugs                       | IUPAC/SMILES/SMARTS          | 92           | (16)                     | 0                         |
-| Phase 2 Heterocyclic Rings           | IUPAC/SMILES/SMARTS          | 19           | (17)                     | 0                         |
-| Privileged Scaffolds                 | IUPAC/SMILES/SMARTS          | 47           | (18)                     | 0                         |
-| Common Warheads Covalent Inhibitors  | IUPAC/SMILES/SMARTS          | 29           | (19)                     | 4                         |
-| Common Polymer Repeating Units       | IUPAC/SMILES/SMARTS          | 78           | (20)                     | 7                         |
-| Common R Group Replacements          | IUPAC/SMILES/SMARTS          | 499          | (21)                     | 15                        |
-| Electrophilic Warheads for Kinases   | Preferred Name/SMILES/SMARTS | 24           | (22)                     | 0                         |
-| Privileged Scaffolds for Kinases     | IUPAC/SMILES/SMARTS          | 29           | (23)                     | 0                         |
-| BRAF Inhibitors                      | IUPAC/SMILES/SMARTS          | 54           | (24)                     | 5                         |
-| Common Amino Acid Protecting Groups  | IUPAC/ACRONYM/SMILES/SMARTS  | 346          | (25)                     | 41                        |
-| Emerging Perfluoroalkyls             | IUPAC/SMILES/SMARTS          | 27           | (26)                     | 1                         |
-| Chemicals For Clay Adsorption        | IUPAC/SMILES/SMARTS          | 33           | (27)                     | 0                         |
-| Schedule 1 United States Narcotics   | Preferred Name/SMILES/SMARTS | 240          | (28)                     | 1                         |
-| Schedule 2 United States Narcotics   | Preferred Name/SMILES/SMARTS | 60           | (28)                     | 1                         |
-| Schedule 3 United States Narcotics   | Preferred Name/SMILES/SMARTS | 22           | (28)                     | 1                         |
-| Schedule 4 United States Narcotics   | Preferred Name/SMILES/SMARTS | 77           | (28)                     | 0                         |
-| Schedule 5 United States Narcotics   | Preferred Name/SMILES/SMARTS | 8            | (28)                     | 0                         |
-| PihKal                               | Preferred Name/SMILES/SMARTS | 179          | (29)                     | 0                         |
-| Excipients Cimetidine & Acyclovir    | Preferred Name/SMILES/SMARTS | 14           | (30)                     | N/A                       |
-| HowToLiveLonger	                     | Preferred Name/SMILES/SMARTS | 4            | (31)                     | N/A                       |
-| Monoclonal Antibodies                | Preferred Name/SMILES/SMARTS | 19           | (32)                     | N/A                       |
-| Common Lubricants for Sex Wellness   | Preferred Name/SMILES/SMARTS | 38           | (33)                     | N/A                       |
-| FDA Tainted Sexual Enhancements      | Preferred Name/SMILES/SMARTS | 4            | (34)                     | N/A                       |
-| Common Food Salts                    | Preferred Name/SMILES/SMARTS | 14           | (35)                     | N/A                       |
-| FDA Color Additive List 1            | FDA Name/SMILES/SMARTS       | 12           | (36)                     | N/A                       |
-| FDA Color Additive List 2            | FDA Name/SMILES/SMARTS       | 15           | (36)                     | N/A                       |
-| FDA Color Additive List 3            | FDA Name/SMILES/SMARTS       | 16           | (36)                     | N/A                       |
-| FDA Color Additive List 4            | FDA Name/SMILES/SMARTS       | 39           | (36)                     | N/A                       |
-| FDA Color Additive List 5            | FDA Name/SMILES/SMARTS       | 27           | (36)                     | N/A                       |
-| FDA Color Additive List 6            | FDA Name/SMILES/SMARTS       | 29           | (36)                     | N/A                       |
-| FDA Color Additive List 7            | FDA Name/SMILES/SMARTS       | 37           | (36)                     | N/A                       |
-| Constituents of Cannabis Sativa      | Name/SMILES/SMARTS           | 394          | (37)                     | N/A                       |
-| Phytocannabinoids                    | Name/SMILES/SMARTS           | 111          | (38)                     | N/A                       |
-| Organophosphorous Nerve Toxic Agents | Name/SMILES/SMARTS           | 14           | (39)                     | N/A                       |
-| Cengage Bronsted Acids               | Name/SMILES/SMARTS           | 42           | (40)                     | N/A                       |
-| Common Regex Patterns                | Mol2                         | 1            |                          | N/A                       |
+| Chemical List                        | Languages                    | # of Entries | References               |  
+|--------------------------------------|------------------------------|--------------|--------------------------| 
+| Amino Acids                          | IUPAC/SMILES/SMARTS          | 20           | Common Knowledge         | 
+| Essential Vitamins                   | Preferred Name/SMILES/SMARTS | 13           | Common Knowledge         | 
+| Common Organic Solvents              | IUPAC/SMILES/SMARTS          | 42           | (13)                     | 
+| OPEN SMILES                          | IUPAC/SMILES/SMARTS          | 94           | (14)                     | 
+| IUPAC Blue Book (CRC Handbook) 2003  | Preferred Name/SMILES/SMARTS | 333          | (15)                     | 
+| Rings in Drugs                       | IUPAC/SMILES/SMARTS          | 92           | (16)                     | 
+| Phase 2 Heterocyclic Rings           | IUPAC/SMILES/SMARTS          | 19           | (17)                     | 
+| Privileged Scaffolds                 | IUPAC/SMILES/SMARTS          | 47           | (18)                     | 
+| Common Warheads Covalent Inhibitors  | IUPAC/SMILES/SMARTS          | 29           | (19)                     | 
+| Common Polymer Repeating Units       | IUPAC/SMILES/SMARTS          | 78           | (20)                     | 
+| Common R Group Replacements          | IUPAC/SMILES/SMARTS          | 499          | (21)                     | 
+| Electrophilic Warheads for Kinases   | Preferred Name/SMILES/SMARTS | 24           | (22)                     | 
+| Privileged Scaffolds for Kinases     | IUPAC/SMILES/SMARTS          | 29           | (23)                     | 
+| BRAF Inhibitors                      | IUPAC/SMILES/SMARTS          | 54           | (24)                     | 
+| Common Amino Acid Protecting Groups  | IUPAC/ACRONYM/SMILES/SMARTS  | 346          | (25)                     | 
+| Emerging Perfluoroalkyls             | IUPAC/SMILES/SMARTS          | 27           | (26)                     | 
+| Chemicals For Clay Adsorption        | IUPAC/SMILES/SMARTS          | 33           | (27)                     | 
+| Schedule 1 United States Narcotics   | Preferred Name/SMILES/SMARTS | 240          | (28)                     | 
+| Schedule 2 United States Narcotics   | Preferred Name/SMILES/SMARTS | 60           | (28)                     | 
+| Schedule 3 United States Narcotics   | Preferred Name/SMILES/SMARTS | 22           | (28)                     | 
+| Schedule 4 United States Narcotics   | Preferred Name/SMILES/SMARTS | 77           | (28)                     | 
+| Schedule 5 United States Narcotics   | Preferred Name/SMILES/SMARTS | 8            | (28)                     | 
+| PihKal                               | Preferred Name/SMILES/SMARTS | 179          | (29)                     | 
+| Excipients Cimetidine & Acyclovir    | Preferred Name/SMILES/SMARTS | 14           | (30)                     | 
+| HowToLiveLonger	                     | Preferred Name/SMILES/SMARTS | 4            | (31)                     | 
+| Monoclonal Antibodies                | Preferred Name/SMILES/SMARTS | 19           | (32)                     | 
+| Common Lubricants for Sex Wellness   | Preferred Name/SMILES/SMARTS | 38           | (33)                     |
+| FDA Tainted Sexual Enhancements      | Preferred Name/SMILES/SMARTS | 4            | (34)                     | 
+| Common Food Salts                    | Preferred Name/SMILES/SMARTS | 14           | (35)                     | 
+| FDA Color Additive List 1            | FDA Name/SMILES/SMARTS       | 12           | (36)                     | 
+| FDA Color Additive List 2            | FDA Name/SMILES/SMARTS       | 15           | (36)                     |
+| FDA Color Additive List 3            | FDA Name/SMILES/SMARTS       | 16           | (36)                     | 
+| FDA Color Additive List 4            | FDA Name/SMILES/SMARTS       | 39           | (36)                     | 
+| FDA Color Additive List 5            | FDA Name/SMILES/SMARTS       | 27           | (36)                     | 
+| FDA Color Additive List 6            | FDA Name/SMILES/SMARTS       | 29           | (36)                     | 
+| FDA Color Additive List 7            | FDA Name/SMILES/SMARTS       | 37           | (36)                     | 
+| Constituents of Cannabis Sativa      | Name/SMILES/SMARTS           | 394          | (37)                     |
+| Phytocannabinoids                    | Name/SMILES/SMARTS           | 111          | (38)                     |
+| Organophosphorous Nerve Toxic Agents | Name/SMILES/SMARTS           | 14           | (39)                     |
+| Cengage Bronsted Acids               | Name/SMILES/SMARTS           | 42           | (40)                     |
+| Common Regex Patterns                | Mol2                         | 1            |                          |
 
 <p align="center">
   <i>Table 1: Global-Chem Object List Columns: "Chemical List" is the name of the node that contains the chemical list, "Languages" specifies the name and their respective translations, "Number of Entries" is how many molecules exist within one node, "References" are the resources the molecules were recorded from, and the last column "CGenFF Errors" is how many times CGenFF skipped a molecule. If the value is "N/A" it means it was a node added after testing and allows room for additional chemical space exploration.</i>
@@ -198,9 +186,19 @@ At the time of writing the list of features includes those shown in Table 2. The
   <i>Table 2: Global-Chem-Extensions Feature List Columns: "Feature" name of the feature model, "Description" a summarized account of what the feature does, "Feature Code Length" is how many lines the actual feature occupies without including infrastructure, "Discipline" is what scientific discipline and distribution pathway does the feature exist, and the last column "References" is what scientific resource, if any, does the feature stem from.</i>
 </p>
 
-# Selection
+# Selection of Compounds For Force Field Parameterization
 
-### Chemical Lists
+An application for Global-Chem can be found for Selections of Compounds for Force Field Paramterization.
+
+<p align="center">
+<img width="549" alt="Screen Shot 2022-07-21 at 9 01 59 AM" src="https://user-images.githubusercontent.com/11812946/180219967-3828c3cd-931b-4c73-a988-f8876062d09d.png">
+    <br>
+    <i>Equation 1: CHARMM Potential Energy Function with bonded terms (bonds, angles, dihedrals) including improper dihedrals (out of plane) and Urey-Bradley (1-3 interactions) and non-bonded interactions of the 6-12 Lennard-Jones (dispersion and repulsion respectively) and electrostatics (columbic charge)</i>
+</p>
+
+Penalty scores are attributed by the CHARMM General Force Field (CGenFF) program to molecules whose entire chemical connectivity is not present in CGenFF. When a molecule is passed to the CGenFF program, it navigates through a set of rules that represent an atom type similarity network, a tree structure, similar to the Global-Chem file structure (9). Once its atom types along with chemical connectivity are known, bonded parameters available in CGenFF are assigned to the molecule. If exact matches of the bonded parameters are not available, a second tree traversal browses for alternate parameters by using a second-rules file that assigns penalties based on the analogy to known parameters. Once the bonded parameter substitutions with the lowest penalty score are determined, the CGenFF Program assigns those parameters along with the associated penalties. In addition, the program identifies the original parameters that are also output into the stream file used in the various molecular modeling programs. Partial atomic charges and associated penalties are assigned through an extended bond-charge increment scheme. It consists in associating atom type along with chemical connectivity (including bond, angle and dihedral) with charge increment values subtracted from the atom's formal charge. Thus, while the CGenFF program can successfully ingest a large number of molecules, the majority of those molecules are assigned penalties that indicate the level of analogy of the assigned bonded parameters and charges (10).
+
+To capture enough chemical lists we communicated, debated and elected resources of relevance and wrote a dictionary of IUPAC/Preferred to SMILES as it was stored, in its original nomenclature, **manually** to effectively learn the language, organize the chemicals appropriately by their purpose, and develop rules to ensure data integrity and consistency. We developed an in-house automated workflow to process IUPAC/Preferred to SMILES to CGenFF (11) to enable us to safely exchange chemical information between collaborators by something we can naturally speak to select the most relevant compounds using the penalty score as a feedback. This allows us to perform our automated workflow force field parametrization using FFParam (12).
 
 Compound lists in Global-Chem can be used to identify specific regions of chemical space that have limited coverage. Therefore, the compound lists in Global-Chem represent future regions of chemical space for force field development. In the CGenFF program we can use larger penalties to indicate a lower extent of analogy to known parameters, information that may be used to identify molecules for additional force field optimization. We passed a variety of Global-Chem objects individually into the software and plotted penalty score distributions of their bonded and non-bonded parameters shown in Figure 2. As may be seen, the extent of penalties differs significantly for the various lists. Based on the compounds used in the development of CGenFF, we expected the penalties to be lower on molecules that are declared as drugs (Schedule One US Narcotics) and drug-like species (BRAF Kinases Inhibitors for Cancer, Privileged Scaffolds) whereas we expected the penalty score will be higher for compounds for things that were not its original intention (Emerging PerfluoroAlkyls for Environmental Hazards). 
 
@@ -219,153 +217,6 @@ If we investigate the medicinal chemistry (dark green) with an uncertainity perc
   <br>
   <i>Figure 3: MolCloud of Chemical Selection</i>
 </p>
-
-### Force Field Parametrization of 1,3-Dithiolane
-
-We truncated dithiolane from the amide and passed through CGenFF (full data available in the Supporting Information), which indicated that the dilemma was in part due to the extent of puckering caused by the 2 sulphur atoms within the constrained cyclopentane ring system.
-To begin our parametrization process we chose to focus on `S1-C3-C4-S2`, backbone to the cyclopentane ring and the dihedral from the methyl to one carbon on the backbone `C1-C2-S1-C3`. Since the molecule is symmetric, it makes the complexity of the molecule decrease two-fold. 
-The parametrization of 1,2-dithiolane was performed using FFParam (81) following the FFParam Workflow (82). To begin our process, we first subject the compound to quantum mechanics (QM) geometry optimization, with Gaussian (83), using mp2 theory to treat electron correlation (84) and basis set of “6-31/+G*” to handle the orbital polarizability of the sulphur atom (85). 
-Our intended goal is to use the QM as a reference target data that the molecular mechanics (MM), CHARMM (86), should approximately match. We perform potential energy surface (PES) scans around our selected dihedrals and compare the surface of the QM vs the MM. 
-
-To match the PES scan for the MM to the QM we had to tweak “tunable” parameters as defined in CHARMM potential energy function (i.e force constants, multiplicity) (87) until we reached a reasonable surface scan and numbers that make common sense. To determine the partial charges, we observed 
-the dipole moment induced by the interaction between the atom of interest and water. When the dipole moment of the QM and MM reached within a range 
-(< 0.5 kcal/mol) we considered that reasonable. 
-
-To accomplish our parametrization we applied the following: for `S1-C3-C4-S2`, if we break the connection ring component 
-around the C3-C4 single bond in the atom ring we obtained a natural rotation of a thiomethyl group. Additional multiplicities of 1 and 2 of varying force constants seemed to have a negative effect. We added a relatively high force constant of a value of 2.3800 to because this particular 
-dihedral is part of a ring where there is a significant energy barrier of rotation due to constraint of the cyclopentane backbone. 
-
-For C1-C2-S1-C3, we still maintained the multiplicity of 3 but with a far less reduced force constant of 1.1000. 
-This was due to the methyl that replaced the amide allowing some degrees of rotation but the S1 is still constrained within the ring system. 
-Final PES scans are displayed in Figure 4. 
-
-<p align="center">
-  <img width="600" height="350" src="../images/figures/official_figure_8.png">
-  <br>
-  <i>Figure 4: Final Potential Energy Scans of dihedrals S1-C3-C4-S2 and C1-C2-S1-C3</i>
-</p>
-
-Lastly, the S1-S2 charges needed adjustment. We used the Monte Carlo Simulated Annealing (MCSA) method (88) utilized in
-FFparam to predict the approximate partial charges. The sulphur atoms were adjusted to have a partial negative charge of -0.208.
-
-# Theory 
-
-Global-Chem comes with a variety of applications, and with accessible data comes new avenues of research. Here, we present our gallery of highlight features that we find most interesting. 
-
-### Chemical Graphs
-
-Global-Chem uses a directory and sub-directory system to organize files. It classifies each file or directory as a node, using a dummy node named "Global-Chem" as a root. For example, in Figure 5, section A is a Global-Chem node, "parent", with 6 nodes, "children" connected on some arbitrary line. Each node is self-aware of only its parents and children, which allows for a user to determine their own navigation into the graph network. This was designed to allow flexibility for variable changes. A look into adding a node object algorithm is shown in section B in Figure 5. A prototype feature would be to add nodes in a series of layers and have all parents connected to all children in a sequential fashion, which allows for a node architecture similar to deep learning represented in section C Figure 5. 
-
-<p align="center">
-<img width="922" alt="Screen Shot 2022-07-22 at 8 58 29 AM" src="https://user-images.githubusercontent.com/11812946/180444185-d02636cd-8a21-49ff-afa5-d5d827e8e4b5.png">
-  <br>
-  <i>Figure 5: "Section A" Example of a Global-Chem root node with 6 child nodes, "Section B" Screenshot of the technical documentation of the algorithm of adding a node into the network, "Section C" is the representation of a deep layer network of the graph nodes with a similar adding mechanism in section B. </i>
-</p>
-
-With availability of the data and allowing users to own graph models or build theirs, allows for the possibility of a more robust artificial intelligence for organic chemistry.
-
-### Linguistics
-
-CGenFF and SMILES are based on the same language philosophy, but are independent of each other. Global-Chem serves as a basis generator in combining the languages into one intuitive language. CurlySMILES is a sub-language of SMILES used to embed metadata next to an alpha element character for example "C" which means carbon can be read as "C{CG2R61}", an aromatic benzene sp2 carbon. Applying this feature to a more complex molecule, we can see how the new bridged language unfolds. We propose a new language that contains both CGenFF Atom-Types and SMILES based on scientific inclusion(92):
-
-| Name                         | Weininger SMILES Language | Proposed New Language                                                                           | 
-|------------------------------|---------------------------|-------------------------------------------------------------------------------------------------|
-| Perfluorobutanoic acid       | FC(F)(C(F)(C(O)=O)F)C(F)(F)F	  | F{FGA2}C{CG312}(F{FGA2})(C{CG312}(F{FGA2})(C{CG2O2}(O{OG311})=O{OG2D1})F{FGA2})C{CG302}(F{FGA3})(F{FGA3})F{FGA3}     |
-| Vitamin C                    | C(C(C1C(=C(C(=O)O1)O)O)O)O	    | C{CG321}(C{CG311}(C{CG3C51}1C{CG2R51}(=C{CG2R51}(C{CG2R53}(=O{OG2D1})O{OG3C51}1)O{OG311})O{OG311})O{OG311})O{OG311}  |
-| Aziridine                    | N1CC1                          | N{NG311}1C{CG3C31}C{CG3C31}1                                                                                         |
-| 1,3-Dithiolane               | CC2SCCS2                       | C{CG331}C{CG3C51}2S{SG311}C{CG3C52}C{CG3C52}S{SG311}2                                                                |
-
-<p align="center">
-  <i>Table 3: Global-Chem Molecular Columns: "Name" name of the molecule, "Weininger Notation" is the original SMILES notation,  "Proposed New Language" is the SMILES and CGenFF Atom-Types notation representation in CurlySMILES </i>
-</p>
-
-Using this new language, we can easily infer which atom type might have been incorrectly assigned without looking at partial charges. In conjunction with SMILES, intuition could take the place of penalty points and serve as the ultimate feedback loop for validation. For example, an N1 in a 3-membered ring, for Aziridine, is probably not NG311, but is likely to be a new atom type. NG311 is too general for an atom type when using CGenFF nomenclature. We can make assumptions with confidence about what it might be, perhaps NG3C31, which will allow us to expand rapidly in predicting new chemical space and enabling a queryable language for bridging atom types and eventually bridging the name using Global-Chem.
-
-# Applications 
-
-### Cheminformatics
-
-Global-Chem parsed through seven different tools with the majority being successful minus diamond represented with a 'C&1' (14) and fails with all software including RDKit indicating a possible new addition to the grammar that has been left unaccounted for. The percentage of passing is as follows: RDKit 100% (41), DeepSMILES 99.25% (45), PartialSMILES 85.7% (44) , SELFIES 100% (43), MolVS 98.5% (46), PySMILES 99.8% (42) presented in Table 4. PartialSMILES proved to be the most robust acceptance/rejection tool in identifying incomplete SMILES and highlighting errors within Global-Chem. 
-
-| Software        | Failed Compounds | Example of Failed SMILES                                   |
-|-----------------|------------------|------------------------------------------------------------|
-| RDKit           | 0                |  N/A                                                       |
-| SELFIES         | 0                |  N/A                                                       |
-| Indigo          | 8                | 'CC([Si](C1=CC=CC=C1)C2=CC=CC=C2)(C)C'                     |
-| PySMILES        | 5                | '[a].[Na+].[K+].[Mg+2].[Ca+2].[Cl-]'                       |
-| DeepSMILES      | 8                | 'OC(C1=CC=CC=C1N2)C2=O', 'C1(N2C(CN=C3)=NN=C2)=C3C=CC=C1'  |    
-| MolVS           | 24               | 'C1CNCN1', 'HF', 'O=N1CCCCC1'                              |
-| PartialSMILES   | 337              | '[CH]C', '[N]=[N+]=[N-]'                                   |
-
-<p align="center">
-  <i>Table 4: "Software" Cheminformatic Software with their respective subset of SMILES interpreters. "Failed Compounds" is the number of failed common compounds in Global-Chem. "Example of Failed SMILES" are some examples of the failed SMILES that highlight the performance of each software on different sets of SMILES strings and what type of molecules they can process.</i>
-</p>
-
-Indigo's encoder was pretty robust and their software allows for a lot of interoperabiltiy with different software tools (i.e pdf data parsing of SMILES). When faced with the tert-butyldiphenylsilyl protecting group and the SMILES string with the 'Si' is not wrapped in square brackets that specify an element that doesn't have a complete valence shell. For PySMILES, the inclusion of the '[a]' denoting aromaticity for an "aromatic salt" in the database couldn't be processed. Some other encoders have encoded for an aromaticity keyword as specified in the Daylight Technical Documentation (14). DeepSMILES was interesting because it failed on specific functional groups as shown in the example with oxindole and triazolodiazepines that had complex small branch complexities and moieties that it didn't foresee existing. MolVS had some interesting results where imidazole (and derivatives) failed probably because it expected for a hydrogen perhaps to be explicitly stated due to its varying protonation states. Hydrofluoric acid was something we were expecting but again hydrogen needed to be enforced with a [H] which is not as intuitive. PartialSMILES proved to be the most robust eluding to SMILES that were partially complete and rejected by their criteria. Failures included an ethyl radical and an azido complex stemming from the interstellar space molecules.
-
-Chemical Education is important for future generations and especially for organic chemists in learning the modern nomenclature of the discipline. Flash cards are the most common way students learn organic chemistry functional groups (89). Global-Chem uses this mechanism to create a flashcard list of all functional groups relevant to different communities. Thus, students can learn chemical structures, their names, and the SMILES relevant to their respective fields. This installs foundational knowledge of chemical language which will be useful in their careers. An example is shown in Figure 6 and is available at www.chemicalgraphtheory.com. 
-
-<p align="center">
-  <img width="1420" alt="Screen Shot 2022-07-21 at 6 45 30 AM" src="https://user-images.githubusercontent.com/11812946/180195972-538b61ca-181c-4c98-a3d5-0b76c0d9e6f0.png">
-  <br>
-  <i>Figure 6: Global-Chem Flash Card Application</i>
-</p>
-
-### Machine Learning
-
-Morgan Fingerprints (90) are one of the most common fingerprint mechanisms used today to capture a local chemical environment. The radius of a local environment is captured through integers denoting how many times to iterate from one connection point to another. By iterating through each atom in a molecule and capturing its local environment we can capture fragments of molecules and piece them back together to represent the molecule as a whole. This is done in the form of binary strings implemented in RDKit.
-
-| Name          | Binary String                                                                                                        | 
-|---------------|----------------------------------------------------------------------------------------------------------------------|
-| Benzene       | 00000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000     |
-| Toluene       | 00000000000000000000000000000001010000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000010000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000001000000000000000000100000000000000000000000000010000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000  |
-| Phenol        | 00000000000000000000000000000000000000000000000000000000000000001110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000001000000000000000000100000000100000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000001000000000000000000100000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000                                                                                        |
-| Aniline       | 00000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000001000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000001000000000000000000100000000000000000001000000000000100000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000001000000000000000                                                                             |
-
-<p align="center">
-  <i>Table 5: Global-Chem Annotated Bit Reference Index: "Name" is the name of the molecule, "Binary String" is the bit representation of the molecule with 512 bit length and a morgan radius of 2. </i>
-</p>
-
-When evaluating binary strings we can observe patterns for how a molecule is fragmented. In Table 5, benzene can serve as a marker for any six-membered aromatic compound as a reference. When we expand into the second row looking at toluene we can begin to identify which numbers correlate to benzene and which relate to the methyl group and the respective bit topology. Comparing toluene to benzene at positions 32, 33, 34 with "101" we can start to infer this means a possible bond type from the sp2 carbon to sp3 for the methyl or another connection point. If we exchange the methyl for a hydroxyl we can observe that the positions from 32, 33, 34 of the toluene are reduced back to 0s. Yet expansion of the binary string at position 64, 65, 66 with a sequential "111" might suggest the sp2 carbon with an oxygen bond which is completely reduced to 0s in aniline. By having a reference annotated index we can read binary strings directly and decode the string which served as a motivation for the development of the decoder engine. Machine Learning often requires converting the SMILES to an encoder with some hyperparameters that account for how the bit representation of the molecule is encoded because machines learn on numeric characters, not alpha. Decoding fingerprints is handled through visualization which disallows a safe passage of chemical communication because it is not recorded effectively. To solve the problem, Global-Chem is a list of common small molecules which can be extended to a reference index of common fingerprints which allows for drawings of bit representations to have an associated name. The decoder engine schematic can be found in Figure 7.
-
-<p align="center">
-<img width="1011" alt="Screen Shot 2022-07-21 at 6 34 38 AM" src="https://user-images.githubusercontent.com/11812946/180194794-f9347179-d0b4-4e27-a6fa-3bd6593a1a6f.png">
-  <br>
-  <i>Figure 7: Decoder Engine's placement into the Machine Learning Workflow</i>
-</p>
-
-
-IUPAC and Natural name submatching would be of best interest in determining functional group similaritiy between two different names of compounds of unequal length. Global-Chem implements the Levenshtein Distance (91) without grammar modifications to generate the best naming fit as possible if an exact definition is not known. With the inclusion of grammar, molecular similarity on IUPACs with long names (large molecules) might be possible to deduce common functionality and connection points and a new avenue area for chemical linguistic research.  
-
-### Machine Learning
-
-Any general chemical artificial intelligence needs to distinguish holistic characteristics that make sense. Principal Component Analysis (PCA) is a well-defined technique for identifying feature characteristics of a set of data based on their variance to a reference axis line. PCA can be applied to a list of SMILES by converting to morgan fingerprint bit vectors to determine significant features of a dataset (97). We applied a k-means clustering because we want the machine to determine the two most important features of the common universe and what the machine can easily distinguish to start classifying molecules, a semi-supervised learning approach where we control the data and the machine (98). 
-
-<p align="center">
-<img width="1011" alt="Screen Shot 2022-07-21 at 6 34 38 AM" src="https://user-images.githubusercontent.com/11812946/182135734-1cb5733c-358d-49c3-a22f-ae363a9edbfa.png">
-  <br>
-  <i>Figure 8: PCA of all the molecules in Global-Chem with a Morgan Radius of 1, 512 bit representation, and a k-means clustering of two to distinguish aromatic (red) and non-aromatic (green) </i>
-</p>
-
-In Figure 8, from hovering over the data we can visually inspect how the machine classified the data into two categories: aromatic and non-aromatic. A clear distinct line between the two major features is obvious. This means that using these parameters and this combined particular dataset can create new general artificial intelligence programs that use this as a starting point for learning aromaticity which is a root of life fundamental feature for organic molecules. 
-
-### Compliance
-
-Legal research was performed in the implementation of Global-Chem and serves as precedence for future packages to follow the same legal infrastructure. Global-Chem has been filed under the "Mozilla Public License 2.0" for the purpose that a company using Global-Chem in commercial software must defend the contributors of the code in the event of litigation or damages related to that software (94). This helps validate and form a legal bridge between academia and industry. Global-Chem does not grant trademark or copyright rights. Global-Chem has no other dependencies and is a self-contained code. However, the extensions for functionality do have dependencies of roughly 106 open source licenses and 1106 dependencies of a depth of up to 5. To manage legal at a scale we used free open source software academia, FOSSA, to perform dependency search. 
-
-Global-Chem follows the same principles outlined in part 11 of Title 21 of the Code of Federal Regulations; Electronic Records, Electronic Signatures (21 CFR Part 11) guidance documentation (95). Since there are no formal guidelines for how open source software should be handled, we attempt at completing the requirements (96). The Federal Drug and Administration (FDA) considers part 11 to apply to the following criteria of electronic records and using our software architecture, we show how Global-Chem accomplishes each component:
-
-Plausibilitiy: Global-Chem was built on data that was abstracted from books and papers by reading and redrawing. It adds a component of IUPAC/SMILES/SMARTS strings to store it electronically which give its data its unique component. The records are open sourced and appropriately version controlled by maintainers of the repository and open source community feedback. Global-Chem's purposes are still unknown as it enters open source deployment. We have built extended functions that live in a separate package Global-Chem-Extensions that do depend on Global-Chem. Since each version is packaged appropriately, if reliance on a version is a need then its software is available on GitHub and PyPi. A Standard Operating Procedure (SOP) can be filed and submitted from the extensions utility documentation maintained on Gitbook.
-
-Validation: Global-Chem follows Good Automated Manufacturing Practice (GAMP) Category 3 which is "software that is used as installed" and potentially "configurable". Global-Chem testing comes from within, the documentation serves as the ultimate test for functionality because that is what the users will test the most since we rely on open source. A continuous integration (CI) system is also built concomitantly to serve as basic functionality testing of the Global-Chem knowledge graph. The Data stored is maintained by experts in the field but is subject to change based on community feedback if an error is found.
-
-Audit Trail: Global-Chem is version controlled with Git and hosted on Microsoft's platform GitHub. Global-Chem follows a semantic versioning control of the schema X1.X2.X3. X1 marks formal stable releases with tests and documentation and means big refactoring to the software or functionality. X2 means a new feature is added with or without tests and documentation but iterates as so. X3 means a "hot" fix (something that is an easy bug), a small feature or an additional parameter is added to a function, or an iteration to the data.
-
-Legacy Systems: Global-Chem has been operational for nearly three years since its first release with version 0.3.0 in May 2020. Global-Chem was built with a full trail in the open source community with each version cataloged and visibility to all. This satisfies the rules outlined for determining a legacy system. We use community feedback provided from social media platforms (Twitter, GitHub, LinkedIn) as documented evidence and justification that Global-Chem is fit for its intended use of cheminformatics.
-
-Copies of Records: Global-Chem has records stored on GitHub for the software that can be exported to a variety of formats as provided by Microsoft. For documentation, it is hosted on GitBook and version controlled in accordance with the software. Each "book" can be exported into Portable Data Format (PDF) appropriate for FDA submission.
-
-Record Retention: Global-Chem has a record of the documentation version controlled to a unique ID (UUID) that serves as its identifier for each iteration stored on GitBook (99). Each version is stored as a markdown file and can be converted to PDF if needed.
 
 # Conclusion
 
