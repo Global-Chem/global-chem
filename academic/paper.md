@@ -188,14 +188,14 @@ At the time of writing the list of features includes those shown in Table 2. The
 
 Global-Chem SMILES strings are only valid as they are interoperable with other open source cheminformatic software. In Table 3, we evaluate the validity of SMILES strings in different sets of standards of the cheminformatic field.
 
-| Software                        | # of Errors |  Examples             |
-|---------------------------------| ----------- | --------------------- |
-| RDKit                           |             |                       |
-| PySMILES                        |             |                       |
-| SELFIES                         |             |                       |
-| PartialSMILES                   |             |                       |
-| DeepSMILES                      |             |                       |
-| MolVS                           |             |                       |
+| Software                        | Percentage Accepted SMILES (%) |  Example Failed SMILES                              |
+|---------------------------------| ------------------------------ | --------------------------------------------------- |
+| RDKit                           |  100                           | --                                                  |
+| PySMILES                        |  99.82                         | [C-]#[O+].[HH]                                      |
+| SELFIES                         |  100                           |                                                     |
+| PartialSMILES                   |  89.65                         | [CH]C1=NC=CC(Cl)=C1C2=CC=CN=C2                      |
+| DeepSMILES                      |                                |                                                     |
+| MolVS                           |  99.25                         | CSi(C(C)(C)C)C                                      |
 
 # Conclusion
 
