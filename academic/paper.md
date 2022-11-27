@@ -203,7 +203,7 @@ Accordingly, `Global-Chem` has several potential purposes but our main prerogati
 
 # Acknowledgements
 
-Thank you to Tyree Wilson, Garrick Centola and Paul Shapiro for their helpful discussions on the usability, functionality, and guidance of the manuscript of Global-Chem. Thank you to Ryland Forsythe for our discussions on polymers and for extending SMILES to materials in Global-Chem. Thank you to Payal Chatterjee for discussions of the 1,3-dithiolane parametrization. Thank you to Steven Fletcher for our discussion on aziridine during an organic synthesis lecture. Thank you to Holden Smith for helping in the usability of sunbursting chemical information. Thank you to Melissa Landolf, Raina Landolf, and Ella Landolf for discussions about the theory and application to useful products. Appreciation to past mentors James Ryan, Robert Zeigler, and Blake Printy for discussions on good manufacturing practices of python packaging and distribution. Appreciation to the University of Maryland Baltimore, School of Pharmacy, Department of Pharmaceutical Chemistry for promoting a collaborative and useful space for academics from all different scientific disciplines. Financial support from the NIH (GM131710) is acknowledged.
+Thank you to Ryland Forsythe for our discussions on polymers and for extending SMILES to materials in Global-Chem. Appreciation to the University of Maryland Baltimore, School of Pharmacy, Department of Pharmaceutical Chemistry for promoting a collaborative and useful space for academics from all different scientific disciplines. Financial support from the NIH (GM131710) is acknowledged.
 
 # References
 
