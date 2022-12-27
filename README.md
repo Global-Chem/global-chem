@@ -1,4 +1,4 @@
-<h1 align="center">Global-Chem: A General Public Dictionary of Common Chemical Names to SMILES</h1>
+<h1 align="center">Global-Chem Volume I: A Dictionary of Common Chemical Names to their Molecular Definition</h1>
 
 Global Chem is general public dictionary of common and rare chemical lists using the Common Chemical Name as input and SMILES/SMARTS as output. As  dictionary mostly needed by us as we search through chemical infinity and develop new chemicals for general purpose. 
 
