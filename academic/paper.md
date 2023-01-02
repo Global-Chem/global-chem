@@ -147,42 +147,23 @@ At the time of writing the list of objects includes those shown in Table 1. The 
   <i>Table 1: Global-Chem Object List Columns: "Chemical List" is the name of the node that contains the chemical list, "Languages" specifies the name and their respective translations, "Number of Entries" is how many molecules exist within one node, "References" are the resources the molecules were recorded from, and the last column "CGenFF Errors" is how many times CGenFF skipped a molecule. If the value is "N/A" it means it was a node added after testing and allows room for additional chemical space exploration.</i>
 </p>
 
-At the time of writing the list of features includes those shown in Table 2. The list range from well defined algorithms implemented into Global-Chem and their respective description and discipline.
+### Linguistics
 
-| Software Feature              | Description                                                                    |  Code Length | Discipline | Reference |
-|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|---------- |-----------|--------------|
-| Validating SMILES             | An adapter to other SMILES platforms (RDKit, PySMILES, SELFIES, PartialSMILES, DeepSMILES, MolVS) to validate by interoperability           | 107        | Cheminformatics          |  (41), (42), (43), (44), (45), (46) | 
-| Decoding Fingerprints and Classifying SMILES            | Decoding fingerprints to complex SMILES and to an IUPAC using an annotated dictionary of bit vectors | 129        | Cheminformatics          | (47) |
-| SMILES Bidirectional PDF Parsing      | Converting lists of SMILES to 2D drawings in PDF parsing and parsing PDF back to SMILES | 685        | Cheminformatics          | (48) |
-| Drug Design Filtering      | Filtering lists of SMILES by a variety of common drug filters (Lipinski Rule of 5, Ghose, Veber, Rule of 3, REOS, Drug-Like, Filters | 137        | Cheminformatics           | (49), (50), (51), (52), (53), (54) |
-| Deep Layer Scattering     | Scattering Nodes of Collective SMILES and their relations to each other in Parallel Coordinate Diagram implemented in Plotly | 184        | Cheminformatics          | (55) |
-| SMARTS Identifier     | A web application implemented in Flask to test the validation of SMARTS submatching of strings against the MiniFrag Database | 307        | Cheminformatics          |  (56) |
-| Protonating SMILES    | A distributable version of the Dimorphite-DL package to protonate SMILES over a range of pH with a control over variant production | 56        | Cheminformatics          | (57) |
-| Sunbursting SMILES    | Applying a sunburst plot to large collection of SMILES to identify functional groups and pairs of functional groups within the set | 253        | Cheminformatics          | (58), (59) |
-| Peptide Sequence to SMILES    | An evolution of Cocktail-Shaker to include Lanthipeptides and covalent sulphur linkages in SMILES strings | 147        | Cheminformatics     | (60) |
-| Visualization SMARTS    | A python application programming interface to port the SMARTS.plus visualizer for SMARTS strings into a jupyter notebook | 47        | Cheminformatics          | (61) |
-| One-Hot Encoding SMILES    | A Global-Chem encoder that encodes SMILES for Machine Learning including the '&' denoted as a polymer ex. Diamond | 112        | Cheminformatics          | (62) | 
-| Principal Component Analysis on SMILES    | A principal component analysis on a list of SMILES with hyperparamter tuning for morgan fingerprinting provided and visualization with Bokeh | 154        | Cheminformatics          | (63), (64) |
-| Networkx Adapter    | A graph to graph network adapter between Global-Chem and NetworkX for ease of interoperability for data engineering | 65        | Cheminformatics          | (65) |
-| Scaffold Graph Adapter   | An adapter to take a large collection of Global-Chem Nodes and analyze their Structure Hierachy with Scaffold Graphs | 97        | Cheminformatics          | (66) |
-| Global-Chem Protein  | An adapter to biopandas to process pdb protein files as well as an implementation of the Bostrom Algorithm to Structurally Filter SMILES | 467        | Bioinformatics          | (67), (68) |
-| Global-Chem RNA  | Conversion of RNA Sequence to SMILES and a visualizer for RNA sequences for Python Jupyter Notebooks | 181        | Bioinformatics          | (69) |
-| Global-Chem DNA  | Conversion of DNA Sequence to SMILES and a visualizer for DNA sequences for Python Jupyter Notebooks | 181        | Bioinformatics          | (69) | 
-| Global-Chem Bacteria  | A python model with attributes for general bacteria classifications as well as a common list | 214        | Bioinformatics          | (70) |
-| Global-Chem Monoclonal Antibodies  | A python model with attributes for general monoclonoal antibodies classifications as well as a common list | 20        | Bioinformatics          | (71) | 
-| Z-Matrix Store  | A python model store where users can pull standard z-matrices for molecules queried by their IUPAC | 159        | Quantum Chemistry          | (72) |
-| Psi4 Parser  | A python model for analyzing psi4 output files and plotting interaction energy data automatically through Plotly | 193        | Quantum Chemistry          | (72) |
-| Moly Adapter  | A software adapter and enhanced functionality for Moly and visualizing HOMO/LUMO orbitals of molecules | 87        | Quantum Chemistry          | (73) |
-| Global-Chem Molecule  | A Global Molecule that can parse SMILES, GAFF, CGenFF Stream files into Pandas dataframes, a visualizer with Atom Types and SMILES in RDKit, new mix of cross-discipling languages (SMILES and CGenFF Atom Types) using CXSMILES, CXSMARTS, and CurlySMILES | 386        | Force Fields         | (74), (75), (76) | 
-| CGenFF Molecule  | A CGenFF Parser that can parse, write edit, and update stream files with Pandas DataFrames | 532        | Force Fields         | (77) |
-| GAFF2 Molecule   | A GAFF2 Parser that can parse, write edit, and update stream files with Pandas DataFrames  | 454        | Force Fields         | (77) |
-| CGenFF Disimiliarity Score   | A CGenFF dissimilarity algorithm based on the atom types and their tuples of bonded parameters (bonds, angles, dihedrals, impropers) to determine a dissimilarity score | 191        | Force Fields         | (78) |
-| Open Source Database Monitor   | An open source database monitor that performs heartbeat checks on common chemical lists running on cloud web servers | 95        | Development Operations         | (79) |
-| Plotly Templates   | A Graphing template to use for Plotly to make your data look "pretty" | 80        | Graphing         |
+CGenFF and SMILES are built on the same language philosophy yet are independent of each other. Global-Chem serves as a basis generator in combining the languages into something is intuitive to read. CurlySMILES is a subset language of SMILES used to embed a meta data next to a alpha element character for example "C" which means carbon can be read as "C{CG2R61}" a aromatic benzene sp2 carbon. When applying this feature to a more complex molecule we can see how the new bridged language unfolds. We suggest a new language based that contains both CGenFF Atom-Types and SMILES based on scientific inclusion not exclusion (92):
+
+| Name                         | Weininger SMILES Language | New Language Suggested                                                                          | 
+|------------------------------|---------------------------|-------------------------------------------------------------------------------------------------|
+| Perfluorobutanoic acid       | FC(F)(C(F)(C(O)=O)F)C(F)(F)F	  | F{FGA2}C{CG312}(F{FGA2})(C{CG312}(F{FGA2})(C{CG2O2}(O{OG311})=O{OG2D1})F{FGA2})C{CG302}(F{FGA3})(F{FGA3})F{FGA3}     |
+| Vitamin C                    | C(C(C1C(=C(C(=O)O1)O)O)O)O	    | C{CG321}(C{CG311}(C{CG3C51}1C{CG2R51}(=C{CG2R51}(C{CG2R53}(=O{OG2D1})O{OG3C51}1)O{OG311})O{OG311})O{OG311})O{OG311}  |
+| Aziridine                    | N1CC1                          | N{NG311}1C{CG3C31}C{CG3C31}1                                                                                         |
+| 1,3-Dithiolane               | CC2SCCS2                       | C{CG331}C{CG3C51}2S{SG311}C{CG3C52}C{CG3C52}S{SG311}2                                                                |
 
 <p align="center">
-  <i>Table 2: Global-Chem-Extensions Feature List Columns: "Feature" name of the feature model, "Description" a summarized account of what the feature does, "Feature Code Length" is how many lines the actual feature occupies without including infrastructure, "Discipline" is what scientific discipline and distribution pathway does the feature exist, and the last column "References" is what scientific resource, if any, does the feature stem from.</i>
+  <i>Table 3: Global-Chem Molecular Columns: "Name" name of the molecule, "Weininger Notation" is the original SMILES notation,  "Proposed New Notation" is the SMILES and CGenFF Atom Types language representation in CurlySMILES </i>
 </p>
+
+Using this new language, we can infer  easily from which atom type could be incorrectly misassigned without looking at the partial charges in conjunction with the SMILES allowing intuition to supersede the penalty score and using it as an ultimate feedback loop for validation. For example, a N1 in a 3 membered ring, for Aziridine, is mostly likely not going to be NG311 but probably a new atom type because it is too general of an atom type, using the CGenFF nomenclature we can safely make assumptions of what it can be, perhaps NG3C31, which allows us to expand rapidly in predicting new chemical space and allowing a queryable language to bridge atom types to ultimately bridge to the Name using Global-Chem.
+
 
 # Performance
 
