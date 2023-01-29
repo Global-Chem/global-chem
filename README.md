@@ -1,4 +1,4 @@
-<h1 align="center">Global-Chem Volume I: A Dictionary of Common Chemical Names to their Molecular Definition</h1>
+<h1 align="center">Organizing the Chemical Universe</h1>
 
 Global Chem is a public dictionary of common chemical lists using the Common Chemical Name as input and SMILES/SMARTS as output organized by their respective community in a knowledge graph.
 
