@@ -78,15 +78,15 @@ def add_papers(rows, batch_size=5000):
     query = '''
    UNWIND $rows as row
    MERGE (p:Molecule {id:row.ids}) ON CREATE SET p.smiles = row.smiles
- 
+
    // connect categories
    WITH row, p
    UNWIND row.categories AS category_name
    MATCH (c:Category {category: category_name})
    MERGE (p)-[:IN_CATEGORY]->(c)
- 
-   // connect authors
-   WITH distinct row, p // reduce cardinality
+
+   // connect names
+   WITH distinct row, p
    UNWIND row.names_list AS names
    MATCH (a:Name {name: names})
    MERGE (a)-[:NAMED]->(p)
@@ -100,9 +100,9 @@ if __name__ == '__main__':
     df = pd.read_csv(
         '/Users/sulimansharif/projects/global-chem/global_chem/global_chem_outputs/global_chem.tsv',
         sep='\t',
-        names=['names_list', 'smiles', 'node', 'category', 'path']
+        names=['names_list', 'smiles', 'node', 'category', 'path'],
+        skiprows=1
     )
-
 
     paths = df['path'].to_list()
 
@@ -126,14 +126,14 @@ if __name__ == '__main__':
     df['ids'] = global_chem_counters
 
     conn = Neo4jConnection(
-        uri="bolt://44.210.87.223:7687",
+        uri="neo4j+s://7ee8f3a1.databases.neo4j.io",
         user="neo4j",
-        pwd="convulsion-endings-bulbs"
+        pwd="Z3RzryDDl5x9KJDMx0T9v6B2BH5u0kRCgz1UU24X68E"
     )
 
-    conn.query('CREATE CONSTRAINT molecules IF NOT EXISTS ON (p:Molecule) ASSERT p.id IS UNIQUE')
-    conn.query('CREATE CONSTRAINT names IF NOT EXISTS ON (a:Name) ASSERT a.name IS UNIQUE')
-    conn.query('CREATE CONSTRAINT categories IF NOT EXISTS ON (c:Category) ASSERT c.category IS UNIQUE')
+    conn.query('CREATE CONSTRAINT molecules IF NOT EXISTS FOR (p:Molecule) REQUIRE p.id IS UNIQUE')
+    conn.query('CREATE CONSTRAINT names IF NOT EXISTS FOR (a:Name) REQUIRE a.name IS UNIQUE')
+    conn.query('CREATE CONSTRAINT categories IF NOT EXISTS FOR (c:Category) REQUIRE c.category IS UNIQUE')
 
     categories = pd.DataFrame(df[['categories']])
     categories.rename(columns={'categories':'category'},
