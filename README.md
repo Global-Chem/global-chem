@@ -1,11 +1,10 @@
-<h1 align="center">Global-Chem Volume I: A Dictionary of Common Chemical Names to their Molecular Definition</h1>
+<h1 align="center">Organizing The Chemical Universe</h1>
 
-Global Chem is general public dictionary of common and rare chemical lists using the Common Chemical Name as input and SMILES/SMARTS as output. As  dictionary mostly needed by us as we search through chemical infinity and develop new chemicals for general purpose. 
+Global Chem is a public dictionary of common chemical lists using the Common Chemical Name as input and SMILES/SMARTS as output organized by their respective community in a knowledge graph.
 
-We have found these lists written in history to be useful, they come from a variety of different fields but are aggregated 
-into the most common language of the people to the molecule directly (SMILES) and for pattern matching (SMARTS). This allows for the name to not be ambiguous to what a chemical is is anymore and allows for full transparency. 
+Global-Chem serves as an open source platform where writing the molecules directly allows for the name to not be ambiguous to what a chemical is is anymore and allows for full transparency. 
 
-Global-Chem if organized as intended Graph Database and it's API will follow a similar design pattern. Please feel free to install it and play around with the tools to analyze the data available to everyone and governed by the community. 
+Our hope is this repository serves as a base for the population to govern how the chemicals we use in things like Food, Clothing, Environment, Materials, Drugs, War and a lot more are beneficial for all of us. 
 
 <p align="center">
 <img width="800" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/179372564-c286b115-af14-4ad8-a37f-0a216297b6c1.png">
