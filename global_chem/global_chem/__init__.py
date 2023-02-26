@@ -105,6 +105,7 @@ from global_chem.narcotics.schedule_five import ScheduleFive
 # Interstellar Space
 
 from global_chem.interstellar_space.interstellar_space import InterstellarSpace
+from global_chem.interstellar_space.asteroid_ryugu import AsteroidRyugu
 
 # Biopharmaceutics - Excipients
 

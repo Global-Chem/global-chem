@@ -123,6 +123,7 @@ from global_chem.narcotics.schedule_five import ScheduleFive
 # Interstellar Space
 
 from global_chem.interstellar_space.interstellar_space import InterstellarSpace
+from global_chem.interstellar_space.asteroid_ryugu import AsteroidRyugu
 
 # Biopharmaceutics - Excipients
 
@@ -422,6 +423,7 @@ class GlobalChem(object):
         'schedule_four': ScheduleFour,                                                   # Suliman Sharif
         'schedule_five': ScheduleFive,                                                   # Suliman Sharif
         'interstellar_space': InterstellarSpace,                                         # Suliman Sharif
+        'asteroid_ryugu': AsteroidRyugu,                                                 # Josh Farrell & Suliman Sharif
         'vitamins': Vitamins,                                                            # Suliman Sharif
         'open_smiles': OpenSmiles,                                                       # Suliman Sharif
         'amino_acids': AminoAcids,                                                       # Suliman Sharif
