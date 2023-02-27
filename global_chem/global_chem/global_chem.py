@@ -96,6 +96,7 @@ from global_chem.food.color_additives.fda_list_seven import FDAListSeven
 # Narcotics
 
 from global_chem.narcotics.pihkal import Pihkal
+from global_chem.narcotics.black_market import BlackMarket
 from global_chem.narcotics.schedule_one import ScheduleOne
 from global_chem.narcotics.schedule_two import ScheduleTwo
 from global_chem.narcotics.schedule_three import ScheduleThree
@@ -247,11 +248,11 @@ class PrintNode:
     __version__ = '0.0.1'
 
     '''
-    
-    Hack for now, 
-    
-    Print Node function to get the network printed out. Feature first, refactor later. 
-    
+
+    Hack for now,
+
+    Print Node function to get the network printed out. Feature first, refactor later.
+
     '''
 
     def __init__(self, val, parent=None):
@@ -357,9 +358,9 @@ class GraphNetworkError(Exception):
     __allow_update__ = False
 
     '''
-    
+
     Raise the Network Error if the Node cannot be found.
-    
+
     '''
     def __init__(self, message, errors):
         super().__init__(message)
@@ -371,9 +372,9 @@ class GlobalChem(object):
     __allow_update__ = False
 
     """
-    
+
     GlobalChem will be the master class of all variables, as the content store grows we can use this as the parent class.
-    
+
     """
 
     # NODE CONTRIBUTORS
@@ -408,6 +409,7 @@ class GlobalChem(object):
         'open_smiles': OpenSmiles,                                                # Suliman Sharif
         'amino_acids': AminoAcids,                                                # Suliman Sharif
         'pihkal': Pihkal,                                                         # Suliman Sharif
+        'black_market': BlackMarket,                                              # Tracey & Suliman Sharif
         'nickel_ligands': NickelBidendatePhosphineLigands,                        # Suliman Sharif
         'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                       # Suliman Sharif
         'how_to_live_longer': HowToLiveLonger,                                    # Suliman Sharif
@@ -945,7 +947,7 @@ class GlobalChem(object):
                         print ("Node Object Paths: %s: " % object_path)
 
                     path_objects.append(object_path)
-        
+
         # Add the objects recursively
 
         for chemical_object in path_objects:

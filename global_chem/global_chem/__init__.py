@@ -78,6 +78,8 @@ from global_chem.food.color_additives.fda_list_seven import FDAListSeven
 
 # Narcotics
 
+from global_chem.narcotics.pihkal import Pihkal
+from global_chem.narcotics.black_market import BlackMarket
 from global_chem.narcotics.schedule_one import ScheduleOne
 from global_chem.narcotics.schedule_two import ScheduleTwo
 from global_chem.narcotics.schedule_three import ScheduleThree
