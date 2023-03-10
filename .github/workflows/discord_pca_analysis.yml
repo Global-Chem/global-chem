@@ -26,6 +26,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PCA_BOT_TOKEN }}
         run: |
-          cd bot_services/discord
+          cd bot_services
           python principal_component_analysis.py
 #          python principal_component_analysis.py --smiles_list --morgan_radius --bit_representation --number_of_clusters --number_of_components --random_state --file_name --principal_component_x --principal_component_y --x_axis_label --y_axis_label --plot_width --plot_height --title,
