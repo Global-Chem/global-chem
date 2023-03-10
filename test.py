@@ -96,7 +96,7 @@ if __name__ == '__main__':
     # aa = [key[i] for i in sequence]
     # print (''.join(aa))
     #
-
+    print (len(smiles))
     for i, v in smiles.items():
 
         print ("'%s': '%s'," % (i, Chem.MolToSmarts(Chem.MolFromSmiles(v))))
