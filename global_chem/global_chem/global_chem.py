@@ -111,6 +111,20 @@ from global_chem.food.color_additives.fda_list_five import FDAListFive
 from global_chem.food.color_additives.fda_list_six import FDAListSix
 from global_chem.food.color_additives.fda_list_seven import FDAListSeven
 
+
+
+# Food/Fruits/Mango
+
+
+from global_chem.food.fruits.mango.constituents_of_mango import Mango
+from global_chem.food.fruits.mango.fattyacids import MangoFattyAcids
+from global_chem.food.fruits.mango.flavonoids import MangoFlavonoids
+from global_chem.food.fruits.mango.phenolicacids import MangoPhenolicAcids
+from global_chem.food.fruits.mango.vitamins import MangoVitamins
+from global_chem.food.fruits.mango.mango_amino_acids import MangoAminoAcids
+
+
+
 # Narcotics
 
 from global_chem.narcotics.pihkal import Pihkal
@@ -472,6 +486,12 @@ class GlobalChem(object):
         'lanthipeptides': LanthiPeptides,                                                # Prabin Baral & Suliman Sharif
         'alternative_jet_fuels': AlternativeJetFuels,                                    # Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                                    # Chris Burke & Suliman Sharif
+        'mango_phytocompounds': Mango,                                                   # Damilola Bodun & Sevien Schulhofff
+        'mango_amino_acids': MangoAminoAcids,                                            # Damilola Bodun & Sevien Schulhofff
+        'mango_phenolic_acids': MangoPhenolicAcids,                                      # Damilola Bodun & Sevien Schulhofff
+        'mango_fatty_acids': MangoFattyAcids,                                            # Damilola Bodun & Sevien Schulhofff
+        'mango_vitamins': MangoVitamins,                                                 # Damilola Bodun & Sevien Schulhofff
+        'mango_flavonoids': MangoFlavonoids                                              # Damilola Bodun & Sevien Schulhofff  
     }
 
     __INCOMPLETE_NODES = {
