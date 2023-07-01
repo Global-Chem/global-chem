@@ -1,5 +1,38 @@
+#!/usr/bin/env python3
+#
+# GlobalChem - Common Salts
+#
+# -----------------------------------
 
 class Mango(object):
+
+
+    '''
+
+    Missing Entries:
+
+          'alpha phellandrene': '',
+          'alpha humulene': '',
+          'gamma terpinene': '',
+          'alpha pinene': '',
+          'trans caryophyllene': '',
+          'sabinene': '',
+          'carene': '',
+          'cis-caryophyllene': '',
+          'αlpha humulene': '',
+          'germacrene d': '',
+          'aromadendrene': '',
+          'beta ubebene': '',
+          'alpha cubebene': '',
+          'alpha bourbonene': '',
+          'beta elemene': '',
+          'hepta-2,4(E,E)-dienoic acid': '',
+          'alpha-Linoleic acid': '',
+    '''
+
+    def __init__(self):
+
+      self.name = 'mango'
 
     @staticmethod
     def get_smiles():
@@ -22,32 +55,24 @@ class Mango(object):
           'glutamic acid': 'C(CC(=O)O)[C@@H](C(=O)O)N',
           'aspartic acid': 'C([C@@H](C(=O)O)N)C(=O)O',
           'alanine': 'C[C@@H](C(=O)O)N',
-          'arginine': 'C(C[C@@H](C(=O)O)N)CN=C(N)N',
           'histidine': 'C1=C(NC=N1)C[C@@H](C(=O)O)N',
           'palmitic acid': 'CCCCCCCCCCCCCCCC(=O)O',
           'stearic acid ': 'CCCCCCCCCCCCCCCCCC(=O)O',
-          'arachidic acid': 'CCCCCCCCCCCCCCCCCCCC(=O)O',
           'lignoceric acid': 'CCCCCCCCCCCCCCCCCCCCCCCC(=O)O',
-          'oleic acid': 'CCCCCCCC/C=C\CCCCCCCC(=O)O',
-          'linoleic acid': 'CCCCC/C=C\C/C=C\CCCCCCCC(=O)O',
-          'alpha-Linoleic acid': '',
+          'oleic acid': r'CCCCCCCC/C=C\CCCCCCCC(=O)O',
+          'linoleic acid': r'CCCCC/C=C\C/C=C\CCCCCCCC(=O)O',
           'myristic acid': 'CCCCCCCCCCCCCC(=O)O',
-          'palmitic acid': 'CCCCCCCCCCCCCCCC(=O)O',
           'stearic acid': 'CCCCCCCCCCCCCCCCCC(=O)O ',
           'arachidic acid': 'CCCCCCCCCCCCCCCCCCCC(=O)O',
           'behenic acid': 'CCCCCCCCCCCCCCCCCCCCCC(=O)O',
-          'lignoceric acid': 'CCCCCCCCCCCCCCCCCCCCCCCC(=O)O',
-          'palmitoleic acid': 'CCCCCC/C=C\CCCCCCCC(=O)O',
-          'hexadecenoic acid': 'CCCC/C=C/CCCCCCCCCC(=O)O',
-          'heptadecenoic acid': 'CCCCCC/C=C/CCCCCCCCC(=O)O',
-          'oleic acid': 'CCCCCCCC/C=C\CCCCCCCC(=O)O',
-          'octadecenoic acid': 'CCCCCC/C=C/CCCCCCCCCC(=O)O',
-          'eicosenoic acid': 'CCCCCCCC/C=C\CCCCCCCCCC(=O)O',
-          '9,12-Hexadecadienoic acid': 'CCC/C=C/C/C=C/CCCCCCCC(=O)O',
-          'linoleic acid': 'CCCCC/C=C\C/C=C\CCCCCCCC(=O)O',
-          '9,15-Octadecadienoic acid': 'CC/C=C/CCCC/C=C/CCCCCCCC(=O)O',
-          'hepta-2,4(E,E)-dienoic acid': '',
-          'linolenic acid': 'CC/C=C\C/C=C\C/C=C\CCCCCCCC(=O)O',
+          'palmitoleic acid': r'CCCCCC/C=C\CCCCCCCC(=O)O',
+          'hexadecenoic acid': r'CCCC/C=C/CCCCCCCCCC(=O)O',
+          'heptadecenoic acid': r'CCCCCC/C=C/CCCCCCCCC(=O)O',
+          'octadecenoic acid': r'CCCCCC/C=C/CCCCCCCCCC(=O)O',
+          'eicosenoic acid': r'CCCCCCCC/C=C\CCCCCCCCCC(=O)O',
+          '9,12-Hexadecadienoic acid': r'CCC/C=C/C/C=C/CCCCCCCC(=O)O',
+          '9,15-Octadecadienoic acid': r'CC/C=C/CCCC/C=C/CCCCCCCC(=O)O',
+          'linolenic acid': r'CC/C=C\C/C=C\C/C=C\CCCCCCCC(=O)O',
           'ascorbic acid ': 'C([C@@H]([C@@H]1C(=C(C(=O)O1)O)O)O)O',
           'thiamine': 'CC1=C(SC=[N+]1CC2=CN=C(N=C2N)C)CCO',
           'riboflavin': 'CC1=CC2=C(C=C1C)N(C3=NC(=O)NC(=O)C3=N2)C[C@@H]([C@@H]([C@@H](CO)O)O)O',
@@ -55,7 +80,7 @@ class Mango(object):
           'pantothenic acid': 'CC(C)(CO)[C@H](C(=O)NCCC(=O)O)O',
           'pyridoxine ': 'CC1=NC=C(C(=C1O)CO)CO',
           'folic acid ': 'C1=CC(=CC=C1C(=O)N[C@@H](CCC(=O)O)C(=O)O)NCC2=CN=C3C(=N2)C(=O)NC(=N3)N',
-          'vitamin A': 'CC1=C(C(CCC1)(C)C)/C=C/C(=C/C=C/C(=C/CO)/C)/C',
+          'vitamin A': r'CC1=C(C(CCC1)(C)C)/C=C/C(=C/C=C/C(=C/CO)/C)/C',
           'vitamin E': 'CC1=C(C2=C(CC[C@@](O2)(C)CCC[C@H](C)CCC[C@H](C)CCCC(C)C)C(=C1O)C)C',
           'vitamin K': 'CC1=C(C(=O)C2=CC=CC=C2C1=O)C/C=C(\C)/CCCC(C)CCCC(C)CCCC(C)C',
           'gallic Acid': 'C1=C(C=C(C(=C1O)O)O)C(=O)O',
@@ -63,10 +88,10 @@ class Mango(object):
           'syringic acid ': 'COC1=CC(=CC(=C1O)OC)C(=O)O',
           'protocatechuic acid': 'C1=CC(=C(C=C1C(=O)O)O)O',
           'para hydroxybenzoic acid ': 'C1=CC(=CC=C1C(=O)O)O',
-          'paracoumaric acid': 'C1=CC(=CC=C1/C=C/C(=O)O)O',
-          'chlorogenic acid ':'C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O',
-          'ferulic acid': 'COC1=C(C=CC(=C1)/C=C/C(=O)O)O',
-          'caffeic acid': 'C1=CC(=C(C=C1/C=C/C(=O)O)O)O',
+          'paracoumaric acid': r'C1=CC(=CC=C1/C=C/C(=O)O)O',
+          'chlorogenic acid ': r'C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O',
+          'ferulic acid': r'COC1=C(C=CC(=C1)/C=C/C(=O)O)O',
+          'caffeic acid': r'C1=CC(=C(C=C1/C=C/C(=O)O)O)O',
           'theogallin': 'C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)C2=CC(=C(C(=C2)O)O)O)O)O',
           'quercetin-3-O-galactoside': 'C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O[C@H]4[C@@H]([C@H]([C@H]([C@H](O4)CO)O)O)O)O)O',
           'quercetin-3-O-glucoside': 'C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O[C@H]4[C@@H]([C@H]([C@@H]([C@H](O4)CO)O)O)O)O)O',
@@ -80,27 +105,12 @@ class Mango(object):
           'luteolin': 'C1=CC(=C(C=C1C2=CC(=O)C3=C(C=C(C=C3O2)O)O)O)O',
           'kaempferol': 'C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O',
           'myricetin': 'C1=C(C=C(C(=C1O)O)O)C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O',
-          '9-cis-violaxanthin': 'C/C(=C\C=C\C=C(/C)\C=C\C=C(\C)/C=C/[C@]12[C@](O1)(C[C@H](CC2(C)C)O)C)/C=C/C=C(\C)/C=C/[C@]34[C@](O3)(C[C@H](CC4(C)C)O)C',
+          '9-cis-violaxanthin': r'C/C(=C\C=C\C=C(/C)\C=C\C=C(\C)/C=C/[C@]12[C@](O1)(C[C@H](CC2(C)C)O)C)/C=C/C=C(\C)/C=C/[C@]34[C@](O3)(C[C@H](CC4(C)C)O)C',
           'limonene': 'CC1=CCC(CC1)C(=C)C',
-          'alpha-terpinolene': r"C/C(C)=C1CCC(C)C=C\1",
+          'alpha-terpinolene': r'C/C(C)=C1CCC(C)C=C\1',
           'd-carvone': 'CC1=CC[C@@H](CC1=O)C(=C)C',
-          'alpha phellandrene': '',
-          'alpha humulene': '',
-          'gamma terpinene': '',
-          'alpha pinene': '',
-          'trans caryophyllene': '',
-          'sabinene': '',
-          'carene': '',
-          'cis-caryophyllene': '',
-          'αlpha humulene': '',
-          'germacrene d': '',
-          'aromadendrene': '',
-          'beta ubebene': '',
-          'alpha cubebene': '',
-          'alpha bourbonene': '',
-          'beta elemene': '',
-
         }
+
         return smiles
 
 
