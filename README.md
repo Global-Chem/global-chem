@@ -165,6 +165,11 @@ Please follow the node contribution guidelines if you would like to elect your o
 'surfactants': Surfactants,                                               # Yiling Nan & Suliman Sharif
 'lanthipeptides: LanthiPeptides                                           # Prabin Baral & Suliman Sharif
 'alternative_jet_fuels': AlternativeJetFuels                              # Suliman Sharif
+'mango_amino_acids': MangoAminoAcids,                                     # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+'mango_phenolic_acids': MangoPhenolicAcids,                               # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+'mango_fatty_acids': MangoFattyAcids,                                     # Damilola Bodun & Sevien Schulhofff & Suliman Sharif 
+'mango_vitamins': MangoVitamins,                                          # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+'mango_flavonoids': MangoFlavonoids                                       # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
 ```
 
 | Chemical List                       | # of Entries | References                                                                                                                                                                                                                                                                                                           |
@@ -217,7 +222,12 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Surfactants for Skin                | 36           | Date, Abhijit A., and Vandana B. Patravale. “Microemulsions: Applications in Transdermal and Dermal Delivery.” Critical Reviews&trade; in Therapeutic Drug Carrier Systems, vol. 24, no. 6, 2007.                                                                                                                    |
 | LanthiPeptides                      | 2            | Pokhrel, Rudramani, et al. “Molecular Mechanisms of Pore Formation and Membrane Disruption by the Antimicrobial Lantibiotic Peptide Mutacin 1140.” Physical Chemistry Chemical Physics, vol. 21, no. 23, June 2019, pp. 12530–39.                                                                                    |
 | Alternative Jet Fuels               | 59           | Chemical Composition and Fuel Properties of Alternative Jet Fuels :: BioResources. https://bioresources.cnr.ncsu.edu/.                                                                                                                                                                                               |
-| Common Regex Patterns               | 1            |                                                                                                                                                                                                                                                                                                                      |
+| Mango Amino Acids                   | 19           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
+| Mango Phenoloic Acids               | 10           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
+| Mango Fatty Acids                   | 24           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
+| Mango Vitamins                      | 10           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
+| Mango Flavonoids                    | 11           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
+
 
 GlobalChemExtensions
 ====================
