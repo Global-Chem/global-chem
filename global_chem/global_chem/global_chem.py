@@ -169,6 +169,15 @@ from global_chem.sex.contraceptives.oral_contraceptives import OralContraceptive
 # Sport/ Performance Enhancement / mma_compounds
 from global_chem.sport.performance_enhancement.mma_compounds import MmaCompounds
 
+#Polymers
+from global_chem.materials.polymers.water_based_coatings import WaterBasedCoatings
+from global_chem.materials.polymers.solvent_based_coatings import SolventBasedCoatings
+from global_chem.materials.polymers.thermoplastics import Thermoplastics
+from global_chem.materials.polymers.rubbers import Rubbers
+from global_chem.materials.polymers.natural_fibers import Natural_Fibers
+from global_chem.materials.polymers.fluoropolymers import FluoroPolymers
+from global_chem.materials.polymers.silicones import Silicones
+
 class Node:
 
     '''
@@ -496,6 +505,13 @@ class GlobalChem(object):
         'mango_vitamins': MangoVitamins,                                                 # Damilola Bodun & Sevien Schulhofff  & Suliman Sharif
         'mango_flavonoids': MangoFlavonoids,                                             # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
         'mma_compounds': MmaCompounds,                                                   # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
+        "water_based_coatings": WaterBasedCoatings,                                      # Vedant Menkudale 
+        "solvent_based_coatings": SolventBasedCoatings,                                  # Vedant Menkudale 
+        "thermoplastics" : Thermoplastics,                                               # Vedant Menkudale
+        "rubbers": Rubbers,                                                              # Vedant Menkudale
+        "natural_fibers" : Natural_Fibers,                                               # Vedant Menkudale
+        'flouropolymers': FluoroPolymers,                                                # Vedant Menkudale
+        "silicones" : Silicones                                                          # Vedant Menkudale
     }
 
     __INCOMPLETE_NODES = {
