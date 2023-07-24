@@ -341,4 +341,16 @@ global_chem/medicinal_chemistry/__init__.py                                     
 | 1.6.1.5            | Mac OS Monterey \| 3.8     | PASS                 | PASS                |
 | 1.6.1.5            | Mac OS Monterey \| 3.9     | PASS                 | PASS                |
 
+| GlobalChem Version | Platform \| Python Version | Installation Results | Operational Results |
+|--------------------|----------------------------|----------------------|---------------------|
+| 1.0.0              | Linux x86 \| 3.7           | NONE                 | NONE                |
+| 1.0.0              | Linux x86 \| 3.8           | NONE                 | NONE                |
+| 1.0.0              | Linux x86 \| 3.9           | NONE                 | NONE                |
+| 1.0.0              | Windows 11 \| 3.7          | NONE                 | NONE                |
+| 1.0.0              | Windows 11 \| 3.8          | NONE                 | NONE                |
+| 1.0.0              | Windows 11 \| 3.9          | NONE                 | NONE                |
+| 1.0.0              | Mac OS Monterey \| 3.7     | NONE                 | NONE                |
+| 1.0.0              | Mac OS Monterey \| 3.8     | NONE                 | NONE                |
+| 1.0.0              | Mac OS Monterey \| 3.9     | NONE                 | NONE                |
+
 Currently, version `1.6.1.5` can perform adequately within the guidelines of 21 Part CFR 11 Compliance
