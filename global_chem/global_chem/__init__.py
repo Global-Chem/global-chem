@@ -92,6 +92,7 @@ from global_chem.food.color_additives.fda_list_four import FDAListFour
 from global_chem.food.color_additives.fda_list_five import FDAListFive
 from global_chem.food.color_additives.fda_list_six import FDAListSix
 from global_chem.food.color_additives.fda_list_seven import FDAListSeven
+from global_chem.food.gin.gin import Gin
 
 
 # Narcotics
@@ -126,6 +127,17 @@ from global_chem.skin.transdermal_and_dermal_delivery.surfactants import Surfact
 # Peptides
 
 from global_chem.peptides.lanthipeptides import LanthiPeptides
+
+# Polymers
+
+from global_chem.materials.polymers.water_based_coatings import WaterBasedCoatings
+from global_chem.materials.polymers.solvent_based_coatings import SolventBasedCoatings
+from global_chem.materials.polymers.thermoplastics import Thermoplastics
+from global_chem.materials.polymers.rubbers import Rubbers
+from global_chem.materials.polymers.natural_fibers import Natural_Fibers
+from global_chem.materials.polymers.fluoropolymers import FluoroPolymers
+from global_chem.materials.polymers.silicones import Silicones
+
 
 # Miscellaneous
 

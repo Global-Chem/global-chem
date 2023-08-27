@@ -110,6 +110,7 @@ from global_chem.food.color_additives.fda_list_four import FDAListFour
 from global_chem.food.color_additives.fda_list_five import FDAListFive
 from global_chem.food.color_additives.fda_list_six import FDAListSix
 from global_chem.food.color_additives.fda_list_seven import FDAListSeven
+from global_chem.food.gin.gin import Gin
 
 
 
@@ -511,7 +512,8 @@ class GlobalChem(object):
         "rubbers": Rubbers,                                                              # Vedant Menkudale
         "natural_fibers" : Natural_Fibers,                                               # Vedant Menkudale
         'flouropolymers': FluoroPolymers,                                                # Vedant Menkudale
-        "silicones" : Silicones                                                          # Vedant Menkudale
+        "silicones" : Silicones,                                                         # Vedant Menkudale
+        "gin": Gin                                                                       # Damilola Bodun & Suliman Shariff
     }
 
     __INCOMPLETE_NODES = {
