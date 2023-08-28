@@ -8,6 +8,9 @@
 
 from global_chem.animals.snakes.drugs_from_snake_venom import DrugsFromSnakeVenom
 
+# Alcohol
+from global_chem.alcohol.gin.gin import Gin
+
 # Environment
 
 from global_chem.environment.alternative_jet_fuels import AlternativeJetFuels
@@ -92,7 +95,7 @@ from global_chem.food.color_additives.fda_list_four import FDAListFour
 from global_chem.food.color_additives.fda_list_five import FDAListFive
 from global_chem.food.color_additives.fda_list_six import FDAListSix
 from global_chem.food.color_additives.fda_list_seven import FDAListSeven
-from global_chem.food.gin.gin import Gin
+
 
 
 # Narcotics
@@ -123,6 +126,10 @@ from global_chem.sex.contraceptives.oral_contraceptives import OralContraceptive
 # Skin
 
 from global_chem.skin.transdermal_and_dermal_delivery.surfactants import Surfactants
+
+# Spice
+from global_chem.spices.thai.thai_all import ThaiSpices
+from global_chem.spices.thai.flavonoids import ThaiSpicesFlavonoids
 
 # Peptides
 

@@ -25,6 +25,9 @@ if os.name == 'nt':
 
 from global_chem.animals.snakes.drugs_from_snake_venom import DrugsFromSnakeVenom
 
+# Alcohol
+from global_chem.alcohol.gin.gin import Gin
+
 # Environment
 
 from global_chem.environment.alternative_jet_fuels import AlternativeJetFuels
@@ -110,7 +113,7 @@ from global_chem.food.color_additives.fda_list_four import FDAListFour
 from global_chem.food.color_additives.fda_list_five import FDAListFive
 from global_chem.food.color_additives.fda_list_six import FDAListSix
 from global_chem.food.color_additives.fda_list_seven import FDAListSeven
-from global_chem.food.gin.gin import Gin
+
 
 
 
@@ -155,6 +158,11 @@ from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
 # Skin
 
 from global_chem.skin.transdermal_and_dermal_delivery.surfactants import Surfactants
+
+# Spice
+from global_chem.spices.thai.thai_all import ThaiSpices
+from global_chem.spices.thai.flavonoids import ThaiSpicesFlavonoids
+
 
 # Peptides
 
@@ -513,8 +521,10 @@ class GlobalChem(object):
         "natural_fibers" : Natural_Fibers,                                               # Vedant Menkudale
         'flouropolymers': FluoroPolymers,                                                # Vedant Menkudale
         "silicones" : Silicones,                                                         # Vedant Menkudale
-        "gin": Gin                                                                       # Damilola Bodun & Suliman Shariff
-    }
+        "gin": Gin,                                                                       # Damilola Bodun & Suliman Shariff
+        "thai_spices": ThaiSpices,                                                        #
+        "thai_spices_flavonoids": ThaiSpicesFlavonoids                                  #
+     }
 
     __INCOMPLETE_NODES = {
         # 'named_reactions_in_organic_synthesis': NamedReactionsInOrganicSynthesis # Aziza Frank & Bettina Lier & Suliman Sharif
