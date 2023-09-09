@@ -10,7 +10,8 @@ Our hope is this repository serves as a base for the population to govern how th
 
 - Demo https://colab.research.google.com/drive/1HaDvAYpaX0_2Eqx1NSl5uJTRkE_0na-L?usp=sharing 
 
-- Documentation: https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/
+- Software Documentation: https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/
+- Generative Chemical AI Documentation: https://globalchem.gitbook.io/mother-nature/
 
 - Join Our Community: https://discord.gg/xygRVwNZP8
 
