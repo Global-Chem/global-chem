@@ -12,7 +12,7 @@ Our hope is this repository serves as a base for the population to govern how th
 
 - Documentation: https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/
 
-- Join Our Community: https://discord.gg/global-chem
+- Join Our Community: https://discord.gg/xygRVwNZP8
 
 
 <p align="center">
