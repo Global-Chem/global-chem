@@ -2,13 +2,13 @@
 
 Global Chem is a public dictionary of common chemical lists using the Common Chemical Name as input and SMILES/SMARTS as output organized by their respective community in a knowledge graph.
 
-Global-Chem serves as an open source platform where writing the molecules directly allows for the name to not be ambiguous to what a chemical is is anymore and allows for full transparency. 
+Global-Chem serves as an open source platform where writing the molecules directly allows for the name to not be ambiguous to what a chemical is is anymore and allows for full transparency.
 
-Our hope is this repository serves as a base for the population to govern how the chemicals we use in things like Food, Clothing, Environment, Materials, Drugs, War and a lot more are beneficial for all of us. 
+Our hope is this repository serves as a base for the population to govern how the chemicals we use in things like Food, Clothing, Environment, Materials, Drugs, War and a lot more are beneficial for all of us.
 
 #### Links
 
-- Demo https://colab.research.google.com/drive/1HaDvAYpaX0_2Eqx1NSl5uJTRkE_0na-L?usp=sharing 
+- Demo https://colab.research.google.com/drive/1HaDvAYpaX0_2Eqx1NSl5uJTRkE_0na-L?usp=sharing
 
 - Documentation: https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/
 
@@ -20,14 +20,14 @@ Our hope is this repository serves as a base for the population to govern how th
 </p>
 
 Just with no dependencies, intialize the class and there you go! All the common and rare groups of the world
-at your disposal. 
+at your disposal.
 
 Overview
 ========
 
 ## GlobalChem
 
-#### - Validation 
+#### - Validation
 
 |[![saythanks](https://img.shields.io/badge/RDKit-100%25-fg49b4.svg)](https://www.rdkit.org/)| [![saythanks](https://img.shields.io/badge/PartialSMILES-85.7%25-fg49b4.svg)](https://github.com/baoilleach/partialsmiles) | [![saythanks](https://img.shields.io/badge/DeepSMILES-99.25%25-lm89b5.svg)](https://github.com/baoilleach/deepsmiles) | [![saythanks](https://img.shields.io/badge/SELFIES-100%25-lm89b5.svg)](https://github.com/aspuru-guzik-group/selfies) | [![saythanks](https://img.shields.io/badge/MolVS-98.5%25-lm89b5.svg)](https://github.com/mcs07/MolVS) | [![saythanks](https://img.shields.io/badge/PySMILES-99.8%25-fg49b4.svg)](https://github.com/pckroon/pysmiles) |
 |-|-|-|-|-|-|
@@ -72,7 +72,7 @@ Overview
 | quantum_chemistry      | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1BGLQphP1IMLndeyavHM_6_qXQJI_7gFU?usp=sharing) | Plot Quantum Theory and Basis Set versuses the Hamiltonian of small molecules | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11JGsen912TmyR5Dds-Opon5cRkrtVoT7?usp=sharing) |
 | development_operations | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1v_yXPXPilbWUZGkel_yekBr3EFnIUNUL?usp=sharing) |
 
-Installation 
+Installation
 ============
 
 GlobalChem is going to be distribute via PyPi and as the tree and it's extensions grows we can expand it to other pieces of software
@@ -110,7 +110,7 @@ GlobalChem
 ### Nodes Contributors
 
 
-Please follow the node contribution guidelines if you would like to elect your own or someone elses. 
+Please follow the node contribution guidelines if you would like to elect your own or someone elses.
 
 ```
 'global_chem': Node,                                                      # Suliman Sharif
@@ -158,13 +158,19 @@ Please follow the node contribution guidelines if you would like to elect your o
 'phytocannabinoids': PhytoCannabinoids,                                   # Ian Jones & Bettina Lier & Suliman Sharif
 'organophosphorous_nerve_agents': OrganoPhosphorousNerveAgents,           # Suliman Sharif
 'organic_and_inorganic_bronsted_acids': OrganicAndInorganicBronstedAcids, # Nathaniel McClean & Suliman Sharif
-'chemicals_from_biomass': ChemicalsFromBioMass,                           # Anthony Maiorana & Suliman Sharif 
+'chemicals_from_biomass': ChemicalsFromBioMass,                           # Anthony Maiorana & Suliman Sharif
 'salt': Salt,                                                             # Suliman Sharif
 'drugs_from_snake_venom': DrugsFromSnakeVenom,                            # Suliman Sharif
 'oral_contraceptives': OralContraceptives,                                # Suliman Sharif
 'surfactants': Surfactants,                                               # Yiling Nan & Suliman Sharif
 'lanthipeptides: LanthiPeptides                                           # Prabin Baral & Suliman Sharif
 'alternative_jet_fuels': AlternativeJetFuels                              # Suliman Sharif
+'mango_phytocompounds': MangoPhytoCompounds,                              # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
+'mango_amino_acids': MangoAminoAcids,                                     # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
+'mango_phenolic_acids': MangoPhenolicAcids,                               # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
+'mango_fatty_acids': MangoFattyAcids,                                     # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
+'mango_vitamins': MangoVitamins,                                          # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
+'mango_flavonoids': MangoFlavonoids                                       # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
 ```
 
 | Chemical List                       | # of Entries | References                                                                                                                                                                                                                                                                                                           |
@@ -196,10 +202,10 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Nickel Bidendate Phosphine Ligands  | N/A          | Clevenger, Andrew L., et al. “Trends in the Usage of Bidentate Phosphines as Ligands in Nickel Catalysis.” Chemical Reviews, vol. 120, no. 13, July 2020, pp. 6124–96. DOI.org (Crossref), https://doi.org/10.1021/acs.chemrev.9b00682.                                                                              |
 | HowToLiveLonger                     | 4            | https://github.com/geekan/HowToLiveLonger                                                                                                                                                                                                                                                                            |
 | Monoclonal Antibodies               | 19           | https://labels.fda.gov/                                                                                                                                                                                                                                                                                              |
-| Common Lubricants for Sex           | 38           | https://exsens-usa.com/blogs/your-body-your-pleasure/lube-lessons-glossary-of-common-sex-lube-ingredients                                                                                                                                                                                                            |                                          
-| Tainted Sexual Enhancements         | 4            | FDA Tainted Sexual Enhancements                                                                                                                                                                                                                                                                                      |                                          
+| Common Lubricants for Sex           | 38           | https://exsens-usa.com/blogs/your-body-your-pleasure/lube-lessons-glossary-of-common-sex-lube-ingredients                                                                                                                                                                                                            |
+| Tainted Sexual Enhancements         | 4            | FDA Tainted Sexual Enhancements                                                                                                                                                                                                                                                                                      |
 | Salt                                | 14           | OpenFoodFacts https://github.com/openfoodfacts                                                                                                                                                                                                                                                                       |
-| Exsens Sexual Wellness              | 59           | https://exsens-usa.com/                                                                                                                                                                                                                                                                                              |                                          
+| Exsens Sexual Wellness              | 59           | https://exsens-usa.com/                                                                                                                                                                                                                                                                                              |
 | FDA Color Additive List 1           | 12           | https://www.fda.gov/industry/color-additive-inventories/color-additive-status-list                                                                                                                                                                                                                                   |
 | FDA Color Additive List 2           | 15           | https://www.fda.gov/industry/color-additive-inventories/color-additive-status-list                                                                                                                                                                                                                                   |
 | FDA Color Additive List 3           | 16           | https://www.fda.gov/industry/color-additive-inventories/color-additive-status-list                                                                                                                                                                                                                                   |
@@ -221,8 +227,8 @@ Please follow the node contribution guidelines if you would like to elect your o
 
 GlobalChemExtensions
 ====================
-                
-Installation 
+
+Installation
 ============
 
 GlobalChemExtensions is going to be distribute via PyPi as saperate modules and as the tree and it's extensions grows we can expand it to other pieces of software
@@ -241,9 +247,9 @@ pip install 'global-chem[development_operations]'
 pip install 'global-chem[all]'
 
 ```
-         
-Quickstart 
-==========     
+
+Quickstart
+==========
 
 To conduct PCA Analysis on a list of SMILES in the network:
 
@@ -263,7 +269,7 @@ print (f"SMILES: {smiles_list[0]}")
 gc_cheminfo.node_pca_analysis(smiles_list)
 
 ```
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+
 A Variety of Tools are available for you to browse and analyze data and with the full list of different applications can be found in the google colab demo or the Gitbook documentation. A demonstration of the data visualization extensions designed with plotly and bokeh are displayed below:
 
 <p align="center">
@@ -286,7 +292,7 @@ A Variety of Tools are available for you to browse and analyze data and with the
 | SMARTS Pattern Validation       | GlobalChem uses the MiniFrag Database to test SMARTS strings accuracy for functional group selection                    | cheminformatics       |
 | Principal Component Analysis    | GlobalChem can readily interpret SMILES, fingerprint, cluster and apply PCA analysis user can tweak parameters          | cheminformatics |
 | Drug Design Filters             | GlobalChem can filter compounds based on Common Drug Design Filtering Rules                                            | cheminformatics       |
-| Deep Layer Scatter Analysis     | To visualize relations between sets of molecules, GlobalChem offers a parallel coordinate diagram generation            | cheminformatics | 
+| Deep Layer Scatter Analysis     | To visualize relations between sets of molecules, GlobalChem offers a parallel coordinate diagram generation            | cheminformatics |
 | Sunbursting Radial Analysis     | GlobalChem offers a sunbursting mechanism to allow uses to observe how sets of compounds relate to the common set      | cheminformatics |
 | Graphing Templates              | GlobalChem offers graphing templates to aid in faster data analysis, currently the only offer is Plotly               | cheminformatics |
 | CGenFF Dissimilarity Score      | GlobalChem can offer the difference between two molecules based on their Atom Types                                     | forcefields       |
@@ -303,14 +309,14 @@ Open Source Software Compliance
 
 `GlobalChem` follows the same principles outlined in part 11 of Title 21 of the Code of Federal Regulations; Electronic Records,
 Electronic Signatures (21 CFR Part 11) guidance documentation. Since there are no formal guidelines for how open source software should be handled, we
-attempt at completing requirements. The FDA considers part 11 to be applicable to the following criteria of electronic records and how 
+attempt at completing requirements. The FDA considers part 11 to be applicable to the following criteria of electronic records and how
 `GlobalChem` accomplishes each component:
 
 - **Plausabilitiy:** `GlobalChem` was built on data that was abstracted from books and papers using reading and redrawing. It adds a component of
 IUPAC/SMILES/SMARTS strings to store it electronically which give it's data it's unique component. The records are open sourced
-and appropiately version controlled by maintainers of the repository and open source community feedback. 
+and appropiately version controlled by maintainers of the repository and open source community feedback.
 `GlobalChem`'s purposes are still unknown as it enters open source deployment. We have built extended functions that live in
-a seperate package `GlobalChemExtensions` that do depend on `GlobalChem`. Since each version is packaged appropiately, if 
+a seperate package `GlobalChemExtensions` that do depend on `GlobalChem`. Since each version is packaged appropiately, if
 reliance on a version is a need then it's software is available on `Github` and `PyPi`. A Standard Operating Procedure (SOP)
 can be filed submitted from the extensions utility documentation maintained on `Gitbook`.
 
@@ -318,16 +324,16 @@ can be filed submitted from the extensions utility documentation maintained on `
 and potentially "configurable". `GlobalChem` testing comes from within, the documentation serves as the ultimate test
 for functionality because that is what the users will test the most since we rely on open source. A continous integration (CI)
 system is also built concomitantly to serve as basic functionality testing of the `GlobalChem` graph network. The Data stored
-is maintained by experts in the field but subject to change based on community feedback if an error is found. 
+is maintained by experts in the field but subject to change based on community feedback if an error is found.
 
 - **Audit Trail:** `GlobalChem` is version controlled with `Git` and hosted on Microsoft's platform `Github`. `GlobalChem` follows a semantic
 versioning control of the schema `X1.X2.X3`: `X1` marks formal stable releases with tests and docuementation and mean
-big refactoring to the software or in functionality, `X2` means a new feature is added with or without tests and documentation but 
+big refactoring to the software or in functionality, `X2` means a new feature is added with or without tests and documentation but
 iterates as so. `X3` means a "hot" fix (something that is a an easy bug), small feature or additional parameter to add to a function
-, or iteration to the data. 
+, or iteration to the data.
 
 - **Legacy Systems:** `GlobalChem` has been operational for nearly 2 years since it's first release with version `0.3.0` in May 2020. `GlobalChem`
-was built with a full trail in the open source community with each version catalogued and visibility to all. This satisfies 
+was built with a full trail in the open source community with each version catalogued and visibility to all. This satisfies
 the rules outlines for determining a legacy system. We use community feedback provided from social media platforms (Twitter, Github, LinkedIn)
 as documented evidence and justification that `GlobalChem` is fit for it's intended use of cheminformatics.
 
@@ -336,28 +342,28 @@ Microsoft. For documentation, it is hosted on `Gitbook` and versioning controlle
 can be exported into Portable Data Format (PDF) appropiate for FDA submission.
 
 - **Record Retention:** `GlobalChem` has a record of the documentation versioned controlled to a unique id (UUID) that serves as it's identifier
-for each iteration stored on `Gitbook`. Each version is stored as markdown files and be converted to PDF, if needed. 
+for each iteration stored on `Gitbook`. Each version is stored as markdown files and be converted to PDF, if needed.
 
-`GlobalChem` has a Mozilla Public License version 2.0. `GlobalChem` allows you to use the software in your larger work and 
-extend it with modifications if you wish. The contingency is that if you install `GlobalChem` and release new software 
-then you must follow the same principles installed in our license for the open source community. 
+`GlobalChem` has a Mozilla Public License version 2.0. `GlobalChem` allows you to use the software in your larger work and
+extend it with modifications if you wish. The contingency is that if you install `GlobalChem` and release new software
+then you must follow the same principles installed in our license for the open source community.
 
 Data Collection
 ===============
 
-References and associatied compound lists are selected based on the interests of the scientific contributors.  This should include consideration of relevance to the scientific community. 
+References and associatied compound lists are selected based on the interests of the scientific contributors.  This should include consideration of relevance to the scientific community.
 The SMILES strings may be abstracted in a variety of methods:
 
--  For simple molecules one representation of the SMILES can be directly translated using visual 
-inspection. This is typically appropriate for compounds at the beginning of a reported list that contain the most common denominator rings. 
+-  For simple molecules one representation of the SMILES can be directly translated using visual
+inspection. This is typically appropriate for compounds at the beginning of a reported list that contain the most common denominator rings.
 
-- For complex molecules the image can be redrawn in the free version of ChemDraw and then translated into SMILES. 
+- For complex molecules the image can be redrawn in the free version of ChemDraw and then translated into SMILES.
 
-- For sources where the SMILES are written and the IUPAC is not known the SMILES are translated into ChemDraw and the name retrieved. 
-Note that some of the names may be modified based on human inspection in favor of preferred names. 
+- For sources where the SMILES are written and the IUPAC is not known the SMILES are translated into ChemDraw and the name retrieved.
+Note that some of the names may be modified based on human inspection in favor of preferred names.
 
 - For polymer papers, the site points were omitted from the name and some of the nomenclature adjusted for preferred names
-over traditional. For example: 'yl' to mark site points for polymer connections was removed in favor of reduced english complexity. 
+over traditional. For example: 'yl' to mark site points for polymer connections was removed in favor of reduced english complexity.
 
 - In the case of radicals, some SMILES were adjusted to remove the radical chemical feature as they serve as connection points. However in some cases the radical component was maintained, especially in the case of IUPAC blue book common substituents.
 
@@ -367,5 +373,5 @@ over traditional. For example: 'yl' to mark site points for polymer connections 
 
 Licensing
 =========
- 
+
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem?ref=badge_large)
