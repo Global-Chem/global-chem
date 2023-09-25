@@ -10,9 +10,10 @@ Our hope is this repository serves as a base for the population to govern how th
 
 - Demo https://colab.research.google.com/drive/1HaDvAYpaX0_2Eqx1NSl5uJTRkE_0na-L?usp=sharing
 
-- Documentation: https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/
+- Software Documentation: https://globalchem.gitbook.io/globalchem-your-chemical-graph-network/
+- Generative Chemical AI Documentation: https://globalchem.gitbook.io/mother-nature/
 
-- Join Our Community: https://discord.gg/global-chem
+- Join Our Community: https://discord.gg/xygRVwNZP8
 
 
 <p align="center">
@@ -223,7 +224,12 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Surfactants for Skin                | 36           | Date, Abhijit A., and Vandana B. Patravale. “Microemulsions: Applications in Transdermal and Dermal Delivery.” Critical Reviews&trade; in Therapeutic Drug Carrier Systems, vol. 24, no. 6, 2007.                                                                                                                    |
 | LanthiPeptides                      | 2            | Pokhrel, Rudramani, et al. “Molecular Mechanisms of Pore Formation and Membrane Disruption by the Antimicrobial Lantibiotic Peptide Mutacin 1140.” Physical Chemistry Chemical Physics, vol. 21, no. 23, June 2019, pp. 12530–39.                                                                                    |
 | Alternative Jet Fuels               | 59           | Chemical Composition and Fuel Properties of Alternative Jet Fuels :: BioResources. https://bioresources.cnr.ncsu.edu/.                                                                                                                                                                                               |
-| Common Regex Patterns               | 1            |                                                                                                                                                                                                                                                                                                                      |
+| Mango Amino Acids                   | 19           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
+| Mango Phenoloic Acids               | 10           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
+| Mango Fatty Acids                   | 24           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
+| Mango Vitamins                      | 10           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
+| Mango Flavonoids                    | 11           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
+
 
 GlobalChemExtensions
 ====================
