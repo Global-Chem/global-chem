@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 #
-# GlobalChem - Common Salts
+# GlobalChem - MangoPhytoCompounds
 #
-# -----------------------------------
+# --------------------------------
 
-class Mango(object):
-
+class MangoPhytoCompounds(object):
 
     '''
 
@@ -32,7 +31,7 @@ class Mango(object):
 
     def __init__(self):
 
-      self.name = 'mango'
+      self.name = 'mango_phytocompounds'
 
     @staticmethod
     def get_smiles():
@@ -113,4 +112,10 @@ class Mango(object):
 
         return smiles
 
+    @staticmethod
+    def get_smarts():
 
+        smarts = {
+        }
+  
+        return smarts
