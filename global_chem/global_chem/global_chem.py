@@ -111,10 +111,17 @@ from global_chem.food.color_additives.fda_list_five import FDAListFive
 from global_chem.food.color_additives.fda_list_six import FDAListSix
 from global_chem.food.color_additives.fda_list_seven import FDAListSeven
 
+# Food / Spices / Thai Ginger
 
+from global_chem.food.spices.thai_ginger import ThaiGingerCyclicDipeptides
+from global_chem.food.spices.thai_ginger import ThaiGingerDiarylHeptanoids
+from global_chem.food.spices.thai_ginger import ThaiGingerFattyAcidsAndEsters
+from global_chem.food.spices.thai_ginger import ThaiGingerFlavonoids
+from global_chem.food.spices.thai_ginger import ThaiGingerPhenolics
+from global_chem.food.spices.thai_ginger import ThaiGingerPolysaccharides
+from global_chem.food.spices.thai_ginger import ThaiGingerTerpenoids
 
 # Food/Fruits/Mango
-
 
 from global_chem.food.fruits.mango.constituents_of_mango import Mango
 from global_chem.food.fruits.mango.fattyacids import MangoFattyAcids
@@ -491,7 +498,14 @@ class GlobalChem(object):
         'mango_phenolic_acids': MangoPhenolicAcids,                                      # Damilola Bodun & Sevien Schulhofff
         'mango_fatty_acids': MangoFattyAcids,                                            # Damilola Bodun & Sevien Schulhofff
         'mango_vitamins': MangoVitamins,                                                 # Damilola Bodun & Sevien Schulhofff
-        'mango_flavonoids': MangoFlavonoids                                              # Damilola Bodun & Sevien Schulhofff  
+        'mango_flavonoids': MangoFlavonoids,                                             # Damilola Bodun & Sevien Schulhofff
+        'thai_ginger_cyclic_dipeptides': ThaiGingerCyclicDipeptides,                     # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
+        'thai_ginger_diaryl_heptanoids': ThaiGingerDiarylHeptanoids,                     # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
+        'thai_ginger_fatty_acids_and_esters': ThaiGingerFattyAcidsAndEsters,             # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
+        'thai_ginger_flavonoids': ThaiGingerFlavonoids,                                  # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
+        'thai_ginger_phenolics': ThaiGingerPhenolics,                                    # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
+        'thai_ginger_polysaccharides': ThaiGingerPolysaccharides,                        # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
+        'thai_ginger_terpenoids': ThaiGingerTerpenoids                                   # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
     }
 
     __INCOMPLETE_NODES = {

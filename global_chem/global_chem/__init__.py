@@ -93,6 +93,24 @@ from global_chem.food.color_additives.fda_list_five import FDAListFive
 from global_chem.food.color_additives.fda_list_six import FDAListSix
 from global_chem.food.color_additives.fda_list_seven import FDAListSeven
 
+# Thai Ginger 
+
+from global_chem.food.spices.thai_ginger import ThaiGingerCyclicDipeptides
+from global_chem.food.spices.thai_ginger import ThaiGingerDiarylHeptanoids
+from global_chem.food.spices.thai_ginger import ThaiGingerFattyAcidsAndEsters
+from global_chem.food.spices.thai_ginger import ThaiGingerFlavonoids
+from global_chem.food.spices.thai_ginger import ThaiGingerPhenolics
+from global_chem.food.spices.thai_ginger import ThaiGingerPolysaccharides
+from global_chem.food.spices.thai_ginger import ThaiGingerTerpenoids
+
+# Mango
+
+from global_chem.food.fruits.mango.mango_phytocompounds import MangoPhytoCompounds
+from global_chem.food.fruits.mango.mango_fatty_acids import MangoFattyAcids
+from global_chem.food.fruits.mango.mango_flavonoids import MangoFlavonoids
+from global_chem.food.fruits.mango.mango_phenolic_acids import MangoPhenolicAcids
+from global_chem.food.fruits.mango.mango_vitamins import MangoVitamins
+from global_chem.food.fruits.mango.mango_amino_acids import MangoAminoAcids
 
 # Narcotics
 
