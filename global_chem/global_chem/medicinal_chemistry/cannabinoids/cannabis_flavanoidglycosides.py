@@ -8,7 +8,7 @@ class CannabisFlavanoidGlycosides(object):
 
   def __init__(self):
 
-    self.name = 'cannabis_flavanoid_glycosides'
+    self.name = 'cannabis_flavanoidglycosides'
 
   @staticmethod
   def get_smiles():

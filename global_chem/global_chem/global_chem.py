@@ -48,24 +48,24 @@ from global_chem.education.cengage.organic_and_inorganic_bronsted_acids import O
 
 from global_chem.medicinal_chemistry.cannabinoids.phytocannabinoids import PhytoCannabinoids
 from global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa import ConstituentsOfCannabisSativa
-from global_chem.medicinal_chemistry.cannabinoids.acids import CannabisAcids
-from global_chem.medicinal_chemistry.cannabinoids.alcohols import CannabisAlcohols
-from global_chem.medicinal_chemistry.cannabinoids.aldehydes import CannabisAldehydes
-from global_chem.medicinal_chemistry.cannabinoids.amino_acids import CannabisAminoAcids
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_acids import CannabisAcids
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_alcohols import CannabisAlcohols
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_aldehydes import CannabisAldehydes
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_amino_acids import CannabisAminoAcids
 from global_chem.medicinal_chemistry.cannabinoids.cannabinoids import Cannabinoids
-from global_chem.medicinal_chemistry.cannabinoids.esters_and_lactones import CannabisEstersAndLactones
-from global_chem.medicinal_chemistry.cannabinoids.fatty_acids import CannabisFattyAcids
-from global_chem.medicinal_chemistry.cannabinoids.flavanoidglycosides import CannabisFlavanoidGlycosides
-from global_chem.medicinal_chemistry.cannabinoids.hydrocarbons import CannabisHydrocarbons
-from global_chem.medicinal_chemistry.cannabinoids.ketones import CannabisKetones
-from global_chem.medicinal_chemistry.cannabinoids.nitrogenous_compounds import CannabisNitrogenousCompounds
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_esters_and_lactones import CannabisEstersAndLactones
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_fatty_acids import CannabisFattyAcids
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_flavanoidglycosides import CannabisFlavanoidGlycosides
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_hydrocarbons import CannabisHydrocarbons
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_ketones import CannabisKetones
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_nitrogenous_compounds import CannabisNitrogenousCompounds
 from global_chem.medicinal_chemistry.cannabinoids.non_cannabinoids_phenols import NonCannabinoidPhenols
-from global_chem.medicinal_chemistry.cannabinoids.pigments import CannabisPigments
-from global_chem.medicinal_chemistry.cannabinoids.proteins_glycoproteins_enzymes import CannabisProteinsGlycoproteinsEnzymes
-from global_chem.medicinal_chemistry.cannabinoids.steroids import CannabisSteroids
-from global_chem.medicinal_chemistry.cannabinoids.sugars import CannabisSugars
-from global_chem.medicinal_chemistry.cannabinoids.terpenes import CannabisTerpenes
-from global_chem.medicinal_chemistry.cannabinoids.vitamins import CannabisVitamins
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_pigments import CannabisPigments
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_proteins_glycoproteins_enzymes import CannabisProteinsGlycoproteinsEnzymes
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_steroids import CannabisSteroids
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_sugars import CannabisSugars
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_terpenes import CannabisTerpenes
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_vitamins import CannabisVitamins
 
 # Medicinal Chemistry - International
 
@@ -473,7 +473,7 @@ class GlobalChem(object):
         'cannabinoids': Cannabinoids,                                                    # Suliman Sharif
         'cannabis_esters_and_lactones': CannabisEstersAndLactones,                       # Suliman Sharif
         'cannabis_fatty_acids': CannabisFattyAcids,                                      # Suliman Sharif
-        'cannabis_flavanoid_glycosides': CannabisFlavanoidGlycosides,                    # Suliman Sharif
+        'cannabis_flavanoidglycosides': CannabisFlavanoidGlycosides,                    # Suliman Sharif
         'cannabis_hydrocarbons': CannabisHydrocarbons,                                   # Suliman Sharif
         'cannabis_ketones': CannabisKetones,                                             # Suliman Sharif
         'cannabis_nitrogenous_compounds': CannabisNitrogenousCompounds,                  # Suliman Sharif
