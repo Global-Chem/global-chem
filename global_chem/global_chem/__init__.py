@@ -93,15 +93,15 @@ from global_chem.food.color_additives.fda_list_five import FDAListFive
 from global_chem.food.color_additives.fda_list_six import FDAListSix
 from global_chem.food.color_additives.fda_list_seven import FDAListSeven
 
-# Thai Ginger 
+# Thai Ginger
 
-from global_chem.food.spices.thai_ginger import ThaiGingerCyclicDipeptides
-from global_chem.food.spices.thai_ginger import ThaiGingerDiarylHeptanoids
-from global_chem.food.spices.thai_ginger import ThaiGingerFattyAcidsAndEsters
-from global_chem.food.spices.thai_ginger import ThaiGingerFlavonoids
-from global_chem.food.spices.thai_ginger import ThaiGingerPhenolics
-from global_chem.food.spices.thai_ginger import ThaiGingerPolysaccharides
-from global_chem.food.spices.thai_ginger import ThaiGingerTerpenoids
+from global_chem.food.spices.thai_ginger.thai_ginger_cyclic_dipeptides import ThaiGingerCyclicDipeptides
+from global_chem.food.spices.thai_ginger.thai_ginger_diaryl_heptanoids import ThaiGingerDiarylHeptanoids
+from global_chem.food.spices.thai_ginger.thai_ginger_fatty_acids_and_esters import ThaiGingerFattyAcidsAndEsters
+from global_chem.food.spices.thai_ginger.thai_ginger_flavonoids import ThaiGingerFlavonoids
+from global_chem.food.spices.thai_ginger.thai_ginger_phenolics import ThaiGingerPhenolics
+from global_chem.food.spices.thai_ginger.thai_ginger_polysaccharides import ThaiGingerPolysaccharides
+from global_chem.food.spices.thai_ginger.thai_ginger_terpenoids import ThaiGingerTerpenoids
 
 # Mango
 
