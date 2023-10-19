@@ -4,17 +4,17 @@
 #
 # ------------------------------
 
-class AndrographisPaniculata(object):
+class ZingiberOfficinale(object):
 
   def __init__(self):
 
-    self.name = 'andrographis_paniculata'
+    self.name = 'zingiber_officinale'
 
   @staticmethod
   def get_smiles():
 
     smiles = {
-      'Andrographolides': 'CC12CCC(C(C1CCC(=C)C2CC=C3C(COC3=O)O)(C)CO)O',
+      'Gingerols': 'CCCCCC(CC(=O)CCC1=CC(=C(C=C1)O)OC)O',
     }
 
     return smiles

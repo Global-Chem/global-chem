@@ -4,17 +4,17 @@
 #
 # ------------------------------
 
-class AndrographisPaniculata(object):
+class  OcimumSanctum(object):
 
   def __init__(self):
 
-    self.name = 'andrographis_paniculata'
+    self.name = 'ocimum_sanctum'
 
   @staticmethod
   def get_smiles():
 
     smiles = {
-      'Andrographolides': 'CC12CCC(C(C1CCC(=C)C2CC=C3C(COC3=O)O)(C)CO)O',
+      'Ursolic acid': 'CC1CCC2(CCC3(C(=CCC4C3(CCC5C4(CCC(C5(C)C)O)C)C)C2C1C)C)C(=O)O',
     }
 
     return smiles

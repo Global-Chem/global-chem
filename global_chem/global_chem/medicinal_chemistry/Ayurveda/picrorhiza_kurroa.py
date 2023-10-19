@@ -4,17 +4,17 @@
 #
 # ------------------------------
 
-class AndrographisPaniculata(object):
+class PicrorhizaKurroa(object):
 
   def __init__(self):
 
-    self.name = 'andrographis_paniculata'
+    self.name = 'picrorhiza_kurroa'
 
   @staticmethod
   def get_smiles():
 
     smiles = {
-      'Andrographolides': 'CC12CCC(C(C1CCC(=C)C2CC=C3C(COC3=O)O)(C)CO)O',
+      'Kutkin': 'COC1=C(C=CC(=C1)C(=O)OC2C(C(C(C(O2)CO)O)O)O)OC(=O)C=CC3=CC=CC=C3.O.O',
     }
 
     return smiles

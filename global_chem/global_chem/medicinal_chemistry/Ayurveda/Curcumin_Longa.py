@@ -4,11 +4,11 @@
 #
 # ------------------------------
 
-class  Curcuma_longa(object):
+class  CurcumaLonga(object):
 
   def __init__(self):
 
-    self.name = 'Curcuma_longa'
+    self.name = 'curcuma_longa'
 
   @staticmethod
   def get_smiles():

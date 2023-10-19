@@ -4,17 +4,18 @@
 #
 # ------------------------------
 
-class AndrographisPaniculata(object):
+class CamelliaSinensis(object):
 
   def __init__(self):
 
-    self.name = 'andrographis_paniculata'
+    self.name = 'camellia_sinensis'
 
   @staticmethod
   def get_smiles():
 
     smiles = {
-      'Andrographolides': 'CC12CCC(C(C1CCC(=C)C2CC=C3C(COC3=O)O)(C)CO)O',
+      'Catechins': 'C1C(C(OC2=CC(=CC(=C21)O)O)C3=CC(=C(C=C3)O)O)O',
+      'Caffeine': 'CN1C=NC2=C1C(=O)N(C(=O)N2C)C',
     }
 
     return smiles

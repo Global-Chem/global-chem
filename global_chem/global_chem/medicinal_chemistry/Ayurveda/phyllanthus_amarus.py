@@ -4,17 +4,18 @@
 #
 # ------------------------------
 
-class AndrographisPaniculata(object):
+class PhyllanthusAmarus(object):
 
   def __init__(self):
 
-    self.name = 'andrographis_paniculata'
+    self.name = 'phyllanthus_amarus'
 
   @staticmethod
   def get_smiles():
 
     smiles = {
-      'Andrographolides': 'CC12CCC(C(C1CCC(=C)C2CC=C3C(COC3=O)O)(C)CO)O',
+      'Phyllanthin': 'COCC(CC1=CC(=C(C=C1)OC)OC)C(CC2=CC(=C(C=C2)OC)OC)COC',
+      'Hypophyllanthin': 'COCC1CC2=CC(=C3C(=C2C(C1COC)C4=CC(=C(C=C4)OC)OC)OCO3)OC',
     }
 
     return smiles

@@ -4,11 +4,11 @@
 #
 # ------------------------------
 
-class Centella_asiatica(object):
+class CentellaAsiatica(object):
 
   def __init__(self):
 
-    self.name = 'Centella_asiatica'
+    self.name = 'centella_asiatica'
 
   @staticmethod
   def get_smiles():

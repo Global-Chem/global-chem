@@ -4,11 +4,11 @@
 #
 # ------------------------------
 
-class Adhatoda_vasica(object):
+class AdhatodaVasica(object):
 
   def __init__(self):
 
-    self.name = 'Adhatoda_vasica'
+    self.name = 'adhatoda_vasica'
 
   @staticmethod
   def get_smiles():

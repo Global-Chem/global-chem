@@ -4,17 +4,18 @@
 #
 # ------------------------------
 
-class AndrographisPaniculata(object):
+class SidaCordifolia(object):
 
   def __init__(self):
 
-    self.name = 'andrographis_paniculata'
+    self.name = 'sida_cordifolia'
 
   @staticmethod
   def get_smiles():
 
     smiles = {
-      'Andrographolides': 'CC12CCC(C(C1CCC(=C)C2CC=C3C(COC3=O)O)(C)CO)O',
+      'Ephedrine': 'CC(C(C1=CC=CC=C1)O)NC',
+      'Isoflavones': 'C1=CC(=CC=C1C2=COC3=C(C2=O)C=CC(=C3)OC4C(C(C(C(O4)CO)O)O)O)O',
     }
 
     return smiles

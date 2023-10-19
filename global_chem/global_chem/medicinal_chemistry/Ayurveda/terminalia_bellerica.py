@@ -4,11 +4,11 @@
 #
 # ------------------------------
 
-class  EmblicaOfficinalisGaertn(object):
+class TerminaliaBellerica(object):
 
   def __init__(self):
 
-    self.name = 'emblica_officinalis_Gaertn.'
+    self.name = 'terminalia_bellerica'
 
   @staticmethod
   def get_smiles():

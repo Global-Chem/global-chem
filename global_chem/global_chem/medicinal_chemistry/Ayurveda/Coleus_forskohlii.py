@@ -4,11 +4,11 @@
 #
 # ------------------------------
 
-class Coleus_forskohlii(object):
+class ColeusForskohlii(object):
 
   def __init__(self):
 
-    self.name = 'Coleus_forskohlii'
+    self.name = 'coleus_forskohlii'
 
   @staticmethod
   def get_smiles():

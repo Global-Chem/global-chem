@@ -4,17 +4,17 @@
 #
 # ------------------------------
 
-class AndrographisPaniculata(object):
+class PiperNigrum(object):
 
   def __init__(self):
 
-    self.name = 'andrographis_paniculata'
+    self.name = 'piper_nigrum'
 
   @staticmethod
   def get_smiles():
 
     smiles = {
-      'Andrographolides': 'CC12CCC(C(C1CCC(=C)C2CC=C3C(COC3=O)O)(C)CO)O',
+      'Piperine': 'C1CCN(CC1)C(=O)C=CC=CC2=CC3=C(C=C2)OCO3',
     }
 
     return smiles

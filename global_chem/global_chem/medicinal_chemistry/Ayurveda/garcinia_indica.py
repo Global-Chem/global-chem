@@ -4,17 +4,17 @@
 #
 # ------------------------------
 
-class AndrographisPaniculata(object):
+class GarciniaIndica(object):
 
   def __init__(self):
 
-    self.name = 'andrographis_paniculata'
+    self.name = 'garcinia_indica'
 
   @staticmethod
   def get_smiles():
 
     smiles = {
-      'Andrographolides': 'CC12CCC(C(C1CCC(=C)C2CC=C3C(COC3=O)O)(C)CO)O',
+      'hydroxycitric acid': 'C(C(=O)O)C(C(C(=O)O)O)(C(=O)O)O',
     }
 
     return smiles

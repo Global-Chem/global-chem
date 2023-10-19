@@ -4,11 +4,11 @@
 #
 # ------------------------------
 
-class Capsicum_annum(object):
+class CapsicumAnnum(object):
 
   def __init__(self):
 
-    self.name = 'Capsicum_annum'
+    self.name = 'capsicum_annum'
 
   @staticmethod
   def get_smiles():

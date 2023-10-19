@@ -4,17 +4,17 @@
 #
 # ------------------------------
 
-class AndrographisPaniculata(object):
+class  TylophoraAsthmatica(object):
 
   def __init__(self):
 
-    self.name = 'andrographis_paniculata'
+    self.name = 'tylophora_asthmatica'
 
   @staticmethod
   def get_smiles():
 
     smiles = {
-      'Andrographolides': 'CC12CCC(C(C1CCC(=C)C2CC=C3C(COC3=O)O)(C)CO)O',
+       'Total-alkaloids': 'CN1C2CCC1CC(C2)OC(=O)C3CCC(C4=CC=CC=C34)(C5=CC=CC=C5)C(=O)OC6CC7CCC(C6)N7C',
     }
 
     return smiles

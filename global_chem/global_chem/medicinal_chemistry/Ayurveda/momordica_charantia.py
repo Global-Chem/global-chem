@@ -4,17 +4,17 @@
 #
 # ------------------------------
 
-class AndrographisPaniculata(object):
+class MomordicaCharantia(object):
 
   def __init__(self):
 
-    self.name = 'andrographis_paniculata'
+    self.name = 'momordica_charantia'
 
   @staticmethod
   def get_smiles():
 
     smiles = {
-      'Andrographolides': 'CC12CCC(C(C1CCC(=C)C2CC=C3C(COC3=O)O)(C)CO)O',
+      'Charantin': 'missing',
     }
 
     return smiles

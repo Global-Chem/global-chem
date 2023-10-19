@@ -4,17 +4,17 @@
 #
 # ------------------------------
 
-class AndrographisPaniculata(object):
+class TribulusTerrestris(object):
 
   def __init__(self):
 
-    self.name = 'andrographis_paniculata'
+    self.name = 'tribulus_terrestris'
 
   @staticmethod
   def get_smiles():
 
     smiles = {
-      'Andrographolides': 'CC12CCC(C(C1CCC(=C)C2CC=C3C(COC3=O)O)(C)CO)O',
+      'Steroidal saponins': 'CC1C2C(CC3C2(CCC4C3CCC5C4(CC(C(C5)OC6C(C(C(C(O6)CO)OC7C(C(C(C(O7)C)O)O)OC8C(C(C(C(O8)C)O)O)O)O)O)O)C)C)OC19CCC(CO9)CO',
     }
 
     return smiles
