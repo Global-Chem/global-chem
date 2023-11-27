@@ -105,7 +105,7 @@ from global_chem.food.spices.thai_ginger.thai_ginger_terpenoids import ThaiGinge
 
 # Mango
 
-from global_chem.food.fruits.mango.mango_phytocompounds import MangoPhytoCompounds
+from global_chem.food.fruits.mango.mango_phytocompounds import MangoPhytocompounds
 from global_chem.food.fruits.mango.mango_fatty_acids import MangoFattyAcids
 from global_chem.food.fruits.mango.mango_flavonoids import MangoFlavonoids
 from global_chem.food.fruits.mango.mango_phenolic_acids import MangoPhenolicAcids

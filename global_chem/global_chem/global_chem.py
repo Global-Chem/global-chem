@@ -123,14 +123,12 @@ from global_chem.food.spices.thai_ginger.thai_ginger_terpenoids import ThaiGinge
 
 # Food/Fruits/Mango
 
-from global_chem.food.fruits.mango.constituents_of_mango import Mango
-from global_chem.food.fruits.mango.fattyacids import MangoFattyAcids
-from global_chem.food.fruits.mango.flavonoids import MangoFlavonoids
-from global_chem.food.fruits.mango.phenolicacids import MangoPhenolicAcids
-from global_chem.food.fruits.mango.vitamins import MangoVitamins
+from global_chem.food.fruits.mango.mango_phytocompounds import MangoPhytocompounds
+from global_chem.food.fruits.mango.mango_fatty_acids import MangoFattyAcids
+from global_chem.food.fruits.mango.mango_flavonoids import MangoFlavonoids
+from global_chem.food.fruits.mango.mango_phenolic_acids import MangoPhenolicAcids
+from global_chem.food.fruits.mango.mango_vitamins import MangoVitamins
 from global_chem.food.fruits.mango.mango_amino_acids import MangoAminoAcids
-
-
 
 # Narcotics
 
@@ -493,12 +491,12 @@ class GlobalChem(object):
         'lanthipeptides': LanthiPeptides,                                                # Prabin Baral & Suliman Sharif
         'alternative_jet_fuels': AlternativeJetFuels,                                    # Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                                    # Chris Burke & Suliman Sharif
-        'mango_phytocompounds': Mango,                                                   # Damilola Bodun & Sevien Schulhofff
-        'mango_amino_acids': MangoAminoAcids,                                            # Damilola Bodun & Sevien Schulhofff
-        'mango_phenolic_acids': MangoPhenolicAcids,                                      # Damilola Bodun & Sevien Schulhofff
-        'mango_fatty_acids': MangoFattyAcids,                                            # Damilola Bodun & Sevien Schulhofff
-        'mango_vitamins': MangoVitamins,                                                 # Damilola Bodun & Sevien Schulhofff
-        'mango_flavonoids': MangoFlavonoids,                                             # Damilola Bodun & Sevien Schulhofff
+        'mango_phytocompounds': MangoPhytocompounds,                                     # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mango_amino_acids': MangoAminoAcids,                                            # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mango_phenolic_acids': MangoPhenolicAcids,                                      # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mango_fatty_acids': MangoFattyAcids,                                            # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mango_vitamins': MangoVitamins,                                                 # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mango_flavonoids': MangoFlavonoids,                                             # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
         'thai_ginger_cyclic_dipeptides': ThaiGingerCyclicDipeptides,                     # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
         'thai_ginger_diaryl_heptanoids': ThaiGingerDiarylHeptanoids,                     # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
         'thai_ginger_fatty_acids_and_esters': ThaiGingerFattyAcidsAndEsters,             # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif

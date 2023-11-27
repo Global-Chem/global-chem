@@ -1,8 +1,13 @@
+#!/usr/bin/env python3
+#
+# GlobalChem - Mango Amino Acids
+# -------------------------------
+
 class MangoAminoAcids(object):
 
     def __init__(self):
 
-        self.name = 'mango_Amino_acids'
+        self.name = 'mango_amino_acids'
 
     @staticmethod
     def get_smiles():

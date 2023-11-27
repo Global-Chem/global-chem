@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+#
+# GlobalChem - Mango Flavonoids
+# -----------------------------
+
 class MangoFlavonoids(object):
 
     def __init__(self):

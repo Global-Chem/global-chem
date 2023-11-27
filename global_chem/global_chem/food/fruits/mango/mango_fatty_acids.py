@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+#
+# GlobalChem - Mango Fatty Acids
+# -------------------------------
+
 class MangoFattyAcids(object):
 
     def __init__(self):
