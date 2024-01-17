@@ -181,7 +181,7 @@ class PCAAnalysis(object):
         }
 
         kmeans_df =pd.DataFrame(kmean_data)
-        kmeans_df = principal_component_df[ds['cols']]
+        kmeans_df = kmeans_df[ds['cols']]
         kmeans_df['smiles'] = self.smiles_list
 
         pc_df=pd.DataFrame(chemicalspace)
