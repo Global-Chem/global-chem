@@ -20,14 +20,15 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           architecture: x64
+
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+
       - name: Install Requirements
         run: |
-           
            python -m pip install -r global_chem_extensions/requirements.txt
            
       - name: InstallGraphing Library
         run: |
-          
           cd global_chem_extensions
           python -m pip install -e .[graphing]
-
