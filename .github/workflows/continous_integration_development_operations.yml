@@ -23,7 +23,7 @@ jobs:
       - name: Install Requirements
         run: |
            
-           python -m pip install -r --upgrade pip
+           python -m pip install -r global_chem_extensions/requirements.txt
            
       - name: InstallGraphing Library
         run: |
