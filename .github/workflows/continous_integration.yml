@@ -10,6 +10,13 @@ jobs:
       matrix:
         os: ["ubuntu-latest", "windows-latest", "macos-latest"]
         python-version: ["3.7", "3.8", "3.9"]
+        include:
+          - python-version: "3.7"
+            coverage-version: "4.5.3"
+          - python-version: "3.8"
+            coverage-version: "4.5.4"
+          - python-version: "3.9"
+            coverage-version: "5.0"
 
     steps:
       - name: Checkout source
@@ -29,8 +36,8 @@ jobs:
           python global_chem/setup.py install
           pip install python-coveralls
           pip install coveralls
-          pip install coverage==4.5.4     
-          pip install nose              
+          pip install coverage==${{ matrix.coverage-version }}
+          pip install nose
 
       - name: Run GlobalChem tests
         env:
