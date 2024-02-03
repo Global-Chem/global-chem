@@ -21,6 +21,9 @@ jobs:
           python-version: ${{ matrix.python-version }}
           architecture: x64
 
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+
       - name: Install
         run: |
           python global_chem/setup.py install
