@@ -55,7 +55,7 @@ Overview
 
 #### Regulatory Compliance
 
-| [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/6399/badge)](https://bestpractices.coreinfrastructure.org/projects/6399) | [![fair-software.eu](https://img.shields.io/badge/fair--software.eu-%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8B-yellow)](https://fair-software.eu) |
+| [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/6399/badge)](https://bestpractices.coreinfrastructure.org/projects/6399) | [![fair-software.eu](https://img.shields.io/badge/fair--software.eu-%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8F-green)](https://fair-software.eu) |
 |-|-|
 
 #### - GlobalChemExtensions
