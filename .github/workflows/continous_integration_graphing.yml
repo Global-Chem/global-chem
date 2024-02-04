@@ -20,10 +20,12 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           architecture: x64
+      - name: Install Requirements
+        run: |
+           
+           python -m pip install -r global_chem_extensions/requirements.txt
 
-      - name: Upgrade pip
-        run: python -m pip install --upgrade pip
-
+     
       - name: Install Graphing Library
         run: |
           python -m pip install -e .[graphing]
