@@ -25,6 +25,9 @@ if os.name == 'nt':
 
 from global_chem.animals.snakes.drugs_from_snake_venom import DrugsFromSnakeVenom
 
+# Alcohol
+from global_chem.alcohol.gin.gin import Gin
+
 # Environment
 
 from global_chem.environment.alternative_jet_fuels import AlternativeJetFuels
@@ -113,6 +116,7 @@ from global_chem.food.color_additives.fda_list_seven import FDAListSeven
 
 
 
+
 # Food/Fruits/Mango
 
 
@@ -155,6 +159,11 @@ from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
 
 from global_chem.skin.transdermal_and_dermal_delivery.surfactants import Surfactants
 
+# Spice
+from global_chem.spices.thai.thai_all import ThaiSpices
+from global_chem.spices.thai.flavonoids import ThaiSpicesFlavonoids
+
+
 # Peptides
 
 from global_chem.peptides.lanthipeptides import LanthiPeptides
@@ -165,6 +174,18 @@ from global_chem.sex.exsens.lube import Lube
 from global_chem.sex.exsens.exsens_products import ExsensProducts
 from global_chem.sex.tainted_sexual_enhancements.tainted_sexual_enhancements import TaintedSexualEnhancements
 from global_chem.sex.contraceptives.oral_contraceptives import OralContraceptives
+
+# Sport/ Performance Enhancement / mma_compounds
+from global_chem.sport.performance_enhancement.mma_compounds import MmaCompounds
+
+#Polymers
+from global_chem.materials.polymers.water_based_coatings import WaterBasedCoatings
+from global_chem.materials.polymers.solvent_based_coatings import SolventBasedCoatings
+from global_chem.materials.polymers.thermoplastics import Thermoplastics
+from global_chem.materials.polymers.rubbers import Rubbers
+from global_chem.materials.polymers.natural_fibers import Natural_Fibers
+from global_chem.materials.polymers.fluoropolymers import FluoroPolymers
+from global_chem.materials.polymers.silicones import Silicones
 
 class Node:
 
@@ -486,13 +507,24 @@ class GlobalChem(object):
         'lanthipeptides': LanthiPeptides,                                                # Prabin Baral & Suliman Sharif
         'alternative_jet_fuels': AlternativeJetFuels,                                    # Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                                    # Chris Burke & Suliman Sharif
-        'mango_phytocompounds': Mango,                                                   # Damilola Bodun & Sevien Schulhofff
-        'mango_amino_acids': MangoAminoAcids,                                            # Damilola Bodun & Sevien Schulhofff
-        'mango_phenolic_acids': MangoPhenolicAcids,                                      # Damilola Bodun & Sevien Schulhofff
-        'mango_fatty_acids': MangoFattyAcids,                                            # Damilola Bodun & Sevien Schulhofff
-        'mango_vitamins': MangoVitamins,                                                 # Damilola Bodun & Sevien Schulhofff
-        'mango_flavonoids': MangoFlavonoids                                              # Damilola Bodun & Sevien Schulhofff  
-    }
+        'mango_phytocompounds': Mango,                                                   # Damilola Bodun & Sevien Schulhofff& Suliman Sharif
+        'mango_amino_acids': MangoAminoAcids,                                            # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mango_phenolic_acids': MangoPhenolicAcids,                                      # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mango_fatty_acids': MangoFattyAcids,                                            # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mango_vitamins': MangoVitamins,                                                 # Damilola Bodun & Sevien Schulhofff  & Suliman Sharif
+        'mango_flavonoids': MangoFlavonoids,                                             # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mma_compounds': MmaCompounds,                                                   # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
+        "water_based_coatings": WaterBasedCoatings,                                      # Vedant Menkudale 
+        "solvent_based_coatings": SolventBasedCoatings,                                  # Vedant Menkudale 
+        "thermoplastics" : Thermoplastics,                                               # Vedant Menkudale
+        "rubbers": Rubbers,                                                              # Vedant Menkudale
+        "natural_fibers" : Natural_Fibers,                                               # Vedant Menkudale
+        'flouropolymers': FluoroPolymers,                                                # Vedant Menkudale
+        "silicones" : Silicones,                                                         # Vedant Menkudale
+        "gin": Gin,                                                                       # Damilola Bodun & Suliman Shariff
+        "thai_spices": ThaiSpices,                                                        #
+        "thai_spices_flavonoids": ThaiSpicesFlavonoids                                  #
+     }
 
     __INCOMPLETE_NODES = {
         # 'named_reactions_in_organic_synthesis': NamedReactionsInOrganicSynthesis # Aziza Frank & Bettina Lier & Suliman Sharif
