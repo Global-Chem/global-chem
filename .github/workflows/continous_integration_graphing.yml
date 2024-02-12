@@ -24,10 +24,8 @@ jobs:
         run: |
            
            python -m pip install -r global_chem_extensions/requirements.txt
-           
-      - name: InstallGraphing Library
-        run: |
-          
-          cd global_chem_extensions
-          python -m pip install -e .[graphing]
 
+     
+      - name: Install Graphing Library
+        run: |
+          python -m pip install -e .[graphing]

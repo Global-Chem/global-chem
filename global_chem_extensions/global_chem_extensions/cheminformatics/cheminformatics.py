@@ -10,9 +10,9 @@ class ExtensionsError(Exception):
     __allow_update__ = False
 
     '''
-    
-    Raise an Extension Error if something is wrong. 
-    
+
+    Raise an Extension Error if something is wrong.
+
     '''
     def __init__(self, message, errors):
         super().__init__(message)
@@ -172,6 +172,38 @@ class ChemInformatics(object):
         sequence = converter.convert_amino_acid_sequence_to_smiles(sequence)
 
         return sequence
+
+    @staticmethod
+    def chemical_questionaire(
+        smiles_list = [],
+        aromaticity=True,
+        element_diversity=True,
+        functional_group_diversity=True,
+        stereoisomer=True,
+        global_chem_node = 'organic_and_inorganic_bronsted_acids'
+    ):
+      '''
+
+      Arguments:
+            smiles_list (List): List of SMILES to diversify
+            aromaticity (Bool): If the list is aromatic
+            element_diversity (Bool): If the list is elemental diverse
+            functional_group_diversity (Bool): Are the functional groups Diverse
+            stereoisomer (Bool): if the compound is a stereoisomer
+            global_chem_node (Bool): The Global Chem Node
+
+      '''
+
+      from global_chem_extensions.cheminformatics.applications.chemical_questionaire import ChemicalQuestionaire
+
+      ChemicalQuestionaire(
+        smiles_list = smiles_list,
+        aromaticity=aromaticity,
+        element_diversity=element_diversity,
+        functional_group_diversity=functional_group_diversity,
+        stereoisomer=stereoisomer,
+        global_chem_node = global_chem_node
+      )
 
     @staticmethod
     def filter_smiles_by_criteria(

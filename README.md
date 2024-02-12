@@ -2,8 +2,6 @@
 
 Global Chem is a public dictionary of common chemical lists using the Common Chemical Name as input and SMILES/SMARTS as output organized by their respective community in a knowledge graph.
 
-Global-Chem serves as an open source platform where writing the molecules directly allows for the name to not be ambiguous to what a chemical is is anymore and allows for full transparency.
-
 Our hope is this repository serves as a base for the population to govern how the chemicals we use in things like Food, Clothing, Environment, Materials, Drugs, War and a lot more are beneficial for all of us.
 
 #### Links
@@ -14,7 +12,6 @@ Our hope is this repository serves as a base for the population to govern how th
 - Generative Chemical AI Documentation: https://globalchem.gitbook.io/mother-nature/
 
 - Join Our Community: https://discord.gg/xygRVwNZP8
-
 
 <p align="center">
 <img width="800" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/179372564-c286b115-af14-4ad8-a37f-0a216297b6c1.png">
@@ -27,6 +24,13 @@ Overview
 ========
 
 ## GlobalChem
+
+#### - Introduction
+
+| Demo | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HaDvAYpaX0_2Eqx1NSl5uJTRkE_0na-L?usp=sharing) |
+|-|-|
+| Docs | [![Documentation](https://img.shields.io/badge/GitBook-Docu-lightblue)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/) |
+| Chat | [![Discord](https://img.shields.io/discord/996592811887579317.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/dK2agwXSE7) |
 
 #### - Validation
 
