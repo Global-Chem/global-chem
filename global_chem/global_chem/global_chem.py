@@ -25,6 +25,9 @@ if os.name == 'nt':
 
 from global_chem.animals.snakes.drugs_from_snake_venom import DrugsFromSnakeVenom
 
+# Alcohol
+from global_chem.alcohol.gin.gin import Gin
+
 # Environment
 
 from global_chem.environment.alternative_jet_fuels import AlternativeJetFuels
@@ -44,10 +47,28 @@ from global_chem.warfare.organophosphorous_nerve_agents import OrganoPhosphorous
 
 from global_chem.education.cengage.organic_and_inorganic_bronsted_acids import OrganicAndInorganicBronstedAcids
 
-# Medicinal Chemistry - Cannabis
+# Medicinal Chemistry - Cannabinoids
 
 from global_chem.medicinal_chemistry.cannabinoids.phytocannabinoids import PhytoCannabinoids
 from global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa import ConstituentsOfCannabisSativa
+from global_chem.medicinal_chemistry.cannabinoids.acids import CannabisAcids
+from global_chem.medicinal_chemistry.cannabinoids.alcohols import CannabisAlcohols
+from global_chem.medicinal_chemistry.cannabinoids.aldehydes import CannabisAldehydes
+from global_chem.medicinal_chemistry.cannabinoids.amino_acids import CannabisAminoAcids
+from global_chem.medicinal_chemistry.cannabinoids.cannabinoids import Cannabinoids
+from global_chem.medicinal_chemistry.cannabinoids.esters_and_lactones import CannabisEstersAndLactones
+from global_chem.medicinal_chemistry.cannabinoids.fatty_acids import CannabisFattyAcids
+from global_chem.medicinal_chemistry.cannabinoids.flavanoidglycosides import CannabisFlavanoidGlycosides
+from global_chem.medicinal_chemistry.cannabinoids.hydrocarbons import CannabisHydrocarbons
+from global_chem.medicinal_chemistry.cannabinoids.ketones import CannabisKetones
+from global_chem.medicinal_chemistry.cannabinoids.nitrogenous_compounds import CannabisNitrogenousCompounds
+from global_chem.medicinal_chemistry.cannabinoids.non_cannabinoids_phenols import NonCannabinoidPhenols
+from global_chem.medicinal_chemistry.cannabinoids.pigments import CannabisPigments
+from global_chem.medicinal_chemistry.cannabinoids.proteins_glycoproteins_enzymes import CannabisProteinsGlycoproteinsEnzymes
+from global_chem.medicinal_chemistry.cannabinoids.steroids import CannabisSteroids
+from global_chem.medicinal_chemistry.cannabinoids.sugars import CannabisSugars
+from global_chem.medicinal_chemistry.cannabinoids.terpenes import CannabisTerpenes
+from global_chem.medicinal_chemistry.cannabinoids.vitamins import CannabisVitamins
 
 # Medicinal Chemistry - International
 
@@ -93,6 +114,21 @@ from global_chem.food.color_additives.fda_list_five import FDAListFive
 from global_chem.food.color_additives.fda_list_six import FDAListSix
 from global_chem.food.color_additives.fda_list_seven import FDAListSeven
 
+
+
+
+# Food/Fruits/Mango
+
+
+from global_chem.food.fruits.mango.constituents_of_mango import Mango
+from global_chem.food.fruits.mango.fattyacids import MangoFattyAcids
+from global_chem.food.fruits.mango.flavonoids import MangoFlavonoids
+from global_chem.food.fruits.mango.phenolicacids import MangoPhenolicAcids
+from global_chem.food.fruits.mango.vitamins import MangoVitamins
+from global_chem.food.fruits.mango.mango_amino_acids import MangoAminoAcids
+
+
+
 # Narcotics
 
 from global_chem.narcotics.pihkal import Pihkal
@@ -106,6 +142,7 @@ from global_chem.narcotics.schedule_five import ScheduleFive
 # Interstellar Space
 
 from global_chem.interstellar_space.interstellar_space import InterstellarSpace
+from global_chem.interstellar_space.asteroid_ryugu import AsteroidRyugu
 
 # Biopharmaceutics - Excipients
 
@@ -123,6 +160,11 @@ from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
 
 from global_chem.skin.transdermal_and_dermal_delivery.surfactants import Surfactants
 
+# Spice
+from global_chem.spices.thai.thai_all import ThaiSpices
+from global_chem.spices.thai.flavonoids import ThaiSpicesFlavonoids
+
+
 # Peptides
 
 from global_chem.peptides.lanthipeptides import LanthiPeptides
@@ -133,6 +175,18 @@ from global_chem.sex.exsens.lube import Lube
 from global_chem.sex.exsens.exsens_products import ExsensProducts
 from global_chem.sex.tainted_sexual_enhancements.tainted_sexual_enhancements import TaintedSexualEnhancements
 from global_chem.sex.contraceptives.oral_contraceptives import OralContraceptives
+
+# Sport/ Performance Enhancement / mma_compounds
+from global_chem.sport.performance_enhancement.mma_compounds import MmaCompounds
+
+#Polymers
+from global_chem.materials.polymers.water_based_coatings import WaterBasedCoatings
+from global_chem.materials.polymers.solvent_based_coatings import SolventBasedCoatings
+from global_chem.materials.polymers.thermoplastics import Thermoplastics
+from global_chem.materials.polymers.rubbers import Rubbers
+from global_chem.materials.polymers.natural_fibers import Natural_Fibers
+from global_chem.materials.polymers.fluoropolymers import FluoroPolymers
+from global_chem.materials.polymers.silicones import Silicones
 
 class Node:
 
@@ -384,59 +438,94 @@ class GlobalChem(object):
 
     __NODES__ = {
         'global_chem': Node,
-        'emerging_perfluoroalkyls': EmergingPerFluoroAlkyls,                      # Asuka Orr & Suliman Sharif
-        'montmorillonite_adsorption': MontmorilloniteAdsorption,                  # Asuka Orr & Suliman Sharif
-        'common_monomer_repeating_units': CommonMonomerRepeatingUnits,            # Suliman Sharif
-        'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,    # Ruibin Liu & Suliman Sharif
-        'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors,  # Shaoqi Zhan & Suliman Sharif
-        'rings_in_drugs': RingsInDrugs,                                           # Alexander Mackerell Jr. & Suliman Sharif
-        'iupac_blue_book_rings': IUPACBlueBookRings,                              # Suliman Sharif
-        'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,                  # Suliman Sharif
-        'privileged_scaffolds': PrivilegedScaffolds,                              # Suliman Sharif
-        'iupac_blue_book': IUPACBlueBook,                                         # Suliman Sharif
-        'common_r_group_replacements': CommonRGroupReplacements,                  # Sunhwan Jo & Suliman Sharif
-        'braf_inhibitors': BRAFInhibitors,                                        # Aarion Romany & Suliman Sharif
-        'privileged_kinase_inhibitors': PrivilegedKinaseInhibitors,               # Suliman Sharif
-        'common_organic_solvents': CommonOrganicSolvents,                         # Suliman Sharif
-        'amino_acid_protecting_groups': AminoAcidProtectingGroups,                # Aziza Frank & Suliman Sharif
-        'schedule_one': ScheduleOne,                                              # Suliman Sharif
-        'schedule_two': ScheduleTwo,                                              # Suliman Sharif
-        'schedule_three': ScheduleThree,                                          # Suliman Sharif
-        'schedule_four': ScheduleFour,                                            # Suliman Sharif
-        'schedule_five': ScheduleFive,                                            # Suliman Sharif
-        'interstellar_space': InterstellarSpace,                                  # Suliman Sharif
-        'vitamins': Vitamins,                                                     # Suliman Sharif
-        'open_smiles': OpenSmiles,                                                # Suliman Sharif
-        'amino_acids': AminoAcids,                                                # Suliman Sharif
-        'pihkal': Pihkal,                                                         # Suliman Sharif
-        'black_market': BlackMarket,                                              # Tracey & Suliman Sharif
-        'nickel_ligands': NickelBidendatePhosphineLigands,                        # Suliman Sharif
-        'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                       # Suliman Sharif
-        'how_to_live_longer': HowToLiveLonger,                                    # Suliman Sharif
-        'monoclonal_antibodies': MonoclonalAntibodies,                            # Asuka Orr & Suliman Sharif
-        'lube': Lube,                                                             # Daniel Khavrutskii & Suliman Sharif
-        'tainted_sexual_enhancements': TaintedSexualEnhancements,                 # Suliman Sharif
-        'salt': Salt,                                                             # Suliman Sharif
-        'exsens_products': ExsensProducts,                                        # Rebecca Pinette-Dorin & Suliman Sharif
-        'fda_list_one': FDAListOne,                                               # Mike Wostner & Suliman Sharif
-        'fda_list_two': FDAListTwo,                                               # Mike Wostner & Suliman Sharif
-        'fda_list_three': FDAListThree,                                           # Mike Wostner & Suliman Sharif
-        'fda_list_four': FDAListFour,                                             # Mike Wostner & Suliman Sharif
-        'fda_list_five': FDAListFive,                                             # Mike Wostner & Suliman Sharif
-        'fda_list_six': FDAListSix,                                               # Mike Wostner & Suliman Sharif
-        'fda_list_seven': FDAListSeven,                                           # Mike Wostner & Suliman Sharif
-        'constituents_of_cannabis_sativa': ConstituentsOfCannabisSativa,          # Ian Jones & Bettina Lier & Suliman Sharif
-        'phytocannabinoids': PhytoCannabinoids,                                   # Ian Jones & Bettina Lier & Suliman Sharif
-        'organophosphorous_nerve_agents': OrganoPhosphorousNerveAgents,           # Suliman Sharif
-        'organic_and_inorganic_bronsted_acids': OrganicAndInorganicBronstedAcids, # Nathaniel McClean & Suliman Sharif
-        'chemicals_from_biomass': ChemicalsFromBioMass,                           # Anthony Maiorana & Suliman Sharif
-        'drugs_from_snake_venom': DrugsFromSnakeVenom,                            # Suliman Sharif
-        'oral_contraceptives': OralContraceptives,                                # Suliman Sharif
-        'surfactants': Surfactants,                                               # Yiling Nan & Suliman Sharif
-        'lanthipeptides': LanthiPeptides,                                         # Prabin Baral & Suliman Sharif
-        'alternative_jet_fuels': AlternativeJetFuels,                             # Suliman Sharif
-        'common_regex_patterns': CommonRegexPatterns,                             # Chris Burke & Suliman Sharif
-    }
+        'emerging_perfluoroalkyls': EmergingPerFluoroAlkyls,                             # Asuka Orr & Suliman Sharif
+        'montmorillonite_adsorption': MontmorilloniteAdsorption,                         # Asuka Orr & Suliman Sharif
+        'common_monomer_repeating_units': CommonMonomerRepeatingUnits,                   # Suliman Sharif
+        'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,           # Ruibin Liu & Suliman Sharif
+        'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors,         # Shaoqi Zhan & Suliman Sharif
+        'rings_in_drugs': RingsInDrugs,                                                  # Alexander Mackerell Jr. & Suliman Sharif
+        'iupac_blue_book_rings': IUPACBlueBookRings,                                     # Suliman Sharif
+        'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,                         # Suliman Sharif
+        'privileged_scaffolds': PrivilegedScaffolds,                                     # Suliman Sharif
+        'iupac_blue_book': IUPACBlueBook,                                                # Suliman Sharif
+        'common_r_group_replacements': CommonRGroupReplacements,                         # Sunhwan Jo & Suliman Sharif
+        'braf_inhibitors': BRAFInhibitors,                                               # Aarion Romany & Suliman Sharif
+        'privileged_kinase_inhibitors': PrivilegedKinaseInhibitors,                      # Suliman Sharif
+        'common_organic_solvents': CommonOrganicSolvents,                                # Suliman Sharif
+        'amino_acid_protecting_groups': AminoAcidProtectingGroups,                       # Aziza Frank & Suliman Sharif
+        'schedule_one': ScheduleOne,                                                     # Suliman Sharif
+        'schedule_two': ScheduleTwo,                                                     # Suliman Sharif
+        'schedule_three': ScheduleThree,                                                 # Suliman Sharif
+        'schedule_four': ScheduleFour,                                                   # Suliman Sharif
+        'schedule_five': ScheduleFive,                                                   # Suliman Sharif
+        'interstellar_space': InterstellarSpace,                                         # Suliman Sharif
+        'asteroid_ryugu': AsteroidRyugu,                                                 # Josh Farrell & Suliman Sharif
+        'vitamins': Vitamins,                                                            # Suliman Sharif
+        'open_smiles': OpenSmiles,                                                       # Suliman Sharif
+        'amino_acids': AminoAcids,                                                       # Suliman Sharif
+        'pihkal': Pihkal,                                                                # Suliman Sharif
+        'nickel_ligands': NickelBidendatePhosphineLigands,                               # Suliman Sharif
+        'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                              # Suliman Sharif
+        'how_to_live_longer': HowToLiveLonger,                                           # Suliman Sharif
+        'monoclonal_antibodies': MonoclonalAntibodies,                                   # Asuka Orr & Suliman Sharif
+        'lube': Lube,                                                                    # Daniel Khavrutskii & Suliman Sharif
+        'tainted_sexual_enhancements': TaintedSexualEnhancements,                        # Suliman Sharif
+        'salt': Salt,                                                                    # Suliman Sharif
+        'exsens_products': ExsensProducts,                                               # Rebecca Pinette-Dorin & Suliman Sharif
+        'fda_list_one': FDAListOne,                                                      # Mike Wostner & Suliman Sharif
+        'fda_list_two': FDAListTwo,                                                      # Mike Wostner & Suliman Sharif
+        'fda_list_three': FDAListThree,                                                  # Mike Wostner & Suliman Sharif
+        'fda_list_four': FDAListFour,                                                    # Mike Wostner & Suliman Sharif
+        'fda_list_five': FDAListFive,                                                    # Mike Wostner & Suliman Sharif
+        'fda_list_six': FDAListSix,                                                      # Mike Wostner & Suliman Sharif
+        'fda_list_seven': FDAListSeven,                                                  # Mike Wostner & Suliman Sharif
+        'constituents_of_cannabis_sativa': ConstituentsOfCannabisSativa,                 # Ian Jones & Bettina Lier & Suliman Sharif
+        'phytocannabinoids': PhytoCannabinoids,                                          # Ian Jones & Bettina Lier & Suliman Sharif
+        'cannabis_acids': CannabisAcids,                                                 # Suliman Sharif
+        'cannabis_alcohols': CannabisAlcohols,                                           # Suliman Sharif
+        'cannabis_aldehydes': CannabisAldehydes,                                         # Suliman Sharif
+        'cannabis_amino_acids': CannabisAminoAcids,                                      # Suliman Sharif
+        'cannabinoids': Cannabinoids,                                                    # Suliman Sharif
+        'cannabis_esters_and_lactones': CannabisEstersAndLactones,                       # Suliman Sharif
+        'cannabis_fatty_acids': CannabisFattyAcids,                                      # Suliman Sharif
+        'cannabis_flavanoid_glycosides': CannabisFlavanoidGlycosides,                    # Suliman Sharif
+        'cannabis_hydrocarbons': CannabisHydrocarbons,                                   # Suliman Sharif
+        'cannabis_ketones': CannabisKetones,                                             # Suliman Sharif
+        'cannabis_nitrogenous_compounds': CannabisNitrogenousCompounds,                  # Suliman Sharif
+        'non_cannabinoid_phenols': NonCannabinoidPhenols,                                # Suliman Sharif
+        'cannabis_pigments': CannabisPigments,                                           # Suliman Sharif
+        'cannabis_proteins_glycoproteins_enzymes': CannabisProteinsGlycoproteinsEnzymes, # Suliman Sharif
+        'cannabis_steroids': CannabisSteroids,                                           # Suliman Sharif
+        'cannabis_sugars': CannabisSugars,                                               # Suliman Sharif
+        'cannabis_terpenes': CannabisTerpenes,                                           # Suliman Sharif
+        'cannabis_vitamins': CannabisVitamins,                                           # Suliman Sharif
+        'organophosphorous_nerve_agents': OrganoPhosphorousNerveAgents,                  # Suliman Sharif
+        'organic_and_inorganic_bronsted_acids': OrganicAndInorganicBronstedAcids,        # Nathaniel McClean & Suliman Sharif
+        'chemicals_from_biomass': ChemicalsFromBioMass,                                  # Anthony Maiorana & Suliman Sharif
+        'drugs_from_snake_venom': DrugsFromSnakeVenom,                                   # Suliman Sharif
+        'oral_contraceptives': OralContraceptives,                                       # Suliman Sharif
+        'surfactants': Surfactants,                                                      # Yiling Nan & Suliman Sharif
+        'lanthipeptides': LanthiPeptides,                                                # Prabin Baral & Suliman Sharif
+        'alternative_jet_fuels': AlternativeJetFuels,                                    # Suliman Sharif
+        'common_regex_patterns': CommonRegexPatterns,                                    # Chris Burke & Suliman Sharif
+        'mango_phytocompounds': Mango,                                                   # Damilola Bodun & Sevien Schulhofff& Suliman Sharif
+        'mango_amino_acids': MangoAminoAcids,                                            # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mango_phenolic_acids': MangoPhenolicAcids,                                      # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mango_fatty_acids': MangoFattyAcids,                                            # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mango_vitamins': MangoVitamins,                                                 # Damilola Bodun & Sevien Schulhofff  & Suliman Sharif
+        'mango_flavonoids': MangoFlavonoids,                                             # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mma_compounds': MmaCompounds,                                                   # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
+        "water_based_coatings": WaterBasedCoatings,                                      # Vedant Menkudale 
+        "solvent_based_coatings": SolventBasedCoatings,                                  # Vedant Menkudale 
+        "thermoplastics" : Thermoplastics,                                               # Vedant Menkudale
+        "rubbers": Rubbers,                                                              # Vedant Menkudale
+        "natural_fibers" : Natural_Fibers,                                               # Vedant Menkudale
+        'flouropolymers': FluoroPolymers,                                                # Vedant Menkudale
+        "silicones" : Silicones,                                                         # Vedant Menkudale
+        "gin": Gin,                                                                       # Damilola Bodun & Suliman Shariff
+        "thai_spices": ThaiSpices,                                                        #
+        "thai_spices_flavonoids": ThaiSpicesFlavonoids                                  #
+     }
 
     __INCOMPLETE_NODES = {
         # 'named_reactions_in_organic_synthesis': NamedReactionsInOrganicSynthesis # Aziza Frank & Bettina Lier & Suliman Sharif

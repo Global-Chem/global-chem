@@ -8,6 +8,9 @@
 
 from global_chem.animals.snakes.drugs_from_snake_venom import DrugsFromSnakeVenom
 
+# Alcohol
+from global_chem.alcohol.gin.gin import Gin
+
 # Environment
 
 from global_chem.environment.alternative_jet_fuels import AlternativeJetFuels
@@ -31,6 +34,24 @@ from global_chem.warfare.organophosphorous_nerve_agents import OrganoPhosphorous
 
 from global_chem.medicinal_chemistry.cannabinoids.phytocannabinoids import PhytoCannabinoids
 from global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa import ConstituentsOfCannabisSativa
+from global_chem.medicinal_chemistry.cannabinoids.acids import CannabisAcids
+from global_chem.medicinal_chemistry.cannabinoids.alcohols import CannabisAlcohols
+from global_chem.medicinal_chemistry.cannabinoids.aldehydes import CannabisAldehydes
+from global_chem.medicinal_chemistry.cannabinoids.amino_acids import CannabisAminoAcids
+from global_chem.medicinal_chemistry.cannabinoids.cannabinoids import Cannabinoids
+from global_chem.medicinal_chemistry.cannabinoids.esters_and_lactones import CannabisEstersAndLactones
+from global_chem.medicinal_chemistry.cannabinoids.fatty_acids import CannabisFattyAcids
+from global_chem.medicinal_chemistry.cannabinoids.flavanoidglycosides import CannabisFlavanoidGlycosides
+from global_chem.medicinal_chemistry.cannabinoids.hydrocarbons import CannabisHydrocarbons
+from global_chem.medicinal_chemistry.cannabinoids.ketones import CannabisKetones
+from global_chem.medicinal_chemistry.cannabinoids.nitrogenous_compounds import CannabisNitrogenousCompounds
+from global_chem.medicinal_chemistry.cannabinoids.non_cannabinoids_phenols import NonCannabinoidPhenols
+from global_chem.medicinal_chemistry.cannabinoids.pigments import CannabisPigments
+from global_chem.medicinal_chemistry.cannabinoids.proteins_glycoproteins_enzymes import CannabisProteinsGlycoproteinsEnzymes
+from global_chem.medicinal_chemistry.cannabinoids.steroids import CannabisSteroids
+from global_chem.medicinal_chemistry.cannabinoids.sugars import CannabisSugars
+from global_chem.medicinal_chemistry.cannabinoids.terpenes import CannabisTerpenes
+from global_chem.medicinal_chemistry.cannabinoids.vitamins import CannabisVitamins
 
 # Medicinal Chemistry - International
 
@@ -76,6 +97,7 @@ from global_chem.food.color_additives.fda_list_six import FDAListSix
 from global_chem.food.color_additives.fda_list_seven import FDAListSeven
 
 
+
 # Narcotics
 
 from global_chem.narcotics.pihkal import Pihkal
@@ -89,6 +111,7 @@ from global_chem.narcotics.schedule_five import ScheduleFive
 # Interstellar Space
 
 from global_chem.interstellar_space.interstellar_space import InterstellarSpace
+from global_chem.interstellar_space.asteroid_ryugu import AsteroidRyugu
 
 # Biopharmaceutics - Excipients
 
@@ -106,9 +129,24 @@ from global_chem.sex.contraceptives.oral_contraceptives import OralContraceptive
 
 from global_chem.skin.transdermal_and_dermal_delivery.surfactants import Surfactants
 
+# Spice
+from global_chem.spices.thai.thai_all import ThaiSpices
+from global_chem.spices.thai.flavonoids import ThaiSpicesFlavonoids
+
 # Peptides
 
 from global_chem.peptides.lanthipeptides import LanthiPeptides
+
+# Polymers
+
+from global_chem.materials.polymers.water_based_coatings import WaterBasedCoatings
+from global_chem.materials.polymers.solvent_based_coatings import SolventBasedCoatings
+from global_chem.materials.polymers.thermoplastics import Thermoplastics
+from global_chem.materials.polymers.rubbers import Rubbers
+from global_chem.materials.polymers.natural_fibers import Natural_Fibers
+from global_chem.materials.polymers.fluoropolymers import FluoroPolymers
+from global_chem.materials.polymers.silicones import Silicones
+
 
 # Miscellaneous
 
