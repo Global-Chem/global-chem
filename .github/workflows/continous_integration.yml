@@ -4,7 +4,7 @@ on: [pull_request, push, workflow_dispatch]
 
 jobs:
   test:
-    runs-on: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }} 
     strategy:
       fail-fast: true
       matrix:
