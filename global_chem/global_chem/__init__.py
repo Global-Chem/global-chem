@@ -94,6 +94,15 @@ from global_chem.food.color_additives.fda_list_six import FDAListSix
 from global_chem.food.color_additives.fda_list_seven import FDAListSeven
 
 
+# Mango
+
+from global_chem.food.fruits.mango.constituents_of_mango import Mango
+from global_chem.food.fruits.mango.phenolicacids import MangoPhenolicAcids
+from global_chem.food.fruits.mango.vitamins import MangoVitamins
+from global_chem.food.fruits.mango.fattyacids import MangoFattyAcids
+from global_chem.food.fruits.mango.mango_amino_acids import MangoAminoAcids
+from global_chem.food.fruits.mango.flavonoids import MangoFlavonoids
+
 # Narcotics
 
 from global_chem.narcotics.schedule_one import ScheduleOne

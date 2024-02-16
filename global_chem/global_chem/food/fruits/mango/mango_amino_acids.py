@@ -2,7 +2,7 @@ class MangoAminoAcids(object):
 
     def __init__(self):
 
-        self.name = 'mango_Amino_acids'
+        self.name = 'mango_amino_acids'
 
     @staticmethod
     def get_smiles():
@@ -30,3 +30,13 @@ class MangoAminoAcids(object):
         }
 
         return smiles
+
+
+    @staticmethod
+    def get_smarts():
+
+      smarts = {
+              
+          }
+      
+      return smarts
