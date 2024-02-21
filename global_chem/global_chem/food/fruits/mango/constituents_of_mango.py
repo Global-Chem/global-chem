@@ -97,7 +97,7 @@ class Mango(object):
         'sabinene': 'CC(C)C12CCC(=C)C1C2',
         'carene': 'CC1=CCC2C(C1)C2(C)C',
         'cis-caryophyllene': r'C/C/1=C/CCC(=C)[C@H]2CC([C@@H]2CC1)(C)C',
-        'αlpha humulene': '',
+        'αlpha humulene': r'C/C/1=C\CC(/C=C/C/C(=C/CC1)/C)(C)C',
         'germacrene d': r'C/C/1=C\CCC(=C)/C=C/[C@@H](CC1)C(C)C ',
         'aromadendrene': 'CC1CCC2C1C3C(C3(C)C)CCC2=C',
         'beta cubebene': 'C[C@@H]1CC[C@H]([C@H]2[C@]13[C@@H]2C(=C)CC3)C(C)C',
