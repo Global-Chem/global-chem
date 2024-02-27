@@ -5,7 +5,7 @@ Global Chem is a public dictionary of common chemical lists using the Common Che
 Global-Chem serves as an open source platform where writing the molecules directly allows for the name to not be ambiguous to what a chemical is is anymore and allows for full transparency.
 
 Our hope is this repository serves as a base for the population to govern how the chemicals we use in things like Food, Clothing, Environment, Materials, Drugs, War and a lot more are beneficial for all of us.
-Our hope is this repository serves as a base for the population to govern how the chemicals we use in things like Food, Clothing, Environment, Materials, Drugs, War and a lot more are beneficial for all of us.
+
 
 #### Links
 
