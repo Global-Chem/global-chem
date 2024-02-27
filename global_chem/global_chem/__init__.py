@@ -112,8 +112,19 @@ from global_chem.food.fruits.mango.mango_phenolic_acids import MangoPhenolicAcid
 from global_chem.food.fruits.mango.mango_vitamins import MangoVitamins
 from global_chem.food.fruits.mango.mango_amino_acids import MangoAminoAcids
 
+# Mango
+
+from global_chem.food.fruits.mango.constituents_of_mango import Mango
+from global_chem.food.fruits.mango.phenolicacids import MangoPhenolicAcids
+from global_chem.food.fruits.mango.vitamins import MangoVitamins
+from global_chem.food.fruits.mango.fattyacids import MangoFattyAcids
+from global_chem.food.fruits.mango.mango_amino_acids import MangoAminoAcids
+from global_chem.food.fruits.mango.flavonoids import MangoFlavonoids
+
 # Narcotics
 
+from global_chem.narcotics.pihkal import Pihkal
+from global_chem.narcotics.black_market import BlackMarket
 from global_chem.narcotics.schedule_one import ScheduleOne
 from global_chem.narcotics.schedule_two import ScheduleTwo
 from global_chem.narcotics.schedule_three import ScheduleThree

@@ -35,3 +35,13 @@ class MangoAminoAcids(object):
         }
 
         return smiles
+
+
+    @staticmethod
+    def get_smarts():
+
+      smarts = {
+              
+          }
+      
+      return smarts

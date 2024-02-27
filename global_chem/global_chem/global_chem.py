@@ -133,6 +133,7 @@ from global_chem.food.fruits.mango.mango_amino_acids import MangoAminoAcids
 # Narcotics
 
 from global_chem.narcotics.pihkal import Pihkal
+from global_chem.narcotics.black_market import BlackMarket
 from global_chem.narcotics.schedule_one import ScheduleOne
 from global_chem.narcotics.schedule_two import ScheduleTwo
 from global_chem.narcotics.schedule_three import ScheduleThree

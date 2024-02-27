@@ -5,15 +5,17 @@ Global Chem is a public dictionary of common chemical lists using the Common Che
 Global-Chem serves as an open source platform where writing the molecules directly allows for the name to not be ambiguous to what a chemical is is anymore and allows for full transparency.
 
 Our hope is this repository serves as a base for the population to govern how the chemicals we use in things like Food, Clothing, Environment, Materials, Drugs, War and a lot more are beneficial for all of us.
+Our hope is this repository serves as a base for the population to govern how the chemicals we use in things like Food, Clothing, Environment, Materials, Drugs, War and a lot more are beneficial for all of us.
 
 #### Links
 
 - Demo https://colab.research.google.com/drive/1HaDvAYpaX0_2Eqx1NSl5uJTRkE_0na-L?usp=sharing
+- Demo https://colab.research.google.com/drive/1HaDvAYpaX0_2Eqx1NSl5uJTRkE_0na-L?usp=sharing
 
-- Documentation: https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/
+- Software Documentation: https://globalchem.gitbook.io/globalchem-your-chemical-graph-network/
+- Generative Chemical AI Documentation: https://globalchem.gitbook.io/mother-nature/
 
-- Join Our Community: https://discord.gg/global-chem
-
+- Join Our Community: https://discord.gg/xygRVwNZP8
 
 <p align="center">
 <img width="800" alt="Screen Shot 2022-07-16 at 5 29 41 PM" src="https://user-images.githubusercontent.com/11812946/179372564-c286b115-af14-4ad8-a37f-0a216297b6c1.png">
@@ -21,12 +23,21 @@ Our hope is this repository serves as a base for the population to govern how th
 
 Just with no dependencies, intialize the class and there you go! All the common and rare groups of the world
 at your disposal.
+at your disposal.
 
 Overview
 ========
 
 ## GlobalChem
 
+#### - Introduction
+
+| Demo | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HaDvAYpaX0_2Eqx1NSl5uJTRkE_0na-L?usp=sharing) |
+|-|-|
+| Docs | [![Documentation](https://img.shields.io/badge/GitBook-Docu-lightblue)](https://sulstice.gitbook.io/globalchem-your-chemical-graph-network/) |
+| Chat | [![Discord](https://img.shields.io/discord/996592811887579317.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/dK2agwXSE7) |
+
+#### - Validation
 #### - Validation
 
 |[![saythanks](https://img.shields.io/badge/RDKit-100%25-fg49b4.svg)](https://www.rdkit.org/)| [![saythanks](https://img.shields.io/badge/PartialSMILES-85.7%25-fg49b4.svg)](https://github.com/baoilleach/partialsmiles) | [![saythanks](https://img.shields.io/badge/DeepSMILES-99.25%25-lm89b5.svg)](https://github.com/baoilleach/deepsmiles) | [![saythanks](https://img.shields.io/badge/SELFIES-100%25-lm89b5.svg)](https://github.com/aspuru-guzik-group/selfies) | [![saythanks](https://img.shields.io/badge/MolVS-98.5%25-lm89b5.svg)](https://github.com/mcs07/MolVS) | [![saythanks](https://img.shields.io/badge/PySMILES-99.8%25-fg49b4.svg)](https://github.com/pckroon/pysmiles) |
@@ -54,7 +65,7 @@ Overview
 
 #### Regulatory Compliance
 
-| [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/6399/badge)](https://bestpractices.coreinfrastructure.org/projects/6399) | [![fair-software.eu](https://img.shields.io/badge/fair--software.eu-%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8B-yellow)](https://fair-software.eu) |
+| [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/6399/badge)](https://bestpractices.coreinfrastructure.org/projects/6399) | [![fair-software.eu](https://img.shields.io/badge/fair--software.eu-%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8F-green)](https://fair-software.eu) |
 |-|-|
 
 #### - GlobalChemExtensions
@@ -72,6 +83,7 @@ Overview
 | quantum_chemistry      | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1BGLQphP1IMLndeyavHM_6_qXQJI_7gFU?usp=sharing) | Plot Quantum Theory and Basis Set versuses the Hamiltonian of small molecules | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11JGsen912TmyR5Dds-Opon5cRkrtVoT7?usp=sharing) |
 | development_operations | [![Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1v_yXPXPilbWUZGkel_yekBr3EFnIUNUL?usp=sharing) |
 
+Installation
 Installation
 ============
 
@@ -110,6 +122,7 @@ GlobalChem
 ### Nodes Contributors
 
 
+Please follow the node contribution guidelines if you would like to elect your own or someone elses.
 Please follow the node contribution guidelines if you would like to elect your own or someone elses.
 
 ```
@@ -159,6 +172,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 'organophosphorous_nerve_agents': OrganoPhosphorousNerveAgents,           # Suliman Sharif
 'organic_and_inorganic_bronsted_acids': OrganicAndInorganicBronstedAcids, # Nathaniel McClean & Suliman Sharif
 'chemicals_from_biomass': ChemicalsFromBioMass,                           # Anthony Maiorana & Suliman Sharif
+'chemicals_from_biomass': ChemicalsFromBioMass,                           # Anthony Maiorana & Suliman Sharif
 'salt': Salt,                                                             # Suliman Sharif
 'drugs_from_snake_venom': DrugsFromSnakeVenom,                            # Suliman Sharif
 'oral_contraceptives': OralContraceptives,                                # Suliman Sharif
@@ -177,6 +191,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 'thai_ginger_phenolics': ThaiGingerPhenolics,                             # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
 'thai_ginger_polysaccharides': ThaiGingerPolysaccharides,                 # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
 'thai_ginger_terpenoids': ThaiGingerTerpenoids                            # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
+'mango_phytocompounds': MangoPhytoCompounds,                              # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
 ```
 
 | Chemical List                       | # of Entries | References                                                                                                                                                                                                                                                                                                          |
@@ -248,6 +263,8 @@ GlobalChemExtensions
 ====================
 
 Installation
+
+Installation
 ============
 
 GlobalChemExtensions is going to be distribute via PyPi as saperate modules and as the tree and it's extensions grows we can expand it to other pieces of software
@@ -266,6 +283,9 @@ pip install 'global-chem[development_operations]'
 pip install 'global-chem[all]'
 
 ```
+
+Quickstart
+==========
 
 Quickstart
 ==========
@@ -312,6 +332,7 @@ A Variety of Tools are available for you to browse and analyze data and with the
 | Principal Component Analysis    | GlobalChem can readily interpret SMILES, fingerprint, cluster and apply PCA analysis user can tweak parameters          | cheminformatics |
 | Drug Design Filters             | GlobalChem can filter compounds based on Common Drug Design Filtering Rules                                            | cheminformatics       |
 | Deep Layer Scatter Analysis     | To visualize relations between sets of molecules, GlobalChem offers a parallel coordinate diagram generation            | cheminformatics |
+| Deep Layer Scatter Analysis     | To visualize relations between sets of molecules, GlobalChem offers a parallel coordinate diagram generation            | cheminformatics |
 | Sunbursting Radial Analysis     | GlobalChem offers a sunbursting mechanism to allow uses to observe how sets of compounds relate to the common set      | cheminformatics |
 | Graphing Templates              | GlobalChem offers graphing templates to aid in faster data analysis, currently the only offer is Plotly               | cheminformatics |
 | CGenFF Dissimilarity Score      | GlobalChem can offer the difference between two molecules based on their Atom Types                                     | forcefields       |
@@ -344,6 +365,7 @@ and potentially "configurable". `GlobalChem` testing comes from within, the docu
 for functionality because that is what the users will test the most since we rely on open source. A continous integration (CI)
 system is also built concomitantly to serve as basic functionality testing of the `GlobalChem` graph network. The Data stored
 is maintained by experts in the field but subject to change based on community feedback if an error is found.
+is maintained by experts in the field but subject to change based on community feedback if an error is found.
 
 - **Audit Trail:** `GlobalChem` is version controlled with `Git` and hosted on Microsoft's platform `Github`. `GlobalChem` follows a semantic
 versioning control of the schema `X1.X2.X3`: `X1` marks formal stable releases with tests and docuementation and mean
@@ -362,7 +384,11 @@ can be exported into Portable Data Format (PDF) appropiate for FDA submission.
 
 - **Record Retention:** `GlobalChem` has a record of the documentation versioned controlled to a unique id (UUID) that serves as it's identifier
 for each iteration stored on `Gitbook`. Each version is stored as markdown files and be converted to PDF, if needed.
+for each iteration stored on `Gitbook`. Each version is stored as markdown files and be converted to PDF, if needed.
 
+`GlobalChem` has a Mozilla Public License version 2.0. `GlobalChem` allows you to use the software in your larger work and
+extend it with modifications if you wish. The contingency is that if you install `GlobalChem` and release new software
+then you must follow the same principles installed in our license for the open source community.
 `GlobalChem` has a Mozilla Public License version 2.0. `GlobalChem` allows you to use the software in your larger work and
 extend it with modifications if you wish. The contingency is that if you install `GlobalChem` and release new software
 then you must follow the same principles installed in our license for the open source community.
@@ -370,6 +396,7 @@ then you must follow the same principles installed in our license for the open s
 Data Collection
 ===============
 
+References and associatied compound lists are selected based on the interests of the scientific contributors.  This should include consideration of relevance to the scientific community.
 References and associatied compound lists are selected based on the interests of the scientific contributors.  This should include consideration of relevance to the scientific community.
 The SMILES strings may be abstracted in a variety of methods:
 
@@ -383,6 +410,7 @@ Note that some of the names may be modified based on human inspection in favor o
 
 - For polymer papers, the site points were omitted from the name and some of the nomenclature adjusted for preferred names
 over traditional. For example: 'yl' to mark site points for polymer connections was removed in favor of reduced english complexity.
+over traditional. For example: 'yl' to mark site points for polymer connections was removed in favor of reduced english complexity.
 
 - In the case of radicals, some SMILES were adjusted to remove the radical chemical feature as they serve as connection points. However in some cases the radical component was maintained, especially in the case of IUPAC blue book common substituents.
 
@@ -392,5 +420,6 @@ over traditional. For example: 'yl' to mark site points for polymer connections 
 
 Licensing
 =========
+
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FSulstice%2Fglobal-chem?ref=badge_large)
