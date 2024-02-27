@@ -48,24 +48,24 @@ from global_chem.education.cengage.organic_and_inorganic_bronsted_acids import O
 
 from global_chem.medicinal_chemistry.cannabinoids.phytocannabinoids import PhytoCannabinoids
 from global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa import ConstituentsOfCannabisSativa
-from global_chem.medicinal_chemistry.cannabinoids.acids import CannabisAcids
-from global_chem.medicinal_chemistry.cannabinoids.alcohols import CannabisAlcohols
-from global_chem.medicinal_chemistry.cannabinoids.aldehydes import CannabisAldehydes
-from global_chem.medicinal_chemistry.cannabinoids.amino_acids import CannabisAminoAcids
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_acids import CannabisAcids
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_alcohols import CannabisAlcohols
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_aldehydes import CannabisAldehydes
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_amino_acids import CannabisAminoAcids
 from global_chem.medicinal_chemistry.cannabinoids.cannabinoids import Cannabinoids
-from global_chem.medicinal_chemistry.cannabinoids.esters_and_lactones import CannabisEstersAndLactones
-from global_chem.medicinal_chemistry.cannabinoids.fatty_acids import CannabisFattyAcids
-from global_chem.medicinal_chemistry.cannabinoids.flavanoidglycosides import CannabisFlavanoidGlycosides
-from global_chem.medicinal_chemistry.cannabinoids.hydrocarbons import CannabisHydrocarbons
-from global_chem.medicinal_chemistry.cannabinoids.ketones import CannabisKetones
-from global_chem.medicinal_chemistry.cannabinoids.nitrogenous_compounds import CannabisNitrogenousCompounds
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_esters_and_lactones import CannabisEstersAndLactones
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_fatty_acids import CannabisFattyAcids
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_flavanoidglycosides import CannabisFlavanoidGlycosides
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_hydrocarbons import CannabisHydrocarbons
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_ketones import CannabisKetones
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_nitrogenous_compounds import CannabisNitrogenousCompounds
 from global_chem.medicinal_chemistry.cannabinoids.non_cannabinoids_phenols import NonCannabinoidPhenols
-from global_chem.medicinal_chemistry.cannabinoids.pigments import CannabisPigments
-from global_chem.medicinal_chemistry.cannabinoids.proteins_glycoproteins_enzymes import CannabisProteinsGlycoproteinsEnzymes
-from global_chem.medicinal_chemistry.cannabinoids.steroids import CannabisSteroids
-from global_chem.medicinal_chemistry.cannabinoids.sugars import CannabisSugars
-from global_chem.medicinal_chemistry.cannabinoids.terpenes import CannabisTerpenes
-from global_chem.medicinal_chemistry.cannabinoids.vitamins import CannabisVitamins
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_pigments import CannabisPigments
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_proteins_glycoproteins_enzymes import CannabisProteinsGlycoproteinsEnzymes
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_steroids import CannabisSteroids
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_sugars import CannabisSugars
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_terpenes import CannabisTerpenes
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_vitamins import CannabisVitamins
 
 # Medicinal Chemistry - International
 
@@ -111,19 +111,24 @@ from global_chem.food.color_additives.fda_list_five import FDAListFive
 from global_chem.food.color_additives.fda_list_six import FDAListSix
 from global_chem.food.color_additives.fda_list_seven import FDAListSeven
 
+# Food / Spices / Thai Ginger
 
+from global_chem.food.spices.thai_ginger.thai_ginger_cyclic_dipeptides import ThaiGingerCyclicDipeptides
+from global_chem.food.spices.thai_ginger.thai_ginger_diaryl_heptanoids import ThaiGingerDiarylHeptanoids
+from global_chem.food.spices.thai_ginger.thai_ginger_fatty_acids_and_esters import ThaiGingerFattyAcidsAndEsters
+from global_chem.food.spices.thai_ginger.thai_ginger_flavonoids import ThaiGingerFlavonoids
+from global_chem.food.spices.thai_ginger.thai_ginger_phenolics import ThaiGingerPhenolics
+from global_chem.food.spices.thai_ginger.thai_ginger_polysaccharides import ThaiGingerPolysaccharides
+from global_chem.food.spices.thai_ginger.thai_ginger_terpenoids import ThaiGingerTerpenoids
 
 # Food/Fruits/Mango
 
-
-from global_chem.food.fruits.mango.constituents_of_mango import Mango
-from global_chem.food.fruits.mango.fattyacids import MangoFattyAcids
-from global_chem.food.fruits.mango.flavonoids import MangoFlavonoids
-from global_chem.food.fruits.mango.phenolicacids import MangoPhenolicAcids
-from global_chem.food.fruits.mango.vitamins import MangoVitamins
+from global_chem.food.fruits.mango.mango_phytocompounds import MangoPhytocompounds
+from global_chem.food.fruits.mango.mango_fatty_acids import MangoFattyAcids
+from global_chem.food.fruits.mango.mango_flavonoids import MangoFlavonoids
+from global_chem.food.fruits.mango.mango_phenolic_acids import MangoPhenolicAcids
+from global_chem.food.fruits.mango.mango_vitamins import MangoVitamins
 from global_chem.food.fruits.mango.mango_amino_acids import MangoAminoAcids
-
-
 
 # Narcotics
 
@@ -467,7 +472,7 @@ class GlobalChem(object):
         'cannabinoids': Cannabinoids,                                                    # Suliman Sharif
         'cannabis_esters_and_lactones': CannabisEstersAndLactones,                       # Suliman Sharif
         'cannabis_fatty_acids': CannabisFattyAcids,                                      # Suliman Sharif
-        'cannabis_flavanoid_glycosides': CannabisFlavanoidGlycosides,                    # Suliman Sharif
+        'cannabis_flavanoidglycosides': CannabisFlavanoidGlycosides,                    # Suliman Sharif
         'cannabis_hydrocarbons': CannabisHydrocarbons,                                   # Suliman Sharif
         'cannabis_ketones': CannabisKetones,                                             # Suliman Sharif
         'cannabis_nitrogenous_compounds': CannabisNitrogenousCompounds,                  # Suliman Sharif
@@ -487,12 +492,19 @@ class GlobalChem(object):
         'lanthipeptides': LanthiPeptides,                                                # Prabin Baral & Suliman Sharif
         'alternative_jet_fuels': AlternativeJetFuels,                                    # Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                                    # Chris Burke & Suliman Sharif
-        'mango_phytocompounds': Mango,                                                   # Damilola Bodun & Sevien Schulhofff
-        'mango_amino_acids': MangoAminoAcids,                                            # Damilola Bodun & Sevien Schulhofff
-        'mango_phenolic_acids': MangoPhenolicAcids,                                      # Damilola Bodun & Sevien Schulhofff
-        'mango_fatty_acids': MangoFattyAcids,                                            # Damilola Bodun & Sevien Schulhofff
-        'mango_vitamins': MangoVitamins,                                                 # Damilola Bodun & Sevien Schulhofff
-        'mango_flavonoids': MangoFlavonoids                                              # Damilola Bodun & Sevien Schulhofff  
+        'mango_phytocompounds': MangoPhytocompounds,                                     # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mango_amino_acids': MangoAminoAcids,                                            # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mango_phenolic_acids': MangoPhenolicAcids,                                      # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mango_fatty_acids': MangoFattyAcids,                                            # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mango_vitamins': MangoVitamins,                                                 # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'mango_flavonoids': MangoFlavonoids,                                             # Damilola Bodun & Sevien Schulhofff & Suliman Sharif
+        'thai_ginger_cyclic_dipeptides': ThaiGingerCyclicDipeptides,                     # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
+        'thai_ginger_diaryl_heptanoids': ThaiGingerDiarylHeptanoids,                     # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
+        'thai_ginger_fatty_acids_and_esters': ThaiGingerFattyAcidsAndEsters,             # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
+        'thai_ginger_flavonoids': ThaiGingerFlavonoids,                                  # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
+        'thai_ginger_phenolics': ThaiGingerPhenolics,                                    # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
+        'thai_ginger_polysaccharides': ThaiGingerPolysaccharides,                        # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
+        'thai_ginger_terpenoids': ThaiGingerTerpenoids                                   # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
     }
 
     __INCOMPLETE_NODES = {
