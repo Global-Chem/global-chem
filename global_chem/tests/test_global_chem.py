@@ -151,13 +151,8 @@ def test_fetch_smiles_by_iupac():
     gc = GlobalChem()
     definition = gc.get_smiles_by_iupac(
         'benzene',
-        return_network_path=False,          # Return the last found network path
-        return_all_network_paths=True,      # Return all the found network paths
     )
-
-    keys = list(definition.keys())
-
-    assert 'C1=CC=CC=C1' in keys
+    assert 'benzene' in definition
 
 def test_compute_common_score():
 

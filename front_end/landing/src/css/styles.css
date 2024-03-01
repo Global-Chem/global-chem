@@ -1,0 +1,50 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;  
+}
+
+.main-button{
+    color: #d2f4ea;
+    font-weight: bold;
+    border: 1px solid #d2f4ea;
+}
+
+.main-button:hover{
+    color: white;
+    border: 1px solid white;
+}
+
+.control{
+    color: white;
+    width: 50em;
+    height: 12em;
+    border: 1px solid white;
+    margin: 0 auto;
+}
+
+.main-content{
+    z-index: 1000;
+    position: relative;
+}
+
+.section{
+    position: absolute;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 15em;
+}
+
+.wrapper{
+    position: relative;
+}
+
+.white{
+    color: white;
+}

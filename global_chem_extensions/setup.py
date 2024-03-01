@@ -32,11 +32,12 @@ if os.path.exists('README.md'):
 else:
     long_description = 'GlobalChemExtensions - Your Extension functionality for GlobalChem'
 
+
 # exec
 # ----
 setup(
     name="global_chem_extensions",
-    version="0.9.9.9.9.3",
+    version="1.0.2",
     packages=find_packages(),
     license='MPL 2.0',
     author="Suliman Sharif",
@@ -47,7 +48,8 @@ setup(
         'cheminformatics': [
             'partialsmiles', 'pysmiles', 'deepsmiles',
             'selfies', 'molvs', 'flask', 'plotly', 'kaleido',
-            'bokeh', 'molpdf', 'dimorphite_dl'
+            'bokeh', 'molpdf', 'dimorphite_dl',
+            'scaffoldgraph'
         ],
         'bioinformatics': [
             'biopython', 'dna_features_viewer', 'biopandas',
@@ -59,8 +61,7 @@ setup(
             'rdkit-pypi', 'partialsmiles', 'pysmiles', 'deepsmiles',
             'selfies', 'molvs'
         ],
-        'graphing': ['plotly']
-
+        'graphing': ['plotly'],
     },
     long_description=long_description,
     long_description_content_type='text/markdown',

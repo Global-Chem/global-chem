@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+    font-family: Sans-serif;
+    margin: 0;
+}
+
+
+.background{
+    color: #999999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+
+.toggle-data-btn {
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+.toggle-data-btn:hover {
+    opacity: 1;
+}
+
+#graph-data-description {
+    font-size: 12px;
+    color: slategrey;
+}

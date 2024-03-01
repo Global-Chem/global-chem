@@ -25,7 +25,7 @@ class DevelopmentOperations(object):
         self.name = 'development_operations'
 
     @staticmethod
-    def check_status_on_open_source_databases():
+    def check_status_on_open_source_cheminformatic_databases():
 
         '''
 
@@ -40,6 +40,26 @@ class DevelopmentOperations(object):
         from global_chem_extensions.development_operations.applications.database_monitor import DatabaseMonitor
 
         database_monitor = DatabaseMonitor()
+        statuses, failures = database_monitor.heartbeat()
+
+        return statuses, failures
+
+    @staticmethod
+    def check_status_on_open_source_bacteria_databases():
+
+        '''
+
+        Check the Status on Databases
+
+        Returns:
+            statuses (Dict): Dictionary key of each of the statuses of the databases - error codes
+            faliures (Dict): Dictionary key of the each of the faliures of the databases -  error codes
+
+        '''
+
+        from global_chem_extensions.development_operations.applications.database_monitor import DatabaseMonitor
+
+        database_monitor = DatabaseMonitor(choice ='bacteria')
         statuses, failures = database_monitor.heartbeat()
 
         return statuses, failures

@@ -8,6 +8,7 @@ import sys
 
 # Scientific Imports
 # ------------------
+import pandas as pd
 import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
@@ -33,7 +34,14 @@ from bokeh.layouts import gridplot
 # --------------
 
 TOOLTIPS = """<div>\nMolID: @ids<br>\n@img{safe}\n</div>\n"""
-colormaps = { 0: '#e6194b', 1: '#3cb44b',  2: '#ffe119', 3: '#4363d8', 4: '#f58231',  5: '#911eb4'}
+colormaps = {
+    0: '#e6194b',
+    1: '#3cb44b',
+    2: '#ffe119',
+    3: '#4363d8',
+    4: '#f58231',
+    5: '#911eb4'
+}
 
 class PCAAnalysis(object):
 
@@ -47,8 +55,16 @@ class PCAAnalysis(object):
                  number_of_components,
                  random_state,
                  file_name,
+                 principal_component_x,
+                 principal_component_y,
+                 x_axis_label,
+                 y_axis_label,
+                 plot_width ,
+                 plot_height,
+                 title,
                  save_file = False,
                  return_mol_ids = False,
+                 save_principal_components = False,
         ):
 
         self.smiles_list = smiles_list
@@ -59,7 +75,15 @@ class PCAAnalysis(object):
         self.random_state = random_state
         self.file_name = file_name
         self.save_file = save_file
+        self.save_principal_components = save_principal_components
         self.return_mol_ids = return_mol_ids
+        self.principal_component_x = principal_component_x
+        self.principal_component_y = principal_component_y
+        self.x_axis_label = x_axis_label
+        self.y_axis_label = y_axis_label
+        self.plot_width = plot_width
+        self.plot_height = plot_height
+        self.title = title
 
         self.plot_mappings = {}
 
@@ -124,18 +148,37 @@ class PCAAnalysis(object):
 
             self.plot_mappings[str(i)] = self.smiles_list[i]
 
-
         kmean_data = dict(
-            x=chemicalspace[:,0],
-            y=chemicalspace[:,2],
+
+            PCX = chemicalspace[:,self.principal_component_x],
+            PCY = chemicalspace[:,self.principal_component_y],
+
             img=[PCAAnalysis.mol2svg(m) for m in molecules_list],
             ids=[str(i) for i in range(0, len(self.smiles_list))],
             fill_color=kmeanc,
         )
 
+        ds= {
+            'cols': [
+                'ids','PCX','PCY','fill_color'
+            ]
+        }
+
+        principal_component_df =pd.DataFrame(kmean_data)
+        principal_component_df = principal_component_df[ds['cols']]
+        principal_component_df['smiles'] = self.smiles_list
+
         source = ColumnDataSource(kmean_data)
-        plot = figure(plot_width=1000, plot_height=1000, tooltips=TOOLTIPS, title='Compounds')
-        plot.circle('x', 'y',color='fill_color', size=10, fill_alpha=0.2,source=source)
+
+        plot = figure(
+            plot_width = self.plot_width,
+            plot_height = self.plot_height,
+            tooltips = TOOLTIPS,
+            title = self.title,
+            x_axis_label = self.x_axis_label,
+            y_axis_label = self.y_axis_label,
+        )
+        plot.circle('PCX','PCY', color='fill_color', size=10, fill_alpha=0.2, source=source)
 
         plot = gridplot([
             [plot]
@@ -143,12 +186,15 @@ class PCAAnalysis(object):
 
         if self.save_file:
 
-            output_file(filename=self.file_name, title="Static HTML file")
+            output_file(filename=(self.file_name + ".html"), title="Static HTML file")
             save(plot)
 
         else:
             output_notebook()
             show(plot)
+            
+        if self.save_principal_components:
+            principal_component_df.to_csv((self.file_name + ".tsv"), sep="\t", index=False)
 
         if self.return_mol_ids:
             return self.plot_mappings

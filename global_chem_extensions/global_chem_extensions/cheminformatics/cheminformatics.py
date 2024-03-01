@@ -36,11 +36,16 @@ class ChemInformatics(object):
             smiles_list (String): list of smiles strings to analyze
             save_file (Boolean): whether the user would like it as a file
 
+        Returns:
+            sunburster_object (Sunburster Object): Sunburster Object
+
         '''
 
         from global_chem_extensions.cheminformatics.applications.sunburster import Sunburster
 
-        Sunburster(smiles_list, save_file)
+        sunburster_object = Sunburster(smiles_list, save_file)
+
+        return sunburster_object
 
 
     @staticmethod
@@ -52,8 +57,16 @@ class ChemInformatics(object):
             number_of_components = 0.95,
             random_state = 0,
             file_name = 'pca_analysis.html',
+            principal_component_x = 0,
+            principal_component_y = 1,
+            x_axis_label = 'PC1',
+            y_axis_label = 'PC2',
+            plot_width = 1000,
+            plot_height = 1000,
+            title = 'Principal Component Analysis on SMILES',
             save_file = False,
             return_mol_ids = False,
+            save_principal_components = False,
     ):
 
         '''
@@ -61,6 +74,7 @@ class ChemInformatics(object):
         Perform a pca analysis on a node within globalchem, can be extended to lists outside of the dedicated SMILES.
 
         Arguments:
+
             smiles_list (List): list of SMILES that the user wants to cluster
             morgan_radius (Int): Morgan Radius of the chemical environment
             bit_representation (Int): Length of the bit representation
@@ -70,6 +84,14 @@ class ChemInformatics(object):
             file_name (String): file name the user would like to input
             save_file (Bool): Whether the user wants to display the plot or save it.
             return_mol_ids (Bool): Return the molecule IDS for the user to mine.
+            principal_component_x (Int): Principal Component X on the x-axis that could be PC1 or PC2 or another vector
+            principal_component_y (Int): Principal Component Y on the y-axis that could be PC1 or PC2 or another vector.
+            x_axis_label (String): X Axis Label of the Plot
+            y_axis_label (String): Y Axis Label of the Plot
+            plot_width (Int): Width of the plot with default being 1000
+            plot_height (Int): height of the plot
+            title (String): Title of the plot
+            save_principal_components (Bool): save the principal components into a TSV.
 
         '''
 
@@ -83,8 +105,16 @@ class ChemInformatics(object):
             number_of_components,
             random_state,
             file_name,
+            principal_component_x,
+            principal_component_y,
+            x_axis_label,
+            y_axis_label,
+            plot_width,
+            plot_height,
+            title,
             save_file=save_file,
-            return_mol_ids = return_mol_ids
+            return_mol_ids = return_mol_ids,
+            save_principal_components = save_principal_components
         )
 
         return_mol_ids = pca_analysis.conduct_analysis()
@@ -447,3 +477,61 @@ class ChemInformatics(object):
         )
 
         return visualizer.get_image()
+
+    @staticmethod
+    def create_scaffold_graph(node_key, verbose=False):
+
+        '''
+
+        Create a Scaffold Graph of a Node Key
+
+        Arguments:
+            node_key (String): The Node Key
+            verbose (Bool): Verbose flag
+
+        Returns:
+            gc_sg_adapter (Object): Adapter Object
+
+        '''
+
+        from global_chem_extensions.cheminformatics.applications.scaffold_graph import ScaffoldGraphAdapter
+
+        gc_sg_adapter = ScaffoldGraphAdapter(
+            node_key,
+            verbose=verbose
+        )
+
+        return gc_sg_adapter
+
+    def get_sexual_enhancement_tainted_products(self):
+
+        '''
+
+        Fetch the Sexual Enhacement tainted products.
+
+        '''
+
+        from global_chem_extensions.cheminformatics.applications.sexual_enhancements import TaintedSexualProducts
+
+        tainted_sexual_products = TaintedSexualProducts()
+
+        tp = tainted_sexual_products.fetch_brands()
+
+        return tp
+
+    def get_decoder_engine(self):
+
+        '''
+
+        Retrieve the GlobalChem Decoder Engine
+
+        Returns:
+            decoder_engine (Object): DecoderEngine object used for the user.
+
+        '''
+
+        from global_chem_extensions.cheminformatics.applications.decoder_engine import DecoderEngine
+
+        decoder_engine = DecoderEngine()
+
+        return decoder_engine

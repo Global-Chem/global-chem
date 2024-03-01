@@ -5,14 +5,29 @@
 # -----------------------------------
 
 # Base Imports
+# ------------
 
+import re
 import os
 import sys
 import os.path
 import pprint
+from functools import lru_cache
+
+# Reconfigurations
+# ----------------
+
+if os.name == 'nt':
+    sys.stdin.reconfigure(encoding='utf-8')
+    sys.stdout.reconfigure(encoding='utf-8')
+
+# Animals
+
+from global_chem.animals.snakes.drugs_from_snake_venom import DrugsFromSnakeVenom
 
 # Environment
 
+from global_chem.environment.chemicals_from_biomass import ChemicalsFromBioMass
 from global_chem.environment.emerging_perfluoroalkyls import EmergingPerFluoroAlkyls
 
 # Materials
@@ -20,13 +35,26 @@ from global_chem.environment.emerging_perfluoroalkyls import EmergingPerFluoroAl
 from global_chem.materials.clay.montmorillonite_adsorption import MontmorilloniteAdsorption
 from global_chem.materials.polymers.common_monomer_repeating_units import CommonMonomerRepeatingUnits
 
-# Medicinal Chemistry - Cannabinoids
+# Warfare
 
-from global_chem.medicinal_chemistry.cannabinoids.cannabinoids import Cannabinoids
+from global_chem.warfare.organophosphorous_nerve_agents import OrganoPhosphorousNerveAgents
+
+# Education
+
+from global_chem.education.cengage.organic_and_inorganic_bronsted_acids import OrganicAndInorganicBronstedAcids
+
+# Medicinal Chemistry - Cannabis
+
+from global_chem.medicinal_chemistry.cannabinoids.phytocannabinoids import PhytoCannabinoids
+from global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa import ConstituentsOfCannabisSativa
+
+# Medicinal Chemistry - International
+
+from global_chem.medicinal_chemistry.chinese.how_to_live_longer import HowToLiveLonger
 
 # Medicinal Chemistry - Warheads
 
-from global_chem.medicinal_chemistry.warheads.electrophillic_warheads_for_kinases import ElectrophilicWarheadsForKinases
+from global_chem.medicinal_chemistry.warheads.electrophilic_warheads_for_kinases import ElectrophilicWarheadsForKinases
 from global_chem.medicinal_chemistry.warheads.common_warheads_covalent_inhibitors import CommonWarheadsCovalentInhibitors
 
 # Medicinal Chemistry - Rings
@@ -51,7 +79,18 @@ from global_chem.proteins.kinases.scaffolds.privileged_kinase_inhibitors import 
 from global_chem.organic_synthesis.solvents.common_organic_solvents import CommonOrganicSolvents
 from global_chem.organic_synthesis.protecting_groups.amino_acid_protecting_groups import AminoAcidProtectingGroups
 from global_chem.organic_synthesis.bidendate_phosphine_ligands.nickel_ligands import NickelBidendatePhosphineLigands
-from global_chem.organic_synthesis.named_reactions_in_organic_synthesis.named_reactions_in_organic_synthesis import NamedReactionsInOrganicSynthesis
+# from global_chem.organic_synthesis.named_reactions_in_organic_synthesis.named_reactions_in_organic_synthesis import NamedReactionsInOrganicSynthesis
+
+# Food
+
+from global_chem.food.salt.salt import Salt
+from global_chem.food.color_additives.fda_list_one import FDAListOne
+from global_chem.food.color_additives.fda_list_two import FDAListTwo
+from global_chem.food.color_additives.fda_list_three import FDAListThree
+from global_chem.food.color_additives.fda_list_four import FDAListFour
+from global_chem.food.color_additives.fda_list_five import FDAListFive
+from global_chem.food.color_additives.fda_list_six import FDAListSix
+from global_chem.food.color_additives.fda_list_seven import FDAListSeven
 
 # Narcotics
 
@@ -68,7 +107,8 @@ from global_chem.interstellar_space.interstellar_space import InterstellarSpace
 
 # Biopharmaceutics - Excipients
 
-from global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_acyclovir import CimetidineAndAcyclovir
+from global_chem.formulation.excipients.monoclonal_antibodies.monoclonal_antibodies import MonoclonalAntibodies
+from global_chem.formulation.excipients.biopharmaceutics_class_three.cimetidine_and_acyclovir import CimetidineAndAcyclovir
 
 # Miscellaneous
 
@@ -77,49 +117,64 @@ from global_chem.miscellaneous.open_smiles import OpenSmiles
 from global_chem.miscellaneous.amino_acids import AminoAcids
 from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
 
+# Sex
+
+from global_chem.sex.exsens.lube import Lube
+from global_chem.sex.exsens.exsens_products import ExsensProducts
+from global_chem.sex.tainted_sexual_enhancements.tainted_sexual_enhancements import TaintedSexualEnhancements
+from global_chem.sex.contraceptives.oral_contraceptives import OralContraceptives
+
 class Node:
 
     '''
     Node Object
     '''
 
-    def __init__(self, name, smiles=[], smarts=[], value=None, colour=None):
+    def __init__(self, name, smiles=[], smarts=[], bit_vectors=[], value=None, colour=None):
 
         self.name = name.split('.')[0]
         self.children = []
         self.parents = []
         self.smiles = smiles
         self.smarts = smarts
+        self.bit_vector = bit_vectors
         self.state = [ self.smiles, self.smarts ]
         self.value = None
         self.colour = None
 
-    def add_parent(self, name, smiles=[], smarts=[]):
+    def add_parent(self, name, smiles=[], smarts=[], bit_vectors=[]):
 
         '''
+
         Add the Parent Node
+
         '''
 
         self.parents.append(
-            Node(name, smiles, smarts)
+            Node(name, smiles, smarts, bit_vectors)
         )
 
-    def add_child(self, name, smiles=[], smarts=[]):
+    def add_child(self, name, smiles=[], smarts=[], bit_vectors=[]):
 
         '''
+
         Add the Child Node
+
         '''
 
         self.children.append(
-            Node(name, smiles, smarts)
+            Node(name, smiles, smarts, bit_vectors)
         )
 
     def get_node_state(self):
 
         '''
+
         Get the Node State
+
         Returns:
             state (Node): Node state
+
         '''
 
         return self.state
@@ -127,7 +182,9 @@ class Node:
     def set_node_state(self):
 
         '''
+
         Set the Node State with the children and the parents.
+
         '''
 
         self.state = [ self.children, self.parents ]
@@ -135,7 +192,9 @@ class Node:
     def print_stat(self):
 
         """
+
         Print statistics of the node
+
         """
         print("Children: %s" % self.children)
         print("Parents: %s" % self.parents)
@@ -143,9 +202,12 @@ class Node:
     def set_node_value(self, value):
 
         '''
+
         Set the Node Value
+
         Arguments:
             value: value of the node you would like to set it to | Type: Anything
+
         '''
 
         self.value = value
@@ -153,10 +215,13 @@ class Node:
     def get_node_value(self):
 
         '''
+
         Get the Node Value
+
         '''
 
         return self.value
+
     # This hack is for the root node to have dummy dictionaries.
 
     @staticmethod
@@ -168,6 +233,11 @@ class Node:
     def get_smarts():
 
         smarts = {}
+
+    @staticmethod
+    def get_bit_vector():
+
+        bit_vector = {}
 
 class PrintNode:
 
@@ -232,17 +302,16 @@ class PrintTreeUtilities(object):
             return lst
         for i in range(len(lst)):
             if i == startingFanIndex:
-                lst[i] = "┌%s" % lst[i]
+                lst[i] = f"┌{lst[i]}"
             elif i == endingFanIndex:
-                lst[i] = "└%s" % lst[i]
+                lst[i] = f"└{lst[i]}"
             elif i > startingFanIndex and i < endingFanIndex:
                 if lst[i].startswith(" "):
-                    lst[i] = "│%s" % lst[i]
+                    lst[i] = f"│{lst[i]}"
                 else:
-                    lst[i] = "├%s" % lst[i]
+                    lst[i] = f"├{lst[i]}"
             else:
-                lst[i] = "%s" % lst[i]
-
+                lst[i] = f" {lst[i]}"
         return lst
 
     @staticmethod
@@ -254,11 +323,11 @@ class PrintTreeUtilities(object):
         for i in range(len(lst)):
             # add label to the middle of the fan
             if i == len(lst) // 2:
-                lst[i] = ("%s─%s" % (name, lst[i]))
+                lst[i] = f"{name}─{lst[i]}"
             else:
                 # push the other labels out with indentation
                 indent = " " * len(name)
-                lst[i] = ("%s─%s" % (indent, lst[i]))
+                lst[i] = f"{indent} {lst[i]}"
         return lst
 
     @staticmethod
@@ -277,9 +346,7 @@ class PrintTreeUtilities(object):
             fans = [get_repr(x) for x in node.children]
             labelled = PrintTreeUtilities.labelFan(node, PrintTreeUtilities.connectFans(fans))
             return labelled
-        print("\n".join(get_repr(node)))
-
-
+        print(str("\n".join(get_repr(node))))
 
 class GraphNetworkError(Exception):
 
@@ -301,7 +368,9 @@ class GlobalChem(object):
     __allow_update__ = False
 
     """
+    
     GlobalChem will be the master class of all variables, as the content store grows we can use this as the parent class.
+    
     """
 
     # NODE CONTRIBUTORS
@@ -311,39 +380,58 @@ class GlobalChem(object):
 
     __NODES__ = {
         'global_chem': Node,
-        'emerging_perfluoroalkyls': EmergingPerFluoroAlkyls,                     # Asuka Orr & Suliman Sharif
-        'montmorillonite_adsorption': MontmorilloniteAdsorption,                 # Asuka Orr & Suliman Sharif
-        'common_monomer_repeating_units': CommonMonomerRepeatingUnits,           # Suliman Sharif
-        'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,   # Ruibin Liu & Suliman Sharif
-        'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors, # Shaoqi Zhao & Suliman Sharif
-        'rings_in_drugs': RingsInDrugs,                                          # Alexander Mackerell & Suliman Sharif
-        'iupac_blue_book_rings': IUPACBlueBookRings,                             # Suliman Sharif
-        'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,                 # Suliman Sharif
-        'privileged_scaffolds': PrivilegedScaffolds,                             # Suliman Sharif
-        'iupac_blue_book': IUPACBlueBook,                                        # Suliman Sharif
-        'common_r_group_replacements': CommonRGroupReplacements,                 # Sunhwan Jo & Suliman Sharif
-        'braf_inhibitors': BRAFInhibitors,                                       # Aarion Romany
-        'privileged_kinase_inhibitors': PrivilegedKinaseInhibitors,              # Suliman Sharif
-        'common_organic_solvents': CommonOrganicSolvents,                        # Suliman Sharif
-        'amino_acid_protecting_groups': AminoAcidProtectingGroups,               # Aziza Frank & Suliman Sharif
-        'schedule_one': ScheduleOne,                                             # Suliman Sharif
-        'schedule_two': ScheduleTwo,                                             # Suliman Sharif
-        'schedule_three': ScheduleThree,                                         # Suliman Sharif
-        'schedule_four': ScheduleFour,                                           # Suliman Sharif
-        'schedule_five': ScheduleFive,                                           # Suliman Sharif
-        'interstellar_space': InterstellarSpace,                                 # Suliman Sharif
-        'vitamins': Vitamins,                                                    # Suliman Sharif
-        'open_smiles': OpenSmiles,                                               # Suliman Sharif
-        'amino_acids': AminoAcids,                                               # Suliman Sharif
-        'pihkal': Pihkal,                                                        # Suliman Sharif
-        'nickel_ligands': NickelBidendatePhosphineLigands,                       # Suliman Sharif
-        'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                      # Suliman Sharif
-        'common_regex_patterns': CommonRegexPatterns,                            # Chris Burke & Suliman Sharif
-        'named_reactions_in_organic_synthesis': NamedReactionsInOrganicSynthesis # Aziza Frank & Suliman Sharif
+        'emerging_perfluoroalkyls': EmergingPerFluoroAlkyls,                      # Asuka Orr & Suliman Sharif
+        'montmorillonite_adsorption': MontmorilloniteAdsorption,                  # Asuka Orr & Suliman Sharif
+        'common_monomer_repeating_units': CommonMonomerRepeatingUnits,            # Suliman Sharif
+        'electrophilic_warheads_for_kinases': ElectrophilicWarheadsForKinases,    # Ruibin Liu & Suliman Sharif
+        'common_warheads_covalent_inhibitors': CommonWarheadsCovalentInhibitors,  # Shaoqi Zhan & Suliman Sharif
+        'rings_in_drugs': RingsInDrugs,                                           # Alexander Mackerell Jr. & Suliman Sharif
+        'iupac_blue_book_rings': IUPACBlueBookRings,                              # Suliman Sharif
+        'phase_2_hetereocyclic_rings': Phase2HetereoCyclicRings,                  # Suliman Sharif
+        'privileged_scaffolds': PrivilegedScaffolds,                              # Suliman Sharif
+        'iupac_blue_book': IUPACBlueBook,                                         # Suliman Sharif
+        'common_r_group_replacements': CommonRGroupReplacements,                  # Sunhwan Jo & Suliman Sharif
+        'braf_inhibitors': BRAFInhibitors,                                        # Aarion Romany & Suliman Sharif
+        'privileged_kinase_inhibitors': PrivilegedKinaseInhibitors,               # Suliman Sharif
+        'common_organic_solvents': CommonOrganicSolvents,                         # Suliman Sharif
+        'amino_acid_protecting_groups': AminoAcidProtectingGroups,                # Aziza Frank & Suliman Sharif
+        'schedule_one': ScheduleOne,                                              # Suliman Sharif
+        'schedule_two': ScheduleTwo,                                              # Suliman Sharif
+        'schedule_three': ScheduleThree,                                          # Suliman Sharif
+        'schedule_four': ScheduleFour,                                            # Suliman Sharif
+        'schedule_five': ScheduleFive,                                            # Suliman Sharif
+        'interstellar_space': InterstellarSpace,                                  # Suliman Sharif
+        'vitamins': Vitamins,                                                     # Suliman Sharif
+        'open_smiles': OpenSmiles,                                                # Suliman Sharif
+        'amino_acids': AminoAcids,                                                # Suliman Sharif
+        'pihkal': Pihkal,                                                         # Suliman Sharif
+        'nickel_ligands': NickelBidendatePhosphineLigands,                        # Suliman Sharif
+        'cimetidine_and_acyclovir': CimetidineAndAcyclovir,                       # Suliman Sharif
+        'how_to_live_longer': HowToLiveLonger,                                    # Suliman Sharif
+        'monoclonal_antibodies': MonoclonalAntibodies,                            # Asuka Orr & Suliman Sharif
+        'lube': Lube,                                                             # Daniel Khavrutskii & Suliman Sharif
+        'tainted_sexual_enhancements': TaintedSexualEnhancements,                 # Suliman Sharif
+        'salt': Salt,                                                             # Suliman Sharif
+        'exsens_products': ExsensProducts,                                        # Rebecca Pinette-Dorin & Suliman Sharif
+        'fda_list_one': FDAListOne,                                               # Mike Wostner & Suliman Sharif
+        'fda_list_two': FDAListTwo,                                               # Mike Wostner & Suliman Sharif
+        'fda_list_three': FDAListThree,                                           # Mike Wostner & Suliman Sharif
+        'fda_list_four': FDAListFour,                                             # Mike Wostner & Suliman Sharif
+        'fda_list_five': FDAListFive,                                             # Mike Wostner & Suliman Sharif
+        'fda_list_six': FDAListSix,                                               # Mike Wostner & Suliman Sharif
+        'fda_list_seven': FDAListSeven,                                           # Mike Wostner & Suliman Sharif
+        'constituents_of_cannabis_sativa': ConstituentsOfCannabisSativa,          # Ian Jones & Bettina Lier & Suliman Sharif
+        'phytocannabinoids': PhytoCannabinoids,                                   # Ian Jones & Bettina Lier & Suliman Sharif
+        'organophosphorous_nerve_agents': OrganoPhosphorousNerveAgents,           # Suliman Sharif
+        'organic_and_inorganic_bronsted_acids': OrganicAndInorganicBronstedAcids, # Nathaniel McClean & Suliman Sharif
+        'chemicals_from_biomass': ChemicalsFromBioMass,                           # Anthony Maiorana & Suliman Sharif
+        'drugs_from_snake_venom': DrugsFromSnakeVenom,                            # Suliman Sharif
+        'oral_contraceptives': OralContraceptives,                                # Suliman Sharif
+        'common_regex_patterns': CommonRegexPatterns,                             # Chris Burke & Suliman Sharif
     }
 
     __INCOMPLETE_NODES = {
-        'cannabinoids': Cannabinoids
+        # 'named_reactions_in_organic_synthesis': NamedReactionsInOrganicSynthesis # Aziza Frank & Bettina Lier & Suliman Sharif
     }
 
     def __init__(self, verbose=False):
@@ -353,11 +441,17 @@ class GlobalChem(object):
         self.root_node = ''
         self.deep_layer_count = 0
         self.verbose = verbose
+        self.splitter = '/'
+
+        if os.name == 'nt':
+            self.splitter = '\\'
 
     def check_available_nodes(self):
 
         '''
+
         Checks the existing Nodes within the network.
+
         '''
 
         return list(self.__NODES__.keys())
@@ -365,7 +459,9 @@ class GlobalChem(object):
     def get_all_nodes(self):
 
         '''
+
         Returns all the nodes in no particular order
+
         '''
 
         # Skip the head node
@@ -378,8 +474,10 @@ class GlobalChem(object):
 
         '''
         Return a node based on the key by the user.
+
         Arguments:
             node_key (String): node keys within the network
+
         '''
 
         return self.__NODES__[node_key]
@@ -387,13 +485,20 @@ class GlobalChem(object):
     def get_depth_of_globalchem(self):
 
         '''
+
         Returns the Depth of the GlobalChem Tree
+
         Returns:
             max_depth (Int): Max depth of the object
+
         '''
 
         path_objects = []
-        absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
+
+        if os.name == 'nt':
+            absolute_file_path = self.splitter.join(os.path.dirname(os.path.realpath('__file__')).split(self.splitter)[:-1])
+        else:
+            absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
 
         for dirpath, dirnames, filenames in os.walk(absolute_file_path):
 
@@ -422,10 +527,12 @@ class GlobalChem(object):
     def get_nodes(self, node_keys):
 
         '''
+
         Arguments:
             node_keys (List): return the list of nodes based on the user keys.
         Returns
             nodes (List): List of the node objects
+
         '''
 
         nodes = []
@@ -453,7 +560,8 @@ class GlobalChem(object):
             "node_value": Node(
                 root_node,
                 self.__NODES__[root_node].get_smiles(),
-                self.__NODES__[root_node].get_smarts()
+                self.__NODES__[root_node].get_smarts(),
+                self.__NODES__[root_node].get_bit_vector()
             ),
             "children": [],
             "parents": [],
@@ -463,15 +571,19 @@ class GlobalChem(object):
     def add_node(self, parent_key, child_key):
 
         '''
+
         Add a node into the network
+
         Rules:
             1.) There must be a connection from one node to the next. Nodes in space cannot exist.
+
         Algorithm:
             1.) First Find the Node in the Network
             2.) Add the Child to the Parent
             3.) Add the Child to the Network
             4.) Add the Parent to the Child
             5.) Add the Parent to the Network
+
         Graph Algorithm:
             O(c): Child Node
             O(p): Parent Node
@@ -481,9 +593,11 @@ class GlobalChem(object):
             3.) O(c) <---- N
             4.) O(p) ----> O(c)
             5.) O(p) ----> N
+
         Errors:
             GraphNetworkError Step 1: If the Parent Node was never found
             GraphNetworkError Step 4: If the Newly Child node was never added.
+
         '''
 
         # Step 1
@@ -503,6 +617,7 @@ class GlobalChem(object):
                 child_key,
                 self.__NODES__[ child_key ].get_smiles(),
                 self.__NODES__[ child_key ].get_smarts(),
+                self.__NODES__[ child_key ].get_bit_vector()
             )
         except:
             _ = parent_node.add_child(
@@ -518,7 +633,8 @@ class GlobalChem(object):
                 "node_value": Node(
                     child_key,
                     self.__NODES__[ child_key ].get_smiles(),
-                    self.__NODES__[ child_key ].get_smarts()
+                    self.__NODES__[ child_key ].get_smarts(),
+                    self.__NODES__[ child_key ].get_bit_vector()
                 ),
                 "children": [],
                 "parents": [],
@@ -563,7 +679,8 @@ class GlobalChem(object):
             _ = new_child_node.add_parent(
                 parent_key,
                 self.__NODES__[ parent_key ].get_smiles(),
-                self.__NODES__[ parent_key ].get_smarts()
+                self.__NODES__[ parent_key ].get_smarts(),
+                self.__NODES__[ child_key ].get_bit_vector()
             )
 
         except:
@@ -626,13 +743,16 @@ class GlobalChem(object):
     def get_node(self, name):
 
         '''
+
         Get the Node
+
         Arguments:
             name: Parent key of the node | Type: String
         Returns:
             node: Returns the node.
         Errors:
             GraphNetworkError: If the node doesn't exist.
+
         '''
 
         # Hack for the python file: Need to fix later on.
@@ -655,11 +775,14 @@ class GlobalChem(object):
     def get_node_smiles(self, node_key):
 
         '''
+
         Get the Node SMILES
+
         Arguments:
             node_key: Node key to query | Type: String
         Returns:
             smiles_dict: Dictionary of the SMILES for that object.
+
         '''
 
         node = self.network.get(node_key, None)
@@ -675,11 +798,14 @@ class GlobalChem(object):
     def get_node_smarts(self, node_key):
 
         '''
+
         Get the Node SMARTS
+
         Arguments:
             node_key: Node key to query | Type: String
         Returns:
             smarts_dict: Dictionary of the SMARTS for that object.
+
         '''
 
         node = self.network.get(node_key, None)
@@ -691,6 +817,24 @@ class GlobalChem(object):
             )
 
         return self.__NODES__[node_key].get_smarts()
+
+    def get_node_bits(self, node_key):
+
+        '''
+
+        Get the Node Bit Vector
+
+        '''
+
+        node = self.network.get(node_key, None)
+
+        if not node:
+            raise GraphNetworkError(
+                message=f'No Node named {node_key} exists',
+                errors=''
+            )
+
+        return self.__NODES__[node_key].get_bit_vector()
 
     def initiate_deep_layer_network(self, root_node='global_chem'):
 
@@ -721,25 +865,31 @@ class GlobalChem(object):
     def add_deep_layer(self, nodes):
 
         '''
+
         Arguments:
             nodes (List): Add a Layer of Nodes to the previous parents
+
         Rules:
             1.) When adding a deep layer add children to all the previous parents.
+
         Algorithm:
             1.) Fetch all the parents of the current layer
             2.) Add all the node children to the parents.
             3.) Increase the deep layer count.
             4.) All all the parents to the children.
+
         Graph Algorithm:
             O(cs): Childrens Node
             O(ps): Parents Node
             DN: Deep Network
             DCL: Deep Current Layer
+
             <F>: Fetch Function
             1.) O(ps) <F> DCL <F> DN
             2.) O(cs) <---- O(ps)
             3.) DCL += 1
             4.) O(ps) ----> O(cs)
+
         '''
 
         parents = []
@@ -790,7 +940,11 @@ class GlobalChem(object):
         # Fetch All the File Paths
 
         path_objects = []
-        absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
+
+        if os.name == 'nt':
+            absolute_file_path = self.splitter.join(os.path.dirname(os.path.realpath('__file__')).split(self.splitter)[:-1])
+        else:
+            absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
 
         for dirpath, dirnames, filenames in os.walk(absolute_file_path):
 
@@ -801,13 +955,13 @@ class GlobalChem(object):
                         'cli.py' not in file and \
                         'global_chem.py' not in file:
 
-                    object_path = os.path.join(''.join(dirpath.rsplit(absolute_file_path)), file).split('/')
+                    object_path = os.path.join(''.join(dirpath.rsplit(absolute_file_path)), file).split(self.splitter)
 
                     if debugger:
                         print ("Node Object Paths: %s: " % object_path)
 
                     path_objects.append(object_path)
-
+        
         # Add the objects recursively
 
         for chemical_object in path_objects:
@@ -892,45 +1046,127 @@ class GlobalChem(object):
 
         return smarts
 
-    def get_smiles_by_iupac(self, iupac_key, return_network_path=False, return_all_network_paths=False):
+    def get_all_bits(self):
 
         '''
-        Get the SMILES by the IUPAC.
-        Arguments:
-            iupac_key (String): Key for the iupac.
-            return_network_path (Bool): whether the user wants the network path as well.
-            return_all_network_paths (Bool): return all the network paths
+
+        Fetches all the smarts in the network
+
         Returns:
-            definition (String): definiton of the iupac.
-            network_path (Dict): { definition: last network path in }
-            network_paths (Dict[List]): { definition: all_networks }
+            bits (List): Full list of SMARTS in the network.
+
         '''
 
-        network_paths = []
-        definition = ''
+        bits = []
 
         for node_key, node_value in self.__NODES__.items():
 
-            if node_key == 'global_chem' or node_key == 'common_regex_patterns':
-                continue
+            if node_key != 'global_chem' and node_key != 'common_regex_patterns':
 
-            network_path = node_value.__module__
-            entity = node_value()
-            smiles = entity.get_smiles()
+                bits.append(list(node_value.get_bit_vector().values()))
 
-            if iupac_key in smiles:
+        bits = sum(bits, [])
 
-                network_paths.append(network_path)
-                definition = smiles[iupac_key]
+        return bits
 
-        if return_network_path:
-            return { definition: network_paths[-1] }
+    def get_smiles_by_iupac(
+            self,
+            iupac_key,
+            distance_tolerance=4,
+            return_partial_definitions=False,
+            reconstruct_smiles=False,
+        ):
 
-        elif return_all_network_paths:
-            return { definition: return_all_network_paths }
+        '''
 
+        Get the SMILES by the IUPAC.
+
+        Arguments:
+            iupac_key (String): Key for the iupac.
+            distance_tolerance (Int): Distance tolerance for Levenshetin Distances.
+            return_partial_definitions (Bool): Return the Levenshetin Distances between words
+            reconstruct_smiles (Bool): Reconstruct the Chemical Space SMILES from the IUPAC
+        Returns:
+            definition (Dict): A definition of the IUPAC.
+
+        '''
+
+        if reconstruct_smiles:
+
+            reconstructed_smiles = ''
+
+            iupac_keys = iupac_key.lower().split('-')
+            iupac_keys = [re.sub(r'\b[^a-zA-Z]\b', '', iupac_key) for iupac_key in iupac_keys]
+            iupac_keys = [iupac_key for iupac_key in iupac_keys if not any(char.isdigit() for char in iupac_key) and iupac_key]
+
+
+            for node_key, node_value in self.__NODES__.items():
+
+               if node_key == 'global_chem' or node_key == 'common_regex_patterns':
+                   continue
+
+               entity = node_value()
+               names = entity.get_smiles()
+
+               for name, smiles in names.items():
+
+                   # Sanitize the Node Key
+
+                   name = name.lower()
+                   name = re.sub(r'[^a-zA-Z]', '', name)
+
+                   for iupac_key in iupac_keys:
+
+                       distance = self.levenshtein_distance(iupac_key, name)
+
+                       if 0 <= distance <= distance_tolerance:
+
+                           reconstructed_smiles += smiles + '.'
+
+            return reconstructed_smiles[:-1]
         else:
-            return definition
+
+            iupac_key = iupac_key.lower()
+            iupac_key = re.sub(r'[^a-zA-Z]', '', iupac_key)
+
+            definitions = []
+            exact_definition = {}
+
+            for node_key, node_value in self.__NODES__.items():
+
+                if node_key == 'global_chem' or node_key == 'common_regex_patterns':
+                    continue
+
+                network_path = node_value.__module__
+                entity = node_value()
+                names = entity.get_smiles()
+
+                for name, smiles in names.items():
+
+                    definition = {}
+
+                    # Sanitize the Node Key
+
+                    name = name.lower()
+                    name = re.sub(r'[^a-zA-Z]', '', name)
+
+                    distance = self.levenshtein_distance(iupac_key, name)
+
+                    if 0 <= distance <= distance_tolerance:
+
+                        definition[name] = smiles
+                        definition['network_path'] = network_path
+                        definition['levenshtein_distance'] = distance
+
+                        if distance == 0:
+                            exact_definition = definition
+
+                        definitions.append(definition)
+
+            if return_partial_definitions:
+                return definitions
+            else:
+                return exact_definition
 
     def set_node_value(self, node_key, value):
 
@@ -1043,8 +1279,11 @@ class GlobalChem(object):
         _PRINT_NODE_KEY = {}
 
         path_objects = []
-        absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
-        print(absolute_file_path)
+
+        if os.name == 'nt':
+            absolute_file_path = self.splitter.join(os.path.dirname(os.path.realpath('__file__')).split(self.splitter)[:-1])
+        else:
+            absolute_file_path = '/'.join(os.path.abspath(__file__).split('/')[:-1])
 
         for dirpath, dirnames, filenames in os.walk(absolute_file_path):
 
@@ -1055,9 +1294,8 @@ class GlobalChem(object):
                         'cli.py' not in file and \
                         'global_chem.py' not in file:
 
-                    object_path = os.path.join(''.join(dirpath.rsplit(absolute_file_path)), file).split('/')
+                    object_path = os.path.join(''.join(dirpath.rsplit(absolute_file_path)), file).split(self.splitter)
                     path_objects.append(object_path)
-                    print(object_path)
 
         # Add the objects recursively
 
@@ -1093,9 +1331,7 @@ class GlobalChem(object):
 
                         _PRINT_NODE_KEY[ parent ] = PrintNode(child, _PRINT_NODE_KEY[parent])
 
-        print(_PRINT_NODE_KEY)
-
-        print(PrintTreeUtilities.printTrees(_PRINT_NODE_KEY['global_chem']))
+        print(str(PrintTreeUtilities.printTrees(_PRINT_NODE_KEY['global_chem'])))
 
     def print_deep_network(self):
 
@@ -1130,7 +1366,6 @@ class GlobalChem(object):
                         for previous_parent in previous_parents:
 
                             _DEEP_NETWORK_KEY[ node_key ] = PrintNode(node_key, _DEEP_NETWORK_KEY[ previous_parent ])
-
 
         print(PrintTreeUtilities.printTrees(_DEEP_NETWORK_KEY[ self.root_node ]))
 
@@ -1170,3 +1405,36 @@ class GlobalChem(object):
                 out_file.write(f'{key}\t{value}\t{node_name}\t{category}\t{tree_path}\n')
 
         out_file.close()
+
+    @staticmethod
+    def levenshtein_distance(iupac_a, iupac_b):
+
+        '''
+
+        This function will calculate the levenshtein distance between two IUPAC strings
+
+        params:
+            a (String) : The first string you want to compare
+            b (String) : The second string you want to compare
+
+        returns:
+            This function will return the distnace between string a and b.
+
+        '''
+
+        @lru_cache(None)
+        def min_dist(string_1, string_2):
+
+            if string_1 == len(iupac_a) or string_2 == len(iupac_b):
+                return len(iupac_a) - string_1 + len(iupac_b) - string_2
+
+            if iupac_a[string_1] == iupac_b[string_2]:
+                return min_dist(string_1 + 1, string_2 + 1)
+
+            return 1 + min(
+                min_dist(string_1, string_2 + 1),
+                min_dist(string_1 + 1, string_2),
+                min_dist(string_1 + 1, string_2 + 1),
+            )
+
+        return min_dist(0, 0)

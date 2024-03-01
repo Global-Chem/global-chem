@@ -74,9 +74,9 @@ class NickelBidendatePhosphineLigands(object):
         }
 
         missing_entries = {
-            '1,2-bis(bis(6,6,6,6,6-pentafluoro6l8-hexa-1,3,5-triyn-1-yl)-phosphino)ethane': '',
-            '1,9-bis(diisopropylphosphino)-nonane': '',
-            'benzo[b]thiophene-2,3-diylbis-(dicyclohexylphosphane)': '',
+            '1,2-bis(bis(6,6,6,6,6-pentafluoro6l8-hexa-1,3,5-triyn-1-yl)-phosphino)ethane': '*',
+            '1,9-bis(diisopropylphosphino)-nonane': '*',
+            'benzo[b]thiophene-2,3-diylbis-(dicyclohexylphosphane)': '*',
         }
 
         return smiles
@@ -89,3 +89,12 @@ class NickelBidendatePhosphineLigands(object):
         }
 
         return smarts
+
+    @staticmethod
+    def get_bit_vector():
+
+        bit_vector = {
+
+        }
+
+        return bit_vector

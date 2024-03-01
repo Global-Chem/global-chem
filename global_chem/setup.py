@@ -30,7 +30,7 @@ else:
 # ----
 setup(
     name="global_chem",
-    version="1.6.0.8",
+    version="1.7.4.0",
     packages=find_packages(),
     license='MPL 2.0',
     author="Suliman Sharif",
@@ -47,7 +47,6 @@ setup(
         'quantum_chemistry': ['global-chem-extensions[quantum_chemistry]'],
         'development_operations': ['global-chem-extensions[development_operations]'],
         'all': [
-            'global-chem-extensions',
             'global-chem-extensions[graphing]',
             'global-chem-extensions[forcefields]',
             'global-chem-extensions[bioinformatics]',

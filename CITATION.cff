@@ -1,0 +1,60 @@
+cff-version: 1.0.0
+message: "If you use this software or data, please cite it as below."
+authors:
+  - family-names: Sharif
+    given-names: Suliman
+    orcid: 0000-0002-1342-9258
+  - family-names: Liu
+    given-names: Ruibin
+    orcid: 0000-0001-8395-9353
+  - family-names: Orr
+    given-names: Asuka A.
+    orcid: 0000-0003-4628-526X
+  - family-names: Khavrutskii
+    given-names: Daniel
+    orcid: 0000-0001-5014-5572
+  - family-names: Jo
+    given-names: Sunhwan    
+  - family-names: Lier
+    given-names: Bettina
+  - family-names: Croitoru
+    given-names: Anastasia
+  - family-names: Burke
+    given-names: Chris
+  - family-names: Frank
+    given-names: Aziza
+  - family-names: Weiner
+    given-names: Jacob
+    orcid: 0000-0003-0033-6033
+  - family-names: McClean
+    given-names: Nathaniel
+  - family-names: Romany
+    given-names: Aarion
+  - family-names: Zhao
+    given-names: Mingtian
+  - family-names: Serizawa
+    given-names: Takayuki
+  - family-names: Deacon
+    given-names: Jared
+  - family-names: Jones
+    given-names: Ian
+  - family-names: Zhan
+    given-names: Shaoqi
+    orcid: 0000-0002-6383-1771
+  - family-names: Kumar
+    given-names: Anmol
+  - family-names: Woster
+    given-names: Mike
+  - family-names: Pinette-Dorin
+    given-names: Rebecca
+  - family-names: Chow
+    given-names: Elena Y.
+    orcid: 0000-0001-5559-1635
+  - family-names: Schulhoff
+    given-names: Sevien
+  - family-names: MacKerell Jr.
+    given-names: Alexander D.
+title: "Global-Chem: A Chemical Knowledge Graph of common small molecules and their IUPAC/SMILES/SMARTS for selection of compounds relevant to diverse chemical communities"
+version: 1.7.0.1
+doi: 10.5281/zenodo.6842040
+date-released: 2022-08-22

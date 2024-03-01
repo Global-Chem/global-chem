@@ -34,15 +34,17 @@ class Sunburster(object):
         self.save_file = save_file
 
         self.patterns = []
-        self.record_labels = []
 
         self.compounds = []
-
         self.verbose = verbose
 
-        self.answer_layers = [ [], [] ]
-        self.categories = {}
-        self.dimensions = []
+        self.category_first_layer = []
+        self.category_counts = {}
+        self.first_layer_total_values = {}
+
+        self.category_second_layer = []
+        self.second_category_counts = {}
+        self.second_layer_total_values = {}
 
         self.total_values = {}
 
@@ -50,16 +52,19 @@ class Sunburster(object):
         self.parents = []
         self.values = []
 
+        # Second Layer
+
+        self.second_labels = []
+        self.second_parents = []
+        self.second_values = []
+
         # Controller
 
         self._mine_global_chem()
         self._prepare_object()
-        self.determine_matches()
-        self.determine_possible_answers()
-        self.create_answer_key_state()
+        self.determine_first_layer()
+        self.determine_second_layer()
         self.set_the_layers()
-        self.radial_algorithm()
-        self.sunburst()
 
     def _mine_global_chem(self):
 
@@ -74,16 +79,13 @@ class Sunburster(object):
 
         for node in nodes[1:]:
 
-            node_initialized = node()
-
-            node_name = node_initialized.name
+            node_name = node.name
 
             if node_name == 'common_regex_patterns': # Skip this
                 continue
 
-            node_smarts = node_initialized.get_smarts()
+            node_smarts = node.get_smarts()
 
-            self.record_labels.append(node_name)
             self.patterns.append(node_smarts)
 
     def _prepare_object(self):
@@ -100,11 +102,11 @@ class Sunburster(object):
             row['smiles'] = smiles
             self.compounds.append(row)
 
-    def determine_matches(self):
+    def determine_first_layer(self):
 
         '''
 
-        Determine the Substructure Matches using SMARTS with RDKit
+        Determine the Longest Name for the First Layer
 
         '''
 
@@ -119,59 +121,63 @@ class Sunburster(object):
 
                 for name, pattern in chemical_list.items():
 
-                    smarts_mol = Chem.MolFromSmarts(pattern)
-
                     try:
-                        substructs = molecule.GetSubstructMatches(smarts_mol)
+
+                        smarts_mol = Chem.MolFromSmarts(pattern)
+                        substructs = molecule.HasSubstructMatch(smarts_mol)
+
                         if substructs:
                             matches.append(name)
-                    except:
+
+                    except Exception as e:
                         pass
 
-                row['%s:matches' % self.record_labels[index]] = matches
+                if len(matches) > 0:
 
-    def determine_possible_answers(self):
+                    longest_name = max(matches, key=str)
+                    shortest_name = min(matches, key=str)
 
-        '''
+                    if longest_name not in self.category_first_layer:
+                        self.category_first_layer.append(longest_name)
 
-        Determine the possible answers
+                    if shortest_name not in self.category_second_layer:
+                        self.category_second_layer.append(shortest_name)
 
-        '''
+                    if longest_name not in self.category_counts:
+                        self.category_counts[longest_name] = 1
+                    else:
+                        self.category_counts[longest_name] += 1
 
-        possible_functional_groups = set()
+                    if (longest_name + ' - ' + shortest_name) not in self.second_category_counts:
+                        self.second_category_counts[longest_name + ' - ' + shortest_name] = 1
+                    else:
+                        self.second_category_counts[longest_name + ' - ' + shortest_name] += 1
 
-        for row in self.compounds:
-            for index, chemical_list in enumerate(self.patterns):
-                functional_groups = row['%s:matches' % self.record_labels[index]]
-                possible_functional_groups.update(functional_groups)
+                    row['matches'] = [ longest_name , shortest_name ]
+                    row['relation'] = longest_name + ' - ' + shortest_name
 
-        if self.verbose:
-            print ("Length of Possible Answers: %s" % len(possible_functional_groups))
-
-        return possible_functional_groups
-
-    def create_answer_key_state(self):
-
-        '''
-
-        Create the answer key state which is the layer, each list of lists is a layer
+    def determine_second_layer(self):
 
         '''
 
-        self.answer_layers = [ [], [] ]
+        Determine the Second Layer shortest Name
 
-        for row in self.compounds:
+        '''
 
-            for index, chemical_list in enumerate(self.patterns):
+        for compound in self.compounds:
 
-                label = self.record_labels[index]
-                functional_groups = row['%s:matches' % label]
+            if 'matches' in compound and 'relation' in compound:
 
-                if len(functional_groups) > 0:
-                    for j in functional_groups:
-                        self.answer_layers[0].append(label)
-                        self.answer_layers[1].append(j)
+                parent = compound['matches'][0] # Longest Name
+                label = compound['relation']    # Longest Name to Shortest Name
 
+                self.second_parents.append(parent)
+                self.second_labels.append(label)
+
+                if label not in self.second_category_counts:
+                    self.second_category_counts[label] = 1
+                else:
+                    self.second_category_counts[label] += 1
 
     def set_the_layers(self):
 
@@ -181,64 +187,26 @@ class Sunburster(object):
 
         '''
 
-        layers = [ self.answer_layers[0], self.answer_layers[1] ]
-        questions = ['Record', 'Functional Group']
+        category_first_layer_labels = ['GlobalChem'] + list(self.category_counts.keys())
+        category_first_layer_parents = [""] + ["GlobalChem"] * len(self.category_first_layer)
+        category_first_layer_values = [sum(self.first_layer_total_values.values())] + list(self.category_counts.values())
 
-        for index, question in enumerate(questions):
+        category_second_layer_labels = list(self.second_category_counts.keys())
+        category_second_layer_parents = [ i.split(' - ')[0] for i in list(self.second_category_counts.keys()) ]
+        category_second_layer_values = list(self.second_category_counts.values())
 
-            self.categories['label'] = question
-            self.categories['values'] = layers[index]
-            self.categories['categoryorder'] = 'category ascending'
+        # Construct the Layers
 
-            self.dimensions.append(self.categories)
+        self.labels = category_first_layer_labels + category_second_layer_labels
+        self.parents = category_first_layer_parents + category_second_layer_parents
+        self.values = category_first_layer_values + category_second_layer_values
 
-    def radial_algorithm(self):
+        debugger = False
 
-        '''
-
-        Radial Algorithm, just go reread the plotly docs.
-
-        '''
-
-
-        for i in range(0, len(self.answer_layers[0])):
-
-            paper = self.answer_layers[0][i]
-            functional_group = self.answer_layers[1][i]
-            key = paper + ' - ' + functional_group
-
-            if key in self.total_values:
-                self.total_values[key] += 1
-            else:
-                self.total_values[key] = 0
-
-        # First Layer
-
-        paper_values = {}
-
-        for key , value in self.total_values.items():
-
-            paper = key.split('-')[0]
-
-            if paper not in paper_values:
-                paper_values[paper] = 0
-            else:
-                paper_values[paper] += value
-
-
-        first_layer_labels = ['Machine 1'] + self.record_labels
-        first_layer_parents = [""] + ['Machine 1'] * len(self.record_labels)
-        first_layer_values = [sum(paper_values.values())] + list(paper_values.values())
-
-        # Second Layer
-
-        second_layer_labels = [i for i in self.total_values.keys()]
-        second_layer_parents = [i.split('-')[0].strip() for i in self.total_values.keys()]
-        second_layer_values = [i for i in self.total_values.values()]
-
-        self.labels = first_layer_labels + second_layer_labels
-        self.parents = first_layer_parents + second_layer_parents
-        self.values = first_layer_values + second_layer_values
+        if debugger:
+            print (self.labels)
+            print (self.parents)
+            print (self.values)
 
     def sunburst(self):
 
@@ -248,7 +216,7 @@ class Sunburster(object):
 
         '''
 
-        fig =go.Figure()
+        fig = go.Figure()
 
         fig.add_trace(go.Sunburst(
             labels=self.labels,
@@ -283,5 +251,3 @@ class Sunburster(object):
 
         else:
             fig.show()
-
-
