@@ -18,8 +18,19 @@ from functools import lru_cache
 # ----------------
 
 if os.name == 'nt':
-    sys.stdin.reconfigure(encoding='utf-8')
-    sys.stdout.reconfigure(encoding='utf-8')
+
+    # Hot Fix For IPython Users
+    
+    def is_running_from_ipython():
+
+      from IPython import get_ipython
+      return get_ipython() is not None
+
+    if is_running_from_ipython():
+        continue
+    else:
+        sys.stdin.reconfigure(encoding='utf-8')
+        sys.stdout.reconfigure(encoding='utf-8')
 
 # Animals
 
@@ -123,7 +134,11 @@ from global_chem.food.spices.thai_ginger.thai_ginger_terpenoids import ThaiGinge
 
 # Food/Fruits/Mango
 
+<<<<<<< HEAD
+from global_chem.food.fruits.mango.mango_phytocompounds import MangoPhytoCompounds
+=======
 from global_chem.food.fruits.mango.mango_phytocompounds import MangoPhytocompounds
+>>>>>>> development
 from global_chem.food.fruits.mango.mango_fatty_acids import MangoFattyAcids
 from global_chem.food.fruits.mango.mango_flavonoids import MangoFlavonoids
 from global_chem.food.fruits.mango.mango_phenolic_acids import MangoPhenolicAcids

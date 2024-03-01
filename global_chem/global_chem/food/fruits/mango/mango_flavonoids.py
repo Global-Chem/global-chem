@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# GlobalChem - Mango Flavonoids
+# GlobalChem - MangoFlavonoids
 # -----------------------------
 
 class MangoFlavonoids(object):

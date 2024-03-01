@@ -1,13 +1,41 @@
+#!/usr/bin/env python3
+#
+# GlobalChem - MangoPhytoCompounds
+#
+# --------------------------------
 
-class Mango(object):
-    
-  def __init__(self):
+class MangoPhytoCompounds(object):
+
+    '''
+
+    Missing Entries:
+
+          'alpha phellandrene': '',
+          'alpha humulene': '',
+          'gamma terpinene': '',
+          'alpha pinene': '',
+          'trans caryophyllene': '',
+          'sabinene': '',
+          'carene': '',
+          'cis-caryophyllene': '',
+          'alpha humulene': '',
+          'germacrene d': '',
+          'aromadendrene': '',
+          'beta ubebene': '',
+          'alpha cubebene': '',
+          'alpha bourbonene': '',
+          'beta elemene': '',
+          'hepta-2,4(E,E)-dienoic acid': '',
+          'alpha-Linoleic acid': '',
+    '''
+
+    def __init__(self):
       
-      self.name = 'mango_phytocompounds'
+        self.name = 'mango_phytocompounds'
+    
 
-
-  @staticmethod
-  def get_smiles():
+    @staticmethod
+    def get_smiles():
 
       smiles = {
         'arginine': 'C(CC(C(=O)O)N)CN=C(N)N',
@@ -108,8 +136,8 @@ class Mango(object):
       }
       return smiles
 
-  @staticmethod
-  def get_smarts():
+@staticmethod
+def get_smarts():
 
     smarts = {
             
