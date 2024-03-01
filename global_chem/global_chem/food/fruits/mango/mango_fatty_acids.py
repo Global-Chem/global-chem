@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 #
 # GlobalChem - MangoFattyAcids
-#
-# --------------------------------
+# -------------------------------
 
 class MangoFattyAcids(object):
     
@@ -43,11 +42,13 @@ class MangoFattyAcids(object):
         }
 
         return smiles
-
+    
+    
     @staticmethod
     def get_smarts():
+
+      smarts = {
+              
+          }
       
-        smarts = {
-        }
-      
-        return smarts
+      return smarts

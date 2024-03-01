@@ -28,10 +28,12 @@ class MangoVitamins(object):
 
         return smiles
 
+
     @staticmethod
     def get_smarts():
 
-        smarts = {
-        }
-  
-        return smarts
+      smarts = {
+              
+          }
+      
+      return smarts

@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 #
 # GlobalChem - MangoFlavonoids
-#
 # -----------------------------
 
 class MangoFlavonoids(object):
@@ -28,11 +27,12 @@ class MangoFlavonoids(object):
         }
 
         return smiles
-
+    
     @staticmethod
     def get_smarts():
 
-        smarts = {
-        }
-  
-        return smarts
+      smarts = {
+              
+          }
+      
+      return smarts

@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 #
 # GlobalChem - MangoAminoAcids
-#
-# -----------------------------
+# -------------------------------
 
 class MangoAminoAcids(object):
 
@@ -40,6 +39,8 @@ class MangoAminoAcids(object):
     def get_smarts():
 
       smarts = {
+
       }
+
 
       return smarts

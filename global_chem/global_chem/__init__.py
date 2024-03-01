@@ -31,24 +31,24 @@ from global_chem.warfare.organophosphorous_nerve_agents import OrganoPhosphorous
 
 from global_chem.medicinal_chemistry.cannabinoids.phytocannabinoids import PhytoCannabinoids
 from global_chem.medicinal_chemistry.cannabinoids.constituents_of_cannabis_sativa import ConstituentsOfCannabisSativa
-from global_chem.medicinal_chemistry.cannabinoids.acids import CannabisAcids
-from global_chem.medicinal_chemistry.cannabinoids.alcohols import CannabisAlcohols
-from global_chem.medicinal_chemistry.cannabinoids.aldehydes import CannabisAldehydes
-from global_chem.medicinal_chemistry.cannabinoids.amino_acids import CannabisAminoAcids
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_acids import CannabisAcids
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_alcohols import CannabisAlcohols
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_aldehydes import CannabisAldehydes
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_amino_acids import CannabisAminoAcids
 from global_chem.medicinal_chemistry.cannabinoids.cannabinoids import Cannabinoids
-from global_chem.medicinal_chemistry.cannabinoids.esters_and_lactones import CannabisEstersAndLactones
-from global_chem.medicinal_chemistry.cannabinoids.fatty_acids import CannabisFattyAcids
-from global_chem.medicinal_chemistry.cannabinoids.flavanoidglycosides import CannabisFlavanoidGlycosides
-from global_chem.medicinal_chemistry.cannabinoids.hydrocarbons import CannabisHydrocarbons
-from global_chem.medicinal_chemistry.cannabinoids.ketones import CannabisKetones
-from global_chem.medicinal_chemistry.cannabinoids.nitrogenous_compounds import CannabisNitrogenousCompounds
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_esters_and_lactones import CannabisEstersAndLactones
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_fatty_acids import CannabisFattyAcids
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_flavanoidglycosides import CannabisFlavanoidGlycosides
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_hydrocarbons import CannabisHydrocarbons
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_ketones import CannabisKetones
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_nitrogenous_compounds import CannabisNitrogenousCompounds
 from global_chem.medicinal_chemistry.cannabinoids.non_cannabinoids_phenols import NonCannabinoidPhenols
-from global_chem.medicinal_chemistry.cannabinoids.pigments import CannabisPigments
-from global_chem.medicinal_chemistry.cannabinoids.proteins_glycoproteins_enzymes import CannabisProteinsGlycoproteinsEnzymes
-from global_chem.medicinal_chemistry.cannabinoids.steroids import CannabisSteroids
-from global_chem.medicinal_chemistry.cannabinoids.sugars import CannabisSugars
-from global_chem.medicinal_chemistry.cannabinoids.terpenes import CannabisTerpenes
-from global_chem.medicinal_chemistry.cannabinoids.vitamins import CannabisVitamins
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_pigments import CannabisPigments
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_proteins_glycoproteins_enzymes import CannabisProteinsGlycoproteinsEnzymes
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_steroids import CannabisSteroids
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_sugars import CannabisSugars
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_terpenes import CannabisTerpenes
+from global_chem.medicinal_chemistry.cannabinoids.cannabis_vitamins import CannabisVitamins
 
 # Medicinal Chemistry - International
 
@@ -93,9 +93,38 @@ from global_chem.food.color_additives.fda_list_five import FDAListFive
 from global_chem.food.color_additives.fda_list_six import FDAListSix
 from global_chem.food.color_additives.fda_list_seven import FDAListSeven
 
+# Thai Ginger
+
+from global_chem.food.spices.thai_ginger.thai_ginger_cyclic_dipeptides import ThaiGingerCyclicDipeptides
+from global_chem.food.spices.thai_ginger.thai_ginger_diaryl_heptanoids import ThaiGingerDiarylHeptanoids
+from global_chem.food.spices.thai_ginger.thai_ginger_fatty_acids_and_esters import ThaiGingerFattyAcidsAndEsters
+from global_chem.food.spices.thai_ginger.thai_ginger_flavonoids import ThaiGingerFlavonoids
+from global_chem.food.spices.thai_ginger.thai_ginger_phenolics import ThaiGingerPhenolics
+from global_chem.food.spices.thai_ginger.thai_ginger_polysaccharides import ThaiGingerPolysaccharides
+from global_chem.food.spices.thai_ginger.thai_ginger_terpenoids import ThaiGingerTerpenoids
+
+# Mango
+
+from global_chem.food.fruits.mango.mango_phytocompounds import MangoPhytocompounds
+from global_chem.food.fruits.mango.mango_fatty_acids import MangoFattyAcids
+from global_chem.food.fruits.mango.mango_flavonoids import MangoFlavonoids
+from global_chem.food.fruits.mango.mango_phenolic_acids import MangoPhenolicAcids
+from global_chem.food.fruits.mango.mango_vitamins import MangoVitamins
+from global_chem.food.fruits.mango.mango_amino_acids import MangoAminoAcids
+
+# Mango
+
+from global_chem.food.fruits.mango.constituents_of_mango import Mango
+from global_chem.food.fruits.mango.phenolicacids import MangoPhenolicAcids
+from global_chem.food.fruits.mango.vitamins import MangoVitamins
+from global_chem.food.fruits.mango.fattyacids import MangoFattyAcids
+from global_chem.food.fruits.mango.mango_amino_acids import MangoAminoAcids
+from global_chem.food.fruits.mango.flavonoids import MangoFlavonoids
 
 # Narcotics
 
+from global_chem.narcotics.pihkal import Pihkal
+from global_chem.narcotics.black_market import BlackMarket
 from global_chem.narcotics.schedule_one import ScheduleOne
 from global_chem.narcotics.schedule_two import ScheduleTwo
 from global_chem.narcotics.schedule_three import ScheduleThree
