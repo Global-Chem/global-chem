@@ -180,15 +180,23 @@ class PCAAnalysis(object):
             ]
         }
 
-        principal_component_df =pd.DataFrame(kmean_data)
-        principal_component_df = principal_component_df[ds['cols']]
-        principal_component_df['smiles'] = self.smiles_list
+        kmeans_df =pd.DataFrame(kmean_data)
+        kmeans_df = kmeans_df[ds['cols']]
+        kmeans_df['smiles'] = self.smiles_list
+
+        pc_df=pd.DataFrame(chemicalspace)
+        pc_df.columns=[f'PC{i}' for i in range(1, len(pc_df.columns) + 1) ]
+
+        pc_kmeans_df=pd.concat([kmeans_df,pc_df], axis=1)
+        
+        pc_variance_expained_df=pd.DataFrame(pca.explained_variance_ratio_, columns=['Variance_Explained'])
+        pc_variance_expained_df['PC']=pc_variance_expained_df.index + 1 
 
         source = ColumnDataSource(kmean_data)
 
         plot = figure(
-            plot_width = self.plot_width,
-            plot_height = self.plot_height,
+            width = self.plot_width,
+            height = self.plot_height,
             tooltips = TOOLTIPS,
             title = self.title,
             x_axis_label = self.x_axis_label,
@@ -210,7 +218,8 @@ class PCAAnalysis(object):
             show(plot)
             
         if self.save_principal_components:
-            principal_component_df.to_csv((self.file_name + ".tsv"), sep="\t", index=False)
+            pc_kmeans_df.to_csv((self.file_name + ".tsv"), sep="\t", index=False)
+            pc_variance_expained_df.to_csv((self.file_name + "Variance_Explained.tsv"), sep="\t", index=False)
 
         if self.return_mol_ids:
             return self.plot_mappings
