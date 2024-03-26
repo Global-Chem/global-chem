@@ -1,0 +1,31 @@
+name: PRINCIPAL COMPONENT ANALYSIS BOT
+
+on: [ workflow_dispatch ]
+
+jobs:
+  test:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v2
+
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+          architecture: x64
+      - name: Install
+        run: |
+          pip install pandas
+          pip install click
+          pip install sklearn
+          pip install numpy
+          pip install rdkit-pypi
+          pip install bokeh
+      - name: Run Checker
+        env:
+          GITHUB_TOKEN: ${{ secrets.PCA_BOT_TOKEN }}
+        run: |
+          cd bot_services
+          python principal_component_analysis.py
+#          python principal_component_analysis.py --smiles_list --morgan_radius --bit_representation --number_of_clusters --number_of_components --random_state --file_name --principal_component_x --principal_component_y --x_axis_label --y_axis_label --plot_width --plot_height --title,
