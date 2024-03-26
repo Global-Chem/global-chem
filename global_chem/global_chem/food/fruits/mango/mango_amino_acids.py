@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+#
+# GlobalChem - MangoAminoAcids
+# -------------------------------
+
 class MangoAminoAcids(object):
 
     def __init__(self):
@@ -25,18 +30,17 @@ class MangoAminoAcids(object):
             'glutamic acid': 'C(CC(=O)O)[C@@H](C(=O)O)N',
             'aspartic acid': 'C([C@@H](C(=O)O)N)C(=O)O',
             'alanine': 'C[C@@H](C(=O)O)N',
-            'arginine': 'C(C[C@@H](C(=O)O)N)CN=C(N)N',
             'histidine': 'C1=C(NC=N1)C[C@@H](C(=O)O)N'
         }
 
         return smiles
 
-
     @staticmethod
     def get_smarts():
 
       smarts = {
-              
-          }
-      
+
+      }
+
+
       return smarts
