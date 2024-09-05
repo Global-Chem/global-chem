@@ -43,13 +43,13 @@ class InsectSexPheromones(object):
             'd-10-acetoxy-cis-7-hexadecen-1-ol': 'OCCCCCC\C=C/CC(OC(=O)C)CCCCCC',
             'cis-7,8-epoxy-2-methyloctadecone': 'CCCCCCCCCC[C@H]1O[C@H]1CCCCC(C)C',
             'cis-7-dodecen-1-ol acetate': 'CCCC/C=C\CCCCCCOC(=O)C',
-            '(-)-methyl trans-2,4,5-tetradecatrienoate': 'CCCCCCCCC=C=C/C=C/C(=O)OC',
+            '(-)-methyl trans-2,4,5-tetradecatrienoate': 'CCCCCCCCC=[C@]=C/C=C/C(=O)OC',
             'trans-3,cis-5-tetradecadienoic acid': 'CCCCCCCCC=CC=CCC(=O)O',
             'exo-7-ethyl-5-methyl-6,8-dioxabicyclo[3.2.1]octane': 'O1[C@H](CC)C(O2)CCCC12C',
             '1,5-dimethyl-6.8-dioxabicyclo[3.2.1]octane': 'O1CC(C)(O2)CCCC12C',
             'trans-verbenol': 'C1(C)(C)C2CC1C(O)C=C2C',
             '(-)-14-methyl-cis-8-hexadecen-1-ol': 'CC[C@@H](C)CCCC/C=C\CCCCCCCO',
-            '(-)-methyl 14-methyl-cis-8-hexadecenoate': 'CCC(C)CCCC/C=C\CCCCCCC(=O)OC'
+            '(-)-methyl 14-methyl-cis-8-hexadecenoate': 'CC[C@@H](C)CCCC/C=C\CCCCCCC(=O)OC'
         }
 
         return smiles
