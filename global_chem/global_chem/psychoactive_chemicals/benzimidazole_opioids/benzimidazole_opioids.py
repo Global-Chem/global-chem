@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# GlobalChem - Allergen Inactive Ingredients
+# GlobalChem - benzimidazole_opioids
 # Reference: https://en.wikipedia.org/wiki/List_of_benzimidazole_opioids
 # ------------------------------------------
 
