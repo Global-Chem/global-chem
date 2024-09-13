@@ -13,7 +13,7 @@ class InsectSexPheromones(object):
     @staticmethod
     def get_smiles():
         smiles = {
-            '2,2-dimethyl-3-isopropylidene cyclopropyl': 'C1(C)(C)=C(OC(=O)CC)C1(C)(C)',
+            '2,2-dimethyl-3-isopropylidene cyclopropyl': 'C(C)(C)=C1CC1(C)(C)',
             'cis-7-dodecen-1-ol acetate': 'CCCC/C=C\CCCCCCOC(=O)C',
             'cis-9-tetradecen-1-ol acetate': 'CCCC/C=C\CCCCCCCCOC(=O)C',
             'trans-2-hexen-1-ol acetate': 'CCC/C=C/COC(=O)C',
