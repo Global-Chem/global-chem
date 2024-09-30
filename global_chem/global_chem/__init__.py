@@ -7,6 +7,7 @@
 # Animals
 
 from global_chem.animals.snakes.drugs_from_snake_venom import DrugsFromSnakeVenom
+from global_chem.animals.insects.insect_sex_pheromones import InsectSexPheromones
 
 # Environment
 

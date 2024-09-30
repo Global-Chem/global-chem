@@ -103,7 +103,8 @@ Please follow the node contribution guidelines if you would like to elect your o
 'mango_phenolic_acids': MangoPhenolicAcids,                               # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
 'mango_fatty_acids': MangoFattyAcids,                                     # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
 'mango_vitamins': MangoVitamins,                                          # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
-'mango_flavonoids': MangoFlavonoids                                       # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
+'mango_flavonoids': MangoFlavonoids,                                      # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
+'insect_sex_pheromones': InsectSexPheromones                              # Yuqing Liu & Suliman Sharif
 ```
 
 | Chemical List                       | # of Entries | References                                                                                                                                                                                                                                                                                                           |
@@ -161,7 +162,9 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Mango Fatty Acids                   | 24           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
 | Mango Vitamins                      | 10           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
 | Mango Flavonoids                    | 11           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
+| Insect Sex Pheromones               | 37           | Jacobson, Martin. Insect Sex Pheromones. New York, Academic Press, 1992.                                                                                                                  |
 
+‌
 Contributions
 =============
 

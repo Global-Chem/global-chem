@@ -24,6 +24,7 @@ if os.name == 'nt':
 # Animals
 
 from global_chem.animals.snakes.drugs_from_snake_venom import DrugsFromSnakeVenom
+from global_chem.animals.insects.insect_sex_pheromones import InsectSexPheromones
 
 # Environment
 
@@ -489,7 +490,8 @@ class GlobalChem(object):
         'mango_phenolic_acids': MangoPhenolicAcids,                                      # Damilola Bodun & Sevien Schulhofff
         'mango_fatty_acids': MangoFattyAcids,                                            # Damilola Bodun & Sevien Schulhofff
         'mango_vitamins': MangoVitamins,                                                 # Damilola Bodun & Sevien Schulhofff
-        'mango_flavonoids': MangoFlavonoids                                              # Damilola Bodun & Sevien Schulhofff  
+        'mango_flavonoids': MangoFlavonoids,                                             # Damilola Bodun & Sevien Schulhofff  
+        'insect_sex_pheromones': InsectSexPheromones,                                    # Yuqing Liu & Suliman Sharif
     }
 
     __INCOMPLETE_NODES = {
