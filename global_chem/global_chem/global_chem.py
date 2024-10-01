@@ -490,7 +490,7 @@ class GlobalChem(object):
         'mango_fatty_acids': MangoFattyAcids,                                            # Damilola Bodun & Sevien Schulhofff
         'mango_vitamins': MangoVitamins,                                                 # Damilola Bodun & Sevien Schulhofff
         'mango_flavonoids': MangoFlavonoids                                              # Damilola Bodun & Sevien Schulhofff
-        'psychoactive_chemicals': BenzimidazoleOpioids,                                  # Anu Gamage & Suliman Sharif
+        'psychoactive_chemicals': BenzimidazoleOpioids,                                  # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
     }
 
     __INCOMPLETE_NODES = {
