@@ -145,6 +145,10 @@ from global_chem.miscellaneous.open_smiles import OpenSmiles
 from global_chem.miscellaneous.amino_acids import AminoAcids
 from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
 
+# Psychoactive_Chemicals
+from global_chem.psychoactive_chemicals import BenzimidazoleOpioids
+
+
 from global_chem.global_chem import GlobalChem
 
 __all__ = ['GlobalChem']
