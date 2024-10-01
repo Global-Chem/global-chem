@@ -178,6 +178,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 'thai_ginger_phenolics': ThaiGingerPhenolics,                             # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
 'thai_ginger_polysaccharides': ThaiGingerPolysaccharides,                 # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
 'thai_ginger_terpenoids': ThaiGingerTerpenoids                            # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
+'psychoactive_chemicals': BenzimidazoleOpioids,                           # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
 ```
 
 | Chemical List                       | # of Entries | References                                                                                                                                                                                                                                                                                                          |
@@ -243,7 +244,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Thai Ginger Phenolics               | 14           | Wang, Si-Yu, et al. “Kaempferia Galanga L.: Progresses in Phytochemistry, Pharmacology, Toxicology and Ethnomedicinal Uses.” Frontiers in Pharmacology, vol. 12, 2021.                                                                                                                                              |
 | Thai Ginger Polysaccharides         | 9            | Wang, Si-Yu, et al. “Kaempferia Galanga L.: Progresses in Phytochemistry, Pharmacology, Toxicology and Ethnomedicinal Uses.” Frontiers in Pharmacology, vol. 12, 2021.                                                                                                                                              |
 | Thai Ginger Terpenoids              | 26           | Wang, Si-Yu, et al. “Kaempferia Galanga L.: Progresses in Phytochemistry, Pharmacology, Toxicology and Ethnomedicinal Uses.” Frontiers in Pharmacology, vol. 12, 2021.                                                                                                                                              |
-
+| Benzimidazole Opioids               | 1            | https://www.deadiversion.usdoj.gov/drug_chem_info/benzimidazole-opioids.pdf                                                                                                                                                                                                                                              |
 
 
 GlobalChemExtensions
