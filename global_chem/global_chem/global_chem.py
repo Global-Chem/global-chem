@@ -123,6 +123,10 @@ from global_chem.food.fruits.mango.mango_fatty_acids import MangoFattyAcids
 from global_chem.food.fruits.mango.mango_amino_acids import MangoAminoAcids
 from global_chem.food.fruits.mango.mango_flavonoids import MangoFlavonoids
 
+# Food/Vegetables/Wasabi
+
+from global_chem.food.vegetables.wasabi import Wasabi
+
 # Narcotics
 
 from global_chem.narcotics.pihkal import Pihkal
