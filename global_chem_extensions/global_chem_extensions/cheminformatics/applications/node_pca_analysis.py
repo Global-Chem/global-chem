@@ -22,6 +22,7 @@ from rdkit.Chem.Draw import rdDepictor
 from rdkit.Chem.Draw import rdMolDraw2D
 from rdkit.Chem import DataStructs
 rdDepictor.SetPreferCoordGen(True)
+from rdkit.Chem import rdFingerprintGenerator
 
 
 # Graphing Imports
@@ -139,7 +140,9 @@ class PCAAnalysis(object):
         '''
 
         arr = np.zeros((0,))
-        fp = AllChem.GetMorganFingerprintAsBitVect(mol, self.morgan_radius, nBits=self.bit_representation)
+        # fp = AllChem.GetMorganFingerprintAsBitVect(mol, self.morgan_radius, nBits=self.bit_representation)
+        morgan_gen = rdFingerprintGenerator.GetMorganGenerator(radius=self.morgan_radius, fpSize=self.bit_representation)
+        fp = morgan_gen.GetFingerprint(mol)
         DataStructs.ConvertToNumpyArray(fp, arr)
         return arr
 

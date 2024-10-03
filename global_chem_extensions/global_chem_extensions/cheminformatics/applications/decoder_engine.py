@@ -14,6 +14,7 @@ from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit.Chem import DataStructs
 from rdkit.Chem import BRICS
+from rdkit.Chem import rdFingerprintGenerator
 
 from global_chem import GlobalChem
 
@@ -40,11 +41,14 @@ class DecoderEngine(object):
 
         molecule = Chem.MolFromSmiles(smiles)
 
-        bit_string = AllChem.GetMorganFingerprintAsBitVect(
-            molecule,
-            2,
-            nBits=512
-        ).ToBitString()
+        # bit_string = AllChem.GetMorganFingerprintAsBitVect(
+        #     molecule,
+        #     2,
+        #     nBits=512
+        # ).ToBitString()
+        morgan_gen = rdFingerprintGenerator.GetMorganGenerator(radius=2, fpSize=512)
+        bit_string = morgan_gen.GetFingerprint(molecule).ToBitString()
+
 
         return bit_string
 
