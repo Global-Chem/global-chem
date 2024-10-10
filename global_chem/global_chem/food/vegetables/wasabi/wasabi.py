@@ -8,7 +8,7 @@ class wasabi(object):
 
     def __init__(self):
 
-        self.name = 'wasabi'
+        self.name = 'Wasabi'
 
     @staticmethod
     def get_smiles():
