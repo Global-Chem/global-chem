@@ -50,7 +50,7 @@ class wasabi(object):
         'glucohesperin, 6-methylsylfinylhexyl glucosinolate': r'OC1C(O)C(CO)OC(S/C(CCCCCCS(C)=O)=N/OS(=O)(O)=O)C1O',
         'glucoibarin 7-methylsylfinylheptyl glucosinolate': r'OC1C(O)C(CO)OC(S/C(CCCCCCCS(C)=O)=N/OS(=O)(O)=O)C1O',
         'glucobrassicanapin, 4-pentenyl glucosinolate': r'OC1C(O)C(CO)OC(S/C(CCCC=C)=N/OS(=O)(O)=O)C1O',
-        '5-hexehnyl glucosinolate': r'OC1C(O)C(CO)OC(S/C(CCCCC=C)=N/OS(=O)(O)=O)C1O',
+        '5-hexenyl glucosinolate': r'OC1C(O)C(CO)OC(S/C(CCCCC=C)=N/OS(=O)(O)=O)C1O',
         '4-methoxyglucobrassicin,4-methoxy-3-indolylmethyl glucosinolate': r'OC1C(O)C(CO)OC(S/C(CC2=CNC3=CC=CC(OC)=C23)=N/OS(=O)(O)=O)C1O',
         'neoglucobrassicin 1-methoxy-3indolylmethyl glucosinolate': r'OC1C(O)C(CO)OC(S/C(CC2=CN(OC)C3=CC=CC=C23)=N/OS(=O)(O)=O)C1O',
         '1-(3’’,4’’-dihydroxy-5’’-methoxy)-O-trans-cinnamoyl gentiobiose': r'O=C(/C=C/C1=CC(OC)=C(O)C(O)=C1)OC2OC(COC3C(O)C(O)C(O)C(CO)O3)C(O)C(O)C2O',
