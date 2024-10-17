@@ -93,6 +93,7 @@ from global_chem.food.color_additives.fda_list_four import FDAListFour
 from global_chem.food.color_additives.fda_list_five import FDAListFive
 from global_chem.food.color_additives.fda_list_six import FDAListSix
 from global_chem.food.color_additives.fda_list_seven import FDAListSeven
+from global_chem.food.vegetables.wasabi import Wasabi
 
 
 # Mango
