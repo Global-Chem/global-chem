@@ -98,7 +98,7 @@ Please follow the node contribution guidelines if you would like to elect your o
 'surfactants': Surfactants,                                               # Yiling Nan & Suliman Sharif
 'lanthipeptides: LanthiPeptides                                           # Prabin Baral & Suliman Sharif
 'alternative_jet_fuels': AlternativeJetFuels                              # Suliman Sharif
-'mango_phytocompounds': MangoPhytoCompounds,                              # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
+'mango_phyto_compounds': MangoPhytoCompounds,                              # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
 'mango_amino_acids': MangoAminoAcids,                                     # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
 'mango_phenolic_acids': MangoPhenolicAcids,                               # Damilola Bodun & Sevien Schulhoff & Suliman Sharif
 'mango_fatty_acids': MangoFattyAcids,                                     # Damilola Bodun & Sevien Schulhoff & Suliman Sharif

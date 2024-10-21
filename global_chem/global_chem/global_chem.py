@@ -485,7 +485,7 @@ class GlobalChem(object):
         'lanthipeptides': LanthiPeptides,                                                # Prabin Baral & Suliman Sharif
         'alternative_jet_fuels': AlternativeJetFuels,                                    # Suliman Sharif
         'common_regex_patterns': CommonRegexPatterns,                                    # Chris Burke & Suliman Sharif
-        'mango_phytocompounds': MangoPhytocompounds,                                     # Damilola Bodun & Sevien Schulhofff
+        'mango_phyto_compounds': MangoPhytocompounds,                                     # Damilola Bodun & Sevien Schulhofff
         'mango_amino_acids': MangoAminoAcids,                                            # Damilola Bodun & Sevien Schulhofff
         'mango_phenolic_acids': MangoPhenolicAcids,                                      # Damilola Bodun & Sevien Schulhofff
         'mango_fatty_acids': MangoFattyAcids,                                            # Damilola Bodun & Sevien Schulhofff
