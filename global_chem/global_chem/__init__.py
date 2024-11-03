@@ -146,6 +146,15 @@ from global_chem.miscellaneous.open_smiles import OpenSmiles
 from global_chem.miscellaneous.amino_acids import AminoAcids
 from global_chem.miscellaneous.regex_patterns import CommonRegexPatterns
 
+# Household_chemicals
+
+from global_chem.household_chemicals.bleach import Bleach
+from global_chem.household_chemicals.cosmetics import Cosmetics
+from global_chem.household_chemicals.detergents import Detergents
+from global_chem.household_chemicals.disinfectants import Disinfectants
+from global_chem.household_chemicals.organophosphate_flame_retardants import Organophosphate_flame_retardants
+from global_chem.household_chemicals.Surface_cleaners import Surface_cleaners
+
 from global_chem.global_chem import GlobalChem
 
 __all__ = ['GlobalChem']
