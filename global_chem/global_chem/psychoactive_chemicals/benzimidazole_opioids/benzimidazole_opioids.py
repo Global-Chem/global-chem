@@ -71,7 +71,7 @@ class BenzimidazoleOpioids(object):
          'Acetoxynitazene' : 'CCN(CC)CCN1C(CC2=CC=C(OC(C)=O)C=C2)=NC3=CC([N+]([O-])=O)=CC=C31',
          'Methylthionitazene' : 'CCN(CC)CCN1C(CC2=CC=C(SC)C=C2)=NC3=CC([N+]([O-])=O)=CC=C31',
          'Ethylthionitazene' : 'CCN(CC)CCN1C(CC2=CC=C(SCC)C=C2)=NC3=CC([N+]([O-])=O)=CC=C31',
-         'Etodesnitazene phenylthio analogue' : 'CCN(CC)CCN1C(CC2=CC=C(OCC)C=C2)=NC3=CC=CC=C31',
+         'Etodesnitazene phenylthio analogue' : 'CCN(CC)CCN1C(SC2=CC=C(OCC)C=C2)=NC3=CC=CC=C31',
          'Etodesnitazene phenylthio' : 'CCOC1=CC=C(SC2=NC3=CC=CC=C3N2CCN4CCCC4)C=C1',
          'Methylenedioxynitazene' : 'CCN(CC)CCN1C(CC2=CC=C(OCO3)C3=C2)=NC4=CC([N+]([O-])=O)=CC=C41',
          'Ethyleneoxynitazene' : 'CCN(CC)CCN1C(CC2=CC=C(OCC3)C3=C2)=NC4=CC([N+]([O-])=O)=CC=C41'
