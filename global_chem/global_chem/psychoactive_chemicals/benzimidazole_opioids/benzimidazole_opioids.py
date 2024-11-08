@@ -4,7 +4,7 @@
 # Reference: https://en.wikipedia.org/wiki/List_of_benzimidazole_opioids
 # ------------------------------------------
 
-class benzimidazole_opioids(object):
+class BenzimidazoleOpioids(object):
      
     def __init__(self):
 
