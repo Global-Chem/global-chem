@@ -44,7 +44,7 @@ class BenzimidazoleOpioids(object):
          'Etonitazene N,N-dimethyl analogue' : 'CCN(CC)CCN1C(CC2=CC=C(OCC)C=C2)=NC3=CC([N+]([O-])=O)=CC=C31',
          'Etonitazepyne' : 'CCOC1=CC=C(CC2=NC3=CC([N+]([O-])=O)=CC=C3N2CCN4CCCC4)C=C1',
          'Etonitazepipne' : 'CCOC1=CC=C(CC2=NC3=CC([N+]([O-])=O)=CC=C3N2CCN4CCCCC4)C=C1',
-         'Etonitazene' : 'CCOC1=CC=C(CC2=NC3=CC([N+]([O-])=O)=CC=C3N2CCN4CCOCC4)C=C1',
+         'Etonitazene morpholine analogue' : 'CCOC1=CC=C(CC2=NC3=CC([N+]([O-])=O)=CC=C3N2CCN4CCOCC4)C=C1',
          'Etonitazene 6-nitro isomer' : 'CCOC1=CC=C(CC2=NC3=CC=C([N+]([O-])=O)C=C3N2CCN(CC)CC)C=C1',
          'Protonitazene' : 'CCN(CC)CCN1C(CC2=CC=C(OCCC)C=C2)=NC3=CC([N+]([O-])=O)=CC=C31',
          'Protonitazepyne' : 'CCCOC1=CC=C(CC2=NC3=CC([N+]([O-])=O)=CC=C3N2CCN4CCCC4)C=C1',
