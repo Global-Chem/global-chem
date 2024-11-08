@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# GlobalChem - benzimidazole_opioids
+# GlobalChem - Benzimidazole Opioids
 # Reference: https://en.wikipedia.org/wiki/List_of_benzimidazole_opioids
 # ------------------------------------------
 
