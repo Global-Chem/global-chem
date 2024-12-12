@@ -172,11 +172,10 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Mango Fatty Acids                   | 24           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
 | Mango Vitamins                      | 10           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
 | Mango Flavonoids                    | 11           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
-| Insect Sex Pheromones               | 37           | Jacobson, Martin. Insect Sex Pheromones. New York, Academic Press, 1992.                                                                                                                  |
+| Insect Sex Pheromones               | 37           | Jacobson, Martin. Insect Sex Pheromones. New York, Academic Press, 1992.                                                      |
+
 Features
 ========
-
-<details><summary><h3>Extension List</h1><br/></summary>
 
 | Extension                       | Description                                                                                                             | Appplication   |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------|------------------|
