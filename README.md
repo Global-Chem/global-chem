@@ -7,8 +7,8 @@ For more documentation, please navigate to our Github Wiki.
 - Demo https://colab.research.google.com/drive/1HaDvAYpaX0_2Eqx1NSl5uJTRkE_0na-L?usp=sharing
 - Join Our Community: https://discord.gg/xygRVwNZP8
 
-![Downloads](https://pepy.tech/badge/global-chem)
-![Downloads](https://pepy.tech/badge/global-chem-extensions)
+![Global Chem Downloads](https://pepy.tech/badge/global-chem)
+![Global Chem Extensions Downloads](https://pepy.tech/badge/global-chem-extensions)
 ![Repo Size](https://img.shields.io/github/repo-size/Sulstice/global-chem)
 
 <p align="center">
