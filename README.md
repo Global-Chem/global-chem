@@ -17,10 +17,20 @@ For more documentation, please navigate to our Github Wiki.
 QuickStart
 ==========
 
+GlobalChem going to be distribute via PyPi as saperate modules and as the tree and it's extensions grows we can expand it to other pieces of software
+making it accessible to all regardless of what you use. Alternatively, you could have a glance at the source code and copy/paste
+it yourself.
+
 ```bash
 
 pip install global-chem
-pip install global-chem[cheminformatics]
+pip install 'global-chem[graphing]'
+pip install 'global-chem[forcefields]'
+pip install 'global-chem[bioinformatics]'
+pip install 'global-chem[cheminformatics]'
+pip install 'global-chem[quantum_chemistry]'
+pip install 'global-chem[development_operations]'
+pip install 'global-chem[all]'
 
 ```
 
@@ -163,7 +173,34 @@ Please follow the node contribution guidelines if you would like to elect your o
 | Mango Vitamins                      | 10           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
 | Mango Flavonoids                    | 11           | Maldonado-Celis, Maria Elena, et al. “Chemical Composition of Mango (Mangifera Indica L.) Fruit: Nutritional and Phytochemical Compounds.” Frontiers in Plant Science, vol. 10, Oct. 2019, p. 1073.                                                                                                                  |
 | Insect Sex Pheromones               | 37           | Jacobson, Martin. Insect Sex Pheromones. New York, Academic Press, 1992.                                                                                                                  |
+Features
+========
 
+<details><summary><h3>Extension List</h1><br/></summary>
+
+| Extension                       | Description                                                                                                             | Appplication   |
+|---------------------------------|-------------------------------------------------------------------------------------------------------------------------|------------------|
+| GlobalChem Chemical Entities    | GlobalChem has internal Molecule objects with all common attributes associated and conversion to SMILES                 | forcefields       |
+| GlobalChem Biological Entities  | GlobalChem has internal DNA/RNA/Protein/Molecule objects with all common attributes associated and conversion to SMILES | bioinformatics   |
+| Visualize DNA/RNA Strands       | Visualize DNA and RNA Strands and add labels to them | bioinformatics   |
+| ForceField Molecules            | GlobalChem can parse, manipulate, and write CGenFF and GaFF2 files as objects                                           | forcefields       |
+| PDF Generation and Parsing      | GlobalChem can generate SMILES to PDF and convert the PDF to SMILES                                                     | cheminformatics              |
+| SMILES Validation               | GlobalChem has connection to PySMILES, DeepSMILES, PartialSmiles, SELFIES, MolVS for validation of SMILES sets          | cheminformatics       |
+| SMILES Protonation States       | GlobalChem can take a set of compounds and predict the protonation states of a SMILES string over a range of pH         | chemfinformatics       |
+| Open Source Database Monitoring | GlobalChem uses Uptime-Cheminformatics to Keep Track of Open Source Chemical Data                                       | development_operations       |
+| Networkx Software Adapter       | GlobalChem Network can be converted into NetworkX Graph Objects                                                         | cheminformatics       |
+| SMARTS Pattern Validation       | GlobalChem uses the MiniFrag Database to test SMARTS strings accuracy for functional group selection                    | cheminformatics       |
+| Principal Component Analysis    | GlobalChem can readily interpret SMILES, fingerprint, cluster and apply PCA analysis user can tweak parameters          | cheminformatics |
+| Drug Design Filters             | GlobalChem can filter compounds based on Common Drug Design Filtering Rules                                            | cheminformatics       |
+| Deep Layer Scatter Analysis     | To visualize relations between sets of molecules, GlobalChem offers a parallel coordinate diagram generation            | cheminformatics | 
+| Sunbursting Radial Analysis     | GlobalChem offers a sunbursting mechanism to allow uses to observe how sets of compounds relate to the common set      | cheminformatics |
+| Graphing Templates              | GlobalChem offers graphing templates to aid in faster data analysis, currently the only offer is Plotly               | cheminformatics |
+| CGenFF Dissimilarity Score      | GlobalChem can offer the difference between two molecules based on their Atom Types                                     | forcefields       |
+| OneHot Encoding                 | GlobalChem has it's own one hot encoder and decoder based on the common lists for Machine Learning                      | cheminformatics       |
+| SMARTS Pattern Identifier       | GlobalChem connects to the SMARTS Plus and can offer visualization into different SMARTS components                     | cheminformatics       |
+| Psi4 Parser       | Offer parsing of Psi4 Output Files and extracting values                    | quantum_chemistry  |
+| Coordinate Store       | A warehouse for coodinates of small molecules for distribution in xyz and zm-matrix                   | quantum_chemistry  |
+| Visualize Molecular Orbitals       | Visualize the Cube Files from Psi4 Output cubeprop                   | quantum_chemistry  |
 ‌
 Contributions
 =============
