@@ -141,3 +141,27 @@ Hope to see more of you guys and meet people across different places as we grow 
 
 Cheers.
 
+## Checklist for Contributors
+Before submitting your pull request, please ensure that you have completed the following checklist:
+- [ ]  Class names should be pascal case. For example: CorrectClassName
+- [ ]  Node names should be snake case. For example: correct_node_name
+- [ ]  SMILES with special characters like `\`  should use raw string
+- [ ]  Check all smiles are valid using rdkit
+- [ ]  Chemical names should generally be in IUPAC
+
+Check that these files have been correctly updated in the pull request:
+
+`README.md`:
+- Add node name and contributor names to the Nodes Contributors list
+- Add node name, number of entries and reference to the Chemical List table
+
+`global_chem/global_chem/__init__.py`:
+- Add import statement
+
+`global_chem/global_chem/global_chem.py` :
+- Add import statement
+- Add node to the `__NODES__` dict
+
+Check that these files have been correctly added in the pull request:
+- `__init__.py`
+- `example_node.py`
