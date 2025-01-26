@@ -492,6 +492,7 @@ class GlobalChem(object):
         'mango_vitamins': MangoVitamins,                                                 # Damilola Bodun & Sevien Schulhofff
         'mango_flavonoids': MangoFlavonoids,                                             # Damilola Bodun & Sevien Schulhofff  
         'insect_sex_pheromones': InsectSexPheromones,                                    # Yuqing Liu & Suliman Sharif
+        'household_chemicals' : household_chemicals,                                     # Kalana Kotawalagedara & Anuththara Gamage
     }
 
     __INCOMPLETE_NODES = {
