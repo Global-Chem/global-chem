@@ -490,8 +490,9 @@ class GlobalChem(object):
         'mango_phenolic_acids': MangoPhenolicAcids,                                      # Damilola Bodun & Sevien Schulhofff
         'mango_fatty_acids': MangoFattyAcids,                                            # Damilola Bodun & Sevien Schulhofff
         'mango_vitamins': MangoVitamins,                                                 # Damilola Bodun & Sevien Schulhofff
-        'mango_flavonoids': MangoFlavonoids,                                             # Damilola Bodun & Sevien Schulhofff  
+        'mango_flavonoids': MangoFlavonoids                                              # Damilola Bodun & Sevien Schulhofff
         'insect_sex_pheromones': InsectSexPheromones,                                    # Yuqing Liu & Suliman Sharif
+        'psychoactive_chemicals': BenzimidazoleOpioids,                                  # Katukoliya Gamage Anuththara Samadhi & Suliman Sharif
     }
 
     __INCOMPLETE_NODES = {
