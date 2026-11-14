@@ -2,7 +2,7 @@
 
 Global Chem is a public dictionary of common chemical lists using the Common Chemical Name as input and SMILES/SMARTS as output organized by their respective community in a knowledge graph. Our hope is this repository serves as a base for the population to govern how the chemicals we use in things like Food, Clothing, Environment, Materials, Drugs, War and a lot more are beneficial for all of us.
 
-For more documentation, please navigate to our Github Wiki.
+For more documentation, please navigate to our Github-Wiki.
 
 - Demo https://colab.research.google.com/drive/1HaDvAYpaX0_2Eqx1NSl5uJTRkE_0na-L?usp=sharing
 - Join Our Community: https://discord.gg/xygRVwNZP8
