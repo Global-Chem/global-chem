@@ -37,7 +37,7 @@ pip install 'global-chem[all]'
 
 ```python
 
-from global_chem import GlobalChem
+from global_chem import Globa-lChem
 gc = GlobalChem()
 gc.build_global_chem_network()
 molecules = list(gc.get_node_smiles('pihkal').values())
